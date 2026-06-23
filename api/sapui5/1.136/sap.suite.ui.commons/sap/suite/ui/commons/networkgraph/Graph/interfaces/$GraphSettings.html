@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Interface: $GraphSettings — SAPUI5 TypeScript API</title>
-<meta name="description" content="Interface: $GraphSettings — SAPUI5 TypeScript API Reference (1.136.0)">
+<meta name="description" content="Interface: $GraphSettings — SAPUI5 TypeScript API Reference (1.136.19)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.136/sap.suite.ui.commons/sap/suite/ui/commons/networkgraph/Graph/interfaces/$GraphSettings.html">
 <meta property="og:title" content="Interface: $GraphSettings — SAPUI5 TypeScript API">
-<meta property="og:description" content="Interface: $GraphSettings — SAPUI5 TypeScript API Reference (1.136.0)">
+<meta property="og:description" content="Interface: $GraphSettings — SAPUI5 TypeScript API Reference (1.136.19)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.136/sap.suite.ui.commons/sap/suite/ui/commons/networkgraph/Graph/interfaces/$GraphSettings.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,9 +33,9 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../../../../sap.suite.ui.commons/README.html">sap.suite.ui.commons</a> › sap › suite › ui › commons › networkgraph › <a href="../../../../../../../../sap.suite.ui.commons/sap/suite/ui/commons/networkgraph/Graph/README.html">Graph</a> › interfaces</nav>
-<p><a href="../../../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.136.0)</strong></a></p>
+<p><a href="../../../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.136.19)</strong></a></p>
 <hr>
-<p><a href="../../../../../../../../README.html">SAPUI5 TypeScript API (1.136.0)</a> / <a href="../../../../../../../README.html">sap.suite.ui.commons</a> / <a href="../README.html">sap/suite/ui/commons/networkgraph/Graph</a> / $GraphSettings</p>
+<p><a href="../../../../../../../../README.html">SAPUI5 TypeScript API (1.136.19)</a> / <a href="../../../../../../../README.html">sap.suite.ui.commons</a> / <a href="../README.html">sap/suite/ui/commons/networkgraph/Graph</a> / $GraphSettings</p>
 <h1>Interface: $GraphSettings</h1>
 <pre class="sig"><span class="kw">import</span> { $GraphSettings } <span class="kw">from</span> <span class="str">"sap/suite/ui/commons/networkgraph/Graph"</span>;</pre>
 <p>Describes the settings that can be provided to the Graph constructor.</p>
@@ -67,6 +67,14 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </blockquote>
 <p>Controls or IDs that label this control. This association is used by screen reader software.</p>
 <hr>
+<h3>associatedControl?</h3>
+<blockquote>
+<p><code>optional</code> <strong>associatedControl?</strong>: <code>string</code> | <a href="../../../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></p>
+</blockquote>
+<p>Control or ID of an auxiliary control associated with this graph.</p>
+<h4>Since</h4>
+<p>1.136.19</p>
+<hr>
 <h3>backgroundColor?</h3>
 <blockquote>
 <p><code>optional</code> <strong>backgroundColor?</strong>: <a href="../../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code> | <code>&quot;Default&quot;</code> | <a href="../../../library/namespaces/networkgraph/enumerations/BackgroundColor.html"><code>BackgroundColor</code></a> | <code>&quot;White&quot;</code></p>
@@ -89,6 +97,40 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 <p><a href="../../../../../../../../sap.ui.core/sap/ui/base/Event/classes/Event.html"><code>Event</code></a></p>
 <h4>Returns</h4>
 <p><code>void</code></p>
+<hr>
+<h3>connectionCreated?</h3>
+<blockquote>
+<p><code>optional</code> <strong>connectionCreated?</strong>: (<code>oEvent</code>) =&gt; <code>void</code></p>
+</blockquote>
+<p>This event is fired when a new connection is created between two nodes by using node ports.</p>
+<h4>Parameters</h4>
+<h5>oEvent</h5>
+<p><a href="../type-aliases/Graph$ConnectionCreatedEvent.html"><code>Graph$ConnectionCreatedEvent</code></a></p>
+<h4>Returns</h4>
+<p><code>void</code></p>
+<h4>Since</h4>
+<p>1.136.19</p>
+<hr>
+<h3>connectionTypeMapping?</h3>
+<blockquote>
+<p><code>optional</code> <strong>connectionTypeMapping?</strong>: <code>object</code> | <a href="../../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
+</blockquote>
+<p>Mapping of connection types to their display text keys or custom text values. This allows customization
+of how connection types are displayed in the connection creation popover. The mapping should be an object
+where keys are connection type values (LeftToLeft, LeftToRight, RightToLeft, RightToRight) and values
+are custom text that follows the correct format (e.g., &quot;Start to End&quot;, &quot;Source to Target&quot;). If the format
+is invalid or not provided, default values are used</p>
+<h4>Since</h4>
+<p>1.136.19</p>
+<hr>
+<h3>enableDragAndDrop?</h3>
+<blockquote>
+<p><code>optional</code> <strong>enableDragAndDrop?</strong>: <code>boolean</code> | <a href="../../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
+</blockquote>
+<p>Enables the drag and drop of nodes. This property is ignored if the layout property is not set to noop.
+If set to <code>true</code>, nodes can be dragged and dropped within the graph.</p>
+<h4>Since</h4>
+<p>1.136.19</p>
 <hr>
 <h3>enableWheelZoom?</h3>
 <blockquote>
@@ -139,6 +181,31 @@ only.</p>
 <p>The height of the graph. If this property is set to &#39;auto&#39;, the network graph will be resized to fit
 the height of its content, regardless of the height of the parent control.</p>
 <hr>
+<h3>itemDeleted?</h3>
+<blockquote>
+<p><code>optional</code> <strong>itemDeleted?</strong>: (<code>oEvent</code>) =&gt; <code>void</code></p>
+</blockquote>
+<p>This event is fired when a user presses the delete key on a focused node or line. This event is available
+only when the layout algorithm is set to &quot;NoopLayout&quot; and the <code>enableDragAndDrop</code> property is set to
+<code>true</code>.</p>
+<h4>Parameters</h4>
+<h5>oEvent</h5>
+<p><a href="../type-aliases/Graph$ItemDeletedEvent.html"><code>Graph$ItemDeletedEvent</code></a></p>
+<h4>Returns</h4>
+<p><code>void</code></p>
+<h4>Since</h4>
+<p>1.136.19</p>
+<hr>
+<h3>labels?</h3>
+<blockquote>
+<p><code>optional</code> <strong>labels?</strong>: <code>object</code> | <a href="../../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
+</blockquote>
+<p>Custom labels for element types displayed in the SearchField suggestions and Legend section headers.
+Supported keys: nodeLabel, nodeLabelPlural, lineLabel, lineLabelPlural, groupLabel, groupLabelPlural.
+Reverts to the default values for keys that are not set.</p>
+<h4>Since</h4>
+<p>1.149</p>
+<hr>
 <h3>layoutAlgorithm?</h3>
 <blockquote>
 <p><code>optional</code> <strong>layoutAlgorithm?</strong>: <a href="../../layout/LayoutAlgorithm/classes/LayoutAlgorithm.html"><code>LayoutAlgorithm</code></a></p>
@@ -158,6 +225,23 @@ is used.</p>
 </blockquote>
 <p>Holds the lines to be displayed in the graph.</p>
 <hr>
+<h3>loading?</h3>
+<blockquote>
+<p><code>optional</code> <strong>loading?</strong>: <code>boolean</code> | <a href="../../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
+</blockquote>
+<p>Set this property to <code>true</code> to display a loading indicator while the data loads.</p>
+<h4>Since</h4>
+<p>1.136.19</p>
+<hr>
+<h3>loadingText?</h3>
+<blockquote>
+<p><code>optional</code> <strong>loadingText?</strong>: <code>string</code> | <a href="../../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a></p>
+</blockquote>
+<p>Text that is displayed when the loading is set.
+ This property takes effect only when the <code>loading</code> property is set to <code>true</code>.</p>
+<h4>Since</h4>
+<p>1.136.19</p>
+<hr>
 <h3>noData?</h3>
 <blockquote>
 <p><code>optional</code> <strong>noData?</strong>: <code>boolean</code> | <a href="../../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
@@ -172,6 +256,44 @@ when there is no data received, not just when the application is waiting for dat
 </blockquote>
 <p>Text displayed when no data is set.
  This property takes effect only when the <code>noData</code> property is set to <code>true</code>.</p>
+<hr>
+<h3>nodeAdded?</h3>
+<blockquote>
+<p><code>optional</code> <strong>nodeAdded?</strong>: (<code>oEvent</code>) =&gt; <code>void</code></p>
+</blockquote>
+<p>Fired when the user requests to add a node via INSERT or Ctrl+Alt+N. Only available when NoopLayout is
+used and enableDragAndDrop is <code>true</code>.</p>
+<h4>Parameters</h4>
+<h5>oEvent</h5>
+<p><a href="../../../../../../../../sap.ui.core/sap/ui/base/Event/classes/Event.html"><code>Event</code></a></p>
+<h4>Returns</h4>
+<p><code>void</code></p>
+<h4>Since</h4>
+<p>1.136.19</p>
+<hr>
+<h3>nodeDropped?</h3>
+<blockquote>
+<p><code>optional</code> <strong>nodeDropped?</strong>: (<code>oEvent</code>) =&gt; <code>void</code></p>
+</blockquote>
+<p>This event is fired when a user drops a node in the graph. This event is available only when the layout
+algorithm is set to &quot;NoopLayout&quot; and the <code>enableDragAndDrop</code> property is set to <code>true</code>.</p>
+<h4>Parameters</h4>
+<h5>oEvent</h5>
+<p><a href="../type-aliases/Graph$NodeDroppedEvent.html"><code>Graph$NodeDroppedEvent</code></a></p>
+<h4>Returns</h4>
+<p><code>void</code></p>
+<h4>Since</h4>
+<p>1.136.19</p>
+<hr>
+<h3>nodePorts?</h3>
+<blockquote>
+<p><code>optional</code> <strong>nodePorts?</strong>: <code>any</code></p>
+</blockquote>
+<p>Specifies the ports that are to be displayed on nodes. Ports are used for creating connections between
+nodes. Ports are available only when the layout algorithm is set to &quot;NoopLayout&quot;, and when the drag and
+drop is enabled. Otherwise, this property is ignored.</p>
+<h4>Since</h4>
+<p>1.136.19</p>
 <hr>
 <h3>nodes?</h3>
 <blockquote>
@@ -225,6 +347,18 @@ possible.</p>
 <h4>Returns</h4>
 <p><code>void</code></p>
 <hr>
+<h3>showCreateConnectionButton?</h3>
+<blockquote>
+<p><code>optional</code> <strong>showCreateConnectionButton?</strong>: <code>boolean</code> | <a href="../../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
+</blockquote>
+<p>This action button is used to create connections between nodes as an accessible alternative to node ports.
+The button is displayed on each node when the layout algorithm is set to &quot;NoopLayout&quot; and drag and drop
+is enabled. shows the &#39;Create Connection&#39; action button on node. If set to <code>false</code>, the button remains
+hidden. Hide this button when you want to implement your own way of creating connections between nodes
+as an accessible alternative to node ports.</p>
+<h4>Since</h4>
+<p>1.136.19</p>
+<hr>
 <h3>statuses?</h3>
 <blockquote>
 <p><code>optional</code> <strong>statuses?</strong>: <a href="../../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/AggregationBindingInfo.html"><code>AggregationBindingInfo</code></a> | <code>`{${string}}`</code> | <a href="../../Status/classes/Status.html"><code>Status</code></a> | <a href="../../Status/classes/Status.html"><code>Status</code></a>[]</p>
@@ -250,6 +384,6 @@ width of its content, regardless of the width of the parent control.</p>
 <h4>Returns</h4>
 <p><code>void</code></p>
 
-<footer>Generated from <code>@sapui5/types@1.136.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.136/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.136.19</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.136/">Back to index</a>.</footer>
 </body>
 </html>

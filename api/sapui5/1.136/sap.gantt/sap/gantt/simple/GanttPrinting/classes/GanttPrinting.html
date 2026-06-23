@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Class: GanttPrinting — SAPUI5 TypeScript API</title>
-<meta name="description" content="Class: GanttPrinting — SAPUI5 TypeScript API Reference (1.136.0)">
+<meta name="description" content="Class: GanttPrinting — SAPUI5 TypeScript API Reference (1.136.19)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.136/sap.gantt/sap/gantt/simple/GanttPrinting/classes/GanttPrinting.html">
 <meta property="og:title" content="Class: GanttPrinting — SAPUI5 TypeScript API">
-<meta property="og:description" content="Class: GanttPrinting — SAPUI5 TypeScript API Reference (1.136.0)">
+<meta property="og:description" content="Class: GanttPrinting — SAPUI5 TypeScript API Reference (1.136.19)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.136/sap.gantt/sap/gantt/simple/GanttPrinting/classes/GanttPrinting.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,9 +33,9 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../../sap.gantt/README.html">sap.gantt</a> › sap › gantt › simple › <a href="../../../../../../sap.gantt/sap/gantt/simple/GanttPrinting/README.html">GanttPrinting</a> › classes</nav>
-<p><a href="../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.136.0)</strong></a></p>
+<p><a href="../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.136.19)</strong></a></p>
 <hr>
-<p><a href="../../../../../../README.html">SAPUI5 TypeScript API (1.136.0)</a> / <a href="../../../../../README.html">sap.gantt</a> / <a href="../README.html">sap/gantt/simple/GanttPrinting</a> / GanttPrinting</p>
+<p><a href="../../../../../../README.html">SAPUI5 TypeScript API (1.136.19)</a> / <a href="../../../../../README.html">sap.gantt</a> / <a href="../README.html">sap/gantt/simple/GanttPrinting</a> / GanttPrinting</p>
 <h1>Class: GanttPrinting</h1>
 <pre class="sig"><span class="kw">import</span> GanttPrinting <span class="kw">from</span> <span class="str">"sap/gantt/simple/GanttPrinting"</span>;</pre>
 <p>The <code>GanttPrinting</code> control enables you to export your Gantt chart as a PDF document.
@@ -135,6 +135,25 @@ the table columns and update certain properties like maxLines to overcome html2c
 <p><code>Promise</code>&lt;<code>any</code>&gt;</p>
 <p>A promise for chaining actions after the print dialog is ready.</p>
 <hr>
+<h3>openPdfPreview()</h3>
+<blockquote>
+<p><strong>openPdfPreview</strong>(<code>fnUpdateTable</code>, <code>printDialogTemplate</code>): <code>Promise</code>&lt;<code>any</code>&gt;</p>
+</blockquote>
+<p>Opens the print dialog for single page printing.</p>
+<h4>Parameters</h4>
+<h5>fnUpdateTable</h5>
+<p><code>Function</code></p>
+<p>Optional function which takes cloned gantt chart&#39;s table for modification. Applications can loop through
+the table columns and update certain properties like maxLines to overcome html2canvas limitations.</p>
+<h5>printDialogTemplate</h5>
+<p><a href="../../PrintDialogTemplate/classes/PrintDialogTemplate.html"><code>PrintDialogTemplate</code></a></p>
+<p>which takes custom buttons to display on print Dialog</p>
+<h4>Returns</h4>
+<p><code>Promise</code>&lt;<code>any</code>&gt;</p>
+<p>A promise for chaining actions after the print dialog is ready.</p>
+<h4>Since</h4>
+<p>1.111</p>
+<hr>
 <h3>setGanttChart()</h3>
 <blockquote>
 <p><strong>setGanttChart</strong>(<code>oGanttChart</code>): <code>this</code></p>
@@ -200,6 +219,6 @@ used by this class</p>
 <p><a href="../../../../../../sap.ui.core/sap/ui/core/Element/classes/UI5Element.html"><code>UI5Element</code></a>.<a href="../../../../../../sap.ui.core/sap/ui/core/Element/classes/UI5Element.html#getmetadata-1"><code>getMetadata</code></a></p>
 <hr>
 
-<footer>Generated from <code>@sapui5/types@1.136.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.136/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.136.19</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.136/">Back to index</a>.</footer>
 </body>
 </html>

@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Class: NoopLayout — SAPUI5 TypeScript API</title>
-<meta name="description" content="Class: NoopLayout — SAPUI5 TypeScript API Reference (1.136.0)">
+<meta name="description" content="Class: NoopLayout — SAPUI5 TypeScript API Reference (1.136.19)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.136/sap.suite.ui.commons/sap/suite/ui/commons/networkgraph/layout/NoopLayout/classes/NoopLayout.html">
 <meta property="og:title" content="Class: NoopLayout — SAPUI5 TypeScript API">
-<meta property="og:description" content="Class: NoopLayout — SAPUI5 TypeScript API Reference (1.136.0)">
+<meta property="og:description" content="Class: NoopLayout — SAPUI5 TypeScript API Reference (1.136.19)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.136/sap.suite.ui.commons/sap/suite/ui/commons/networkgraph/layout/NoopLayout/classes/NoopLayout.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,9 +33,9 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../../../../../sap.suite.ui.commons/README.html">sap.suite.ui.commons</a> › sap › suite › ui › commons › networkgraph › layout › <a href="../../../../../../../../../sap.suite.ui.commons/sap/suite/ui/commons/networkgraph/layout/NoopLayout/README.html">NoopLayout</a> › classes</nav>
-<p><a href="../../../../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.136.0)</strong></a></p>
+<p><a href="../../../../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.136.19)</strong></a></p>
 <hr>
-<p><a href="../../../../../../../../../README.html">SAPUI5 TypeScript API (1.136.0)</a> / <a href="../../../../../../../../README.html">sap.suite.ui.commons</a> / <a href="../README.html">sap/suite/ui/commons/networkgraph/layout/NoopLayout</a> / NoopLayout</p>
+<p><a href="../../../../../../../../../README.html">SAPUI5 TypeScript API (1.136.19)</a> / <a href="../../../../../../../../README.html">sap.suite.ui.commons</a> / <a href="../README.html">sap/suite/ui/commons/networkgraph/layout/NoopLayout</a> / NoopLayout</p>
 <h1>Class: NoopLayout</h1>
 <pre class="sig"><span class="kw">import</span> NoopLayout <span class="kw">from</span> <span class="str">"sap/suite/ui/commons/networkgraph/layout/NoopLayout"</span>;</pre>
 <p>This is a simple layout algorithm that expects the positions of nodes to be already present. It only
@@ -55,13 +55,37 @@ creates line coordinates (see sap.suite.ui.commons.networkgraph.Line#setCoordina
 <p>Accepts an object literal <code>mSettings</code> that defines initial property values, aggregated and associated
 objects as well as event handlers. See sap.ui.base.ManagedObject#constructor for a general description
 of the syntax of the settings object.</p>
-<p>This class does not have its own settings, but all settings applicable to the base type sap.suite.ui.commons.networkgraph.layout.LayoutAlgorithm#constructor sap.suite.ui.commons.networkgraph.layout.LayoutAlgorithm
-can be used.</p>
 <h4>Returns</h4>
 <p><code>NoopLayout</code></p>
 <h4>Overrides</h4>
 <p><a href="../../LayoutAlgorithm/classes/LayoutAlgorithm.html"><code>LayoutAlgorithm</code></a>.<a href="../../LayoutAlgorithm/classes/LayoutAlgorithm.html#constructor"><code>constructor</code></a></p>
 <h2>Properties</h2>
+<h3>getComponentArrangement()</h3>
+<blockquote>
+<p><strong>getComponentArrangement</strong>(): <a href="../../../../library/namespaces/networkgraph/enumerations/ComponentArrangement.html"><code>ComponentArrangement</code></a></p>
+</blockquote>
+<p>Gets current value of property #getComponentArrangement componentArrangement.</p>
+<p>Defines how separate connected components should be arranged in the graph. Components can be arranged
+either horizontally (side-by-side) or vertically (stacked).</p>
+<p>Default value is <code>Horizontal</code>.</p>
+<h4>Returns</h4>
+<p><a href="../../../../library/namespaces/networkgraph/enumerations/ComponentArrangement.html"><code>ComponentArrangement</code></a></p>
+<p>Value of property <code>componentArrangement</code></p>
+<h4>Since</h4>
+<p>1.136.19</p>
+<hr>
+<h3>getEnableOptimizedLineAlgorithm()</h3>
+<blockquote>
+<p><strong>getEnableOptimizedLineAlgorithm</strong>(): <code>boolean</code></p>
+</blockquote>
+<p>Gets current value of property #getEnableOptimizedLineAlgorithm enableOptimizedLineAlgorithm.</p>
+<p>Enables advanced line routing algorithm that creates orthogonal bends along the pathfinding process for
+line creation.</p>
+<p>Default value is <code>false</code>.</p>
+<h4>Returns</h4>
+<p><code>boolean</code></p>
+<p>Value of property <code>enableOptimizedLineAlgorithm</code></p>
+<hr>
 <h3>getLayoutRenderType()</h3>
 <blockquote>
 <p><strong>getLayoutRenderType</strong>(): <a href="../../../../library/namespaces/networkgraph/enumerations/LayoutRenderType.html"><code>LayoutRenderType</code></a></p>
@@ -69,6 +93,7 @@ can be used.</p>
 <p>Specifies the type of layout algorithm that defines the visual features and layout of the network graph.</p>
 <h4>Returns</h4>
 <p><a href="../../../../library/namespaces/networkgraph/enumerations/LayoutRenderType.html"><code>LayoutRenderType</code></a></p>
+<p>The layout render type.</p>
 <h4>Overrides</h4>
 <p><a href="../../LayoutAlgorithm/classes/LayoutAlgorithm.html"><code>LayoutAlgorithm</code></a>.<a href="../../LayoutAlgorithm/classes/LayoutAlgorithm.html#getlayoutrendertype"><code>getLayoutRenderType</code></a></p>
 <hr>
@@ -76,12 +101,49 @@ can be used.</p>
 <blockquote>
 <p><strong>layout</strong>(): <a href="../../LayoutTask/classes/LayoutTask.html"><code>LayoutTask</code></a></p>
 </blockquote>
-<p>Executes the layout algorithm.</p>
+<p>Executes the layout algorithm. Automatically calculates initial positions for unpositioned nodes using
+DependencyLayoutHelper, then normalizes line coordinates.</p>
 <h4>Returns</h4>
 <p><a href="../../LayoutTask/classes/LayoutTask.html"><code>LayoutTask</code></a></p>
 <p>Task to get the layout calculated.</p>
 <h4>Overrides</h4>
 <p><a href="../../LayoutAlgorithm/classes/LayoutAlgorithm.html"><code>LayoutAlgorithm</code></a>.<a href="../../LayoutAlgorithm/classes/LayoutAlgorithm.html#layout"><code>layout</code></a></p>
+<hr>
+<h3>setComponentArrangement()</h3>
+<blockquote>
+<p><strong>setComponentArrangement</strong>(<code>sComponentArrangement?</code>): <code>this</code></p>
+</blockquote>
+<p>Sets a new value for property #getComponentArrangement componentArrangement.</p>
+<p>Defines how separate connected components should be arranged in the graph. Components can be arranged
+either horizontally (side-by-side) or vertically (stacked).</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>Horizontal</code>.</p>
+<h4>Parameters</h4>
+<h5>sComponentArrangement?</h5>
+<p><code>&quot;Horizontal&quot;</code> | <code>&quot;Vertical&quot;</code> | <a href="../../../../library/namespaces/networkgraph/enumerations/ComponentArrangement.html"><code>ComponentArrangement</code></a></p>
+<p>New value for property <code>componentArrangement</code></p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<h4>Since</h4>
+<p>1.136.19</p>
+<hr>
+<h3>setEnableOptimizedLineAlgorithm()</h3>
+<blockquote>
+<p><strong>setEnableOptimizedLineAlgorithm</strong>(<code>bEnableOptimizedLineAlgorithm?</code>): <code>this</code></p>
+</blockquote>
+<p>Sets a new value for property #getEnableOptimizedLineAlgorithm enableOptimizedLineAlgorithm.</p>
+<p>Enables advanced line routing algorithm that creates orthogonal bends along the pathfinding process for
+line creation.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>false</code>.</p>
+<h4>Parameters</h4>
+<h5>bEnableOptimizedLineAlgorithm?</h5>
+<p><code>boolean</code></p>
+<p>New value for property <code>enableOptimizedLineAlgorithm</code></p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
 <hr>
 <h3>extend()</h3>
 <blockquote>
@@ -122,6 +184,6 @@ used by this class</p>
 <p><a href="../../LayoutAlgorithm/classes/LayoutAlgorithm.html"><code>LayoutAlgorithm</code></a>.<a href="../../LayoutAlgorithm/classes/LayoutAlgorithm.html#getmetadata-1"><code>getMetadata</code></a></p>
 <hr>
 
-<footer>Generated from <code>@sapui5/types@1.136.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.136/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.136.19</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.136/">Back to index</a>.</footer>
 </body>
 </html>

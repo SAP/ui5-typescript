@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Class: SearchField — SAPUI5 TypeScript API</title>
-<meta name="description" content="Class: SearchField — SAPUI5 TypeScript API Reference (1.136.0)">
+<meta name="description" content="Class: SearchField — SAPUI5 TypeScript API Reference (1.136.19)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.136/sap.m/sap/m/SearchField/classes/SearchField.html">
 <meta property="og:title" content="Class: SearchField — SAPUI5 TypeScript API">
-<meta property="og:description" content="Class: SearchField — SAPUI5 TypeScript API Reference (1.136.0)">
+<meta property="og:description" content="Class: SearchField — SAPUI5 TypeScript API Reference (1.136.19)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.136/sap.m/sap/m/SearchField/classes/SearchField.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,9 +33,9 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../sap.m/README.html">sap.m</a> › sap › m › <a href="../../../../../sap.m/sap/m/SearchField/README.html">SearchField</a> › classes</nav>
-<p><a href="../../../../../README.html"><strong>SAPUI5 TypeScript API (1.136.0)</strong></a></p>
+<p><a href="../../../../../README.html"><strong>SAPUI5 TypeScript API (1.136.19)</strong></a></p>
 <hr>
-<p><a href="../../../../../README.html">SAPUI5 TypeScript API (1.136.0)</a> / <a href="../../../../README.html">sap.m</a> / <a href="../README.html">sap/m/SearchField</a> / SearchField</p>
+<p><a href="../../../../../README.html">SAPUI5 TypeScript API (1.136.19)</a> / <a href="../../../../README.html">sap.m</a> / <a href="../README.html">sap/m/SearchField</a> / SearchField</p>
 <h1>Class: SearchField</h1>
 <pre class="sig"><span class="kw">import</span> SearchField <span class="kw">from</span> <span class="str">"sap/m/SearchField"</span>;</pre>
 <p>An input field to search for a specific item. Overview: A search field is needed when the user needs
@@ -61,6 +61,7 @@ and spins to signal that the user should release it.
 <li><a href="../../../../../sap.ui.core/sap/ui/core/library/interfaces/IFormContent.html"><code>IFormContent</code></a></li>
 <li><a href="../../../../../sap.f/sap/f/library/interfaces/IShellBar.html"><code>IShellBar</code></a></li>
 <li><a href="../../library/interfaces/IToolbarInteractiveControl.html"><code>IToolbarInteractiveControl</code></a></li>
+<li><a href="../../library/interfaces/IOverflowToolbarContent.html"><code>IOverflowToolbarContent</code></a></li>
 </ul>
 <h2>Constructors</h2>
 <h3>Constructor</h3>
@@ -109,6 +110,13 @@ See:
 </blockquote>
 <h4>Implementation of</h4>
 <p><a href="../../../../../sap.f/sap/f/library/interfaces/IShellBar.html"><code>IShellBar</code></a>.<a href="../../../../../sap.f/sap/f/library/interfaces/IShellBar.html#__implements__sap_f_ishellbar"><code>__implements__sap_f_IShellBar</code></a></p>
+<hr>
+<h3>__implements__sap_m_IOverflowToolbarContent</h3>
+<blockquote>
+<p><strong>__implements__sap_m_IOverflowToolbarContent</strong>: <code>boolean</code></p>
+</blockquote>
+<h4>Implementation of</h4>
+<p><a href="../../library/interfaces/IOverflowToolbarContent.html"><code>IOverflowToolbarContent</code></a>.<a href="../../library/interfaces/IOverflowToolbarContent.html#__implements__sap_m_ioverflowtoolbarcontent"><code>__implements__sap_m_IOverflowToolbarContent</code></a></p>
 <hr>
 <h3>__implements__sap_m_IToolbarInteractiveControl</h3>
 <blockquote>
@@ -571,6 +579,16 @@ empty.</p>
 <h4>Returns</h4>
 <p><code>number</code></p>
 <p>Value of property <code>maxLength</code></p>
+<hr>
+<h3>getOverflowToolbarConfig()</h3>
+<blockquote>
+<p><strong>getOverflowToolbarConfig</strong>(): <a href="../../library/type-aliases/OverflowToolbarConfig.html"><code>OverflowToolbarConfig</code></a></p>
+</blockquote>
+<p>Enables the <code>sap.m.SearchField</code> to be used inside sap.m.OverflowToolbar. Required by the sap.m.IOverflowToolbarContent
+interface.</p>
+<h4>Returns</h4>
+<p><a href="../../library/type-aliases/OverflowToolbarConfig.html"><code>OverflowToolbarConfig</code></a></p>
+<p>Configuration information for the <code>sap.m.IOverflowToolbarContent</code> interface.</p>
 <hr>
 <h3>getPlaceholder()</h3>
 <blockquote>
@@ -1113,6 +1131,6 @@ used by this class</p>
 <p><a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a>.<a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html#getmetadata-1"><code>getMetadata</code></a></p>
 <hr>
 
-<footer>Generated from <code>@sapui5/types@1.136.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.136/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.136.19</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.136/">Back to index</a>.</footer>
 </body>
 </html>

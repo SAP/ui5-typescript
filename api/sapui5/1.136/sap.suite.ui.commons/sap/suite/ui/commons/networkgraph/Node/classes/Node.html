@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Class: Node — SAPUI5 TypeScript API</title>
-<meta name="description" content="Class: Node — SAPUI5 TypeScript API Reference (1.136.0)">
+<meta name="description" content="Class: Node — SAPUI5 TypeScript API Reference (1.136.19)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.136/sap.suite.ui.commons/sap/suite/ui/commons/networkgraph/Node/classes/Node.html">
 <meta property="og:title" content="Class: Node — SAPUI5 TypeScript API">
-<meta property="og:description" content="Class: Node — SAPUI5 TypeScript API Reference (1.136.0)">
+<meta property="og:description" content="Class: Node — SAPUI5 TypeScript API Reference (1.136.19)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.136/sap.suite.ui.commons/sap/suite/ui/commons/networkgraph/Node/classes/Node.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,9 +33,9 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../../../../sap.suite.ui.commons/README.html">sap.suite.ui.commons</a> › sap › suite › ui › commons › networkgraph › <a href="../../../../../../../../sap.suite.ui.commons/sap/suite/ui/commons/networkgraph/Node/README.html">Node</a> › classes</nav>
-<p><a href="../../../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.136.0)</strong></a></p>
+<p><a href="../../../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.136.19)</strong></a></p>
 <hr>
-<p><a href="../../../../../../../../README.html">SAPUI5 TypeScript API (1.136.0)</a> / <a href="../../../../../../../README.html">sap.suite.ui.commons</a> / <a href="../README.html">sap/suite/ui/commons/networkgraph/Node</a> / Node</p>
+<p><a href="../../../../../../../../README.html">SAPUI5 TypeScript API (1.136.19)</a> / <a href="../../../../../../../README.html">sap.suite.ui.commons</a> / <a href="../README.html">sap/suite/ui/commons/networkgraph/Node</a> / Node</p>
 <h1>Class: Node</h1>
 <pre class="sig"><span class="kw">import</span> Node <span class="kw">from</span> <span class="str">"sap/suite/ui/commons/networkgraph/Node"</span>;</pre>
 <p>Holds information about one node. When changing the size of the node after the graph is rendered, you
@@ -675,6 +675,20 @@ line (Line) elements of the graph.</p>
 <p><code>number</code></p>
 <p>Value of property <code>maxWidth</code></p>
 <hr>
+<h3>getNodePorts()</h3>
+<blockquote>
+<p><strong>getNodePorts</strong>(): <code>any</code></p>
+</blockquote>
+<p>Gets current value of property #getNodePorts nodePorts.</p>
+<p>Determines the port configuration for this node. When set, it overrides the graph-level nodePorts setting.
+If not set (defaults to None), the graph-level setting is used. Ports are available only when the layout
+algorithm is set to &quot;NoopLayout&quot;, and when the drag and drop is enabled.</p>
+<h4>Returns</h4>
+<p><code>any</code></p>
+<p>Value of property <code>nodePorts</code></p>
+<h4>Since</h4>
+<p>1.136.19</p>
+<hr>
 <h3>getNodeTitleBackground()</h3>
 <blockquote>
 <p><strong>getNodeTitleBackground</strong>(): <code>boolean</code></p>
@@ -738,6 +752,22 @@ Box.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>Value of property <code>showActionLinksButton</code></p>
+<hr>
+<h3>getShowCreateConnectionButton()</h3>
+<blockquote>
+<p><strong>getShowCreateConnectionButton</strong>(): <code>boolean</code></p>
+</blockquote>
+<p>Gets current value of property #getShowCreateConnectionButton showCreateConnectionButton.</p>
+<p>Determines whether the &#39;Create Connection&#39; action button is displayed on this node. When set, it overrides
+the graph-level showCreateConnectionButton setting. If set to default (true), the graph-level setting
+is used. The button is used to create connections between nodes as an accessible alternative to node
+ports.</p>
+<p>Default value is <code>true</code>.</p>
+<h4>Returns</h4>
+<p><code>boolean</code></p>
+<p>Value of property <code>showCreateConnectionButton</code></p>
+<h4>Since</h4>
+<p>1.136.19</p>
 <hr>
 <h3>getShowDetailButton()</h3>
 <blockquote>
@@ -1347,6 +1377,25 @@ line (Line) elements of the graph.</p>
 <p><code>this</code></p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <hr>
+<h3>setNodePorts()</h3>
+<blockquote>
+<p><strong>setNodePorts</strong>(<code>sNodePorts</code>): <code>this</code></p>
+</blockquote>
+<p>Sets a new value for property #getNodePorts nodePorts.</p>
+<p>Determines the port configuration for this node. When set, it overrides the graph-level nodePorts setting.
+If not set (defaults to None), the graph-level setting is used. Ports are available only when the layout
+algorithm is set to &quot;NoopLayout&quot;, and when the drag and drop is enabled.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<h4>Parameters</h4>
+<h5>sNodePorts</h5>
+<p><code>any</code></p>
+<p>New value for property <code>nodePorts</code></p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<h4>Since</h4>
+<p>1.136.19</p>
+<hr>
 <h3>setNodeTitleBackground()</h3>
 <blockquote>
 <p><strong>setNodeTitleBackground</strong>(<code>bNodeTitleBackground?</code>): <code>this</code></p>
@@ -1412,6 +1461,27 @@ Box.</p>
 <h4>Returns</h4>
 <p><code>this</code></p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
+<hr>
+<h3>setShowCreateConnectionButton()</h3>
+<blockquote>
+<p><strong>setShowCreateConnectionButton</strong>(<code>bShowCreateConnectionButton?</code>): <code>this</code></p>
+</blockquote>
+<p>Sets a new value for property #getShowCreateConnectionButton showCreateConnectionButton.</p>
+<p>Determines whether the &#39;Create Connection&#39; action button is displayed on this node. When set, it overrides
+the graph-level showCreateConnectionButton setting. If set to default (true), the graph-level setting
+is used. The button is used to create connections between nodes as an accessible alternative to node
+ports.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>true</code>.</p>
+<h4>Parameters</h4>
+<h5>bShowCreateConnectionButton?</h5>
+<p><code>boolean</code></p>
+<p>New value for property <code>showCreateConnectionButton</code></p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<h4>Since</h4>
+<p>1.136.19</p>
 <hr>
 <h3>setShowDetailButton()</h3>
 <blockquote>
@@ -1622,6 +1692,6 @@ used by this class</p>
 <p><a href="../../ElementBase/classes/ElementBase.html"><code>ElementBase</code></a>.<a href="../../ElementBase/classes/ElementBase.html#getmetadata-1"><code>getMetadata</code></a></p>
 <hr>
 
-<footer>Generated from <code>@sapui5/types@1.136.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.136/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.136.19</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.136/">Back to index</a>.</footer>
 </body>
 </html>

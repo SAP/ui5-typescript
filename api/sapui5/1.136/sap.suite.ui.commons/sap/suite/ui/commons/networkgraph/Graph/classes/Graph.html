@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Class: Graph — SAPUI5 TypeScript API</title>
-<meta name="description" content="Class: Graph — SAPUI5 TypeScript API Reference (1.136.0)">
+<meta name="description" content="Class: Graph — SAPUI5 TypeScript API Reference (1.136.19)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.136/sap.suite.ui.commons/sap/suite/ui/commons/networkgraph/Graph/classes/Graph.html">
 <meta property="og:title" content="Class: Graph — SAPUI5 TypeScript API">
-<meta property="og:description" content="Class: Graph — SAPUI5 TypeScript API Reference (1.136.0)">
+<meta property="og:description" content="Class: Graph — SAPUI5 TypeScript API Reference (1.136.19)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.136/sap.suite.ui.commons/sap/suite/ui/commons/networkgraph/Graph/classes/Graph.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,9 +33,9 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../../../../sap.suite.ui.commons/README.html">sap.suite.ui.commons</a> › sap › suite › ui › commons › networkgraph › <a href="../../../../../../../../sap.suite.ui.commons/sap/suite/ui/commons/networkgraph/Graph/README.html">Graph</a> › classes</nav>
-<p><a href="../../../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.136.0)</strong></a></p>
+<p><a href="../../../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.136.19)</strong></a></p>
 <hr>
-<p><a href="../../../../../../../../README.html">SAPUI5 TypeScript API (1.136.0)</a> / <a href="../../../../../../../README.html">sap.suite.ui.commons</a> / <a href="../README.html">sap/suite/ui/commons/networkgraph/Graph</a> / Graph</p>
+<p><a href="../../../../../../../../README.html">SAPUI5 TypeScript API (1.136.19)</a> / <a href="../../../../../../../README.html">sap.suite.ui.commons</a> / <a href="../README.html">sap/suite/ui/commons/networkgraph/Graph</a> / Graph</p>
 <h1>Class: Graph</h1>
 <pre class="sig"><span class="kw">import</span> Graph <span class="kw">from</span> <span class="str">"sap/suite/ui/commons/networkgraph/Graph"</span>;</pre>
 <p>The network graph control allows you to display data as a network of nodes connected by lines. The nodes
@@ -234,6 +234,56 @@ itself</p>
 <p><code>this</code></p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <hr>
+<h3>attachConnectionCreated()</h3>
+<h4>Call Signature</h4>
+<blockquote>
+<p><strong>attachConnectionCreated</strong>(<code>oData</code>, <code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
+</blockquote>
+<p>Attaches event handler <code>fnFunction</code> to the #event:connectionCreated connectionCreated event of
+this <code>sap.suite.ui.commons.networkgraph.Graph</code>.</p>
+<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
+otherwise it will be bound to this <code>sap.suite.ui.commons.networkgraph.Graph</code> itself.</p>
+<p>This event is fired when a new connection is created between two nodes by using node ports.</p>
+<h5>Parameters</h5>
+<h6>oData</h6>
+<p><code>object</code></p>
+<p>An application-specific payload object that will be passed to the event handler along with the event
+object when firing the event</p>
+<h6>fnFunction</h6>
+<p>(<code>p1</code>) =&gt; <code>void</code></p>
+<p>The function to be called when the event occurs</p>
+<h6>oListener?</h6>
+<p><code>object</code></p>
+<p>Context object to call the event handler with. Defaults to this <code>sap.suite.ui.commons.networkgraph.Graph</code>
+itself</p>
+<h5>Returns</h5>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<h5>Since</h5>
+<p>1.136.19</p>
+<h4>Call Signature</h4>
+<blockquote>
+<p><strong>attachConnectionCreated</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
+</blockquote>
+<p>Attaches event handler <code>fnFunction</code> to the #event:connectionCreated connectionCreated event of
+this <code>sap.suite.ui.commons.networkgraph.Graph</code>.</p>
+<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
+otherwise it will be bound to this <code>sap.suite.ui.commons.networkgraph.Graph</code> itself.</p>
+<p>This event is fired when a new connection is created between two nodes by using node ports.</p>
+<h5>Parameters</h5>
+<h6>fnFunction</h6>
+<p>(<code>p1</code>) =&gt; <code>void</code></p>
+<p>The function to be called when the event occurs</p>
+<h6>oListener?</h6>
+<p><code>object</code></p>
+<p>Context object to call the event handler with. Defaults to this <code>sap.suite.ui.commons.networkgraph.Graph</code>
+itself</p>
+<h5>Returns</h5>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<h5>Since</h5>
+<p>1.136.19</p>
+<hr>
 <h3>attachFailure()</h3>
 <h4>Call Signature</h4>
 <blockquote>
@@ -321,6 +371,158 @@ itself</p>
 <h5>Returns</h5>
 <p><code>this</code></p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
+<hr>
+<h3>attachItemDeleted()</h3>
+<h4>Call Signature</h4>
+<blockquote>
+<p><strong>attachItemDeleted</strong>(<code>oData</code>, <code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
+</blockquote>
+<p>Attaches event handler <code>fnFunction</code> to the #event:itemDeleted itemDeleted event of this <code>sap.suite.ui.commons.networkgraph.Graph</code>.</p>
+<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
+otherwise it will be bound to this <code>sap.suite.ui.commons.networkgraph.Graph</code> itself.</p>
+<p>This event is fired when a user presses the delete key on a focused node or line. This event is available
+only when the layout algorithm is set to &quot;NoopLayout&quot; and the <code>enableDragAndDrop</code> property is set to
+<code>true</code>.</p>
+<h5>Parameters</h5>
+<h6>oData</h6>
+<p><code>object</code></p>
+<p>An application-specific payload object that will be passed to the event handler along with the event
+object when firing the event</p>
+<h6>fnFunction</h6>
+<p>(<code>p1</code>) =&gt; <code>void</code></p>
+<p>The function to be called when the event occurs</p>
+<h6>oListener?</h6>
+<p><code>object</code></p>
+<p>Context object to call the event handler with. Defaults to this <code>sap.suite.ui.commons.networkgraph.Graph</code>
+itself</p>
+<h5>Returns</h5>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<h5>Since</h5>
+<p>1.136.19</p>
+<h4>Call Signature</h4>
+<blockquote>
+<p><strong>attachItemDeleted</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
+</blockquote>
+<p>Attaches event handler <code>fnFunction</code> to the #event:itemDeleted itemDeleted event of this <code>sap.suite.ui.commons.networkgraph.Graph</code>.</p>
+<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
+otherwise it will be bound to this <code>sap.suite.ui.commons.networkgraph.Graph</code> itself.</p>
+<p>This event is fired when a user presses the delete key on a focused node or line. This event is available
+only when the layout algorithm is set to &quot;NoopLayout&quot; and the <code>enableDragAndDrop</code> property is set to
+<code>true</code>.</p>
+<h5>Parameters</h5>
+<h6>fnFunction</h6>
+<p>(<code>p1</code>) =&gt; <code>void</code></p>
+<p>The function to be called when the event occurs</p>
+<h6>oListener?</h6>
+<p><code>object</code></p>
+<p>Context object to call the event handler with. Defaults to this <code>sap.suite.ui.commons.networkgraph.Graph</code>
+itself</p>
+<h5>Returns</h5>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<h5>Since</h5>
+<p>1.136.19</p>
+<hr>
+<h3>attachNodeAdded()</h3>
+<h4>Call Signature</h4>
+<blockquote>
+<p><strong>attachNodeAdded</strong>(<code>oData</code>, <code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
+</blockquote>
+<p>Attaches event handler <code>fnFunction</code> to the #event:nodeAdded nodeAdded event of this <code>sap.suite.ui.commons.networkgraph.Graph</code>.</p>
+<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
+otherwise it will be bound to this <code>sap.suite.ui.commons.networkgraph.Graph</code> itself.</p>
+<p>Fired when the user requests to add a node via INSERT or Ctrl+Alt+N. Only available when NoopLayout is
+used and enableDragAndDrop is <code>true</code>.</p>
+<h5>Parameters</h5>
+<h6>oData</h6>
+<p><code>object</code></p>
+<p>An application-specific payload object that will be passed to the event handler along with the event
+object when firing the event</p>
+<h6>fnFunction</h6>
+<p>(<code>p1</code>) =&gt; <code>void</code></p>
+<p>The function to be called when the event occurs</p>
+<h6>oListener?</h6>
+<p><code>object</code></p>
+<p>Context object to call the event handler with. Defaults to this <code>sap.suite.ui.commons.networkgraph.Graph</code>
+itself</p>
+<h5>Returns</h5>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<h5>Since</h5>
+<p>1.136.19</p>
+<h4>Call Signature</h4>
+<blockquote>
+<p><strong>attachNodeAdded</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
+</blockquote>
+<p>Attaches event handler <code>fnFunction</code> to the #event:nodeAdded nodeAdded event of this <code>sap.suite.ui.commons.networkgraph.Graph</code>.</p>
+<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
+otherwise it will be bound to this <code>sap.suite.ui.commons.networkgraph.Graph</code> itself.</p>
+<p>Fired when the user requests to add a node via INSERT or Ctrl+Alt+N. Only available when NoopLayout is
+used and enableDragAndDrop is <code>true</code>.</p>
+<h5>Parameters</h5>
+<h6>fnFunction</h6>
+<p>(<code>p1</code>) =&gt; <code>void</code></p>
+<p>The function to be called when the event occurs</p>
+<h6>oListener?</h6>
+<p><code>object</code></p>
+<p>Context object to call the event handler with. Defaults to this <code>sap.suite.ui.commons.networkgraph.Graph</code>
+itself</p>
+<h5>Returns</h5>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<h5>Since</h5>
+<p>1.136.19</p>
+<hr>
+<h3>attachNodeDropped()</h3>
+<h4>Call Signature</h4>
+<blockquote>
+<p><strong>attachNodeDropped</strong>(<code>oData</code>, <code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
+</blockquote>
+<p>Attaches event handler <code>fnFunction</code> to the #event:nodeDropped nodeDropped event of this <code>sap.suite.ui.commons.networkgraph.Graph</code>.</p>
+<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
+otherwise it will be bound to this <code>sap.suite.ui.commons.networkgraph.Graph</code> itself.</p>
+<p>This event is fired when a user drops a node in the graph. This event is available only when the layout
+algorithm is set to &quot;NoopLayout&quot; and the <code>enableDragAndDrop</code> property is set to <code>true</code>.</p>
+<h5>Parameters</h5>
+<h6>oData</h6>
+<p><code>object</code></p>
+<p>An application-specific payload object that will be passed to the event handler along with the event
+object when firing the event</p>
+<h6>fnFunction</h6>
+<p>(<code>p1</code>) =&gt; <code>void</code></p>
+<p>The function to be called when the event occurs</p>
+<h6>oListener?</h6>
+<p><code>object</code></p>
+<p>Context object to call the event handler with. Defaults to this <code>sap.suite.ui.commons.networkgraph.Graph</code>
+itself</p>
+<h5>Returns</h5>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<h5>Since</h5>
+<p>1.136.19</p>
+<h4>Call Signature</h4>
+<blockquote>
+<p><strong>attachNodeDropped</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
+</blockquote>
+<p>Attaches event handler <code>fnFunction</code> to the #event:nodeDropped nodeDropped event of this <code>sap.suite.ui.commons.networkgraph.Graph</code>.</p>
+<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
+otherwise it will be bound to this <code>sap.suite.ui.commons.networkgraph.Graph</code> itself.</p>
+<p>This event is fired when a user drops a node in the graph. This event is available only when the layout
+algorithm is set to &quot;NoopLayout&quot; and the <code>enableDragAndDrop</code> property is set to <code>true</code>.</p>
+<h5>Parameters</h5>
+<h6>fnFunction</h6>
+<p>(<code>p1</code>) =&gt; <code>void</code></p>
+<p>The function to be called when the event occurs</p>
+<h6>oListener?</h6>
+<p><code>object</code></p>
+<p>Context object to call the event handler with. Defaults to this <code>sap.suite.ui.commons.networkgraph.Graph</code>
+itself</p>
+<h5>Returns</h5>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<h5>Since</h5>
+<p>1.136.19</p>
 <hr>
 <h3>attachSearch()</h3>
 <h4>Call Signature</h4>
@@ -612,6 +814,26 @@ this <code>sap.suite.ui.commons.networkgraph.Graph</code>.</p>
 <p><code>this</code></p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <hr>
+<h3>detachConnectionCreated()</h3>
+<blockquote>
+<p><strong>detachConnectionCreated</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
+</blockquote>
+<p>Detaches event handler <code>fnFunction</code> from the #event:connectionCreated connectionCreated event
+of this <code>sap.suite.ui.commons.networkgraph.Graph</code>.</p>
+<p>The passed function and listener object must match the ones used for event registration.</p>
+<h4>Parameters</h4>
+<h5>fnFunction</h5>
+<p>(<code>p1</code>) =&gt; <code>void</code></p>
+<p>The function to be called, when the event occurs</p>
+<h5>oListener?</h5>
+<p><code>object</code></p>
+<p>Context object on which the given function had to be called</p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<h4>Since</h4>
+<p>1.136.19</p>
+<hr>
 <h3>detachFailure()</h3>
 <blockquote>
 <p><strong>detachFailure</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
@@ -645,6 +867,63 @@ this <code>sap.suite.ui.commons.networkgraph.Graph</code>.</p>
 <h4>Returns</h4>
 <p><code>this</code></p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
+<hr>
+<h3>detachItemDeleted()</h3>
+<blockquote>
+<p><strong>detachItemDeleted</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
+</blockquote>
+<p>Detaches event handler <code>fnFunction</code> from the #event:itemDeleted itemDeleted event of this <code>sap.suite.ui.commons.networkgraph.Graph</code>.</p>
+<p>The passed function and listener object must match the ones used for event registration.</p>
+<h4>Parameters</h4>
+<h5>fnFunction</h5>
+<p>(<code>p1</code>) =&gt; <code>void</code></p>
+<p>The function to be called, when the event occurs</p>
+<h5>oListener?</h5>
+<p><code>object</code></p>
+<p>Context object on which the given function had to be called</p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<h4>Since</h4>
+<p>1.136.19</p>
+<hr>
+<h3>detachNodeAdded()</h3>
+<blockquote>
+<p><strong>detachNodeAdded</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
+</blockquote>
+<p>Detaches event handler <code>fnFunction</code> from the #event:nodeAdded nodeAdded event of this <code>sap.suite.ui.commons.networkgraph.Graph</code>.</p>
+<p>The passed function and listener object must match the ones used for event registration.</p>
+<h4>Parameters</h4>
+<h5>fnFunction</h5>
+<p>(<code>p1</code>) =&gt; <code>void</code></p>
+<p>The function to be called, when the event occurs</p>
+<h5>oListener?</h5>
+<p><code>object</code></p>
+<p>Context object on which the given function had to be called</p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<h4>Since</h4>
+<p>1.136.19</p>
+<hr>
+<h3>detachNodeDropped()</h3>
+<blockquote>
+<p><strong>detachNodeDropped</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
+</blockquote>
+<p>Detaches event handler <code>fnFunction</code> from the #event:nodeDropped nodeDropped event of this <code>sap.suite.ui.commons.networkgraph.Graph</code>.</p>
+<p>The passed function and listener object must match the ones used for event registration.</p>
+<h4>Parameters</h4>
+<h5>fnFunction</h5>
+<p>(<code>p1</code>) =&gt; <code>void</code></p>
+<p>The function to be called, when the event occurs</p>
+<h5>oListener?</h5>
+<p><code>object</code></p>
+<p>Context object on which the given function had to be called</p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<h4>Since</h4>
+<p>1.136.19</p>
 <hr>
 <h3>detachSearch()</h3>
 <blockquote>
@@ -746,6 +1025,23 @@ this <code>sap.suite.ui.commons.networkgraph.Graph</code>.</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
 <hr>
+<h3>fireConnectionCreated()</h3>
+<blockquote>
+<p><strong>fireConnectionCreated</strong>(<code>mParameters?</code>): <code>this</code></p>
+</blockquote>
+<p>Fires event #event:connectionCreated connectionCreated to attached listeners.</p>
+<h4>Parameters</h4>
+<h5>mParameters?</h5>
+<p><a href="../interfaces/Graph$ConnectionCreatedEventParameters.html"><code>Graph$ConnectionCreatedEventParameters</code></a></p>
+<p>Parameters to pass along with the event</p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<h4>Since</h4>
+<p>1.136.19</p>
+<h4>Ui5-protected</h4>
+<p>Do not call from applications (only from related classes in the framework)</p>
+<hr>
 <h3>fireFailure()</h3>
 <blockquote>
 <p><strong>fireFailure</strong>(<code>mParameters?</code>): <code>this</code></p>
@@ -773,6 +1069,57 @@ this <code>sap.suite.ui.commons.networkgraph.Graph</code>.</p>
 <h4>Returns</h4>
 <p><code>this</code></p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
+<h4>Ui5-protected</h4>
+<p>Do not call from applications (only from related classes in the framework)</p>
+<hr>
+<h3>fireItemDeleted()</h3>
+<blockquote>
+<p><strong>fireItemDeleted</strong>(<code>mParameters?</code>): <code>this</code></p>
+</blockquote>
+<p>Fires event #event:itemDeleted itemDeleted to attached listeners.</p>
+<h4>Parameters</h4>
+<h5>mParameters?</h5>
+<p><a href="../interfaces/Graph$ItemDeletedEventParameters.html"><code>Graph$ItemDeletedEventParameters</code></a></p>
+<p>Parameters to pass along with the event</p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<h4>Since</h4>
+<p>1.136.19</p>
+<h4>Ui5-protected</h4>
+<p>Do not call from applications (only from related classes in the framework)</p>
+<hr>
+<h3>fireNodeAdded()</h3>
+<blockquote>
+<p><strong>fireNodeAdded</strong>(<code>mParameters?</code>): <code>this</code></p>
+</blockquote>
+<p>Fires event #event:nodeAdded nodeAdded to attached listeners.</p>
+<h4>Parameters</h4>
+<h5>mParameters?</h5>
+<p><code>object</code></p>
+<p>Parameters to pass along with the event</p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<h4>Since</h4>
+<p>1.136.19</p>
+<h4>Ui5-protected</h4>
+<p>Do not call from applications (only from related classes in the framework)</p>
+<hr>
+<h3>fireNodeDropped()</h3>
+<blockquote>
+<p><strong>fireNodeDropped</strong>(<code>mParameters?</code>): <code>this</code></p>
+</blockquote>
+<p>Fires event #event:nodeDropped nodeDropped to attached listeners.</p>
+<h4>Parameters</h4>
+<h5>mParameters?</h5>
+<p><a href="../interfaces/Graph$NodeDroppedEventParameters.html"><code>Graph$NodeDroppedEventParameters</code></a></p>
+<p>Parameters to pass along with the event</p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<h4>Since</h4>
+<p>1.136.19</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
 <hr>
@@ -852,6 +1199,16 @@ this <code>sap.suite.ui.commons.networkgraph.Graph</code>.</p>
 <h4>Returns</h4>
 <p><code>string</code>[]</p>
 <hr>
+<h3>getAssociatedControl()</h3>
+<blockquote>
+<p><strong>getAssociatedControl</strong>(): <a href="../../../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></p>
+</blockquote>
+<p>Gets the associated control linked to this graph instance using the &#39;associatedControl&#39; association.
+This can be any UI5 control that is related to the graph.</p>
+<h4>Returns</h4>
+<p><a href="../../../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></p>
+<p>The associated control instance or null if not set.</p>
+<hr>
 <h3>getBackgroundColor()</h3>
 <blockquote>
 <p><strong>getBackgroundColor</strong>(): <a href="../../../library/namespaces/networkgraph/enumerations/BackgroundColor.html"><code>BackgroundColor</code></a></p>
@@ -873,6 +1230,23 @@ this <code>sap.suite.ui.commons.networkgraph.Graph</code>.</p>
 <p><code>string</code></p>
 <p>Value of property <code>backgroundImage</code></p>
 <hr>
+<h3>getConnectionTypeMapping()</h3>
+<blockquote>
+<p><strong>getConnectionTypeMapping</strong>(): <code>object</code></p>
+</blockquote>
+<p>Gets current value of property #getConnectionTypeMapping connectionTypeMapping.</p>
+<p>Mapping of connection types to their display text keys or custom text values. This allows customization
+of how connection types are displayed in the connection creation popover. The mapping should be an object
+where keys are connection type values (LeftToLeft, LeftToRight, RightToLeft, RightToRight) and values
+are custom text that follows the correct format (e.g., &quot;Start to End&quot;, &quot;Source to Target&quot;). If the format
+is invalid or not provided, default values are used</p>
+<p>Default value is <code>...see text or source</code>.</p>
+<h4>Returns</h4>
+<p><code>object</code></p>
+<p>Value of property <code>connectionTypeMapping</code></p>
+<h4>Since</h4>
+<p>1.136.19</p>
+<hr>
 <h3>getCurrentZoomLevel()</h3>
 <blockquote>
 <p><strong>getCurrentZoomLevel</strong>(): <code>number</code></p>
@@ -880,6 +1254,7 @@ this <code>sap.suite.ui.commons.networkgraph.Graph</code>.</p>
 <p>Returns current zoom level.</p>
 <h4>Returns</h4>
 <p><code>number</code></p>
+<p>Current zoom level</p>
 <hr>
 <h3>getEnableWheelZoom()</h3>
 <blockquote>
@@ -926,6 +1301,21 @@ the height of its content, regardless of the height of the parent control.</p>
 <p><code>string</code></p>
 <p>Value of property <code>height</code></p>
 <hr>
+<h3>getLabels()</h3>
+<blockquote>
+<p><strong>getLabels</strong>(): <code>object</code></p>
+</blockquote>
+<p>Gets current value of property #getLabels labels.</p>
+<p>Custom labels for element types displayed in the SearchField suggestions and Legend section headers.
+Supported keys: nodeLabel, nodeLabelPlural, lineLabel, lineLabelPlural, groupLabel, groupLabelPlural.
+Reverts to the default values for keys that are not set.</p>
+<p>Default value is <code>{}</code>.</p>
+<h4>Returns</h4>
+<p><code>object</code></p>
+<p>Value of property <code>labels</code></p>
+<h4>Since</h4>
+<p>1.149</p>
+<hr>
 <h3>getLayoutAlgorithm()</h3>
 <blockquote>
 <p><strong>getLayoutAlgorithm</strong>(): <a href="../../layout/LayoutAlgorithm/classes/LayoutAlgorithm.html"><code>LayoutAlgorithm</code></a></p>
@@ -953,6 +1343,33 @@ is used.</p>
 <p>Holds the lines to be displayed in the graph.</p>
 <h4>Returns</h4>
 <p><a href="../../Line/classes/Line.html"><code>Line</code></a>[]</p>
+<hr>
+<h3>getLoading()</h3>
+<blockquote>
+<p><strong>getLoading</strong>(): <code>boolean</code></p>
+</blockquote>
+<p>Gets current value of property #getLoading loading.</p>
+<p>Set this property to <code>true</code> to display a loading indicator while the data loads.</p>
+<p>Default value is <code>false</code>.</p>
+<h4>Returns</h4>
+<p><code>boolean</code></p>
+<p>Value of property <code>loading</code></p>
+<h4>Since</h4>
+<p>1.136.19</p>
+<hr>
+<h3>getLoadingText()</h3>
+<blockquote>
+<p><strong>getLoadingText</strong>(): <code>string</code></p>
+</blockquote>
+<p>Gets current value of property #getLoadingText loadingText.</p>
+<p>Text that is displayed when the loading is set.
+ This property takes effect only when the <code>loading</code> property is set to <code>true</code>.</p>
+<p>Default value is <code>empty string</code>.</p>
+<h4>Returns</h4>
+<p><code>string</code></p>
+<p>Value of property <code>loadingText</code></p>
+<h4>Since</h4>
+<p>1.136.19</p>
 <hr>
 <h3>getNoData()</h3>
 <blockquote>
@@ -992,6 +1409,21 @@ when there is no data received, not just when the application is waiting for dat
 <p><a href="../../Node/classes/Node.html"><code>Node</code></a></p>
 <p>The node, if such a node exists, or undefined</p>
 <hr>
+<h3>getNodePorts()</h3>
+<blockquote>
+<p><strong>getNodePorts</strong>(): <code>any</code></p>
+</blockquote>
+<p>Gets current value of property #getNodePorts nodePorts.</p>
+<p>Specifies the ports that are to be displayed on nodes. Ports are used for creating connections between
+nodes. Ports are available only when the layout algorithm is set to &quot;NoopLayout&quot;, and when the drag and
+drop is enabled. Otherwise, this property is ignored.</p>
+<p>Default value is <code>None</code>.</p>
+<h4>Returns</h4>
+<p><code>any</code></p>
+<p>Value of property <code>nodePorts</code></p>
+<h4>Since</h4>
+<p>1.136.19</p>
+<hr>
 <h3>getNodes()</h3>
 <blockquote>
 <p><strong>getNodes</strong>(): <a href="../../Node/classes/Node.html"><code>Node</code></a>[]</p>
@@ -1023,6 +1455,23 @@ possible.</p>
 <h4>Returns</h4>
 <p><a href="../../../library/namespaces/networkgraph/enumerations/RenderType.html"><code>RenderType</code></a></p>
 <p>Value of property <code>renderType</code></p>
+<hr>
+<h3>getShowCreateConnectionButton()</h3>
+<blockquote>
+<p><strong>getShowCreateConnectionButton</strong>(): <code>boolean</code></p>
+</blockquote>
+<p>Gets current value of property #getShowCreateConnectionButton showCreateConnectionButton.</p>
+<p>This action button is used to create connections between nodes as an accessible alternative to node ports.
+The button is displayed on each node when the layout algorithm is set to &quot;NoopLayout&quot; and drag and drop
+is enabled. shows the &#39;Create Connection&#39; action button on node. If set to <code>false</code>, the button remains
+hidden. Hide this button when you want to implement your own way of creating connections between nodes
+as an accessible alternative to node ports.</p>
+<p>Default value is <code>true</code>.</p>
+<h4>Returns</h4>
+<p><code>boolean</code></p>
+<p>Value of property <code>showCreateConnectionButton</code></p>
+<h4>Since</h4>
+<p>1.136.19</p>
 <hr>
 <h3>getStatuses()</h3>
 <blockquote>
@@ -1194,11 +1643,12 @@ at the last position</p>
 <hr>
 <h3>isFullScreen()</h3>
 <blockquote>
-<p><strong>isFullScreen</strong>(): <code>void</code></p>
+<p><strong>isFullScreen</strong>(): <code>boolean</code></p>
 </blockquote>
 <p>Returns <code>true</code> if the graph is in full screen mode.</p>
 <h4>Returns</h4>
-<p><code>void</code></p>
+<p><code>boolean</code></p>
+<p>Returns whether the graph is in full screen mode.</p>
 <hr>
 <h3>preventInvalidation()</h3>
 <blockquote>
@@ -1362,6 +1812,22 @@ and force an infinite loop.</p>
 <h4>Returns</h4>
 <p><code>void</code></p>
 <hr>
+<h3>setAssociatedControl()</h3>
+<blockquote>
+<p><strong>setAssociatedControl</strong>(<code>oAssociatedControl</code>): <code>this</code></p>
+</blockquote>
+<p>Sets the associated #getAssociatedControl associatedControl.</p>
+<h4>Parameters</h4>
+<h5>oAssociatedControl</h5>
+<p><code>string</code> | <a href="../../../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></p>
+<p>ID of an element which becomes the new target of this associatedControl association; alternatively, an
+element instance may be given</p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<h4>Since</h4>
+<p>1.136.19</p>
+<hr>
 <h3>setBackgroundColor()</h3>
 <blockquote>
 <p><strong>setBackgroundColor</strong>(<code>sBackgroundColor?</code>): <code>this</code></p>
@@ -1392,6 +1858,28 @@ and force an infinite loop.</p>
 <h4>Returns</h4>
 <p><code>this</code></p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
+<hr>
+<h3>setConnectionTypeMapping()</h3>
+<blockquote>
+<p><strong>setConnectionTypeMapping</strong>(<code>oConnectionTypeMapping?</code>): <code>this</code></p>
+</blockquote>
+<p>Sets a new value for property #getConnectionTypeMapping connectionTypeMapping.</p>
+<p>Mapping of connection types to their display text keys or custom text values. This allows customization
+of how connection types are displayed in the connection creation popover. The mapping should be an object
+where keys are connection type values (LeftToLeft, LeftToRight, RightToLeft, RightToRight) and values
+are custom text that follows the correct format (e.g., &quot;Start to End&quot;, &quot;Source to Target&quot;). If the format
+is invalid or not provided, default values are used</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>...see text or source</code>.</p>
+<h4>Parameters</h4>
+<h5>oConnectionTypeMapping?</h5>
+<p><code>object</code></p>
+<p>New value for property <code>connectionTypeMapping</code></p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<h4>Since</h4>
+<p>1.136.19</p>
 <hr>
 <h3>setCurrentZoomLevel()</h3>
 <blockquote>
@@ -1483,6 +1971,26 @@ the height of its content, regardless of the height of the parent control.</p>
 <p><code>this</code></p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <hr>
+<h3>setLabels()</h3>
+<blockquote>
+<p><strong>setLabels</strong>(<code>oLabels?</code>): <code>this</code></p>
+</blockquote>
+<p>Sets a new value for property #getLabels labels.</p>
+<p>Custom labels for element types displayed in the SearchField suggestions and Legend section headers.
+Supported keys: nodeLabel, nodeLabelPlural, lineLabel, lineLabelPlural, groupLabel, groupLabelPlural.
+Reverts to the default values for keys that are not set.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>{}</code>.</p>
+<h4>Parameters</h4>
+<h5>oLabels?</h5>
+<p><code>object</code></p>
+<p>New value for property <code>labels</code></p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<h4>Since</h4>
+<p>1.149</p>
+<hr>
 <h3>setLayoutAlgorithm()</h3>
 <blockquote>
 <p><strong>setLayoutAlgorithm</strong>(<code>oLayoutAlgorithm</code>): <code>this</code></p>
@@ -1508,6 +2016,43 @@ the height of its content, regardless of the height of the parent control.</p>
 <h4>Returns</h4>
 <p><code>this</code></p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
+<hr>
+<h3>setLoading()</h3>
+<blockquote>
+<p><strong>setLoading</strong>(<code>bLoading?</code>): <code>this</code></p>
+</blockquote>
+<p>Sets a new value for property #getLoading loading.</p>
+<p>Set this property to <code>true</code> to display a loading indicator while the data loads.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>false</code>.</p>
+<h4>Parameters</h4>
+<h5>bLoading?</h5>
+<p><code>boolean</code></p>
+<p>New value for property <code>loading</code></p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<h4>Since</h4>
+<p>1.136.19</p>
+<hr>
+<h3>setLoadingText()</h3>
+<blockquote>
+<p><strong>setLoadingText</strong>(<code>sLoadingText?</code>): <code>this</code></p>
+</blockquote>
+<p>Sets a new value for property #getLoadingText loadingText.</p>
+<p>Text that is displayed when the loading is set.
+ This property takes effect only when the <code>loading</code> property is set to <code>true</code>.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>empty string</code>.</p>
+<h4>Parameters</h4>
+<h5>sLoadingText?</h5>
+<p><code>string</code></p>
+<p>New value for property <code>loadingText</code></p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<h4>Since</h4>
+<p>1.136.19</p>
 <hr>
 <h3>setNoData()</h3>
 <blockquote>
@@ -1543,6 +2088,26 @@ when there is no data received, not just when the application is waiting for dat
 <h4>Returns</h4>
 <p><code>this</code></p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
+<hr>
+<h3>setNodePorts()</h3>
+<blockquote>
+<p><strong>setNodePorts</strong>(<code>sNodePorts?</code>): <code>this</code></p>
+</blockquote>
+<p>Sets a new value for property #getNodePorts nodePorts.</p>
+<p>Specifies the ports that are to be displayed on nodes. Ports are used for creating connections between
+nodes. Ports are available only when the layout algorithm is set to &quot;NoopLayout&quot;, and when the drag and
+drop is enabled. Otherwise, this property is ignored.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>None</code>.</p>
+<h4>Parameters</h4>
+<h5>sNodePorts?</h5>
+<p><code>any</code></p>
+<p>New value for property <code>nodePorts</code></p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<h4>Since</h4>
+<p>1.136.19</p>
 <hr>
 <h3>setOrientation()</h3>
 <blockquote>
@@ -1589,6 +2154,28 @@ possible.</p>
 <h4>Returns</h4>
 <p><code>void</code></p>
 <hr>
+<h3>setShowCreateConnectionButton()</h3>
+<blockquote>
+<p><strong>setShowCreateConnectionButton</strong>(<code>bShowCreateConnectionButton?</code>): <code>this</code></p>
+</blockquote>
+<p>Sets a new value for property #getShowCreateConnectionButton showCreateConnectionButton.</p>
+<p>This action button is used to create connections between nodes as an accessible alternative to node ports.
+The button is displayed on each node when the layout algorithm is set to &quot;NoopLayout&quot; and drag and drop
+is enabled. shows the &#39;Create Connection&#39; action button on node. If set to <code>false</code>, the button remains
+hidden. Hide this button when you want to implement your own way of creating connections between nodes
+as an accessible alternative to node ports.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>true</code>.</p>
+<h4>Parameters</h4>
+<h5>bShowCreateConnectionButton?</h5>
+<p><code>boolean</code></p>
+<p>New value for property <code>showCreateConnectionButton</code></p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<h4>Since</h4>
+<p>1.136.19</p>
+<hr>
 <h3>setWidth()</h3>
 <blockquote>
 <p><strong>setWidth</strong>(<code>sWidth?</code>): <code>this</code></p>
@@ -1621,6 +2208,29 @@ width of its content, regardless of the width of the parent control.</p>
 <p>Updates the legend.</p>
 <h4>Returns</h4>
 <p><code>void</code></p>
+<hr>
+<h3>updateNodePosition()</h3>
+<blockquote>
+<p><strong>updateNodePosition</strong>(<code>vNode</code>, <code>iX</code>, <code>iY</code>): <code>Graph</code></p>
+</blockquote>
+<p>Re-rendering a node and all connected lines to update the positions of both the node and the lines. Note:
+This method should be used only when the layout algorithm is set to NoopLayout and enableDragAndDrop
+is set to true.</p>
+<h4>Parameters</h4>
+<h5>vNode</h5>
+<p><code>string</code> | <a href="../../Node/classes/Node.html"><code>Node</code></a></p>
+<p>Node instance or node key</p>
+<h5>iX</h5>
+<p><code>number</code></p>
+<p>New X coordinate</p>
+<h5>iY</h5>
+<p><code>number</code></p>
+<p>New Y coordinate</p>
+<h4>Returns</h4>
+<p><code>Graph</code></p>
+<p>Reference to this for method chaining</p>
+<h4>Since</h4>
+<p>1.136.19</p>
 <hr>
 <h3>zoom()</h3>
 <blockquote>
@@ -1684,6 +2294,6 @@ used by this class</p>
 <p><a href="../../SvgBase/classes/SvgBase.html"><code>SvgBase</code></a>.<a href="../../SvgBase/classes/SvgBase.html#getmetadata-1"><code>getMetadata</code></a></p>
 <hr>
 
-<footer>Generated from <code>@sapui5/types@1.136.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.136/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.136.19</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.136/">Back to index</a>.</footer>
 </body>
 </html>

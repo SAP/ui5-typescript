@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Interface: $ContentResourceSettings — SAPUI5 TypeScript API</title>
-<meta name="description" content="Interface: $ContentResourceSettings — SAPUI5 TypeScript API Reference (1.136.0)">
+<meta name="description" content="Interface: $ContentResourceSettings — SAPUI5 TypeScript API Reference (1.136.19)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.136/sap.ui.vk/sap/ui/vk/ContentResource/interfaces/$ContentResourceSettings.html">
 <meta property="og:title" content="Interface: $ContentResourceSettings — SAPUI5 TypeScript API">
-<meta property="og:description" content="Interface: $ContentResourceSettings — SAPUI5 TypeScript API Reference (1.136.0)">
+<meta property="og:description" content="Interface: $ContentResourceSettings — SAPUI5 TypeScript API Reference (1.136.19)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.136/sap.ui.vk/sap/ui/vk/ContentResource/interfaces/$ContentResourceSettings.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,9 +33,9 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../../sap.ui.vk/README.html">sap.ui.vk</a> › sap › ui › vk › <a href="../../../../../../sap.ui.vk/sap/ui/vk/ContentResource/README.html">ContentResource</a> › interfaces</nav>
-<p><a href="../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.136.0)</strong></a></p>
+<p><a href="../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.136.19)</strong></a></p>
 <hr>
-<p><a href="../../../../../../README.html">SAPUI5 TypeScript API (1.136.0)</a> / <a href="../../../../../README.html">sap.ui.vk</a> / <a href="../README.html">sap/ui/vk/ContentResource</a> / $ContentResourceSettings</p>
+<p><a href="../../../../../../README.html">SAPUI5 TypeScript API (1.136.19)</a> / <a href="../../../../../README.html">sap.ui.vk</a> / <a href="../README.html">sap/ui/vk/ContentResource</a> / $ContentResourceSettings</p>
 <h1>Interface: $ContentResourceSettings</h1>
 <pre class="sig"><span class="kw">import</span> { $ContentResourceSettings } <span class="kw">from</span> <span class="str">"sap/ui/vk/ContentResource"</span>;</pre>
 <p>Describes the settings that can be provided to the ContentResource constructor.</p>
@@ -175,23 +175,31 @@ content resource/file to load from. The source may be omitted if a grouping node
 <blockquote>
 <p><code>optional</code> <strong>sourceType?</strong>: <code>string</code> | <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a></p>
 </blockquote>
-<p>The source type of the content resource. Valid types:
-	 - vds
-	 - vds4
-	 - svg
-	 - png
-	 - jpg
-	 - jpeg
-	 - gif
-	 - bmp
-	 - tif*
-	 - tiff*
-	 - stream  The source type may be omitted if this is a grouping content node.
-NOTE: The tif and tiff image formats are not supported on all browsers. Source type &quot;vds&quot; initializes
-deprecated DVL namespace and uses legacy library to load and display VDS file content. If source type
-of &quot;vds4&quot; is used then new namespace based on Threejs rendering model will be used to load and display
-VDS file content. Since DVL namespace is deprecated in one of future releases it will be removed and
-source type &quot;vds&quot; will also use Threejs model.</p>
+<p>The source type of the content resource. Valid types:</p>
+<pre><code> - vds
+ - vds4
+ - vds4-2d
+ - svg
+ - png
+ - jpg
+ - jpeg
+ - gif
+ - bmp
+ - tif
+ - tiff
+ - stream
+ - stream2d
+ - ecad
+ - pdf
+ - auto
+</code></pre>
+<p>The source type may be omitted if this is a grouping content node.  If the <code>source</code> property points
+to an IPD Visualization service the <code>sourceType</code> property can be assigned value <code>auto</code>. The actual <code>sourceType</code>
+property will be detected by making a request to the backend.  NOTE: The tif and tiff image formats
+are not supported on all browsers. Source type &quot;vds&quot; initializes deprecated DVL namespace and uses legacy
+library to load and display VDS file content. If source type of &quot;vds4&quot; is used then new namespace based
+on Threejs rendering model will be used to load and display VDS file content. Since DVL namespace is
+deprecated in one of future releases it will be removed and source type &quot;vds&quot; will also use Threejs model.</p>
 <hr>
 <h3>useSecureConnection?</h3>
 <blockquote>
@@ -205,6 +213,6 @@ source type &quot;vds&quot; will also use Threejs model.</p>
 </blockquote>
 <p>Id of scene to retrieve tree for. Mandatory for the stream source type.</p>
 
-<footer>Generated from <code>@sapui5/types@1.136.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.136/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.136.19</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.136/">Back to index</a>.</footer>
 </body>
 </html>

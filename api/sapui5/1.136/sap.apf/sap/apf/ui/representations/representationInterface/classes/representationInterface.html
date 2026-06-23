@@ -2,12 +2,12 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>Class: representationInterface — SAPUI5 TypeScript API</title>
-<meta name="description" content="Class: representationInterface — SAPUI5 TypeScript API Reference (1.136.0)">
+<title>~~Class: representationInterface~~ — SAPUI5 TypeScript API</title>
+<meta name="description" content="~~Class: representationInterface~~ — SAPUI5 TypeScript API Reference (1.136.19)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.136/sap.apf/sap/apf/ui/representations/representationInterface/classes/representationInterface.html">
-<meta property="og:title" content="Class: representationInterface — SAPUI5 TypeScript API">
-<meta property="og:description" content="Class: representationInterface — SAPUI5 TypeScript API Reference (1.136.0)">
+<meta property="og:title" content="~~Class: representationInterface~~ — SAPUI5 TypeScript API">
+<meta property="og:description" content="~~Class: representationInterface~~ — SAPUI5 TypeScript API Reference (1.136.19)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.136/sap.apf/sap/apf/ui/representations/representationInterface/classes/representationInterface.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,15 +33,17 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../../../sap.apf/README.html">sap.apf</a> › sap › apf › ui › representations › <a href="../../../../../../../sap.apf/sap/apf/ui/representations/representationInterface/README.html">representationInterface</a> › classes</nav>
-<p><a href="../../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.136.0)</strong></a></p>
+<p><a href="../../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.136.19)</strong></a></p>
 <hr>
-<p><a href="../../../../../../../README.html">SAPUI5 TypeScript API (1.136.0)</a> / <a href="../../../../../../README.html">sap.apf</a> / <a href="../README.html">sap/apf/ui/representations/representationInterface</a> / representationInterface</p>
-<h1>Class: representationInterface</h1>
+<p><a href="../../../../../../../README.html">SAPUI5 TypeScript API (1.136.19)</a> / <a href="../../../../../../README.html">sap.apf</a> / <a href="../README.html">sap/apf/ui/representations/representationInterface</a> / representationInterface</p>
+<h1><del>Class: representationInterface</del></h1>
 <pre class="sig"><span class="kw">import</span> { representationInterface } <span class="kw">from</span> <span class="str">"sap/apf/ui/representations/representationInterface"</span>;</pre>
 <p><strong><code>Experimental</code></strong></p>
 <p>This is not a runtime class, but it describes the interface that a representation (chart) has to implement
 for to interact with the APF.</p>
-<p> The complete interface is subject to ongoing work and not yet stable (as of Version 1.24.0).</p>
+<h2>Deprecated</h2>
+<p>As of version 1.136. because it is part of the deprecated package sap.apf
+ The complete interface is subject to ongoing work and not yet stable (as of Version 1.24.0).</p>
 <h2>Constructors</h2>
 <h3>Constructor</h3>
 <blockquote>
@@ -63,7 +65,7 @@ type ID referenced by alternateRepresentationTypeId.</p>
 <h4>Returns</h4>
 <p><code>representationInterface</code></p>
 <h2>Methods</h2>
-<h3>adoptSelection()</h3>
+<h3><del>adoptSelection()</del></h3>
 <blockquote>
 <p><strong>adoptSelection</strong>(<code>oSourceRepresentation</code>): <code>void</code></p>
 </blockquote>
@@ -81,7 +83,7 @@ target and source representation the selection will be exchanged.</p>
 <h4>Returns</h4>
 <p><code>void</code></p>
 <hr>
-<h3>deserialize()</h3>
+<h3><del>deserialize()</del></h3>
 <blockquote>
 <p><strong>deserialize</strong>(<code>oSerializationInformation</code>): <code>void</code></p>
 </blockquote>
@@ -94,7 +96,7 @@ based on mode and selection string returned.</p>
 <h4>Returns</h4>
 <p><code>void</code></p>
 <hr>
-<h3>getAlternateRepresentation()</h3>
+<h3><del>getAlternateRepresentation()</del></h3>
 <blockquote>
 <p><strong>getAlternateRepresentation</strong>(): <code>string</code> | <code>object</code></p>
 </blockquote>
@@ -104,7 +106,7 @@ based on mode and selection string returned.</p>
 <p><code>string</code> | <code>object</code></p>
 <p>oAlternateRepresentation</p>
 <hr>
-<h3>getData()</h3>
+<h3><del>getData()</del></h3>
 <blockquote>
 <p><strong>getData</strong>(): <code>any</code>[]</p>
 </blockquote>
@@ -114,7 +116,7 @@ based on mode and selection string returned.</p>
 <p><code>any</code>[]</p>
 <p>aDataResponse</p>
 <hr>
-<h3>getFilterMethodType()</h3>
+<h3><del>getFilterMethodType()</del></h3>
 <blockquote>
 <p><strong>getFilterMethodType</strong>(): <code>any</code></p>
 </blockquote>
@@ -125,7 +127,7 @@ retrieval from a representations.</p>
 <p><code>any</code></p>
 <p>The filter method type the representation supports</p>
 <hr>
-<h3>getMainContent()</h3>
+<h3><del>getMainContent()</del></h3>
 <blockquote>
 <p><strong>getMainContent</strong>(): <code>string</code> | <code>object</code></p>
 </blockquote>
@@ -136,7 +138,7 @@ retrieval from a representations.</p>
 <p>oUiObject The UI object that has to be shown in main representation area. Example: Line chart
 instance for a line chart representation.</p>
 <hr>
-<h3>getMetaData()</h3>
+<h3><del>getMetaData()</del></h3>
 <blockquote>
 <p><strong>getMetaData</strong>(): <code>any</code></p>
 </blockquote>
@@ -146,7 +148,7 @@ instance for a line chart representation.</p>
 <p><code>any</code></p>
 <p>metadata</p>
 <hr>
-<h3>getParameter()</h3>
+<h3><del>getParameter()</del></h3>
 <blockquote>
 <p><strong>getParameter</strong>(): <code>string</code> | <code>object</code></p>
 </blockquote>
@@ -156,7 +158,7 @@ instance for a line chart representation.</p>
 <p><code>string</code> | <code>object</code></p>
 <p>oParameters</p>
 <hr>
-<h3>getPrintContent()</h3>
+<h3><del>getPrintContent()</del></h3>
 <blockquote>
 <p><strong>getPrintContent</strong>(): <code>string</code> | <code>object</code></p>
 </blockquote>
@@ -167,7 +169,7 @@ instance for a line chart representation.</p>
 <p>oUiObject The UI object that has to be printed. Example: Line chart instance for a line chart
 representation.</p>
 <hr>
-<h3>getRequestOptions()</h3>
+<h3><del>getRequestOptions()</del></h3>
 <blockquote>
 <p><strong>getRequestOptions</strong>(): <code>object</code></p>
 </blockquote>
@@ -208,7 +210,7 @@ above.</p>
 }
  See also <a href="http://www.odata.org/documentation/odata-version-2-0/uri-conventions/">http://www.odata.org/documentation/odata-version-2-0/uri-conventions/</a></p>
 <hr>
-<h3>getSelectionAsArray()</h3>
+<h3><del>getSelectionAsArray()</del></h3>
 <blockquote>
 <p><strong>getSelectionAsArray</strong>(): <code>number</code>[]</p>
 </blockquote>
@@ -224,7 +226,7 @@ at all, then [] is returned. In case of an empty selection, the value undefined 
 empty selection may occur, when selections in the previous step has been changed, so that the visual
 selection on the chart is now empty (empty rectangle).</p>
 <hr>
-<h3>getThumbnailContent()</h3>
+<h3><del>getThumbnailContent()</del></h3>
 <blockquote>
 <p><strong>getThumbnailContent</strong>(): <code>string</code> | <code>object</code></p>
 </blockquote>
@@ -235,7 +237,7 @@ selection on the chart is now empty (empty rectangle).</p>
 <p>oUiObject The UI object that has to be shown in thumbnail area. Example: Line chart instance
 for a line chart representation.</p>
 <hr>
-<h3>getTooltipContent()</h3>
+<h3><del>getTooltipContent()</del></h3>
 <blockquote>
 <p><strong>getTooltipContent</strong>(): <code>string</code> | <code>object</code></p>
 </blockquote>
@@ -248,7 +250,7 @@ effect to indicate that it is overflowing.</p>
 <p>oUiObject The UI object that has to be shown as tooltip for a thumbnail. Example: Detailed content
 of a form representation.</p>
 <hr>
-<h3>removeAllSelection()</h3>
+<h3><del>removeAllSelection()</del></h3>
 <blockquote>
 <p><strong>removeAllSelection</strong>(): <code>void</code></p>
 </blockquote>
@@ -257,7 +259,7 @@ of a form representation.</p>
 <h4>Returns</h4>
 <p><code>void</code></p>
 <hr>
-<h3>serialize()</h3>
+<h3><del>serialize()</del></h3>
 <blockquote>
 <p><strong>serialize</strong>(): <code>string</code> | <code>object</code></p>
 </blockquote>
@@ -268,7 +270,7 @@ current representation. It includes selection mode and selections.</p>
 <p><code>string</code> | <code>object</code></p>
 <p>oSerializationInformation</p>
 <hr>
-<h3>setData()</h3>
+<h3><del>setData()</del></h3>
 <blockquote>
 <p><strong>setData</strong>(<code>oMetadata</code>, <code>aDataResponse</code>): <code>void</code></p>
 </blockquote>
@@ -287,7 +289,7 @@ record is selected by aSelectedIndices.</p>
 <h4>Returns</h4>
 <p><code>void</code></p>
 <hr>
-<h3>updateTreetable()</h3>
+<h3><del>updateTreetable()</del></h3>
 <blockquote>
 <p><strong>updateTreetable</strong>(<code>controlObject</code>, <code>oModel</code>, <code>callbackAfterRequest</code>, <code>entityTypeMetadata</code>): <code>void</code></p>
 </blockquote>
@@ -310,6 +312,6 @@ handling is done on representation side.</p>
 <h4>Returns</h4>
 <p><code>void</code></p>
 
-<footer>Generated from <code>@sapui5/types@1.136.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.136/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.136.19</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.136/">Back to index</a>.</footer>
 </body>
 </html>
