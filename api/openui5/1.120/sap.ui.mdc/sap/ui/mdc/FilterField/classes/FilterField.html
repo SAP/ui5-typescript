@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Class: FilterField — OpenUI5 TypeScript API</title>
-<meta name="description" content="Class: FilterField — OpenUI5 TypeScript API Reference (1.120.0)">
+<meta name="description" content="Class: FilterField — OpenUI5 TypeScript API Reference (1.120.46)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/openui5/1.120/sap.ui.mdc/sap/ui/mdc/FilterField/classes/FilterField.html">
 <meta property="og:title" content="Class: FilterField — OpenUI5 TypeScript API">
-<meta property="og:description" content="Class: FilterField — OpenUI5 TypeScript API Reference (1.120.0)">
+<meta property="og:description" content="Class: FilterField — OpenUI5 TypeScript API Reference (1.120.46)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/openui5/1.120/sap.ui.mdc/sap/ui/mdc/FilterField/classes/FilterField.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,15 +33,12 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../index.html">OpenUI5 API</a> › <a href="../../../../../../sap.ui.mdc/README.html">sap.ui.mdc</a> › sap › ui › mdc › <a href="../../../../../../sap.ui.mdc/sap/ui/mdc/FilterField/README.html">FilterField</a> › classes</nav>
-<p><a href="../../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.0)</strong></a></p>
+<p><a href="../../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.46)</strong></a></p>
 <hr>
-<p><a href="../../../../../../README.html">OpenUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../README.html">sap.ui.mdc</a> / <a href="../README.html">sap/ui/mdc/FilterField</a> / FilterField</p>
+<p><a href="../../../../../../README.html">OpenUI5 TypeScript API (1.120.46)</a> / <a href="../../../../../README.html">sap.ui.mdc</a> / <a href="../README.html">sap/ui/mdc/FilterField</a> / FilterField</p>
 <h1>Class: FilterField</h1>
 <pre class="sig"><span class="kw">import</span> FilterField <span class="kw">from</span> <span class="str">"sap/ui/mdc/FilterField"</span>;</pre>
 <p><strong><code>Experimental</code></strong></p>
-<h2>Since</h2>
-<p>1.48.0
- (since 1.48.0)</p>
 <p>The <code>FilterField</code> control is used to filter data based on the conditions. The conditions are managed
 in the corresponding sap.ui.mdc.condition.ConditionModel ConditionModel. That is why the <code>conditions</code>
 property must be bound to the related conditions in the sap.ui.mdc.condition.ConditionModel ConditionModel.
@@ -65,6 +62,9 @@ control is rendered.
 control is rendered.
  - If used for search, a sap.m.SearchField SearchField control is rendered.
 </code></pre>
+<h2>Since</h2>
+<p>1.48.0
+ (since 1.48.0)</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../field/FieldBase/classes/FieldBase.html"><code>FieldBase</code></a></li>
@@ -245,6 +245,7 @@ otherwise it will be bound to this <code>sap.ui.mdc.FilterField</code> itself.</
 <p><strong>fireChange</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
+<p>Fires event #event:change change to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/FilterField$ChangeEventParameters.html"><code>FilterField$ChangeEventParameters</code></a></p>
@@ -254,68 +255,67 @@ otherwise it will be bound to this <code>sap.ui.mdc.FilterField</code> itself.</
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Fires event #event:change change to attached listeners.</p>
 <hr>
 <h3>getAdditionalDataType()</h3>
 <blockquote>
 <p><strong>getAdditionalDataType</strong>(): <code>object</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
+<p>Gets current value of property #getAdditionalDataType additionalDataType.</p>
+<p>The type of data for the description part of an &quot;equal to&quot; condition. This type is used to parse, format,
+and validate the value.</p>
+<p>Here a data type instance can be provided or an object containing <code>name</code>, <code>formatOptions</code>, and <code>constraints</code>.</p>
 <h4>Returns</h4>
 <p><code>object</code></p>
 <p>Value of property <code>additionalDataType</code></p>
 <h4>Since</h4>
 <p>1.118.0</p>
-<p>Gets current value of property #getAdditionalDataType additionalDataType.</p>
-<p>The type of data for the description part of an &quot;equal to&quot; condition. This type is used to parse, format,
-and validate the value.</p>
-<p>Here a data type instance can be provided or an object containing <code>name</code>, <code>formatOptions</code>, and <code>constraints</code>.</p>
 <hr>
 <h3>getDefaultOperator()</h3>
 <blockquote>
 <p><strong>getDefaultOperator</strong>(): <code>string</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
-<h4>Returns</h4>
-<p><code>string</code></p>
-<p>Value of property <code>defaultOperator</code></p>
-<h4>Since</h4>
-<p>1.88.0</p>
 <p>Gets current value of property #getDefaultOperator defaultOperator.</p>
 <p>Default operator name for conditions. If empty, the relevant default operator depending on the data type
 used is taken.</p>
 <p><strong>Note</strong>: <code>defaultOperator</code> can be the name of an sap.ui.mdc.condition.Operator Operator or the
 instance itself.</p>
+<h4>Returns</h4>
+<p><code>string</code></p>
+<p>Value of property <code>defaultOperator</code></p>
+<h4>Since</h4>
+<p>1.88.0</p>
 <hr>
 <h3>getOperators()</h3>
 <blockquote>
 <p><strong>getOperators</strong>(): <code>string</code>[]</p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
-<h4>Returns</h4>
-<p><code>string</code>[]</p>
-<p>Value of property <code>operators</code></p>
-<h4>Since</h4>
-<p>1.73.0</p>
 <p>Gets current value of property #getOperators operators.</p>
 <p>Supported operator names for conditions.</p>
 <p>If empty, default operators depending on used data type are taken. The standard operators are mentioned
 in sap.ui.mdc.enums.OperatorName OperatorName.</p>
 <p>Default value is <code>[]</code>.</p>
+<h4>Returns</h4>
+<p><code>string</code>[]</p>
+<p>Value of property <code>operators</code></p>
+<h4>Since</h4>
+<p>1.73.0</p>
 <hr>
 <h3>getPropertyKey()</h3>
 <blockquote>
 <p><strong>getPropertyKey</strong>(): <code>string</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
+<p>Gets current value of property #getPropertyKey propertyKey.</p>
+<p>Key of the property the <code>FilterField</code> represents.</p>
+<p>Default value is <code>empty string</code>.</p>
 <h4>Returns</h4>
 <p><code>string</code></p>
 <p>Value of property <code>propertyKey</code></p>
 <h4>Since</h4>
 <p>1.115.0</p>
-<p>Gets current value of property #getPropertyKey propertyKey.</p>
-<p>Key of the property the <code>FilterField</code> represents.</p>
-<p>Default value is <code>empty string</code>.</p>
 <hr>
 <h3>removeAllOperators()</h3>
 <blockquote>
@@ -359,6 +359,11 @@ itself, or multiple operators inside an array. The standard operators are mentio
 <p><strong>setAdditionalDataType</strong>(<code>oAdditionalDataType?</code>): <code>this</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
+<p>Sets a new value for property #getAdditionalDataType additionalDataType.</p>
+<p>The type of data for the description part of an &quot;equal to&quot; condition. This type is used to parse, format,
+and validate the value.</p>
+<p>Here a data type instance can be provided or an object containing <code>name</code>, <code>formatOptions</code>, and <code>constraints</code>.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <h4>Parameters</h4>
 <h5>oAdditionalDataType?</h5>
 <p><code>object</code></p>
@@ -368,17 +373,18 @@ itself, or multiple operators inside an array. The standard operators are mentio
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.118.0</p>
-<p>Sets a new value for property #getAdditionalDataType additionalDataType.</p>
-<p>The type of data for the description part of an &quot;equal to&quot; condition. This type is used to parse, format,
-and validate the value.</p>
-<p>Here a data type instance can be provided or an object containing <code>name</code>, <code>formatOptions</code>, and <code>constraints</code>.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <hr>
 <h3>setDefaultOperator()</h3>
 <blockquote>
 <p><strong>setDefaultOperator</strong>(<code>sDefaultOperator?</code>): <code>this</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
+<p>Sets a new value for property #getDefaultOperator defaultOperator.</p>
+<p>Default operator name for conditions. If empty, the relevant default operator depending on the data type
+used is taken.</p>
+<p><strong>Note</strong>: <code>defaultOperator</code> can be the name of an sap.ui.mdc.condition.Operator Operator or the
+instance itself.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <h4>Parameters</h4>
 <h5>sDefaultOperator?</h5>
 <p><code>string</code></p>
@@ -388,18 +394,18 @@ and validate the value.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.88.0</p>
-<p>Sets a new value for property #getDefaultOperator defaultOperator.</p>
-<p>Default operator name for conditions. If empty, the relevant default operator depending on the data type
-used is taken.</p>
-<p><strong>Note</strong>: <code>defaultOperator</code> can be the name of an sap.ui.mdc.condition.Operator Operator or the
-instance itself.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <hr>
 <h3>setOperators()</h3>
 <blockquote>
 <p><strong>setOperators</strong>(<code>sOperators?</code>): <code>this</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
+<p>Sets a new value for property #getOperators operators.</p>
+<p>Supported operator names for conditions.</p>
+<p>If empty, default operators depending on used data type are taken. The standard operators are mentioned
+in sap.ui.mdc.enums.OperatorName OperatorName.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>[]</code>.</p>
 <h4>Parameters</h4>
 <h5>sOperators?</h5>
 <p><code>string</code>[]</p>
@@ -409,18 +415,16 @@ instance itself.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.73.0</p>
-<p>Sets a new value for property #getOperators operators.</p>
-<p>Supported operator names for conditions.</p>
-<p>If empty, default operators depending on used data type are taken. The standard operators are mentioned
-in sap.ui.mdc.enums.OperatorName OperatorName.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>[]</code>.</p>
 <hr>
 <h3>setPropertyKey()</h3>
 <blockquote>
 <p><strong>setPropertyKey</strong>(<code>sPropertyKey?</code>): <code>this</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
+<p>Sets a new value for property #getPropertyKey propertyKey.</p>
+<p>Key of the property the <code>FilterField</code> represents.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>empty string</code>.</p>
 <h4>Parameters</h4>
 <h5>sPropertyKey?</h5>
 <p><code>string</code></p>
@@ -430,10 +434,6 @@ in sap.ui.mdc.enums.OperatorName OperatorName.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.115.0</p>
-<p>Sets a new value for property #getPropertyKey propertyKey.</p>
-<p>Key of the property the <code>FilterField</code> represents.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>empty string</code>.</p>
 <hr>
 <h3>extend()</h3>
 <blockquote>
@@ -475,6 +475,6 @@ used by this class</p>
 <h4>Overrides</h4>
 <p><a href="../../field/FieldBase/classes/FieldBase.html"><code>FieldBase</code></a>.<a href="../../field/FieldBase/classes/FieldBase.html#getmetadata"><code>getMetadata</code></a></p>
 
-<footer>Generated from <code>@openui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@openui5/types@1.120.46</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

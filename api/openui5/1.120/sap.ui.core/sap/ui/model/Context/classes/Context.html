@@ -2,12 +2,12 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>Class: Context — OpenUI5 TypeScript API</title>
-<meta name="description" content="Class: Context — OpenUI5 TypeScript API Reference (1.120.0)">
+<title>Abstract Class: Context — OpenUI5 TypeScript API</title>
+<meta name="description" content="Abstract Class: Context — OpenUI5 TypeScript API Reference (1.120.46)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/openui5/1.120/sap.ui.core/sap/ui/model/Context/classes/Context.html">
-<meta property="og:title" content="Class: Context — OpenUI5 TypeScript API">
-<meta property="og:description" content="Class: Context — OpenUI5 TypeScript API Reference (1.120.0)">
+<meta property="og:title" content="Abstract Class: Context — OpenUI5 TypeScript API">
+<meta property="og:description" content="Abstract Class: Context — OpenUI5 TypeScript API Reference (1.120.46)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/openui5/1.120/sap.ui.core/sap/ui/model/Context/classes/Context.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,10 +33,10 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../index.html">OpenUI5 API</a> › <a href="../../../../../../sap.ui.core/README.html">sap.ui.core</a> › sap › ui › model › <a href="../../../../../../sap.ui.core/sap/ui/model/Context/README.html">Context</a> › classes</nav>
-<p><a href="../../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.0)</strong></a></p>
+<p><a href="../../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.46)</strong></a></p>
 <hr>
-<p><a href="../../../../../../README.html">OpenUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../README.html">sap.ui.core</a> / <a href="../README.html">sap/ui/model/Context</a> / Context</p>
-<h1>Class: Context</h1>
+<p><a href="../../../../../../README.html">OpenUI5 TypeScript API (1.120.46)</a> / <a href="../../../../../README.html">sap.ui.core</a> / <a href="../README.html">sap/ui/model/Context</a> / Context</p>
+<h1>Abstract Class: Context</h1>
 <pre class="sig"><span class="kw">import</span> Context <span class="kw">from</span> <span class="str">"sap/ui/model/Context"</span>;</pre>
 <p>The Context is a pointer to an object in the model data. A relative binding needs a context as a reference
 point in order to resolve its path; without a context, a relative binding is unresolved and does not
@@ -71,17 +71,17 @@ point to model data. Context instances can, for example, be created in the follo
 <blockquote>
 <p><strong>getMessages</strong>(): <a href="../../../core/message/Message/classes/Message.html"><code>Message</code></a>[]</p>
 </blockquote>
+<p>Returns messages associated with this context, that is messages belonging to the object referred to by
+this context or a child object of that object. The messages are sorted by their sap.ui.core.message.Message#getType type
+according to the type&#39;s severity in a way that messages with highest severity come first.
+See:
+	sap.ui.model.Model#getMessages</p>
 <h4>Returns</h4>
 <p><a href="../../../core/message/Message/classes/Message.html"><code>Message</code></a>[]</p>
 <p>The messages associated with this context sorted by severity; empty array in case no messages
 exist</p>
 <h4>Since</h4>
 <p>1.76.0</p>
-<p>Returns messages associated with this context, that is messages belonging to the object referred to by
-this context or a child object of that object. The messages are sorted by their sap.ui.core.message.Message#getType type
-according to the type&#39;s severity in a way that messages with highest severity come first.
-See:
-	sap.ui.model.Model#getMessages</p>
 <hr>
 <h3>getModel()</h3>
 <blockquote>
@@ -172,6 +172,6 @@ used by this class</p>
 <p>Metadata object describing this class</p>
 <hr>
 
-<footer>Generated from <code>@openui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@openui5/types@1.120.46</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

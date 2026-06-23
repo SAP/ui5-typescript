@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Class: AnchorBar — OpenUI5 TypeScript API</title>
-<meta name="description" content="Class: AnchorBar — OpenUI5 TypeScript API Reference (1.120.0)">
+<meta name="description" content="Class: AnchorBar — OpenUI5 TypeScript API Reference (1.120.46)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/openui5/1.120/sap.uxap/sap/uxap/AnchorBar/classes/AnchorBar.html">
 <meta property="og:title" content="Class: AnchorBar — OpenUI5 TypeScript API">
-<meta property="og:description" content="Class: AnchorBar — OpenUI5 TypeScript API Reference (1.120.0)">
+<meta property="og:description" content="Class: AnchorBar — OpenUI5 TypeScript API Reference (1.120.46)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/openui5/1.120/sap.uxap/sap/uxap/AnchorBar/classes/AnchorBar.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,19 +33,19 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../index.html">OpenUI5 API</a> › <a href="../../../../../sap.uxap/README.html">sap.uxap</a> › sap › uxap › <a href="../../../../../sap.uxap/sap/uxap/AnchorBar/README.html">AnchorBar</a> › classes</nav>
-<p><a href="../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.0)</strong></a></p>
+<p><a href="../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.46)</strong></a></p>
 <hr>
-<p><a href="../../../../../README.html">OpenUI5 TypeScript API (1.120.0)</a> / <a href="../../../../README.html">sap.uxap</a> / <a href="../README.html">sap/uxap/AnchorBar</a> / AnchorBar</p>
+<p><a href="../../../../../README.html">OpenUI5 TypeScript API (1.120.46)</a> / <a href="../../../../README.html">sap.uxap</a> / <a href="../README.html">sap/uxap/AnchorBar</a> / AnchorBar</p>
 <h1>Class: AnchorBar</h1>
 <pre class="sig"><span class="kw">import</span> AnchorBar <span class="kw">from</span> <span class="str">"sap/uxap/AnchorBar"</span>;</pre>
-<h2>Since</h2>
-<p>1.26</p>
 <p>Displays the titles of the sections and subsections in the sap.uxap.ObjectPageLayout ObjectPageLayout
 and allows the user to scroll to the respective content.</p>
 <p>Overview:</p>
 <p>The <code>AnchorBar</code> is internally generated as a menu in the <code>ObjectPageLayout</code>. It displays the sections
 and subsections and allows the user to directly scroll to the respective content by selecting them, while
 it remains visible at the top of the page (below the page header).</p>
+<h2>Since</h2>
+<p>1.26</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../../../../sap.m/sap/m/Toolbar/classes/Toolbar.html"><code>Toolbar</code></a></li>
@@ -95,6 +95,8 @@ See:
 <blockquote>
 <p><strong>enhanceAccessibilityState</strong>(<code>oElement</code>, <code>mAriaProps</code>): <code>void</code></p>
 </blockquote>
+<p>This method is a hook for the RenderManager that gets called during the rendering of child Controls.
+It allows to add, remove and update existing accessibility attributes (ARIA) of those controls.</p>
 <h4>Parameters</h4>
 <h5>oElement</h5>
 <p><a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></p>
@@ -106,8 +108,6 @@ See:
 <p><code>void</code></p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>This method is a hook for the RenderManager that gets called during the rendering of child Controls.
-It allows to add, remove and update existing accessibility attributes (ARIA) of those controls.</p>
 <h4>Overrides</h4>
 <p><a href="../../../../../sap.m/sap/m/Toolbar/classes/Toolbar.html"><code>Toolbar</code></a>.<a href="../../../../../sap.m/sap/m/Toolbar/classes/Toolbar.html#enhanceaccessibilitystate"><code>enhanceAccessibilityState</code></a></p>
 <hr>
@@ -115,15 +115,15 @@ It allows to add, remove and update existing accessibility attributes (ARIA) of 
 <blockquote>
 <p><strong>getBackgroundDesign</strong>(): <code>&quot;Transparent&quot;</code> | <code>&quot;Solid&quot;</code> | <a href="../../../../../sap.m/sap/m/library/enumerations/BackgroundDesign.html"><code>BackgroundDesign</code></a> | <code>&quot;Translucent&quot;</code></p>
 </blockquote>
+<p>Gets current value of property #getBackgroundDesign backgroundDesign.</p>
+<p>Determines the background color of the <code>AnchorBar</code>.</p>
+<p><strong>Note:</strong> The default value of <code>backgroundDesign</code> property is null. If the property is not set, the color
+of the background is <code>@sapUiObjectHeaderBackground</code>, which depends on the specific theme.</p>
 <h4>Returns</h4>
 <p><code>&quot;Transparent&quot;</code> | <code>&quot;Solid&quot;</code> | <a href="../../../../../sap.m/sap/m/library/enumerations/BackgroundDesign.html"><code>BackgroundDesign</code></a> | <code>&quot;Translucent&quot;</code></p>
 <p>Value of property <code>backgroundDesign</code></p>
 <h4>Since</h4>
 <p>1.58</p>
-<p>Gets current value of property #getBackgroundDesign backgroundDesign.</p>
-<p>Determines the background color of the <code>AnchorBar</code>.</p>
-<p><strong>Note:</strong> The default value of <code>backgroundDesign</code> property is null. If the property is not set, the color
-of the background is <code>@sapUiObjectHeaderBackground</code>, which depends on the specific theme.</p>
 <hr>
 <h3>getScrollDelegate()</h3>
 <blockquote>
@@ -193,6 +193,11 @@ bar.</p>
 <blockquote>
 <p><strong>setBackgroundDesign</strong>(<code>sBackgroundDesign</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getBackgroundDesign backgroundDesign.</p>
+<p>Determines the background color of the <code>AnchorBar</code>.</p>
+<p><strong>Note:</strong> The default value of <code>backgroundDesign</code> property is null. If the property is not set, the color
+of the background is <code>@sapUiObjectHeaderBackground</code>, which depends on the specific theme.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <h4>Parameters</h4>
 <h5>sBackgroundDesign</h5>
 <p><code>&quot;Transparent&quot;</code> | <code>&quot;Solid&quot;</code> | <a href="../../../../../sap.m/sap/m/library/enumerations/BackgroundDesign.html"><code>BackgroundDesign</code></a> | <code>&quot;Translucent&quot;</code></p>
@@ -202,11 +207,6 @@ bar.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.58</p>
-<p>Sets a new value for property #getBackgroundDesign backgroundDesign.</p>
-<p>Determines the background color of the <code>AnchorBar</code>.</p>
-<p><strong>Note:</strong> The default value of <code>backgroundDesign</code> property is null. If the property is not set, the color
-of the background is <code>@sapUiObjectHeaderBackground</code>, which depends on the specific theme.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <hr>
 <h3>setSelectedButton()</h3>
 <blockquote>
@@ -294,6 +294,6 @@ used by this class</p>
 <p><a href="../../../../../sap.m/sap/m/Toolbar/classes/Toolbar.html"><code>Toolbar</code></a>.<a href="../../../../../sap.m/sap/m/Toolbar/classes/Toolbar.html#getmetadata-1"><code>getMetadata</code></a></p>
 <hr>
 
-<footer>Generated from <code>@openui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@openui5/types@1.120.46</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

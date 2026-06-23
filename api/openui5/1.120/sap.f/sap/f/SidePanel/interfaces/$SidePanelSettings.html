@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Interface: $SidePanelSettings — OpenUI5 TypeScript API</title>
-<meta name="description" content="Interface: $SidePanelSettings — OpenUI5 TypeScript API Reference (1.120.0)">
+<meta name="description" content="Interface: $SidePanelSettings — OpenUI5 TypeScript API Reference (1.120.46)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/openui5/1.120/sap.f/sap/f/SidePanel/interfaces/$SidePanelSettings.html">
 <meta property="og:title" content="Interface: $SidePanelSettings — OpenUI5 TypeScript API">
-<meta property="og:description" content="Interface: $SidePanelSettings — OpenUI5 TypeScript API Reference (1.120.0)">
+<meta property="og:description" content="Interface: $SidePanelSettings — OpenUI5 TypeScript API Reference (1.120.46)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/openui5/1.120/sap.f/sap/f/SidePanel/interfaces/$SidePanelSettings.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,11 +33,12 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../index.html">OpenUI5 API</a> › <a href="../../../../../sap.f/README.html">sap.f</a> › sap › f › <a href="../../../../../sap.f/sap/f/SidePanel/README.html">SidePanel</a> › interfaces</nav>
-<p><a href="../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.0)</strong></a></p>
+<p><a href="../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.46)</strong></a></p>
 <hr>
-<p><a href="../../../../../README.html">OpenUI5 TypeScript API (1.120.0)</a> / <a href="../../../../README.html">sap.f</a> / <a href="../README.html">sap/f/SidePanel</a> / $SidePanelSettings</p>
+<p><a href="../../../../../README.html">OpenUI5 TypeScript API (1.120.46)</a> / <a href="../../../../README.html">sap.f</a> / <a href="../README.html">sap/f/SidePanel</a> / $SidePanelSettings</p>
 <h1>Interface: $SidePanelSettings</h1>
 <pre class="sig"><span class="kw">import</span> { $SidePanelSettings } <span class="kw">from</span> <span class="str">"sap/f/SidePanel"</span>;</pre>
+<p>Describes the settings that can be provided to the SidePanel constructor.</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../../../../sap.ui.core/sap/ui/core/Control/interfaces/$ControlSettings.html"><code>$ControlSettings</code></a></li>
@@ -77,21 +78,21 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 <blockquote>
 <p><code>optional</code> <strong>sidePanelMaxWidth?</strong>: <code>string</code> | <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a></p>
 </blockquote>
-<h4>Since</h4>
-<p>1.109.0</p>
 <p>Determines the maximum side panel width (Side Content width + Action Bar width). <strong>Note:</strong> if the width
 is given in percent(%), it is calculated as given percent from the Side Panel parent container width,
 otherwise it&#39;s calculated in absolute units.</p>
+<h4>Since</h4>
+<p>1.109.0</p>
 <hr>
 <h3>sidePanelMinWidth?</h3>
 <blockquote>
 <p><code>optional</code> <strong>sidePanelMinWidth?</strong>: <code>string</code> | <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a></p>
 </blockquote>
-<h4>Since</h4>
-<p>1.109.0</p>
 <p>Determines the minimum side panel width (Side Content width + Action Bar width). <strong>Note:</strong> if the width
 is given in percent(%), it is calculated as given percent from the Side Panel parent container width,
 otherwise it&#39;s calculated in absolute units.</p>
+<h4>Since</h4>
+<p>1.109.0</p>
 <hr>
 <h3>sidePanelPosition?</h3>
 <blockquote>
@@ -110,21 +111,21 @@ desktop or tablet devices.</p>
 <blockquote>
 <p><code>optional</code> <strong>sidePanelResizeLargerStep?</strong>: <code>number</code> | <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<h4>Since</h4>
-<p>1.109.0</p>
 <p>Determines the large step (in pixels) when changing the width of the side panel with the keyboard. <strong>Note:</strong>
 the width can be changed by large step with <code>Shift + Left Arrow</code> and <code>Shift + Right Arrow</code> keys when
 the resize splitter is focused.</p>
+<h4>Since</h4>
+<p>1.109.0</p>
 <hr>
 <h3>sidePanelResizeStep?</h3>
 <blockquote>
 <p><code>optional</code> <strong>sidePanelResizeStep?</strong>: <code>number</code> | <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<h4>Since</h4>
-<p>1.109.0</p>
 <p>Determines the step (in pixels) when changing the width of the side panel with the keyboard. <strong>Note:</strong>
 the width can be changed by this step with <code>Left Arrow</code> and <code>Right Arrow</code> keys when the resize splitter
 is focused.</p>
+<h4>Since</h4>
+<p>1.109.0</p>
 <hr>
 <h3>sidePanelWidth?</h3>
 <blockquote>
@@ -154,6 +155,6 @@ action item) will not be fired and the new side content will not be displayed.
 <p><code>void</code></p>
 <hr>
 
-<footer>Generated from <code>@openui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@openui5/types@1.120.46</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

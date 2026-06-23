@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Interface: ControlBehavior — OpenUI5 TypeScript API</title>
-<meta name="description" content="Interface: ControlBehavior — OpenUI5 TypeScript API Reference (1.120.0)">
+<meta name="description" content="Interface: ControlBehavior — OpenUI5 TypeScript API Reference (1.120.46)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/openui5/1.120/sap.ui.core/sap/ui/core/ControlBehavior/interfaces/ControlBehavior.html">
 <meta property="og:title" content="Interface: ControlBehavior — OpenUI5 TypeScript API">
-<meta property="og:description" content="Interface: ControlBehavior — OpenUI5 TypeScript API Reference (1.120.0)">
+<meta property="og:description" content="Interface: ControlBehavior — OpenUI5 TypeScript API Reference (1.120.46)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/openui5/1.120/sap.ui.core/sap/ui/core/ControlBehavior/interfaces/ControlBehavior.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,41 +33,46 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../index.html">OpenUI5 API</a> › <a href="../../../../../../sap.ui.core/README.html">sap.ui.core</a> › sap › ui › core › <a href="../../../../../../sap.ui.core/sap/ui/core/ControlBehavior/README.html">ControlBehavior</a> › interfaces</nav>
-<p><a href="../../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.0)</strong></a></p>
+<p><a href="../../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.46)</strong></a></p>
 <hr>
-<p><a href="../../../../../../README.html">OpenUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../README.html">sap.ui.core</a> / <a href="../README.html">sap/ui/core/ControlBehavior</a> / ControlBehavior</p>
+<p><a href="../../../../../../README.html">OpenUI5 TypeScript API (1.120.46)</a> / <a href="../../../../../README.html">sap.ui.core</a> / <a href="../README.html">sap/ui/core/ControlBehavior</a> / ControlBehavior</p>
 <h1>Interface: ControlBehavior</h1>
 <pre class="sig"><span class="kw">import</span> ControlBehavior <span class="kw">from</span> <span class="str">"sap/ui/core/ControlBehavior"</span>;</pre>
+<p>Provides control behavior relevant configuration options</p>
 <h2>Since</h2>
 <p>1.120</p>
-<p>Provides control behavior relevant configuration options</p>
 <h2>Methods</h2>
 <h3>getAnimationMode()</h3>
 <blockquote>
 <p><strong>getAnimationMode</strong>(): <code>&quot;full&quot;</code> | <a href="../../AnimationMode/enumerations/AnimationMode.html"><code>AnimationMode</code></a> | <code>&quot;basic&quot;</code> | <code>&quot;minimal&quot;</code> | <code>&quot;none&quot;</code></p>
 </blockquote>
+<p>Returns the current animation mode.</p>
 <h4>Returns</h4>
 <p><code>&quot;full&quot;</code> | <a href="../../AnimationMode/enumerations/AnimationMode.html"><code>AnimationMode</code></a> | <code>&quot;basic&quot;</code> | <code>&quot;minimal&quot;</code> | <code>&quot;none&quot;</code></p>
 <p>The current animationMode</p>
 <h4>Since</h4>
 <p>1.120</p>
-<p>Returns the current animation mode.</p>
 <hr>
 <h3>isAccessibilityEnabled()</h3>
 <blockquote>
 <p><strong>isAccessibilityEnabled</strong>(): <code>boolean</code></p>
 </blockquote>
+<p>Returns whether the accessibility mode is enabled or not.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>whether the accessibility mode is enabled or not</p>
 <h4>Since</h4>
 <p>1.120</p>
-<p>Returns whether the accessibility mode is enabled or not.</p>
 <hr>
 <h3>setAnimationMode()</h3>
 <blockquote>
 <p><strong>setAnimationMode</strong>(<code>sAnimationMode</code>): <code>void</code></p>
 </blockquote>
+<p>Sets the current animation mode.</p>
+<p>Expects an animation mode as string and validates it. If a wrong animation mode was set, an error is
+thrown. If the mode is valid it is set, then the attributes <code>data-sap-ui-animation</code> and <code>data-sap-ui-animation-mode</code>
+of the HTML document root element are also updated. If the <code>animationMode</code> is <code>AnimationMode.none</code> the
+old <code>animation</code> property is set to <code>false</code>, otherwise it is set to <code>true</code>.</p>
 <h4>Parameters</h4>
 <h5>sAnimationMode</h5>
 <p><code>&quot;full&quot;</code> | <a href="../../AnimationMode/enumerations/AnimationMode.html"><code>AnimationMode</code></a> | <code>&quot;basic&quot;</code> | <code>&quot;minimal&quot;</code> | <code>&quot;none&quot;</code></p>
@@ -76,12 +81,7 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 <p><code>void</code></p>
 <h4>Since</h4>
 <p>1.120</p>
-<p>Sets the current animation mode.</p>
-<p>Expects an animation mode as string and validates it. If a wrong animation mode was set, an error is
-thrown. If the mode is valid it is set, then the attributes <code>data-sap-ui-animation</code> and <code>data-sap-ui-animation-mode</code>
-of the HTML document root element are also updated. If the <code>animationMode</code> is <code>AnimationMode.none</code> the
-old <code>animation</code> property is set to <code>false</code>, otherwise it is set to <code>true</code>.</p>
 
-<footer>Generated from <code>@openui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@openui5/types@1.120.46</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

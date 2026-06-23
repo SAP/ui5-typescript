@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>~~Class: TemplateControl~~ — OpenUI5 TypeScript API</title>
-<meta name="description" content="~~Class: TemplateControl~~ — OpenUI5 TypeScript API Reference (1.120.0)">
+<meta name="description" content="~~Class: TemplateControl~~ — OpenUI5 TypeScript API Reference (1.120.46)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/openui5/1.120/sap.ui.core/sap/ui/core/tmpl/TemplateControl/classes/TemplateControl.html">
 <meta property="og:title" content="~~Class: TemplateControl~~ — OpenUI5 TypeScript API">
-<meta property="og:description" content="~~Class: TemplateControl~~ — OpenUI5 TypeScript API Reference (1.120.0)">
+<meta property="og:description" content="~~Class: TemplateControl~~ — OpenUI5 TypeScript API Reference (1.120.46)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/openui5/1.120/sap.ui.core/sap/ui/core/tmpl/TemplateControl/classes/TemplateControl.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,16 +33,17 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../../index.html">OpenUI5 API</a> › <a href="../../../../../../../sap.ui.core/README.html">sap.ui.core</a> › sap › ui › core › tmpl › <a href="../../../../../../../sap.ui.core/sap/ui/core/tmpl/TemplateControl/README.html">TemplateControl</a> › classes</nav>
-<p><a href="../../../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.0)</strong></a></p>
+<p><a href="../../../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.46)</strong></a></p>
 <hr>
-<p><a href="../../../../../../../README.html">OpenUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../../README.html">sap.ui.core</a> / <a href="../README.html">sap/ui/core/tmpl/TemplateControl</a> / TemplateControl</p>
+<p><a href="../../../../../../../README.html">OpenUI5 TypeScript API (1.120.46)</a> / <a href="../../../../../../README.html">sap.ui.core</a> / <a href="../README.html">sap/ui/core/tmpl/TemplateControl</a> / TemplateControl</p>
 <h1><del>Class: TemplateControl</del></h1>
 <pre class="sig"><span class="kw">import</span> TemplateControl <span class="kw">from</span> <span class="str">"sap/ui/core/tmpl/TemplateControl"</span>;</pre>
+<p>This is the base class for all template controls. Template controls are declared based on templates.</p>
 <h2>Since</h2>
 <p>1.15</p>
 <h2>Deprecated</h2>
-<p>(since 1.56)</p>
-<p>This is the base class for all template controls. Template controls are declared based on templates.</p>
+<p>(since 1.56) - Use an sap.ui.core.mvc.XMLView XMLView or a topic:e6bb33d076dc4f23be50c082c271b9f0 Typed View
+instead.</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../../Control/classes/Control.html"><code>Control</code></a></li>
@@ -176,6 +177,8 @@ otherwise it will be bound to this <code>sap.ui.core.tmpl.TemplateControl</code>
 <blockquote>
 <p><strong>bindList</strong>(<code>sPath</code>): <code>any</code></p>
 </blockquote>
+<p>Creates a pseudo binding for an aggregation to get notified once the property changes to invalidate the
+control and trigger a re-rendering.</p>
 <h4>Parameters</h4>
 <h5>sPath</h5>
 <p><code>string</code></p>
@@ -185,13 +188,13 @@ otherwise it will be bound to this <code>sap.ui.core.tmpl.TemplateControl</code>
 <p>the value of the path</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Creates a pseudo binding for an aggregation to get notified once the property changes to invalidate the
-control and trigger a re-rendering.</p>
 <hr>
 <h3><del>bindProp()</del></h3>
 <blockquote>
 <p><strong>bindProp</strong>(<code>sPath</code>): <code>any</code></p>
 </blockquote>
+<p>Creates a pseudo binding for a property to get notified once the property changes to invalidate the control
+and trigger a re-rendering.</p>
 <h4>Parameters</h4>
 <h5>sPath</h5>
 <p><code>string</code></p>
@@ -201,14 +204,13 @@ control and trigger a re-rendering.</p>
 <p>the value of the path</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Creates a pseudo binding for a property to get notified once the property changes to invalidate the control
-and trigger a re-rendering.</p>
 <hr>
 <h3><del>createControl()</del></h3>
 <h4>Call Signature</h4>
 <blockquote>
 <p><strong>createControl</strong>(<code>mSettings</code>, <code>sParentPath</code>, <code>bDoNotAdd</code>, <code>oView</code>): <a href="../../../Control/classes/Control.html"><code>Control</code></a></p>
 </blockquote>
+<p>compiles (creates and registers) a new control</p>
 <h5>Parameters</h5>
 <h6>mSettings</h6>
 <p><code>object</code></p>
@@ -226,11 +228,11 @@ and trigger a re-rendering.</p>
 <p>new control instance</p>
 <h5>Ui5-protected</h5>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>compiles (creates and registers) a new control</p>
 <h4>Call Signature</h4>
 <blockquote>
 <p><strong>createControl</strong>(<code>mSettings</code>, <code>sParentPath</code>, <code>oView</code>): <a href="../../../Control/classes/Control.html"><code>Control</code></a></p>
 </blockquote>
+<p>compiles (creates and registers) a new control</p>
 <h5>Parameters</h5>
 <h6>mSettings</h6>
 <p><code>object</code></p>
@@ -245,11 +247,11 @@ and trigger a re-rendering.</p>
 <p>new control instance</p>
 <h5>Ui5-protected</h5>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>compiles (creates and registers) a new control</p>
 <h4>Call Signature</h4>
 <blockquote>
 <p><strong>createControl</strong>(<code>mSettings</code>, <code>bDoNotAdd</code>, <code>oView</code>): <a href="../../../Control/classes/Control.html"><code>Control</code></a></p>
 </blockquote>
+<p>compiles (creates and registers) a new control</p>
 <h5>Parameters</h5>
 <h6>mSettings</h6>
 <p><code>object</code></p>
@@ -264,11 +266,11 @@ and trigger a re-rendering.</p>
 <p>new control instance</p>
 <h5>Ui5-protected</h5>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>compiles (creates and registers) a new control</p>
 <h4>Call Signature</h4>
 <blockquote>
 <p><strong>createControl</strong>(<code>mSettings</code>, <code>oView</code>): <a href="../../../Control/classes/Control.html"><code>Control</code></a></p>
 </blockquote>
+<p>compiles (creates and registers) a new control</p>
 <h5>Parameters</h5>
 <h6>mSettings</h6>
 <p><code>object</code></p>
@@ -280,12 +282,12 @@ and trigger a re-rendering.</p>
 <p>new control instance</p>
 <h5>Ui5-protected</h5>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>compiles (creates and registers) a new control</p>
 <hr>
 <h3><del>createDOMElement()</del></h3>
 <blockquote>
 <p><strong>createDOMElement</strong>(<code>mSettings</code>, <code>sParentPath?</code>, <code>bDoNotAdd?</code>): <a href="../../../Control/classes/Control.html"><code>Control</code></a></p>
 </blockquote>
+<p>compiles (creates and registers) a new DOM element</p>
 <h4>Parameters</h4>
 <h5>mSettings</h5>
 <p><code>object</code></p>
@@ -301,7 +303,6 @@ and trigger a re-rendering.</p>
 <p>new DOM element instance</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>compiles (creates and registers) a new DOM element</p>
 <hr>
 <h3><del>detachAfterRendering()</del></h3>
 <blockquote>
@@ -343,6 +344,7 @@ this <code>sap.ui.core.tmpl.TemplateControl</code>.</p>
 <blockquote>
 <p><strong>fireAfterRendering</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
+<p>Fires event #event:afterRendering afterRendering to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><code>object</code></p>
@@ -352,12 +354,12 @@ this <code>sap.ui.core.tmpl.TemplateControl</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Fires event #event:afterRendering afterRendering to attached listeners.</p>
 <hr>
 <h3><del>fireBeforeRendering()</del></h3>
 <blockquote>
 <p><strong>fireBeforeRendering</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
+<p>Fires event #event:beforeRendering beforeRendering to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><code>object</code></p>
@@ -367,7 +369,6 @@ this <code>sap.ui.core.tmpl.TemplateControl</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Fires event #event:beforeRendering beforeRendering to attached listeners.</p>
 <hr>
 <h3><del>getContext()</del></h3>
 <blockquote>
@@ -393,23 +394,23 @@ default the context is an empty object.</p>
 <blockquote>
 <p><strong>getTemplateRenderer</strong>(): <code>Function</code></p>
 </blockquote>
+<p>Returns the instance specific renderer for an anonymous template control.</p>
 <h4>Returns</h4>
 <p><code>Function</code></p>
 <p>the instance specific renderer function</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Returns the instance specific renderer for an anonymous template control.</p>
 <hr>
 <h3><del>isInline()</del></h3>
 <blockquote>
 <p><strong>isInline</strong>(): <code>boolean</code></p>
 </blockquote>
+<p>checks whether the control is inline or not</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>flag, whether to control is inline or not</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>checks whether the control is inline or not</p>
 <hr>
 <h3><del>setContext()</del></h3>
 <blockquote>
@@ -446,6 +447,7 @@ instance may be given</p>
 <blockquote>
 <p><strong>setTemplateRenderer</strong>(<code>fnRenderer</code>): <code>this</code></p>
 </blockquote>
+<p>Sets the instance specific renderer for an anonymous template control.</p>
 <h4>Parameters</h4>
 <h5>fnRenderer</h5>
 <p><code>Function</code></p>
@@ -455,7 +457,6 @@ instance may be given</p>
 <p><code>this</code> to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Sets the instance specific renderer for an anonymous template control.</p>
 <hr>
 <h3><del>extend()</del></h3>
 <blockquote>
@@ -496,6 +497,6 @@ used by this class</p>
 <p><a href="../../../Control/classes/Control.html"><code>Control</code></a>.<a href="../../../Control/classes/Control.html#getmetadata-1"><code>getMetadata</code></a></p>
 <hr>
 
-<footer>Generated from <code>@openui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@openui5/types@1.120.46</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

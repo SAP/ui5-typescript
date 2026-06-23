@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Class: ObjectListItem — OpenUI5 TypeScript API</title>
-<meta name="description" content="Class: ObjectListItem — OpenUI5 TypeScript API Reference (1.120.0)">
+<meta name="description" content="Class: ObjectListItem — OpenUI5 TypeScript API Reference (1.120.46)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/openui5/1.120/sap.m/sap/m/ObjectListItem/classes/ObjectListItem.html">
 <meta property="og:title" content="Class: ObjectListItem — OpenUI5 TypeScript API">
-<meta property="og:description" content="Class: ObjectListItem — OpenUI5 TypeScript API Reference (1.120.0)">
+<meta property="og:description" content="Class: ObjectListItem — OpenUI5 TypeScript API Reference (1.120.46)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/openui5/1.120/sap.m/sap/m/ObjectListItem/classes/ObjectListItem.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,18 +33,18 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../index.html">OpenUI5 API</a> › <a href="../../../../../sap.m/README.html">sap.m</a> › sap › m › <a href="../../../../../sap.m/sap/m/ObjectListItem/README.html">ObjectListItem</a> › classes</nav>
-<p><a href="../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.0)</strong></a></p>
+<p><a href="../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.46)</strong></a></p>
 <hr>
-<p><a href="../../../../../README.html">OpenUI5 TypeScript API (1.120.0)</a> / <a href="../../../../README.html">sap.m</a> / <a href="../README.html">sap/m/ObjectListItem</a> / ObjectListItem</p>
+<p><a href="../../../../../README.html">OpenUI5 TypeScript API (1.120.46)</a> / <a href="../../../../README.html">sap.m</a> / <a href="../README.html">sap/m/ObjectListItem</a> / ObjectListItem</p>
 <h1>Class: ObjectListItem</h1>
 <pre class="sig"><span class="kw">import</span> ObjectListItem <span class="kw">from</span> <span class="str">"sap/m/ObjectListItem"</span>;</pre>
-<h2>Since</h2>
-<p>1.12</p>
 <p>ObjectListItem is a display control that provides summary information about an object as a list item.
 The ObjectListItem title is the key identifier of the object. Additional text and icons can be used to
 further distinguish it from other objects. Attributes and statuses can be used to provide additional
 meaning about the object to the user.</p>
 <p><strong>Note:</strong> The control must only be used in the context of a list.</p>
+<h2>Since</h2>
+<p>1.12</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../ListItemBase/classes/ListItemBase.html"><code>ListItemBase</code></a></li>
@@ -241,6 +241,8 @@ and flagged.</p>
 <blockquote>
 <p><strong>getMarkFavorite</strong>(): <code>boolean</code></p>
 </blockquote>
+<p>Gets current value of property #getMarkFavorite markFavorite.</p>
+<p>Sets the favorite state for the ObjectListItem.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>Value of property <code>markFavorite</code></p>
@@ -250,13 +252,13 @@ and flagged.</p>
 <p>(since 1.42.0) - replaced by <code>markers</code> aggregation. Add sap.m.ObjectMarker with type
 <code>sap.m.ObjectMarkerType.Favorite</code>. You should use either this property or the <code>markers</code> aggregation,
 using both may lead to unpredicted behavior.</p>
-<p>Gets current value of property #getMarkFavorite markFavorite.</p>
-<p>Sets the favorite state for the ObjectListItem.</p>
 <hr>
 <h3><del>getMarkFlagged()</del></h3>
 <blockquote>
 <p><strong>getMarkFlagged</strong>(): <code>boolean</code></p>
 </blockquote>
+<p>Gets current value of property #getMarkFlagged markFlagged.</p>
+<p>Sets the flagged state for the ObjectListItem.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>Value of property <code>markFlagged</code></p>
@@ -266,13 +268,14 @@ using both may lead to unpredicted behavior.</p>
 <p>(since 1.42.0) - replaced by <code>markers</code> aggregation. Add sap.m.ObjectMarker with type
 <code>sap.m.ObjectMarkerType.Flagged</code>. You should use either this property or the <code>markers</code> aggregation, using
 both may lead to unpredicted behavior.</p>
-<p>Gets current value of property #getMarkFlagged markFlagged.</p>
-<p>Sets the flagged state for the ObjectListItem.</p>
 <hr>
 <h3><del>getMarkLocked()</del></h3>
 <blockquote>
 <p><strong>getMarkLocked</strong>(): <code>boolean</code></p>
 </blockquote>
+<p>Gets current value of property #getMarkLocked markLocked.</p>
+<p>Sets the locked state of the ObjectListItem.</p>
+<p>Default value is <code>false</code>.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>Value of property <code>markLocked</code></p>
@@ -282,9 +285,6 @@ both may lead to unpredicted behavior.</p>
 <p>(since 1.42.0) - replaced by <code>markers</code> aggregation. Add sap.m.ObjectMarker with type
 <code>sap.m.ObjectMarkerType.Locked</code>. You should use either this property or the <code>markers</code> aggregation, using
 both may lead to unpredicted behavior.</p>
-<p>Gets current value of property #getMarkLocked markLocked.</p>
-<p>Sets the locked state of the ObjectListItem.</p>
-<p>Default value is <code>false</code>.</p>
 <hr>
 <h3>getNumber()</h3>
 <blockquote>
@@ -300,14 +300,14 @@ both may lead to unpredicted behavior.</p>
 <blockquote>
 <p><strong>getNumberState</strong>(): <code>&quot;None&quot;</code> | <a href="../../../../../sap.ui.core/sap/ui/core/library/enumerations/ValueState.html"><code>ValueState</code></a> | <code>&quot;Error&quot;</code> | <code>&quot;Information&quot;</code> | <code>&quot;Success&quot;</code> | <code>&quot;Warning&quot;</code></p>
 </blockquote>
+<p>Gets current value of property #getNumberState numberState.</p>
+<p>Defines the ObjectListItem number and numberUnit value state.</p>
+<p>Default value is <code>None</code>.</p>
 <h4>Returns</h4>
 <p><code>&quot;None&quot;</code> | <a href="../../../../../sap.ui.core/sap/ui/core/library/enumerations/ValueState.html"><code>ValueState</code></a> | <code>&quot;Error&quot;</code> | <code>&quot;Information&quot;</code> | <code>&quot;Success&quot;</code> | <code>&quot;Warning&quot;</code></p>
 <p>Value of property <code>numberState</code></p>
 <h4>Since</h4>
 <p>1.16.0</p>
-<p>Gets current value of property #getNumberState numberState.</p>
-<p>Defines the ObjectListItem number and numberUnit value state.</p>
-<p>Default value is <code>None</code>.</p>
 <hr>
 <h3>getNumberTextDirection()</h3>
 <blockquote>
@@ -345,6 +345,8 @@ its parent.</p>
 <blockquote>
 <p><strong>getShowMarkers</strong>(): <code>boolean</code></p>
 </blockquote>
+<p>Gets current value of property #getShowMarkers showMarkers.</p>
+<p>If set to true, the ObjectListItem can be marked with icons such as favorite and flag.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>Value of property <code>showMarkers</code></p>
@@ -355,8 +357,6 @@ its parent.</p>
 using the already deprecated properties - <code>markFlagged</code>, <code>markFavorite</code>, and <code>markLocked</code>. If you are
 using the <code>markers</code> aggregation, the visibility of the markers depends on what is set in the aggregation
 itself.</p>
-<p>Gets current value of property #getShowMarkers showMarkers.</p>
-<p>If set to true, the ObjectListItem can be marked with icons such as favorite and flag.</p>
 <hr>
 <h3>getTitle()</h3>
 <blockquote>
@@ -587,6 +587,7 @@ and RTL (right-to-left). By default the item intro inherits the text direction f
 <blockquote>
 <p><strong>setMarkFavorite</strong>(<code>bMarked</code>): <code>this</code></p>
 </blockquote>
+<p>Sets the visibility value of the Favorite marker.</p>
 <h4>Parameters</h4>
 <h5>bMarked</h5>
 <p><code>boolean</code></p>
@@ -597,12 +598,12 @@ and RTL (right-to-left). By default the item intro inherits the text direction f
 <h4>Deprecated</h4>
 <p>(since 1.42.0) - replaced by <code>markers</code> aggregation. Add sap.m.ObjectMarker with type
 <code>sap.m.ObjectMarkerType.Favorite</code>.</p>
-<p>Sets the visibility value of the Favorite marker.</p>
 <hr>
 <h3><del>setMarkFlagged()</del></h3>
 <blockquote>
 <p><strong>setMarkFlagged</strong>(<code>bMarked</code>): <code>this</code></p>
 </blockquote>
+<p>Sets the visibility value of the Flagged marker.</p>
 <h4>Parameters</h4>
 <h5>bMarked</h5>
 <p><code>boolean</code></p>
@@ -613,12 +614,12 @@ and RTL (right-to-left). By default the item intro inherits the text direction f
 <h4>Deprecated</h4>
 <p>(since 1.42.0) - replaced by <code>markers</code> aggregation. Add sap.m.ObjectMarker with type
 <code>sap.m.ObjectMarkerType.Flagged</code>.</p>
-<p>Sets the visibility value of the Flagged marker.</p>
 <hr>
 <h3><del>setMarkLocked()</del></h3>
 <blockquote>
 <p><strong>setMarkLocked</strong>(<code>bMarked</code>): <code>this</code></p>
 </blockquote>
+<p>Sets the visibility value of the Locked marker.</p>
 <h4>Parameters</h4>
 <h5>bMarked</h5>
 <p><code>boolean</code></p>
@@ -629,7 +630,6 @@ and RTL (right-to-left). By default the item intro inherits the text direction f
 <h4>Deprecated</h4>
 <p>(since 1.42.0) - replaced by <code>markers</code> aggregation. Add sap.m.ObjectMarker with type
 <code>sap.m.ObjectMarkerType.Locked</code>.</p>
-<p>Sets the visibility value of the Locked marker.</p>
 <hr>
 <h3>setNumber()</h3>
 <blockquote>
@@ -650,6 +650,10 @@ and RTL (right-to-left). By default the item intro inherits the text direction f
 <blockquote>
 <p><strong>setNumberState</strong>(<code>sNumberState?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getNumberState numberState.</p>
+<p>Defines the ObjectListItem number and numberUnit value state.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>None</code>.</p>
 <h4>Parameters</h4>
 <h5>sNumberState?</h5>
 <p><code>&quot;None&quot;</code> | <a href="../../../../../sap.ui.core/sap/ui/core/library/enumerations/ValueState.html"><code>ValueState</code></a> | <code>&quot;Error&quot;</code> | <code>&quot;Information&quot;</code> | <code>&quot;Success&quot;</code> | <code>&quot;Warning&quot;</code></p>
@@ -659,10 +663,6 @@ and RTL (right-to-left). By default the item intro inherits the text direction f
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.16.0</p>
-<p>Sets a new value for property #getNumberState numberState.</p>
-<p>Defines the ObjectListItem number and numberUnit value state.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>None</code>.</p>
 <hr>
 <h3>setNumberTextDirection()</h3>
 <blockquote>
@@ -714,6 +714,7 @@ its parent.</p>
 <blockquote>
 <p><strong>setShowMarkers</strong>(<code>bMarked</code>): <code>this</code></p>
 </blockquote>
+<p>Sets the visibility value of the Flagged and Favorite markers.</p>
 <h4>Parameters</h4>
 <h5>bMarked</h5>
 <p><code>boolean</code></p>
@@ -723,7 +724,6 @@ its parent.</p>
 <p>this pointer for chaining</p>
 <h4>Deprecated</h4>
 <p>(since 1.42.0) - replaced by <code>markers</code> aggregation.</p>
-<p>Sets the visibility value of the Flagged and Favorite markers.</p>
 <hr>
 <h3>setTitle()</h3>
 <blockquote>
@@ -796,6 +796,6 @@ used by this class</p>
 <p><a href="../../ListItemBase/classes/ListItemBase.html"><code>ListItemBase</code></a>.<a href="../../ListItemBase/classes/ListItemBase.html#getmetadata-1"><code>getMetadata</code></a></p>
 <hr>
 
-<footer>Generated from <code>@openui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@openui5/types@1.120.46</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

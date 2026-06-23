@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Class: Engine — OpenUI5 TypeScript API</title>
-<meta name="description" content="Class: Engine — OpenUI5 TypeScript API Reference (1.120.0)">
+<meta name="description" content="Class: Engine — OpenUI5 TypeScript API Reference (1.120.46)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/openui5/1.120/sap.m/sap/m/p13n/Engine/classes/Engine.html">
 <meta property="og:title" content="Class: Engine — OpenUI5 TypeScript API">
-<meta property="og:description" content="Class: Engine — OpenUI5 TypeScript API Reference (1.120.0)">
+<meta property="og:description" content="Class: Engine — OpenUI5 TypeScript API Reference (1.120.46)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/openui5/1.120/sap.m/sap/m/p13n/Engine/classes/Engine.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,13 +33,11 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../index.html">OpenUI5 API</a> › <a href="../../../../../../sap.m/README.html">sap.m</a> › sap › m › p13n › <a href="../../../../../../sap.m/sap/m/p13n/Engine/README.html">Engine</a> › classes</nav>
-<p><a href="../../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.0)</strong></a></p>
+<p><a href="../../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.46)</strong></a></p>
 <hr>
-<p><a href="../../../../../../README.html">OpenUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../README.html">sap.m</a> / <a href="../README.html">sap/m/p13n/Engine</a> / Engine</p>
+<p><a href="../../../../../../README.html">OpenUI5 TypeScript API (1.120.46)</a> / <a href="../../../../../README.html">sap.m</a> / <a href="../README.html">sap/m/p13n/Engine</a> / Engine</p>
 <h1>Class: Engine</h1>
 <pre class="sig"><span class="kw">import</span> Engine <span class="kw">from</span> <span class="str">"sap/m/p13n/Engine"</span>;</pre>
-<h2>Since</h2>
-<p>1.104</p>
 <p>The <code>Engine</code> entity offers personalization capabilities by registering a control instance for modification,
 such as:</p>
 <pre><code> - `sap.m.p13n.Popup` initialization
@@ -55,6 +53,8 @@ into account. Available controller implementations for the registration process 
 </code></pre>
 <p>Can be used in combination with <code>sap.ui.fl.variants.VariantManagement</code> to persist a state in variants
 using <code>sap.ui.fl</code> capabilities.</p>
+<h2>Since</h2>
+<p>1.104</p>
 <h2>Extends</h2>
 <ul>
 <li><code>Object</code></li>
@@ -76,9 +76,9 @@ using <code>sap.ui.fl</code> capabilities.</p>
 <p><strong>applyState</strong>(<code>oControl</code>, <code>oState</code>): <code>Promise</code>&lt;<a href="../type-aliases/State.html"><code>State</code></a>&gt;</p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
-<p>(since 1.104) - Please note that the API of this control is not yet finalized!</p>
 <p>Applies a state to a control by passing an object that contains the registered controller key and an
 object matching the inner subcontroller logic.</p>
+<p> (since 1.104) - Please note that the API of this control is not yet finalized!</p>
 <h4>Parameters</h4>
 <h5>oControl</h5>
 <p><a href="../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></p>
@@ -92,7 +92,7 @@ object matching the inner subcontroller logic.</p>
 <hr>
 <h3>attachStateChange()</h3>
 <blockquote>
-<p><strong>attachStateChange</strong>(<code>fnStateEventHandler</code>): <code>this</code></p>
+<p><strong>attachStateChange</strong>(<code>fnStateEventHandler</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
 <p>Attaches an event handler to the <code>StateHandlerRegistry</code> class. The event handler is fired every time
 a user triggers a personalization change for a control instance during runtime.</p>
@@ -100,6 +100,9 @@ a user triggers a personalization change for a control instance during runtime.<
 <h5>fnStateEventHandler</h5>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
 <p>The handler function to call when the event occurs</p>
+<h5>oListener?</h5>
+<p><code>object</code></p>
+<p>The context object to call the event handler with (value of <code>this</code> in the event handler function).</p>
 <h4>Returns</h4>
 <p><code>this</code></p>
 <p>Returns <code>this</code> to allow method chaining</p>
@@ -119,7 +122,7 @@ registry, and all instance-specific submodules, such as the registered controlle
 <hr>
 <h3>detachStateChange()</h3>
 <blockquote>
-<p><strong>detachStateChange</strong>(<code>fnStateEventHandler</code>): <code>this</code></p>
+<p><strong>detachStateChange</strong>(<code>fnStateEventHandler</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
 <p>Removes a previously attached state change event handler from the <code>StateHandlerRegistry</code> class. The passed
 parameters must match those used for registration with sap.m.p13n.Engine#attachStateChange beforehand.</p>
@@ -127,6 +130,9 @@ parameters must match those used for registration with sap.m.p13n.Engine#attachS
 <h5>fnStateEventHandler</h5>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
 <p>The handler function to detach from the event</p>
+<h5>oListener?</h5>
+<p><code>object</code></p>
+<p>The context object to call the event handler with (value of <code>this</code> in the event handler function).</p>
 <h4>Returns</h4>
 <p><code>this</code></p>
 <p>Returns <code>this</code> to allow method chaining</p>
@@ -166,10 +172,10 @@ parameters must match those used for registration with sap.m.p13n.Engine#attachS
 <p><strong>retrieveState</strong>(<code>oControl</code>): <code>Promise</code>&lt;<a href="../type-aliases/State.html"><code>State</code></a>&gt;</p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
-<p>(since 1.104) - Please note that the API of this control is not yet finalized!</p>
 <p>Retrieves the state for a given control instance after all necessary changes have been applied (e.g.
 modification handler appliance). After the returned <code>Promise</code> has been resolved, the returned state is
 in sync with the related state object of the control.</p>
+<p> (since 1.104) - Please note that the API of this control is not yet finalized!</p>
 <h4>Parameters</h4>
 <h5>oControl</h5>
 <p><a href="../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></p>
@@ -237,6 +243,15 @@ used by this class</p>
 <p><code>Function</code></p>
 <p>Created class / constructor function</p>
 <hr>
+<h3>getInstance()</h3>
+<blockquote>
+<p><code>static</code> <strong>getInstance</strong>(): <code>Engine</code></p>
+</blockquote>
+<p>This method is the central point of access to the Engine Singleton.</p>
+<h4>Returns</h4>
+<p><code>Engine</code></p>
+<p>The Engine instance</p>
+<hr>
 <h3>getMetadata()</h3>
 <blockquote>
 <p><code>static</code> <strong>getMetadata</strong>(): <a href="../../../../../../sap.ui.core/sap/ui/base/Metadata/classes/Metadata.html"><code>Metadata</code></a></p>
@@ -247,6 +262,6 @@ used by this class</p>
 <p>Metadata object describing this class</p>
 <hr>
 
-<footer>Generated from <code>@openui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@openui5/types@1.120.46</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

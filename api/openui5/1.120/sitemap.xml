@@ -1702,12 +1702,14 @@
   <url><loc>https://ui5.github.io/typescript/api/openui5/1.120/sap.m/sap/m/p13n/Engine/type-aliases/State.html</loc><lastmod>2026-06-23</lastmod></url>
   <url><loc>https://ui5.github.io/typescript/api/openui5/1.120/sap.m/sap/m/p13n/GroupController/README.html</loc><lastmod>2026-06-23</lastmod></url>
   <url><loc>https://ui5.github.io/typescript/api/openui5/1.120/sap.m/sap/m/p13n/GroupController/classes/GroupController.html</loc><lastmod>2026-06-23</lastmod></url>
+  <url><loc>https://ui5.github.io/typescript/api/openui5/1.120/sap.m/sap/m/p13n/GroupController/type-aliases/GroupState.html</loc><lastmod>2026-06-23</lastmod></url>
   <url><loc>https://ui5.github.io/typescript/api/openui5/1.120/sap.m/sap/m/p13n/GroupPanel/README.html</loc><lastmod>2026-06-23</lastmod></url>
   <url><loc>https://ui5.github.io/typescript/api/openui5/1.120/sap.m/sap/m/p13n/GroupPanel/classes/GroupPanel.html</loc><lastmod>2026-06-23</lastmod></url>
   <url><loc>https://ui5.github.io/typescript/api/openui5/1.120/sap.m/sap/m/p13n/GroupPanel/interfaces/$GroupPanelSettings.html</loc><lastmod>2026-06-23</lastmod></url>
   <url><loc>https://ui5.github.io/typescript/api/openui5/1.120/sap.m/sap/m/p13n/GroupPanel/type-aliases/GroupItem.html</loc><lastmod>2026-06-23</lastmod></url>
   <url><loc>https://ui5.github.io/typescript/api/openui5/1.120/sap.m/sap/m/p13n/MetadataHelper/README.html</loc><lastmod>2026-06-23</lastmod></url>
   <url><loc>https://ui5.github.io/typescript/api/openui5/1.120/sap.m/sap/m/p13n/MetadataHelper/classes/MetadataHelper.html</loc><lastmod>2026-06-23</lastmod></url>
+  <url><loc>https://ui5.github.io/typescript/api/openui5/1.120/sap.m/sap/m/p13n/MetadataHelper/type-aliases/MetadataObject.html</loc><lastmod>2026-06-23</lastmod></url>
   <url><loc>https://ui5.github.io/typescript/api/openui5/1.120/sap.m/sap/m/p13n/Popup/README.html</loc><lastmod>2026-06-23</lastmod></url>
   <url><loc>https://ui5.github.io/typescript/api/openui5/1.120/sap.m/sap/m/p13n/Popup/classes/Popup.html</loc><lastmod>2026-06-23</lastmod></url>
   <url><loc>https://ui5.github.io/typescript/api/openui5/1.120/sap.m/sap/m/p13n/Popup/interfaces/$PopupSettings.html</loc><lastmod>2026-06-23</lastmod></url>
@@ -1715,11 +1717,13 @@
   <url><loc>https://ui5.github.io/typescript/api/openui5/1.120/sap.m/sap/m/p13n/Popup/type-aliases/Popup$CloseEvent.html</loc><lastmod>2026-06-23</lastmod></url>
   <url><loc>https://ui5.github.io/typescript/api/openui5/1.120/sap.m/sap/m/p13n/SelectionController/README.html</loc><lastmod>2026-06-23</lastmod></url>
   <url><loc>https://ui5.github.io/typescript/api/openui5/1.120/sap.m/sap/m/p13n/SelectionController/classes/SelectionController.html</loc><lastmod>2026-06-23</lastmod></url>
+  <url><loc>https://ui5.github.io/typescript/api/openui5/1.120/sap.m/sap/m/p13n/SelectionController/type-aliases/SelectionState.html</loc><lastmod>2026-06-23</lastmod></url>
   <url><loc>https://ui5.github.io/typescript/api/openui5/1.120/sap.m/sap/m/p13n/SelectionPanel/README.html</loc><lastmod>2026-06-23</lastmod></url>
   <url><loc>https://ui5.github.io/typescript/api/openui5/1.120/sap.m/sap/m/p13n/SelectionPanel/classes/SelectionPanel.html</loc><lastmod>2026-06-23</lastmod></url>
   <url><loc>https://ui5.github.io/typescript/api/openui5/1.120/sap.m/sap/m/p13n/SelectionPanel/interfaces/$SelectionPanelSettings.html</loc><lastmod>2026-06-23</lastmod></url>
   <url><loc>https://ui5.github.io/typescript/api/openui5/1.120/sap.m/sap/m/p13n/SortController/README.html</loc><lastmod>2026-06-23</lastmod></url>
   <url><loc>https://ui5.github.io/typescript/api/openui5/1.120/sap.m/sap/m/p13n/SortController/classes/SortController.html</loc><lastmod>2026-06-23</lastmod></url>
+  <url><loc>https://ui5.github.io/typescript/api/openui5/1.120/sap.m/sap/m/p13n/SortController/type-aliases/SortState.html</loc><lastmod>2026-06-23</lastmod></url>
   <url><loc>https://ui5.github.io/typescript/api/openui5/1.120/sap.m/sap/m/p13n/SortPanel/README.html</loc><lastmod>2026-06-23</lastmod></url>
   <url><loc>https://ui5.github.io/typescript/api/openui5/1.120/sap.m/sap/m/p13n/SortPanel/classes/SortPanel.html</loc><lastmod>2026-06-23</lastmod></url>
   <url><loc>https://ui5.github.io/typescript/api/openui5/1.120/sap.m/sap/m/p13n/SortPanel/interfaces/$SortPanelSettings.html</loc><lastmod>2026-06-23</lastmod></url>
@@ -2504,6 +2508,7 @@
   <url><loc>https://ui5.github.io/typescript/api/openui5/1.120/sap.ui.core/sap/base/assert/functions/assert.html</loc><lastmod>2026-06-23</lastmod></url>
   <url><loc>https://ui5.github.io/typescript/api/openui5/1.120/sap.ui.core/sap/base/i18n/Formatting/README.html</loc><lastmod>2026-06-23</lastmod></url>
   <url><loc>https://ui5.github.io/typescript/api/openui5/1.120/sap.ui.core/sap/base/i18n/Formatting/interfaces/Formatting.html</loc><lastmod>2026-06-23</lastmod></url>
+  <url><loc>https://ui5.github.io/typescript/api/openui5/1.120/sap.ui.core/sap/base/i18n/Formatting/type-aliases/CustomIslamicCalendarData.html</loc><lastmod>2026-06-23</lastmod></url>
   <url><loc>https://ui5.github.io/typescript/api/openui5/1.120/sap.ui.core/sap/base/i18n/Formatting/type-aliases/Formatting$ChangeEvent.html</loc><lastmod>2026-06-23</lastmod></url>
   <url><loc>https://ui5.github.io/typescript/api/openui5/1.120/sap.ui.core/sap/base/i18n/Formatting/variables/Formatting.html</loc><lastmod>2026-06-23</lastmod></url>
   <url><loc>https://ui5.github.io/typescript/api/openui5/1.120/sap.ui.core/sap/base/i18n/LanguageTag/README.html</loc><lastmod>2026-06-23</lastmod></url>
@@ -2737,6 +2742,9 @@
   <url><loc>https://ui5.github.io/typescript/api/openui5/1.120/sap.ui.core/sap/ui/core/ComponentContainer/type-aliases/ComponentContainer$ComponentFailedEvent.html</loc><lastmod>2026-06-23</lastmod></url>
   <url><loc>https://ui5.github.io/typescript/api/openui5/1.120/sap.ui.core/sap/ui/core/ComponentMetadata/README.html</loc><lastmod>2026-06-23</lastmod></url>
   <url><loc>https://ui5.github.io/typescript/api/openui5/1.120/sap.ui.core/sap/ui/core/ComponentMetadata/classes/ComponentMetadata.html</loc><lastmod>2026-06-23</lastmod></url>
+  <url><loc>https://ui5.github.io/typescript/api/openui5/1.120/sap.ui.core/sap/ui/core/ComponentRegistry/README.html</loc><lastmod>2026-06-23</lastmod></url>
+  <url><loc>https://ui5.github.io/typescript/api/openui5/1.120/sap.ui.core/sap/ui/core/ComponentRegistry/interfaces/ComponentRegistry.html</loc><lastmod>2026-06-23</lastmod></url>
+  <url><loc>https://ui5.github.io/typescript/api/openui5/1.120/sap.ui.core/sap/ui/core/ComponentRegistry/variables/ComponentRegistry.html</loc><lastmod>2026-06-23</lastmod></url>
   <url><loc>https://ui5.github.io/typescript/api/openui5/1.120/sap.ui.core/sap/ui/core/ComponentSupport/README.html</loc><lastmod>2026-06-23</lastmod></url>
   <url><loc>https://ui5.github.io/typescript/api/openui5/1.120/sap.ui.core/sap/ui/core/ComponentSupport/interfaces/ComponentSupport.html</loc><lastmod>2026-06-23</lastmod></url>
   <url><loc>https://ui5.github.io/typescript/api/openui5/1.120/sap.ui.core/sap/ui/core/ComponentSupport/variables/ComponentSupport.html</loc><lastmod>2026-06-23</lastmod></url>
@@ -2775,6 +2783,9 @@
   <url><loc>https://ui5.github.io/typescript/api/openui5/1.120/sap.ui.core/sap/ui/core/ElementMetadata/README.html</loc><lastmod>2026-06-23</lastmod></url>
   <url><loc>https://ui5.github.io/typescript/api/openui5/1.120/sap.ui.core/sap/ui/core/ElementMetadata/classes/ElementMetadata.html</loc><lastmod>2026-06-23</lastmod></url>
   <url><loc>https://ui5.github.io/typescript/api/openui5/1.120/sap.ui.core/sap/ui/core/ElementMetadata/type-aliases/ControlRenderer.html</loc><lastmod>2026-06-23</lastmod></url>
+  <url><loc>https://ui5.github.io/typescript/api/openui5/1.120/sap.ui.core/sap/ui/core/ElementRegistry/README.html</loc><lastmod>2026-06-23</lastmod></url>
+  <url><loc>https://ui5.github.io/typescript/api/openui5/1.120/sap.ui.core/sap/ui/core/ElementRegistry/interfaces/ElementRegistry.html</loc><lastmod>2026-06-23</lastmod></url>
+  <url><loc>https://ui5.github.io/typescript/api/openui5/1.120/sap.ui.core/sap/ui/core/ElementRegistry/variables/ElementRegistry.html</loc><lastmod>2026-06-23</lastmod></url>
   <url><loc>https://ui5.github.io/typescript/api/openui5/1.120/sap.ui.core/sap/ui/core/EnabledPropagator/README.html</loc><lastmod>2026-06-23</lastmod></url>
   <url><loc>https://ui5.github.io/typescript/api/openui5/1.120/sap.ui.core/sap/ui/core/EnabledPropagator/classes/EnabledPropagator.html</loc><lastmod>2026-06-23</lastmod></url>
   <url><loc>https://ui5.github.io/typescript/api/openui5/1.120/sap.ui.core/sap/ui/core/EventBus/README.html</loc><lastmod>2026-06-23</lastmod></url>
@@ -4146,6 +4157,9 @@
   <url><loc>https://ui5.github.io/typescript/api/openui5/1.120/sap.ui.mdc/sap/ui/mdc/FilterBar/classes/FilterBar.html</loc><lastmod>2026-06-23</lastmod></url>
   <url><loc>https://ui5.github.io/typescript/api/openui5/1.120/sap.ui.mdc/sap/ui/mdc/FilterBar/interfaces/$FilterBarSettings.html</loc><lastmod>2026-06-23</lastmod></url>
   <url><loc>https://ui5.github.io/typescript/api/openui5/1.120/sap.ui.mdc/sap/ui/mdc/FilterBar/type-aliases/PropertyInfo.html</loc><lastmod>2026-06-23</lastmod></url>
+  <url><loc>https://ui5.github.io/typescript/api/openui5/1.120/sap.ui.mdc/sap/ui/mdc/FilterBarDelegate/README.html</loc><lastmod>2026-06-23</lastmod></url>
+  <url><loc>https://ui5.github.io/typescript/api/openui5/1.120/sap.ui.mdc/sap/ui/mdc/FilterBarDelegate/interfaces/FilterBarDelegate.html</loc><lastmod>2026-06-23</lastmod></url>
+  <url><loc>https://ui5.github.io/typescript/api/openui5/1.120/sap.ui.mdc/sap/ui/mdc/FilterBarDelegate/variables/FilterBarDelegate.html</loc><lastmod>2026-06-23</lastmod></url>
   <url><loc>https://ui5.github.io/typescript/api/openui5/1.120/sap.ui.mdc/sap/ui/mdc/FilterField/README.html</loc><lastmod>2026-06-23</lastmod></url>
   <url><loc>https://ui5.github.io/typescript/api/openui5/1.120/sap.ui.mdc/sap/ui/mdc/FilterField/classes/FilterField.html</loc><lastmod>2026-06-23</lastmod></url>
   <url><loc>https://ui5.github.io/typescript/api/openui5/1.120/sap.ui.mdc/sap/ui/mdc/FilterField/interfaces/$FilterFieldSettings.html</loc><lastmod>2026-06-23</lastmod></url>

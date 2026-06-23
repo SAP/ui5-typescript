@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Class: NumericHeader — OpenUI5 TypeScript API</title>
-<meta name="description" content="Class: NumericHeader — OpenUI5 TypeScript API Reference (1.120.0)">
+<meta name="description" content="Class: NumericHeader — OpenUI5 TypeScript API Reference (1.120.46)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/openui5/1.120/sap.f/sap/f/cards/NumericHeader/classes/NumericHeader.html">
 <meta property="og:title" content="Class: NumericHeader — OpenUI5 TypeScript API">
-<meta property="og:description" content="Class: NumericHeader — OpenUI5 TypeScript API Reference (1.120.0)">
+<meta property="og:description" content="Class: NumericHeader — OpenUI5 TypeScript API Reference (1.120.46)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/openui5/1.120/sap.f/sap/f/cards/NumericHeader/classes/NumericHeader.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,13 +33,11 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../index.html">OpenUI5 API</a> › <a href="../../../../../../sap.f/README.html">sap.f</a> › sap › f › cards › <a href="../../../../../../sap.f/sap/f/cards/NumericHeader/README.html">NumericHeader</a> › classes</nav>
-<p><a href="../../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.0)</strong></a></p>
+<p><a href="../../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.46)</strong></a></p>
 <hr>
-<p><a href="../../../../../../README.html">OpenUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../README.html">sap.f</a> / <a href="../README.html">sap/f/cards/NumericHeader</a> / NumericHeader</p>
+<p><a href="../../../../../../README.html">OpenUI5 TypeScript API (1.120.46)</a> / <a href="../../../../../README.html">sap.f</a> / <a href="../README.html">sap/f/cards/NumericHeader</a> / NumericHeader</p>
 <h1>Class: NumericHeader</h1>
 <pre class="sig"><span class="kw">import</span> NumericHeader <span class="kw">from</span> <span class="str">"sap/f/cards/NumericHeader"</span>;</pre>
-<h2>Since</h2>
-<p>1.64</p>
 <p>Displays general information in the header of the sap.f.Card and allows the configuration of
 a numeric value visualization.</p>
 <p>You can configure the title, subtitle, and status text, using the provided properties. To add more side
@@ -48,6 +46,8 @@ number indicators, use the <code>sideIndicators</code> aggregation.</p>
 	 - You should always set a title.
 	 - You should always have a maximum of two side indicators.
 	 - To show only basic information, use sap.f.cards.Header Header instead.</p>
+<h2>Since</h2>
+<p>1.64</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../BaseHeader/classes/BaseHeader.html"><code>BaseHeader</code></a></li>
@@ -185,6 +185,8 @@ otherwise it will be bound to this <code>sap.f.cards.NumericHeader</code> itself
 <blockquote>
 <p><strong>enhanceAccessibilityState</strong>(<code>oElement</code>, <code>mAriaProps</code>): <code>void</code></p>
 </blockquote>
+<p>This method is a hook for the RenderManager that gets called during the rendering of child Controls.
+It allows to add, remove and update existing accessibility attributes (ARIA) of those controls.</p>
 <h4>Parameters</h4>
 <h5>oElement</h5>
 <p><a href="../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></p>
@@ -199,8 +201,6 @@ otherwise it will be bound to this <code>sap.f.cards.NumericHeader</code> itself
 <p><code>void</code></p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>This method is a hook for the RenderManager that gets called during the rendering of child Controls.
-It allows to add, remove and update existing accessibility attributes (ARIA) of those controls.</p>
 <h4>Overrides</h4>
 <p><a href="../../BaseHeader/classes/BaseHeader.html"><code>BaseHeader</code></a>.<a href="../../BaseHeader/classes/BaseHeader.html#enhanceaccessibilitystate"><code>enhanceAccessibilityState</code></a></p>
 <hr>
@@ -208,6 +208,7 @@ It allows to add, remove and update existing accessibility attributes (ARIA) of 
 <blockquote>
 <p><strong>firePress</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
+<p>Fires event #event:press press to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><code>object</code></p>
@@ -217,7 +218,6 @@ It allows to add, remove and update existing accessibility attributes (ARIA) of 
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Fires event #event:press press to attached listeners.</p>
 <hr>
 <h3>getDetails()</h3>
 <blockquote>
@@ -234,10 +234,10 @@ It allows to add, remove and update existing accessibility attributes (ARIA) of 
 <p><strong>getDetailsMaxLines</strong>(): <code>number</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
-<p>(since 1.101)</p>
 <p>Gets current value of property #getDetailsMaxLines detailsMaxLines.</p>
 <p>Limits the number of lines for the details.</p>
 <p>Default value is <code>1</code>.</p>
+<p> (since 1.101)</p>
 <h4>Returns</h4>
 <p><code>number</code></p>
 <p>Value of property <code>detailsMaxLines</code></p>
@@ -247,85 +247,85 @@ It allows to add, remove and update existing accessibility attributes (ARIA) of 
 <p><strong>getDetailsState</strong>(): <code>&quot;None&quot;</code> | <a href="../../../../../../sap.ui.core/sap/ui/core/library/enumerations/ValueState.html"><code>ValueState</code></a> | <code>&quot;Error&quot;</code> | <code>&quot;Information&quot;</code> | <code>&quot;Success&quot;</code> | <code>&quot;Warning&quot;</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
+<p>Gets current value of property #getDetailsState detailsState.</p>
+<p>The semantic color which represents the state of the details text.</p>
+<p>Default value is <code>None</code>.</p>
 <h4>Returns</h4>
 <p><code>&quot;None&quot;</code> | <a href="../../../../../../sap.ui.core/sap/ui/core/library/enumerations/ValueState.html"><code>ValueState</code></a> | <code>&quot;Error&quot;</code> | <code>&quot;Information&quot;</code> | <code>&quot;Success&quot;</code> | <code>&quot;Warning&quot;</code></p>
 <p>Value of property <code>detailsState</code></p>
 <h4>Since</h4>
 <p>1.118
  (since 1.118) - For usage only by Work Zone.</p>
-<p>Gets current value of property #getDetailsState detailsState.</p>
-<p>The semantic color which represents the state of the details text.</p>
-<p>Default value is <code>None</code>.</p>
 <hr>
 <h3>getIconAlt()</h3>
 <blockquote>
 <p><strong>getIconAlt</strong>(): <code>string</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
+<p>Gets current value of property #getIconAlt iconAlt.</p>
+<p>Defines an alt text for the avatar or icon.</p>
+<p>Default value is <code>empty string</code>.</p>
 <h4>Returns</h4>
 <p><code>string</code></p>
 <p>Value of property <code>iconAlt</code></p>
 <h4>Since</h4>
 <p>1.118
  (since 1.118) - For usage only by Work Zone.</p>
-<p>Gets current value of property #getIconAlt iconAlt.</p>
-<p>Defines an alt text for the avatar or icon.</p>
-<p>Default value is <code>empty string</code>.</p>
 <hr>
 <h3>getIconBackgroundColor()</h3>
 <blockquote>
 <p><strong>getIconBackgroundColor</strong>(): <a href="../../../../../../sap.m/sap/m/AvatarColor/enumerations/AvatarColor.html"><code>AvatarColor</code></a> | <code>&quot;Accent1&quot;</code> | <code>&quot;Accent10&quot;</code> | <code>&quot;Accent2&quot;</code> | <code>&quot;Accent3&quot;</code> | <code>&quot;Accent4&quot;</code> | <code>&quot;Accent5&quot;</code> | <code>&quot;Accent6&quot;</code> | <code>&quot;Accent7&quot;</code> | <code>&quot;Accent8&quot;</code> | <code>&quot;Accent9&quot;</code> | <code>&quot;Placeholder&quot;</code> | <code>&quot;Random&quot;</code> | <code>&quot;TileIcon&quot;</code> | <code>&quot;Transparent&quot;</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
+<p>Gets current value of property #getIconBackgroundColor iconBackgroundColor.</p>
+<p>Defines a background color for the avatar or icon.</p>
+<p>Default value is <code>Transparent</code>.</p>
 <h4>Returns</h4>
 <p><a href="../../../../../../sap.m/sap/m/AvatarColor/enumerations/AvatarColor.html"><code>AvatarColor</code></a> | <code>&quot;Accent1&quot;</code> | <code>&quot;Accent10&quot;</code> | <code>&quot;Accent2&quot;</code> | <code>&quot;Accent3&quot;</code> | <code>&quot;Accent4&quot;</code> | <code>&quot;Accent5&quot;</code> | <code>&quot;Accent6&quot;</code> | <code>&quot;Accent7&quot;</code> | <code>&quot;Accent8&quot;</code> | <code>&quot;Accent9&quot;</code> | <code>&quot;Placeholder&quot;</code> | <code>&quot;Random&quot;</code> | <code>&quot;TileIcon&quot;</code> | <code>&quot;Transparent&quot;</code></p>
 <p>Value of property <code>iconBackgroundColor</code></p>
 <h4>Since</h4>
 <p>1.118
  (since 1.118) - For usage only by Work Zone.</p>
-<p>Gets current value of property #getIconBackgroundColor iconBackgroundColor.</p>
-<p>Defines a background color for the avatar or icon.</p>
-<p>Default value is <code>Transparent</code>.</p>
 <hr>
 <h3>getIconDisplayShape()</h3>
 <blockquote>
 <p><strong>getIconDisplayShape</strong>(): <a href="../../../../../../sap.m/sap/m/AvatarShape/enumerations/AvatarShape.html"><code>AvatarShape</code></a> | <code>&quot;Circle&quot;</code> | <code>&quot;Square&quot;</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
+<p>Gets current value of property #getIconDisplayShape iconDisplayShape.</p>
+<p>Defines the shape of the icon.</p>
+<p>Default value is <code>Circle</code>.</p>
 <h4>Returns</h4>
 <p><a href="../../../../../../sap.m/sap/m/AvatarShape/enumerations/AvatarShape.html"><code>AvatarShape</code></a> | <code>&quot;Circle&quot;</code> | <code>&quot;Square&quot;</code></p>
 <p>Value of property <code>iconDisplayShape</code></p>
 <h4>Since</h4>
 <p>1.118
  (since 1.118) - For usage only by Work Zone.</p>
-<p>Gets current value of property #getIconDisplayShape iconDisplayShape.</p>
-<p>Defines the shape of the icon.</p>
-<p>Default value is <code>Circle</code>.</p>
 <hr>
 <h3>getIconInitials()</h3>
 <blockquote>
 <p><strong>getIconInitials</strong>(): <code>string</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
+<p>Gets current value of property #getIconInitials iconInitials.</p>
+<p>Defines the initials of the icon.</p>
+<p>Default value is <code>empty string</code>.</p>
 <h4>Returns</h4>
 <p><code>string</code></p>
 <p>Value of property <code>iconInitials</code></p>
 <h4>Since</h4>
 <p>1.118
  (since 1.118) - For usage only by Work Zone.</p>
-<p>Gets current value of property #getIconInitials iconInitials.</p>
-<p>Defines the initials of the icon.</p>
-<p>Default value is <code>empty string</code>.</p>
 <hr>
 <h3>getIconSize()</h3>
 <blockquote>
 <p><strong>getIconSize</strong>(): <a href="../../../../../../sap.m/sap/m/AvatarSize/enumerations/AvatarSize.html"><code>AvatarSize</code></a> | <code>&quot;Custom&quot;</code> | <code>&quot;L&quot;</code> | <code>&quot;M&quot;</code> | <code>&quot;S&quot;</code> | <code>&quot;XL&quot;</code> | <code>&quot;XS&quot;</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
-<p>(since 1.119) - this feature is experimental and the API may change.</p>
 <p>Gets current value of property #getIconSize iconSize.</p>
 <p>Defines the size of the icon.</p>
 <p>Default value is <code>S</code>.</p>
+<p> (since 1.119) - this feature is experimental and the API may change.</p>
 <h4>Returns</h4>
 <p><a href="../../../../../../sap.m/sap/m/AvatarSize/enumerations/AvatarSize.html"><code>AvatarSize</code></a> | <code>&quot;Custom&quot;</code> | <code>&quot;L&quot;</code> | <code>&quot;M&quot;</code> | <code>&quot;S&quot;</code> | <code>&quot;XL&quot;</code> | <code>&quot;XS&quot;</code></p>
 <p>Value of property <code>iconSize</code></p>
@@ -335,30 +335,30 @@ It allows to add, remove and update existing accessibility attributes (ARIA) of 
 <p><strong>getIconSrc</strong>(): <code>string</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
+<p>Gets current value of property #getIconSrc iconSrc.</p>
+<p>Defines the icon source.</p>
+<p>Default value is <code>empty string</code>.</p>
 <h4>Returns</h4>
 <p><code>string</code></p>
 <p>Value of property <code>iconSrc</code></p>
 <h4>Since</h4>
 <p>1.118
  (since 1.118) - For usage only by Work Zone.</p>
-<p>Gets current value of property #getIconSrc iconSrc.</p>
-<p>Defines the icon source.</p>
-<p>Default value is <code>empty string</code>.</p>
 <hr>
 <h3>getIconVisible()</h3>
 <blockquote>
 <p><strong>getIconVisible</strong>(): <code>boolean</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
+<p>Gets current value of property #getIconVisible iconVisible.</p>
+<p>Defines whether the card icon is visible.</p>
+<p>Default value is <code>true</code>.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>Value of property <code>iconVisible</code></p>
 <h4>Since</h4>
 <p>1.118
  (since 1.118) - For usage only by Work Zone.</p>
-<p>Gets current value of property #getIconVisible iconVisible.</p>
-<p>Defines whether the card icon is visible.</p>
-<p>Default value is <code>true</code>.</p>
 <hr>
 <h3>getNumber()</h3>
 <blockquote>
@@ -386,14 +386,14 @@ the first five are displayed. Without rounding the number.</p>
 <blockquote>
 <p><strong>getNumberVisible</strong>(): <code>boolean</code></p>
 </blockquote>
+<p>Gets current value of property #getNumberVisible numberVisible.</p>
+<p>Whether the main numeric indicator is visible or not</p>
+<p>Default value is <code>true</code>.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>Value of property <code>numberVisible</code></p>
 <h4>Since</h4>
 <p>1.109</p>
-<p>Gets current value of property #getNumberVisible numberVisible.</p>
-<p>Whether the main numeric indicator is visible or not</p>
-<p>Default value is <code>true</code>.</p>
 <hr>
 <h3>getScale()</h3>
 <blockquote>
@@ -433,11 +433,11 @@ should be used.</p>
 <p><strong>getState</strong>(): <code>&quot;None&quot;</code> | <code>&quot;Error&quot;</code> | <a href="../../../../../../sap.m/sap/m/library/enumerations/ValueColor.html"><code>ValueColor</code></a> | <code>&quot;Critical&quot;</code> | <code>&quot;Good&quot;</code> | <code>&quot;Neutral&quot;</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
-<p>(since 1.64) - Disclaimer: this property is in a beta state - incompatible API changes
-may be done before its official public release. Use at your own discretion.</p>
 <p>Gets current value of property #getState state.</p>
 <p>The semantic color which represents the state of the main number indicator.</p>
 <p>Default value is <code>&quot;Neutral&quot;</code>.</p>
+<p> (since 1.64) - Disclaimer: this property is in a beta state - incompatible API changes
+may be done before its official public release. Use at your own discretion.</p>
 <h4>Returns</h4>
 <p><code>&quot;None&quot;</code> | <code>&quot;Error&quot;</code> | <a href="../../../../../../sap.m/sap/m/library/enumerations/ValueColor.html"><code>ValueColor</code></a> | <code>&quot;Critical&quot;</code> | <code>&quot;Good&quot;</code> | <code>&quot;Neutral&quot;</code></p>
 <p>Value of property <code>state</code></p>
@@ -468,10 +468,10 @@ may be done before its official public release. Use at your own discretion.</p>
 <p><strong>getSubtitleMaxLines</strong>(): <code>number</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
-<p>(since 1.101)</p>
 <p>Gets current value of property #getSubtitleMaxLines subtitleMaxLines.</p>
 <p>Limits the number of lines for the subtitle.</p>
 <p>Default value is <code>2</code>.</p>
+<p> (since 1.101)</p>
 <h4>Returns</h4>
 <p><code>number</code></p>
 <p>Value of property <code>subtitleMaxLines</code></p>
@@ -491,10 +491,10 @@ may be done before its official public release. Use at your own discretion.</p>
 <p><strong>getTitleMaxLines</strong>(): <code>number</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
-<p>(since 1.101)</p>
 <p>Gets current value of property #getTitleMaxLines titleMaxLines.</p>
 <p>Limits the number of lines for the title.</p>
 <p>Default value is <code>3</code>.</p>
+<p> (since 1.101)</p>
 <h4>Returns</h4>
 <p><code>number</code></p>
 <p>Value of property <code>titleMaxLines</code></p>
@@ -595,11 +595,11 @@ is inserted at the last position</p>
 <p><strong>setDetailsMaxLines</strong>(<code>iDetailsMaxLines?</code>): <code>this</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
-<p>(since 1.101)</p>
 <p>Sets a new value for property #getDetailsMaxLines detailsMaxLines.</p>
 <p>Limits the number of lines for the details.</p>
 <p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <p>Default value is <code>1</code>.</p>
+<p> (since 1.101)</p>
 <h4>Parameters</h4>
 <h5>iDetailsMaxLines?</h5>
 <p><code>number</code></p>
@@ -613,6 +613,10 @@ is inserted at the last position</p>
 <p><strong>setDetailsState</strong>(<code>sDetailsState?</code>): <code>this</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
+<p>Sets a new value for property #getDetailsState detailsState.</p>
+<p>The semantic color which represents the state of the details text.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>None</code>.</p>
 <h4>Parameters</h4>
 <h5>sDetailsState?</h5>
 <p><code>&quot;None&quot;</code> | <a href="../../../../../../sap.ui.core/sap/ui/core/library/enumerations/ValueState.html"><code>ValueState</code></a> | <code>&quot;Error&quot;</code> | <code>&quot;Information&quot;</code> | <code>&quot;Success&quot;</code> | <code>&quot;Warning&quot;</code></p>
@@ -623,16 +627,16 @@ is inserted at the last position</p>
 <h4>Since</h4>
 <p>1.118
  (since 1.118) - For usage only by Work Zone.</p>
-<p>Sets a new value for property #getDetailsState detailsState.</p>
-<p>The semantic color which represents the state of the details text.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>None</code>.</p>
 <hr>
 <h3>setIconAlt()</h3>
 <blockquote>
 <p><strong>setIconAlt</strong>(<code>sIconAlt?</code>): <code>this</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
+<p>Sets a new value for property #getIconAlt iconAlt.</p>
+<p>Defines an alt text for the avatar or icon.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>empty string</code>.</p>
 <h4>Parameters</h4>
 <h5>sIconAlt?</h5>
 <p><code>string</code></p>
@@ -643,16 +647,16 @@ is inserted at the last position</p>
 <h4>Since</h4>
 <p>1.118
  (since 1.118) - For usage only by Work Zone.</p>
-<p>Sets a new value for property #getIconAlt iconAlt.</p>
-<p>Defines an alt text for the avatar or icon.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>empty string</code>.</p>
 <hr>
 <h3>setIconBackgroundColor()</h3>
 <blockquote>
 <p><strong>setIconBackgroundColor</strong>(<code>sIconBackgroundColor?</code>): <code>this</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
+<p>Sets a new value for property #getIconBackgroundColor iconBackgroundColor.</p>
+<p>Defines a background color for the avatar or icon.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>Transparent</code>.</p>
 <h4>Parameters</h4>
 <h5>sIconBackgroundColor?</h5>
 <p><a href="../../../../../../sap.m/sap/m/AvatarColor/enumerations/AvatarColor.html"><code>AvatarColor</code></a> | <code>&quot;Accent1&quot;</code> | <code>&quot;Accent10&quot;</code> | <code>&quot;Accent2&quot;</code> | <code>&quot;Accent3&quot;</code> | <code>&quot;Accent4&quot;</code> | <code>&quot;Accent5&quot;</code> | <code>&quot;Accent6&quot;</code> | <code>&quot;Accent7&quot;</code> | <code>&quot;Accent8&quot;</code> | <code>&quot;Accent9&quot;</code> | <code>&quot;Placeholder&quot;</code> | <code>&quot;Random&quot;</code> | <code>&quot;TileIcon&quot;</code> | <code>&quot;Transparent&quot;</code></p>
@@ -663,16 +667,16 @@ is inserted at the last position</p>
 <h4>Since</h4>
 <p>1.118
  (since 1.118) - For usage only by Work Zone.</p>
-<p>Sets a new value for property #getIconBackgroundColor iconBackgroundColor.</p>
-<p>Defines a background color for the avatar or icon.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>Transparent</code>.</p>
 <hr>
 <h3>setIconDisplayShape()</h3>
 <blockquote>
 <p><strong>setIconDisplayShape</strong>(<code>sIconDisplayShape?</code>): <code>this</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
+<p>Sets a new value for property #getIconDisplayShape iconDisplayShape.</p>
+<p>Defines the shape of the icon.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>Circle</code>.</p>
 <h4>Parameters</h4>
 <h5>sIconDisplayShape?</h5>
 <p><a href="../../../../../../sap.m/sap/m/AvatarShape/enumerations/AvatarShape.html"><code>AvatarShape</code></a> | <code>&quot;Circle&quot;</code> | <code>&quot;Square&quot;</code></p>
@@ -683,16 +687,16 @@ is inserted at the last position</p>
 <h4>Since</h4>
 <p>1.118
  (since 1.118) - For usage only by Work Zone.</p>
-<p>Sets a new value for property #getIconDisplayShape iconDisplayShape.</p>
-<p>Defines the shape of the icon.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>Circle</code>.</p>
 <hr>
 <h3>setIconInitials()</h3>
 <blockquote>
 <p><strong>setIconInitials</strong>(<code>sIconInitials?</code>): <code>this</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
+<p>Sets a new value for property #getIconInitials iconInitials.</p>
+<p>Defines the initials of the icon.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>empty string</code>.</p>
 <h4>Parameters</h4>
 <h5>sIconInitials?</h5>
 <p><code>string</code></p>
@@ -703,21 +707,17 @@ is inserted at the last position</p>
 <h4>Since</h4>
 <p>1.118
  (since 1.118) - For usage only by Work Zone.</p>
-<p>Sets a new value for property #getIconInitials iconInitials.</p>
-<p>Defines the initials of the icon.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>empty string</code>.</p>
 <hr>
 <h3>setIconSize()</h3>
 <blockquote>
 <p><strong>setIconSize</strong>(<code>sIconSize?</code>): <code>this</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
-<p>(since 1.119) - this feature is experimental and the API may change.</p>
 <p>Sets a new value for property #getIconSize iconSize.</p>
 <p>Defines the size of the icon.</p>
 <p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <p>Default value is <code>S</code>.</p>
+<p> (since 1.119) - this feature is experimental and the API may change.</p>
 <h4>Parameters</h4>
 <h5>sIconSize?</h5>
 <p><a href="../../../../../../sap.m/sap/m/AvatarSize/enumerations/AvatarSize.html"><code>AvatarSize</code></a> | <code>&quot;Custom&quot;</code> | <code>&quot;L&quot;</code> | <code>&quot;M&quot;</code> | <code>&quot;S&quot;</code> | <code>&quot;XL&quot;</code> | <code>&quot;XS&quot;</code></p>
@@ -731,6 +731,10 @@ is inserted at the last position</p>
 <p><strong>setIconSrc</strong>(<code>sIconSrc?</code>): <code>this</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
+<p>Sets a new value for property #getIconSrc iconSrc.</p>
+<p>Defines the icon source.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>empty string</code>.</p>
 <h4>Parameters</h4>
 <h5>sIconSrc?</h5>
 <p><code>string</code></p>
@@ -741,16 +745,16 @@ is inserted at the last position</p>
 <h4>Since</h4>
 <p>1.118
  (since 1.118) - For usage only by Work Zone.</p>
-<p>Sets a new value for property #getIconSrc iconSrc.</p>
-<p>Defines the icon source.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>empty string</code>.</p>
 <hr>
 <h3>setIconVisible()</h3>
 <blockquote>
 <p><strong>setIconVisible</strong>(<code>bIconVisible?</code>): <code>this</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
+<p>Sets a new value for property #getIconVisible iconVisible.</p>
+<p>Defines whether the card icon is visible.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>true</code>.</p>
 <h4>Parameters</h4>
 <h5>bIconVisible?</h5>
 <p><code>boolean</code></p>
@@ -761,10 +765,6 @@ is inserted at the last position</p>
 <h4>Since</h4>
 <p>1.118
  (since 1.118) - For usage only by Work Zone.</p>
-<p>Sets a new value for property #getIconVisible iconVisible.</p>
-<p>Defines whether the card icon is visible.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>true</code>.</p>
 <hr>
 <h3>setNumber()</h3>
 <blockquote>
@@ -802,6 +802,10 @@ the first five are displayed. Without rounding the number.</p>
 <blockquote>
 <p><strong>setNumberVisible</strong>(<code>bNumberVisible?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getNumberVisible numberVisible.</p>
+<p>Whether the main numeric indicator is visible or not</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>true</code>.</p>
 <h4>Parameters</h4>
 <h5>bNumberVisible?</h5>
 <p><code>boolean</code></p>
@@ -811,10 +815,6 @@ the first five are displayed. Without rounding the number.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.109</p>
-<p>Sets a new value for property #getNumberVisible numberVisible.</p>
-<p>Whether the main numeric indicator is visible or not</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>true</code>.</p>
 <hr>
 <h3>setScale()</h3>
 <blockquote>
@@ -854,12 +854,12 @@ unit contains more than three characters, only the first three characters are di
 <p><strong>setState</strong>(<code>sState?</code>): <code>this</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
-<p>(since 1.64) - Disclaimer: this property is in a beta state - incompatible API changes
-may be done before its official public release. Use at your own discretion.</p>
 <p>Sets a new value for property #getState state.</p>
 <p>The semantic color which represents the state of the main number indicator.</p>
 <p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <p>Default value is <code>&quot;Neutral&quot;</code>.</p>
+<p> (since 1.64) - Disclaimer: this property is in a beta state - incompatible API changes
+may be done before its official public release. Use at your own discretion.</p>
 <h4>Parameters</h4>
 <h5>sState?</h5>
 <p><code>&quot;None&quot;</code> | <code>&quot;Error&quot;</code> | <a href="../../../../../../sap.m/sap/m/library/enumerations/ValueColor.html"><code>ValueColor</code></a> | <code>&quot;Critical&quot;</code> | <code>&quot;Good&quot;</code> | <code>&quot;Neutral&quot;</code></p>
@@ -904,11 +904,11 @@ may be done before its official public release. Use at your own discretion.</p>
 <p><strong>setSubtitleMaxLines</strong>(<code>iSubtitleMaxLines?</code>): <code>this</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
-<p>(since 1.101)</p>
 <p>Sets a new value for property #getSubtitleMaxLines subtitleMaxLines.</p>
 <p>Limits the number of lines for the subtitle.</p>
 <p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <p>Default value is <code>2</code>.</p>
+<p> (since 1.101)</p>
 <h4>Parameters</h4>
 <h5>iSubtitleMaxLines?</h5>
 <p><code>number</code></p>
@@ -937,11 +937,11 @@ may be done before its official public release. Use at your own discretion.</p>
 <p><strong>setTitleMaxLines</strong>(<code>iTitleMaxLines?</code>): <code>this</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
-<p>(since 1.101)</p>
 <p>Sets a new value for property #getTitleMaxLines titleMaxLines.</p>
 <p>Limits the number of lines for the title.</p>
 <p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <p>Default value is <code>3</code>.</p>
+<p> (since 1.101)</p>
 <h4>Parameters</h4>
 <h5>iTitleMaxLines?</h5>
 <p><code>number</code></p>
@@ -1030,6 +1030,6 @@ used by this class</p>
 <p><a href="../../BaseHeader/classes/BaseHeader.html"><code>BaseHeader</code></a>.<a href="../../BaseHeader/classes/BaseHeader.html#getmetadata-1"><code>getMetadata</code></a></p>
 <hr>
 
-<footer>Generated from <code>@openui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@openui5/types@1.120.46</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

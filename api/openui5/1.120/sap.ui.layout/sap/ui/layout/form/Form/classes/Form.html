@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Class: Form — OpenUI5 TypeScript API</title>
-<meta name="description" content="Class: Form — OpenUI5 TypeScript API Reference (1.120.0)">
+<meta name="description" content="Class: Form — OpenUI5 TypeScript API Reference (1.120.46)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/openui5/1.120/sap.ui.layout/sap/ui/layout/form/Form/classes/Form.html">
 <meta property="og:title" content="Class: Form — OpenUI5 TypeScript API">
-<meta property="og:description" content="Class: Form — OpenUI5 TypeScript API Reference (1.120.0)">
+<meta property="og:description" content="Class: Form — OpenUI5 TypeScript API Reference (1.120.46)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/openui5/1.120/sap.ui.layout/sap/ui/layout/form/Form/classes/Form.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,13 +33,11 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../../index.html">OpenUI5 API</a> › <a href="../../../../../../../sap.ui.layout/README.html">sap.ui.layout</a> › sap › ui › layout › form › <a href="../../../../../../../sap.ui.layout/sap/ui/layout/form/Form/README.html">Form</a> › classes</nav>
-<p><a href="../../../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.0)</strong></a></p>
+<p><a href="../../../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.46)</strong></a></p>
 <hr>
-<p><a href="../../../../../../../README.html">OpenUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../../README.html">sap.ui.layout</a> / <a href="../README.html">sap/ui/layout/form/Form</a> / Form</p>
+<p><a href="../../../../../../../README.html">OpenUI5 TypeScript API (1.120.46)</a> / <a href="../../../../../../README.html">sap.ui.layout</a> / <a href="../README.html">sap/ui/layout/form/Form</a> / Form</p>
 <h1>Class: Form</h1>
 <pre class="sig"><span class="kw">import</span> Form <span class="kw">from</span> <span class="str">"sap/ui/layout/form/Form"</span>;</pre>
-<h2>Since</h2>
-<p>1.16.0</p>
 <p>A <code>Form</code> control arranges labels and fields (like input fields) into groups and rows. There are different
 ways to visualize forms for different screen sizes.</p>
 <p>A <code>Form</code> is structured into <code>FormContainers</code>. Each <code>FormContainer</code> consists of <code>FormElements</code>. The <code>FormElements</code>
@@ -55,6 +53,8 @@ not supported. This could damage the visual layout, keyboard support and screen-
 <p>If editable controls are used as content, the <code>editable</code> property must be set to <code>true</code>, otherwise to
 <code>false</code>. If the <code>editable</code> property is set incorrectly, there will be visual issues like wrong label
 alignment or wrong spacing between the controls.</p>
+<h2>Since</h2>
+<p>1.16.0</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></li>
@@ -100,6 +100,7 @@ of the syntax of the settings object.</p>
 <blockquote>
 <p><strong>addAriaLabelledBy</strong>(<code>vAriaLabelledBy</code>): <code>this</code></p>
 </blockquote>
+<p>Adds some ariaLabelledBy into the association #getAriaLabelledBy ariaLabelledBy.</p>
 <h4>Parameters</h4>
 <h5>vAriaLabelledBy</h5>
 <p><code>string</code> | <a href="../../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></p>
@@ -109,7 +110,6 @@ of the syntax of the settings object.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.28.0</p>
-<p>Adds some ariaLabelledBy into the association #getAriaLabelledBy ariaLabelledBy.</p>
 <hr>
 <h3>addFormContainer()</h3>
 <blockquote>
@@ -155,32 +155,27 @@ of the syntax of the settings object.</p>
 <blockquote>
 <p><strong>destroyToolbar</strong>(): <code>this</code></p>
 </blockquote>
+<p>Destroys the toolbar in the aggregation #getToolbar toolbar.</p>
 <h4>Returns</h4>
 <p><code>this</code></p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.36.0</p>
-<p>Destroys the toolbar in the aggregation #getToolbar toolbar.</p>
 <hr>
 <h3>getAriaLabelledBy()</h3>
 <blockquote>
 <p><strong>getAriaLabelledBy</strong>(): <code>string</code>[]</p>
 </blockquote>
+<p>Returns array of IDs of the elements which are the current targets of the association #getAriaLabelledBy ariaLabelledBy.</p>
 <h4>Returns</h4>
 <p><code>string</code>[]</p>
 <h4>Since</h4>
 <p>1.28.0</p>
-<p>Returns array of IDs of the elements which are the current targets of the association #getAriaLabelledBy ariaLabelledBy.</p>
 <hr>
 <h3>getEditable()</h3>
 <blockquote>
 <p><strong>getEditable</strong>(): <code>boolean</code></p>
 </blockquote>
-<h4>Returns</h4>
-<p><code>boolean</code></p>
-<p>Value of property <code>editable</code></p>
-<h4>Since</h4>
-<p>1.20.0</p>
 <p>Gets current value of property #getEditable editable.</p>
 <p>Applies a device-specific and theme-specific line height and label alignment to the form rows if the
 form has editable content. If set, all (not only the editable) rows of the form will get the line height
@@ -192,6 +187,11 @@ controls in a form with <code>editable</code> set to false are still editable.</
 might be misaligned, the labels might be rendered in the wrong mode, and the spacing between the single
 controls might be wrong. Also, controls that do not fit the mode might be rendered incorrectly.</p>
 <p>Default value is <code>false</code>.</p>
+<h4>Returns</h4>
+<p><code>boolean</code></p>
+<p>Value of property <code>editable</code></p>
+<h4>Since</h4>
+<p>1.20.0</p>
 <hr>
 <h3>getFormContainers()</h3>
 <blockquote>
@@ -231,15 +231,15 @@ to the needed value.</p>
 <blockquote>
 <p><strong>getToolbar</strong>(): <a href="../../../../../../../sap.ui.core/sap/ui/core/library/interfaces/Toolbar.html"><code>Toolbar</code></a></p>
 </blockquote>
-<h4>Returns</h4>
-<p><a href="../../../../../../../sap.ui.core/sap/ui/core/library/interfaces/Toolbar.html"><code>Toolbar</code></a></p>
-<h4>Since</h4>
-<p>1.36.0</p>
 <p>Gets content of aggregation #getToolbar toolbar.</p>
 <p>Toolbar of the <code>Form</code>.</p>
 <p><strong>Note:</strong> If a <code>Toolbar</code> is used, the <code>Title</code> is ignored. If a title is needed inside the <code>Toolbar</code> it
 must be added at content to the <code>Toolbar</code>. In this case add the <code>Title</code> to the <code>ariaLabelledBy</code> association.
 Use the right title level to meet the visual requirements. This might be theme-dependent.</p>
+<h4>Returns</h4>
+<p><a href="../../../../../../../sap.ui.core/sap/ui/core/library/interfaces/Toolbar.html"><code>Toolbar</code></a></p>
+<h4>Since</h4>
+<p>1.36.0</p>
 <hr>
 <h3>getWidth()</h3>
 <blockquote>
@@ -287,12 +287,12 @@ is inserted at the last position</p>
 <blockquote>
 <p><strong>removeAllAriaLabelledBy</strong>(): <code>string</code>[]</p>
 </blockquote>
+<p>Removes all the controls in the association named #getAriaLabelledBy ariaLabelledBy.</p>
 <h4>Returns</h4>
 <p><code>string</code>[]</p>
 <p>An array of the removed elements (might be empty)</p>
 <h4>Since</h4>
 <p>1.28.0</p>
-<p>Removes all the controls in the association named #getAriaLabelledBy ariaLabelledBy.</p>
 <hr>
 <h3>removeAllFormContainers()</h3>
 <blockquote>
@@ -308,6 +308,7 @@ is inserted at the last position</p>
 <blockquote>
 <p><strong>removeAriaLabelledBy</strong>(<code>vAriaLabelledBy</code>): <code>string</code></p>
 </blockquote>
+<p>Removes an ariaLabelledBy from the association named #getAriaLabelledBy ariaLabelledBy.</p>
 <h4>Parameters</h4>
 <h5>vAriaLabelledBy</h5>
 <p><code>string</code> | <code>number</code> | <a href="../../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></p>
@@ -317,7 +318,6 @@ is inserted at the last position</p>
 <p>The removed ariaLabelledBy or <code>null</code></p>
 <h4>Since</h4>
 <p>1.28.0</p>
-<p>Removes an ariaLabelledBy from the association named #getAriaLabelledBy ariaLabelledBy.</p>
 <hr>
 <h3>removeFormContainer()</h3>
 <blockquote>
@@ -336,15 +336,6 @@ is inserted at the last position</p>
 <blockquote>
 <p><strong>setEditable</strong>(<code>bEditable?</code>): <code>this</code></p>
 </blockquote>
-<h4>Parameters</h4>
-<h5>bEditable?</h5>
-<p><code>boolean</code></p>
-<p>New value for property <code>editable</code></p>
-<h4>Returns</h4>
-<p><code>this</code></p>
-<p>Reference to <code>this</code> in order to allow method chaining</p>
-<h4>Since</h4>
-<p>1.20.0</p>
 <p>Sets a new value for property #getEditable editable.</p>
 <p>Applies a device-specific and theme-specific line height and label alignment to the form rows if the
 form has editable content. If set, all (not only the editable) rows of the form will get the line height
@@ -357,6 +348,15 @@ might be misaligned, the labels might be rendered in the wrong mode, and the spa
 controls might be wrong. Also, controls that do not fit the mode might be rendered incorrectly.</p>
 <p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <p>Default value is <code>false</code>.</p>
+<h4>Parameters</h4>
+<h5>bEditable?</h5>
+<p><code>boolean</code></p>
+<p>New value for property <code>editable</code></p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<h4>Since</h4>
+<p>1.20.0</p>
 <hr>
 <h3>setLayout()</h3>
 <blockquote>
@@ -388,6 +388,7 @@ controls might be wrong. Also, controls that do not fit the mode might be render
 <blockquote>
 <p><strong>setToolbar</strong>(<code>oToolbar</code>): <code>this</code></p>
 </blockquote>
+<p>Sets the aggregated #getToolbar toolbar.</p>
 <h4>Parameters</h4>
 <h5>oToolbar</h5>
 <p><a href="../../../../../../../sap.ui.core/sap/ui/core/library/interfaces/Toolbar.html"><code>Toolbar</code></a></p>
@@ -397,7 +398,6 @@ controls might be wrong. Also, controls that do not fit the mode might be render
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.36.0</p>
-<p>Sets the aggregated #getToolbar toolbar.</p>
 <hr>
 <h3>setWidth()</h3>
 <blockquote>
@@ -453,6 +453,6 @@ used by this class</p>
 <p><a href="../../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a>.<a href="../../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html#getmetadata-1"><code>getMetadata</code></a></p>
 <hr>
 
-<footer>Generated from <code>@openui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@openui5/types@1.120.46</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

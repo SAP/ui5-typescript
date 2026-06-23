@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Class: SelectList — OpenUI5 TypeScript API</title>
-<meta name="description" content="Class: SelectList — OpenUI5 TypeScript API Reference (1.120.0)">
+<meta name="description" content="Class: SelectList — OpenUI5 TypeScript API Reference (1.120.46)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/openui5/1.120/sap.m/sap/m/SelectList/classes/SelectList.html">
 <meta property="og:title" content="Class: SelectList — OpenUI5 TypeScript API">
-<meta property="og:description" content="Class: SelectList — OpenUI5 TypeScript API Reference (1.120.0)">
+<meta property="og:description" content="Class: SelectList — OpenUI5 TypeScript API Reference (1.120.46)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/openui5/1.120/sap.m/sap/m/SelectList/classes/SelectList.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,14 +33,14 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../index.html">OpenUI5 API</a> › <a href="../../../../../sap.m/README.html">sap.m</a> › sap › m › <a href="../../../../../sap.m/sap/m/SelectList/README.html">SelectList</a> › classes</nav>
-<p><a href="../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.0)</strong></a></p>
+<p><a href="../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.46)</strong></a></p>
 <hr>
-<p><a href="../../../../../README.html">OpenUI5 TypeScript API (1.120.0)</a> / <a href="../../../../README.html">sap.m</a> / <a href="../README.html">sap/m/SelectList</a> / SelectList</p>
+<p><a href="../../../../../README.html">OpenUI5 TypeScript API (1.120.46)</a> / <a href="../../../../README.html">sap.m</a> / <a href="../README.html">sap/m/SelectList</a> / SelectList</p>
 <h1>Class: SelectList</h1>
 <pre class="sig"><span class="kw">import</span> SelectList <span class="kw">from</span> <span class="str">"sap/m/SelectList"</span>;</pre>
+<p>The <code>sap.m.SelectList</code> displays a list of items that allows the user to select an item.</p>
 <h2>Since</h2>
 <p>1.26.0</p>
-<p>The <code>sap.m.SelectList</code> displays a list of items that allows the user to select an item.</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></li>
@@ -86,6 +86,7 @@ of the syntax of the settings object.</p>
 <blockquote>
 <p><strong>addAriaLabelledBy</strong>(<code>vAriaLabelledBy</code>): <code>this</code></p>
 </blockquote>
+<p>Adds some ariaLabelledBy into the association #getAriaLabelledBy ariaLabelledBy.</p>
 <h4>Parameters</h4>
 <h5>vAriaLabelledBy</h5>
 <p><code>string</code> | <a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></p>
@@ -95,7 +96,6 @@ of the syntax of the settings object.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.27.0</p>
-<p>Adds some ariaLabelledBy into the association #getAriaLabelledBy ariaLabelledBy.</p>
 <hr>
 <h3>addItem()</h3>
 <blockquote>
@@ -115,6 +115,10 @@ of the syntax of the settings object.</p>
 <blockquote>
 <p><strong>attachItemPress</strong>(<code>oData</code>, <code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
+<p>Attaches event handler <code>fnFunction</code> to the #event:itemPress itemPress event of this <code>sap.m.SelectList</code>.</p>
+<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
+otherwise it will be bound to this <code>sap.m.SelectList</code> itself.</p>
+<p>This event is fired when an item is pressed.</p>
 <h5>Parameters</h5>
 <h6>oData</h6>
 <p><code>object</code></p>
@@ -131,14 +135,14 @@ object when firing the event</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Since</h5>
 <p>1.32.4</p>
-<p>Attaches event handler <code>fnFunction</code> to the #event:itemPress itemPress event of this <code>sap.m.SelectList</code>.</p>
-<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
-otherwise it will be bound to this <code>sap.m.SelectList</code> itself.</p>
-<p>This event is fired when an item is pressed.</p>
 <h4>Call Signature</h4>
 <blockquote>
 <p><strong>attachItemPress</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
+<p>Attaches event handler <code>fnFunction</code> to the #event:itemPress itemPress event of this <code>sap.m.SelectList</code>.</p>
+<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
+otherwise it will be bound to this <code>sap.m.SelectList</code> itself.</p>
+<p>This event is fired when an item is pressed.</p>
 <h5>Parameters</h5>
 <h6>fnFunction</h6>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -151,10 +155,6 @@ otherwise it will be bound to this <code>sap.m.SelectList</code> itself.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Since</h5>
 <p>1.32.4</p>
-<p>Attaches event handler <code>fnFunction</code> to the #event:itemPress itemPress event of this <code>sap.m.SelectList</code>.</p>
-<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
-otherwise it will be bound to this <code>sap.m.SelectList</code> itself.</p>
-<p>This event is fired when an item is pressed.</p>
 <hr>
 <h3>attachSelectionChange()</h3>
 <h4>Call Signature</h4>
@@ -223,11 +223,11 @@ of the possible properties of <code>oBindingInfo</code>.</p>
 <blockquote>
 <p><strong>clearSelection</strong>(): <code>void</code></p>
 </blockquote>
+<p>Clear the selection.</p>
 <h4>Returns</h4>
 <p><code>void</code></p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Clear the selection.</p>
 <hr>
 <h3>destroyItems()</h3>
 <blockquote>
@@ -242,6 +242,8 @@ of the possible properties of <code>oBindingInfo</code>.</p>
 <blockquote>
 <p><strong>detachItemPress</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
+<p>Detaches event handler <code>fnFunction</code> from the #event:itemPress itemPress event of this <code>sap.m.SelectList</code>.</p>
+<p>The passed function and listener object must match the ones used for event registration.</p>
 <h4>Parameters</h4>
 <h5>fnFunction</h5>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -254,8 +256,6 @@ of the possible properties of <code>oBindingInfo</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.32.4</p>
-<p>Detaches event handler <code>fnFunction</code> from the #event:itemPress itemPress event of this <code>sap.m.SelectList</code>.</p>
-<p>The passed function and listener object must match the ones used for event registration.</p>
 <hr>
 <h3>detachSelectionChange()</h3>
 <blockquote>
@@ -279,6 +279,7 @@ this <code>sap.m.SelectList</code>.</p>
 <blockquote>
 <p><strong>fireItemPress</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
+<p>Fires event #event:itemPress itemPress to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/SelectList$ItemPressEventParameters.html"><code>SelectList$ItemPressEventParameters</code></a></p>
@@ -290,12 +291,12 @@ this <code>sap.m.SelectList</code>.</p>
 <p>1.32.4</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Fires event #event:itemPress itemPress to attached listeners.</p>
 <hr>
 <h3>fireSelectionChange()</h3>
 <blockquote>
 <p><strong>fireSelectionChange</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
+<p>Fires event #event:selectionChange selectionChange to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/SelectList$SelectionChangeEventParameters.html"><code>SelectList$SelectionChangeEventParameters</code></a></p>
@@ -305,22 +306,22 @@ this <code>sap.m.SelectList</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Fires event #event:selectionChange selectionChange to attached listeners.</p>
 <hr>
 <h3>getAriaLabelledBy()</h3>
 <blockquote>
 <p><strong>getAriaLabelledBy</strong>(): <code>string</code>[]</p>
 </blockquote>
+<p>Returns array of IDs of the elements which are the current targets of the association #getAriaLabelledBy ariaLabelledBy.</p>
 <h4>Returns</h4>
 <p><code>string</code>[]</p>
 <h4>Since</h4>
 <p>1.27.0</p>
-<p>Returns array of IDs of the elements which are the current targets of the association #getAriaLabelledBy ariaLabelledBy.</p>
 <hr>
 <h3>getDefaultSelectedItem()</h3>
 <blockquote>
 <p><strong>getDefaultSelectedItem</strong>(<code>aItems?</code>): <a href="../../../../../sap.ui.core/sap/ui/core/Item/classes/Item.html"><code>Item</code></a></p>
 </blockquote>
+<p>Retrieves the default selected item from the aggregation named <code>items</code>.</p>
 <h4>Parameters</h4>
 <h5>aItems?</h5>
 <p><a href="../../../../../sap.ui.core/sap/ui/core/Item/classes/Item.html"><code>Item</code></a>[]</p>
@@ -328,7 +329,6 @@ this <code>sap.m.SelectList</code>.</p>
 <p><a href="../../../../../sap.ui.core/sap/ui/core/Item/classes/Item.html"><code>Item</code></a></p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Retrieves the default selected item from the aggregation named <code>items</code>.</p>
 <hr>
 <h3>getEnabled()</h3>
 <blockquote>
@@ -367,14 +367,14 @@ this <code>sap.m.SelectList</code>.</p>
 <blockquote>
 <p><strong>getHideDisabledItems</strong>(): <code>boolean</code></p>
 </blockquote>
+<p>Gets current value of property #getHideDisabledItems hideDisabledItems.</p>
+<p>Determines whether the disabled items are hidden from the DOM structure.</p>
+<p>Default value is <code>false</code>.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>Value of property <code>hideDisabledItems</code></p>
 <h4>Since</h4>
 <p>1.91</p>
-<p>Gets current value of property #getHideDisabledItems hideDisabledItems.</p>
-<p>Determines whether the disabled items are hidden from the DOM structure.</p>
-<p>Default value is <code>false</code>.</p>
 <hr>
 <h3>getItemAt()</h3>
 <blockquote>
@@ -416,16 +416,16 @@ this <code>sap.m.SelectList</code>.</p>
 <blockquote>
 <p><strong>getKeyboardNavigationMode</strong>(): <code>&quot;None&quot;</code> | <a href="../../library/enumerations/SelectListKeyboardNavigationMode.html"><code>SelectListKeyboardNavigationMode</code></a> | <code>&quot;Delimited&quot;</code></p>
 </blockquote>
-<h4>Returns</h4>
-<p><code>&quot;None&quot;</code> | <a href="../../library/enumerations/SelectListKeyboardNavigationMode.html"><code>SelectListKeyboardNavigationMode</code></a> | <code>&quot;Delimited&quot;</code></p>
-<p>Value of property <code>keyboardNavigationMode</code></p>
-<h4>Since</h4>
-<p>1.38</p>
 <p>Gets current value of property #getKeyboardNavigationMode keyboardNavigationMode.</p>
 <p>Defines the keyboard navigation mode.</p>
 <p><strong>Note:</strong> The <code>sap.m.SelectListKeyboardNavigationMode.None</code> enumeration value, is only intended for use
 in some composite controls that handles keyboard navigation by themselves.</p>
 <p>Default value is <code>Delimited</code>.</p>
+<h4>Returns</h4>
+<p><code>&quot;None&quot;</code> | <a href="../../library/enumerations/SelectListKeyboardNavigationMode.html"><code>SelectListKeyboardNavigationMode</code></a> | <code>&quot;Delimited&quot;</code></p>
+<p>Value of property <code>keyboardNavigationMode</code></p>
+<h4>Since</h4>
+<p>1.38</p>
 <hr>
 <h3>getLastItem()</h3>
 <blockquote>
@@ -483,15 +483,15 @@ in some composite controls that handles keyboard navigation by themselves.</p>
 <blockquote>
 <p><strong>getShowSecondaryValues</strong>(): <code>boolean</code></p>
 </blockquote>
+<p>Gets current value of property #getShowSecondaryValues showSecondaryValues.</p>
+<p>Indicates whether the text values of the <code>additionalText</code> property of a sap.ui.core.ListItem
+are shown.</p>
+<p>Default value is <code>false</code>.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>Value of property <code>showSecondaryValues</code></p>
 <h4>Since</h4>
 <p>1.32.3</p>
-<p>Gets current value of property #getShowSecondaryValues showSecondaryValues.</p>
-<p>Indicates whether the text values of the <code>additionalText</code> property of a sap.ui.core.ListItem
-are shown.</p>
-<p>Default value is <code>false</code>.</p>
 <hr>
 <h3>getWidth()</h3>
 <blockquote>
@@ -540,12 +540,12 @@ the last position</p>
 <blockquote>
 <p><strong>removeAllAriaLabelledBy</strong>(): <code>string</code>[]</p>
 </blockquote>
+<p>Removes all the controls in the association named #getAriaLabelledBy ariaLabelledBy.</p>
 <h4>Returns</h4>
 <p><code>string</code>[]</p>
 <p>An array of the removed elements (might be empty)</p>
 <h4>Since</h4>
 <p>1.27.0</p>
-<p>Removes all the controls in the association named #getAriaLabelledBy ariaLabelledBy.</p>
 <hr>
 <h3>removeAllItems()</h3>
 <blockquote>
@@ -561,6 +561,7 @@ UIArea.</p>
 <blockquote>
 <p><strong>removeAriaLabelledBy</strong>(<code>vAriaLabelledBy</code>): <code>string</code></p>
 </blockquote>
+<p>Removes an ariaLabelledBy from the association named #getAriaLabelledBy ariaLabelledBy.</p>
 <h4>Parameters</h4>
 <h5>vAriaLabelledBy</h5>
 <p><code>string</code> | <code>number</code> | <a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></p>
@@ -570,7 +571,6 @@ UIArea.</p>
 <p>The removed ariaLabelledBy or <code>null</code></p>
 <h4>Since</h4>
 <p>1.27.0</p>
-<p>Removes an ariaLabelledBy from the association named #getAriaLabelledBy ariaLabelledBy.</p>
 <hr>
 <h3>removeItem()</h3>
 <blockquote>
@@ -605,6 +605,10 @@ UIArea.</p>
 <blockquote>
 <p><strong>setHideDisabledItems</strong>(<code>bHideDisabledItems?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getHideDisabledItems hideDisabledItems.</p>
+<p>Determines whether the disabled items are hidden from the DOM structure.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>false</code>.</p>
 <h4>Parameters</h4>
 <h5>bHideDisabledItems?</h5>
 <p><code>boolean</code></p>
@@ -614,15 +618,17 @@ UIArea.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.91</p>
-<p>Sets a new value for property #getHideDisabledItems hideDisabledItems.</p>
-<p>Determines whether the disabled items are hidden from the DOM structure.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>false</code>.</p>
 <hr>
 <h3>setKeyboardNavigationMode()</h3>
 <blockquote>
 <p><strong>setKeyboardNavigationMode</strong>(<code>sKeyboardNavigationMode?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getKeyboardNavigationMode keyboardNavigationMode.</p>
+<p>Defines the keyboard navigation mode.</p>
+<p><strong>Note:</strong> The <code>sap.m.SelectListKeyboardNavigationMode.None</code> enumeration value, is only intended for use
+in some composite controls that handles keyboard navigation by themselves.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>Delimited</code>.</p>
 <h4>Parameters</h4>
 <h5>sKeyboardNavigationMode?</h5>
 <p><code>&quot;None&quot;</code> | <a href="../../library/enumerations/SelectListKeyboardNavigationMode.html"><code>SelectListKeyboardNavigationMode</code></a> | <code>&quot;Delimited&quot;</code></p>
@@ -632,12 +638,6 @@ UIArea.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.38</p>
-<p>Sets a new value for property #getKeyboardNavigationMode keyboardNavigationMode.</p>
-<p>Defines the keyboard navigation mode.</p>
-<p><strong>Note:</strong> The <code>sap.m.SelectListKeyboardNavigationMode.None</code> enumeration value, is only intended for use
-in some composite controls that handles keyboard navigation by themselves.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>Delimited</code>.</p>
 <hr>
 <h3>setMaxWidth()</h3>
 <blockquote>
@@ -702,6 +702,7 @@ or <code>null</code> to clear the selection.</p>
 <blockquote>
 <p><strong>setSelection</strong>(<code>vItem</code>): <code>void</code></p>
 </blockquote>
+<p>Updates and synchronizes <code>selectedItem</code> association, <code>selectedItemId</code> and <code>selectedKey</code> properties.</p>
 <h4>Parameters</h4>
 <h5>vItem</h5>
 <p><code>string</code> | <a href="../../../../../sap.ui.core/sap/ui/core/Item/classes/Item.html"><code>Item</code></a></p>
@@ -709,12 +710,16 @@ or <code>null</code> to clear the selection.</p>
 <p><code>void</code></p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Updates and synchronizes <code>selectedItem</code> association, <code>selectedItemId</code> and <code>selectedKey</code> properties.</p>
 <hr>
 <h3>setShowSecondaryValues()</h3>
 <blockquote>
 <p><strong>setShowSecondaryValues</strong>(<code>bShowSecondaryValues?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getShowSecondaryValues showSecondaryValues.</p>
+<p>Indicates whether the text values of the <code>additionalText</code> property of a sap.ui.core.ListItem
+are shown.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>false</code>.</p>
 <h4>Parameters</h4>
 <h5>bShowSecondaryValues?</h5>
 <p><code>boolean</code></p>
@@ -724,11 +729,6 @@ or <code>null</code> to clear the selection.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.32.3</p>
-<p>Sets a new value for property #getShowSecondaryValues showSecondaryValues.</p>
-<p>Indicates whether the text values of the <code>additionalText</code> property of a sap.ui.core.ListItem
-are shown.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>false</code>.</p>
 <hr>
 <h3>setWidth()</h3>
 <blockquote>
@@ -794,6 +794,6 @@ used by this class</p>
 <p><a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a>.<a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html#getmetadata-1"><code>getMetadata</code></a></p>
 <hr>
 
-<footer>Generated from <code>@openui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@openui5/types@1.120.46</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

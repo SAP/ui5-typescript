@@ -2,12 +2,12 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>Interface: $ShellHeadItemSettings — OpenUI5 TypeScript API</title>
-<meta name="description" content="Interface: $ShellHeadItemSettings — OpenUI5 TypeScript API Reference (1.120.0)">
+<title>~~Interface: $ShellHeadItemSettings~~ — OpenUI5 TypeScript API</title>
+<meta name="description" content="~~Interface: $ShellHeadItemSettings~~ — OpenUI5 TypeScript API Reference (1.120.46)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/openui5/1.120/sap.ui.unified/sap/ui/unified/ShellHeadItem/interfaces/$ShellHeadItemSettings.html">
-<meta property="og:title" content="Interface: $ShellHeadItemSettings — OpenUI5 TypeScript API">
-<meta property="og:description" content="Interface: $ShellHeadItemSettings — OpenUI5 TypeScript API Reference (1.120.0)">
+<meta property="og:title" content="~~Interface: $ShellHeadItemSettings~~ — OpenUI5 TypeScript API">
+<meta property="og:description" content="~~Interface: $ShellHeadItemSettings~~ — OpenUI5 TypeScript API Reference (1.120.46)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/openui5/1.120/sap.ui.unified/sap/ui/unified/ShellHeadItem/interfaces/$ShellHeadItemSettings.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,30 +33,33 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../index.html">OpenUI5 API</a> › <a href="../../../../../../sap.ui.unified/README.html">sap.ui.unified</a> › sap › ui › unified › <a href="../../../../../../sap.ui.unified/sap/ui/unified/ShellHeadItem/README.html">ShellHeadItem</a> › interfaces</nav>
-<p><a href="../../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.0)</strong></a></p>
+<p><a href="../../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.46)</strong></a></p>
 <hr>
-<p><a href="../../../../../../README.html">OpenUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../README.html">sap.ui.unified</a> / <a href="../README.html">sap/ui/unified/ShellHeadItem</a> / $ShellHeadItemSettings</p>
-<h1>Interface: $ShellHeadItemSettings</h1>
+<p><a href="../../../../../../README.html">OpenUI5 TypeScript API (1.120.46)</a> / <a href="../../../../../README.html">sap.ui.unified</a> / <a href="../README.html">sap/ui/unified/ShellHeadItem</a> / $ShellHeadItemSettings</p>
+<h1><del>Interface: $ShellHeadItemSettings</del></h1>
 <pre class="sig"><span class="kw">import</span> { $ShellHeadItemSettings } <span class="kw">from</span> <span class="str">"sap/ui/unified/ShellHeadItem"</span>;</pre>
+<p>Describes the settings that can be provided to the ShellHeadItem constructor.</p>
+<h2>Deprecated</h2>
+<p>(since 1.44.0)</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../../../../../sap.ui.core/sap/ui/core/Element/interfaces/$ElementSettings.html"><code>$ElementSettings</code></a></li>
 </ul>
 <h2>Properties</h2>
-<h3>ariaLabelledBy?</h3>
+<h3><del>ariaLabelledBy?</del></h3>
 <blockquote>
 <p><code>optional</code> <strong>ariaLabelledBy?</strong>: (<code>string</code> | <a href="../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a>)[]</p>
 </blockquote>
 <p>Association to controls / ids which label this control (see WAI-ARIA attribute aria-labelledby).</p>
 <hr>
-<h3>icon?</h3>
+<h3><del>icon?</del></h3>
 <blockquote>
 <p><code>optional</code> <strong>icon?</strong>: <code>string</code> | <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a></p>
 </blockquote>
 <p>The icon of the item, either defined in the sap.ui.core.IconPool or a URI to a custom image. An icon
 must be set.</p>
 <hr>
-<h3>press?</h3>
+<h3><del>press?</del></h3>
 <blockquote>
 <p><code>optional</code> <strong>press?</strong>: (<code>oEvent</code>) =&gt; <code>void</code></p>
 </blockquote>
@@ -67,7 +70,7 @@ must be set.</p>
 <h4>Returns</h4>
 <p><code>void</code></p>
 <hr>
-<h3>selected?</h3>
+<h3><del>selected?</del></h3>
 <blockquote>
 <p><code>optional</code> <strong>selected?</strong>: <code>boolean</code> | <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
@@ -77,44 +80,44 @@ must be set.</p>
 <blockquote>
 <p><code>optional</code> <strong>showMarker?</strong>: <code>boolean</code> | <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
+<p>If set to true, a theme dependent marker is shown on the item.</p>
 <h4>Deprecated</h4>
 <p>(since 1.18) - Markers should not be used anymore.</p>
-<p>If set to true, a theme dependent marker is shown on the item.</p>
 <hr>
-<h3>showSeparator?</h3>
+<h3><del>showSeparator?</del></h3>
 <blockquote>
 <p><code>optional</code> <strong>showSeparator?</strong>: <code>boolean</code> | <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
+<p>If set to true, a separator is displayed after the item.</p>
 <h4>Since</h4>
 <p>1.22.5</p>
-<p>If set to true, a separator is displayed after the item.</p>
 <hr>
 <h3><del>startsSection?</del></h3>
 <blockquote>
 <p><code>optional</code> <strong>startsSection?</strong>: <code>boolean</code> | <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
+<p>If set to true, a divider is displayed before the item.</p>
 <h4>Deprecated</h4>
 <p>(since 1.18) - Dividers are not supported anymore.</p>
-<p>If set to true, a divider is displayed before the item.</p>
 <hr>
-<h3>toggleEnabled?</h3>
+<h3><del>toggleEnabled?</del></h3>
 <blockquote>
 <p><code>optional</code> <strong>toggleEnabled?</strong>: <code>boolean</code> | <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<h4>Since</h4>
-<p>1.34.3</p>
 <p>If set to true, the item represents a toggle button. The <code>selected</code> property can the be used to define
 the toggle state. Otherwise the item is displayed as action button. In this case the <code>selected</code> property
 is ignored.</p>
+<h4>Since</h4>
+<p>1.34.3</p>
 <hr>
-<h3>visible?</h3>
+<h3><del>visible?</del></h3>
 <blockquote>
 <p><code>optional</code> <strong>visible?</strong>: <code>boolean</code> | <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
+<p>Invisible items are not shown on the UI.</p>
 <h4>Since</h4>
 <p>1.18</p>
-<p>Invisible items are not shown on the UI.</p>
 
-<footer>Generated from <code>@openui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@openui5/types@1.120.46</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

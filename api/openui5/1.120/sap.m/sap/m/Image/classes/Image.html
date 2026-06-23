@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Class: Image — OpenUI5 TypeScript API</title>
-<meta name="description" content="Class: Image — OpenUI5 TypeScript API Reference (1.120.0)">
+<meta name="description" content="Class: Image — OpenUI5 TypeScript API Reference (1.120.46)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/openui5/1.120/sap.m/sap/m/Image/classes/Image.html">
 <meta property="og:title" content="Class: Image — OpenUI5 TypeScript API">
-<meta property="og:description" content="Class: Image — OpenUI5 TypeScript API Reference (1.120.0)">
+<meta property="og:description" content="Class: Image — OpenUI5 TypeScript API Reference (1.120.46)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/openui5/1.120/sap.m/sap/m/Image/classes/Image.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,9 +33,9 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../index.html">OpenUI5 API</a> › <a href="../../../../../sap.m/README.html">sap.m</a> › sap › m › <a href="../../../../../sap.m/sap/m/Image/README.html">Image</a> › classes</nav>
-<p><a href="../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.0)</strong></a></p>
+<p><a href="../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.46)</strong></a></p>
 <hr>
-<p><a href="../../../../../README.html">OpenUI5 TypeScript API (1.120.0)</a> / <a href="../../../../README.html">sap.m</a> / <a href="../README.html">sap/m/Image</a> / Image</p>
+<p><a href="../../../../../README.html">OpenUI5 TypeScript API (1.120.46)</a> / <a href="../../../../README.html">sap.m</a> / <a href="../README.html">sap/m/Image</a> / Image</p>
 <h1>Class: Image</h1>
 <pre class="sig"><span class="kw">import</span> Image <span class="kw">from</span> <span class="str">"sap/m/Image"</span>;</pre>
 <p>A wrapper around the  tag; the image can be loaded from a remote or local server.</p>
@@ -111,6 +111,7 @@ See:
 <blockquote>
 <p><strong>_isValidBackgroundPositionValue</strong>(<code>sValue</code>): <code>boolean</code></p>
 </blockquote>
+<p>Checks if the given value is valid for the <code>background-position</code> CSS property</p>
 <h4>Parameters</h4>
 <h5>sValue</h5>
 <p><code>string</code></p>
@@ -120,12 +121,12 @@ See:
 <p>the check result</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Checks if the given value is valid for the <code>background-position</code> CSS property</p>
 <hr>
 <h3>_isValidBackgroundSizeValue()</h3>
 <blockquote>
 <p><strong>_isValidBackgroundSizeValue</strong>(<code>sValue</code>): <code>boolean</code></p>
 </blockquote>
+<p>Checks if the given value is valid for the <code>background-size</code> CSS property</p>
 <h4>Parameters</h4>
 <h5>sValue</h5>
 <p><code>string</code></p>
@@ -135,7 +136,6 @@ See:
 <p>the check result</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Checks if the given value is valid for the <code>background-size</code> CSS property</p>
 <hr>
 <h3>addAriaDescribedBy()</h3>
 <blockquote>
@@ -154,6 +154,7 @@ See:
 <blockquote>
 <p><strong>addAriaDetails</strong>(<code>vAriaDetails</code>): <code>this</code></p>
 </blockquote>
+<p>Adds some ariaDetails into the association #getAriaDetails ariaDetails.</p>
 <h4>Parameters</h4>
 <h5>vAriaDetails</h5>
 <p><code>string</code> | <a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></p>
@@ -163,7 +164,6 @@ See:
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.79</p>
-<p>Adds some ariaDetails into the association #getAriaDetails ariaDetails.</p>
 <hr>
 <h3>addAriaLabelledBy()</h3>
 <blockquote>
@@ -183,6 +183,11 @@ See:
 <blockquote>
 <p><strong>attachError</strong>(<code>oData</code>, <code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
+<p>Attaches event handler <code>fnFunction</code> to the #event:error error event of this <code>sap.m.Image</code>.</p>
+<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
+otherwise it will be bound to this <code>sap.m.Image</code> itself.</p>
+<p>Event is fired when the image resource can&#39;t be loaded. If densityAware is set to true, the event is
+fired when none of the fallback resources can be loaded.</p>
 <h5>Parameters</h5>
 <h6>oData</h6>
 <p><code>object</code></p>
@@ -199,15 +204,15 @@ object when firing the event</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Since</h5>
 <p>1.36.2</p>
+<h4>Call Signature</h4>
+<blockquote>
+<p><strong>attachError</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
+</blockquote>
 <p>Attaches event handler <code>fnFunction</code> to the #event:error error event of this <code>sap.m.Image</code>.</p>
 <p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
 otherwise it will be bound to this <code>sap.m.Image</code> itself.</p>
 <p>Event is fired when the image resource can&#39;t be loaded. If densityAware is set to true, the event is
 fired when none of the fallback resources can be loaded.</p>
-<h4>Call Signature</h4>
-<blockquote>
-<p><strong>attachError</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
-</blockquote>
 <h5>Parameters</h5>
 <h6>fnFunction</h6>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -220,17 +225,16 @@ fired when none of the fallback resources can be loaded.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Since</h5>
 <p>1.36.2</p>
-<p>Attaches event handler <code>fnFunction</code> to the #event:error error event of this <code>sap.m.Image</code>.</p>
-<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
-otherwise it will be bound to this <code>sap.m.Image</code> itself.</p>
-<p>Event is fired when the image resource can&#39;t be loaded. If densityAware is set to true, the event is
-fired when none of the fallback resources can be loaded.</p>
 <hr>
 <h3>attachLoad()</h3>
 <h4>Call Signature</h4>
 <blockquote>
 <p><strong>attachLoad</strong>(<code>oData</code>, <code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
+<p>Attaches event handler <code>fnFunction</code> to the #event:load load event of this <code>sap.m.Image</code>.</p>
+<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
+otherwise it will be bound to this <code>sap.m.Image</code> itself.</p>
+<p>Event is fired when the image resource is loaded.</p>
 <h5>Parameters</h5>
 <h6>oData</h6>
 <p><code>object</code></p>
@@ -247,14 +251,14 @@ object when firing the event</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Since</h5>
 <p>1.36.2</p>
-<p>Attaches event handler <code>fnFunction</code> to the #event:load load event of this <code>sap.m.Image</code>.</p>
-<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
-otherwise it will be bound to this <code>sap.m.Image</code> itself.</p>
-<p>Event is fired when the image resource is loaded.</p>
 <h4>Call Signature</h4>
 <blockquote>
 <p><strong>attachLoad</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
+<p>Attaches event handler <code>fnFunction</code> to the #event:load load event of this <code>sap.m.Image</code>.</p>
+<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
+otherwise it will be bound to this <code>sap.m.Image</code> itself.</p>
+<p>Event is fired when the image resource is loaded.</p>
 <h5>Parameters</h5>
 <h6>fnFunction</h6>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -267,10 +271,6 @@ otherwise it will be bound to this <code>sap.m.Image</code> itself.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Since</h5>
 <p>1.36.2</p>
-<p>Attaches event handler <code>fnFunction</code> to the #event:load load event of this <code>sap.m.Image</code>.</p>
-<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
-otherwise it will be bound to this <code>sap.m.Image</code> itself.</p>
-<p>Event is fired when the image resource is loaded.</p>
 <hr>
 <h3>attachPress()</h3>
 <h4>Call Signature</h4>
@@ -319,6 +319,10 @@ otherwise it will be bound to this <code>sap.m.Image</code> itself.</p>
 <blockquote>
 <p><strong>attachTap</strong>(<code>oData</code>, <code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
+<p>Attaches event handler <code>fnFunction</code> to the #event:tap tap event of this <code>sap.m.Image</code>.</p>
+<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
+otherwise it will be bound to this <code>sap.m.Image</code> itself.</p>
+<p>Event is fired when the user clicks on the control. (This event is deprecated, use the press event instead)</p>
 <h5>Parameters</h5>
 <h6>oData</h6>
 <p><code>object</code></p>
@@ -335,14 +339,14 @@ object when firing the event</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Deprecated</h5>
 <p>(since 1.107.0)</p>
-<p>Attaches event handler <code>fnFunction</code> to the #event:tap tap event of this <code>sap.m.Image</code>.</p>
-<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
-otherwise it will be bound to this <code>sap.m.Image</code> itself.</p>
-<p>Event is fired when the user clicks on the control. (This event is deprecated, use the press event instead)</p>
 <h4>Call Signature</h4>
 <blockquote>
 <p><strong>attachTap</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
+<p>Attaches event handler <code>fnFunction</code> to the #event:tap tap event of this <code>sap.m.Image</code>.</p>
+<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
+otherwise it will be bound to this <code>sap.m.Image</code> itself.</p>
+<p>Event is fired when the user clicks on the control. (This event is deprecated, use the press event instead)</p>
 <h5>Parameters</h5>
 <h6>fnFunction</h6>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -355,10 +359,6 @@ otherwise it will be bound to this <code>sap.m.Image</code> itself.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Deprecated</h5>
 <p>(since 1.107.0)</p>
-<p>Attaches event handler <code>fnFunction</code> to the #event:tap tap event of this <code>sap.m.Image</code>.</p>
-<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
-otherwise it will be bound to this <code>sap.m.Image</code> itself.</p>
-<p>Event is fired when the user clicks on the control. (This event is deprecated, use the press event instead)</p>
 <hr>
 <h3>bindDetailBox()</h3>
 <blockquote>
@@ -388,6 +388,8 @@ of the possible properties of <code>oBindingInfo</code>.</p>
 <blockquote>
 <p><strong>detachError</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
+<p>Detaches event handler <code>fnFunction</code> from the #event:error error event of this <code>sap.m.Image</code>.</p>
+<p>The passed function and listener object must match the ones used for event registration.</p>
 <h4>Parameters</h4>
 <h5>fnFunction</h5>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -400,13 +402,13 @@ of the possible properties of <code>oBindingInfo</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.36.2</p>
-<p>Detaches event handler <code>fnFunction</code> from the #event:error error event of this <code>sap.m.Image</code>.</p>
-<p>The passed function and listener object must match the ones used for event registration.</p>
 <hr>
 <h3>detachLoad()</h3>
 <blockquote>
 <p><strong>detachLoad</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
+<p>Detaches event handler <code>fnFunction</code> from the #event:load load event of this <code>sap.m.Image</code>.</p>
+<p>The passed function and listener object must match the ones used for event registration.</p>
 <h4>Parameters</h4>
 <h5>fnFunction</h5>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -419,8 +421,6 @@ of the possible properties of <code>oBindingInfo</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.36.2</p>
-<p>Detaches event handler <code>fnFunction</code> from the #event:load load event of this <code>sap.m.Image</code>.</p>
-<p>The passed function and listener object must match the ones used for event registration.</p>
 <hr>
 <h3>detachPress()</h3>
 <blockquote>
@@ -443,6 +443,8 @@ of the possible properties of <code>oBindingInfo</code>.</p>
 <blockquote>
 <p><strong>detachTap</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
+<p>Detaches event handler <code>fnFunction</code> from the #event:tap tap event of this <code>sap.m.Image</code>.</p>
+<p>The passed function and listener object must match the ones used for event registration.</p>
 <h4>Parameters</h4>
 <h5>fnFunction</h5>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -455,13 +457,12 @@ of the possible properties of <code>oBindingInfo</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Deprecated</h4>
 <p>(since 1.107.0)</p>
-<p>Detaches event handler <code>fnFunction</code> from the #event:tap tap event of this <code>sap.m.Image</code>.</p>
-<p>The passed function and listener object must match the ones used for event registration.</p>
 <hr>
 <h3>fireError()</h3>
 <blockquote>
 <p><strong>fireError</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
+<p>Fires event #event:error error to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><code>object</code></p>
@@ -473,12 +474,12 @@ of the possible properties of <code>oBindingInfo</code>.</p>
 <p>1.36.2</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Fires event #event:error error to attached listeners.</p>
 <hr>
 <h3>fireLoad()</h3>
 <blockquote>
 <p><strong>fireLoad</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
+<p>Fires event #event:load load to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><code>object</code></p>
@@ -490,12 +491,12 @@ of the possible properties of <code>oBindingInfo</code>.</p>
 <p>1.36.2</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Fires event #event:load load to attached listeners.</p>
 <hr>
 <h3>firePress()</h3>
 <blockquote>
 <p><strong>firePress</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
+<p>Fires event #event:press press to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><code>object</code></p>
@@ -505,12 +506,12 @@ of the possible properties of <code>oBindingInfo</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Fires event #event:press press to attached listeners.</p>
 <hr>
 <h3><del>fireTap()</del></h3>
 <blockquote>
 <p><strong>fireTap</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
+<p>Fires event #event:tap tap to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><code>object</code></p>
@@ -522,20 +523,19 @@ of the possible properties of <code>oBindingInfo</code>.</p>
 <p>(since 1.107.0)</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Fires event #event:tap tap to attached listeners.</p>
 <hr>
 <h3>getAccessibilityInfo()</h3>
 <blockquote>
 <p><strong>getAccessibilityInfo</strong>(): <a href="../../../../../sap.ui.core/sap/ui/core/library/type-aliases/AccessibilityInfo.html"><code>AccessibilityInfo</code></a></p>
 </blockquote>
+<p>Returns the <code>sap.m.Image</code> accessibility information.
+See:
+	sap.ui.core.Control#getAccessibilityInfo</p>
 <h4>Returns</h4>
 <p><a href="../../../../../sap.ui.core/sap/ui/core/library/type-aliases/AccessibilityInfo.html"><code>AccessibilityInfo</code></a></p>
 <p>The object contains the accessibility information for <code>sap.m.Image</code></p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Returns the <code>sap.m.Image</code> accessibility information.
-See:
-	sap.ui.core.Control#getAccessibilityInfo</p>
 <h4>Overrides</h4>
 <p><a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a>.<a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html#getaccessibilityinfo"><code>getAccessibilityInfo</code></a></p>
 <hr>
@@ -573,21 +573,16 @@ See:
 <blockquote>
 <p><strong>getAriaDetails</strong>(): <code>string</code>[]</p>
 </blockquote>
+<p>Returns array of IDs of the elements which are the current targets of the association #getAriaDetails ariaDetails.</p>
 <h4>Returns</h4>
 <p><code>string</code>[]</p>
 <h4>Since</h4>
 <p>1.79</p>
-<p>Returns array of IDs of the elements which are the current targets of the association #getAriaDetails ariaDetails.</p>
 <hr>
 <h3>getAriaHasPopup()</h3>
 <blockquote>
 <p><strong>getAriaHasPopup</strong>(): <a href="../../../../../sap.ui.core/sap/ui/core/library/namespaces/aria/enumerations/HasPopup.html"><code>HasPopup</code></a> | <code>&quot;Dialog&quot;</code> | <code>&quot;Grid&quot;</code> | <code>&quot;ListBox&quot;</code> | <code>&quot;Menu&quot;</code> | <code>&quot;None&quot;</code> | <code>&quot;Tree&quot;</code></p>
 </blockquote>
-<h4>Returns</h4>
-<p><a href="../../../../../sap.ui.core/sap/ui/core/library/namespaces/aria/enumerations/HasPopup.html"><code>HasPopup</code></a> | <code>&quot;Dialog&quot;</code> | <code>&quot;Grid&quot;</code> | <code>&quot;ListBox&quot;</code> | <code>&quot;Menu&quot;</code> | <code>&quot;None&quot;</code> | <code>&quot;Tree&quot;</code></p>
-<p>Value of property <code>ariaHasPopup</code></p>
-<h4>Since</h4>
-<p>1.87.0</p>
 <p>Gets current value of property #getAriaHasPopup ariaHasPopup.</p>
 <p>Defines the aria-haspopup attribute of the <code>Image</code>.</p>
 <p><strong>Guidance for choosing appropriate value:</strong>
@@ -597,6 +592,11 @@ See:
 	 -  If you use other controls, or directly <code>sap.ui.core.Popup</code>, you need to check the container role/type
     and map the value of <code>ariaHasPopup</code> accordingly.</p>
 <p>Default value is <code>None</code>.</p>
+<h4>Returns</h4>
+<p><a href="../../../../../sap.ui.core/sap/ui/core/library/namespaces/aria/enumerations/HasPopup.html"><code>HasPopup</code></a> | <code>&quot;Dialog&quot;</code> | <code>&quot;Grid&quot;</code> | <code>&quot;ListBox&quot;</code> | <code>&quot;Menu&quot;</code> | <code>&quot;None&quot;</code> | <code>&quot;Tree&quot;</code></p>
+<p>Value of property <code>ariaHasPopup</code></p>
+<h4>Since</h4>
+<p>1.87.0</p>
 <hr>
 <h3>getAriaLabelledBy()</h3>
 <blockquote>
@@ -610,46 +610,46 @@ See:
 <blockquote>
 <p><strong>getBackgroundPosition</strong>(): <code>string</code></p>
 </blockquote>
-<h4>Returns</h4>
-<p><code>string</code></p>
-<p>Value of property <code>backgroundPosition</code></p>
-<h4>Since</h4>
-<p>1.30.0</p>
 <p>Gets current value of property #getBackgroundPosition backgroundPosition.</p>
 <p>Defines the position of the image in <code>sap.m.ImageMode.Background</code> mode.</p>
 <p>This property is set on the output DOM element using the CSS style <code>background-position</code>. It takes effect
 only when the <code>mode</code> property is set to <code>sap.m.ImageMode.Background</code>.</p>
 <p>Default value is <code>&quot;initial&quot;</code>.</p>
+<h4>Returns</h4>
+<p><code>string</code></p>
+<p>Value of property <code>backgroundPosition</code></p>
+<h4>Since</h4>
+<p>1.30.0</p>
 <hr>
 <h3>getBackgroundRepeat()</h3>
 <blockquote>
 <p><strong>getBackgroundRepeat</strong>(): <code>string</code></p>
 </blockquote>
-<h4>Returns</h4>
-<p><code>string</code></p>
-<p>Value of property <code>backgroundRepeat</code></p>
-<h4>Since</h4>
-<p>1.30.0</p>
 <p>Gets current value of property #getBackgroundRepeat backgroundRepeat.</p>
 <p>Defines whether the source image is repeated when the output DOM element is bigger than the source.</p>
 <p>This property is set on the output DOM element using the CSS style <code>background-repeat</code>. It takes effect
 only when the <code>mode</code> property is set to <code>sap.m.ImageMode.Background</code>.</p>
 <p>Default value is <code>&quot;no-repeat&quot;</code>.</p>
+<h4>Returns</h4>
+<p><code>string</code></p>
+<p>Value of property <code>backgroundRepeat</code></p>
+<h4>Since</h4>
+<p>1.30.0</p>
 <hr>
 <h3>getBackgroundSize()</h3>
 <blockquote>
 <p><strong>getBackgroundSize</strong>(): <code>string</code></p>
 </blockquote>
-<h4>Returns</h4>
-<p><code>string</code></p>
-<p>Value of property <code>backgroundSize</code></p>
-<h4>Since</h4>
-<p>1.30.0</p>
 <p>Gets current value of property #getBackgroundSize backgroundSize.</p>
 <p>Defines the size of the image in <code>sap.m.ImageMode.Background</code> mode.</p>
 <p>This property is set on the output DOM element using the CSS style <code>background-size</code>. It takes effect
 only when the <code>mode</code> property is set to <code>sap.m.ImageMode.Background</code>.</p>
 <p>Default value is <code>&quot;cover&quot;</code>.</p>
+<h4>Returns</h4>
+<p><code>string</code></p>
+<p>Value of property <code>backgroundSize</code></p>
+<h4>Since</h4>
+<p>1.30.0</p>
 <hr>
 <h3>getDecorative()</h3>
 <blockquote>
@@ -711,27 +711,22 @@ always needs to be set. Otherwise the output DOM element has a 0 size.</p>
 <blockquote>
 <p><strong>getLazyLoading</strong>(): <code>boolean</code></p>
 </blockquote>
-<h4>Returns</h4>
-<p><code>boolean</code></p>
-<p>Value of property <code>lazyLoading</code></p>
-<h4>Since</h4>
-<p>1.87</p>
 <p>Gets current value of property #getLazyLoading lazyLoading.</p>
 <p>Enables lazy loading for images that are offscreen. If set to <code>true</code>, the property ensures that offscreen
 images are loaded early enough so that they have finished loading once the user scrolls near them.</p>
 <p><strong>Note:</strong> Keep in mind that the property uses the loading attribute of HTML <code>&lt;img&gt;</code> element which
 is not supported for Internet Explorer.</p>
 <p>Default value is <code>false</code>.</p>
+<h4>Returns</h4>
+<p><code>boolean</code></p>
+<p>Value of property <code>lazyLoading</code></p>
+<h4>Since</h4>
+<p>1.87</p>
 <hr>
 <h3>getMode()</h3>
 <blockquote>
 <p><strong>getMode</strong>(): <a href="../../library/enumerations/ImageMode.html"><code>ImageMode</code></a> | <code>&quot;Background&quot;</code> | <code>&quot;Image&quot;</code> | <code>&quot;InlineSvg&quot;</code></p>
 </blockquote>
-<h4>Returns</h4>
-<p><a href="../../library/enumerations/ImageMode.html"><code>ImageMode</code></a> | <code>&quot;Background&quot;</code> | <code>&quot;Image&quot;</code> | <code>&quot;InlineSvg&quot;</code></p>
-<p>Value of property <code>mode</code></p>
-<h4>Since</h4>
-<p>1.30.0</p>
 <p>Gets current value of property #getMode mode.</p>
 <p>Defines how the <code>src</code> and the <code>activeSrc</code> is output to the DOM Element.</p>
 <p>When set to <code>sap.m.ImageMode.Image</code>, which is the default value, the <code>src</code> (<code>activeSrc</code>) is set to the
@@ -739,6 +734,11 @@ is not supported for Internet Explorer.</p>
 is set to the CSS style <code>background-image</code> and the root DOM element is rendered as a  tag
 instead of an  tag.</p>
 <p>Default value is <code>&quot;Image&quot;</code>.</p>
+<h4>Returns</h4>
+<p><a href="../../library/enumerations/ImageMode.html"><code>ImageMode</code></a> | <code>&quot;Background&quot;</code> | <code>&quot;Image&quot;</code> | <code>&quot;InlineSvg&quot;</code></p>
+<p>Value of property <code>mode</code></p>
+<h4>Since</h4>
+<p>1.30.0</p>
 <hr>
 <h3>getSrc()</h3>
 <blockquote>
@@ -788,12 +788,12 @@ always needs to be set. Otherwise the output DOM element has a 0 size.</p>
 <blockquote>
 <p><strong>removeAllAriaDetails</strong>(): <code>string</code>[]</p>
 </blockquote>
+<p>Removes all the controls in the association named #getAriaDetails ariaDetails.</p>
 <h4>Returns</h4>
 <p><code>string</code>[]</p>
 <p>An array of the removed elements (might be empty)</p>
 <h4>Since</h4>
 <p>1.79</p>
-<p>Removes all the controls in the association named #getAriaDetails ariaDetails.</p>
 <hr>
 <h3>removeAllAriaLabelledBy()</h3>
 <blockquote>
@@ -821,6 +821,7 @@ always needs to be set. Otherwise the output DOM element has a 0 size.</p>
 <blockquote>
 <p><strong>removeAriaDetails</strong>(<code>vAriaDetails</code>): <code>string</code></p>
 </blockquote>
+<p>Removes an ariaDetails from the association named #getAriaDetails ariaDetails.</p>
 <h4>Parameters</h4>
 <h5>vAriaDetails</h5>
 <p><code>string</code> | <code>number</code> | <a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></p>
@@ -830,7 +831,6 @@ always needs to be set. Otherwise the output DOM element has a 0 size.</p>
 <p>The removed ariaDetails or <code>null</code></p>
 <h4>Since</h4>
 <p>1.79</p>
-<p>Removes an ariaDetails from the association named #getAriaDetails ariaDetails.</p>
 <hr>
 <h3>removeAriaLabelledBy()</h3>
 <blockquote>
@@ -881,15 +881,6 @@ always needs to be set. Otherwise the output DOM element has a 0 size.</p>
 <blockquote>
 <p><strong>setAriaHasPopup</strong>(<code>sAriaHasPopup?</code>): <code>this</code></p>
 </blockquote>
-<h4>Parameters</h4>
-<h5>sAriaHasPopup?</h5>
-<p><a href="../../../../../sap.ui.core/sap/ui/core/library/namespaces/aria/enumerations/HasPopup.html"><code>HasPopup</code></a> | <code>&quot;Dialog&quot;</code> | <code>&quot;Grid&quot;</code> | <code>&quot;ListBox&quot;</code> | <code>&quot;Menu&quot;</code> | <code>&quot;None&quot;</code> | <code>&quot;Tree&quot;</code></p>
-<p>New value for property <code>ariaHasPopup</code></p>
-<h4>Returns</h4>
-<p><code>this</code></p>
-<p>Reference to <code>this</code> in order to allow method chaining</p>
-<h4>Since</h4>
-<p>1.87.0</p>
 <p>Sets a new value for property #getAriaHasPopup ariaHasPopup.</p>
 <p>Defines the aria-haspopup attribute of the <code>Image</code>.</p>
 <p><strong>Guidance for choosing appropriate value:</strong>
@@ -900,11 +891,26 @@ always needs to be set. Otherwise the output DOM element has a 0 size.</p>
     and map the value of <code>ariaHasPopup</code> accordingly.</p>
 <p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <p>Default value is <code>None</code>.</p>
+<h4>Parameters</h4>
+<h5>sAriaHasPopup?</h5>
+<p><a href="../../../../../sap.ui.core/sap/ui/core/library/namespaces/aria/enumerations/HasPopup.html"><code>HasPopup</code></a> | <code>&quot;Dialog&quot;</code> | <code>&quot;Grid&quot;</code> | <code>&quot;ListBox&quot;</code> | <code>&quot;Menu&quot;</code> | <code>&quot;None&quot;</code> | <code>&quot;Tree&quot;</code></p>
+<p>New value for property <code>ariaHasPopup</code></p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<h4>Since</h4>
+<p>1.87.0</p>
 <hr>
 <h3>setBackgroundPosition()</h3>
 <blockquote>
 <p><strong>setBackgroundPosition</strong>(<code>sBackgroundPosition?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getBackgroundPosition backgroundPosition.</p>
+<p>Defines the position of the image in <code>sap.m.ImageMode.Background</code> mode.</p>
+<p>This property is set on the output DOM element using the CSS style <code>background-position</code>. It takes effect
+only when the <code>mode</code> property is set to <code>sap.m.ImageMode.Background</code>.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>&quot;initial&quot;</code>.</p>
 <h4>Parameters</h4>
 <h5>sBackgroundPosition?</h5>
 <p><code>string</code></p>
@@ -914,17 +920,17 @@ always needs to be set. Otherwise the output DOM element has a 0 size.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.30.0</p>
-<p>Sets a new value for property #getBackgroundPosition backgroundPosition.</p>
-<p>Defines the position of the image in <code>sap.m.ImageMode.Background</code> mode.</p>
-<p>This property is set on the output DOM element using the CSS style <code>background-position</code>. It takes effect
-only when the <code>mode</code> property is set to <code>sap.m.ImageMode.Background</code>.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>&quot;initial&quot;</code>.</p>
 <hr>
 <h3>setBackgroundRepeat()</h3>
 <blockquote>
 <p><strong>setBackgroundRepeat</strong>(<code>sBackgroundRepeat?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getBackgroundRepeat backgroundRepeat.</p>
+<p>Defines whether the source image is repeated when the output DOM element is bigger than the source.</p>
+<p>This property is set on the output DOM element using the CSS style <code>background-repeat</code>. It takes effect
+only when the <code>mode</code> property is set to <code>sap.m.ImageMode.Background</code>.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>&quot;no-repeat&quot;</code>.</p>
 <h4>Parameters</h4>
 <h5>sBackgroundRepeat?</h5>
 <p><code>string</code></p>
@@ -934,17 +940,17 @@ only when the <code>mode</code> property is set to <code>sap.m.ImageMode.Backgro
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.30.0</p>
-<p>Sets a new value for property #getBackgroundRepeat backgroundRepeat.</p>
-<p>Defines whether the source image is repeated when the output DOM element is bigger than the source.</p>
-<p>This property is set on the output DOM element using the CSS style <code>background-repeat</code>. It takes effect
-only when the <code>mode</code> property is set to <code>sap.m.ImageMode.Background</code>.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>&quot;no-repeat&quot;</code>.</p>
 <hr>
 <h3>setBackgroundSize()</h3>
 <blockquote>
 <p><strong>setBackgroundSize</strong>(<code>sBackgroundSize?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getBackgroundSize backgroundSize.</p>
+<p>Defines the size of the image in <code>sap.m.ImageMode.Background</code> mode.</p>
+<p>This property is set on the output DOM element using the CSS style <code>background-size</code>. It takes effect
+only when the <code>mode</code> property is set to <code>sap.m.ImageMode.Background</code>.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>&quot;cover&quot;</code>.</p>
 <h4>Parameters</h4>
 <h5>sBackgroundSize?</h5>
 <p><code>string</code></p>
@@ -954,12 +960,6 @@ only when the <code>mode</code> property is set to <code>sap.m.ImageMode.Backgro
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.30.0</p>
-<p>Sets a new value for property #getBackgroundSize backgroundSize.</p>
-<p>Defines the size of the image in <code>sap.m.ImageMode.Background</code> mode.</p>
-<p>This property is set on the output DOM element using the CSS style <code>background-size</code>. It takes effect
-only when the <code>mode</code> property is set to <code>sap.m.ImageMode.Background</code>.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>&quot;cover&quot;</code>.</p>
 <hr>
 <h3>setDecorative()</h3>
 <blockquote>
@@ -1038,6 +1038,13 @@ always needs to be set. Otherwise the output DOM element has a 0 size.</p>
 <blockquote>
 <p><strong>setLazyLoading</strong>(<code>bLazyLoading?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getLazyLoading lazyLoading.</p>
+<p>Enables lazy loading for images that are offscreen. If set to <code>true</code>, the property ensures that offscreen
+images are loaded early enough so that they have finished loading once the user scrolls near them.</p>
+<p><strong>Note:</strong> Keep in mind that the property uses the loading attribute of HTML <code>&lt;img&gt;</code> element which
+is not supported for Internet Explorer.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>false</code>.</p>
 <h4>Parameters</h4>
 <h5>bLazyLoading?</h5>
 <p><code>boolean</code></p>
@@ -1047,18 +1054,19 @@ always needs to be set. Otherwise the output DOM element has a 0 size.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.87</p>
-<p>Sets a new value for property #getLazyLoading lazyLoading.</p>
-<p>Enables lazy loading for images that are offscreen. If set to <code>true</code>, the property ensures that offscreen
-images are loaded early enough so that they have finished loading once the user scrolls near them.</p>
-<p><strong>Note:</strong> Keep in mind that the property uses the loading attribute of HTML <code>&lt;img&gt;</code> element which
-is not supported for Internet Explorer.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>false</code>.</p>
 <hr>
 <h3>setMode()</h3>
 <blockquote>
 <p><strong>setMode</strong>(<code>sMode?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getMode mode.</p>
+<p>Defines how the <code>src</code> and the <code>activeSrc</code> is output to the DOM Element.</p>
+<p>When set to <code>sap.m.ImageMode.Image</code>, which is the default value, the <code>src</code> (<code>activeSrc</code>) is set to the
+<code>src</code> attribute of the  tag. When set to <code>sap.m.ImageMode.Background</code>, the <code>src</code> (<code>activeSrc</code>)
+is set to the CSS style <code>background-image</code> and the root DOM element is rendered as a  tag
+instead of an  tag.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>&quot;Image&quot;</code>.</p>
 <h4>Parameters</h4>
 <h5>sMode?</h5>
 <p><a href="../../library/enumerations/ImageMode.html"><code>ImageMode</code></a> | <code>&quot;Background&quot;</code> | <code>&quot;Image&quot;</code> | <code>&quot;InlineSvg&quot;</code></p>
@@ -1068,14 +1076,6 @@ is not supported for Internet Explorer.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.30.0</p>
-<p>Sets a new value for property #getMode mode.</p>
-<p>Defines how the <code>src</code> and the <code>activeSrc</code> is output to the DOM Element.</p>
-<p>When set to <code>sap.m.ImageMode.Image</code>, which is the default value, the <code>src</code> (<code>activeSrc</code>) is set to the
-<code>src</code> attribute of the  tag. When set to <code>sap.m.ImageMode.Background</code>, the <code>src</code> (<code>activeSrc</code>)
-is set to the CSS style <code>background-image</code> and the root DOM element is rendered as a  tag
-instead of an  tag.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>&quot;Image&quot;</code>.</p>
 <hr>
 <h3>setSrc()</h3>
 <blockquote>
@@ -1175,6 +1175,6 @@ used by this class</p>
 <p><a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a>.<a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html#getmetadata-1"><code>getMetadata</code></a></p>
 <hr>
 
-<footer>Generated from <code>@openui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@openui5/types@1.120.46</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

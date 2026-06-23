@@ -2,12 +2,12 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>Class: UI5Element — OpenUI5 TypeScript API</title>
-<meta name="description" content="Class: UI5Element — OpenUI5 TypeScript API Reference (1.120.0)">
+<title>Abstract Class: UI5Element — OpenUI5 TypeScript API</title>
+<meta name="description" content="Abstract Class: UI5Element — OpenUI5 TypeScript API Reference (1.120.46)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/openui5/1.120/sap.ui.core/sap/ui/core/Element/classes/UI5Element.html">
-<meta property="og:title" content="Class: UI5Element — OpenUI5 TypeScript API">
-<meta property="og:description" content="Class: UI5Element — OpenUI5 TypeScript API Reference (1.120.0)">
+<meta property="og:title" content="Abstract Class: UI5Element — OpenUI5 TypeScript API">
+<meta property="og:description" content="Abstract Class: UI5Element — OpenUI5 TypeScript API Reference (1.120.46)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/openui5/1.120/sap.ui.core/sap/ui/core/Element/classes/UI5Element.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,10 +33,10 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../index.html">OpenUI5 API</a> › <a href="../../../../../../sap.ui.core/README.html">sap.ui.core</a> › sap › ui › core › <a href="../../../../../../sap.ui.core/sap/ui/core/Element/README.html">Element</a> › classes</nav>
-<p><a href="../../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.0)</strong></a></p>
+<p><a href="../../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.46)</strong></a></p>
 <hr>
-<p><a href="../../../../../../README.html">OpenUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../README.html">sap.ui.core</a> / <a href="../README.html">sap/ui/core/Element</a> / UI5Element</p>
-<h1>Class: UI5Element</h1>
+<p><a href="../../../../../../README.html">OpenUI5 TypeScript API (1.120.46)</a> / <a href="../../../../../README.html">sap.ui.core</a> / <a href="../README.html">sap/ui/core/Element</a> / UI5Element</p>
+<h1>Abstract Class: UI5Element</h1>
 <pre class="sig"><span class="kw">import</span> UI5Element <span class="kw">from</span> <span class="str">"sap/ui/core/Element"</span>;</pre>
 <p>Base Class for UI Elements.</p>
 <p><code>Element</code> is the most basic building block for UI5 UIs. An <code>Element</code> has state like a <code>ManagedObject</code>,
@@ -270,18 +270,25 @@ no matter whether <code>mSettings</code> will be given or not!</p>
 <h4>Overrides</h4>
 <p><a href="../../../base/ManagedObject/classes/ManagedObject.html"><code>ManagedObject</code></a>.<a href="../../../base/ManagedObject/classes/ManagedObject.html#constructor"><code>constructor</code></a></p>
 <h2>Properties</h2>
-<h3>registry</h3>
+<h3><del>registry</del></h3>
 <blockquote>
 <p><code>static</code> <strong>registry</strong>: <a href="../interfaces/registry.html"><code>registry</code></a></p>
 </blockquote>
+<p>Registry of all <code>sap.ui.core.Element</code>s that currently exist.</p>
 <h4>Since</h4>
 <p>1.67</p>
-<p>Registry of all <code>sap.ui.core.Element</code>s that currently exist.</p>
+<h4>Deprecated</h4>
+<p>(since 1.120) - Use module:sap/ui/core/ElementRegistry instead.</p>
 <h2>Methods</h2>
 <h3>$()</h3>
 <blockquote>
 <p><strong>$</strong>(<code>sSuffix?</code>): <code>jQuery</code></p>
 </blockquote>
+<p>Returns the best suitable DOM node that represents this Element wrapped as jQuery object. I.e. the element
+returned by sap.ui.core.Element#getDomRef is wrapped and returned.</p>
+<p>If an ID suffix is given, the ID of this Element is concatenated with the suffix (separated by a single
+dash) and the DOM node with that compound ID will be wrapped by jQuery. This matches the UI5 naming convention
+for named inner DOM nodes of a control.</p>
 <h4>Parameters</h4>
 <h5>sSuffix?</h5>
 <p><code>string</code></p>
@@ -291,11 +298,6 @@ no matter whether <code>mSettings</code> will be given or not!</p>
 <p>The jQuery wrapped element&#39;s DOM reference</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Returns the best suitable DOM node that represents this Element wrapped as jQuery object. I.e. the element
-returned by sap.ui.core.Element#getDomRef is wrapped and returned.</p>
-<p>If an ID suffix is given, the ID of this Element is concatenated with the suffix (separated by a single
-dash) and the DOM node with that compound ID will be wrapped by jQuery. This matches the UI5 naming convention
-for named inner DOM nodes of a control.</p>
 <hr>
 <h3>addCustomData()</h3>
 <blockquote>
@@ -314,6 +316,7 @@ for named inner DOM nodes of a control.</p>
 <blockquote>
 <p><strong>addDependent</strong>(<code>oDependent</code>): <code>this</code></p>
 </blockquote>
+<p>Adds some dependent to the aggregation #getDependents dependents.</p>
 <h4>Parameters</h4>
 <h5>oDependent</h5>
 <p><code>UI5Element</code></p>
@@ -323,12 +326,12 @@ for named inner DOM nodes of a control.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.19</p>
-<p>Adds some dependent to the aggregation #getDependents dependents.</p>
 <hr>
 <h3>addDragDropConfig()</h3>
 <blockquote>
 <p><strong>addDragDropConfig</strong>(<code>oDragDropConfig</code>): <code>this</code></p>
 </blockquote>
+<p>Adds some dragDropConfig to the aggregation #getDragDropConfig dragDropConfig.</p>
 <h4>Parameters</h4>
 <h5>oDragDropConfig</h5>
 <p><a href="../../dnd/DragDropBase/classes/DragDropBase.html"><code>DragDropBase</code></a></p>
@@ -338,25 +341,11 @@ for named inner DOM nodes of a control.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.56</p>
-<p>Adds some dragDropConfig to the aggregation #getDragDropConfig dragDropConfig.</p>
 <hr>
 <h3>addEventDelegate()</h3>
 <blockquote>
 <p><strong>addEventDelegate</strong>(<code>oDelegate</code>, <code>oThis?</code>): <code>this</code></p>
 </blockquote>
-<h4>Parameters</h4>
-<h5>oDelegate</h5>
-<p><code>object</code></p>
-<p>The delegate object which consists of the event handler names and the corresponding event handler functions</p>
-<h5>oThis?</h5>
-<p><code>object</code></p>
-<p>If given, this object will be the &quot;this&quot; context in the listener methods; default is the delegate object
-itself</p>
-<h4>Returns</h4>
-<p><code>this</code></p>
-<p>Returns <code>this</code> to allow method chaining</p>
-<h4>Since</h4>
-<p>1.9.0</p>
 <p>Adds a delegate that can listen to the browser-, pseudo- and framework events that are handled by this
 <code>Element</code> (as opposed to events which are fired by this <code>Element</code>).</p>
 <p>Delegates are simple objects that can have an arbitrary number of event handler methods. See the section
@@ -382,11 +371,26 @@ general explanation of event handling in controls.</p>
 lets the framework know that the <code>onBeforeRendering</code> and <code>onAfterRendering</code> event handlers of the delegate
 are compatible with the contract of sap.ui.core.RenderManager Renderer.apiVersion 4. See example
 &quot;Adding a rendering delegate...&quot;.</p>
+<h4>Parameters</h4>
+<h5>oDelegate</h5>
+<p><code>object</code></p>
+<p>The delegate object which consists of the event handler names and the corresponding event handler functions</p>
+<h5>oThis?</h5>
+<p><code>object</code></p>
+<p>If given, this object will be the &quot;this&quot; context in the listener methods; default is the delegate object
+itself</p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Returns <code>this</code> to allow method chaining</p>
+<h4>Since</h4>
+<p>1.9.0</p>
 <hr>
 <h3>applyFocusInfo()</h3>
 <blockquote>
 <p><strong>applyFocusInfo</strong>(<code>oFocusInfo</code>): <code>this</code></p>
 </blockquote>
+<p>Applies the focus info.</p>
+<p>To be overwritten by the specific control method.</p>
 <h4>Parameters</h4>
 <h5>oFocusInfo</h5>
 <p>Focus info object as returned by #getFocusInfo</p>
@@ -400,8 +404,6 @@ visible before the focus is set</p>
 <p>Returns <code>this</code> to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Applies the focus info.</p>
-<p>To be overwritten by the specific control method.</p>
 <hr>
 <h3>bindElement()</h3>
 <blockquote>
@@ -539,23 +541,23 @@ not be used by any application code.</p>
 <blockquote>
 <p><strong>destroyDependents</strong>(): <code>this</code></p>
 </blockquote>
+<p>Destroys all the dependents in the aggregation #getDependents dependents.</p>
 <h4>Returns</h4>
 <p><code>this</code></p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.19</p>
-<p>Destroys all the dependents in the aggregation #getDependents dependents.</p>
 <hr>
 <h3>destroyDragDropConfig()</h3>
 <blockquote>
 <p><strong>destroyDragDropConfig</strong>(): <code>this</code></p>
 </blockquote>
+<p>Destroys all the dragDropConfig in the aggregation #getDragDropConfig dragDropConfig.</p>
 <h4>Returns</h4>
 <p><code>this</code></p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.56</p>
-<p>Destroys all the dragDropConfig in the aggregation #getDragDropConfig dragDropConfig.</p>
 <hr>
 <h3>destroyLayoutData()</h3>
 <blockquote>
@@ -579,6 +581,13 @@ not be used by any application code.</p>
 <blockquote>
 <p><strong>enhanceAccessibilityState</strong>(<code>oElement</code>, <code>mAriaProps</code>): <code>void</code></p>
 </blockquote>
+<p>Allows the parent of a control to enhance the ARIA information during rendering.</p>
+<p>This function is called by the RenderManager&#39;s sap.ui.core.RenderManager#accessibilityState accessibilityState
+and sap.ui.core.RenderManager#writeAccessibilityState writeAccessibilityState methods for the
+parent of the currently rendered control - if the parent implements it.</p>
+<p><strong>Note:</strong> Setting the special <code>canSkipRendering</code> property of the <code>mAriaProps</code> parameter to <code>true</code> lets
+the <code>RenderManager</code> know that the accessibility enhancement is static and does not interfere with the
+child control&#39;s sap.ui.core.RenderManager Renderer.apiVersion 4 rendering optimization.</p>
 <h4>Parameters</h4>
 <h5>oElement</h5>
 <p><code>UI5Element</code></p>
@@ -591,22 +600,11 @@ this map in any way (add or remove properties, modify values)</p>
 <p><code>void</code></p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Allows the parent of a control to enhance the ARIA information during rendering.</p>
-<p>This function is called by the RenderManager&#39;s sap.ui.core.RenderManager#accessibilityState accessibilityState
-and sap.ui.core.RenderManager#writeAccessibilityState writeAccessibilityState methods for the
-parent of the currently rendered control - if the parent implements it.</p>
-<p><strong>Note:</strong> Setting the special <code>canSkipRendering</code> property of the <code>mAriaProps</code> parameter to <code>true</code> lets
-the <code>RenderManager</code> know that the accessibility enhancement is static and does not interfere with the
-child control&#39;s sap.ui.core.RenderManager Renderer.apiVersion 4 rendering optimization.</p>
 <hr>
 <h3>exit()</h3>
 <blockquote>
 <p><strong>exit</strong>(): <code>void</code></p>
 </blockquote>
-<h4>Returns</h4>
-<p><code>void</code></p>
-<h4>Ui5-protected</h4>
-<p>Do not call from applications (only from related classes in the framework)</p>
 <p>Hook method for cleaning up the element instance before destruction.</p>
 <p>Applications must not call this hook method directly, it is called by the framework when the element
 is #destroy destroyed.</p>
@@ -623,6 +621,16 @@ exit: function() {
 </code></pre>
 <p>For a more detailed description how to to use the exit hook, see Section <a href="https://ui5.sap.com/#/topic/d4ac0edbc467483585d0c53a282505a5">exit() Method</a>
 in the documentation.</p>
+<h4>Returns</h4>
+<p><code>void</code></p>
+<p>This hook method must not have a return value. Return value <code>void</code> is deprecated since 1.120,
+as it does not force functions to <strong>not</strong> return something. This implies that, for instance, no async
+function returning a Promise should be used.</p>
+<p><strong>Note:</strong> While the return type is currently <code>void|undefined</code>, any implementation of this hook must not
+return anything but undefined. Any other return value will cause an error log in this version of UI5
+and will fail in future major versions of UI5.</p>
+<h4>Ui5-protected</h4>
+<p>Do not call from applications (only from related classes in the framework)</p>
 <hr>
 <h3>findElements()</h3>
 <blockquote>
@@ -673,27 +681,18 @@ visible before the focus is set</p>
 <blockquote>
 <p><strong>getDependents</strong>(): <code>UI5Element</code>[]</p>
 </blockquote>
+<p>Gets content of aggregation #getDependents dependents.</p>
+<p>Dependents are not rendered, but their databinding context and lifecycle are bound to the aggregating
+Element.</p>
 <h4>Returns</h4>
 <p><code>UI5Element</code>[]</p>
 <h4>Since</h4>
 <p>1.19</p>
-<p>Gets content of aggregation #getDependents dependents.</p>
-<p>Dependents are not rendered, but their databinding context and lifecycle are bound to the aggregating
-Element.</p>
 <hr>
 <h3>getDomRef()</h3>
 <blockquote>
 <p><strong>getDomRef</strong>(<code>sSuffix?</code>): <code>Element</code></p>
 </blockquote>
-<h4>Parameters</h4>
-<h5>sSuffix?</h5>
-<p><code>string</code></p>
-<p>ID suffix to get the DOMRef for</p>
-<h4>Returns</h4>
-<p><code>Element</code></p>
-<p>The Element&#39;s DOM Element, sub DOM Element or <code>null</code></p>
-<h4>Ui5-protected</h4>
-<p>Do not call from applications (only from related classes in the framework)</p>
 <p>Returns the best suitable DOM Element that represents this UI5 Element. By default the DOM Element with
 the same ID as this Element is returned. Subclasses should override this method if the lookup via id
 is not sufficient.</p>
@@ -703,18 +702,27 @@ their current state (e.g. an initial, not yet rendered control).</p>
 <p>If an ID suffix is given, the ID of this Element is concatenated with the suffix (separated by a single
 dash) and the DOM node with that compound ID will be returned. This matches the UI5 naming convention
 for named inner DOM nodes of a control.</p>
+<h4>Parameters</h4>
+<h5>sSuffix?</h5>
+<p><code>string</code></p>
+<p>ID suffix to get the DOMRef for</p>
+<h4>Returns</h4>
+<p><code>Element</code></p>
+<p>The Element&#39;s DOM Element, sub DOM Element or <code>null</code></p>
+<h4>Ui5-protected</h4>
+<p>Do not call from applications (only from related classes in the framework)</p>
 <hr>
 <h3>getDragDropConfig()</h3>
 <blockquote>
 <p><strong>getDragDropConfig</strong>(): <a href="../../dnd/DragDropBase/classes/DragDropBase.html"><code>DragDropBase</code></a>[]</p>
 </blockquote>
+<p>Gets content of aggregation #getDragDropConfig dragDropConfig.</p>
+<p>Defines the drag-and-drop configuration. <strong>Note:</strong> This configuration might be ignored due to control
+sap.ui.core.Element.extend metadata restrictions.</p>
 <h4>Returns</h4>
 <p><a href="../../dnd/DragDropBase/classes/DragDropBase.html"><code>DragDropBase</code></a>[]</p>
 <h4>Since</h4>
 <p>1.56</p>
-<p>Gets content of aggregation #getDragDropConfig dragDropConfig.</p>
-<p>Defines the drag-and-drop configuration. <strong>Note:</strong> This configuration might be ignored due to control
-sap.ui.core.Element.extend metadata restrictions.</p>
 <hr>
 <h3>getElementBinding()</h3>
 <blockquote>
@@ -739,25 +747,25 @@ is explicitly allowed and refers to the default model.
 <blockquote>
 <p><strong>getFocusDomRef</strong>(): <code>Element</code></p>
 </blockquote>
+<p>Returns the DOM Element that should get the focus or <code>null</code> if there&#39;s no such element currently.</p>
+<p>To be overwritten by the specific control method.</p>
 <h4>Returns</h4>
 <p><code>Element</code></p>
 <p>Returns the DOM Element that should get the focus or <code>null</code></p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Returns the DOM Element that should get the focus or <code>null</code> if there&#39;s no such element currently.</p>
-<p>To be overwritten by the specific control method.</p>
 <hr>
 <h3>getFocusInfo()</h3>
 <blockquote>
 <p><strong>getFocusInfo</strong>(): <code>object</code></p>
 </blockquote>
+<p>Returns an object representing the serialized focus information.</p>
+<p>To be overwritten by the specific control method.</p>
 <h4>Returns</h4>
 <p><code>object</code></p>
 <p>an object representing the serialized focus information</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Returns an object representing the serialized focus information.</p>
-<p>To be overwritten by the specific control method.</p>
 <hr>
 <h3>getInterface()</h3>
 <blockquote>
@@ -848,6 +856,8 @@ and returns its index if found or -1 otherwise.</p>
 <blockquote>
 <p><strong>indexOfDependent</strong>(<code>oDependent</code>): <code>number</code></p>
 </blockquote>
+<p>Checks for the provided <code>sap.ui.core.Element</code> in the aggregation #getDependents dependents. and
+returns its index if found or -1 otherwise.</p>
 <h4>Parameters</h4>
 <h5>oDependent</h5>
 <p><code>UI5Element</code></p>
@@ -857,13 +867,13 @@ and returns its index if found or -1 otherwise.</p>
 <p>The index of the provided control in the aggregation if found, or -1 otherwise</p>
 <h4>Since</h4>
 <p>1.19</p>
-<p>Checks for the provided <code>sap.ui.core.Element</code> in the aggregation #getDependents dependents. and
-returns its index if found or -1 otherwise.</p>
 <hr>
 <h3>indexOfDragDropConfig()</h3>
 <blockquote>
 <p><strong>indexOfDragDropConfig</strong>(<code>oDragDropConfig</code>): <code>number</code></p>
 </blockquote>
+<p>Checks for the provided <code>sap.ui.core.dnd.DragDropBase</code> in the aggregation #getDragDropConfig dragDropConfig.
+and returns its index if found or -1 otherwise.</p>
 <h4>Parameters</h4>
 <h5>oDragDropConfig</h5>
 <p><a href="../../dnd/DragDropBase/classes/DragDropBase.html"><code>DragDropBase</code></a></p>
@@ -873,21 +883,25 @@ returns its index if found or -1 otherwise.</p>
 <p>The index of the provided control in the aggregation if found, or -1 otherwise</p>
 <h4>Since</h4>
 <p>1.56</p>
-<p>Checks for the provided <code>sap.ui.core.dnd.DragDropBase</code> in the aggregation #getDragDropConfig dragDropConfig.
-and returns its index if found or -1 otherwise.</p>
 <hr>
 <h3>init()</h3>
 <blockquote>
 <p><strong>init</strong>(): <code>void</code></p>
 </blockquote>
-<h4>Returns</h4>
-<p><code>void</code></p>
-<h4>Ui5-protected</h4>
-<p>Do not call from applications (only from related classes in the framework)</p>
 <p>Initializes the element instance after creation.</p>
 <p>Applications must not call this hook method directly, it is called by the framework while the constructor
 of an element is executed.</p>
 <p>Subclasses of Element should override this hook to implement any necessary initialization.</p>
+<h4>Returns</h4>
+<p><code>void</code></p>
+<p>This hook method must not have a return value. Return value <code>void</code> is deprecated since 1.120,
+as it does not force functions to <strong>not</strong> return something. This implies that, for instance, no async
+function returning a Promise should be used.</p>
+<p><strong>Note:</strong> While the return type is currently <code>void|undefined</code>, any implementation of this hook must not
+return anything but undefined. Any other return value will cause an error log in this version of UI5
+and will fail in future major versions of UI5.</p>
+<h4>Ui5-protected</h4>
+<p>Do not call from applications (only from related classes in the framework)</p>
 <hr>
 <h3>insertCustomData()</h3>
 <blockquote>
@@ -911,6 +925,7 @@ is inserted at the last position</p>
 <blockquote>
 <p><strong>insertDependent</strong>(<code>oDependent</code>, <code>iIndex</code>): <code>this</code></p>
 </blockquote>
+<p>Inserts a dependent into the aggregation #getDependents dependents.</p>
 <h4>Parameters</h4>
 <h5>oDependent</h5>
 <p><code>UI5Element</code></p>
@@ -925,12 +940,12 @@ is inserted at the last position</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.19</p>
-<p>Inserts a dependent into the aggregation #getDependents dependents.</p>
 <hr>
 <h3>insertDragDropConfig()</h3>
 <blockquote>
 <p><strong>insertDragDropConfig</strong>(<code>oDragDropConfig</code>, <code>iIndex</code>): <code>this</code></p>
 </blockquote>
+<p>Inserts a dragDropConfig into the aggregation #getDragDropConfig dragDropConfig.</p>
 <h4>Parameters</h4>
 <h5>oDragDropConfig</h5>
 <p><a href="../../dnd/DragDropBase/classes/DragDropBase.html"><code>DragDropBase</code></a></p>
@@ -945,17 +960,11 @@ is inserted at the last position</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.56</p>
-<p>Inserts a dragDropConfig into the aggregation #getDragDropConfig dragDropConfig.</p>
 <hr>
 <h3>isFocusable()</h3>
 <blockquote>
 <p><strong>isFocusable</strong>(): <code>boolean</code></p>
 </blockquote>
-<h4>Returns</h4>
-<p><code>boolean</code></p>
-<p>Whether the element can get the focus after calling #focus</p>
-<h4>Since</h4>
-<p>1.110</p>
 <p>Checks whether an element is able to get the focus after #focus is called.</p>
 <p>An element is treated as &#39;focusable&#39; when all of the following conditions are met:
 	 - The element and all of its parents are not &#39;busy&#39; or &#39;blocked&#39;,
@@ -964,11 +973,18 @@ is inserted at the last position</p>
 	 - the element matches the browser&#39;s prerequisites for being focusable: if it&#39;s a natively focusable
     element, for example <code>input</code>, <code>select</code>, <code>textarea</code>, <code>button</code>, and so on, no &#39;tabindex&#39; attribute is needed.
     Otherwise, &#39;tabindex&#39; must be set. In any case, the element must be visible in order to be focusable.</p>
+<h4>Returns</h4>
+<p><code>boolean</code></p>
+<p>Whether the element can get the focus after calling #focus</p>
+<h4>Since</h4>
+<p>1.110</p>
 <hr>
 <h3><del>prop()</del></h3>
 <blockquote>
 <p><strong>prop</strong>(<code>sPropertyName</code>, <code>oValue?</code>): <code>any</code></p>
 </blockquote>
+<p>This function either calls set[sPropertyName] or get[sPropertyName] with the specified property name
+depending if an <code>oValue</code> is provided or not.</p>
 <h4>Parameters</h4>
 <h5>sPropertyName</h5>
 <p><code>string</code></p>
@@ -983,8 +999,6 @@ getter</p>
 <h4>Deprecated</h4>
 <p>(since 1.28.0) - The contract of this method is not fully defined and its write capabilities
 overlap with applySettings</p>
-<p>This function either calls set[sPropertyName] or get[sPropertyName] with the specified property name
-depending if an <code>oValue</code> is provided or not.</p>
 <hr>
 <h3>removeAllCustomData()</h3>
 <blockquote>
@@ -1000,25 +1014,25 @@ depending if an <code>oValue</code> is provided or not.</p>
 <blockquote>
 <p><strong>removeAllDependents</strong>(): <code>UI5Element</code>[]</p>
 </blockquote>
+<p>Removes all the controls from the aggregation #getDependents dependents.</p>
+<p>Additionally, it unregisters them from the hosting UIArea.</p>
 <h4>Returns</h4>
 <p><code>UI5Element</code>[]</p>
 <p>An array of the removed elements (might be empty)</p>
 <h4>Since</h4>
 <p>1.19</p>
-<p>Removes all the controls from the aggregation #getDependents dependents.</p>
-<p>Additionally, it unregisters them from the hosting UIArea.</p>
 <hr>
 <h3>removeAllDragDropConfig()</h3>
 <blockquote>
 <p><strong>removeAllDragDropConfig</strong>(): <a href="../../dnd/DragDropBase/classes/DragDropBase.html"><code>DragDropBase</code></a>[]</p>
 </blockquote>
+<p>Removes all the controls from the aggregation #getDragDropConfig dragDropConfig.</p>
+<p>Additionally, it unregisters them from the hosting UIArea.</p>
 <h4>Returns</h4>
 <p><a href="../../dnd/DragDropBase/classes/DragDropBase.html"><code>DragDropBase</code></a>[]</p>
 <p>An array of the removed elements (might be empty)</p>
 <h4>Since</h4>
 <p>1.56</p>
-<p>Removes all the controls from the aggregation #getDragDropConfig dragDropConfig.</p>
-<p>Additionally, it unregisters them from the hosting UIArea.</p>
 <hr>
 <h3>removeCustomData()</h3>
 <blockquote>
@@ -1037,6 +1051,7 @@ depending if an <code>oValue</code> is provided or not.</p>
 <blockquote>
 <p><strong>removeDependent</strong>(<code>vDependent</code>): <code>UI5Element</code></p>
 </blockquote>
+<p>Removes a dependent from the aggregation #getDependents dependents.</p>
 <h4>Parameters</h4>
 <h5>vDependent</h5>
 <p><code>string</code> | <code>number</code> | <code>UI5Element</code></p>
@@ -1046,12 +1061,12 @@ depending if an <code>oValue</code> is provided or not.</p>
 <p>The removed dependent or <code>null</code></p>
 <h4>Since</h4>
 <p>1.19</p>
-<p>Removes a dependent from the aggregation #getDependents dependents.</p>
 <hr>
 <h3>removeDragDropConfig()</h3>
 <blockquote>
 <p><strong>removeDragDropConfig</strong>(<code>vDragDropConfig</code>): <a href="../../dnd/DragDropBase/classes/DragDropBase.html"><code>DragDropBase</code></a></p>
 </blockquote>
+<p>Removes a dragDropConfig from the aggregation #getDragDropConfig dragDropConfig.</p>
 <h4>Parameters</h4>
 <h5>vDragDropConfig</h5>
 <p><code>string</code> | <code>number</code> | <a href="../../dnd/DragDropBase/classes/DragDropBase.html"><code>DragDropBase</code></a></p>
@@ -1061,12 +1076,13 @@ depending if an <code>oValue</code> is provided or not.</p>
 <p>The removed dragDropConfig or <code>null</code></p>
 <h4>Since</h4>
 <p>1.56</p>
-<p>Removes a dragDropConfig from the aggregation #getDragDropConfig dragDropConfig.</p>
 <hr>
 <h3>removeEventDelegate()</h3>
 <blockquote>
 <p><strong>removeEventDelegate</strong>(<code>oDelegate</code>): <code>this</code></p>
 </blockquote>
+<p>Removes the given delegate from this element.</p>
+<p>This method will remove all registrations of the given delegate, not only one.</p>
 <h4>Parameters</h4>
 <h5>oDelegate</h5>
 <p><code>object</code></p>
@@ -1076,20 +1092,25 @@ depending if an <code>oValue</code> is provided or not.</p>
 <p>Returns <code>this</code> to allow method chaining</p>
 <h4>Since</h4>
 <p>1.9.0</p>
-<p>Removes the given delegate from this element.</p>
-<p>This method will remove all registrations of the given delegate, not only one.</p>
 <hr>
-<h3>rerender()</h3>
+<h3><del>rerender()</del></h3>
 <blockquote>
 <p><strong>rerender</strong>(): <code>void</code></p>
 </blockquote>
+<p>This triggers immediate rerendering of its parent and thus of itself and its children.</p>
 <h4>Returns</h4>
 <p><code>void</code></p>
-<h4>Ui5-protected</h4>
-<p>Do not call from applications (only from related classes in the framework)</p>
-<p>This triggers immediate rerendering of its parent and thus of itself and its children.</p>
+<h4>Deprecated</h4>
+<p>(since 1.70) - using this method is no longer recommended, but still works. Synchronous DOM
+updates via this method have several drawbacks: they only work when the control has been rendered before
+(no initial rendering possible), multiple state changes won&#39;t be combined automatically into a single
+re-rendering, they might cause additional layout trashing, standard invalidation might cause another
+async re-rendering.</p>
+<p>The recommended alternative is to rely on invalidation and standard re-rendering.</p>
 <p>As <code>sap.ui.core.Element</code> &quot;bubbles up&quot; the rerender, changes to child-<code>Elements</code> will also result in immediate
 rerendering of the whole sub tree.</p>
+<h4>Ui5-protected</h4>
+<p>Do not call from applications (only from related classes in the framework)</p>
 <hr>
 <h3>setLayoutData()</h3>
 <blockquote>
@@ -1150,6 +1171,10 @@ context again.</p>
 <blockquote>
 <p><code>static</code> <strong>closestTo</strong>(<code>vParam</code>, <code>bIncludeRelated?</code>): <code>UI5Element</code></p>
 </blockquote>
+<p>Returns the nearest [UI5 Element]sap.ui.core.Element that wraps the given DOM element.</p>
+<p>A DOM element or a CSS selector is accepted as a given parameter. When a CSS selector is given as parameter,
+only the first DOM element that matches the CSS selector is taken to find the nearest UI5 Element that
+wraps it. When no UI5 Element can be found, <code>undefined</code> is returned.</p>
 <h4>Parameters</h4>
 <h5>vParam</h5>
 <p><code>string</code> | <code>HTMLElement</code></p>
@@ -1165,15 +1190,12 @@ to <code>data-sap-ui</code></p>
 can be found.</p>
 <h4>Since</h4>
 <p>1.106</p>
-<p>Returns the nearest [UI5 Element]sap.ui.core.Element that wraps the given DOM element.</p>
-<p>A DOM element or a CSS selector is accepted as a given parameter. When a CSS selector is given as parameter,
-only the first DOM element that matches the CSS selector is taken to find the nearest UI5 Element that
-wraps it. When no UI5 Element can be found, <code>undefined</code> is returned.</p>
 <hr>
 <h3><del>defineClass()</del></h3>
 <blockquote>
 <p><code>static</code> <strong>defineClass</strong>(<code>sClassName</code>, <code>oStaticInfo</code>, <code>fnMetaImpl?</code>): <a href="../../ElementMetadata/classes/ElementMetadata.html"><code>ElementMetadata</code></a></p>
 </blockquote>
+<p>Creates metadata for a UI Element by extending the Object Metadata.</p>
 <h4>Parameters</h4>
 <h5>sClassName</h5>
 <p><code>string</code></p>
@@ -1189,7 +1211,6 @@ wraps it. When no UI5 Element can be found, <code>undefined</code> is returned.<
 <p>the created metadata</p>
 <h4>Deprecated</h4>
 <p>(since 1.3.1) - Use the static <code>extend</code> method of the desired base class (e.g. sap.ui.core.Element.extend)</p>
-<p>Creates metadata for a UI Element by extending the Object Metadata.</p>
 <h4>Overrides</h4>
 <p><a href="../../../base/ManagedObject/classes/ManagedObject.html"><code>ManagedObject</code></a>.<a href="../../../base/ManagedObject/classes/ManagedObject.html#defineclass"><code>defineClass</code></a></p>
 <hr>
@@ -1243,27 +1264,32 @@ Element.extend(&#39;sap.mylib.MyElement&#39;, {
 <blockquote>
 <p><code>static</code> <strong>getActiveElement</strong>(): <code>UI5Element</code></p>
 </blockquote>
+<p>Returns the element currently in focus.</p>
 <h4>Returns</h4>
 <p><code>UI5Element</code></p>
 <p>The currently focused element</p>
 <h4>Since</h4>
 <p>1.119</p>
-<p>Returns the element currently in focus.</p>
 <hr>
 <h3>getElementById()</h3>
 <blockquote>
-<p><code>static</code> <strong>getElementById</strong>(<code>id</code>): <code>UI5Element</code></p>
+<p><code>static</code> <strong>getElementById</strong>(<code>sId</code>): <code>UI5Element</code></p>
 </blockquote>
-<p>Retrieves an Element by its ID.</p>
-<p>When the ID is <code>null</code> or <code>undefined</code> or when there&#39;s no element with the given ID, then <code>undefined</code> is
-returned.</p>
+<p>Returns the registered element with the given ID, if any.</p>
+<p>The ID must be the globally unique ID of an element, the same as returned by <code>oElement.getId()</code>.</p>
+<p>When the element has been created from a declarative source (e.g. XMLView), that source might have used
+a shorter, non-unique local ID. A search for such a local ID cannot be executed with this method. It
+can only be executed on the corresponding scope (e.g. on an XMLView instance), by using the sap.ui.core.mvc.View#byId View#byId
+method of that scope.</p>
 <h4>Parameters</h4>
-<h5>id</h5>
+<h5>sId</h5>
 <p><code>string</code></p>
-<p>ID of the element to retrieve</p>
+<p>ID of the element to search for</p>
 <h4>Returns</h4>
 <p><code>UI5Element</code></p>
 <p>Element with the given ID or <code>undefined</code></p>
+<h4>Since</h4>
+<p>1.119</p>
 <hr>
 <h3>getMetadata()</h3>
 <blockquote>
@@ -1277,6 +1303,6 @@ returned.</p>
 <p><a href="../../../base/ManagedObject/classes/ManagedObject.html"><code>ManagedObject</code></a>.<a href="../../../base/ManagedObject/classes/ManagedObject.html#getmetadata-1"><code>getMetadata</code></a></p>
 <hr>
 
-<footer>Generated from <code>@openui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@openui5/types@1.120.46</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

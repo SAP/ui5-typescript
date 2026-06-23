@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Interface: $StepInputSettings — OpenUI5 TypeScript API</title>
-<meta name="description" content="Interface: $StepInputSettings — OpenUI5 TypeScript API Reference (1.120.0)">
+<meta name="description" content="Interface: $StepInputSettings — OpenUI5 TypeScript API Reference (1.120.46)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/openui5/1.120/sap.m/sap/m/StepInput/interfaces/$StepInputSettings.html">
 <meta property="og:title" content="Interface: $StepInputSettings — OpenUI5 TypeScript API">
-<meta property="og:description" content="Interface: $StepInputSettings — OpenUI5 TypeScript API Reference (1.120.0)">
+<meta property="og:description" content="Interface: $StepInputSettings — OpenUI5 TypeScript API Reference (1.120.46)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/openui5/1.120/sap.m/sap/m/StepInput/interfaces/$StepInputSettings.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,11 +33,12 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../index.html">OpenUI5 API</a> › <a href="../../../../../sap.m/README.html">sap.m</a> › sap › m › <a href="../../../../../sap.m/sap/m/StepInput/README.html">StepInput</a> › interfaces</nav>
-<p><a href="../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.0)</strong></a></p>
+<p><a href="../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.46)</strong></a></p>
 <hr>
-<p><a href="../../../../../README.html">OpenUI5 TypeScript API (1.120.0)</a> / <a href="../../../../README.html">sap.m</a> / <a href="../README.html">sap/m/StepInput</a> / $StepInputSettings</p>
+<p><a href="../../../../../README.html">OpenUI5 TypeScript API (1.120.46)</a> / <a href="../../../../README.html">sap.m</a> / <a href="../README.html">sap/m/StepInput</a> / $StepInputSettings</p>
 <h1>Interface: $StepInputSettings</h1>
 <pre class="sig"><span class="kw">import</span> { $StepInputSettings } <span class="kw">from</span> <span class="str">"sap/m/StepInput"</span>;</pre>
+<p>Describes the settings that can be provided to the StepInput constructor.</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../../../../sap.ui.core/sap/ui/core/Control/interfaces/$ControlSettings.html"><code>$ControlSettings</code></a></li>
@@ -74,19 +75,19 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 <blockquote>
 <p><code>optional</code> <strong>description?</strong>: <code>string</code> | <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a></p>
 </blockquote>
+<p>Determines the description text after the input field, for example units of measurement, currencies.</p>
 <h4>Since</h4>
 <p>1.54</p>
-<p>Determines the description text after the input field, for example units of measurement, currencies.</p>
 <hr>
 <h3>displayValuePrecision?</h3>
 <blockquote>
 <p><code>optional</code> <strong>displayValuePrecision?</strong>: <code>number</code> | <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<h4>Since</h4>
-<p>1.46</p>
 <p>Determines the number of digits after the decimal point.</p>
 <p>The value should be between 0 (default) and 20. In case the value is not valid it will be set to the
 default value.</p>
+<h4>Since</h4>
+<p>1.46</p>
 <hr>
 <h3>editable?</h3>
 <blockquote>
@@ -106,11 +107,11 @@ focused and they are out of the tab-chain.</p>
 <blockquote>
 <p><code>optional</code> <strong>fieldWidth?</strong>: <code>string</code> | <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a></p>
 </blockquote>
-<h4>Since</h4>
-<p>1.54</p>
 <p>Determines the distribution of space between the input field and the description text . Default value
 is 50% (leaving the other 50% for the description).</p>
 <p><strong>Note:</strong> This property takes effect only if the <code>description</code> property is also set.</p>
+<h4>Since</h4>
+<p>1.54</p>
 <hr>
 <h3>largerStep?</h3>
 <blockquote>
@@ -135,27 +136,27 @@ keys. Default value is 2 times larger than the set step.</p>
 <blockquote>
 <p><code>optional</code> <strong>name?</strong>: <code>string</code> | <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a></p>
 </blockquote>
+<p>Defines the name of the control for the purposes of form submission.</p>
 <h4>Since</h4>
 <p>1.44.15</p>
-<p>Defines the name of the control for the purposes of form submission.</p>
 <hr>
 <h3>placeholder?</h3>
 <blockquote>
 <p><code>optional</code> <strong>placeholder?</strong>: <code>string</code> | <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a></p>
 </blockquote>
+<p>Defines a short hint intended to aid the user with data entry when the control has no value.</p>
 <h4>Since</h4>
 <p>1.44.15</p>
-<p>Defines a short hint intended to aid the user with data entry when the control has no value.</p>
 <hr>
 <h3>required?</h3>
 <blockquote>
 <p><code>optional</code> <strong>required?</strong>: <code>boolean</code> | <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<h4>Since</h4>
-<p>1.44.15</p>
 <p>Indicates that user input is required. This property is only needed for accessibility purposes when a
 single relationship between the field and a label (see aggregation <code>labelFor</code> of <code>sap.m.Label</code>) cannot
 be established (e.g. one label should label multiple fields).</p>
+<h4>Since</h4>
+<p>1.44.15</p>
 <hr>
 <h3>step?</h3>
 <blockquote>
@@ -175,28 +176,28 @@ be established (e.g. one label should label multiple fields).</p>
 <blockquote>
 <p><code>optional</code> <strong>stepMode?</strong>: <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code> | <a href="../../library/enumerations/StepInputStepModeType.html"><code>StepInputStepModeType</code></a> | <code>&quot;AdditionAndSubtraction&quot;</code> | <code>&quot;Multiple&quot;</code></p>
 </blockquote>
-<h4>Since</h4>
-<p>1.54</p>
 <p>Defines the calculation mode for the provided <code>step</code> and <code>largerStep</code>.</p>
 <p>If the user increases/decreases the value by <code>largerStep</code>, this calculation will consider it as well.
 For example, if the current <code>value</code> is 3, <code>step</code> is 5, <code>largerStep</code> is 5 and the user chooses PageUp,
 the calculation logic will consider the value of 3x5=15 to decide what will be the next <code>value</code>.</p>
+<h4>Since</h4>
+<p>1.54</p>
 <hr>
 <h3>textAlign?</h3>
 <blockquote>
 <p><code>optional</code> <strong>textAlign?</strong>: <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code> | <code>&quot;Begin&quot;</code> | <code>&quot;End&quot;</code> | <code>&quot;Left&quot;</code> | <code>&quot;Right&quot;</code> | <a href="../../../../../sap.ui.core/sap/ui/core/library/enumerations/TextAlign.html"><code>TextAlign</code></a> | <code>&quot;Center&quot;</code> | <code>&quot;Initial&quot;</code></p>
 </blockquote>
+<p>Defines the horizontal alignment of the text that is displayed inside the input field.</p>
 <h4>Since</h4>
 <p>1.54</p>
-<p>Defines the horizontal alignment of the text that is displayed inside the input field.</p>
 <hr>
 <h3>validationMode?</h3>
 <blockquote>
 <p><code>optional</code> <strong>validationMode?</strong>: <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code> | <a href="../../library/enumerations/StepInputValidationMode.html"><code>StepInputValidationMode</code></a> | <code>&quot;FocusOut&quot;</code> | <code>&quot;LiveChange&quot;</code></p>
 </blockquote>
+<p>Defines when the validation of the typed value will happen. By default this happens on focus out.</p>
 <h4>Since</h4>
 <p>1.54</p>
-<p>Defines when the validation of the typed value will happen. By default this happens on focus out.</p>
 <hr>
 <h3>value?</h3>
 <blockquote>
@@ -215,9 +216,9 @@ ValueState is managed internally only when validation is triggered by user inter
 <blockquote>
 <p><code>optional</code> <strong>valueStateText?</strong>: <code>string</code> | <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a></p>
 </blockquote>
+<p>Defines the text that appears in the value state message pop-up.</p>
 <h4>Since</h4>
 <p>1.52</p>
-<p>Defines the text that appears in the value state message pop-up.</p>
 <hr>
 <h3>width?</h3>
 <blockquote>
@@ -225,6 +226,6 @@ ValueState is managed internally only when validation is triggered by user inter
 </blockquote>
 <p>Defines the width of the control.</p>
 
-<footer>Generated from <code>@openui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@openui5/types@1.120.46</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

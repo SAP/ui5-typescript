@@ -2,12 +2,12 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>Class: ListBinding — OpenUI5 TypeScript API</title>
-<meta name="description" content="Class: ListBinding — OpenUI5 TypeScript API Reference (1.120.0)">
+<title>Abstract Class: ListBinding — OpenUI5 TypeScript API</title>
+<meta name="description" content="Abstract Class: ListBinding — OpenUI5 TypeScript API Reference (1.120.46)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/openui5/1.120/sap.ui.core/sap/ui/model/ListBinding/classes/ListBinding.html">
-<meta property="og:title" content="Class: ListBinding — OpenUI5 TypeScript API">
-<meta property="og:description" content="Class: ListBinding — OpenUI5 TypeScript API Reference (1.120.0)">
+<meta property="og:title" content="Abstract Class: ListBinding — OpenUI5 TypeScript API">
+<meta property="og:description" content="Abstract Class: ListBinding — OpenUI5 TypeScript API Reference (1.120.46)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/openui5/1.120/sap.ui.core/sap/ui/model/ListBinding/classes/ListBinding.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,10 +33,10 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../index.html">OpenUI5 API</a> › <a href="../../../../../../sap.ui.core/README.html">sap.ui.core</a> › sap › ui › model › <a href="../../../../../../sap.ui.core/sap/ui/model/ListBinding/README.html">ListBinding</a> › classes</nav>
-<p><a href="../../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.0)</strong></a></p>
+<p><a href="../../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.46)</strong></a></p>
 <hr>
-<p><a href="../../../../../../README.html">OpenUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../README.html">sap.ui.core</a> / <a href="../README.html">sap/ui/model/ListBinding</a> / ListBinding</p>
-<h1>Class: ListBinding</h1>
+<p><a href="../../../../../../README.html">OpenUI5 TypeScript API (1.120.46)</a> / <a href="../../../../../README.html">sap.ui.core</a> / <a href="../README.html">sap/ui/model/ListBinding</a> / ListBinding</p>
+<h1>Abstract Class: ListBinding</h1>
 <pre class="sig"><span class="kw">import</span> ListBinding <span class="kw">from</span> <span class="str">"sap/ui/model/ListBinding"</span>;</pre>
 <p>ListBinding is a specific binding for lists in the model, which can be used to populate Tables or ItemLists.</p>
 <h2>Extends</h2>
@@ -86,6 +86,9 @@ learn about their supported parameters (if any)</p>
 <blockquote>
 <p><strong>attachFilter</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>void</code></p>
 </blockquote>
+<p>Attaches event handler <code>fnFunction</code> to the #event:filter filter event of this <code>sap.ui.model.ListBinding</code>.</p>
+<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
+otherwise it will be bound to this <code>sap.ui.model.ListBinding</code> itself.</p>
 <h4>Parameters</h4>
 <h5>fnFunction</h5>
 <p><code>Function</code></p>
@@ -100,14 +103,14 @@ learn about their supported parameters (if any)</p>
 when a filter event is fired.</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Attaches event handler <code>fnFunction</code> to the #event:filter filter event of this <code>sap.ui.model.ListBinding</code>.</p>
-<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
-otherwise it will be bound to this <code>sap.ui.model.ListBinding</code> itself.</p>
 <hr>
 <h3><del>attachSort()</del></h3>
 <blockquote>
 <p><strong>attachSort</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>void</code></p>
 </blockquote>
+<p>Attaches event handler <code>fnFunction</code> to the #event:sort sort event of this <code>sap.ui.model.ListBinding</code>.</p>
+<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
+otherwise it will be bound to this <code>sap.ui.model.ListBinding</code> itself.</p>
 <h4>Parameters</h4>
 <h5>fnFunction</h5>
 <p><code>Function</code></p>
@@ -122,14 +125,12 @@ otherwise it will be bound to this <code>sap.ui.model.ListBinding</code> itself.
 a sorter event is fired.</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Attaches event handler <code>fnFunction</code> to the #event:sort sort event of this <code>sap.ui.model.ListBinding</code>.</p>
-<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
-otherwise it will be bound to this <code>sap.ui.model.ListBinding</code> itself.</p>
 <hr>
 <h3><del>detachFilter()</del></h3>
 <blockquote>
 <p><strong>detachFilter</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>void</code></p>
 </blockquote>
+<p>Detaches event handler <code>fnFunction</code> from the #event:filter filter event of this <code>sap.ui.model.ListBinding</code>.</p>
 <h4>Parameters</h4>
 <h5>fnFunction</h5>
 <p><code>Function</code></p>
@@ -143,12 +144,12 @@ otherwise it will be bound to this <code>sap.ui.model.ListBinding</code> itself.
 <p>(since 1.11) - use the <code>change</code> event.</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Detaches event handler <code>fnFunction</code> from the #event:filter filter event of this <code>sap.ui.model.ListBinding</code>.</p>
 <hr>
 <h3><del>detachSort()</del></h3>
 <blockquote>
 <p><strong>detachSort</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>void</code></p>
 </blockquote>
+<p>Detaches event handler <code>fnFunction</code> from the #event:sort sort event of this <code>sap.ui.model.ListBinding</code>.</p>
 <h4>Parameters</h4>
 <h5>fnFunction</h5>
 <p><code>Function</code></p>
@@ -162,12 +163,13 @@ otherwise it will be bound to this <code>sap.ui.model.ListBinding</code> itself.
 <p>(since 1.11) - use the <code>change</code> event.</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Detaches event handler <code>fnFunction</code> from the #event:sort sort event of this <code>sap.ui.model.ListBinding</code>.</p>
 <hr>
 <h3>diffData()</h3>
 <blockquote>
 <p><strong>diffData</strong>(<code>aOld</code>, <code>aNew</code>): <code>object</code>[]</p>
 </blockquote>
+<p>Calculates delta of specified old data array and new data array.</p>
+<p>For more information, see module:sap/base/util/array/diff.</p>
 <h4>Parameters</h4>
 <h5>aOld</h5>
 <p><code>any</code>[]</p>
@@ -180,13 +182,17 @@ otherwise it will be bound to this <code>sap.ui.model.ListBinding</code> itself.
 <p>List of update operations</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Calculates delta of specified old data array and new data array.</p>
-<p>For more information, see module:sap/base/util/array/diff.</p>
 <hr>
 <h3>enableExtendedChangeDetection()</h3>
 <blockquote>
 <p><strong>enableExtendedChangeDetection</strong>(<code>bDetectUpdates</code>, <code>vKey</code>, <code>oExtendedChangeDetectionConfig</code>): <code>void</code></p>
 </blockquote>
+<p>Enable extended change detection. When extended change detection is enabled, the list binding provides
+detailed information about changes, for example which entries have been removed or inserted. This can
+be utilized by a control for fine-grained update of its elements. Please see sap.ui.model.ListBinding.prototype.getContexts
+for more information.</p>
+<p>For models that do not have a unique key on each entry by default, a key property or function can be
+set which is used to identify entries.</p>
 <h4>Parameters</h4>
 <h5>bDetectUpdates</h5>
 <p><code>boolean</code></p>
@@ -202,12 +208,6 @@ a key to identify an entry</p>
 <p><code>void</code></p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Enable extended change detection. When extended change detection is enabled, the list binding provides
-detailed information about changes, for example which entries have been removed or inserted. This can
-be utilized by a control for fine-grained update of its elements. Please see sap.ui.model.ListBinding.prototype.getContexts
-for more information.</p>
-<p>For models that do not have a unique key on each entry by default, a key property or function can be
-set which is used to identify entries.</p>
 <hr>
 <h3>filter()</h3>
 <blockquote>
@@ -242,20 +242,26 @@ of both is not supported.</p>
 <blockquote>
 <p><strong>getAllCurrentContexts</strong>(): <a href="../../Context/classes/Context.html"><code>Context</code></a>[]</p>
 </blockquote>
+<p>Returns all current contexts of this list binding in no special order. Just like #getCurrentContexts,
+this method does not request any data from a back end and does not change the binding&#39;s state. In contrast
+to #getCurrentContexts, it does not only return those contexts that were last requested by a
+control, but all contexts that are currently available in the binding.</p>
 <h4>Returns</h4>
 <p><a href="../../Context/classes/Context.html"><code>Context</code></a>[]</p>
 <p>All current contexts of this list binding, in no special order</p>
 <h4>Since</h4>
 <p>1.97.0</p>
-<p>Returns all current contexts of this list binding in no special order. Just like #getCurrentContexts,
-this method does not request any data from a back end and does not change the binding&#39;s state. In contrast
-to #getCurrentContexts, it does not only return those contexts that were last requested by a
-control, but all contexts that are currently available in the binding.</p>
 <hr>
 <h3>getContexts()</h3>
 <blockquote>
 <p><strong>getContexts</strong>(<code>iStartIndex?</code>, <code>iLength?</code>, <code>iMaximumPrefetchSize?</code>, <code>bKeepCurrent?</code>): <a href="../../Context/classes/Context.html"><code>Context</code></a>[]</p>
 </blockquote>
+<p>Returns an array of binding contexts for the bound target list.</p>
+<p>In case of extended change detection, the context array may have an additional <code>diff</code> property, see <a href="https://ui5.sap.com/#/topic/7cdff73f308b4b10bdf7d83b7aba72e7">documentation on extended change detection</a>
+for details.</p>
+<p>**Note:**The public usage of this method is deprecated, as calls from outside of controls will lead to
+unexpected side effects. To avoid this, use sap.ui.model.ListBinding.prototype.getCurrentContexts
+instead.</p>
 <h4>Parameters</h4>
 <h5>iStartIndex?</h5>
 <p><code>number</code></p>
@@ -278,22 +284,11 @@ is model-specific and not implemented by all models</p>
 <p>The array of contexts for each row of the bound list</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Returns an array of binding contexts for the bound target list.</p>
-<p>In case of extended change detection, the context array may have an additional <code>diff</code> property, see <a href="https://ui5.sap.com/#/topic/7cdff73f308b4b10bdf7d83b7aba72e7">documentation on extended change detection</a>
-for details.</p>
-<p>**Note:**The public usage of this method is deprecated, as calls from outside of controls will lead to
-unexpected side effects. To avoid this, use sap.ui.model.ListBinding.prototype.getCurrentContexts
-instead.</p>
 <hr>
 <h3>getCount()</h3>
 <blockquote>
 <p><strong>getCount</strong>(): <code>number</code></p>
 </blockquote>
-<h4>Returns</h4>
-<p><code>number</code></p>
-<p>The count of entries</p>
-<h4>Since</h4>
-<p>1.93.0</p>
 <p>Returns the count of entries in the list, or <code>undefined</code> if it is unknown. The count is by default identical
 to the list length if it is final. Concrete subclasses may, however, override the method, for example:</p>
 <pre><code> for server-side models where lists are not completely read by the client,  for lists representing
@@ -302,20 +297,25 @@ to the list length if it is final. Concrete subclasses may, however, override th
 See:
 	#getLength
 	#isLengthFinal</p>
+<h4>Returns</h4>
+<p><code>number</code></p>
+<p>The count of entries</p>
+<h4>Since</h4>
+<p>1.93.0</p>
 <hr>
 <h3>getCurrentContexts()</h3>
 <blockquote>
 <p><strong>getCurrentContexts</strong>(): <a href="../../Context/classes/Context.html"><code>Context</code></a>[]</p>
 </blockquote>
+<p>Returns the contexts of this list binding as last requested by the control and in the same order the
+control has received them.</p>
+<p>This method does not request any data from a back end and does not change the binding&#39;s state.</p>
 <h4>Returns</h4>
 <p><a href="../../Context/classes/Context.html"><code>Context</code></a>[]</p>
 <p>The contexts of this list binding as last requested by the control and in the same order the
 control has received them</p>
 <h4>Since</h4>
 <p>1.28</p>
-<p>Returns the contexts of this list binding as last requested by the control and in the same order the
-control has received them.</p>
-<p>This method does not request any data from a back end and does not change the binding&#39;s state.</p>
 <hr>
 <h3>getDistinctValues()</h3>
 <blockquote>
@@ -334,6 +334,10 @@ control has received them.</p>
 <blockquote>
 <p><strong>getEntryKey</strong>(<code>oContext</code>): <code>string</code></p>
 </blockquote>
+<p>Returns the string key for the given model context, which is a unique representation of the context&#39;s
+data. This key is used in extended change detection to compute the difference between current and previous
+contexts retrieved via sap.ui.model.ListBinding#getContexts.</p>
+<p>The implementation of this method is optional for model-specific implementations of <code>sap.ui.model.ListBinding</code>.</p>
 <h4>Parameters</h4>
 <h5>oContext</h5>
 <p><a href="../../Context/classes/Context.html"><code>Context</code></a></p>
@@ -343,15 +347,12 @@ control has received them.</p>
 <p>The key for the given context</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Returns the string key for the given model context, which is a unique representation of the context&#39;s
-data. This key is used in extended change detection to compute the difference between current and previous
-contexts retrieved via sap.ui.model.ListBinding#getContexts.</p>
-<p>The implementation of this method is optional for model-specific implementations of <code>sap.ui.model.ListBinding</code>.</p>
 <hr>
 <h3>getFilters()</h3>
 <blockquote>
 <p><strong>getFilters</strong>(<code>sFilterType</code>): <a href="../../Filter/classes/Filter.html"><code>Filter</code></a>[]</p>
 </blockquote>
+<p>Returns the filters set via the constructor or via #filter for the given sap.ui.model.FilterType.</p>
 <h4>Parameters</h4>
 <h5>sFilterType</h5>
 <p><code>&quot;Application&quot;</code> | <a href="../../FilterType/enumerations/FilterType.html"><code>FilterType</code></a> | <code>&quot;Control&quot;</code></p>
@@ -361,7 +362,6 @@ contexts retrieved via sap.ui.model.ListBinding#getContexts.</p>
 <p>An array of filters for the given filter type.</p>
 <h4>Since</h4>
 <p>1.96.0</p>
-<p>Returns the filters set via the constructor or via #filter for the given sap.ui.model.FilterType.</p>
 <hr>
 <h3>getGroup()</h3>
 <blockquote>
@@ -384,14 +384,14 @@ See:
 <blockquote>
 <p><strong>getLength</strong>(): <code>number</code></p>
 </blockquote>
+<p>Returns the number of entries in the list.</p>
+<p>This might be an estimated or preliminary length, in case the full length is not known yet, see method
+#isLengthFinal.</p>
 <h4>Returns</h4>
 <p><code>number</code></p>
 <p>Returns the number of entries in the list</p>
 <h4>Since</h4>
 <p>1.24</p>
-<p>Returns the number of entries in the list.</p>
-<p>This might be an estimated or preliminary length, in case the full length is not known yet, see method
-#isLengthFinal.</p>
 <hr>
 <h3>isGrouped()</h3>
 <blockquote>
@@ -407,18 +407,26 @@ one sorter exists on the binding and the first sorter is a grouping sorter.</p>
 <blockquote>
 <p><strong>isLengthFinal</strong>(): <code>boolean</code></p>
 </blockquote>
+<p>Returns whether the length which can be retrieved using getLength() is a known, final length, or a preliminary
+or estimated length which may change if further data is requested.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>Whether the length is final</p>
 <h4>Since</h4>
 <p>1.24</p>
-<p>Returns whether the length which can be retrieved using getLength() is a known, final length, or a preliminary
-or estimated length which may change if further data is requested.</p>
 <hr>
 <h3>requestFilterForMessages()</h3>
 <blockquote>
 <p><strong>requestFilterForMessages</strong>(<code>fnFilter?</code>): <code>Promise</code>&lt;<a href="../../Filter/classes/Filter.html"><code>Filter</code></a>&gt;</p>
 </blockquote>
+<p>Requests a sap.ui.model.Filter object which can be used to filter the list binding by entries
+with model messages. With the filter callback, you can define if a message is considered when creating
+the filter for entries with messages.</p>
+<p>The resulting filter does not consider application or control filters specified for this list binding
+in its constructor or in its #filter method; add filters which you want to keep with the &quot;and&quot;
+conjunction to the resulting filter before calling #filter.</p>
+<p>The implementation of this method is optional for model-specific implementations of <code>sap.ui.model.ListBinding</code>.
+Check for existence of this function before calling it.</p>
 <h4>Parameters</h4>
 <h5>fnFilter?</h5>
 <p>(<code>p1</code>) =&gt; <code>boolean</code></p>
@@ -433,14 +441,6 @@ for any entry</p>
 <p>1.77.0</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Requests a sap.ui.model.Filter object which can be used to filter the list binding by entries
-with model messages. With the filter callback, you can define if a message is considered when creating
-the filter for entries with messages.</p>
-<p>The resulting filter does not consider application or control filters specified for this list binding
-in its constructor or in its #filter method; add filters which you want to keep with the &quot;and&quot;
-conjunction to the resulting filter before calling #filter.</p>
-<p>The implementation of this method is optional for model-specific implementations of <code>sap.ui.model.ListBinding</code>.
-Check for existence of this function before calling it.</p>
 <hr>
 <h3>sort()</h3>
 <blockquote>
@@ -466,13 +466,13 @@ is not supported.</p>
 <blockquote>
 <p><strong>update</strong>(): <code>void</code></p>
 </blockquote>
+<p>Update the list and apply sorting and filtering. Called after creation of the list binding on enabling
+extended change detection, see sap.ui.model.ListBinding#enableExtendedChangeDetection.</p>
+<p>The implementation of this method is optional for model-specific implementations of <code>sap.ui.model.ListBinding</code>.</p>
 <h4>Returns</h4>
 <p><code>void</code></p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Update the list and apply sorting and filtering. Called after creation of the list binding on enabling
-extended change detection, see sap.ui.model.ListBinding#enableExtendedChangeDetection.</p>
-<p>The implementation of this method is optional for model-specific implementations of <code>sap.ui.model.ListBinding</code>.</p>
 <hr>
 <h3>extend()</h3>
 <blockquote>
@@ -513,6 +513,6 @@ used by this class</p>
 <p><a href="../../Binding/classes/Binding.html"><code>Binding</code></a>.<a href="../../Binding/classes/Binding.html#getmetadata-1"><code>getMetadata</code></a></p>
 <hr>
 
-<footer>Generated from <code>@openui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@openui5/types@1.120.46</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

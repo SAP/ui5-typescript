@@ -2,12 +2,12 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>Class: ShellBarItem — OpenUI5 TypeScript API</title>
-<meta name="description" content="Class: ShellBarItem — OpenUI5 TypeScript API Reference (1.120.0)">
+<title>~~Class: ShellBarItem~~ — OpenUI5 TypeScript API</title>
+<meta name="description" content="~~Class: ShellBarItem~~ — OpenUI5 TypeScript API Reference (1.120.46)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/openui5/1.120/sap.ui.webc.fiori/sap/ui/webc/fiori/ShellBarItem/classes/ShellBarItem.html">
-<meta property="og:title" content="Class: ShellBarItem — OpenUI5 TypeScript API">
-<meta property="og:description" content="Class: ShellBarItem — OpenUI5 TypeScript API Reference (1.120.0)">
+<meta property="og:title" content="~~Class: ShellBarItem~~ — OpenUI5 TypeScript API">
+<meta property="og:description" content="~~Class: ShellBarItem~~ — OpenUI5 TypeScript API Reference (1.120.46)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/openui5/1.120/sap.ui.webc.fiori/sap/ui/webc/fiori/ShellBarItem/classes/ShellBarItem.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,14 +33,18 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../../index.html">OpenUI5 API</a> › <a href="../../../../../../../sap.ui.webc.fiori/README.html">sap.ui.webc.fiori</a> › sap › ui › webc › fiori › <a href="../../../../../../../sap.ui.webc.fiori/sap/ui/webc/fiori/ShellBarItem/README.html">ShellBarItem</a> › classes</nav>
-<p><a href="../../../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.0)</strong></a></p>
+<p><a href="../../../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.46)</strong></a></p>
 <hr>
-<p><a href="../../../../../../../README.html">OpenUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../../README.html">sap.ui.webc.fiori</a> / <a href="../README.html">sap/ui/webc/fiori/ShellBarItem</a> / ShellBarItem</p>
-<h1>Class: ShellBarItem</h1>
+<p><a href="../../../../../../../README.html">OpenUI5 TypeScript API (1.120.46)</a> / <a href="../../../../../../README.html">sap.ui.webc.fiori</a> / <a href="../README.html">sap/ui/webc/fiori/ShellBarItem</a> / ShellBarItem</p>
+<h1><del>Class: ShellBarItem</del></h1>
 <pre class="sig"><span class="kw">import</span> ShellBarItem <span class="kw">from</span> <span class="str">"sap/ui/webc/fiori/ShellBarItem"</span>;</pre>
 <p><strong><code>Experimental</code></strong></p>
 <h2>Since</h2>
-<p>1.92.0
+<p>1.92.0</p>
+<h2>Deprecated</h2>
+<p>(since 1.120) - this Web Components consumption model has been discarded. Until an alternative
+Web Components consumption model is available in the future, use sap.m and sap.f controls with similar
+functionality.
  (since 1.92.0) - This control is experimental and its API might change significantly.</p>
 <h2>Extends</h2>
 <ul>
@@ -89,7 +93,7 @@ of the syntax of the settings object.</p>
 <h4>Overrides</h4>
 <p><a href="../../../../../../../sap.ui.core/sap/ui/core/webc/WebComponent/classes/WebComponent.html"><code>WebComponent</code></a>.<a href="../../../../../../../sap.ui.core/sap/ui/core/webc/WebComponent/classes/WebComponent.html#constructor"><code>constructor</code></a></p>
 <h2>Properties</h2>
-<h3>__implements__sap_ui_webc_fiori_IShellBarItem</h3>
+<h3><del>__implements__sap_ui_webc_fiori_IShellBarItem</del></h3>
 <blockquote>
 <p><strong>__implements__sap_ui_webc_fiori_IShellBarItem</strong>: <code>boolean</code></p>
 </blockquote>
@@ -97,7 +101,7 @@ of the syntax of the settings object.</p>
 <h4>Implementation of</h4>
 <p><a href="../../library/interfaces/IShellBarItem.html"><code>IShellBarItem</code></a>.<a href="../../library/interfaces/IShellBarItem.html#__implements__sap_ui_webc_fiori_ishellbaritem"><code>__implements__sap_ui_webc_fiori_IShellBarItem</code></a></p>
 <hr>
-<h3>attachClick()</h3>
+<h3><del>attachClick()</del></h3>
 <h4>Call Signature</h4>
 <blockquote>
 <p><strong>attachClick</strong>(<code>oData</code>, <code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
@@ -141,7 +145,7 @@ otherwise it will be bound to this <code>sap.ui.webc.fiori.ShellBarItem</code> i
 <p><code>this</code></p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <hr>
-<h3>detachClick()</h3>
+<h3><del>detachClick()</del></h3>
 <blockquote>
 <p><strong>detachClick</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
@@ -159,11 +163,14 @@ otherwise it will be bound to this <code>sap.ui.webc.fiori.ShellBarItem</code> i
 <p><code>this</code></p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <hr>
-<h3>fireClick()</h3>
+<h3><del>fireClick()</del></h3>
 <blockquote>
 <p><strong>fireClick</strong>(<code>mParameters?</code>): <code>boolean</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
+<p>Fires event #event:click click to attached listeners.</p>
+<p>Listeners may prevent the default action of this event by calling the <code>preventDefault</code> method on the
+event object. The return value of this method indicates whether the default action should be executed.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/ShellBarItem$ClickEventParameters.html"><code>ShellBarItem$ClickEventParameters</code></a></p>
@@ -173,11 +180,8 @@ otherwise it will be bound to this <code>sap.ui.webc.fiori.ShellBarItem</code> i
 <p>Whether or not to prevent the default action</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Fires event #event:click click to attached listeners.</p>
-<p>Listeners may prevent the default action of this event by calling the <code>preventDefault</code> method on the
-event object. The return value of this method indicates whether the default action should be executed.</p>
 <hr>
-<h3>getCount()</h3>
+<h3><del>getCount()</del></h3>
 <blockquote>
 <p><strong>getCount</strong>(): <code>string</code></p>
 </blockquote>
@@ -189,7 +193,7 @@ event object. The return value of this method indicates whether the default acti
 <p><code>string</code></p>
 <p>Value of property <code>count</code></p>
 <hr>
-<h3>getIcon()</h3>
+<h3><del>getIcon()</del></h3>
 <blockquote>
 <p><strong>getIcon</strong>(): <code>string</code></p>
 </blockquote>
@@ -201,7 +205,7 @@ event object. The return value of this method indicates whether the default acti
 <p><code>string</code></p>
 <p>Value of property <code>icon</code></p>
 <hr>
-<h3>getText()</h3>
+<h3><del>getText()</del></h3>
 <blockquote>
 <p><strong>getText</strong>(): <code>string</code></p>
 </blockquote>
@@ -214,7 +218,7 @@ event object. The return value of this method indicates whether the default acti
 <p><code>string</code></p>
 <p>Value of property <code>text</code></p>
 <hr>
-<h3>setCount()</h3>
+<h3><del>setCount()</del></h3>
 <blockquote>
 <p><strong>setCount</strong>(<code>sCount?</code>): <code>this</code></p>
 </blockquote>
@@ -231,7 +235,7 @@ event object. The return value of this method indicates whether the default acti
 <p><code>this</code></p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <hr>
-<h3>setIcon()</h3>
+<h3><del>setIcon()</del></h3>
 <blockquote>
 <p><strong>setIcon</strong>(<code>sIcon?</code>): <code>this</code></p>
 </blockquote>
@@ -248,7 +252,7 @@ event object. The return value of this method indicates whether the default acti
 <p><code>this</code></p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <hr>
-<h3>setText()</h3>
+<h3><del>setText()</del></h3>
 <blockquote>
 <p><strong>setText</strong>(<code>sText?</code>): <code>this</code></p>
 </blockquote>
@@ -266,7 +270,7 @@ event object. The return value of this method indicates whether the default acti
 <p><code>this</code></p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <hr>
-<h3>extend()</h3>
+<h3><del>extend()</del></h3>
 <blockquote>
 <p><code>static</code> <strong>extend</strong>&lt;<code>T</code>&gt;(<code>sClassName</code>, <code>oClassInfo?</code>, <code>FNMetaImpl?</code>): <code>Function</code></p>
 </blockquote>
@@ -294,7 +298,7 @@ used by this class</p>
 <h4>Overrides</h4>
 <p><a href="../../../../../../../sap.ui.core/sap/ui/core/webc/WebComponent/classes/WebComponent.html"><code>WebComponent</code></a>.<a href="../../../../../../../sap.ui.core/sap/ui/core/webc/WebComponent/classes/WebComponent.html#extend"><code>extend</code></a></p>
 <hr>
-<h3>getMetadata()</h3>
+<h3><del>getMetadata()</del></h3>
 <blockquote>
 <p><code>static</code> <strong>getMetadata</strong>(): <a href="../../../../../../../sap.ui.core/sap/ui/core/webc/WebComponentMetadata/classes/WebComponentMetadata.html"><code>WebComponentMetadata</code></a></p>
 </blockquote>
@@ -307,6 +311,6 @@ used by this class</p>
 <p><a href="../../../../../../../sap.ui.core/sap/ui/core/webc/WebComponent/classes/WebComponent.html"><code>WebComponent</code></a>.<a href="../../../../../../../sap.ui.core/sap/ui/core/webc/WebComponent/classes/WebComponent.html#getmetadata-1"><code>getMetadata</code></a></p>
 <hr>
 
-<footer>Generated from <code>@openui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@openui5/types@1.120.46</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

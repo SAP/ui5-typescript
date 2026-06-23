@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Class: Currency — OpenUI5 TypeScript API</title>
-<meta name="description" content="Class: Currency — OpenUI5 TypeScript API Reference (1.120.0)">
+<meta name="description" content="Class: Currency — OpenUI5 TypeScript API Reference (1.120.46)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/openui5/1.120/sap.ui.core/sap/ui/model/odata/type/Currency/classes/Currency.html">
 <meta property="og:title" content="Class: Currency — OpenUI5 TypeScript API">
-<meta property="og:description" content="Class: Currency — OpenUI5 TypeScript API Reference (1.120.0)">
+<meta property="og:description" content="Class: Currency — OpenUI5 TypeScript API Reference (1.120.46)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/openui5/1.120/sap.ui.core/sap/ui/model/odata/type/Currency/classes/Currency.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,13 +33,11 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../../../index.html">OpenUI5 API</a> › <a href="../../../../../../../../sap.ui.core/README.html">sap.ui.core</a> › sap › ui › model › odata › type › <a href="../../../../../../../../sap.ui.core/sap/ui/model/odata/type/Currency/README.html">Currency</a> › classes</nav>
-<p><a href="../../../../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.0)</strong></a></p>
+<p><a href="../../../../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.46)</strong></a></p>
 <hr>
-<p><a href="../../../../../../../../README.html">OpenUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../../../README.html">sap.ui.core</a> / <a href="../README.html">sap/ui/model/odata/type/Currency</a> / Currency</p>
+<p><a href="../../../../../../../../README.html">OpenUI5 TypeScript API (1.120.46)</a> / <a href="../../../../../../../README.html">sap.ui.core</a> / <a href="../README.html">sap/ui/model/odata/type/Currency</a> / Currency</p>
 <h1>Class: Currency</h1>
 <pre class="sig"><span class="kw">import</span> Currency <span class="kw">from</span> <span class="str">"sap/ui/model/odata/type/Currency"</span>;</pre>
-<h2>Since</h2>
-<p>1.63.0</p>
 <p>This class represents the <code>Currency</code> composite type with the parts amount, currency, and currency customizing.
 The type may only be used for amount and currency parts from a sap.ui.model.odata.v4.ODataModel
 or a sap.ui.model.odata.v2.ODataModel. The amount part is formatted according to the customizing
@@ -48,6 +46,8 @@ for OData V4 or by sap.ui.model.odata.ODataMetaModel#requestCurrencyCodes for OD
 customizing part. See <a href="https://ui5.sap.com/#/topic/4d1b9d44941f483f9b7f579873d38685">Currency and Unit Customizing in OData V4</a>
 resp. <a href="https://ui5.sap.com/#/topic/6c47b2b39db9404582994070ec3d57a2#loioaa9024c7c5444822a68daeb21a92bd51">Currency and Unit Customizing in OData V2</a>
 for more information. If no currency customizing is available, UI5&#39;s default formatting applies.</p>
+<h2>Since</h2>
+<p>1.63.0</p>
 <h2>Extends</h2>
 <ul>
 <li><code>unknown</code></li>
@@ -100,6 +100,7 @@ only be set once on construction.</p>
 <blockquote>
 <p><strong>formatValue</strong>(<code>aValues</code>, <code>sTargetType</code>): <code>string</code></p>
 </blockquote>
+<p>Formats the given values of the parts of the <code>Currency</code> composite type to the given target type.</p>
 <h4>Parameters</h4>
 <h5>aValues</h5>
 <p><code>any</code>[]</p>
@@ -118,23 +119,25 @@ See sap.ui.model.odata.type for more information.</p>
 the currency or the currency customizing contained therein is <code>undefined</code>.</p>
 <h4>Since</h4>
 <p>1.63.0</p>
-<p>Formats the given values of the parts of the <code>Currency</code> composite type to the given target type.</p>
 <hr>
 <h3>getName()</h3>
 <blockquote>
 <p><strong>getName</strong>(): <code>string</code></p>
 </blockquote>
+<p>Returns the type&#39;s name.</p>
 <h4>Returns</h4>
 <p><code>string</code></p>
 <p>The type&#39;s name</p>
 <h4>Since</h4>
 <p>1.63.0</p>
-<p>Returns the type&#39;s name.</p>
 <hr>
 <h3>parseValue()</h3>
 <blockquote>
 <p><strong>parseValue</strong>(<code>vValue</code>, <code>sSourceType</code>, <code>aCurrentValues?</code>): <code>any</code>[]</p>
 </blockquote>
+<p>Parses the given string value to an array containing amount and currency.
+See:
+	sap.ui.model.type.Currency#parseValue</p>
 <h4>Parameters</h4>
 <h5>vValue</h5>
 <p><code>string</code></p>
@@ -152,14 +155,13 @@ See sap.ui.model.odata.type for more information.</p>
 values unless the format option <code>parseAsString</code> is <code>false</code>; in this case, the amount is a number.</p>
 <h4>Since</h4>
 <p>1.63.0</p>
-<p>Parses the given string value to an array containing amount and currency.
-See:
-	sap.ui.model.type.Currency#parseValue</p>
 <hr>
 <h3>validateValue()</h3>
 <blockquote>
 <p><strong>validateValue</strong>(<code>aValues</code>): <code>void</code></p>
 </blockquote>
+<p>Validates whether the given value in model representation as returned by #parseValue is valid
+and meets the conditions of this type&#39;s currency customizing.</p>
 <h4>Parameters</h4>
 <h5>aValues</h5>
 <p><code>any</code>[]</p>
@@ -168,8 +170,6 @@ See:
 <p><code>void</code></p>
 <h4>Since</h4>
 <p>1.63.0</p>
-<p>Validates whether the given value in model representation as returned by #parseValue is valid
-and meets the conditions of this type&#39;s currency customizing.</p>
 <hr>
 <h3>extend()</h3>
 <blockquote>
@@ -205,6 +205,6 @@ used by this class</p>
 <p><a href="../../../../../base/Metadata/classes/Metadata.html"><code>Metadata</code></a></p>
 <p>Metadata object describing this class</p>
 
-<footer>Generated from <code>@openui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@openui5/types@1.120.46</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

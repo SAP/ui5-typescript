@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>~~Class: SearchField~~ — OpenUI5 TypeScript API</title>
-<meta name="description" content="~~Class: SearchField~~ — OpenUI5 TypeScript API Reference (1.120.0)">
+<meta name="description" content="~~Class: SearchField~~ — OpenUI5 TypeScript API Reference (1.120.46)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/openui5/1.120/sap.ui.commons/sap/ui/commons/SearchField/classes/SearchField.html">
 <meta property="og:title" content="~~Class: SearchField~~ — OpenUI5 TypeScript API">
-<meta property="og:description" content="~~Class: SearchField~~ — OpenUI5 TypeScript API Reference (1.120.0)">
+<meta property="og:description" content="~~Class: SearchField~~ — OpenUI5 TypeScript API Reference (1.120.46)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/openui5/1.120/sap.ui.commons/sap/ui/commons/SearchField/classes/SearchField.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,14 +33,14 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../index.html">OpenUI5 API</a> › <a href="../../../../../../sap.ui.commons/README.html">sap.ui.commons</a> › sap › ui › commons › <a href="../../../../../../sap.ui.commons/sap/ui/commons/SearchField/README.html">SearchField</a> › classes</nav>
-<p><a href="../../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.0)</strong></a></p>
+<p><a href="../../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.46)</strong></a></p>
 <hr>
-<p><a href="../../../../../../README.html">OpenUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../README.html">sap.ui.commons</a> / <a href="../README.html">sap/ui/commons/SearchField</a> / SearchField</p>
+<p><a href="../../../../../../README.html">OpenUI5 TypeScript API (1.120.46)</a> / <a href="../../../../../README.html">sap.ui.commons</a> / <a href="../README.html">sap/ui/commons/SearchField</a> / SearchField</p>
 <h1><del>Class: SearchField</del></h1>
 <pre class="sig"><span class="kw">import</span> SearchField <span class="kw">from</span> <span class="str">"sap/ui/commons/SearchField"</span>;</pre>
+<p>Allows the user to type search queries and to trigger the search. Optionally, suggestions can be added.</p>
 <h2>Deprecated</h2>
 <p>(since 1.38) - Instead, use the <code>sap.m.SearchField</code> control.</p>
-<p>Allows the user to type search queries and to trigger the search. Optionally, suggestions can be added.</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></li>
@@ -258,6 +258,7 @@ otherwise it will be bound to this <code>sap.ui.commons.SearchField</code> itsel
 <blockquote>
 <p><strong>fireSearch</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
+<p>Fires event #event:search search to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/SearchField$SearchEventParameters.html"><code>SearchField$SearchEventParameters</code></a></p>
@@ -267,12 +268,12 @@ otherwise it will be bound to this <code>sap.ui.commons.SearchField</code> itsel
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Fires event #event:search search to attached listeners.</p>
 <hr>
 <h3><del>fireSuggest()</del></h3>
 <blockquote>
 <p><strong>fireSuggest</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
+<p>Fires event #event:suggest suggest to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/SearchField$SuggestEventParameters.html"><code>SearchField$SuggestEventParameters</code></a></p>
@@ -282,7 +283,6 @@ otherwise it will be bound to this <code>sap.ui.commons.SearchField</code> itsel
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Fires event #event:suggest suggest to attached listeners.</p>
 <hr>
 <h3><del>getAriaDescribedBy()</del></h3>
 <blockquote>
@@ -315,14 +315,14 @@ otherwise it will be bound to this <code>sap.ui.commons.SearchField</code> itsel
 <blockquote>
 <p><strong>getEnableCache</strong>(): <code>boolean</code></p>
 </blockquote>
+<p>Gets current value of property #getEnableCache enableCache.</p>
+<p>When list suggestion is enabled all suggestions are cached and no suggest event is fired.</p>
+<p>Default value is <code>true</code>.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>Value of property <code>enableCache</code></p>
 <h4>Since</h4>
 <p>1.10.3</p>
-<p>Gets current value of property #getEnableCache enableCache.</p>
-<p>When list suggestion is enabled all suggestions are cached and no suggest event is fired.</p>
-<p>Default value is <code>true</code>.</p>
 <hr>
 <h3><del>getEnableClear()</del></h3>
 <blockquote>
@@ -408,14 +408,14 @@ data.</p>
 <blockquote>
 <p><strong>getPlaceholder</strong>(): <code>string</code></p>
 </blockquote>
+<p>Gets current value of property #getPlaceholder placeholder.</p>
+<p>Placeholder for the input field.</p>
+<p>Default value is <code>empty string</code>.</p>
 <h4>Returns</h4>
 <p><code>string</code></p>
 <p>Value of property <code>placeholder</code></p>
 <h4>Since</h4>
 <p>1.32</p>
-<p>Gets current value of property #getPlaceholder placeholder.</p>
-<p>Placeholder for the input field.</p>
-<p>Default value is <code>empty string</code>.</p>
 <hr>
 <h3><del>getSearchProvider()</del></h3>
 <blockquote>
@@ -486,14 +486,14 @@ This feature is deactivated on mobile devices.</p>
 <blockquote>
 <p><strong>getValueState</strong>(): <code>&quot;None&quot;</code> | <a href="../../../../../../sap.ui.core/sap/ui/core/library/enumerations/ValueState.html"><code>ValueState</code></a> | <code>&quot;Error&quot;</code> | <code>&quot;Information&quot;</code> | <code>&quot;Success&quot;</code> | <code>&quot;Warning&quot;</code></p>
 </blockquote>
+<p>Gets current value of property #getValueState valueState.</p>
+<p>Visualizes warnings or errors related to the input field. Possible values: Warning, Error, Success, None.</p>
+<p>Default value is <code>None</code>.</p>
 <h4>Returns</h4>
 <p><code>&quot;None&quot;</code> | <a href="../../../../../../sap.ui.core/sap/ui/core/library/enumerations/ValueState.html"><code>ValueState</code></a> | <code>&quot;Error&quot;</code> | <code>&quot;Information&quot;</code> | <code>&quot;Success&quot;</code> | <code>&quot;Warning&quot;</code></p>
 <p>Value of property <code>valueState</code></p>
 <h4>Since</h4>
 <p>1.32</p>
-<p>Gets current value of property #getValueState valueState.</p>
-<p>Visualizes warnings or errors related to the input field. Possible values: Warning, Error, Success, None.</p>
-<p>Default value is <code>None</code>.</p>
 <hr>
 <h3><del>getVisibleItemCount()</del></h3>
 <blockquote>
@@ -581,6 +581,10 @@ of list items is higher than the setting, a scroll bar is provided.</p>
 <blockquote>
 <p><strong>setEnableCache</strong>(<code>bEnableCache?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getEnableCache enableCache.</p>
+<p>When list suggestion is enabled all suggestions are cached and no suggest event is fired.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>true</code>.</p>
 <h4>Parameters</h4>
 <h5>bEnableCache?</h5>
 <p><code>boolean</code></p>
@@ -590,10 +594,6 @@ of list items is higher than the setting, a scroll bar is provided.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.10.3</p>
-<p>Sets a new value for property #getEnableCache enableCache.</p>
-<p>When list suggestion is enabled all suggestions are cached and no suggest event is fired.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>true</code>.</p>
 <hr>
 <h3><del>setEnableClear()</del></h3>
 <blockquote>
@@ -714,6 +714,10 @@ data.</p>
 <blockquote>
 <p><strong>setPlaceholder</strong>(<code>sPlaceholder?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getPlaceholder placeholder.</p>
+<p>Placeholder for the input field.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>empty string</code>.</p>
 <h4>Parameters</h4>
 <h5>sPlaceholder?</h5>
 <p><code>string</code></p>
@@ -723,10 +727,6 @@ data.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.32</p>
-<p>Sets a new value for property #getPlaceholder placeholder.</p>
-<p>Placeholder for the input field.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>empty string</code>.</p>
 <hr>
 <h3><del>setSearchProvider()</del></h3>
 <blockquote>
@@ -826,6 +826,10 @@ This feature is deactivated on mobile devices.</p>
 <blockquote>
 <p><strong>setValueState</strong>(<code>sValueState?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getValueState valueState.</p>
+<p>Visualizes warnings or errors related to the input field. Possible values: Warning, Error, Success, None.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>None</code>.</p>
 <h4>Parameters</h4>
 <h5>sValueState?</h5>
 <p><code>&quot;None&quot;</code> | <a href="../../../../../../sap.ui.core/sap/ui/core/library/enumerations/ValueState.html"><code>ValueState</code></a> | <code>&quot;Error&quot;</code> | <code>&quot;Information&quot;</code> | <code>&quot;Success&quot;</code> | <code>&quot;Warning&quot;</code></p>
@@ -835,10 +839,6 @@ This feature is deactivated on mobile devices.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.32</p>
-<p>Sets a new value for property #getValueState valueState.</p>
-<p>Visualizes warnings or errors related to the input field. Possible values: Warning, Error, Success, None.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>None</code>.</p>
 <hr>
 <h3><del>setVisibleItemCount()</del></h3>
 <blockquote>
@@ -927,6 +927,6 @@ used by this class</p>
 <p><a href="../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a>.<a href="../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html#getmetadata-1"><code>getMetadata</code></a></p>
 <hr>
 
-<footer>Generated from <code>@openui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@openui5/types@1.120.46</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Class: FilterBarBase — OpenUI5 TypeScript API</title>
-<meta name="description" content="Class: FilterBarBase — OpenUI5 TypeScript API Reference (1.120.0)">
+<meta name="description" content="Class: FilterBarBase — OpenUI5 TypeScript API Reference (1.120.46)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/openui5/1.120/sap.ui.mdc/sap/ui/mdc/filterbar/FilterBarBase/classes/FilterBarBase.html">
 <meta property="og:title" content="Class: FilterBarBase — OpenUI5 TypeScript API">
-<meta property="og:description" content="Class: FilterBarBase — OpenUI5 TypeScript API Reference (1.120.0)">
+<meta property="og:description" content="Class: FilterBarBase — OpenUI5 TypeScript API Reference (1.120.46)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/openui5/1.120/sap.ui.mdc/sap/ui/mdc/filterbar/FilterBarBase/classes/FilterBarBase.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,14 +33,14 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../../index.html">OpenUI5 API</a> › <a href="../../../../../../../sap.ui.mdc/README.html">sap.ui.mdc</a> › sap › ui › mdc › filterbar › <a href="../../../../../../../sap.ui.mdc/sap/ui/mdc/filterbar/FilterBarBase/README.html">FilterBarBase</a> › classes</nav>
-<p><a href="../../../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.0)</strong></a></p>
+<p><a href="../../../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.46)</strong></a></p>
 <hr>
-<p><a href="../../../../../../../README.html">OpenUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../../README.html">sap.ui.mdc</a> / <a href="../README.html">sap/ui/mdc/filterbar/FilterBarBase</a> / FilterBarBase</p>
+<p><a href="../../../../../../../README.html">OpenUI5 TypeScript API (1.120.46)</a> / <a href="../../../../../../README.html">sap.ui.mdc</a> / <a href="../README.html">sap/ui/mdc/filterbar/FilterBarBase</a> / FilterBarBase</p>
 <h1>Class: FilterBarBase</h1>
 <pre class="sig"><span class="kw">import</span> FilterBarBase <span class="kw">from</span> <span class="str">"sap/ui/mdc/filterbar/FilterBarBase"</span>;</pre>
+<p>The <code>FilterBarBase</code> control is the base for filter displaying controls in MDC.</p>
 <h2>Since</h2>
 <p>1.80.0</p>
-<p>The <code>FilterBarBase</code> control is the base for filter displaying controls in MDC.</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../../Control/classes/Control.html"><code>Control</code></a></li>
@@ -274,6 +274,7 @@ of the sap.ui.mdc.FilterBar FilterBar.</p>
 <blockquote>
 <p><strong>fireFiltersChanged</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
+<p>Fires event #event:filtersChanged filtersChanged to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/FilterBarBase$FiltersChangedEventParameters.html"><code>FilterBarBase$FiltersChangedEventParameters</code></a></p>
@@ -283,12 +284,12 @@ of the sap.ui.mdc.FilterBar FilterBar.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Fires event #event:filtersChanged filtersChanged to attached listeners.</p>
 <hr>
 <h3>fireSearch()</h3>
 <blockquote>
 <p><strong>fireSearch</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
+<p>Fires event #event:search search to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/FilterBarBase$SearchEventParameters.html"><code>FilterBarBase$SearchEventParameters</code></a></p>
@@ -298,7 +299,6 @@ of the sap.ui.mdc.FilterBar FilterBar.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Fires event #event:search search to attached listeners.</p>
 <hr>
 <h3>getAssignedFilterNames()</h3>
 <blockquote>
@@ -354,11 +354,6 @@ related to the sap.ui.mdc.FilterBar#setP13nMode p13nMode property configuration.
 <blockquote>
 <p><strong>getDelegate</strong>(): <code>object</code></p>
 </blockquote>
-<h4>Returns</h4>
-<p><code>object</code></p>
-<p>Value of property <code>delegate</code></p>
-<h4>Since</h4>
-<p>1.74</p>
 <p>Gets current value of property #getDelegate delegate.</p>
 <p>Defines the path to the metadata retrieval class for the <code>FilterBarBase</code> control. It basically identifies
 the sap.ui.mdc.FilterBarDelegate FilterBarDelegate file that provides the required APIs to create
@@ -367,6 +362,11 @@ the content of the sap.ui.mdc.FilterBar FilterBar control.
 that).
  <strong>Note:</strong> This property must not be bound.</p>
 <p>Default value is <code>...see text or source</code>.</p>
+<h4>Returns</h4>
+<p><code>object</code></p>
+<p>Value of property <code>delegate</code></p>
+<h4>Since</h4>
+<p>1.74</p>
 <hr>
 <h3>getFilterItems()</h3>
 <blockquote>
@@ -384,17 +384,17 @@ effects. Changes of the aggregation have to be made with the sap.ui.mdc.p13n.Sta
 <blockquote>
 <p><strong>getLiveMode</strong>(): <code>boolean</code></p>
 </blockquote>
-<h4>Returns</h4>
-<p><code>boolean</code></p>
-<p>Value of property <code>liveMode</code></p>
-<h4>Since</h4>
-<p>1.74</p>
 <p>Gets current value of property #getLiveMode liveMode.</p>
 <p>Triggers a search automatically after a filter value has been changed.
  <strong>Note:</strong> The <code>liveMode</code> property only operates in non-mobile scenarios.
  Additionally, if the <code>liveMode</code> property is active, the following applies:
  The error message box is not displayed, and the <code>showMessages</code> property is ignored.</p>
 <p>Default value is <code>false</code>.</p>
+<h4>Returns</h4>
+<p><code>boolean</code></p>
+<p>Value of property <code>liveMode</code></p>
+<h4>Since</h4>
+<p>1.74</p>
 <hr>
 <h3>getSearch()</h3>
 <blockquote>
@@ -423,29 +423,29 @@ effects. Changes of the aggregation have to be made with the sap.ui.mdc.p13n.Sta
 <blockquote>
 <p><strong>getShowMessages</strong>(): <code>boolean</code></p>
 </blockquote>
+<p>Gets current value of property #getShowMessages showMessages.</p>
+<p>Indicates whether possible errors during the search in a message box are displayed.</p>
+<p>Default value is <code>true</code>.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>Value of property <code>showMessages</code></p>
 <h4>Since</h4>
 <p>1.74</p>
-<p>Gets current value of property #getShowMessages showMessages.</p>
-<p>Indicates whether possible errors during the search in a message box are displayed.</p>
-<p>Default value is <code>true</code>.</p>
 <hr>
 <h3>getSuspendSelection()</h3>
 <blockquote>
 <p><strong>getSuspendSelection</strong>(): <code>boolean</code></p>
 </blockquote>
-<h4>Returns</h4>
-<p><code>boolean</code></p>
-<p>Value of property <code>suspendSelection</code></p>
-<h4>Since</h4>
-<p>1.79.0</p>
 <p>Gets current value of property #getSuspendSelection suspendSelection.</p>
 <p>If set to <code>true</code>, all search requests are ignored. Once it has been set to <code>false</code>, a search is triggered
 immediately if one or more search requests have been triggered in the meantime but were ignored based
 on the setting.</p>
 <p>Default value is <code>false</code>.</p>
+<h4>Returns</h4>
+<p><code>boolean</code></p>
+<p>Value of property <code>suspendSelection</code></p>
+<h4>Since</h4>
+<p>1.79.0</p>
 <hr>
 <h3>getVariantBackreference()</h3>
 <blockquote>
@@ -505,15 +505,6 @@ and returns its index if found or -1 otherwise.</p>
 <blockquote>
 <p><strong>setDelegate</strong>(<code>oDelegate?</code>): <code>this</code></p>
 </blockquote>
-<h4>Parameters</h4>
-<h5>oDelegate?</h5>
-<p><code>object</code></p>
-<p>New value for property <code>delegate</code></p>
-<h4>Returns</h4>
-<p><code>this</code></p>
-<p>Reference to <code>this</code> in order to allow method chaining</p>
-<h4>Since</h4>
-<p>1.74</p>
 <p>Sets a new value for property #getDelegate delegate.</p>
 <p>Defines the path to the metadata retrieval class for the <code>FilterBarBase</code> control. It basically identifies
 the sap.ui.mdc.FilterBarDelegate FilterBarDelegate file that provides the required APIs to create
@@ -523,11 +514,27 @@ that).
  <strong>Note:</strong> This property must not be bound.</p>
 <p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <p>Default value is <code>...see text or source</code>.</p>
+<h4>Parameters</h4>
+<h5>oDelegate?</h5>
+<p><code>object</code></p>
+<p>New value for property <code>delegate</code></p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<h4>Since</h4>
+<p>1.74</p>
 <hr>
 <h3>setLiveMode()</h3>
 <blockquote>
 <p><strong>setLiveMode</strong>(<code>bLiveMode?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getLiveMode liveMode.</p>
+<p>Triggers a search automatically after a filter value has been changed.
+ <strong>Note:</strong> The <code>liveMode</code> property only operates in non-mobile scenarios.
+ Additionally, if the <code>liveMode</code> property is active, the following applies:
+ The error message box is not displayed, and the <code>showMessages</code> property is ignored.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>false</code>.</p>
 <h4>Parameters</h4>
 <h5>bLiveMode?</h5>
 <p><code>boolean</code></p>
@@ -537,13 +544,6 @@ that).
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.74</p>
-<p>Sets a new value for property #getLiveMode liveMode.</p>
-<p>Triggers a search automatically after a filter value has been changed.
- <strong>Note:</strong> The <code>liveMode</code> property only operates in non-mobile scenarios.
- Additionally, if the <code>liveMode</code> property is active, the following applies:
- The error message box is not displayed, and the <code>showMessages</code> property is ignored.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>false</code>.</p>
 <hr>
 <h3>setShowGoButton()</h3>
 <blockquote>
@@ -566,6 +566,10 @@ that).
 <blockquote>
 <p><strong>setShowMessages</strong>(<code>bShowMessages?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getShowMessages showMessages.</p>
+<p>Indicates whether possible errors during the search in a message box are displayed.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>true</code>.</p>
 <h4>Parameters</h4>
 <h5>bShowMessages?</h5>
 <p><code>boolean</code></p>
@@ -575,15 +579,17 @@ that).
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.74</p>
-<p>Sets a new value for property #getShowMessages showMessages.</p>
-<p>Indicates whether possible errors during the search in a message box are displayed.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>true</code>.</p>
 <hr>
 <h3>setSuspendSelection()</h3>
 <blockquote>
 <p><strong>setSuspendSelection</strong>(<code>bSuspendSelection?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getSuspendSelection suspendSelection.</p>
+<p>If set to <code>true</code>, all search requests are ignored. Once it has been set to <code>false</code>, a search is triggered
+immediately if one or more search requests have been triggered in the meantime but were ignored based
+on the setting.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>false</code>.</p>
 <h4>Parameters</h4>
 <h5>bSuspendSelection?</h5>
 <p><code>boolean</code></p>
@@ -593,12 +599,6 @@ that).
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.79.0</p>
-<p>Sets a new value for property #getSuspendSelection suspendSelection.</p>
-<p>If set to <code>true</code>, all search requests are ignored. Once it has been set to <code>false</code>, a search is triggered
-immediately if one or more search requests have been triggered in the meantime but were ignored based
-on the setting.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>false</code>.</p>
 <hr>
 <h3>setVariantBackreference()</h3>
 <blockquote>
@@ -678,6 +678,6 @@ used by this class</p>
 <h4>Overrides</h4>
 <p><a href="../../../Control/classes/Control.html"><code>Control</code></a>.<a href="../../../Control/classes/Control.html#getmetadata"><code>getMetadata</code></a></p>
 
-<footer>Generated from <code>@openui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@openui5/types@1.120.46</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

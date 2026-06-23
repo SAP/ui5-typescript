@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Interface: $MultiInputSettings — OpenUI5 TypeScript API</title>
-<meta name="description" content="Interface: $MultiInputSettings — OpenUI5 TypeScript API Reference (1.120.0)">
+<meta name="description" content="Interface: $MultiInputSettings — OpenUI5 TypeScript API Reference (1.120.46)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/openui5/1.120/sap.m/sap/m/MultiInput/interfaces/$MultiInputSettings.html">
 <meta property="og:title" content="Interface: $MultiInputSettings — OpenUI5 TypeScript API">
-<meta property="og:description" content="Interface: $MultiInputSettings — OpenUI5 TypeScript API Reference (1.120.0)">
+<meta property="og:description" content="Interface: $MultiInputSettings — OpenUI5 TypeScript API Reference (1.120.46)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/openui5/1.120/sap.m/sap/m/MultiInput/interfaces/$MultiInputSettings.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,11 +33,12 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../index.html">OpenUI5 API</a> › <a href="../../../../../sap.m/README.html">sap.m</a> › sap › m › <a href="../../../../../sap.m/sap/m/MultiInput/README.html">MultiInput</a> › interfaces</nav>
-<p><a href="../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.0)</strong></a></p>
+<p><a href="../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.46)</strong></a></p>
 <hr>
-<p><a href="../../../../../README.html">OpenUI5 TypeScript API (1.120.0)</a> / <a href="../../../../README.html">sap.m</a> / <a href="../README.html">sap/m/MultiInput</a> / $MultiInputSettings</p>
+<p><a href="../../../../../README.html">OpenUI5 TypeScript API (1.120.46)</a> / <a href="../../../../README.html">sap.m</a> / <a href="../README.html">sap/m/MultiInput</a> / $MultiInputSettings</p>
 <h1>Interface: $MultiInputSettings</h1>
 <pre class="sig"><span class="kw">import</span> { $MultiInputSettings } <span class="kw">from</span> <span class="str">"sap/m/MultiInput"</span>;</pre>
+<p>Describes the settings that can be provided to the MultiInput constructor.</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../Input/interfaces/$InputSettings.html"><code>$InputSettings</code></a></li>
@@ -47,22 +48,22 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 <blockquote>
 <p><code>optional</code> <strong>enableMultiLineMode?</strong>: <code>boolean</code> | <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<h4>Since</h4>
-<p>1.28</p>
-<h4>Deprecated</h4>
-<p>(since 1.58) - Replaced with N-more/N-items labels, which work in all cases.</p>
 <p>If set to true, the MultiInput will be displayed in multi-line display mode. In multi-line display mode,
 all tokens can be fully viewed and easily edited in the MultiInput. The default value is false. <strong>Note:</strong>
 This property does not take effect on smartphones or when the editable property is set to false. <strong>Caution:</strong>
 Do not enable multi-line mode in tables and forms.</p>
+<h4>Since</h4>
+<p>1.28</p>
+<h4>Deprecated</h4>
+<p>(since 1.58) - Replaced with N-more/N-items labels, which work in all cases.</p>
 <hr>
 <h3>maxTokens?</h3>
 <blockquote>
 <p><code>optional</code> <strong>maxTokens?</strong>: <code>number</code> | <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
+<p>The max number of tokens that is allowed in MultiInput.</p>
 <h4>Since</h4>
 <p>1.36</p>
-<p>The max number of tokens that is allowed in MultiInput.</p>
 <hr>
 <h3>showSuggestion?</h3>
 <blockquote>
@@ -79,6 +80,7 @@ are shown in a popup next to the input. <strong>Note:</strong> Default value for
 <blockquote>
 <p><code>optional</code> <strong>tokenChange?</strong>: (<code>oEvent</code>) =&gt; <code>void</code></p>
 </blockquote>
+<p>Fired when the tokens aggregation changed (add / remove token)</p>
 <h4>Parameters</h4>
 <h5>oEvent</h5>
 <p><a href="../type-aliases/MultiInput$TokenChangeEvent.html"><code>MultiInput$TokenChangeEvent</code></a></p>
@@ -86,7 +88,6 @@ are shown in a popup next to the input. <strong>Note:</strong> Default value for
 <p><code>void</code></p>
 <h4>Deprecated</h4>
 <p>(since 1.46) - Please use the new event tokenUpdate.</p>
-<p>Fired when the tokens aggregation changed (add / remove token)</p>
 <hr>
 <h3>tokens?</h3>
 <blockquote>
@@ -98,6 +99,7 @@ are shown in a popup next to the input. <strong>Note:</strong> Default value for
 <blockquote>
 <p><code>optional</code> <strong>tokenUpdate?</strong>: (<code>oEvent</code>) =&gt; <code>void</code></p>
 </blockquote>
+<p>Fired when the tokens aggregation changed due to a user interaction (add / remove token)</p>
 <h4>Parameters</h4>
 <h5>oEvent</h5>
 <p><a href="../type-aliases/MultiInput$TokenUpdateEvent.html"><code>MultiInput$TokenUpdateEvent</code></a></p>
@@ -105,9 +107,8 @@ are shown in a popup next to the input. <strong>Note:</strong> Default value for
 <p><code>void</code></p>
 <h4>Since</h4>
 <p>1.46</p>
-<p>Fired when the tokens aggregation changed due to a user interaction (add / remove token)</p>
 <hr>
 
-<footer>Generated from <code>@openui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@openui5/types@1.120.46</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

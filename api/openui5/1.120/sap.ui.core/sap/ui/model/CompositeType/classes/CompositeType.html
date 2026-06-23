@@ -2,12 +2,12 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>Class: CompositeType — OpenUI5 TypeScript API</title>
-<meta name="description" content="Class: CompositeType — OpenUI5 TypeScript API Reference (1.120.0)">
+<title>Abstract Class: CompositeType — OpenUI5 TypeScript API</title>
+<meta name="description" content="Abstract Class: CompositeType — OpenUI5 TypeScript API Reference (1.120.46)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/openui5/1.120/sap.ui.core/sap/ui/model/CompositeType/classes/CompositeType.html">
-<meta property="og:title" content="Class: CompositeType — OpenUI5 TypeScript API">
-<meta property="og:description" content="Class: CompositeType — OpenUI5 TypeScript API Reference (1.120.0)">
+<meta property="og:title" content="Abstract Class: CompositeType — OpenUI5 TypeScript API">
+<meta property="og:description" content="Abstract Class: CompositeType — OpenUI5 TypeScript API Reference (1.120.46)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/openui5/1.120/sap.ui.core/sap/ui/model/CompositeType/classes/CompositeType.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,10 +33,10 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../index.html">OpenUI5 API</a> › <a href="../../../../../../sap.ui.core/README.html">sap.ui.core</a> › sap › ui › model › <a href="../../../../../../sap.ui.core/sap/ui/model/CompositeType/README.html">CompositeType</a> › classes</nav>
-<p><a href="../../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.0)</strong></a></p>
+<p><a href="../../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.46)</strong></a></p>
 <hr>
-<p><a href="../../../../../../README.html">OpenUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../README.html">sap.ui.core</a> / <a href="../README.html">sap/ui/model/CompositeType</a> / CompositeType</p>
-<h1>Class: CompositeType</h1>
+<p><a href="../../../../../../README.html">OpenUI5 TypeScript API (1.120.46)</a> / <a href="../../../../../README.html">sap.ui.core</a> / <a href="../README.html">sap/ui/model/CompositeType</a> / CompositeType</p>
+<h1>Abstract Class: CompositeType</h1>
 <pre class="sig"><span class="kw">import</span> CompositeType <span class="kw">from</span> <span class="str">"sap/ui/model/CompositeType"</span>;</pre>
 <p>This is an abstract base class for composite types. Composite types have multiple parts and know how
 to merge/split them upon formatting/parsing the value. Typical use cases are currency or amount values.</p>
@@ -109,16 +109,16 @@ format options if the target type is <code>string</code>. If <code>aValues</code
 <blockquote>
 <p><strong>getPartsIgnoringMessages</strong>(): <code>number</code>[]</p>
 </blockquote>
-<h4>Returns</h4>
-<p><code>number</code>[]</p>
-<p>An array of indices that determine which parts of this type shall not propagate their model
-messages to the attached control</p>
-<h4>Since</h4>
-<p>1.82.0</p>
 <p>Gets an array of indices that determine which parts of this type shall not propagate their model messages
 to the attached control. Prerequisite is that the corresponding binding supports this feature, see sap.ui.model.Binding#supportsIgnoreMessages.
 See:
 	sap.ui.model.Binding#supportsIgnoreMessages</p>
+<h4>Returns</h4>
+<p><code>number</code>[]</p>
+<p>An array of indices that determine which parts of this type shall not propagate their model
+messages to the attached control; an empty array is returned by default</p>
+<h4>Since</h4>
+<p>1.82.0</p>
 <hr>
 <h3>getUseInternalValues()</h3>
 <blockquote>
@@ -168,6 +168,8 @@ exists, see sap.ui.model.SimpleType#getModelFormat SimpleType#getModelFormat</p>
 <blockquote>
 <p><strong>processPartTypes</strong>(<code>aPartTypes</code>): <code>void</code></p>
 </blockquote>
+<p>Processes the types of the parts of this composite type. A concrete composite type may override this
+method if it needs to derive information from the types of the parts.</p>
 <h4>Parameters</h4>
 <h5>aPartTypes</h5>
 <p><a href="../../SimpleType/classes/SimpleType.html"><code>SimpleType</code></a>[]</p>
@@ -178,8 +180,6 @@ exists, see sap.ui.model.SimpleType#getModelFormat SimpleType#getModelFormat</p>
 <p>1.100.0</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Processes the types of the parts of this composite type. A concrete composite type may override this
-method if it needs to derive information from the types of the parts.</p>
 <hr>
 <h3>validateValue()</h3>
 <blockquote>
@@ -235,6 +235,6 @@ used by this class</p>
 <p><a href="../../SimpleType/classes/SimpleType.html"><code>SimpleType</code></a>.<a href="../../SimpleType/classes/SimpleType.html#getmetadata-1"><code>getMetadata</code></a></p>
 <hr>
 
-<footer>Generated from <code>@openui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@openui5/types@1.120.46</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

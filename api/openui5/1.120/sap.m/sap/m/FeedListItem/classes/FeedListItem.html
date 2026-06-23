@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Class: FeedListItem — OpenUI5 TypeScript API</title>
-<meta name="description" content="Class: FeedListItem — OpenUI5 TypeScript API Reference (1.120.0)">
+<meta name="description" content="Class: FeedListItem — OpenUI5 TypeScript API Reference (1.120.46)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/openui5/1.120/sap.m/sap/m/FeedListItem/classes/FeedListItem.html">
 <meta property="og:title" content="Class: FeedListItem — OpenUI5 TypeScript API">
-<meta property="og:description" content="Class: FeedListItem — OpenUI5 TypeScript API Reference (1.120.0)">
+<meta property="og:description" content="Class: FeedListItem — OpenUI5 TypeScript API Reference (1.120.46)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/openui5/1.120/sap.m/sap/m/FeedListItem/classes/FeedListItem.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,16 +33,16 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../index.html">OpenUI5 API</a> › <a href="../../../../../sap.m/README.html">sap.m</a> › sap › m › <a href="../../../../../sap.m/sap/m/FeedListItem/README.html">FeedListItem</a> › classes</nav>
-<p><a href="../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.0)</strong></a></p>
+<p><a href="../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.46)</strong></a></p>
 <hr>
-<p><a href="../../../../../README.html">OpenUI5 TypeScript API (1.120.0)</a> / <a href="../../../../README.html">sap.m</a> / <a href="../README.html">sap/m/FeedListItem</a> / FeedListItem</p>
+<p><a href="../../../../../README.html">OpenUI5 TypeScript API (1.120.46)</a> / <a href="../../../../README.html">sap.m</a> / <a href="../README.html">sap/m/FeedListItem</a> / FeedListItem</p>
 <h1>Class: FeedListItem</h1>
 <pre class="sig"><span class="kw">import</span> FeedListItem <span class="kw">from</span> <span class="str">"sap/m/FeedListItem"</span>;</pre>
-<h2>Since</h2>
-<p>1.12</p>
 <p>The control provides a set of properties for text, sender information, time stamp. Beginning with release
 1.23 the new feature expand / collapse was introduced, which uses the property maxCharacters. Beginning
 with release 1.44, sap.m.FormattedText was introduced which allows html formatted text to be displayed</p>
+<h2>Since</h2>
+<p>1.12</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../ListItemBase/classes/ListItemBase.html"><code>ListItemBase</code></a></li>
@@ -88,6 +88,7 @@ of the syntax of the settings object.</p>
 <blockquote>
 <p><strong>addAction</strong>(<code>oAction</code>): <code>this</code></p>
 </blockquote>
+<p>Adds some action to the aggregation #getActions actions.</p>
 <h4>Parameters</h4>
 <h5>oAction</h5>
 <p><a href="../../FeedListItemAction/classes/FeedListItemAction.html"><code>FeedListItemAction</code></a></p>
@@ -97,7 +98,6 @@ of the syntax of the settings object.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.52.0</p>
-<p>Adds some action to the aggregation #getActions actions.</p>
 <hr>
 <h3>attachIconPress()</h3>
 <h4>Call Signature</h4>
@@ -187,12 +187,12 @@ otherwise it will be bound to this <code>sap.m.FeedListItem</code> itself.</p>
 <blockquote>
 <p><strong>destroyActions</strong>(): <code>this</code></p>
 </blockquote>
+<p>Destroys all the actions in the aggregation #getActions actions.</p>
 <h4>Returns</h4>
 <p><code>this</code></p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.52.0</p>
-<p>Destroys all the actions in the aggregation #getActions actions.</p>
 <hr>
 <h3>detachIconPress()</h3>
 <blockquote>
@@ -232,6 +232,7 @@ otherwise it will be bound to this <code>sap.m.FeedListItem</code> itself.</p>
 <blockquote>
 <p><strong>fireIconPress</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
+<p>Fires event #event:iconPress iconPress to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/FeedListItem$IconPressEventParameters.html"><code>FeedListItem$IconPressEventParameters</code></a></p>
@@ -241,12 +242,12 @@ otherwise it will be bound to this <code>sap.m.FeedListItem</code> itself.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Fires event #event:iconPress iconPress to attached listeners.</p>
 <hr>
 <h3>fireSenderPress()</h3>
 <blockquote>
 <p><strong>fireSenderPress</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
+<p>Fires event #event:senderPress senderPress to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/FeedListItem$SenderPressEventParameters.html"><code>FeedListItem$SenderPressEventParameters</code></a></p>
@@ -256,18 +257,17 @@ otherwise it will be bound to this <code>sap.m.FeedListItem</code> itself.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Fires event #event:senderPress senderPress to attached listeners.</p>
 <hr>
 <h3>getActions()</h3>
 <blockquote>
 <p><strong>getActions</strong>(): <a href="../../FeedListItemAction/classes/FeedListItemAction.html"><code>FeedListItemAction</code></a>[]</p>
 </blockquote>
+<p>Gets content of aggregation #getActions actions.</p>
+<p>Contains sap.m.FeedListItemAction elements that are displayed in the action sheet.</p>
 <h4>Returns</h4>
 <p><a href="../../FeedListItemAction/classes/FeedListItemAction.html"><code>FeedListItemAction</code></a>[]</p>
 <h4>Since</h4>
 <p>1.52.0</p>
-<p>Gets content of aggregation #getActions actions.</p>
-<p>Contains sap.m.FeedListItemAction elements that are displayed in the action sheet.</p>
 <hr>
 <h3>getActiveIcon()</h3>
 <blockquote>
@@ -283,30 +283,41 @@ otherwise it will be bound to this <code>sap.m.FeedListItem</code> itself.</p>
 <blockquote>
 <p><strong>getConvertedLinksDefaultTarget</strong>(): <code>string</code></p>
 </blockquote>
-<h4>Returns</h4>
-<p><code>string</code></p>
-<p>Value of property <code>convertedLinksDefaultTarget</code></p>
-<h4>Since</h4>
-<p>1.46.1</p>
 <p>Gets current value of property #getConvertedLinksDefaultTarget convertedLinksDefaultTarget.</p>
 <p>Determines the target attribute of the generated HTML anchor tags. Note: Applicable only if ConvertLinksToAnchorTags
 property is used with a value other than sap.m.LinkConversion.None. Options are the standard values for
 the target attribute of the HTML anchor tag: _self, _top, _blank, _parent, _search.</p>
 <p>Default value is <code>&quot;_blank&quot;</code>.</p>
+<h4>Returns</h4>
+<p><code>string</code></p>
+<p>Value of property <code>convertedLinksDefaultTarget</code></p>
+<h4>Since</h4>
+<p>1.46.1</p>
 <hr>
 <h3>getConvertLinksToAnchorTags()</h3>
 <blockquote>
 <p><strong>getConvertLinksToAnchorTags</strong>(): <code>&quot;None&quot;</code> | <code>&quot;All&quot;</code> | <a href="../../library/enumerations/LinkConversion.html"><code>LinkConversion</code></a> | <code>&quot;ProtocolOnly&quot;</code></p>
 </blockquote>
+<p>Gets current value of property #getConvertLinksToAnchorTags convertLinksToAnchorTags.</p>
+<p>Determines whether strings that appear to be links will be converted to HTML anchor tags, and what are
+the criteria for recognizing them.</p>
+<p>Default value is <code>None</code>.</p>
 <h4>Returns</h4>
 <p><code>&quot;None&quot;</code> | <code>&quot;All&quot;</code> | <a href="../../library/enumerations/LinkConversion.html"><code>LinkConversion</code></a> | <code>&quot;ProtocolOnly&quot;</code></p>
 <p>Value of property <code>convertLinksToAnchorTags</code></p>
 <h4>Since</h4>
 <p>1.46.1</p>
-<p>Gets current value of property #getConvertLinksToAnchorTags convertLinksToAnchorTags.</p>
-<p>Determines whether strings that appear to be links will be converted to HTML anchor tags, and what are
-the criteria for recognizing them.</p>
-<p>Default value is <code>None</code>.</p>
+<hr>
+<h3>getDisableStyleAttribute()</h3>
+<blockquote>
+<p><strong>getDisableStyleAttribute</strong>(): <code>boolean</code></p>
+</blockquote>
+<p>Gets current value of property #getDisableStyleAttribute disableStyleAttribute.</p>
+<p>Disables rendering of the <code>style</code> attribute in the <code>FormattedText</code>.</p>
+<p>Default value is <code>false</code>.</p>
+<h4>Returns</h4>
+<p><code>boolean</code></p>
+<p>Value of property <code>disableStyleAttribute</code></p>
 <hr>
 <h3>getIcon()</h3>
 <blockquote>
@@ -335,55 +346,55 @@ if showIcon = true.</p>
 <blockquote>
 <p><strong>getIconDensityAware</strong>(): <code>boolean</code></p>
 </blockquote>
-<h4>Returns</h4>
-<p><code>boolean</code></p>
-<p>Value of property <code>iconDensityAware</code></p>
-<h4>Deprecated</h4>
-<p>(since 1.88) - Image is replaced by sap.m.Avatar</p>
 <p>Gets current value of property #getIconDensityAware iconDensityAware.</p>
 <p>By default, this is set to true but then one or more requests are sent trying to get the density perfect
 version of image if this version of image doesn&#39;t exist on the server.</p>
 <p>If bandwidth is the key for the application, set this value to false.</p>
 <p>Default value is <code>true</code>.</p>
+<h4>Returns</h4>
+<p><code>boolean</code></p>
+<p>Value of property <code>iconDensityAware</code></p>
+<h4>Deprecated</h4>
+<p>(since 1.88) - Image is replaced by sap.m.Avatar</p>
 <hr>
 <h3>getIconDisplayShape()</h3>
 <blockquote>
 <p><strong>getIconDisplayShape</strong>(): <a href="../../AvatarShape/enumerations/AvatarShape.html"><code>AvatarShape</code></a> | <code>&quot;Circle&quot;</code> | <code>&quot;Square&quot;</code></p>
 </blockquote>
+<p>Gets current value of property #getIconDisplayShape iconDisplayShape.</p>
+<p>Defines the shape of the icon.</p>
+<p>Default value is <code>Circle</code>.</p>
 <h4>Returns</h4>
 <p><a href="../../AvatarShape/enumerations/AvatarShape.html"><code>AvatarShape</code></a> | <code>&quot;Circle&quot;</code> | <code>&quot;Square&quot;</code></p>
 <p>Value of property <code>iconDisplayShape</code></p>
 <h4>Since</h4>
 <p>1.88</p>
-<p>Gets current value of property #getIconDisplayShape iconDisplayShape.</p>
-<p>Defines the shape of the icon.</p>
-<p>Default value is <code>Circle</code>.</p>
 <hr>
 <h3>getIconInitials()</h3>
 <blockquote>
 <p><strong>getIconInitials</strong>(): <code>string</code></p>
 </blockquote>
+<p>Gets current value of property #getIconInitials iconInitials.</p>
+<p>Defines the initials of the icon.</p>
+<p>Default value is <code>empty string</code>.</p>
 <h4>Returns</h4>
 <p><code>string</code></p>
 <p>Value of property <code>iconInitials</code></p>
 <h4>Since</h4>
 <p>1.88</p>
-<p>Gets current value of property #getIconInitials iconInitials.</p>
-<p>Defines the initials of the icon.</p>
-<p>Default value is <code>empty string</code>.</p>
 <hr>
 <h3>getIconSize()</h3>
 <blockquote>
 <p><strong>getIconSize</strong>(): <a href="../../AvatarSize/enumerations/AvatarSize.html"><code>AvatarSize</code></a> | <code>&quot;Custom&quot;</code> | <code>&quot;L&quot;</code> | <code>&quot;M&quot;</code> | <code>&quot;S&quot;</code> | <code>&quot;XL&quot;</code> | <code>&quot;XS&quot;</code></p>
 </blockquote>
+<p>Gets current value of property #getIconSize iconSize.</p>
+<p>Defines the size of the icon.</p>
+<p>Default value is <code>S</code>.</p>
 <h4>Returns</h4>
 <p><a href="../../AvatarSize/enumerations/AvatarSize.html"><code>AvatarSize</code></a> | <code>&quot;Custom&quot;</code> | <code>&quot;L&quot;</code> | <code>&quot;M&quot;</code> | <code>&quot;S&quot;</code> | <code>&quot;XL&quot;</code> | <code>&quot;XS&quot;</code></p>
 <p>Value of property <code>iconSize</code></p>
 <h4>Since</h4>
 <p>1.88</p>
-<p>Gets current value of property #getIconSize iconSize.</p>
-<p>Defines the size of the icon.</p>
-<p>Default value is <code>S</code>.</p>
 <hr>
 <h3>getInfo()</h3>
 <blockquote>
@@ -399,15 +410,15 @@ version of image if this version of image doesn&#39;t exist on the server.</p>
 <blockquote>
 <p><strong>getLessLabel</strong>(): <code>string</code></p>
 </blockquote>
+<p>Gets current value of property #getLessLabel lessLabel.</p>
+<p>Customizable text for the &quot;LESS&quot; link at the end of the feed list item.
+ Clicking the &quot;LESS&quot; link collapses the item, hiding the text that exceeds the allowed maximum number
+of characters.</p>
 <h4>Returns</h4>
 <p><code>string</code></p>
 <p>Value of property <code>lessLabel</code></p>
 <h4>Since</h4>
 <p>1.60</p>
-<p>Gets current value of property #getLessLabel lessLabel.</p>
-<p>Customizable text for the &quot;LESS&quot; link at the end of the feed list item.
- Clicking the &quot;LESS&quot; link collapses the item, hiding the text that exceeds the allowed maximum number
-of characters.</p>
 <hr>
 <h3>getMaxCharacters()</h3>
 <blockquote>
@@ -427,16 +438,16 @@ is able to set the value to its needs.</p>
 <blockquote>
 <p><strong>getMoreLabel</strong>(): <code>string</code></p>
 </blockquote>
-<h4>Returns</h4>
-<p><code>string</code></p>
-<p>Value of property <code>moreLabel</code></p>
-<h4>Since</h4>
-<p>1.60</p>
 <p>Gets current value of property #getMoreLabel moreLabel.</p>
 <p>Customizable text for the &quot;MORE&quot; link at the end of the feed list item.
  When the maximum number of characters defined by the <code>maxCharacters</code> property is exceeded and the text
 of the feed list item is collapsed, the &quot;MORE&quot; link can be used to expand the feed list item and show
 the rest of the text.</p>
+<h4>Returns</h4>
+<p><code>string</code></p>
+<p>Value of property <code>moreLabel</code></p>
+<h4>Since</h4>
+<p>1.60</p>
 <hr>
 <h3>getSender()</h3>
 <blockquote>
@@ -494,6 +505,8 @@ the rest of the text.</p>
 <blockquote>
 <p><strong>indexOfAction</strong>(<code>oAction</code>): <code>number</code></p>
 </blockquote>
+<p>Checks for the provided <code>sap.m.FeedListItemAction</code> in the aggregation #getActions actions. and
+returns its index if found or -1 otherwise.</p>
 <h4>Parameters</h4>
 <h5>oAction</h5>
 <p><a href="../../FeedListItemAction/classes/FeedListItemAction.html"><code>FeedListItemAction</code></a></p>
@@ -503,13 +516,12 @@ the rest of the text.</p>
 <p>The index of the provided control in the aggregation if found, or -1 otherwise</p>
 <h4>Since</h4>
 <p>1.52.0</p>
-<p>Checks for the provided <code>sap.m.FeedListItemAction</code> in the aggregation #getActions actions. and
-returns its index if found or -1 otherwise.</p>
 <hr>
 <h3>insertAction()</h3>
 <blockquote>
 <p><strong>insertAction</strong>(<code>oAction</code>, <code>iIndex</code>): <code>this</code></p>
 </blockquote>
+<p>Inserts a action into the aggregation #getActions actions.</p>
 <h4>Parameters</h4>
 <h5>oAction</h5>
 <p><a href="../../FeedListItemAction/classes/FeedListItemAction.html"><code>FeedListItemAction</code></a></p>
@@ -524,12 +536,12 @@ at the last position</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.52.0</p>
-<p>Inserts a action into the aggregation #getActions actions.</p>
 <hr>
 <h3>removeAction()</h3>
 <blockquote>
 <p><strong>removeAction</strong>(<code>vAction</code>): <a href="../../FeedListItemAction/classes/FeedListItemAction.html"><code>FeedListItemAction</code></a></p>
 </blockquote>
+<p>Removes a action from the aggregation #getActions actions.</p>
 <h4>Parameters</h4>
 <h5>vAction</h5>
 <p><code>string</code> | <code>number</code> | <a href="../../FeedListItemAction/classes/FeedListItemAction.html"><code>FeedListItemAction</code></a></p>
@@ -539,19 +551,18 @@ at the last position</p>
 <p>The removed action or <code>null</code></p>
 <h4>Since</h4>
 <p>1.52.0</p>
-<p>Removes a action from the aggregation #getActions actions.</p>
 <hr>
 <h3>removeAllActions()</h3>
 <blockquote>
 <p><strong>removeAllActions</strong>(): <a href="../../FeedListItemAction/classes/FeedListItemAction.html"><code>FeedListItemAction</code></a>[]</p>
 </blockquote>
+<p>Removes all the controls from the aggregation #getActions actions.</p>
+<p>Additionally, it unregisters them from the hosting UIArea.</p>
 <h4>Returns</h4>
 <p><a href="../../FeedListItemAction/classes/FeedListItemAction.html"><code>FeedListItemAction</code></a>[]</p>
 <p>An array of the removed elements (might be empty)</p>
 <h4>Since</h4>
 <p>1.52.0</p>
-<p>Removes all the controls from the aggregation #getActions actions.</p>
-<p>Additionally, it unregisters them from the hosting UIArea.</p>
 <hr>
 <h3>setActiveIcon()</h3>
 <blockquote>
@@ -572,6 +583,12 @@ at the last position</p>
 <blockquote>
 <p><strong>setConvertedLinksDefaultTarget</strong>(<code>sConvertedLinksDefaultTarget?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getConvertedLinksDefaultTarget convertedLinksDefaultTarget.</p>
+<p>Determines the target attribute of the generated HTML anchor tags. Note: Applicable only if ConvertLinksToAnchorTags
+property is used with a value other than sap.m.LinkConversion.None. Options are the standard values for
+the target attribute of the HTML anchor tag: _self, _top, _blank, _parent, _search.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>&quot;_blank&quot;</code>.</p>
 <h4>Parameters</h4>
 <h5>sConvertedLinksDefaultTarget?</h5>
 <p><code>string</code></p>
@@ -581,17 +598,16 @@ at the last position</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.46.1</p>
-<p>Sets a new value for property #getConvertedLinksDefaultTarget convertedLinksDefaultTarget.</p>
-<p>Determines the target attribute of the generated HTML anchor tags. Note: Applicable only if ConvertLinksToAnchorTags
-property is used with a value other than sap.m.LinkConversion.None. Options are the standard values for
-the target attribute of the HTML anchor tag: _self, _top, _blank, _parent, _search.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>&quot;_blank&quot;</code>.</p>
 <hr>
 <h3>setConvertLinksToAnchorTags()</h3>
 <blockquote>
 <p><strong>setConvertLinksToAnchorTags</strong>(<code>sConvertLinksToAnchorTags?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getConvertLinksToAnchorTags convertLinksToAnchorTags.</p>
+<p>Determines whether strings that appear to be links will be converted to HTML anchor tags, and what are
+the criteria for recognizing them.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>None</code>.</p>
 <h4>Parameters</h4>
 <h5>sConvertLinksToAnchorTags?</h5>
 <p><code>&quot;None&quot;</code> | <code>&quot;All&quot;</code> | <a href="../../library/enumerations/LinkConversion.html"><code>LinkConversion</code></a> | <code>&quot;ProtocolOnly&quot;</code></p>
@@ -601,11 +617,22 @@ the target attribute of the HTML anchor tag: _self, _top, _blank, _parent, _sear
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.46.1</p>
-<p>Sets a new value for property #getConvertLinksToAnchorTags convertLinksToAnchorTags.</p>
-<p>Determines whether strings that appear to be links will be converted to HTML anchor tags, and what are
-the criteria for recognizing them.</p>
+<hr>
+<h3>setDisableStyleAttribute()</h3>
+<blockquote>
+<p><strong>setDisableStyleAttribute</strong>(<code>bDisableStyleAttribute?</code>): <code>this</code></p>
+</blockquote>
+<p>Sets a new value for property #getDisableStyleAttribute disableStyleAttribute.</p>
+<p>Disables rendering of the <code>style</code> attribute in the <code>FormattedText</code>.</p>
 <p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>None</code>.</p>
+<p>Default value is <code>false</code>.</p>
+<h4>Parameters</h4>
+<h5>bDisableStyleAttribute?</h5>
+<p><code>boolean</code></p>
+<p>New value for property <code>disableStyleAttribute</code></p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
 <hr>
 <h3>setIcon()</h3>
 <blockquote>
@@ -644,6 +671,12 @@ if showIcon = true.</p>
 <blockquote>
 <p><strong>setIconDensityAware</strong>(<code>bIconDensityAware?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getIconDensityAware iconDensityAware.</p>
+<p>By default, this is set to true but then one or more requests are sent trying to get the density perfect
+version of image if this version of image doesn&#39;t exist on the server.</p>
+<p>If bandwidth is the key for the application, set this value to false.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>true</code>.</p>
 <h4>Parameters</h4>
 <h5>bIconDensityAware?</h5>
 <p><code>boolean</code></p>
@@ -653,17 +686,15 @@ if showIcon = true.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Deprecated</h4>
 <p>(since 1.88) - Image is replaced by sap.m.Avatar</p>
-<p>Sets a new value for property #getIconDensityAware iconDensityAware.</p>
-<p>By default, this is set to true but then one or more requests are sent trying to get the density perfect
-version of image if this version of image doesn&#39;t exist on the server.</p>
-<p>If bandwidth is the key for the application, set this value to false.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>true</code>.</p>
 <hr>
 <h3>setIconDisplayShape()</h3>
 <blockquote>
 <p><strong>setIconDisplayShape</strong>(<code>sIconDisplayShape?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getIconDisplayShape iconDisplayShape.</p>
+<p>Defines the shape of the icon.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>Circle</code>.</p>
 <h4>Parameters</h4>
 <h5>sIconDisplayShape?</h5>
 <p><a href="../../AvatarShape/enumerations/AvatarShape.html"><code>AvatarShape</code></a> | <code>&quot;Circle&quot;</code> | <code>&quot;Square&quot;</code></p>
@@ -673,15 +704,15 @@ version of image if this version of image doesn&#39;t exist on the server.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.88</p>
-<p>Sets a new value for property #getIconDisplayShape iconDisplayShape.</p>
-<p>Defines the shape of the icon.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>Circle</code>.</p>
 <hr>
 <h3>setIconInitials()</h3>
 <blockquote>
 <p><strong>setIconInitials</strong>(<code>sIconInitials?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getIconInitials iconInitials.</p>
+<p>Defines the initials of the icon.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>empty string</code>.</p>
 <h4>Parameters</h4>
 <h5>sIconInitials?</h5>
 <p><code>string</code></p>
@@ -691,15 +722,15 @@ version of image if this version of image doesn&#39;t exist on the server.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.88</p>
-<p>Sets a new value for property #getIconInitials iconInitials.</p>
-<p>Defines the initials of the icon.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>empty string</code>.</p>
 <hr>
 <h3>setIconSize()</h3>
 <blockquote>
 <p><strong>setIconSize</strong>(<code>sIconSize?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getIconSize iconSize.</p>
+<p>Defines the size of the icon.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>S</code>.</p>
 <h4>Parameters</h4>
 <h5>sIconSize?</h5>
 <p><a href="../../AvatarSize/enumerations/AvatarSize.html"><code>AvatarSize</code></a> | <code>&quot;Custom&quot;</code> | <code>&quot;L&quot;</code> | <code>&quot;M&quot;</code> | <code>&quot;S&quot;</code> | <code>&quot;XL&quot;</code> | <code>&quot;XS&quot;</code></p>
@@ -709,10 +740,6 @@ version of image if this version of image doesn&#39;t exist on the server.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.88</p>
-<p>Sets a new value for property #getIconSize iconSize.</p>
-<p>Defines the size of the icon.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>S</code>.</p>
 <hr>
 <h3>setInfo()</h3>
 <blockquote>
@@ -733,6 +760,11 @@ version of image if this version of image doesn&#39;t exist on the server.</p>
 <blockquote>
 <p><strong>setLessLabel</strong>(<code>sLessLabel?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getLessLabel lessLabel.</p>
+<p>Customizable text for the &quot;LESS&quot; link at the end of the feed list item.
+ Clicking the &quot;LESS&quot; link collapses the item, hiding the text that exceeds the allowed maximum number
+of characters.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <h4>Parameters</h4>
 <h5>sLessLabel?</h5>
 <p><code>string</code></p>
@@ -742,11 +774,6 @@ version of image if this version of image doesn&#39;t exist on the server.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.60</p>
-<p>Sets a new value for property #getLessLabel lessLabel.</p>
-<p>Customizable text for the &quot;LESS&quot; link at the end of the feed list item.
- Clicking the &quot;LESS&quot; link collapses the item, hiding the text that exceeds the allowed maximum number
-of characters.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <hr>
 <h3>setMaxCharacters()</h3>
 <blockquote>
@@ -771,6 +798,12 @@ is able to set the value to its needs.</p>
 <blockquote>
 <p><strong>setMoreLabel</strong>(<code>sMoreLabel?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getMoreLabel moreLabel.</p>
+<p>Customizable text for the &quot;MORE&quot; link at the end of the feed list item.
+ When the maximum number of characters defined by the <code>maxCharacters</code> property is exceeded and the text
+of the feed list item is collapsed, the &quot;MORE&quot; link can be used to expand the feed list item and show
+the rest of the text.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <h4>Parameters</h4>
 <h5>sMoreLabel?</h5>
 <p><code>string</code></p>
@@ -780,12 +813,6 @@ is able to set the value to its needs.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.60</p>
-<p>Sets a new value for property #getMoreLabel moreLabel.</p>
-<p>Customizable text for the &quot;MORE&quot; link at the end of the feed list item.
- When the maximum number of characters defined by the <code>maxCharacters</code> property is exceeded and the text
-of the feed list item is collapsed, the &quot;MORE&quot; link can be used to expand the feed list item and show
-the rest of the text.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <hr>
 <h3>setSender()</h3>
 <blockquote>
@@ -919,6 +946,6 @@ used by this class</p>
 <p><a href="../../ListItemBase/classes/ListItemBase.html"><code>ListItemBase</code></a>.<a href="../../ListItemBase/classes/ListItemBase.html#getmetadata-1"><code>getMetadata</code></a></p>
 <hr>
 
-<footer>Generated from <code>@openui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@openui5/types@1.120.46</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

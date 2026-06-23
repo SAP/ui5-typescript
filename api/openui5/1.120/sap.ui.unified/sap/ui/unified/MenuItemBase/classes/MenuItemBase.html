@@ -2,12 +2,12 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>Class: MenuItemBase — OpenUI5 TypeScript API</title>
-<meta name="description" content="Class: MenuItemBase — OpenUI5 TypeScript API Reference (1.120.0)">
+<title>Abstract Class: MenuItemBase — OpenUI5 TypeScript API</title>
+<meta name="description" content="Abstract Class: MenuItemBase — OpenUI5 TypeScript API Reference (1.120.46)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/openui5/1.120/sap.ui.unified/sap/ui/unified/MenuItemBase/classes/MenuItemBase.html">
-<meta property="og:title" content="Class: MenuItemBase — OpenUI5 TypeScript API">
-<meta property="og:description" content="Class: MenuItemBase — OpenUI5 TypeScript API Reference (1.120.0)">
+<meta property="og:title" content="Abstract Class: MenuItemBase — OpenUI5 TypeScript API">
+<meta property="og:description" content="Abstract Class: MenuItemBase — OpenUI5 TypeScript API Reference (1.120.46)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/openui5/1.120/sap.ui.unified/sap/ui/unified/MenuItemBase/classes/MenuItemBase.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,14 +33,14 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../index.html">OpenUI5 API</a> › <a href="../../../../../../sap.ui.unified/README.html">sap.ui.unified</a> › sap › ui › unified › <a href="../../../../../../sap.ui.unified/sap/ui/unified/MenuItemBase/README.html">MenuItemBase</a> › classes</nav>
-<p><a href="../../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.0)</strong></a></p>
+<p><a href="../../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.46)</strong></a></p>
 <hr>
-<p><a href="../../../../../../README.html">OpenUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../README.html">sap.ui.unified</a> / <a href="../README.html">sap/ui/unified/MenuItemBase</a> / MenuItemBase</p>
-<h1>Class: MenuItemBase</h1>
+<p><a href="../../../../../../README.html">OpenUI5 TypeScript API (1.120.46)</a> / <a href="../../../../../README.html">sap.ui.unified</a> / <a href="../README.html">sap/ui/unified/MenuItemBase</a> / MenuItemBase</p>
+<h1>Abstract Class: MenuItemBase</h1>
 <pre class="sig"><span class="kw">import</span> MenuItemBase <span class="kw">from</span> <span class="str">"sap/ui/unified/MenuItemBase"</span>;</pre>
+<p>Abstract base class for menu item which provides common properties and events for all concrete item implementations.</p>
 <h2>Since</h2>
 <p>1.21.0</p>
-<p>Abstract base class for menu item which provides common properties and events for all concrete item implementations.</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../../../../../sap.ui.core/sap/ui/core/Element/classes/UI5Element.html"><code>UI5Element</code></a></li>
@@ -163,6 +163,7 @@ the sub menu.</p>
 <blockquote>
 <p><strong>fireSelect</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
+<p>Fires event #event:select select to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/MenuItemBase$SelectEventParameters.html"><code>MenuItemBase$SelectEventParameters</code></a></p>
@@ -172,7 +173,6 @@ the sub menu.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Fires event #event:select select to attached listeners.</p>
 <hr>
 <h3>getEnabled()</h3>
 <blockquote>
@@ -222,6 +222,8 @@ also the separator of this item is not shown.</p>
 <blockquote>
 <p><strong>hover</strong>(<code>bHovered</code>, <code>oMenu</code>): <code>void</code></p>
 </blockquote>
+<p>Changes the visual hover state of the menu item.</p>
+<p>Subclasses may override this function.</p>
 <h4>Parameters</h4>
 <h5>bHovered</h5>
 <p><code>boolean</code></p>
@@ -233,24 +235,24 @@ also the separator of this item is not shown.</p>
 <p><code>void</code></p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Changes the visual hover state of the menu item.</p>
-<p>Subclasses may override this function.</p>
 <hr>
 <h3>onAfterRendering()</h3>
 <blockquote>
 <p><strong>onAfterRendering</strong>(): <code>void</code></p>
 </blockquote>
+<p>Informs the item that the item HTML is now applied to the DOM.</p>
+<p>Subclasses may override this function.</p>
 <h4>Returns</h4>
 <p><code>void</code></p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Informs the item that the item HTML is now applied to the DOM.</p>
-<p>Subclasses may override this function.</p>
 <hr>
 <h3>onSubmenuToggle()</h3>
 <blockquote>
 <p><strong>onSubmenuToggle</strong>(<code>bOpened</code>): <code>void</code></p>
 </blockquote>
+<p>Event handler which is called whenever the submenu of the item is opened or closed.</p>
+<p>Subclasses may override this function.</p>
 <h4>Parameters</h4>
 <h5>bOpened</h5>
 <p><code>boolean</code></p>
@@ -259,13 +261,14 @@ also the separator of this item is not shown.</p>
 <p><code>void</code></p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Event handler which is called whenever the submenu of the item is opened or closed.</p>
-<p>Subclasses may override this function.</p>
 <hr>
 <h3>render()</h3>
 <blockquote>
 <p><strong>render</strong>(<code>oRenderManager</code>, <code>oItem</code>, <code>oMenu</code>): <code>void</code></p>
 </blockquote>
+<p>Produces the HTML of an item and writes it to render-output-buffer during the rendering of the corresponding
+menu.</p>
+<p>Subclasses may override this function.</p>
 <h4>Parameters</h4>
 <h5>oRenderManager</h5>
 <p><a href="../../../../../../sap.ui.core/sap/ui/core/RenderManager/classes/RenderManager.html"><code>RenderManager</code></a></p>
@@ -280,9 +283,6 @@ also the separator of this item is not shown.</p>
 <p><code>void</code></p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Produces the HTML of an item and writes it to render-output-buffer during the rendering of the corresponding
-menu.</p>
-<p>Subclasses may override this function.</p>
 <hr>
 <h3>setEnabled()</h3>
 <blockquote>
@@ -386,6 +386,6 @@ used by this class</p>
 <p><a href="../../../../../../sap.ui.core/sap/ui/core/Element/classes/UI5Element.html"><code>UI5Element</code></a>.<a href="../../../../../../sap.ui.core/sap/ui/core/Element/classes/UI5Element.html#getmetadata-1"><code>getMetadata</code></a></p>
 <hr>
 
-<footer>Generated from <code>@openui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@openui5/types@1.120.46</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

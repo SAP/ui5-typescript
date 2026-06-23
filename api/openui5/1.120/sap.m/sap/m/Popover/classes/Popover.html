@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Class: Popover — OpenUI5 TypeScript API</title>
-<meta name="description" content="Class: Popover — OpenUI5 TypeScript API Reference (1.120.0)">
+<meta name="description" content="Class: Popover — OpenUI5 TypeScript API Reference (1.120.46)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/openui5/1.120/sap.m/sap/m/Popover/classes/Popover.html">
 <meta property="og:title" content="Class: Popover — OpenUI5 TypeScript API">
-<meta property="og:description" content="Class: Popover — OpenUI5 TypeScript API Reference (1.120.0)">
+<meta property="og:description" content="Class: Popover — OpenUI5 TypeScript API Reference (1.120.46)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/openui5/1.120/sap.m/sap/m/Popover/classes/Popover.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,9 +33,9 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../index.html">OpenUI5 API</a> › <a href="../../../../../sap.m/README.html">sap.m</a> › sap › m › <a href="../../../../../sap.m/sap/m/Popover/README.html">Popover</a> › classes</nav>
-<p><a href="../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.0)</strong></a></p>
+<p><a href="../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.46)</strong></a></p>
 <hr>
-<p><a href="../../../../../README.html">OpenUI5 TypeScript API (1.120.0)</a> / <a href="../../../../README.html">sap.m</a> / <a href="../README.html">sap/m/Popover</a> / Popover</p>
+<p><a href="../../../../../README.html">OpenUI5 TypeScript API (1.120.46)</a> / <a href="../../../../README.html">sap.m</a> / <a href="../README.html">sap/m/Popover</a> / Popover</p>
 <h1>Class: Popover</h1>
 <pre class="sig"><span class="kw">import</span> Popover <span class="kw">from</span> <span class="str">"sap/m/Popover"</span>;</pre>
 <p>Displays additional information for an object in a compact way.</p>
@@ -125,33 +125,33 @@ See:
 <blockquote>
 <p><strong>_afterAdjustPositionAndArrowHook</strong>(): <code>void</code></p>
 </blockquote>
+<p>Hook called after adjusment of the Popover position.</p>
 <h4>Returns</h4>
 <p><code>void</code></p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Hook called after adjusment of the Popover position.</p>
 <hr>
 <h3>_beforeAdjustPositionAndArrowHook()</h3>
 <blockquote>
 <p><strong>_beforeAdjustPositionAndArrowHook</strong>(): <code>void</code></p>
 </blockquote>
+<p>Hook called before adjusment of the Popover position.</p>
 <h4>Returns</h4>
 <p><code>void</code></p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Hook called before adjusment of the Popover position.</p>
 <hr>
 <h3>_getAnyHeader()</h3>
 <blockquote>
 <p><strong>_getAnyHeader</strong>(): <a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a> | <a href="../../Bar/classes/Bar.html"><code>Bar</code></a></p>
 </blockquote>
+<p>If customHeader is set, this will return the customHeaer. Otherwise it creates a header and put the title
+and buttons if needed inside, and finally return this newly create header.</p>
 <h4>Returns</h4>
 <p><a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a> | <a href="../../Bar/classes/Bar.html"><code>Bar</code></a></p>
 <p>The created header</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>If customHeader is set, this will return the customHeaer. Otherwise it creates a header and put the title
-and buttons if needed inside, and finally return this newly create header.</p>
 <hr>
 <h3>addAriaDescribedBy()</h3>
 <blockquote>
@@ -373,12 +373,12 @@ otherwise it will be bound to this <code>sap.m.Popover</code> itself.</p>
 <blockquote>
 <p><strong>destroyBeginButton</strong>(): <code>this</code></p>
 </blockquote>
+<p>Destroys the beginButton in the aggregation #getBeginButton beginButton.</p>
 <h4>Returns</h4>
 <p><code>this</code></p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.15.1</p>
-<p>Destroys the beginButton in the aggregation #getBeginButton beginButton.</p>
 <hr>
 <h3>destroyContent()</h3>
 <blockquote>
@@ -402,12 +402,12 @@ otherwise it will be bound to this <code>sap.m.Popover</code> itself.</p>
 <blockquote>
 <p><strong>destroyEndButton</strong>(): <code>this</code></p>
 </blockquote>
+<p>Destroys the endButton in the aggregation #getEndButton endButton.</p>
 <h4>Returns</h4>
 <p><code>this</code></p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.15.1</p>
-<p>Destroys the endButton in the aggregation #getEndButton endButton.</p>
 <hr>
 <h3>destroyFooter()</h3>
 <blockquote>
@@ -422,12 +422,12 @@ otherwise it will be bound to this <code>sap.m.Popover</code> itself.</p>
 <blockquote>
 <p><strong>destroySubHeader</strong>(): <code>this</code></p>
 </blockquote>
+<p>Destroys the subHeader in the aggregation #getSubHeader subHeader.</p>
 <h4>Returns</h4>
 <p><code>this</code></p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.15.1</p>
-<p>Destroys the subHeader in the aggregation #getSubHeader subHeader.</p>
 <hr>
 <h3>detachAfterClose()</h3>
 <blockquote>
@@ -501,6 +501,7 @@ otherwise it will be bound to this <code>sap.m.Popover</code> itself.</p>
 <blockquote>
 <p><strong>fireAfterClose</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
+<p>Fires event #event:afterClose afterClose to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/Popover$AfterCloseEventParameters.html"><code>Popover$AfterCloseEventParameters</code></a></p>
@@ -510,12 +511,12 @@ otherwise it will be bound to this <code>sap.m.Popover</code> itself.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Fires event #event:afterClose afterClose to attached listeners.</p>
 <hr>
 <h3>fireAfterOpen()</h3>
 <blockquote>
 <p><strong>fireAfterOpen</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
+<p>Fires event #event:afterOpen afterOpen to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/Popover$AfterOpenEventParameters.html"><code>Popover$AfterOpenEventParameters</code></a></p>
@@ -525,12 +526,12 @@ otherwise it will be bound to this <code>sap.m.Popover</code> itself.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Fires event #event:afterOpen afterOpen to attached listeners.</p>
 <hr>
 <h3>fireBeforeClose()</h3>
 <blockquote>
 <p><strong>fireBeforeClose</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
+<p>Fires event #event:beforeClose beforeClose to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/Popover$BeforeCloseEventParameters.html"><code>Popover$BeforeCloseEventParameters</code></a></p>
@@ -540,12 +541,12 @@ otherwise it will be bound to this <code>sap.m.Popover</code> itself.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Fires event #event:beforeClose beforeClose to attached listeners.</p>
 <hr>
 <h3>fireBeforeOpen()</h3>
 <blockquote>
 <p><strong>fireBeforeOpen</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
+<p>Fires event #event:beforeOpen beforeOpen to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/Popover$BeforeOpenEventParameters.html"><code>Popover$BeforeOpenEventParameters</code></a></p>
@@ -555,7 +556,6 @@ otherwise it will be bound to this <code>sap.m.Popover</code> itself.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Fires event #event:beforeOpen beforeOpen to attached listeners.</p>
 <hr>
 <h3>getAriaDescribedBy()</h3>
 <blockquote>
@@ -577,13 +577,13 @@ otherwise it will be bound to this <code>sap.m.Popover</code> itself.</p>
 <blockquote>
 <p><strong>getBeginButton</strong>(): <a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></p>
 </blockquote>
+<p>Gets content of aggregation #getBeginButton beginButton.</p>
+<p>BeginButton is shown at the left side (right side in RTL mode) inside the header. When showHeader is
+set to false, the property is ignored.</p>
 <h4>Returns</h4>
 <p><a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></p>
 <h4>Since</h4>
 <p>1.15.1</p>
-<p>Gets content of aggregation #getBeginButton beginButton.</p>
-<p>BeginButton is shown at the left side (right side in RTL mode) inside the header. When showHeader is
-set to false, the property is ignored.</p>
 <hr>
 <h3>getContent()</h3>
 <blockquote>
@@ -598,11 +598,6 @@ set to false, the property is ignored.</p>
 <blockquote>
 <p><strong>getContentHeight</strong>(): <code>string</code></p>
 </blockquote>
-<h4>Returns</h4>
-<p><code>string</code></p>
-<p>Value of property <code>contentHeight</code></p>
-<h4>Since</h4>
-<p>1.9.0</p>
 <p>Gets current value of property #getContentHeight contentHeight.</p>
 <p>Set the height of the content area inside Popover. When controls which adapt their size to the parent
 control are added directly into Popover, for example sap.m.Page control, a size needs to be specified
@@ -610,29 +605,29 @@ to the content area of the Popover. Otherwise, Popover control isn&#39;t able to
 right way. This values isn&#39;t necessary for controls added to Popover directly which can decide their
 size by themselves, for exmaple sap.m.List, sap.m.Image etc., only needed for controls that adapt their
 size to the parent control.</p>
+<h4>Returns</h4>
+<p><code>string</code></p>
+<p>Value of property <code>contentHeight</code></p>
+<h4>Since</h4>
+<p>1.9.0</p>
 <hr>
 <h3>getContentMinWidth()</h3>
 <blockquote>
 <p><strong>getContentMinWidth</strong>(): <code>string</code></p>
 </blockquote>
+<p>Gets current value of property #getContentMinWidth contentMinWidth.</p>
+<p>Sets the minimum width of the content area inside popover.</p>
+<p>Default value is <code>empty string</code>.</p>
 <h4>Returns</h4>
 <p><code>string</code></p>
 <p>Value of property <code>contentMinWidth</code></p>
 <h4>Since</h4>
 <p>1.36</p>
-<p>Gets current value of property #getContentMinWidth contentMinWidth.</p>
-<p>Sets the minimum width of the content area inside popover.</p>
-<p>Default value is <code>empty string</code>.</p>
 <hr>
 <h3>getContentWidth()</h3>
 <blockquote>
 <p><strong>getContentWidth</strong>(): <code>string</code></p>
 </blockquote>
-<h4>Returns</h4>
-<p><code>string</code></p>
-<p>Value of property <code>contentWidth</code></p>
-<h4>Since</h4>
-<p>1.9.0</p>
 <p>Gets current value of property #getContentWidth contentWidth.</p>
 <p>Set the width of the content area inside Popover. When controls which adapt their size to the parent
 control are added directly into Popover, for example sap.m.Page control, a size needs to be specified
@@ -640,6 +635,11 @@ to the content area of the Popover. Otherwise, Popover control isn&#39;t able to
 right way. This values isn&#39;t necessary for controls added to Popover directly which can decide their
 size by themselves, for exmaple sap.m.List, sap.m.Image etc., only needed for controls that adapt their
 size to the parent control.</p>
+<h4>Returns</h4>
+<p><code>string</code></p>
+<p>Value of property <code>contentWidth</code></p>
+<h4>Since</h4>
+<p>1.9.0</p>
 <hr>
 <h3>getCustomHeader()</h3>
 <blockquote>
@@ -655,27 +655,27 @@ is ignored, and only this customHeader is shown on the top of popover.</p>
 <blockquote>
 <p><strong>getEnableScrolling</strong>(): <code>boolean</code></p>
 </blockquote>
+<p>Gets current value of property #getEnableScrolling enableScrolling.</p>
+<p>This property is deprecated. Please use properties verticalScrolling and horizontalScrolling instead.
+If you still use this property it will be mapped on the new properties verticalScrolling and horizontalScrolling.</p>
+<p>Default value is <code>true</code>.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>Value of property <code>enableScrolling</code></p>
 <h4>Deprecated</h4>
 <p>(since 1.15.0)</p>
-<p>Gets current value of property #getEnableScrolling enableScrolling.</p>
-<p>This property is deprecated. Please use properties verticalScrolling and horizontalScrolling instead.
-If you still use this property it will be mapped on the new properties verticalScrolling and horizontalScrolling.</p>
-<p>Default value is <code>true</code>.</p>
 <hr>
 <h3>getEndButton()</h3>
 <blockquote>
 <p><strong>getEndButton</strong>(): <a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></p>
 </blockquote>
+<p>Gets content of aggregation #getEndButton endButton.</p>
+<p>EndButton is always shown at the right side (left side in RTL mode) inside the header. When showHeader
+is set to false, the property is ignored.</p>
 <h4>Returns</h4>
 <p><a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></p>
 <h4>Since</h4>
 <p>1.15.1</p>
-<p>Gets content of aggregation #getEndButton endButton.</p>
-<p>EndButton is always shown at the right side (left side in RTL mode) inside the header. When showHeader
-is set to false, the property is ignored.</p>
 <hr>
 <h3>getFooter()</h3>
 <blockquote>
@@ -690,11 +690,6 @@ is set to false, the property is ignored.</p>
 <blockquote>
 <p><strong>getHorizontalScrolling</strong>(): <code>boolean</code></p>
 </blockquote>
-<h4>Returns</h4>
-<p><code>boolean</code></p>
-<p>Value of property <code>horizontalScrolling</code></p>
-<h4>Since</h4>
-<p>1.15.0</p>
 <p>Gets current value of property #getHorizontalScrolling horizontalScrolling.</p>
 <p>This property indicates if user can scroll horizontally inside popover when the content is bigger than
 the content area. However, when scrollable control (sap.m.ScrollContainer, sap.m.Page) is in the popover,
@@ -703,29 +698,34 @@ in the child control work properly. Popover detects if there&#39;s sap.m.NavCont
 as direct child added to Popover. If there is, Popover will turn off scrolling by setting this property
 to false automatically ignoring the existing value of this property.</p>
 <p>Default value is <code>true</code>.</p>
+<h4>Returns</h4>
+<p><code>boolean</code></p>
+<p>Value of property <code>horizontalScrolling</code></p>
+<h4>Since</h4>
+<p>1.15.0</p>
 <hr>
 <h3>getInitialFocus()</h3>
 <blockquote>
 <p><strong>getInitialFocus</strong>(): <code>string</code></p>
 </blockquote>
+<p>ID of the element which is the current target of the association #getInitialFocus initialFocus,
+or <code>null</code>.</p>
 <h4>Returns</h4>
 <p><code>string</code></p>
 <h4>Since</h4>
 <p>1.15.0</p>
-<p>ID of the element which is the current target of the association #getInitialFocus initialFocus,
-or <code>null</code>.</p>
 <hr>
 <h3><del>getLeftButton()</del></h3>
 <blockquote>
 <p><strong>getLeftButton</strong>(): <code>string</code></p>
 </blockquote>
+<p>ID of the element which is the current target of the association #getLeftButton leftButton, or
+<code>null</code>.</p>
 <h4>Returns</h4>
 <p><code>string</code></p>
 <h4>Deprecated</h4>
 <p>(since 1.15.1) - This property has been deprecated since 1.15.1. Please use the beginButton
 instead.</p>
-<p>ID of the element which is the current target of the association #getLeftButton leftButton, or
-<code>null</code>.</p>
 <hr>
 <h3>getModal()</h3>
 <blockquote>
@@ -782,40 +782,40 @@ any rerendering of the popover, but it will take effect when it&#39;s opened aga
 <p><strong>getResizable</strong>(): <code>boolean</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
+<p>Gets current value of property #getResizable resizable.</p>
+<p>Whether resize option is enabled. Note:* This property is effective only on Desktop</p>
+<p>Default value is <code>false</code>.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>Value of property <code>resizable</code></p>
 <h4>Since</h4>
 <p>1.36.4
  (since 1.36.4) - Do not use directly on Popover while in experimental mode!</p>
-<p>Gets current value of property #getResizable resizable.</p>
-<p>Whether resize option is enabled. Note:* This property is effective only on Desktop</p>
-<p>Default value is <code>false</code>.</p>
 <hr>
 <h3><del>getRightButton()</del></h3>
 <blockquote>
 <p><strong>getRightButton</strong>(): <code>string</code></p>
 </blockquote>
+<p>ID of the element which is the current target of the association #getRightButton rightButton,
+or <code>null</code>.</p>
 <h4>Returns</h4>
 <p><code>string</code></p>
 <h4>Deprecated</h4>
 <p>(since 1.15.1) - This property has been deprecated since 1.15.1. Please use the endButton
 instead.</p>
-<p>ID of the element which is the current target of the association #getRightButton rightButton,
-or <code>null</code>.</p>
 <hr>
 <h3>getShowArrow()</h3>
 <blockquote>
 <p><strong>getShowArrow</strong>(): <code>boolean</code></p>
 </blockquote>
+<p>Gets current value of property #getShowArrow showArrow.</p>
+<p>Whether Popover arrow should be visible</p>
+<p>Default value is <code>true</code>.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>Value of property <code>showArrow</code></p>
 <h4>Since</h4>
 <p>1.31</p>
-<p>Gets current value of property #getShowArrow showArrow.</p>
-<p>Whether Popover arrow should be visible</p>
-<p>Default value is <code>true</code>.</p>
 <hr>
 <h3>getShowHeader()</h3>
 <blockquote>
@@ -833,14 +833,14 @@ Headings in the popover content should start with H2 heading level.</p>
 <blockquote>
 <p><strong>getSubHeader</strong>(): <a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></p>
 </blockquote>
-<h4>Returns</h4>
-<p><a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></p>
-<h4>Since</h4>
-<p>1.15.1</p>
 <p>Gets content of aggregation #getSubHeader subHeader.</p>
 <p>When subHeader is assigned to Popover, it&#39;s rendered directly after the main header if there is, or at
 the beginning of Popover when there&#39;s no main header. SubHeader is out of the content area and won&#39;t
 be scrolled when content&#39;s size is bigger than the content area&#39;s size.</p>
+<h4>Returns</h4>
+<p><a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></p>
+<h4>Since</h4>
+<p>1.15.1</p>
 <hr>
 <h3>getTitle()</h3>
 <blockquote>
@@ -858,26 +858,21 @@ property to <code>true</code>.</p>
 <blockquote>
 <p><strong>getTitleAlignment</strong>(): <code>&quot;None&quot;</code> | <code>&quot;Auto&quot;</code> | <code>&quot;Center&quot;</code> | <a href="../../library/enumerations/TitleAlignment.html"><code>TitleAlignment</code></a> | <code>&quot;Start&quot;</code></p>
 </blockquote>
-<h4>Returns</h4>
-<p><code>&quot;None&quot;</code> | <code>&quot;Auto&quot;</code> | <code>&quot;Center&quot;</code> | <a href="../../library/enumerations/TitleAlignment.html"><code>TitleAlignment</code></a> | <code>&quot;Start&quot;</code></p>
-<p>Value of property <code>titleAlignment</code></p>
-<h4>Since</h4>
-<p>1.72</p>
 <p>Gets current value of property #getTitleAlignment titleAlignment.</p>
 <p>Specifies the Title alignment (theme specific). If set to <code>TitleAlignment.Auto</code>, the Title will be aligned
 as it is set in the theme (if not set, the default value is <code>center</code>); Other possible values are <code>TitleAlignment.Start</code>
 (left or right depending on LTR/RTL), and <code>TitleAlignment.Center</code> (centered)</p>
 <p>Default value is <code>Auto</code>.</p>
+<h4>Returns</h4>
+<p><code>&quot;None&quot;</code> | <code>&quot;Auto&quot;</code> | <code>&quot;Center&quot;</code> | <a href="../../library/enumerations/TitleAlignment.html"><code>TitleAlignment</code></a> | <code>&quot;Start&quot;</code></p>
+<p>Value of property <code>titleAlignment</code></p>
+<h4>Since</h4>
+<p>1.72</p>
 <hr>
 <h3>getVerticalScrolling()</h3>
 <blockquote>
 <p><strong>getVerticalScrolling</strong>(): <code>boolean</code></p>
 </blockquote>
-<h4>Returns</h4>
-<p><code>boolean</code></p>
-<p>Value of property <code>verticalScrolling</code></p>
-<h4>Since</h4>
-<p>1.15.0</p>
 <p>Gets current value of property #getVerticalScrolling verticalScrolling.</p>
 <p>This property indicates if user can scroll vertically inside popover when the content is bigger than
 the content area. However, when scrollable control (sap.m.ScrollContainer, sap.m.Page) is in the popover,
@@ -886,6 +881,11 @@ in the child control work properly. Popover detects if there&#39;s sap.m.NavCont
 as direct child added to Popover. If there is, Popover will turn off scrolling by setting this property
 to false automatically ignoring the existing value of this property.</p>
 <p>Default value is <code>true</code>.</p>
+<h4>Returns</h4>
+<p><code>boolean</code></p>
+<p>Value of property <code>verticalScrolling</code></p>
+<h4>Since</h4>
+<p>1.15.0</p>
 <hr>
 <h3>indexOfContent()</h3>
 <blockquote>
@@ -923,13 +923,13 @@ is inserted at the last position</p>
 <blockquote>
 <p><strong>isOpen</strong>(): <code>boolean</code></p>
 </blockquote>
+<p>The method checks if the Popover is open. It returns true when the Popover is currently open (this includes
+opening and closing animations), otherwise it returns false.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>whether the Popover is currently opened</p>
 <h4>Since</h4>
 <p>1.9.1</p>
-<p>The method checks if the Popover is open. It returns true when the Popover is currently open (this includes
-opening and closing animations), otherwise it returns false.</p>
 <hr>
 <h3>openBy()</h3>
 <blockquote>
@@ -1020,6 +1020,7 @@ existing DOM reference. The side of the placement depends on the placement prope
 <blockquote>
 <p><strong>setBeginButton</strong>(<code>oBeginButton</code>): <code>this</code></p>
 </blockquote>
+<p>Sets the aggregated #getBeginButton beginButton.</p>
 <h4>Parameters</h4>
 <h5>oBeginButton</h5>
 <p><a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></p>
@@ -1029,12 +1030,13 @@ existing DOM reference. The side of the placement depends on the placement prope
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.15.1</p>
-<p>Sets the aggregated #getBeginButton beginButton.</p>
 <hr>
 <h3>setBounce()</h3>
 <blockquote>
 <p><strong>setBounce</strong>(<code>bBounce</code>): <code>this</code></p>
 </blockquote>
+<p>Setter for property <code>bounce</code>.</p>
+<p>Default value is empty</p>
 <h4>Parameters</h4>
 <h5>bBounce</h5>
 <p><code>boolean</code></p>
@@ -1044,13 +1046,19 @@ existing DOM reference. The side of the placement depends on the placement prope
 <p>Reference to the control instance for chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Setter for property <code>bounce</code>.</p>
-<p>Default value is empty</p>
 <hr>
 <h3>setContentHeight()</h3>
 <blockquote>
 <p><strong>setContentHeight</strong>(<code>sContentHeight?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getContentHeight contentHeight.</p>
+<p>Set the height of the content area inside Popover. When controls which adapt their size to the parent
+control are added directly into Popover, for example sap.m.Page control, a size needs to be specified
+to the content area of the Popover. Otherwise, Popover control isn&#39;t able to display the content in the
+right way. This values isn&#39;t necessary for controls added to Popover directly which can decide their
+size by themselves, for exmaple sap.m.List, sap.m.Image etc., only needed for controls that adapt their
+size to the parent control.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <h4>Parameters</h4>
 <h5>sContentHeight?</h5>
 <p><code>string</code></p>
@@ -1060,19 +1068,15 @@ existing DOM reference. The side of the placement depends on the placement prope
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.9.0</p>
-<p>Sets a new value for property #getContentHeight contentHeight.</p>
-<p>Set the height of the content area inside Popover. When controls which adapt their size to the parent
-control are added directly into Popover, for example sap.m.Page control, a size needs to be specified
-to the content area of the Popover. Otherwise, Popover control isn&#39;t able to display the content in the
-right way. This values isn&#39;t necessary for controls added to Popover directly which can decide their
-size by themselves, for exmaple sap.m.List, sap.m.Image etc., only needed for controls that adapt their
-size to the parent control.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <hr>
 <h3>setContentMinWidth()</h3>
 <blockquote>
 <p><strong>setContentMinWidth</strong>(<code>sContentMinWidth?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getContentMinWidth contentMinWidth.</p>
+<p>Sets the minimum width of the content area inside popover.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>empty string</code>.</p>
 <h4>Parameters</h4>
 <h5>sContentMinWidth?</h5>
 <p><code>string</code></p>
@@ -1082,15 +1086,19 @@ size to the parent control.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.36</p>
-<p>Sets a new value for property #getContentMinWidth contentMinWidth.</p>
-<p>Sets the minimum width of the content area inside popover.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>empty string</code>.</p>
 <hr>
 <h3>setContentWidth()</h3>
 <blockquote>
 <p><strong>setContentWidth</strong>(<code>sContentWidth?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getContentWidth contentWidth.</p>
+<p>Set the width of the content area inside Popover. When controls which adapt their size to the parent
+control are added directly into Popover, for example sap.m.Page control, a size needs to be specified
+to the content area of the Popover. Otherwise, Popover control isn&#39;t able to display the content in the
+right way. This values isn&#39;t necessary for controls added to Popover directly which can decide their
+size by themselves, for exmaple sap.m.List, sap.m.Image etc., only needed for controls that adapt their
+size to the parent control.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <h4>Parameters</h4>
 <h5>sContentWidth?</h5>
 <p><code>string</code></p>
@@ -1100,14 +1108,6 @@ size to the parent control.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.9.0</p>
-<p>Sets a new value for property #getContentWidth contentWidth.</p>
-<p>Set the width of the content area inside Popover. When controls which adapt their size to the parent
-control are added directly into Popover, for example sap.m.Page control, a size needs to be specified
-to the content area of the Popover. Otherwise, Popover control isn&#39;t able to display the content in the
-right way. This values isn&#39;t necessary for controls added to Popover directly which can decide their
-size by themselves, for exmaple sap.m.List, sap.m.Image etc., only needed for controls that adapt their
-size to the parent control.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <hr>
 <h3>setCustomHeader()</h3>
 <blockquote>
@@ -1126,6 +1126,11 @@ size to the parent control.</p>
 <blockquote>
 <p><strong>setEnableScrolling</strong>(<code>bEnableScrolling?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getEnableScrolling enableScrolling.</p>
+<p>This property is deprecated. Please use properties verticalScrolling and horizontalScrolling instead.
+If you still use this property it will be mapped on the new properties verticalScrolling and horizontalScrolling.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>true</code>.</p>
 <h4>Parameters</h4>
 <h5>bEnableScrolling?</h5>
 <p><code>boolean</code></p>
@@ -1135,16 +1140,12 @@ size to the parent control.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Deprecated</h4>
 <p>(since 1.15.0)</p>
-<p>Sets a new value for property #getEnableScrolling enableScrolling.</p>
-<p>This property is deprecated. Please use properties verticalScrolling and horizontalScrolling instead.
-If you still use this property it will be mapped on the new properties verticalScrolling and horizontalScrolling.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>true</code>.</p>
 <hr>
 <h3>setEndButton()</h3>
 <blockquote>
 <p><strong>setEndButton</strong>(<code>oEndButton</code>): <code>this</code></p>
 </blockquote>
+<p>Sets the aggregated #getEndButton endButton.</p>
 <h4>Parameters</h4>
 <h5>oEndButton</h5>
 <p><a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></p>
@@ -1154,12 +1155,14 @@ If you still use this property it will be mapped on the new properties verticalS
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.15.1</p>
-<p>Sets the aggregated #getEndButton endButton.</p>
 <hr>
 <h3>setFollowOf()</h3>
 <blockquote>
 <p><strong>setFollowOf</strong>(<code>bValue</code>): <code>this</code></p>
 </blockquote>
+<p>The followOf feature closes the Popover when the position of the control that opened the Popover changes
+by at least 32 pixels (on desktop browsers). This may lead to unwanted closing of the Popover.</p>
+<p>This function is for enabling/disabling the followOf feature.</p>
 <h4>Parameters</h4>
 <h5>bValue</h5>
 <p><code>boolean</code></p>
@@ -1171,9 +1174,6 @@ If you still use this property it will be mapped on the new properties verticalS
 <p>1.16.8</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>The followOf feature closes the Popover when the position of the control that opened the Popover changes
-by at least 32 pixels (on desktop browsers). This may lead to unwanted closing of the Popover.</p>
-<p>This function is for enabling/disabling the followOf feature.</p>
 <hr>
 <h3>setFooter()</h3>
 <blockquote>
@@ -1192,15 +1192,6 @@ by at least 32 pixels (on desktop browsers). This may lead to unwanted closing o
 <blockquote>
 <p><strong>setHorizontalScrolling</strong>(<code>bHorizontalScrolling?</code>): <code>this</code></p>
 </blockquote>
-<h4>Parameters</h4>
-<h5>bHorizontalScrolling?</h5>
-<p><code>boolean</code></p>
-<p>New value for property <code>horizontalScrolling</code></p>
-<h4>Returns</h4>
-<p><code>this</code></p>
-<p>Reference to <code>this</code> in order to allow method chaining</p>
-<h4>Since</h4>
-<p>1.15.0</p>
 <p>Sets a new value for property #getHorizontalScrolling horizontalScrolling.</p>
 <p>This property indicates if user can scroll horizontally inside popover when the content is bigger than
 the content area. However, when scrollable control (sap.m.ScrollContainer, sap.m.Page) is in the popover,
@@ -1210,11 +1201,21 @@ as direct child added to Popover. If there is, Popover will turn off scrolling b
 to false automatically ignoring the existing value of this property.</p>
 <p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <p>Default value is <code>true</code>.</p>
+<h4>Parameters</h4>
+<h5>bHorizontalScrolling?</h5>
+<p><code>boolean</code></p>
+<p>New value for property <code>horizontalScrolling</code></p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<h4>Since</h4>
+<p>1.15.0</p>
 <hr>
 <h3>setInitialFocus()</h3>
 <blockquote>
 <p><strong>setInitialFocus</strong>(<code>oInitialFocus</code>): <code>this</code></p>
 </blockquote>
+<p>Sets the associated #getInitialFocus initialFocus.</p>
 <h4>Parameters</h4>
 <h5>oInitialFocus</h5>
 <p><code>string</code> | <a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></p>
@@ -1225,12 +1226,12 @@ instance may be given</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.15.0</p>
-<p>Sets the associated #getInitialFocus initialFocus.</p>
 <hr>
 <h3><del>setLeftButton()</del></h3>
 <blockquote>
 <p><strong>setLeftButton</strong>(<code>oLeftButton</code>): <code>this</code></p>
 </blockquote>
+<p>Sets the associated #getLeftButton leftButton.</p>
 <h4>Parameters</h4>
 <h5>oLeftButton</h5>
 <p><code>string</code> | <a href="../../Button/classes/Button.html"><code>Button</code></a></p>
@@ -1242,7 +1243,6 @@ instance may be given</p>
 <h4>Deprecated</h4>
 <p>(since 1.15.1) - This property has been deprecated since 1.15.1. Please use the beginButton
 instead.</p>
-<p>Sets the associated #getLeftButton leftButton.</p>
 <hr>
 <h3>setModal()</h3>
 <blockquote>
@@ -1312,6 +1312,10 @@ the whole popover control.</p>
 <p><strong>setResizable</strong>(<code>bResizable?</code>): <code>this</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
+<p>Sets a new value for property #getResizable resizable.</p>
+<p>Whether resize option is enabled. Note:* This property is effective only on Desktop</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>false</code>.</p>
 <h4>Parameters</h4>
 <h5>bResizable?</h5>
 <p><code>boolean</code></p>
@@ -1322,15 +1326,12 @@ the whole popover control.</p>
 <h4>Since</h4>
 <p>1.36.4
  (since 1.36.4) - Do not use directly on Popover while in experimental mode!</p>
-<p>Sets a new value for property #getResizable resizable.</p>
-<p>Whether resize option is enabled. Note:* This property is effective only on Desktop</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>false</code>.</p>
 <hr>
 <h3><del>setRightButton()</del></h3>
 <blockquote>
 <p><strong>setRightButton</strong>(<code>oRightButton</code>): <code>this</code></p>
 </blockquote>
+<p>Sets the associated #getRightButton rightButton.</p>
 <h4>Parameters</h4>
 <h5>oRightButton</h5>
 <p><code>string</code> | <a href="../../Button/classes/Button.html"><code>Button</code></a></p>
@@ -1342,12 +1343,15 @@ instance may be given</p>
 <h4>Deprecated</h4>
 <p>(since 1.15.1) - This property has been deprecated since 1.15.1. Please use the endButton
 instead.</p>
-<p>Sets the associated #getRightButton rightButton.</p>
 <hr>
 <h3>setShowArrow()</h3>
 <blockquote>
 <p><strong>setShowArrow</strong>(<code>bShowArrow?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getShowArrow showArrow.</p>
+<p>Whether Popover arrow should be visible</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>true</code>.</p>
 <h4>Parameters</h4>
 <h5>bShowArrow?</h5>
 <p><code>boolean</code></p>
@@ -1357,10 +1361,6 @@ instead.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.31</p>
-<p>Sets a new value for property #getShowArrow showArrow.</p>
-<p>Whether Popover arrow should be visible</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>true</code>.</p>
 <hr>
 <h3>setShowHeader()</h3>
 <blockquote>
@@ -1383,6 +1383,7 @@ Headings in the popover content should start with H2 heading level.</p>
 <blockquote>
 <p><strong>setSubHeader</strong>(<code>oSubHeader</code>): <code>this</code></p>
 </blockquote>
+<p>Sets the aggregated #getSubHeader subHeader.</p>
 <h4>Parameters</h4>
 <h5>oSubHeader</h5>
 <p><a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></p>
@@ -1392,7 +1393,6 @@ Headings in the popover content should start with H2 heading level.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.15.1</p>
-<p>Sets the aggregated #getSubHeader subHeader.</p>
 <hr>
 <h3>setTitle()</h3>
 <blockquote>
@@ -1415,6 +1415,12 @@ property to <code>true</code>.</p>
 <blockquote>
 <p><strong>setTitleAlignment</strong>(<code>sTitleAlignment?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getTitleAlignment titleAlignment.</p>
+<p>Specifies the Title alignment (theme specific). If set to <code>TitleAlignment.Auto</code>, the Title will be aligned
+as it is set in the theme (if not set, the default value is <code>center</code>); Other possible values are <code>TitleAlignment.Start</code>
+(left or right depending on LTR/RTL), and <code>TitleAlignment.Center</code> (centered)</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>Auto</code>.</p>
 <h4>Parameters</h4>
 <h5>sTitleAlignment?</h5>
 <p><code>&quot;None&quot;</code> | <code>&quot;Auto&quot;</code> | <code>&quot;Center&quot;</code> | <a href="../../library/enumerations/TitleAlignment.html"><code>TitleAlignment</code></a> | <code>&quot;Start&quot;</code></p>
@@ -1424,26 +1430,11 @@ property to <code>true</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.72</p>
-<p>Sets a new value for property #getTitleAlignment titleAlignment.</p>
-<p>Specifies the Title alignment (theme specific). If set to <code>TitleAlignment.Auto</code>, the Title will be aligned
-as it is set in the theme (if not set, the default value is <code>center</code>); Other possible values are <code>TitleAlignment.Start</code>
-(left or right depending on LTR/RTL), and <code>TitleAlignment.Center</code> (centered)</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>Auto</code>.</p>
 <hr>
 <h3>setVerticalScrolling()</h3>
 <blockquote>
 <p><strong>setVerticalScrolling</strong>(<code>bVerticalScrolling?</code>): <code>this</code></p>
 </blockquote>
-<h4>Parameters</h4>
-<h5>bVerticalScrolling?</h5>
-<p><code>boolean</code></p>
-<p>New value for property <code>verticalScrolling</code></p>
-<h4>Returns</h4>
-<p><code>this</code></p>
-<p>Reference to <code>this</code> in order to allow method chaining</p>
-<h4>Since</h4>
-<p>1.15.0</p>
 <p>Sets a new value for property #getVerticalScrolling verticalScrolling.</p>
 <p>This property indicates if user can scroll vertically inside popover when the content is bigger than
 the content area. However, when scrollable control (sap.m.ScrollContainer, sap.m.Page) is in the popover,
@@ -1453,6 +1444,15 @@ as direct child added to Popover. If there is, Popover will turn off scrolling b
 to false automatically ignoring the existing value of this property.</p>
 <p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <p>Default value is <code>true</code>.</p>
+<h4>Parameters</h4>
+<h5>bVerticalScrolling?</h5>
+<p><code>boolean</code></p>
+<p>New value for property <code>verticalScrolling</code></p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<h4>Since</h4>
+<p>1.15.0</p>
 <hr>
 <h3>extend()</h3>
 <blockquote>
@@ -1496,6 +1496,7 @@ used by this class</p>
 <blockquote>
 <p><code>static</code> <strong>outerHeight</strong>(<code>oElement</code>, <code>bIncludeMargin?</code>): <code>number</code></p>
 </blockquote>
+<p>Calculate outerHeight of the element; used as hook for SVG elements</p>
 <h4>Parameters</h4>
 <h5>oElement</h5>
 <p><code>HTMLElement</code></p>
@@ -1508,12 +1509,12 @@ used by this class</p>
 <p>The outer height of the element</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Calculate outerHeight of the element; used as hook for SVG elements</p>
 <hr>
 <h3>outerWidth()</h3>
 <blockquote>
 <p><code>static</code> <strong>outerWidth</strong>(<code>oElement</code>, <code>bIncludeMargin?</code>): <code>number</code></p>
 </blockquote>
+<p>Calculate outerWidth of the element; used as hook for SVG elements</p>
 <h4>Parameters</h4>
 <h5>oElement</h5>
 <p><code>HTMLElement</code></p>
@@ -1526,8 +1527,7 @@ used by this class</p>
 <p>The outer width of the element</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Calculate outerWidth of the element; used as hook for SVG elements</p>
 
-<footer>Generated from <code>@openui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@openui5/types@1.120.46</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

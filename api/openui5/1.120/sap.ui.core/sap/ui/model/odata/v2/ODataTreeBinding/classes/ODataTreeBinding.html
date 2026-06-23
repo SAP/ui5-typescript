@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Class: ODataTreeBinding — OpenUI5 TypeScript API</title>
-<meta name="description" content="Class: ODataTreeBinding — OpenUI5 TypeScript API Reference (1.120.0)">
+<meta name="description" content="Class: ODataTreeBinding — OpenUI5 TypeScript API Reference (1.120.46)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/openui5/1.120/sap.ui.core/sap/ui/model/odata/v2/ODataTreeBinding/classes/ODataTreeBinding.html">
 <meta property="og:title" content="Class: ODataTreeBinding — OpenUI5 TypeScript API">
-<meta property="og:description" content="Class: ODataTreeBinding — OpenUI5 TypeScript API Reference (1.120.0)">
+<meta property="og:description" content="Class: ODataTreeBinding — OpenUI5 TypeScript API Reference (1.120.46)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/openui5/1.120/sap.ui.core/sap/ui/model/odata/v2/ODataTreeBinding/classes/ODataTreeBinding.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,9 +33,9 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../../../index.html">OpenUI5 API</a> › <a href="../../../../../../../../sap.ui.core/README.html">sap.ui.core</a> › sap › ui › model › odata › v2 › <a href="../../../../../../../../sap.ui.core/sap/ui/model/odata/v2/ODataTreeBinding/README.html">ODataTreeBinding</a> › classes</nav>
-<p><a href="../../../../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.0)</strong></a></p>
+<p><a href="../../../../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.46)</strong></a></p>
 <hr>
-<p><a href="../../../../../../../../README.html">OpenUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../../../README.html">sap.ui.core</a> / <a href="../README.html">sap/ui/model/odata/v2/ODataTreeBinding</a> / ODataTreeBinding</p>
+<p><a href="../../../../../../../../README.html">OpenUI5 TypeScript API (1.120.46)</a> / <a href="../../../../../../../README.html">sap.ui.core</a> / <a href="../README.html">sap/ui/model/odata/v2/ODataTreeBinding</a> / ODataTreeBinding</p>
 <h1>Class: ODataTreeBinding</h1>
 <pre class="sig"><span class="kw">import</span> ODataTreeBinding <span class="kw">from</span> <span class="str">"sap/ui/model/odata/v2/ODataTreeBinding"</span>;</pre>
 <p>Tree binding implementation for the sap.ui.model.odata.v2.ODataModel. Use sap.ui.model.odata.v2.ODataModel#bindTree
@@ -58,6 +58,9 @@ for creating an instance.</p>
 <blockquote>
 <p><strong>expandNodeToLevel</strong>(<code>iIndex</code>, <code>iLevel</code>, <code>bSuppressChange</code>): <code>Promise</code>&lt;<code>any</code>&gt;</p>
 </blockquote>
+<p>Expand a nodes subtree to a given level.</p>
+<p>This API is only supported in <code>OperationMode.Server</code> and if the OData service implements the full specification
+of the &quot;hierarchy-node-for&quot; annotation.</p>
 <h4>Parameters</h4>
 <h5>iIndex</h5>
 <p><code>number</code></p>
@@ -73,9 +76,6 @@ for creating an instance.</p>
 <p>A promise resolving once the expansion process has been completed</p>
 <h4>Since</h4>
 <p>1.58</p>
-<p>Expand a nodes subtree to a given level.</p>
-<p>This API is only supported in <code>OperationMode.Server</code> and if the OData service implements the full specification
-of the &quot;hierarchy-node-for&quot; annotation.</p>
 <hr>
 <h3>filter()</h3>
 <blockquote>
@@ -131,6 +131,7 @@ is exposed on the service.</p>
 <blockquote>
 <p><strong>getDownloadUrl</strong>(<code>sFormat</code>): <code>string</code></p>
 </blockquote>
+<p>Get a download URL with the specified format considering the sort/filter/custom parameters.</p>
 <h4>Parameters</h4>
 <h5>sFormat</h5>
 <p><code>string</code></p>
@@ -140,7 +141,6 @@ is exposed on the service.</p>
 <p>URL which can be used for downloading</p>
 <h4>Since</h4>
 <p>1.28</p>
-<p>Get a download URL with the specified format considering the sort/filter/custom parameters.</p>
 <hr>
 <h3>getNodeContexts()</h3>
 <blockquote>
@@ -326,6 +326,6 @@ used by this class</p>
 <p><a href="../../../../TreeBinding/classes/TreeBinding.html"><code>TreeBinding</code></a>.<a href="../../../../TreeBinding/classes/TreeBinding.html#getmetadata-1"><code>getMetadata</code></a></p>
 <hr>
 
-<footer>Generated from <code>@openui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@openui5/types@1.120.46</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

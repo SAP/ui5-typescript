@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Class: BaseMediator — OpenUI5 TypeScript API</title>
-<meta name="description" content="Class: BaseMediator — OpenUI5 TypeScript API Reference (1.120.0)">
+<meta name="description" content="Class: BaseMediator — OpenUI5 TypeScript API Reference (1.120.46)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/openui5/1.120/sap.m/sap/m/upload/p13n/mediator/BaseMediator/classes/BaseMediator.html">
 <meta property="og:title" content="Class: BaseMediator — OpenUI5 TypeScript API">
-<meta property="og:description" content="Class: BaseMediator — OpenUI5 TypeScript API Reference (1.120.0)">
+<meta property="og:description" content="Class: BaseMediator — OpenUI5 TypeScript API Reference (1.120.46)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/openui5/1.120/sap.m/sap/m/upload/p13n/mediator/BaseMediator/classes/BaseMediator.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,16 +33,16 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../../../index.html">OpenUI5 API</a> › <a href="../../../../../../../../sap.m/README.html">sap.m</a> › sap › m › upload › p13n › mediator › <a href="../../../../../../../../sap.m/sap/m/upload/p13n/mediator/BaseMediator/README.html">BaseMediator</a> › classes</nav>
-<p><a href="../../../../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.0)</strong></a></p>
+<p><a href="../../../../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.46)</strong></a></p>
 <hr>
-<p><a href="../../../../../../../../README.html">OpenUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../../../README.html">sap.m</a> / <a href="../README.html">sap/m/upload/p13n/mediator/BaseMediator</a> / BaseMediator</p>
+<p><a href="../../../../../../../../README.html">OpenUI5 TypeScript API (1.120.46)</a> / <a href="../../../../../../../README.html">sap.m</a> / <a href="../README.html">sap/m/upload/p13n/mediator/BaseMediator</a> / BaseMediator</p>
 <h1>Class: BaseMediator</h1>
 <pre class="sig"><span class="kw">import</span> BaseMediator <span class="kw">from</span> <span class="str">"sap/m/upload/p13n/mediator/BaseMediator"</span>;</pre>
 <p><strong><code>Experimental</code></strong></p>
+<p>The <code>BaseMediator</code> entity serves as a base class to create control-specific personalization implementations.</p>
 <h2>Since</h2>
 <p>1.120
  (since 1.120)</p>
-<p>The <code>BaseMediator</code> entity serves as a base class to create control-specific personalization implementations.</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../../../../../../../sap.ui.core/sap/ui/base/Object/classes/BaseObject.html"><code>BaseObject</code></a></li>
@@ -76,12 +76,12 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 <p><strong>applyStateToTable</strong>(): <code>void</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
+<p>An abstract method for applying changes to the upload set table. Essentially, these changes should be
+applied after the current data becomes available.</p>
 <h4>Returns</h4>
 <p><code>void</code></p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>An abstract method for applying changes to the upload set table. Essentially, these changes should be
-applied after the current data becomes available.</p>
 <hr>
 <h3>createChange()</h3>
 <blockquote>
@@ -105,24 +105,24 @@ applied after the current data becomes available.</p>
 <p><strong>createPanel</strong>(): <code>Promise</code>&lt;<code>any</code>&gt;</p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
+<p>Abstract method for constructing a panel and populating it with data specific to that panel.</p>
 <h4>Returns</h4>
 <p><code>Promise</code>&lt;<code>any</code>&gt;</p>
 <p>returns a promise with the resolved p13 panel.</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Abstract method for constructing a panel and populating it with data specific to that panel.</p>
 <hr>
 <h3>getChanges()</h3>
 <blockquote>
 <p><strong>getChanges</strong>(): <code>any</code>[]</p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
+<p>Abstract method to obtain changes by comparing the old and current states.</p>
 <h4>Returns</h4>
 <p><code>any</code>[]</p>
 <p>returns array of delta changes</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Abstract method to obtain changes by comparing the old and current states.</p>
 <hr>
 <h3>getControl()</h3>
 <blockquote>
@@ -173,6 +173,6 @@ used by this class</p>
 <p>Metadata object describing this class</p>
 <hr>
 
-<footer>Generated from <code>@openui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@openui5/types@1.120.46</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

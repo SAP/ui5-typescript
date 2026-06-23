@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Function: extend() — OpenUI5 TypeScript API</title>
-<meta name="description" content="Function: extend() — OpenUI5 TypeScript API Reference (1.120.0)">
+<meta name="description" content="Function: extend() — OpenUI5 TypeScript API Reference (1.120.46)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/openui5/1.120/sap.ui.core/sap/base/util/extend/functions/extend.html">
 <meta property="og:title" content="Function: extend() — OpenUI5 TypeScript API">
-<meta property="og:description" content="Function: extend() — OpenUI5 TypeScript API Reference (1.120.0)">
+<meta property="og:description" content="Function: extend() — OpenUI5 TypeScript API Reference (1.120.46)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/openui5/1.120/sap.ui.core/sap/base/util/extend/functions/extend.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,13 +33,20 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../index.html">OpenUI5 API</a> › <a href="../../../../../../sap.ui.core/README.html">sap.ui.core</a> › sap › base › util › <a href="../../../../../../sap.ui.core/sap/base/util/extend/README.html">extend</a> › functions</nav>
-<p><a href="../../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.0)</strong></a></p>
+<p><a href="../../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.46)</strong></a></p>
 <hr>
-<p><a href="../../../../../../README.html">OpenUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../README.html">sap.ui.core</a> / <a href="../README.html">sap/base/util/extend</a> / extend</p>
+<p><a href="../../../../../../README.html">OpenUI5 TypeScript API (1.120.46)</a> / <a href="../../../../../README.html">sap.ui.core</a> / <a href="../README.html">sap/base/util/extend</a> / extend</p>
 <h1>Function: extend()</h1>
 <blockquote>
 <p><strong>extend</strong>(<code>target</code>, ...<code>source</code>): <code>object</code></p>
 </blockquote>
+<p>Performs object extension by merging source objects into a target object. Generates a shallow copy.</p>
+<p>If during merging a key in the target object exists it is overwritten with the source object&#39;s value.
+Usage is the same as <code>jQuery.extend(...)</code>. Values that are <code>undefined</code> are ignored.</p>
+<p>As alternative you may also use <code>Object.assign</code>, but note that <code>Object.assign</code> only copies enumerable
+and own properties and doesn&#39;t copy properties on the prototype and non-enumerable properties. Also,
+values that are <code>undefined</code> are NOT ignored.</p>
+<p>For deep copies, you may use module:sap/base/util/deepExtend sap/base/util/deepExtend.</p>
 <h2>Parameters</h2>
 <h3>target</h3>
 <p><code>object</code></p>
@@ -52,14 +59,7 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 <p>the target object which is the result of the merge</p>
 <h2>Since</h2>
 <p>1.71</p>
-<p>Performs object extension by merging source objects into a target object. Generates a shallow copy.</p>
-<p>If during merging a key in the target object exists it is overwritten with the source object&#39;s value.
-Usage is the same as <code>jQuery.extend(...)</code>. Values that are <code>undefined</code> are ignored.</p>
-<p>As alternative you may also use <code>Object.assign</code>, but note that <code>Object.assign</code> only copies enumerable
-and own properties and doesn&#39;t copy properties on the prototype and non-enumerable properties. Also,
-values that are <code>undefined</code> are NOT ignored.</p>
-<p>For deep copies, you may use module:sap/base/util/deepExtend sap/base/util/deepExtend.</p>
 
-<footer>Generated from <code>@openui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@openui5/types@1.120.46</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

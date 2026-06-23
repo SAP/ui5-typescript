@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Class: ResponsiveTableType — OpenUI5 TypeScript API</title>
-<meta name="description" content="Class: ResponsiveTableType — OpenUI5 TypeScript API Reference (1.120.0)">
+<meta name="description" content="Class: ResponsiveTableType — OpenUI5 TypeScript API Reference (1.120.46)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/openui5/1.120/sap.ui.mdc/sap/ui/mdc/table/ResponsiveTableType/classes/ResponsiveTableType.html">
 <meta property="og:title" content="Class: ResponsiveTableType — OpenUI5 TypeScript API">
-<meta property="og:description" content="Class: ResponsiveTableType — OpenUI5 TypeScript API Reference (1.120.0)">
+<meta property="og:description" content="Class: ResponsiveTableType — OpenUI5 TypeScript API Reference (1.120.46)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/openui5/1.120/sap.ui.mdc/sap/ui/mdc/table/ResponsiveTableType/classes/ResponsiveTableType.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,14 +33,14 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../../index.html">OpenUI5 API</a> › <a href="../../../../../../../sap.ui.mdc/README.html">sap.ui.mdc</a> › sap › ui › mdc › table › <a href="../../../../../../../sap.ui.mdc/sap/ui/mdc/table/ResponsiveTableType/README.html">ResponsiveTableType</a> › classes</nav>
-<p><a href="../../../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.0)</strong></a></p>
+<p><a href="../../../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.46)</strong></a></p>
 <hr>
-<p><a href="../../../../../../../README.html">OpenUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../../README.html">sap.ui.mdc</a> / <a href="../README.html">sap/ui/mdc/table/ResponsiveTableType</a> / ResponsiveTableType</p>
+<p><a href="../../../../../../../README.html">OpenUI5 TypeScript API (1.120.46)</a> / <a href="../../../../../../README.html">sap.ui.mdc</a> / <a href="../README.html">sap/ui/mdc/table/ResponsiveTableType</a> / ResponsiveTableType</p>
 <h1>Class: ResponsiveTableType</h1>
 <pre class="sig"><span class="kw">import</span> ResponsiveTableType <span class="kw">from</span> <span class="str">"sap/ui/mdc/table/ResponsiveTableType"</span>;</pre>
+<p>The table type info class for the metadata-driven table.</p>
 <h2>Since</h2>
 <p>1.65</p>
-<p>The table type info class for the metadata-driven table.</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../TableTypeBase/classes/TableTypeBase.html"><code>TableTypeBase</code></a></li>
@@ -86,11 +86,6 @@ of the syntax of the settings object.</p>
 <blockquote>
 <p><strong>getDetailsButtonSetting</strong>(): (<code>&quot;None&quot;</code> | <code>&quot;Medium&quot;</code> | <a href="../../../../../../../sap.ui.core/sap/ui/core/library/enumerations/Priority.html"><code>Priority</code></a> | <code>&quot;High&quot;</code> | <code>&quot;Low&quot;</code>)[]</p>
 </blockquote>
-<h4>Returns</h4>
-<p>(<code>&quot;None&quot;</code> | <code>&quot;Medium&quot;</code> | <a href="../../../../../../../sap.ui.core/sap/ui/core/library/enumerations/Priority.html"><code>Priority</code></a> | <code>&quot;High&quot;</code> | <code>&quot;Low&quot;</code>)[]</p>
-<p>Value of property <code>detailsButtonSetting</code></p>
-<h4>Since</h4>
-<p>1.86</p>
 <p>Gets current value of property #getDetailsButtonSetting detailsButtonSetting.</p>
 <p>Defines which columns are hidden instead of moved into the pop-in area depending on their importance.
 See sap.m.Column#getImportance and sap.m.Table#getHiddenInPopin for more details.</p>
@@ -99,6 +94,11 @@ See sap.m.Column#getImportance and sap.m.Table#getHiddenInPopin for more details
 is used.
  If this property is changed after the <code>Table</code> has been initialized, the new changes take effect only
 when the Show / Hide Details button is pressed a second time.</p>
+<h4>Returns</h4>
+<p>(<code>&quot;None&quot;</code> | <code>&quot;Medium&quot;</code> | <a href="../../../../../../../sap.ui.core/sap/ui/core/library/enumerations/Priority.html"><code>Priority</code></a> | <code>&quot;High&quot;</code> | <code>&quot;Low&quot;</code>)[]</p>
+<p>Value of property <code>detailsButtonSetting</code></p>
+<h4>Since</h4>
+<p>1.86</p>
 <hr>
 <h3>getGrowingMode()</h3>
 <blockquote>
@@ -115,24 +115,19 @@ when the Show / Hide Details button is pressed a second time.</p>
 <blockquote>
 <p><strong>getPopinLayout</strong>(): <code>&quot;Block&quot;</code> | <a href="../../../../../../../sap.m/sap/m/library/enumerations/PopinLayout.html"><code>PopinLayout</code></a> | <code>&quot;GridLarge&quot;</code> | <code>&quot;GridSmall&quot;</code></p>
 </blockquote>
+<p>Gets current value of property #getPopinLayout popinLayout.</p>
+<p>Defines the layout in which the table pop-in rows are rendered.</p>
+<p>Default value is <code>&quot;Block&quot;</code>.</p>
 <h4>Returns</h4>
 <p><code>&quot;Block&quot;</code> | <a href="../../../../../../../sap.m/sap/m/library/enumerations/PopinLayout.html"><code>PopinLayout</code></a> | <code>&quot;GridLarge&quot;</code> | <code>&quot;GridSmall&quot;</code></p>
 <p>Value of property <code>popinLayout</code></p>
 <h4>Since</h4>
 <p>1.96</p>
-<p>Gets current value of property #getPopinLayout popinLayout.</p>
-<p>Defines the layout in which the table pop-in rows are rendered.</p>
-<p>Default value is <code>&quot;Block&quot;</code>.</p>
 <hr>
 <h3>getShowDetailsButton()</h3>
 <blockquote>
 <p><strong>getShowDetailsButton</strong>(): <code>boolean</code></p>
 </blockquote>
-<h4>Returns</h4>
-<p><code>boolean</code></p>
-<p>Value of property <code>showDetailsButton</code></p>
-<h4>Since</h4>
-<p>1.79</p>
 <p>Gets current value of property #getShowDetailsButton showDetailsButton.</p>
 <p>Specifies whether the Show / Hide Details button for the <code>ResponsiveTable</code> scenario is shown.</p>
 <p>If the available screen space gets too narrow, the columns configured with <code>High</code> and <code>Medium</code> importance
@@ -141,20 +136,16 @@ move to the pop-in area, while the columns with <code>Low</code> importance are 
  As soon as the first column is hidden, this button appears in the table toolbar and gives the user the
 possibility to toggle the visibility of the hidden columns in the pop-in area.</p>
 <p>Default value is <code>false</code>.</p>
+<h4>Returns</h4>
+<p><code>boolean</code></p>
+<p>Value of property <code>showDetailsButton</code></p>
+<h4>Since</h4>
+<p>1.79</p>
 <hr>
 <h3>setDetailsButtonSetting()</h3>
 <blockquote>
 <p><strong>setDetailsButtonSetting</strong>(<code>sDetailsButtonSetting</code>): <code>this</code></p>
 </blockquote>
-<h4>Parameters</h4>
-<h5>sDetailsButtonSetting</h5>
-<p>(<code>&quot;None&quot;</code> | <code>&quot;Medium&quot;</code> | <a href="../../../../../../../sap.ui.core/sap/ui/core/library/enumerations/Priority.html"><code>Priority</code></a> | <code>&quot;High&quot;</code> | <code>&quot;Low&quot;</code>)[]</p>
-<p>New value for property <code>detailsButtonSetting</code></p>
-<h4>Returns</h4>
-<p><code>this</code></p>
-<p>Reference to <code>this</code> in order to allow method chaining</p>
-<h4>Since</h4>
-<p>1.86</p>
 <p>Sets a new value for property #getDetailsButtonSetting detailsButtonSetting.</p>
 <p>Defines which columns are hidden instead of moved into the pop-in area depending on their importance.
 See sap.m.Column#getImportance and sap.m.Table#getHiddenInPopin for more details.</p>
@@ -164,6 +155,15 @@ is used.
  If this property is changed after the <code>Table</code> has been initialized, the new changes take effect only
 when the Show / Hide Details button is pressed a second time.</p>
 <p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<h4>Parameters</h4>
+<h5>sDetailsButtonSetting</h5>
+<p>(<code>&quot;None&quot;</code> | <code>&quot;Medium&quot;</code> | <a href="../../../../../../../sap.ui.core/sap/ui/core/library/enumerations/Priority.html"><code>Priority</code></a> | <code>&quot;High&quot;</code> | <code>&quot;Low&quot;</code>)[]</p>
+<p>New value for property <code>detailsButtonSetting</code></p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<h4>Since</h4>
+<p>1.86</p>
 <hr>
 <h3>setGrowingMode()</h3>
 <blockquote>
@@ -185,6 +185,10 @@ when the Show / Hide Details button is pressed a second time.</p>
 <blockquote>
 <p><strong>setPopinLayout</strong>(<code>sPopinLayout?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getPopinLayout popinLayout.</p>
+<p>Defines the layout in which the table pop-in rows are rendered.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>&quot;Block&quot;</code>.</p>
 <h4>Parameters</h4>
 <h5>sPopinLayout?</h5>
 <p><code>&quot;Block&quot;</code> | <a href="../../../../../../../sap.m/sap/m/library/enumerations/PopinLayout.html"><code>PopinLayout</code></a> | <code>&quot;GridLarge&quot;</code> | <code>&quot;GridSmall&quot;</code></p>
@@ -194,24 +198,11 @@ when the Show / Hide Details button is pressed a second time.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.96</p>
-<p>Sets a new value for property #getPopinLayout popinLayout.</p>
-<p>Defines the layout in which the table pop-in rows are rendered.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>&quot;Block&quot;</code>.</p>
 <hr>
 <h3>setShowDetailsButton()</h3>
 <blockquote>
 <p><strong>setShowDetailsButton</strong>(<code>bShowDetailsButton?</code>): <code>this</code></p>
 </blockquote>
-<h4>Parameters</h4>
-<h5>bShowDetailsButton?</h5>
-<p><code>boolean</code></p>
-<p>New value for property <code>showDetailsButton</code></p>
-<h4>Returns</h4>
-<p><code>this</code></p>
-<p>Reference to <code>this</code> in order to allow method chaining</p>
-<h4>Since</h4>
-<p>1.79</p>
 <p>Sets a new value for property #getShowDetailsButton showDetailsButton.</p>
 <p>Specifies whether the Show / Hide Details button for the <code>ResponsiveTable</code> scenario is shown.</p>
 <p>If the available screen space gets too narrow, the columns configured with <code>High</code> and <code>Medium</code> importance
@@ -221,6 +212,15 @@ move to the pop-in area, while the columns with <code>Low</code> importance are 
 possibility to toggle the visibility of the hidden columns in the pop-in area.</p>
 <p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <p>Default value is <code>false</code>.</p>
+<h4>Parameters</h4>
+<h5>bShowDetailsButton?</h5>
+<p><code>boolean</code></p>
+<p>New value for property <code>showDetailsButton</code></p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<h4>Since</h4>
+<p>1.79</p>
 <hr>
 <h3>extend()</h3>
 <blockquote>
@@ -261,6 +261,6 @@ used by this class</p>
 <p><a href="../../TableTypeBase/classes/TableTypeBase.html"><code>TableTypeBase</code></a>.<a href="../../TableTypeBase/classes/TableTypeBase.html#getmetadata-1"><code>getMetadata</code></a></p>
 <hr>
 
-<footer>Generated from <code>@openui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@openui5/types@1.120.46</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

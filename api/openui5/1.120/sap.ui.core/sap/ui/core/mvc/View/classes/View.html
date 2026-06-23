@@ -2,12 +2,12 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>Class: View — OpenUI5 TypeScript API</title>
-<meta name="description" content="Class: View — OpenUI5 TypeScript API Reference (1.120.0)">
+<title>Abstract Class: View — OpenUI5 TypeScript API</title>
+<meta name="description" content="Abstract Class: View — OpenUI5 TypeScript API Reference (1.120.46)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/openui5/1.120/sap.ui.core/sap/ui/core/mvc/View/classes/View.html">
-<meta property="og:title" content="Class: View — OpenUI5 TypeScript API">
-<meta property="og:description" content="Class: View — OpenUI5 TypeScript API Reference (1.120.0)">
+<meta property="og:title" content="Abstract Class: View — OpenUI5 TypeScript API">
+<meta property="og:description" content="Abstract Class: View — OpenUI5 TypeScript API Reference (1.120.46)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/openui5/1.120/sap.ui.core/sap/ui/core/mvc/View/classes/View.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,10 +33,10 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../../index.html">OpenUI5 API</a> › <a href="../../../../../../../sap.ui.core/README.html">sap.ui.core</a> › sap › ui › core › mvc › <a href="../../../../../../../sap.ui.core/sap/ui/core/mvc/View/README.html">View</a> › classes</nav>
-<p><a href="../../../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.0)</strong></a></p>
+<p><a href="../../../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.46)</strong></a></p>
 <hr>
-<p><a href="../../../../../../../README.html">OpenUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../../README.html">sap.ui.core</a> / <a href="../README.html">sap/ui/core/mvc/View</a> / View</p>
-<h1>Class: View</h1>
+<p><a href="../../../../../../../README.html">OpenUI5 TypeScript API (1.120.46)</a> / <a href="../../../../../../README.html">sap.ui.core</a> / <a href="../README.html">sap/ui/core/mvc/View</a> / View</p>
+<h1>Abstract Class: View</h1>
 <pre class="sig"><span class="kw">import</span> View <span class="kw">from</span> <span class="str">"sap/ui/core/mvc/View"</span>;</pre>
 <p>A base class for Views.</p>
 <p>Introduces the relationship to a Controller, some basic visual appearance settings like width and height,
@@ -363,7 +363,7 @@ For a search with a global ID (the value returned by <code>oElement.getId()</cod
 <p><a href="../../../Element/classes/UI5Element.html"><code>UI5Element</code></a></p>
 <p>Element by its ID or <code>undefined</code></p>
 <hr>
-<h3>clone()</h3>
+<h3><del>clone()</del></h3>
 <blockquote>
 <p><strong>clone</strong>(<code>sIdSuffix?</code>, <code>aLocalIds?</code>): <code>this</code></p>
 </blockquote>
@@ -382,6 +382,8 @@ section in the documentation.</p>
 <h4>Returns</h4>
 <p><code>this</code></p>
 <p>Reference to the newly created clone</p>
+<h4>Deprecated</h4>
+<p>(since 1.120) - please call the corresponding View factory instead, e.g. sap.ui.core.mvc.XMLView.create</p>
 <h4>Overrides</h4>
 <p><a href="../../../Control/classes/Control.html"><code>Control</code></a>.<a href="../../../Control/classes/Control.html#clone"><code>clone</code></a></p>
 <hr>
@@ -495,6 +497,7 @@ this <code>sap.ui.core.mvc.View</code>.</p>
 <blockquote>
 <p><strong>fireAfterInit</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
+<p>Fires event #event:afterInit afterInit to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><code>object</code></p>
@@ -504,12 +507,12 @@ this <code>sap.ui.core.mvc.View</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Fires event #event:afterInit afterInit to attached listeners.</p>
 <hr>
 <h3>fireAfterRendering()</h3>
 <blockquote>
 <p><strong>fireAfterRendering</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
+<p>Fires event #event:afterRendering afterRendering to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><code>object</code></p>
@@ -519,12 +522,12 @@ this <code>sap.ui.core.mvc.View</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Fires event #event:afterRendering afterRendering to attached listeners.</p>
 <hr>
 <h3>fireBeforeExit()</h3>
 <blockquote>
 <p><strong>fireBeforeExit</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
+<p>Fires event #event:beforeExit beforeExit to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><code>object</code></p>
@@ -534,12 +537,12 @@ this <code>sap.ui.core.mvc.View</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Fires event #event:beforeExit beforeExit to attached listeners.</p>
 <hr>
 <h3>fireBeforeRendering()</h3>
 <blockquote>
 <p><strong>fireBeforeRendering</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
+<p>Fires event #event:beforeRendering beforeRendering to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><code>object</code></p>
@@ -549,12 +552,17 @@ this <code>sap.ui.core.mvc.View</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Fires event #event:beforeRendering beforeRendering to attached listeners.</p>
 <hr>
 <h3>getAutoPrefixId()</h3>
 <blockquote>
 <p><strong>getAutoPrefixId</strong>(): <code>boolean</code></p>
 </blockquote>
+<p>A method to be implemented by typed views, returning the flag whether to prefix the IDs of controls automatically
+or not, if the controls are created inside the sap.ui.core.mvc.View#createContent function. By
+default this feature is not activated.</p>
+<p>You can overwrite this function and return <code>true</code> to activate the automatic prefixing.</p>
+<p><strong>Note</strong>: Auto-prefixing is only available for synchronous content creation. For asynchronous content
+creation use #createId instead, to prefix the IDs programmatically.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>Whether the control IDs should be prefixed automatically</p>
@@ -562,12 +570,6 @@ this <code>sap.ui.core.mvc.View</code>.</p>
 <p>1.88</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>A method to be implemented by typed views, returning the flag whether to prefix the IDs of controls automatically
-or not, if the controls are created inside the sap.ui.core.mvc.View#createContent function. By
-default this feature is not activated.</p>
-<p>You can overwrite this function and return <code>true</code> to activate the automatic prefixing.</p>
-<p><strong>Note</strong>: Auto-prefixing is only available for synchronous content creation. For asynchronous content
-creation use #createId instead, to prefix the IDs programmatically.</p>
 <hr>
 <h3>getContent()</h3>
 <blockquote>
@@ -626,6 +628,8 @@ push that other content to the next/previous line).</p>
 <blockquote>
 <p><strong>getLocalId</strong>(<code>sId</code>): <code>string</code></p>
 </blockquote>
+<p>Returns the local ID of an element by removing the view ID prefix or <code>null</code> if the ID does not contain
+a prefix.</p>
 <h4>Parameters</h4>
 <h5>sId</h5>
 <p><code>string</code></p>
@@ -635,13 +639,14 @@ push that other content to the next/previous line).</p>
 <p>ID without prefix or <code>null</code></p>
 <h4>Since</h4>
 <p>1.39.0</p>
-<p>Returns the local ID of an element by removing the view ID prefix or <code>null</code> if the ID does not contain
-a prefix.</p>
 <hr>
 <h3>getPreprocessorInfo()</h3>
 <blockquote>
 <p><strong>getPreprocessorInfo</strong>(<code>bSync</code>): <code>object</code></p>
 </blockquote>
+<p>Returns the info object which is also passed to the preprocessors
+See:
+	sap.ui.core.mvc.View.Preprocessor.process</p>
 <h4>Parameters</h4>
 <h5>bSync</h5>
 <p><code>boolean</code></p>
@@ -671,9 +676,6 @@ a prefix.</p>
 </blockquote>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Returns the info object which is also passed to the preprocessors
-See:
-	sap.ui.core.mvc.View.Preprocessor.process</p>
 <hr>
 <h3>getViewData()</h3>
 <blockquote>
@@ -709,6 +711,7 @@ See:
 <blockquote>
 <p><strong>hasPreprocessor</strong>(<code>sType</code>): <code>boolean</code></p>
 </blockquote>
+<p>Checks if any preprocessors are active for the specified type</p>
 <h4>Parameters</h4>
 <h5>sType</h5>
 <p><code>string</code></p>
@@ -718,7 +721,6 @@ See:
 <p><code>true</code> if a preprocessor is active</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Checks if any preprocessors are active for the specified type</p>
 <hr>
 <h3>indexOfContent()</h3>
 <blockquote>
@@ -752,20 +754,18 @@ is inserted at the last position</p>
 <p><code>this</code></p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <hr>
-<h3><del>loaded()</del></h3>
+<h3>loaded()</h3>
 <blockquote>
 <p><strong>loaded</strong>(): <code>Promise</code>&lt;<code>View</code>&gt;</p>
 </blockquote>
+<p>Returns a Promise representing the state of the view initialization.</p>
+<p>For views that are loading asynchronously (by setting async=true) this Promise is created by view initialization.
+Synchronously loading views get wrapped in an immediately resolving Promise.</p>
 <h4>Returns</h4>
 <p><code>Promise</code>&lt;<code>View</code>&gt;</p>
 <p>resolves with the complete view instance, rejects with any thrown error</p>
 <h4>Since</h4>
 <p>1.30</p>
-<h4>Deprecated</h4>
-<p>(since 1.66) - Use sap.ui.core.mvc.View.create View.create instead</p>
-<p>Returns a Promise representing the state of the view initialization.</p>
-<p>For views that are loading asynchronously (by setting async=true) this Promise is created by view initialization.
-Synchronously loading views get wrapped in an immediately resolving Promise.</p>
 <hr>
 <h3>removeAllContent()</h3>
 <blockquote>
@@ -794,6 +794,7 @@ Synchronously loading views get wrapped in an immediately resolving Promise.</p>
 <blockquote>
 <p><strong>runPreprocessor</strong>(<code>sType</code>, <code>vSource</code>, <code>bSync?</code>): <code>string</code> | <code>object</code> | <code>Element</code> | <code>Promise</code>&lt;<code>any</code>&gt;</p>
 </blockquote>
+<p>Executes preprocessors for a type of source</p>
 <h4>Parameters</h4>
 <h5>sType</h5>
 <p><code>string</code></p>
@@ -809,7 +810,6 @@ Synchronously loading views get wrapped in an immediately resolving Promise.</p>
 <p>a promise resolving with the processed source or an error | the source when bSync=true</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Executes preprocessors for a type of source</p>
 <hr>
 <h3>setDisplayBlock()</h3>
 <blockquote>
@@ -880,6 +880,11 @@ push that other content to the next/previous line).</p>
 <blockquote>
 <p><code>static</code> <strong>create</strong>(<code>oOptions</code>): <code>Promise</code>&lt;<code>View</code>&gt;</p>
 </blockquote>
+<p>Creates a view of the given type, name and with the given ID.</p>
+<p>If the option <code>viewName</code> is given, the corresponding view module is loaded if needed.</p>
+<p>When the <code>viewName</code> starts with prefix <code>&quot;module:&quot;</code>, the remainder of the name is assumed to be the name
+of a module that exports a typed view (subclass of <code>View</code>). The module name must use the same syntax
+as for <code>sap.ui.define/sap.ui.require</code> (slash-separated name).</p>
 <h4>Parameters</h4>
 <h5>oOptions</h5>
 <p>Options for the view instantiation. Can contain any settings that are documented for the sap.ui.core.mvc.View;
@@ -928,11 +933,6 @@ typed view.</p>
 <p>A Promise which resolves with the created View instance</p>
 <h4>Since</h4>
 <p>1.56.0</p>
-<p>Creates a view of the given type, name and with the given ID.</p>
-<p>If the option <code>viewName</code> is given, the corresponding view module is loaded if needed.</p>
-<p>When the <code>viewName</code> starts with prefix <code>&quot;module:&quot;</code>, the remainder of the name is assumed to be the name
-of a module that exports a typed view (subclass of <code>View</code>). The module name must use the same syntax
-as for <code>sap.ui.define/sap.ui.require</code> (slash-separated name).</p>
 <hr>
 <h3>extend()</h3>
 <blockquote>
@@ -976,6 +976,16 @@ used by this class</p>
 <blockquote>
 <p><code>static</code> <strong>registerPreprocessor</strong>(<code>sType</code>, <code>vPreprocessor</code>, <code>sViewType</code>, <code>bSyncSupport</code>, <code>bOnDemand?</code>, <code>mSettings?</code>): <code>void</code></p>
 </blockquote>
+<p>Register a preprocessor for all views of a specific type.</p>
+<p>The preprocessor can be registered for several stages of view initialization, which are dependent on
+the view type, e.g. &quot;raw&quot;, &quot;xml&quot; or already initialized &quot;controls&quot;. If there is a preprocessor passed
+to or activated at the view instance already, that one is used. When several preprocessors are registered
+for one hook, it has to be made sure that they do not conflict when being processed serially.</p>
+<p>It can be either a module name as string of an implementation of sap.ui.core.mvc.View.Preprocessor
+or a function with a signature according to sap.ui.core.mvc.View.Preprocessor.process.</p>
+<p><strong>Note</strong>: Preprocessors only work in async views and will be ignored when the view is instantiated in
+sync mode by default, as this could have unexpected side effects. You may override this behaviour by
+setting the <code>bSyncSupport</code> flag to <code>true</code>.</p>
 <h4>Parameters</h4>
 <h5>sType</h5>
 <p><code>string</code></p>
@@ -1005,17 +1015,7 @@ only be one on-demand preprocessor per content type.</p>
 <p>1.30</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Register a preprocessor for all views of a specific type.</p>
-<p>The preprocessor can be registered for several stages of view initialization, which are dependent on
-the view type, e.g. &quot;raw&quot;, &quot;xml&quot; or already initialized &quot;controls&quot;. If there is a preprocessor passed
-to or activated at the view instance already, that one is used. When several preprocessors are registered
-for one hook, it has to be made sure that they do not conflict when being processed serially.</p>
-<p>It can be either a module name as string of an implementation of sap.ui.core.mvc.View.Preprocessor
-or a function with a signature according to sap.ui.core.mvc.View.Preprocessor.process.</p>
-<p><strong>Note</strong>: Preprocessors only work in async views and will be ignored when the view is instantiated in
-sync mode by default, as this could have unexpected side effects. You may override this behaviour by
-setting the <code>bSyncSupport</code> flag to <code>true</code>.</p>
 
-<footer>Generated from <code>@openui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@openui5/types@1.120.46</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

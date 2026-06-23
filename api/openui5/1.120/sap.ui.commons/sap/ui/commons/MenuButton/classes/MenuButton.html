@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>~~Class: MenuButton~~ — OpenUI5 TypeScript API</title>
-<meta name="description" content="~~Class: MenuButton~~ — OpenUI5 TypeScript API Reference (1.120.0)">
+<meta name="description" content="~~Class: MenuButton~~ — OpenUI5 TypeScript API Reference (1.120.46)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/openui5/1.120/sap.ui.commons/sap/ui/commons/MenuButton/classes/MenuButton.html">
 <meta property="og:title" content="~~Class: MenuButton~~ — OpenUI5 TypeScript API">
-<meta property="og:description" content="~~Class: MenuButton~~ — OpenUI5 TypeScript API Reference (1.120.0)">
+<meta property="og:description" content="~~Class: MenuButton~~ — OpenUI5 TypeScript API Reference (1.120.46)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/openui5/1.120/sap.ui.commons/sap/ui/commons/MenuButton/classes/MenuButton.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,15 +33,15 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../index.html">OpenUI5 API</a> › <a href="../../../../../../sap.ui.commons/README.html">sap.ui.commons</a> › sap › ui › commons › <a href="../../../../../../sap.ui.commons/sap/ui/commons/MenuButton/README.html">MenuButton</a> › classes</nav>
-<p><a href="../../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.0)</strong></a></p>
+<p><a href="../../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.46)</strong></a></p>
 <hr>
-<p><a href="../../../../../../README.html">OpenUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../README.html">sap.ui.commons</a> / <a href="../README.html">sap/ui/commons/MenuButton</a> / MenuButton</p>
+<p><a href="../../../../../../README.html">OpenUI5 TypeScript API (1.120.46)</a> / <a href="../../../../../README.html">sap.ui.commons</a> / <a href="../README.html">sap/ui/commons/MenuButton</a> / MenuButton</p>
 <h1><del>Class: MenuButton</del></h1>
 <pre class="sig"><span class="kw">import</span> MenuButton <span class="kw">from</span> <span class="str">"sap/ui/commons/MenuButton"</span>;</pre>
-<h2>Deprecated</h2>
-<p>(since 1.38) - Instead, use the <code>sap.m.MenuButton</code> control.</p>
 <p>Common button control that opens a menu when clicked by the user. The control provides an API for configuring
 the docking position of the menu.</p>
+<h2>Deprecated</h2>
+<p>(since 1.38) - Instead, use the <code>sap.m.MenuButton</code> control.</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../Button/classes/Button.html"><code>Button</code></a></li>
@@ -226,6 +226,7 @@ See:
 <blockquote>
 <p><strong>fireItemSelected</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
+<p>Fires event #event:itemSelected itemSelected to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/MenuButton$ItemSelectedEventParameters.html"><code>MenuButton$ItemSelectedEventParameters</code></a></p>
@@ -235,12 +236,14 @@ See:
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Fires event #event:itemSelected itemSelected to attached listeners.</p>
 <hr>
 <h3><del>firePress()</del></h3>
 <blockquote>
 <p><strong>firePress</strong>(<code>oParameters?</code>): <code>this</code></p>
 </blockquote>
+<p>Fires event #event:press press to attached listeners.
+See:
+	sap.ui.commons.MenuButton#fireItemSelected</p>
 <h4>Parameters</h4>
 <h5>oParameters?</h5>
 <p><a href="../interfaces/MenuButton$PressEventParameters.html"><code>MenuButton$PressEventParameters</code></a></p>
@@ -250,9 +253,6 @@ See:
 <p>Reference to <code>this</code> to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Fires event #event:press press to attached listeners.
-See:
-	sap.ui.commons.MenuButton#fireItemSelected</p>
 <h4>Overrides</h4>
 <p><a href="../../Button/classes/Button.html"><code>Button</code></a>.<a href="../../Button/classes/Button.html#firepress"><code>firePress</code></a></p>
 <hr>
@@ -371,6 +371,6 @@ used by this class</p>
 <p><a href="../../Button/classes/Button.html"><code>Button</code></a>.<a href="../../Button/classes/Button.html#getmetadata-1"><code>getMetadata</code></a></p>
 <hr>
 
-<footer>Generated from <code>@openui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@openui5/types@1.120.46</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

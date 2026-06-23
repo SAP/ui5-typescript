@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Class: Dialog — OpenUI5 TypeScript API</title>
-<meta name="description" content="Class: Dialog — OpenUI5 TypeScript API Reference (1.120.0)">
+<meta name="description" content="Class: Dialog — OpenUI5 TypeScript API Reference (1.120.46)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/openui5/1.120/sap.m/sap/m/Dialog/classes/Dialog.html">
 <meta property="og:title" content="Class: Dialog — OpenUI5 TypeScript API">
-<meta property="og:description" content="Class: Dialog — OpenUI5 TypeScript API Reference (1.120.0)">
+<meta property="og:description" content="Class: Dialog — OpenUI5 TypeScript API Reference (1.120.46)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/openui5/1.120/sap.m/sap/m/Dialog/classes/Dialog.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,9 +33,9 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../index.html">OpenUI5 API</a> › <a href="../../../../../sap.m/README.html">sap.m</a> › sap › m › <a href="../../../../../sap.m/sap/m/Dialog/README.html">Dialog</a> › classes</nav>
-<p><a href="../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.0)</strong></a></p>
+<p><a href="../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.46)</strong></a></p>
 <hr>
-<p><a href="../../../../../README.html">OpenUI5 TypeScript API (1.120.0)</a> / <a href="../../../../README.html">sap.m</a> / <a href="../README.html">sap/m/Dialog</a> / Dialog</p>
+<p><a href="../../../../../README.html">OpenUI5 TypeScript API (1.120.46)</a> / <a href="../../../../README.html">sap.m</a> / <a href="../README.html">sap/m/Dialog</a> / Dialog</p>
 <h1>Class: Dialog</h1>
 <pre class="sig"><span class="kw">import</span> Dialog <span class="kw">from</span> <span class="str">"sap/m/Dialog"</span>;</pre>
 <p>A popup that interrupts the current processing and prompts the user for an action or an input in a modal
@@ -141,13 +141,13 @@ See:
 <blockquote>
 <p><strong>_getAnyHeader</strong>(): <code>void</code></p>
 </blockquote>
+<p>Returns the custom header instance when the <code>customHeader</code> aggregation is set. Otherwise, it returns
+the internal managed header instance. This method can be called within composite controls which use <code>sap.m.Dialog</code>
+inside.</p>
 <h4>Returns</h4>
 <p><code>void</code></p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Returns the custom header instance when the <code>customHeader</code> aggregation is set. Otherwise, it returns
-the internal managed header instance. This method can be called within composite controls which use <code>sap.m.Dialog</code>
-inside.</p>
 <hr>
 <h3>addAriaDescribedBy()</h3>
 <blockquote>
@@ -179,6 +179,7 @@ inside.</p>
 <blockquote>
 <p><strong>addButton</strong>(<code>oButton</code>): <code>this</code></p>
 </blockquote>
+<p>Adds some button to the aggregation #getButtons buttons.</p>
 <h4>Parameters</h4>
 <h5>oButton</h5>
 <p><a href="../../Button/classes/Button.html"><code>Button</code></a></p>
@@ -188,7 +189,6 @@ inside.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.21.1</p>
-<p>Adds some button to the aggregation #getButtons buttons.</p>
 <hr>
 <h3>addContent()</h3>
 <blockquote>
@@ -384,23 +384,23 @@ otherwise it will be bound to this <code>sap.m.Dialog</code> itself.</p>
 <blockquote>
 <p><strong>destroyBeginButton</strong>(): <code>this</code></p>
 </blockquote>
+<p>Destroys the beginButton in the aggregation #getBeginButton beginButton.</p>
 <h4>Returns</h4>
 <p><code>this</code></p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.15.1</p>
-<p>Destroys the beginButton in the aggregation #getBeginButton beginButton.</p>
 <hr>
 <h3>destroyButtons()</h3>
 <blockquote>
 <p><strong>destroyButtons</strong>(): <code>this</code></p>
 </blockquote>
+<p>Destroys all the buttons in the aggregation #getButtons buttons.</p>
 <h4>Returns</h4>
 <p><code>this</code></p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.21.1</p>
-<p>Destroys all the buttons in the aggregation #getButtons buttons.</p>
 <hr>
 <h3>destroyContent()</h3>
 <blockquote>
@@ -415,45 +415,45 @@ otherwise it will be bound to this <code>sap.m.Dialog</code> itself.</p>
 <blockquote>
 <p><strong>destroyCustomHeader</strong>(): <code>this</code></p>
 </blockquote>
+<p>Destroys the customHeader in the aggregation #getCustomHeader customHeader.</p>
 <h4>Returns</h4>
 <p><code>this</code></p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.15.1</p>
-<p>Destroys the customHeader in the aggregation #getCustomHeader customHeader.</p>
 <hr>
 <h3>destroyEndButton()</h3>
 <blockquote>
 <p><strong>destroyEndButton</strong>(): <code>this</code></p>
 </blockquote>
+<p>Destroys the endButton in the aggregation #getEndButton endButton.</p>
 <h4>Returns</h4>
 <p><code>this</code></p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.15.1</p>
-<p>Destroys the endButton in the aggregation #getEndButton endButton.</p>
 <hr>
 <h3>destroyFooter()</h3>
 <blockquote>
 <p><strong>destroyFooter</strong>(): <code>this</code></p>
 </blockquote>
+<p>Destroys the footer in the aggregation #getFooter footer.</p>
 <h4>Returns</h4>
 <p><code>this</code></p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.110</p>
-<p>Destroys the footer in the aggregation #getFooter footer.</p>
 <hr>
 <h3>destroySubHeader()</h3>
 <blockquote>
 <p><strong>destroySubHeader</strong>(): <code>this</code></p>
 </blockquote>
+<p>Destroys the subHeader in the aggregation #getSubHeader subHeader.</p>
 <h4>Returns</h4>
 <p><code>this</code></p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.12.2</p>
-<p>Destroys the subHeader in the aggregation #getSubHeader subHeader.</p>
 <hr>
 <h3>detachAfterClose()</h3>
 <blockquote>
@@ -527,6 +527,7 @@ otherwise it will be bound to this <code>sap.m.Dialog</code> itself.</p>
 <blockquote>
 <p><strong>fireAfterClose</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
+<p>Fires event #event:afterClose afterClose to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/Dialog$AfterCloseEventParameters.html"><code>Dialog$AfterCloseEventParameters</code></a></p>
@@ -536,12 +537,12 @@ otherwise it will be bound to this <code>sap.m.Dialog</code> itself.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Fires event #event:afterClose afterClose to attached listeners.</p>
 <hr>
 <h3>fireAfterOpen()</h3>
 <blockquote>
 <p><strong>fireAfterOpen</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
+<p>Fires event #event:afterOpen afterOpen to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><code>object</code></p>
@@ -551,12 +552,12 @@ otherwise it will be bound to this <code>sap.m.Dialog</code> itself.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Fires event #event:afterOpen afterOpen to attached listeners.</p>
 <hr>
 <h3>fireBeforeClose()</h3>
 <blockquote>
 <p><strong>fireBeforeClose</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
+<p>Fires event #event:beforeClose beforeClose to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/Dialog$BeforeCloseEventParameters.html"><code>Dialog$BeforeCloseEventParameters</code></a></p>
@@ -566,12 +567,12 @@ otherwise it will be bound to this <code>sap.m.Dialog</code> itself.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Fires event #event:beforeClose beforeClose to attached listeners.</p>
 <hr>
 <h3>fireBeforeOpen()</h3>
 <blockquote>
 <p><strong>fireBeforeOpen</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
+<p>Fires event #event:beforeOpen beforeOpen to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><code>object</code></p>
@@ -581,7 +582,6 @@ otherwise it will be bound to this <code>sap.m.Dialog</code> itself.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Fires event #event:beforeOpen beforeOpen to attached listeners.</p>
 <hr>
 <h3>getAriaDescribedBy()</h3>
 <blockquote>
@@ -603,10 +603,6 @@ otherwise it will be bound to this <code>sap.m.Dialog</code> itself.</p>
 <blockquote>
 <p><strong>getBeginButton</strong>(): <a href="../../Button/classes/Button.html"><code>Button</code></a></p>
 </blockquote>
-<h4>Returns</h4>
-<p><a href="../../Button/classes/Button.html"><code>Button</code></a></p>
-<h4>Since</h4>
-<p>1.15.1</p>
 <p>Gets content of aggregation #getBeginButton beginButton.</p>
 <p>The button which is rendered to the left side (right side in RTL mode) of the <code>endButton</code> in the footer
 area inside the Dialog. As of version 1.21.1, there&#39;s a new aggregation <code>buttons</code> created with which
@@ -617,33 +613,37 @@ footer area. While with the Quartz themes when running on a phone, this <code>bu
 together when set) is (are) rendered on the right side of the footer area. When running on other platforms,
 this <code>button</code> (and the <code>endButton</code> together when set) is (are) rendered at the right side (left side
 in RTL mode) of the footer area.</p>
+<h4>Returns</h4>
+<p><a href="../../Button/classes/Button.html"><code>Button</code></a></p>
+<h4>Since</h4>
+<p>1.15.1</p>
 <hr>
 <h3>getButtons()</h3>
 <blockquote>
 <p><strong>getButtons</strong>(): <a href="../../Button/classes/Button.html"><code>Button</code></a>[]</p>
 </blockquote>
-<h4>Returns</h4>
-<p><a href="../../Button/classes/Button.html"><code>Button</code></a>[]</p>
-<h4>Since</h4>
-<p>1.21.1</p>
 <p>Gets content of aggregation #getButtons buttons.</p>
 <p>Buttons can be added to the footer area of the Dialog through this aggregation. When this aggregation
 is set, any change to the <code>beginButton</code> and <code>endButton</code> has no effect anymore. Buttons which are inside
 this aggregation are aligned at the right side (left side in RTL mode) of the footer instead of in the
 middle of the footer. The buttons aggregation can not be used together with the footer aggregation.</p>
+<h4>Returns</h4>
+<p><a href="../../Button/classes/Button.html"><code>Button</code></a>[]</p>
+<h4>Since</h4>
+<p>1.21.1</p>
 <hr>
 <h3>getCloseOnNavigation()</h3>
 <blockquote>
 <p><strong>getCloseOnNavigation</strong>(): <code>boolean</code></p>
 </blockquote>
+<p>Gets current value of property #getCloseOnNavigation closeOnNavigation.</p>
+<p>Indicates whether the Dialog will be closed automatically when a routing navigation occurs.</p>
+<p>Default value is <code>true</code>.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>Value of property <code>closeOnNavigation</code></p>
 <h4>Since</h4>
 <p>1.72</p>
-<p>Gets current value of property #getCloseOnNavigation closeOnNavigation.</p>
-<p>Indicates whether the Dialog will be closed automatically when a routing navigation occurs.</p>
-<p>Default value is <code>true</code>.</p>
 <hr>
 <h3>getContent()</h3>
 <blockquote>
@@ -660,68 +660,64 @@ as <code>SplitContainer</code>, the Dialog has to have either <code>stretch: tru
 <blockquote>
 <p><strong>getContentHeight</strong>(): <code>string</code></p>
 </blockquote>
+<p>Gets current value of property #getContentHeight contentHeight.</p>
+<p>Preferred height of the content in the Dialog. If the preferred height is bigger than the available space
+on a screen, it will be overwritten by the maximum available height on a screen in order to make sure
+that the Dialog isn&#39;t cut off.</p>
 <h4>Returns</h4>
 <p><code>string</code></p>
 <p>Value of property <code>contentHeight</code></p>
 <h4>Since</h4>
 <p>1.12.1</p>
-<p>Gets current value of property #getContentHeight contentHeight.</p>
-<p>Preferred height of the content in the Dialog. If the preferred height is bigger than the available space
-on a screen, it will be overwritten by the maximum available height on a screen in order to make sure
-that the Dialog isn&#39;t cut off.</p>
 <hr>
 <h3>getContentWidth()</h3>
 <blockquote>
 <p><strong>getContentWidth</strong>(): <code>string</code></p>
 </blockquote>
-<h4>Returns</h4>
-<p><code>string</code></p>
-<p>Value of property <code>contentWidth</code></p>
-<h4>Since</h4>
-<p>1.12.1</p>
 <p>Gets current value of property #getContentWidth contentWidth.</p>
 <p>Preferred width of the content in the Dialog. This property affects the width of the Dialog on a phone
 in landscape mode, a tablet or a desktop, because the Dialog has a fixed width on a phone in portrait
 mode. If the preferred width is less than the minimum width of the Dialog or more than the available
 width of the screen, it will be overwritten by the min or max value. The current mininum value of the
 Dialog width on tablet is 400px.</p>
+<h4>Returns</h4>
+<p><code>string</code></p>
+<p>Value of property <code>contentWidth</code></p>
+<h4>Since</h4>
+<p>1.12.1</p>
 <hr>
 <h3>getCustomHeader()</h3>
 <blockquote>
 <p><strong>getCustomHeader</strong>(): <a href="../../library/interfaces/IBar.html"><code>IBar</code></a></p>
 </blockquote>
-<h4>Returns</h4>
-<p><a href="../../library/interfaces/IBar.html"><code>IBar</code></a></p>
-<h4>Since</h4>
-<p>1.15.1</p>
 <p>Gets content of aggregation #getCustomHeader customHeader.</p>
 <p>When it is set, the <code>icon</code>, <code>title</code> and <code>showHeader</code> properties are ignored. Only the <code>customHeader</code>
 is shown as the header of the Dialog.
 <strong>Note:</strong> To improve accessibility, titles with heading level <code>H1</code> should be used inside the custom header.</p>
+<h4>Returns</h4>
+<p><a href="../../library/interfaces/IBar.html"><code>IBar</code></a></p>
+<h4>Since</h4>
+<p>1.15.1</p>
 <hr>
 <h3>getDraggable()</h3>
 <blockquote>
 <p><strong>getDraggable</strong>(): <code>boolean</code></p>
 </blockquote>
-<h4>Returns</h4>
-<p><code>boolean</code></p>
-<p>Value of property <code>draggable</code></p>
-<h4>Since</h4>
-<p>1.30</p>
 <p>Gets current value of property #getDraggable draggable.</p>
 <p>Indicates whether the Dialog is draggable. If this property is set to <code>true</code>, the Dialog will be draggable
 by its header. This property has a default value <code>false</code>. The Dialog can be draggable only in desktop
 mode.</p>
 <p>Default value is <code>false</code>.</p>
+<h4>Returns</h4>
+<p><code>boolean</code></p>
+<p>Value of property <code>draggable</code></p>
+<h4>Since</h4>
+<p>1.30</p>
 <hr>
 <h3>getEndButton()</h3>
 <blockquote>
 <p><strong>getEndButton</strong>(): <a href="../../Button/classes/Button.html"><code>Button</code></a></p>
 </blockquote>
-<h4>Returns</h4>
-<p><a href="../../Button/classes/Button.html"><code>Button</code></a></p>
-<h4>Since</h4>
-<p>1.15.1</p>
 <p>Gets content of aggregation #getEndButton endButton.</p>
 <p>The button which is rendered to the right side (left side in RTL mode) of the <code>beginButton</code> in the footer
 area inside the Dialog. As of version 1.21.1, there&#39;s a new aggregation <code>buttons</code> created with which
@@ -732,6 +728,10 @@ area. While with the Quartz themes when running on a phone, this <code>button</c
 when set) is (are) rendered on the right side of the footer area. When running on other platforms, this
 <code>button</code> (and the <code>beginButton</code> together when set) is (are) rendered at the right side (left side in
 RTL mode) of the footer area.</p>
+<h4>Returns</h4>
+<p><a href="../../Button/classes/Button.html"><code>Button</code></a></p>
+<h4>Since</h4>
+<p>1.15.1</p>
 <hr>
 <h3>getEscapeHandler()</h3>
 <blockquote>
@@ -750,29 +750,29 @@ dialog is immediately closed.</p>
 <blockquote>
 <p><strong>getFooter</strong>(): <a href="../../Toolbar/classes/Toolbar.html"><code>Toolbar</code></a></p>
 </blockquote>
+<p>Gets content of aggregation #getFooter footer.</p>
+<p>The footer of this dialog. It is always located at the bottom of the dialog. The footer aggregation can
+not be used together with the buttons aggregation.</p>
 <h4>Returns</h4>
 <p><a href="../../Toolbar/classes/Toolbar.html"><code>Toolbar</code></a></p>
 <h4>Since</h4>
 <p>1.110</p>
-<p>Gets content of aggregation #getFooter footer.</p>
-<p>The footer of this dialog. It is always located at the bottom of the dialog. The footer aggregation can
-not be used together with the buttons aggregation.</p>
 <hr>
 <h3>getHorizontalScrolling()</h3>
 <blockquote>
 <p><strong>getHorizontalScrolling</strong>(): <code>boolean</code></p>
 </blockquote>
-<h4>Returns</h4>
-<p><code>boolean</code></p>
-<p>Value of property <code>horizontalScrolling</code></p>
-<h4>Since</h4>
-<p>1.15.1</p>
 <p>Gets current value of property #getHorizontalScrolling horizontalScrolling.</p>
 <p>Indicates if the user can scroll horizontally inside the Dialog when the content is bigger than the content
 area. The Dialog detects if there&#39;s <code>sap.m.NavContainer</code>, <code>sap.m.Page</code>, <code>sap.m.ScrollContainer</code> or <code>sap.m.SplitContainer</code>
 as a direct child added to the Dialog. If there is, the Dialog will turn off <code>scrolling</code> by setting this
 property to <code>false</code>, automatically ignoring the existing value of the property.</p>
 <p>Default value is <code>true</code>.</p>
+<h4>Returns</h4>
+<p><code>boolean</code></p>
+<p>Value of property <code>horizontalScrolling</code></p>
+<h4>Since</h4>
+<p>1.15.1</p>
 <hr>
 <h3>getIcon()</h3>
 <blockquote>
@@ -790,100 +790,103 @@ screen.</p>
 <blockquote>
 <p><strong>getInitialFocus</strong>(): <code>string</code></p>
 </blockquote>
+<p>ID of the element which is the current target of the association #getInitialFocus initialFocus,
+or <code>null</code>.</p>
 <h4>Returns</h4>
 <p><code>string</code></p>
 <h4>Since</h4>
 <p>1.15.0</p>
-<p>ID of the element which is the current target of the association #getInitialFocus initialFocus,
-or <code>null</code>.</p>
 <hr>
 <h3><del>getLeftButton()</del></h3>
 <blockquote>
 <p><strong>getLeftButton</strong>(): <code>string</code></p>
 </blockquote>
+<p>ID of the element which is the current target of the association #getLeftButton leftButton, or
+<code>null</code>.</p>
 <h4>Returns</h4>
 <p><code>string</code></p>
 <h4>Deprecated</h4>
 <p>(since 1.15.1) - <code>LeftButton</code> has been deprecated since 1.15.1. Please use the <code>beginButton</code>
 instead which is more RTL friendly.</p>
-<p>ID of the element which is the current target of the association #getLeftButton leftButton, or
-<code>null</code>.</p>
 <hr>
 <h3>getResizable()</h3>
 <blockquote>
 <p><strong>getResizable</strong>(): <code>boolean</code></p>
 </blockquote>
-<h4>Returns</h4>
-<p><code>boolean</code></p>
-<p>Value of property <code>resizable</code></p>
-<h4>Since</h4>
-<p>1.30</p>
 <p>Gets current value of property #getResizable resizable.</p>
 <p>Indicates whether the Dialog is resizable. If this property is set to <code>true</code>, the Dialog will have a
 resize handler in its bottom right corner. This property has a default value <code>false</code>. The Dialog can
 be resizable only in desktop mode.</p>
 <p>Default value is <code>false</code>.</p>
+<h4>Returns</h4>
+<p><code>boolean</code></p>
+<p>Value of property <code>resizable</code></p>
+<h4>Since</h4>
+<p>1.30</p>
 <hr>
 <h3><del>getRightButton()</del></h3>
 <blockquote>
 <p><strong>getRightButton</strong>(): <code>string</code></p>
 </blockquote>
+<p>ID of the element which is the current target of the association #getRightButton rightButton,
+or <code>null</code>.</p>
 <h4>Returns</h4>
 <p><code>string</code></p>
 <h4>Deprecated</h4>
 <p>(since 1.15.1) - <code>RightButton</code> has been deprecated since 1.15.1. Please use the <code>endButton</code>
 instead which is more RTL friendly.</p>
-<p>ID of the element which is the current target of the association #getRightButton rightButton,
-or <code>null</code>.</p>
 <hr>
 <h3>getShowHeader()</h3>
 <blockquote>
 <p><strong>getShowHeader</strong>(): <code>boolean</code></p>
 </blockquote>
+<p>Gets current value of property #getShowHeader showHeader.</p>
+<p>Determines whether the header is shown inside the Dialog. If this property is set to <code>false</code>, the <code>text</code>
+and <code>icon</code> properties are ignored. This property has a default value <code>true</code>.</p>
+<p>Default value is <code>true</code>.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>Value of property <code>showHeader</code></p>
 <h4>Since</h4>
 <p>1.15.1</p>
-<p>Gets current value of property #getShowHeader showHeader.</p>
-<p>Determines whether the header is shown inside the Dialog. If this property is set to <code>false</code>, the <code>text</code>
-and <code>icon</code> properties are ignored. This property has a default value <code>true</code>.</p>
-<p>Default value is <code>true</code>.</p>
 <hr>
 <h3>getState()</h3>
 <blockquote>
 <p><strong>getState</strong>(): <code>&quot;None&quot;</code> | <a href="../../../../../sap.ui.core/sap/ui/core/library/enumerations/ValueState.html"><code>ValueState</code></a> | <code>&quot;Error&quot;</code> | <code>&quot;Information&quot;</code> | <code>&quot;Success&quot;</code> | <code>&quot;Warning&quot;</code></p>
 </blockquote>
-<h4>Returns</h4>
-<p><code>&quot;None&quot;</code> | <a href="../../../../../sap.ui.core/sap/ui/core/library/enumerations/ValueState.html"><code>ValueState</code></a> | <code>&quot;Error&quot;</code> | <code>&quot;Information&quot;</code> | <code>&quot;Success&quot;</code> | <code>&quot;Warning&quot;</code></p>
-<p>Value of property <code>state</code></p>
-<h4>Since</h4>
-<p>1.11.2</p>
 <p>Gets current value of property #getState state.</p>
 <p>Affects the <code>icon</code> and the <code>title</code> color.</p>
 <p>If a value other than <code>None</code> is set, a predefined icon will be added to the Dialog. Setting the <code>icon</code>
 property will overwrite the predefined icon.</p>
 <p>Default value is <code>None</code>.</p>
+<h4>Returns</h4>
+<p><code>&quot;None&quot;</code> | <a href="../../../../../sap.ui.core/sap/ui/core/library/enumerations/ValueState.html"><code>ValueState</code></a> | <code>&quot;Error&quot;</code> | <code>&quot;Information&quot;</code> | <code>&quot;Success&quot;</code> | <code>&quot;Warning&quot;</code></p>
+<p>Value of property <code>state</code></p>
+<h4>Since</h4>
+<p>1.11.2</p>
 <hr>
 <h3>getStretch()</h3>
 <blockquote>
 <p><strong>getStretch</strong>(): <code>boolean</code></p>
 </blockquote>
-<h4>Returns</h4>
-<p><code>boolean</code></p>
-<p>Value of property <code>stretch</code></p>
-<h4>Since</h4>
-<p>1.13.1</p>
 <p>Gets current value of property #getStretch stretch.</p>
 <p>Determines if the Dialog will be stretched to full screen on mobile. On desktop, the Dialog will be stretched
 to approximately 90% of the viewport. This property is only applicable to a Standard Dialog. Message-type
 Dialog ignores it.</p>
 <p>Default value is <code>false</code>.</p>
+<h4>Returns</h4>
+<p><code>boolean</code></p>
+<p>Value of property <code>stretch</code></p>
+<h4>Since</h4>
+<p>1.13.1</p>
 <hr>
 <h3><del>getStretchOnPhone()</del></h3>
 <blockquote>
 <p><strong>getStretchOnPhone</strong>(): <code>boolean</code></p>
 </blockquote>
+<p>Gets current value of property #getStretchOnPhone stretchOnPhone.</p>
+<p>Determines whether the Dialog will be displayed on full screen on a phone.</p>
+<p>Default value is <code>false</code>.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>Value of property <code>stretchOnPhone</code></p>
@@ -893,22 +896,19 @@ Dialog ignores it.</p>
 <p>(since 1.13.1) - Please use the new stretch property instead. This enables a stretched Dialog
 even on tablet and desktop. If you want to achieve the same effect as <code>stretchOnPhone</code>, please set the
 stretch with <code>Device.system.phone</code>, then the Dialog is only stretched when it runs on a phone.</p>
-<p>Gets current value of property #getStretchOnPhone stretchOnPhone.</p>
-<p>Determines whether the Dialog will be displayed on full screen on a phone.</p>
-<p>Default value is <code>false</code>.</p>
 <hr>
 <h3>getSubHeader()</h3>
 <blockquote>
 <p><strong>getSubHeader</strong>(): <a href="../../library/interfaces/IBar.html"><code>IBar</code></a></p>
 </blockquote>
-<h4>Returns</h4>
-<p><a href="../../library/interfaces/IBar.html"><code>IBar</code></a></p>
-<h4>Since</h4>
-<p>1.12.2</p>
 <p>Gets content of aggregation #getSubHeader subHeader.</p>
 <p>When a <code>subHeader</code> is assigned to the Dialog, it&#39;s rendered directly after the main header in the Dialog.
 The <code>subHeader</code> is out of the content area and won&#39;t be scrolled when the content size is bigger than
 the content area size.</p>
+<h4>Returns</h4>
+<p><a href="../../library/interfaces/IBar.html"><code>IBar</code></a></p>
+<h4>Since</h4>
+<p>1.12.2</p>
 <hr>
 <h3>getTitle()</h3>
 <blockquote>
@@ -926,16 +926,16 @@ heading level.</p>
 <blockquote>
 <p><strong>getTitleAlignment</strong>(): <code>&quot;None&quot;</code> | <code>&quot;Auto&quot;</code> | <code>&quot;Center&quot;</code> | <a href="../../library/enumerations/TitleAlignment.html"><code>TitleAlignment</code></a> | <code>&quot;Start&quot;</code></p>
 </blockquote>
-<h4>Returns</h4>
-<p><code>&quot;None&quot;</code> | <code>&quot;Auto&quot;</code> | <code>&quot;Center&quot;</code> | <a href="../../library/enumerations/TitleAlignment.html"><code>TitleAlignment</code></a> | <code>&quot;Start&quot;</code></p>
-<p>Value of property <code>titleAlignment</code></p>
-<h4>Since</h4>
-<p>1.72</p>
 <p>Gets current value of property #getTitleAlignment titleAlignment.</p>
 <p>Specifies the Title alignment (theme specific). If set to <code>TitleAlignment.Auto</code>, the Title will be aligned
 as it is set in the theme (if not set, the default value is <code>center</code>); Other possible values are <code>TitleAlignment.Start</code>
 (left or right depending on LTR/RTL), and <code>TitleAlignment.Center</code> (centered)</p>
 <p>Default value is <code>Auto</code>.</p>
+<h4>Returns</h4>
+<p><code>&quot;None&quot;</code> | <code>&quot;Auto&quot;</code> | <code>&quot;Center&quot;</code> | <a href="../../library/enumerations/TitleAlignment.html"><code>TitleAlignment</code></a> | <code>&quot;Start&quot;</code></p>
+<p>Value of property <code>titleAlignment</code></p>
+<h4>Since</h4>
+<p>1.72</p>
 <hr>
 <h3>getType()</h3>
 <blockquote>
@@ -953,22 +953,24 @@ tablet and desktop.</p>
 <blockquote>
 <p><strong>getVerticalScrolling</strong>(): <code>boolean</code></p>
 </blockquote>
-<h4>Returns</h4>
-<p><code>boolean</code></p>
-<p>Value of property <code>verticalScrolling</code></p>
-<h4>Since</h4>
-<p>1.15.1</p>
 <p>Gets current value of property #getVerticalScrolling verticalScrolling.</p>
 <p>Indicates if the user can scroll vertically inside the Dialog when the content is bigger than the content
 area. The Dialog detects if there&#39;s <code>sap.m.NavContainer</code>, <code>sap.m.Page</code>, <code>sap.m.ScrollContainer</code> or <code>sap.m.SplitContainer</code>
 as a direct child added to the Dialog. If there is, the Dialog will turn off <code>scrolling</code> by setting this
 property to <code>false</code>, automatically ignoring the existing value of this property.</p>
 <p>Default value is <code>true</code>.</p>
+<h4>Returns</h4>
+<p><code>boolean</code></p>
+<p>Value of property <code>verticalScrolling</code></p>
+<h4>Since</h4>
+<p>1.15.1</p>
 <hr>
 <h3>indexOfButton()</h3>
 <blockquote>
 <p><strong>indexOfButton</strong>(<code>oButton</code>): <code>number</code></p>
 </blockquote>
+<p>Checks for the provided <code>sap.m.Button</code> in the aggregation #getButtons buttons. and returns its
+index if found or -1 otherwise.</p>
 <h4>Parameters</h4>
 <h5>oButton</h5>
 <p><a href="../../Button/classes/Button.html"><code>Button</code></a></p>
@@ -978,8 +980,6 @@ property to <code>false</code>, automatically ignoring the existing value of thi
 <p>The index of the provided control in the aggregation if found, or -1 otherwise</p>
 <h4>Since</h4>
 <p>1.21.1</p>
-<p>Checks for the provided <code>sap.m.Button</code> in the aggregation #getButtons buttons. and returns its
-index if found or -1 otherwise.</p>
 <hr>
 <h3>indexOfContent()</h3>
 <blockquote>
@@ -999,6 +999,7 @@ its index if found or -1 otherwise.</p>
 <blockquote>
 <p><strong>insertButton</strong>(<code>oButton</code>, <code>iIndex</code>): <code>this</code></p>
 </blockquote>
+<p>Inserts a button into the aggregation #getButtons buttons.</p>
 <h4>Parameters</h4>
 <h5>oButton</h5>
 <p><a href="../../Button/classes/Button.html"><code>Button</code></a></p>
@@ -1013,7 +1014,6 @@ at the last position</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.21.1</p>
-<p>Inserts a button into the aggregation #getButtons buttons.</p>
 <hr>
 <h3>insertContent()</h3>
 <blockquote>
@@ -1037,14 +1037,14 @@ is inserted at the last position</p>
 <blockquote>
 <p><strong>isOpen</strong>(): <code>boolean</code></p>
 </blockquote>
+<p>The method checks if the Dialog is open.</p>
+<p>It returns <code>true</code> when the Dialog is currently open (this includes opening and closing animations), otherwise
+it returns <code>false</code>.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>Whether the dialog is open.</p>
 <h4>Since</h4>
 <p>1.9.1</p>
-<p>The method checks if the Dialog is open.</p>
-<p>It returns <code>true</code> when the Dialog is currently open (this includes opening and closing animations), otherwise
-it returns <code>false</code>.</p>
 <hr>
 <h3>open()</h3>
 <blockquote>
@@ -1077,13 +1077,13 @@ it returns <code>false</code>.</p>
 <blockquote>
 <p><strong>removeAllButtons</strong>(): <a href="../../Button/classes/Button.html"><code>Button</code></a>[]</p>
 </blockquote>
+<p>Removes all the controls from the aggregation #getButtons buttons.</p>
+<p>Additionally, it unregisters them from the hosting UIArea.</p>
 <h4>Returns</h4>
 <p><a href="../../Button/classes/Button.html"><code>Button</code></a>[]</p>
 <p>An array of the removed elements (might be empty)</p>
 <h4>Since</h4>
 <p>1.21.1</p>
-<p>Removes all the controls from the aggregation #getButtons buttons.</p>
-<p>Additionally, it unregisters them from the hosting UIArea.</p>
 <hr>
 <h3>removeAllContent()</h3>
 <blockquote>
@@ -1125,6 +1125,7 @@ it returns <code>false</code>.</p>
 <blockquote>
 <p><strong>removeButton</strong>(<code>vButton</code>): <a href="../../Button/classes/Button.html"><code>Button</code></a></p>
 </blockquote>
+<p>Removes a button from the aggregation #getButtons buttons.</p>
 <h4>Parameters</h4>
 <h5>vButton</h5>
 <p><code>string</code> | <code>number</code> | <a href="../../Button/classes/Button.html"><code>Button</code></a></p>
@@ -1134,7 +1135,6 @@ it returns <code>false</code>.</p>
 <p>The removed button or <code>null</code></p>
 <h4>Since</h4>
 <p>1.21.1</p>
-<p>Removes a button from the aggregation #getButtons buttons.</p>
 <hr>
 <h3>removeContent()</h3>
 <blockquote>
@@ -1153,6 +1153,7 @@ it returns <code>false</code>.</p>
 <blockquote>
 <p><strong>setBeginButton</strong>(<code>oBeginButton</code>): <code>this</code></p>
 </blockquote>
+<p>Sets the aggregated #getBeginButton beginButton.</p>
 <h4>Parameters</h4>
 <h5>oBeginButton</h5>
 <p><a href="../../Button/classes/Button.html"><code>Button</code></a></p>
@@ -1162,12 +1163,15 @@ it returns <code>false</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.15.1</p>
-<p>Sets the aggregated #getBeginButton beginButton.</p>
 <hr>
 <h3>setCloseOnNavigation()</h3>
 <blockquote>
 <p><strong>setCloseOnNavigation</strong>(<code>bCloseOnNavigation?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getCloseOnNavigation closeOnNavigation.</p>
+<p>Indicates whether the Dialog will be closed automatically when a routing navigation occurs.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>true</code>.</p>
 <h4>Parameters</h4>
 <h5>bCloseOnNavigation?</h5>
 <p><code>boolean</code></p>
@@ -1177,15 +1181,16 @@ it returns <code>false</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.72</p>
-<p>Sets a new value for property #getCloseOnNavigation closeOnNavigation.</p>
-<p>Indicates whether the Dialog will be closed automatically when a routing navigation occurs.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>true</code>.</p>
 <hr>
 <h3>setContentHeight()</h3>
 <blockquote>
 <p><strong>setContentHeight</strong>(<code>sContentHeight?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getContentHeight contentHeight.</p>
+<p>Preferred height of the content in the Dialog. If the preferred height is bigger than the available space
+on a screen, it will be overwritten by the maximum available height on a screen in order to make sure
+that the Dialog isn&#39;t cut off.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <h4>Parameters</h4>
 <h5>sContentHeight?</h5>
 <p><code>string</code></p>
@@ -1195,16 +1200,18 @@ it returns <code>false</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.12.1</p>
-<p>Sets a new value for property #getContentHeight contentHeight.</p>
-<p>Preferred height of the content in the Dialog. If the preferred height is bigger than the available space
-on a screen, it will be overwritten by the maximum available height on a screen in order to make sure
-that the Dialog isn&#39;t cut off.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <hr>
 <h3>setContentWidth()</h3>
 <blockquote>
 <p><strong>setContentWidth</strong>(<code>sContentWidth?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getContentWidth contentWidth.</p>
+<p>Preferred width of the content in the Dialog. This property affects the width of the Dialog on a phone
+in landscape mode, a tablet or a desktop, because the Dialog has a fixed width on a phone in portrait
+mode. If the preferred width is less than the minimum width of the Dialog or more than the available
+width of the screen, it will be overwritten by the min or max value. The current mininum value of the
+Dialog width on tablet is 400px.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <h4>Parameters</h4>
 <h5>sContentWidth?</h5>
 <p><code>string</code></p>
@@ -1214,18 +1221,12 @@ that the Dialog isn&#39;t cut off.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.12.1</p>
-<p>Sets a new value for property #getContentWidth contentWidth.</p>
-<p>Preferred width of the content in the Dialog. This property affects the width of the Dialog on a phone
-in landscape mode, a tablet or a desktop, because the Dialog has a fixed width on a phone in portrait
-mode. If the preferred width is less than the minimum width of the Dialog or more than the available
-width of the screen, it will be overwritten by the min or max value. The current mininum value of the
-Dialog width on tablet is 400px.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <hr>
 <h3>setCustomHeader()</h3>
 <blockquote>
 <p><strong>setCustomHeader</strong>(<code>oCustomHeader</code>): <code>this</code></p>
 </blockquote>
+<p>Sets the aggregated #getCustomHeader customHeader.</p>
 <h4>Parameters</h4>
 <h5>oCustomHeader</h5>
 <p><a href="../../library/interfaces/IBar.html"><code>IBar</code></a></p>
@@ -1235,12 +1236,17 @@ Dialog width on tablet is 400px.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.15.1</p>
-<p>Sets the aggregated #getCustomHeader customHeader.</p>
 <hr>
 <h3>setDraggable()</h3>
 <blockquote>
 <p><strong>setDraggable</strong>(<code>bDraggable?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getDraggable draggable.</p>
+<p>Indicates whether the Dialog is draggable. If this property is set to <code>true</code>, the Dialog will be draggable
+by its header. This property has a default value <code>false</code>. The Dialog can be draggable only in desktop
+mode.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>false</code>.</p>
 <h4>Parameters</h4>
 <h5>bDraggable?</h5>
 <p><code>boolean</code></p>
@@ -1250,17 +1256,12 @@ Dialog width on tablet is 400px.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.30</p>
-<p>Sets a new value for property #getDraggable draggable.</p>
-<p>Indicates whether the Dialog is draggable. If this property is set to <code>true</code>, the Dialog will be draggable
-by its header. This property has a default value <code>false</code>. The Dialog can be draggable only in desktop
-mode.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>false</code>.</p>
 <hr>
 <h3>setEndButton()</h3>
 <blockquote>
 <p><strong>setEndButton</strong>(<code>oEndButton</code>): <code>this</code></p>
 </blockquote>
+<p>Sets the aggregated #getEndButton endButton.</p>
 <h4>Parameters</h4>
 <h5>oEndButton</h5>
 <p><a href="../../Button/classes/Button.html"><code>Button</code></a></p>
@@ -1270,7 +1271,6 @@ mode.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.15.1</p>
-<p>Sets the aggregated #getEndButton endButton.</p>
 <hr>
 <h3>setEscapeHandler()</h3>
 <blockquote>
@@ -1294,6 +1294,7 @@ dialog is immediately closed.</p>
 <blockquote>
 <p><strong>setFooter</strong>(<code>oFooter</code>): <code>this</code></p>
 </blockquote>
+<p>Sets the aggregated #getFooter footer.</p>
 <h4>Parameters</h4>
 <h5>oFooter</h5>
 <p><a href="../../Toolbar/classes/Toolbar.html"><code>Toolbar</code></a></p>
@@ -1303,12 +1304,18 @@ dialog is immediately closed.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.110</p>
-<p>Sets the aggregated #getFooter footer.</p>
 <hr>
 <h3>setHorizontalScrolling()</h3>
 <blockquote>
 <p><strong>setHorizontalScrolling</strong>(<code>bHorizontalScrolling?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getHorizontalScrolling horizontalScrolling.</p>
+<p>Indicates if the user can scroll horizontally inside the Dialog when the content is bigger than the content
+area. The Dialog detects if there&#39;s <code>sap.m.NavContainer</code>, <code>sap.m.Page</code>, <code>sap.m.ScrollContainer</code> or <code>sap.m.SplitContainer</code>
+as a direct child added to the Dialog. If there is, the Dialog will turn off <code>scrolling</code> by setting this
+property to <code>false</code>, automatically ignoring the existing value of the property.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>true</code>.</p>
 <h4>Parameters</h4>
 <h5>bHorizontalScrolling?</h5>
 <p><code>boolean</code></p>
@@ -1318,13 +1325,6 @@ dialog is immediately closed.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.15.1</p>
-<p>Sets a new value for property #getHorizontalScrolling horizontalScrolling.</p>
-<p>Indicates if the user can scroll horizontally inside the Dialog when the content is bigger than the content
-area. The Dialog detects if there&#39;s <code>sap.m.NavContainer</code>, <code>sap.m.Page</code>, <code>sap.m.ScrollContainer</code> or <code>sap.m.SplitContainer</code>
-as a direct child added to the Dialog. If there is, the Dialog will turn off <code>scrolling</code> by setting this
-property to <code>false</code>, automatically ignoring the existing value of the property.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>true</code>.</p>
 <hr>
 <h3>setIcon()</h3>
 <blockquote>
@@ -1347,6 +1347,7 @@ screen.</p>
 <blockquote>
 <p><strong>setInitialFocus</strong>(<code>oInitialFocus</code>): <code>this</code></p>
 </blockquote>
+<p>Sets the associated #getInitialFocus initialFocus.</p>
 <h4>Parameters</h4>
 <h5>oInitialFocus</h5>
 <p><code>string</code> | <a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></p>
@@ -1357,12 +1358,12 @@ instance may be given</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.15.0</p>
-<p>Sets the associated #getInitialFocus initialFocus.</p>
 <hr>
 <h3><del>setLeftButton()</del></h3>
 <blockquote>
 <p><strong>setLeftButton</strong>(<code>oLeftButton</code>): <code>this</code></p>
 </blockquote>
+<p>Sets the associated #getLeftButton leftButton.</p>
 <h4>Parameters</h4>
 <h5>oLeftButton</h5>
 <p><code>string</code> | <a href="../../Button/classes/Button.html"><code>Button</code></a></p>
@@ -1374,12 +1375,17 @@ instance may be given</p>
 <h4>Deprecated</h4>
 <p>(since 1.15.1) - <code>LeftButton</code> has been deprecated since 1.15.1. Please use the <code>beginButton</code>
 instead which is more RTL friendly.</p>
-<p>Sets the associated #getLeftButton leftButton.</p>
 <hr>
 <h3>setResizable()</h3>
 <blockquote>
 <p><strong>setResizable</strong>(<code>bResizable?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getResizable resizable.</p>
+<p>Indicates whether the Dialog is resizable. If this property is set to <code>true</code>, the Dialog will have a
+resize handler in its bottom right corner. This property has a default value <code>false</code>. The Dialog can
+be resizable only in desktop mode.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>false</code>.</p>
 <h4>Parameters</h4>
 <h5>bResizable?</h5>
 <p><code>boolean</code></p>
@@ -1389,17 +1395,12 @@ instead which is more RTL friendly.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.30</p>
-<p>Sets a new value for property #getResizable resizable.</p>
-<p>Indicates whether the Dialog is resizable. If this property is set to <code>true</code>, the Dialog will have a
-resize handler in its bottom right corner. This property has a default value <code>false</code>. The Dialog can
-be resizable only in desktop mode.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>false</code>.</p>
 <hr>
 <h3><del>setRightButton()</del></h3>
 <blockquote>
 <p><strong>setRightButton</strong>(<code>oRightButton</code>): <code>this</code></p>
 </blockquote>
+<p>Sets the associated #getRightButton rightButton.</p>
 <h4>Parameters</h4>
 <h5>oRightButton</h5>
 <p><code>string</code> | <a href="../../Button/classes/Button.html"><code>Button</code></a></p>
@@ -1411,12 +1412,16 @@ instance may be given</p>
 <h4>Deprecated</h4>
 <p>(since 1.15.1) - <code>RightButton</code> has been deprecated since 1.15.1. Please use the <code>endButton</code>
 instead which is more RTL friendly.</p>
-<p>Sets the associated #getRightButton rightButton.</p>
 <hr>
 <h3>setShowHeader()</h3>
 <blockquote>
 <p><strong>setShowHeader</strong>(<code>bShowHeader?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getShowHeader showHeader.</p>
+<p>Determines whether the header is shown inside the Dialog. If this property is set to <code>false</code>, the <code>text</code>
+and <code>icon</code> properties are ignored. This property has a default value <code>true</code>.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>true</code>.</p>
 <h4>Parameters</h4>
 <h5>bShowHeader?</h5>
 <p><code>boolean</code></p>
@@ -1426,16 +1431,17 @@ instead which is more RTL friendly.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.15.1</p>
-<p>Sets a new value for property #getShowHeader showHeader.</p>
-<p>Determines whether the header is shown inside the Dialog. If this property is set to <code>false</code>, the <code>text</code>
-and <code>icon</code> properties are ignored. This property has a default value <code>true</code>.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>true</code>.</p>
 <hr>
 <h3>setState()</h3>
 <blockquote>
 <p><strong>setState</strong>(<code>sState?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getState state.</p>
+<p>Affects the <code>icon</code> and the <code>title</code> color.</p>
+<p>If a value other than <code>None</code> is set, a predefined icon will be added to the Dialog. Setting the <code>icon</code>
+property will overwrite the predefined icon.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>None</code>.</p>
 <h4>Parameters</h4>
 <h5>sState?</h5>
 <p><code>&quot;None&quot;</code> | <a href="../../../../../sap.ui.core/sap/ui/core/library/enumerations/ValueState.html"><code>ValueState</code></a> | <code>&quot;Error&quot;</code> | <code>&quot;Information&quot;</code> | <code>&quot;Success&quot;</code> | <code>&quot;Warning&quot;</code></p>
@@ -1445,17 +1451,17 @@ and <code>icon</code> properties are ignored. This property has a default value 
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.11.2</p>
-<p>Sets a new value for property #getState state.</p>
-<p>Affects the <code>icon</code> and the <code>title</code> color.</p>
-<p>If a value other than <code>None</code> is set, a predefined icon will be added to the Dialog. Setting the <code>icon</code>
-property will overwrite the predefined icon.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>None</code>.</p>
 <hr>
 <h3>setStretch()</h3>
 <blockquote>
 <p><strong>setStretch</strong>(<code>bStretch?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getStretch stretch.</p>
+<p>Determines if the Dialog will be stretched to full screen on mobile. On desktop, the Dialog will be stretched
+to approximately 90% of the viewport. This property is only applicable to a Standard Dialog. Message-type
+Dialog ignores it.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>false</code>.</p>
 <h4>Parameters</h4>
 <h5>bStretch?</h5>
 <p><code>boolean</code></p>
@@ -1465,17 +1471,15 @@ property will overwrite the predefined icon.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.13.1</p>
-<p>Sets a new value for property #getStretch stretch.</p>
-<p>Determines if the Dialog will be stretched to full screen on mobile. On desktop, the Dialog will be stretched
-to approximately 90% of the viewport. This property is only applicable to a Standard Dialog. Message-type
-Dialog ignores it.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>false</code>.</p>
 <hr>
 <h3><del>setStretchOnPhone()</del></h3>
 <blockquote>
 <p><strong>setStretchOnPhone</strong>(<code>bStretchOnPhone?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getStretchOnPhone stretchOnPhone.</p>
+<p>Determines whether the Dialog will be displayed on full screen on a phone.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>false</code>.</p>
 <h4>Parameters</h4>
 <h5>bStretchOnPhone?</h5>
 <p><code>boolean</code></p>
@@ -1489,15 +1493,12 @@ Dialog ignores it.</p>
 <p>(since 1.13.1) - Please use the new stretch property instead. This enables a stretched Dialog
 even on tablet and desktop. If you want to achieve the same effect as <code>stretchOnPhone</code>, please set the
 stretch with <code>Device.system.phone</code>, then the Dialog is only stretched when it runs on a phone.</p>
-<p>Sets a new value for property #getStretchOnPhone stretchOnPhone.</p>
-<p>Determines whether the Dialog will be displayed on full screen on a phone.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>false</code>.</p>
 <hr>
 <h3>setSubHeader()</h3>
 <blockquote>
 <p><strong>setSubHeader</strong>(<code>oSubHeader</code>): <code>this</code></p>
 </blockquote>
+<p>Sets the aggregated #getSubHeader subHeader.</p>
 <h4>Parameters</h4>
 <h5>oSubHeader</h5>
 <p><a href="../../library/interfaces/IBar.html"><code>IBar</code></a></p>
@@ -1507,7 +1508,6 @@ stretch with <code>Device.system.phone</code>, then the Dialog is only stretched
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.12.2</p>
-<p>Sets the aggregated #getSubHeader subHeader.</p>
 <hr>
 <h3>setTitle()</h3>
 <blockquote>
@@ -1530,6 +1530,12 @@ heading level.</p>
 <blockquote>
 <p><strong>setTitleAlignment</strong>(<code>sTitleAlignment?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getTitleAlignment titleAlignment.</p>
+<p>Specifies the Title alignment (theme specific). If set to <code>TitleAlignment.Auto</code>, the Title will be aligned
+as it is set in the theme (if not set, the default value is <code>center</code>); Other possible values are <code>TitleAlignment.Start</code>
+(left or right depending on LTR/RTL), and <code>TitleAlignment.Center</code> (centered)</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>Auto</code>.</p>
 <h4>Parameters</h4>
 <h5>sTitleAlignment?</h5>
 <p><code>&quot;None&quot;</code> | <code>&quot;Auto&quot;</code> | <code>&quot;Center&quot;</code> | <a href="../../library/enumerations/TitleAlignment.html"><code>TitleAlignment</code></a> | <code>&quot;Start&quot;</code></p>
@@ -1539,12 +1545,6 @@ heading level.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.72</p>
-<p>Sets a new value for property #getTitleAlignment titleAlignment.</p>
-<p>Specifies the Title alignment (theme specific). If set to <code>TitleAlignment.Auto</code>, the Title will be aligned
-as it is set in the theme (if not set, the default value is <code>center</code>); Other possible values are <code>TitleAlignment.Start</code>
-(left or right depending on LTR/RTL), and <code>TitleAlignment.Center</code> (centered)</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>Auto</code>.</p>
 <hr>
 <h3>setType()</h3>
 <blockquote>
@@ -1567,6 +1567,13 @@ tablet and desktop.</p>
 <blockquote>
 <p><strong>setVerticalScrolling</strong>(<code>bVerticalScrolling?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getVerticalScrolling verticalScrolling.</p>
+<p>Indicates if the user can scroll vertically inside the Dialog when the content is bigger than the content
+area. The Dialog detects if there&#39;s <code>sap.m.NavContainer</code>, <code>sap.m.Page</code>, <code>sap.m.ScrollContainer</code> or <code>sap.m.SplitContainer</code>
+as a direct child added to the Dialog. If there is, the Dialog will turn off <code>scrolling</code> by setting this
+property to <code>false</code>, automatically ignoring the existing value of this property.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>true</code>.</p>
 <h4>Parameters</h4>
 <h5>bVerticalScrolling?</h5>
 <p><code>boolean</code></p>
@@ -1576,13 +1583,6 @@ tablet and desktop.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.15.1</p>
-<p>Sets a new value for property #getVerticalScrolling verticalScrolling.</p>
-<p>Indicates if the user can scroll vertically inside the Dialog when the content is bigger than the content
-area. The Dialog detects if there&#39;s <code>sap.m.NavContainer</code>, <code>sap.m.Page</code>, <code>sap.m.ScrollContainer</code> or <code>sap.m.SplitContainer</code>
-as a direct child added to the Dialog. If there is, the Dialog will turn off <code>scrolling</code> by setting this
-property to <code>false</code>, automatically ignoring the existing value of this property.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>true</code>.</p>
 <hr>
 <h3>extend()</h3>
 <blockquote>
@@ -1623,6 +1623,6 @@ used by this class</p>
 <p><a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a>.<a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html#getmetadata-1"><code>getMetadata</code></a></p>
 <hr>
 
-<footer>Generated from <code>@openui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@openui5/types@1.120.46</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

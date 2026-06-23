@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Class: AnalyticalTable — OpenUI5 TypeScript API</title>
-<meta name="description" content="Class: AnalyticalTable — OpenUI5 TypeScript API Reference (1.120.0)">
+<meta name="description" content="Class: AnalyticalTable — OpenUI5 TypeScript API Reference (1.120.46)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/openui5/1.120/sap.ui.table/sap/ui/table/AnalyticalTable/classes/AnalyticalTable.html">
 <meta property="og:title" content="Class: AnalyticalTable — OpenUI5 TypeScript API">
-<meta property="og:description" content="Class: AnalyticalTable — OpenUI5 TypeScript API Reference (1.120.0)">
+<meta property="og:description" content="Class: AnalyticalTable — OpenUI5 TypeScript API Reference (1.120.46)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/openui5/1.120/sap.ui.table/sap/ui/table/AnalyticalTable/classes/AnalyticalTable.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,9 +33,9 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../index.html">OpenUI5 API</a> › <a href="../../../../../../sap.ui.table/README.html">sap.ui.table</a> › sap › ui › table › <a href="../../../../../../sap.ui.table/sap/ui/table/AnalyticalTable/README.html">AnalyticalTable</a> › classes</nav>
-<p><a href="../../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.0)</strong></a></p>
+<p><a href="../../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.46)</strong></a></p>
 <hr>
-<p><a href="../../../../../../README.html">OpenUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../README.html">sap.ui.table</a> / <a href="../README.html">sap/ui/table/AnalyticalTable</a> / AnalyticalTable</p>
+<p><a href="../../../../../../README.html">OpenUI5 TypeScript API (1.120.46)</a> / <a href="../../../../../README.html">sap.ui.table</a> / <a href="../README.html">sap/ui/table/AnalyticalTable</a> / AnalyticalTable</p>
 <h1>Class: AnalyticalTable</h1>
 <pre class="sig"><span class="kw">import</span> AnalyticalTable <span class="kw">from</span> <span class="str">"sap/ui/table/AnalyticalTable"</span>;</pre>
 <p>Table which handles analytical OData backends. The AnalyticalTable only works with an AnalyticalBinding
@@ -118,6 +118,10 @@ To override the current selection, please use &quot;setSelectionInterval&quot; o
 <blockquote>
 <p><strong>attachGroup</strong>(<code>oData</code>, <code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
+<p>Attaches event handler <code>fnFunction</code> to the #event:group group event of this <code>sap.ui.table.AnalyticalTable</code>.</p>
+<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
+otherwise it will be bound to this <code>sap.ui.table.AnalyticalTable</code> itself.</p>
+<p>Fired when the table is grouped.</p>
 <h5>Parameters</h5>
 <h6>oData</h6>
 <p><code>object</code></p>
@@ -134,16 +138,16 @@ object when firing the event</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Since</h5>
 <p>1.118</p>
-<p>Attaches event handler <code>fnFunction</code> to the #event:group group event of this <code>sap.ui.table.AnalyticalTable</code>.</p>
-<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
-otherwise it will be bound to this <code>sap.ui.table.AnalyticalTable</code> itself.</p>
-<p>Fired when the table is grouped.</p>
 <h5>Overrides</h5>
 <p><a href="../../Table/classes/Table.html"><code>Table</code></a>.<a href="../../Table/classes/Table.html#attachgroup"><code>attachGroup</code></a></p>
 <h4>Call Signature</h4>
 <blockquote>
 <p><strong>attachGroup</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
+<p>Attaches event handler <code>fnFunction</code> to the #event:group group event of this <code>sap.ui.table.AnalyticalTable</code>.</p>
+<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
+otherwise it will be bound to this <code>sap.ui.table.AnalyticalTable</code> itself.</p>
+<p>Fired when the table is grouped.</p>
 <h5>Parameters</h5>
 <h6>fnFunction</h6>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -156,10 +160,6 @@ otherwise it will be bound to this <code>sap.ui.table.AnalyticalTable</code> its
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Since</h5>
 <p>1.118</p>
-<p>Attaches event handler <code>fnFunction</code> to the #event:group group event of this <code>sap.ui.table.AnalyticalTable</code>.</p>
-<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
-otherwise it will be bound to this <code>sap.ui.table.AnalyticalTable</code> itself.</p>
-<p>Fired when the table is grouped.</p>
 <h5>Overrides</h5>
 <p><a href="../../Table/classes/Table.html"><code>Table</code></a>.<a href="../../Table/classes/Table.html#attachgroup"><code>attachGroup</code></a></p>
 <hr>
@@ -189,6 +189,8 @@ otherwise it will be bound to this <code>sap.ui.table.AnalyticalTable</code> its
 <blockquote>
 <p><strong>detachGroup</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
+<p>Detaches event handler <code>fnFunction</code> from the #event:group group event of this <code>sap.ui.table.AnalyticalTable</code>.</p>
+<p>The passed function and listener object must match the ones used for event registration.</p>
 <h4>Parameters</h4>
 <h5>fnFunction</h5>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -201,8 +203,6 @@ otherwise it will be bound to this <code>sap.ui.table.AnalyticalTable</code> its
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.118</p>
-<p>Detaches event handler <code>fnFunction</code> from the #event:group group event of this <code>sap.ui.table.AnalyticalTable</code>.</p>
-<p>The passed function and listener object must match the ones used for event registration.</p>
 <h4>Overrides</h4>
 <p><a href="../../Table/classes/Table.html"><code>Table</code></a>.<a href="../../Table/classes/Table.html#detachgroup"><code>detachGroup</code></a></p>
 <hr>
@@ -223,19 +223,22 @@ otherwise it will be bound to this <code>sap.ui.table.AnalyticalTable</code> its
 <blockquote>
 <p><strong>expandAll</strong>(): <code>this</code></p>
 </blockquote>
+<p>Expands all nodes. The current selection is removed, and the table scrolls back to the top. If this method
+is called, not all groups might be loaded. If the user then scrolls to the bottom of the table, additional
+groups are loaded, which increases the scroll range, and the scroll thumb moves up.</p>
 <h4>Returns</h4>
 <p><code>this</code></p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.70</p>
-<p>Expands all nodes. The current selection is removed, and the table scrolls back to the top. If this method
-is called, not all groups might be loaded. If the user then scrolls to the bottom of the table, additional
-groups are loaded, which increases the scroll range, and the scroll thumb moves up.</p>
 <hr>
 <h3>fireGroup()</h3>
 <blockquote>
 <p><strong>fireGroup</strong>(<code>mParameters?</code>): <code>boolean</code></p>
 </blockquote>
+<p>Fires event #event:group group to attached listeners.</p>
+<p>Listeners may prevent the default action of this event by calling the <code>preventDefault</code> method on the
+event object. The return value of this method indicates whether the default action should be executed.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/AnalyticalTable$GroupEventParameters.html"><code>AnalyticalTable$GroupEventParameters</code></a></p>
@@ -247,9 +250,6 @@ groups are loaded, which increases the scroll range, and the scroll thumb moves 
 <p>1.118</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Fires event #event:group group to attached listeners.</p>
-<p>Listeners may prevent the default action of this event by calling the <code>preventDefault</code> method on the
-event object. The return value of this method indicates whether the default action should be executed.</p>
 <h4>Overrides</h4>
 <p><a href="../../Table/classes/Table.html"><code>Table</code></a>.<a href="../../Table/classes/Table.html#firegroup"><code>fireGroup</code></a></p>
 <hr>
@@ -257,11 +257,6 @@ event object. The return value of this method indicates whether the default acti
 <blockquote>
 <p><strong>getAutoExpandMode</strong>(): <code>string</code></p>
 </blockquote>
-<h4>Returns</h4>
-<p><code>string</code></p>
-<p>Value of property <code>autoExpandMode</code></p>
-<h4>Deprecated</h4>
-<p>(since 1.44) - replaced by the <code>autoExpandMode</code> binding parameter</p>
 <p>Gets current value of property #getAutoExpandMode autoExpandMode.</p>
 <p>The kind of auto expansion algorithm, e.g. optimized filter conditions, per level requests, ... Must
 be a value of <code>sap.ui.table.TreeAutoExpandMode</code>.</p>
@@ -278,16 +273,16 @@ of the <code>rows</code> aggregation is done.</p>
   });
 </code></pre>
 <p>Default value is <code>&quot;Bundled&quot;</code>.</p>
+<h4>Returns</h4>
+<p><code>string</code></p>
+<p>Value of property <code>autoExpandMode</code></p>
+<h4>Deprecated</h4>
+<p>(since 1.44) - replaced by the <code>autoExpandMode</code> binding parameter</p>
 <hr>
 <h3><del>getCollapseRecursive()</del></h3>
 <blockquote>
 <p><strong>getCollapseRecursive</strong>(): <code>boolean</code></p>
 </blockquote>
-<h4>Returns</h4>
-<p><code>boolean</code></p>
-<p>Value of property <code>collapseRecursive</code></p>
-<h4>Deprecated</h4>
-<p>(since 1.76) - replaced by the <code>collapseRecursive</code> binding parameter</p>
 <p>Gets current value of property #getCollapseRecursive collapseRecursive.</p>
 <p>Setting collapseRecursive to true means, that when collapsing a node all subsequent child nodes will
 also be collapsed.</p>
@@ -303,41 +298,46 @@ bound and the binding supports this feature.</p>
   });
 </code></pre>
 <p>Default value is <code>true</code>.</p>
+<h4>Returns</h4>
+<p><code>boolean</code></p>
+<p>Value of property <code>collapseRecursive</code></p>
+<h4>Deprecated</h4>
+<p>(since 1.76) - replaced by the <code>collapseRecursive</code> binding parameter</p>
 <hr>
 <h3><del>getColumnVisibilityMenuSorter()</del></h3>
 <blockquote>
 <p><strong>getColumnVisibilityMenuSorter</strong>(): <code>any</code></p>
 </blockquote>
+<p>Gets current value of property #getColumnVisibilityMenuSorter columnVisibilityMenuSorter.</p>
+<p>Functions which is used to sort the column visibility menu entries e.g.: function(ColumnA, ColumnB) {
+return 0 = equals, &lt;0 lower, &gt;0 greater }; Other values than functions will be ignored.</p>
 <h4>Returns</h4>
 <p><code>any</code></p>
 <p>Value of property <code>columnVisibilityMenuSorter</code></p>
 <h4>Deprecated</h4>
 <p>(since 1.117)</p>
-<p>Gets current value of property #getColumnVisibilityMenuSorter columnVisibilityMenuSorter.</p>
-<p>Functions which is used to sort the column visibility menu entries e.g.: function(ColumnA, ColumnB) {
-return 0 = equals, &lt;0 lower, &gt;0 greater }; Other values than functions will be ignored.</p>
 <hr>
 <h3><del>getDirty()</del></h3>
 <blockquote>
 <p><strong>getDirty</strong>(): <code>boolean</code></p>
 </blockquote>
+<p>Gets current value of property #getDirty dirty.</p>
+<p>If dirty the content of the Table will be overlayed.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>Value of property <code>dirty</code></p>
 <h4>Deprecated</h4>
 <p>(since 1.21.2) - replaced by sap.ui.table.Table#setShowOverlay</p>
-<p>Gets current value of property #getDirty dirty.</p>
-<p>If dirty the content of the Table will be overlayed.</p>
 <hr>
 <h3><del>getEnableGrouping()</del></h3>
 <blockquote>
 <p><strong>getEnableGrouping</strong>(): <code>boolean</code></p>
 </blockquote>
+<p>The property <code>enableGrouping</code> is not supported by the <code>AnalyticalTable</code> control.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <h4>Deprecated</h4>
 <p>(since 1.28)</p>
-<p>The property <code>enableGrouping</code> is not supported by the <code>AnalyticalTable</code> control.</p>
 <h4>Overrides</h4>
 <p><a href="../../Table/classes/Table.html"><code>Table</code></a>.<a href="../../Table/classes/Table.html#getenablegrouping"><code>getEnableGrouping</code></a></p>
 <hr>
@@ -345,11 +345,11 @@ return 0 = equals, &lt;0 lower, &gt;0 greater }; Other values than functions wil
 <blockquote>
 <p><strong>getGroupBy</strong>(): <code>string</code></p>
 </blockquote>
+<p>The <code>groupBy</code> association is not supported by the <code>AnalyticalTable</code> control.</p>
 <h4>Returns</h4>
 <p><code>string</code></p>
 <h4>Deprecated</h4>
 <p>(since 1.28)</p>
-<p>The <code>groupBy</code> association is not supported by the <code>AnalyticalTable</code> control.</p>
 <h4>Overrides</h4>
 <p><a href="../../Table/classes/Table.html"><code>Table</code></a>.<a href="../../Table/classes/Table.html#getgroupby"><code>getGroupBy</code></a></p>
 <hr>
@@ -357,11 +357,6 @@ return 0 = equals, &lt;0 lower, &gt;0 greater }; Other values than functions wil
 <blockquote>
 <p><strong>getNumberOfExpandedLevels</strong>(): <code>number</code></p>
 </blockquote>
-<h4>Returns</h4>
-<p><code>number</code></p>
-<p>Value of property <code>numberOfExpandedLevels</code></p>
-<h4>Deprecated</h4>
-<p>(since 1.44) - replaced by the <code>numberOfExpandedLevels</code> binding parameter</p>
 <p>Gets current value of property #getNumberOfExpandedLevels numberOfExpandedLevels.</p>
 <p>Number of levels, which should be opened initially (on first load of data).</p>
 <p>The value of the property is only taken into account if no parameter is given in the binding information.
@@ -377,6 +372,11 @@ of the <code>rows</code> aggregation is done.</p>
   });
 </code></pre>
 <p>Default value is <code>0</code>.</p>
+<h4>Returns</h4>
+<p><code>number</code></p>
+<p>Value of property <code>numberOfExpandedLevels</code></p>
+<h4>Deprecated</h4>
+<p>(since 1.44) - replaced by the <code>numberOfExpandedLevels</code> binding parameter</p>
 <hr>
 <h3>getSelectedIndex()</h3>
 <blockquote>
@@ -409,11 +409,6 @@ yet loaded&quot; to the client), will not be returned.</p>
 <blockquote>
 <p><strong>getSumOnTop</strong>(): <code>boolean</code></p>
 </blockquote>
-<h4>Returns</h4>
-<p><code>boolean</code></p>
-<p>Value of property <code>sumOnTop</code></p>
-<h4>Deprecated</h4>
-<p>(since 1.44) - replaced by the <code>sumOnTop</code> binding parameter</p>
 <p>Gets current value of property #getSumOnTop sumOnTop.</p>
 <p>Specifies if the total values should be displayed in the group headers or on bottom of the row. Does
 not affect the total sum.</p>
@@ -430,6 +425,11 @@ of the <code>rows</code> aggregation is done.</p>
   });
 </code></pre>
 <p>Default value is <code>false</code>.</p>
+<h4>Returns</h4>
+<p><code>boolean</code></p>
+<p>Value of property <code>sumOnTop</code></p>
+<h4>Deprecated</h4>
+<p>(since 1.44) - replaced by the <code>sumOnTop</code> binding parameter</p>
 <hr>
 <h3>getTotalSize()</h3>
 <blockquote>
@@ -493,6 +493,7 @@ into account.</p>
 <blockquote>
 <p><strong>resumeUpdateAnalyticalInfo</strong>(<code>bSuppressRefresh</code>, <code>bForceChange</code>): <code>void</code></p>
 </blockquote>
+<p>This function is used by some composite controls to force updating the AnalyticalInfo</p>
 <h4>Parameters</h4>
 <h5>bSuppressRefresh</h5>
 <p><code>boolean</code></p>
@@ -504,7 +505,6 @@ into account.</p>
 <p><code>void</code></p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>This function is used by some composite controls to force updating the AnalyticalInfo</p>
 <hr>
 <h3>selectAll()</h3>
 <blockquote>
@@ -525,15 +525,6 @@ function will NOT retrieve any data from the backend.</p>
 <blockquote>
 <p><strong>setAutoExpandMode</strong>(<code>sAutoExpandMode?</code>): <code>this</code></p>
 </blockquote>
-<h4>Parameters</h4>
-<h5>sAutoExpandMode?</h5>
-<p><code>string</code></p>
-<p>New value for property <code>autoExpandMode</code></p>
-<h4>Returns</h4>
-<p><code>this</code></p>
-<p>Reference to <code>this</code> in order to allow method chaining</p>
-<h4>Deprecated</h4>
-<p>(since 1.44) - replaced by the <code>autoExpandMode</code> binding parameter</p>
 <p>Sets a new value for property #getAutoExpandMode autoExpandMode.</p>
 <p>The kind of auto expansion algorithm, e.g. optimized filter conditions, per level requests, ... Must
 be a value of <code>sap.ui.table.TreeAutoExpandMode</code>.</p>
@@ -551,20 +542,20 @@ of the <code>rows</code> aggregation is done.</p>
 </code></pre>
 <p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <p>Default value is <code>&quot;Bundled&quot;</code>.</p>
+<h4>Parameters</h4>
+<h5>sAutoExpandMode?</h5>
+<p><code>string</code></p>
+<p>New value for property <code>autoExpandMode</code></p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<h4>Deprecated</h4>
+<p>(since 1.44) - replaced by the <code>autoExpandMode</code> binding parameter</p>
 <hr>
 <h3><del>setCollapseRecursive()</del></h3>
 <blockquote>
 <p><strong>setCollapseRecursive</strong>(<code>bCollapseRecursive?</code>): <code>this</code></p>
 </blockquote>
-<h4>Parameters</h4>
-<h5>bCollapseRecursive?</h5>
-<p><code>boolean</code></p>
-<p>New value for property <code>collapseRecursive</code></p>
-<h4>Returns</h4>
-<p><code>this</code></p>
-<p>Reference to <code>this</code> in order to allow method chaining</p>
-<h4>Deprecated</h4>
-<p>(since 1.76) - replaced by the <code>collapseRecursive</code> binding parameter</p>
 <p>Sets a new value for property #getCollapseRecursive collapseRecursive.</p>
 <p>Setting collapseRecursive to true means, that when collapsing a node all subsequent child nodes will
 also be collapsed.</p>
@@ -581,11 +572,24 @@ bound and the binding supports this feature.</p>
 </code></pre>
 <p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <p>Default value is <code>true</code>.</p>
+<h4>Parameters</h4>
+<h5>bCollapseRecursive?</h5>
+<p><code>boolean</code></p>
+<p>New value for property <code>collapseRecursive</code></p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<h4>Deprecated</h4>
+<p>(since 1.76) - replaced by the <code>collapseRecursive</code> binding parameter</p>
 <hr>
 <h3><del>setColumnVisibilityMenuSorter()</del></h3>
 <blockquote>
 <p><strong>setColumnVisibilityMenuSorter</strong>(<code>oColumnVisibilityMenuSorter?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getColumnVisibilityMenuSorter columnVisibilityMenuSorter.</p>
+<p>Functions which is used to sort the column visibility menu entries e.g.: function(ColumnA, ColumnB) {
+return 0 = equals, &lt;0 lower, &gt;0 greater }; Other values than functions will be ignored.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <h4>Parameters</h4>
 <h5>oColumnVisibilityMenuSorter?</h5>
 <p><code>any</code></p>
@@ -595,15 +599,14 @@ bound and the binding supports this feature.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Deprecated</h4>
 <p>(since 1.117)</p>
-<p>Sets a new value for property #getColumnVisibilityMenuSorter columnVisibilityMenuSorter.</p>
-<p>Functions which is used to sort the column visibility menu entries e.g.: function(ColumnA, ColumnB) {
-return 0 = equals, &lt;0 lower, &gt;0 greater }; Other values than functions will be ignored.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <hr>
 <h3><del>setDirty()</del></h3>
 <blockquote>
 <p><strong>setDirty</strong>(<code>bDirty?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getDirty dirty.</p>
+<p>If dirty the content of the Table will be overlayed.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <h4>Parameters</h4>
 <h5>bDirty?</h5>
 <p><code>boolean</code></p>
@@ -613,14 +616,12 @@ return 0 = equals, &lt;0 lower, &gt;0 greater }; Other values than functions wil
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Deprecated</h4>
 <p>(since 1.21.2) - replaced by sap.ui.table.Table#setShowOverlay</p>
-<p>Sets a new value for property #getDirty dirty.</p>
-<p>If dirty the content of the Table will be overlayed.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <hr>
 <h3><del>setEnableGrouping()</del></h3>
 <blockquote>
 <p><strong>setEnableGrouping</strong>(<code>bValue</code>): <code>this</code></p>
 </blockquote>
+<p>The property <code>enableGrouping</code> is not supported by the <code>AnalyticalTable</code> control.</p>
 <h4>Parameters</h4>
 <h5>bValue</h5>
 <p><code>boolean</code></p>
@@ -629,7 +630,6 @@ return 0 = equals, &lt;0 lower, &gt;0 greater }; Other values than functions wil
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Deprecated</h4>
 <p>(since 1.28)</p>
-<p>The property <code>enableGrouping</code> is not supported by the <code>AnalyticalTable</code> control.</p>
 <h4>Overrides</h4>
 <p><a href="../../Table/classes/Table.html"><code>Table</code></a>.<a href="../../Table/classes/Table.html#setenablegrouping"><code>setEnableGrouping</code></a></p>
 <hr>
@@ -637,6 +637,7 @@ return 0 = equals, &lt;0 lower, &gt;0 greater }; Other values than functions wil
 <blockquote>
 <p><strong>setGroupBy</strong>(<code>oGroupBy</code>): <code>this</code></p>
 </blockquote>
+<p>The <code>groupBy</code> association is not supported by the <code>AnalyticalTable</code> control.</p>
 <h4>Parameters</h4>
 <h5>oGroupBy</h5>
 <p><code>string</code> | <a href="../../Column/classes/Column.html"><code>Column</code></a></p>
@@ -645,7 +646,6 @@ return 0 = equals, &lt;0 lower, &gt;0 greater }; Other values than functions wil
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Deprecated</h4>
 <p>(since 1.28)</p>
-<p>The <code>groupBy</code> association is not supported by the <code>AnalyticalTable</code> control.</p>
 <h4>Overrides</h4>
 <p><a href="../../Table/classes/Table.html"><code>Table</code></a>.<a href="../../Table/classes/Table.html#setgroupby"><code>setGroupBy</code></a></p>
 <hr>
@@ -653,15 +653,6 @@ return 0 = equals, &lt;0 lower, &gt;0 greater }; Other values than functions wil
 <blockquote>
 <p><strong>setNumberOfExpandedLevels</strong>(<code>iNumberOfExpandedLevels?</code>): <code>this</code></p>
 </blockquote>
-<h4>Parameters</h4>
-<h5>iNumberOfExpandedLevels?</h5>
-<p><code>number</code></p>
-<p>New value for property <code>numberOfExpandedLevels</code></p>
-<h4>Returns</h4>
-<p><code>this</code></p>
-<p>Reference to <code>this</code> in order to allow method chaining</p>
-<h4>Deprecated</h4>
-<p>(since 1.44) - replaced by the <code>numberOfExpandedLevels</code> binding parameter</p>
 <p>Sets a new value for property #getNumberOfExpandedLevels numberOfExpandedLevels.</p>
 <p>Number of levels, which should be opened initially (on first load of data).</p>
 <p>The value of the property is only taken into account if no parameter is given in the binding information.
@@ -678,6 +669,15 @@ of the <code>rows</code> aggregation is done.</p>
 </code></pre>
 <p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <p>Default value is <code>0</code>.</p>
+<h4>Parameters</h4>
+<h5>iNumberOfExpandedLevels?</h5>
+<p><code>number</code></p>
+<p>New value for property <code>numberOfExpandedLevels</code></p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<h4>Deprecated</h4>
+<p>(since 1.44) - replaced by the <code>numberOfExpandedLevels</code> binding parameter</p>
 <hr>
 <h3>setSelectedIndex()</h3>
 <blockquote>
@@ -720,15 +720,6 @@ use <code>addSelectionInterval</code> and <code>removeSelectionInterval</code>.<
 <blockquote>
 <p><strong>setSumOnTop</strong>(<code>bSumOnTop?</code>): <code>this</code></p>
 </blockquote>
-<h4>Parameters</h4>
-<h5>bSumOnTop?</h5>
-<p><code>boolean</code></p>
-<p>New value for property <code>sumOnTop</code></p>
-<h4>Returns</h4>
-<p><code>this</code></p>
-<p>Reference to <code>this</code> in order to allow method chaining</p>
-<h4>Deprecated</h4>
-<p>(since 1.44) - replaced by the <code>sumOnTop</code> binding parameter</p>
 <p>Sets a new value for property #getSumOnTop sumOnTop.</p>
 <p>Specifies if the total values should be displayed in the group headers or on bottom of the row. Does
 not affect the total sum.</p>
@@ -746,18 +737,27 @@ of the <code>rows</code> aggregation is done.</p>
 </code></pre>
 <p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <p>Default value is <code>false</code>.</p>
+<h4>Parameters</h4>
+<h5>bSumOnTop?</h5>
+<p><code>boolean</code></p>
+<p>New value for property <code>sumOnTop</code></p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<h4>Deprecated</h4>
+<p>(since 1.44) - replaced by the <code>sumOnTop</code> binding parameter</p>
 <hr>
 <h3>suspendUpdateAnalyticalInfo()</h3>
 <blockquote>
 <p><strong>suspendUpdateAnalyticalInfo</strong>(): <code>void</code></p>
 </blockquote>
+<p>This function is used by some composite controls to avoid updating the AnalyticalInfo when several column
+are added to the table. In order to finally update the AnalyticalInfo and request data, resumeUpdateAnalyticalInfo
+must be called.</p>
 <h4>Returns</h4>
 <p><code>void</code></p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>This function is used by some composite controls to avoid updating the AnalyticalInfo when several column
-are added to the table. In order to finally update the AnalyticalInfo and request data, resumeUpdateAnalyticalInfo
-must be called.</p>
 <hr>
 <h3>extend()</h3>
 <blockquote>
@@ -798,6 +798,6 @@ used by this class</p>
 <p><a href="../../Table/classes/Table.html"><code>Table</code></a>.<a href="../../Table/classes/Table.html#getmetadata-1"><code>getMetadata</code></a></p>
 <hr>
 
-<footer>Generated from <code>@openui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@openui5/types@1.120.46</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

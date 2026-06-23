@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Class: ResponsiveGridLayout — OpenUI5 TypeScript API</title>
-<meta name="description" content="Class: ResponsiveGridLayout — OpenUI5 TypeScript API Reference (1.120.0)">
+<meta name="description" content="Class: ResponsiveGridLayout — OpenUI5 TypeScript API Reference (1.120.46)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/openui5/1.120/sap.ui.layout/sap/ui/layout/form/ResponsiveGridLayout/classes/ResponsiveGridLayout.html">
 <meta property="og:title" content="Class: ResponsiveGridLayout — OpenUI5 TypeScript API">
-<meta property="og:description" content="Class: ResponsiveGridLayout — OpenUI5 TypeScript API Reference (1.120.0)">
+<meta property="og:description" content="Class: ResponsiveGridLayout — OpenUI5 TypeScript API Reference (1.120.46)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/openui5/1.120/sap.ui.layout/sap/ui/layout/form/ResponsiveGridLayout/classes/ResponsiveGridLayout.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,13 +33,11 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../../index.html">OpenUI5 API</a> › <a href="../../../../../../../sap.ui.layout/README.html">sap.ui.layout</a> › sap › ui › layout › form › <a href="../../../../../../../sap.ui.layout/sap/ui/layout/form/ResponsiveGridLayout/README.html">ResponsiveGridLayout</a> › classes</nav>
-<p><a href="../../../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.0)</strong></a></p>
+<p><a href="../../../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.46)</strong></a></p>
 <hr>
-<p><a href="../../../../../../../README.html">OpenUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../../README.html">sap.ui.layout</a> / <a href="../README.html">sap/ui/layout/form/ResponsiveGridLayout</a> / ResponsiveGridLayout</p>
+<p><a href="../../../../../../../README.html">OpenUI5 TypeScript API (1.120.46)</a> / <a href="../../../../../../README.html">sap.ui.layout</a> / <a href="../README.html">sap/ui/layout/form/ResponsiveGridLayout</a> / ResponsiveGridLayout</p>
 <h1>Class: ResponsiveGridLayout</h1>
 <pre class="sig"><span class="kw">import</span> ResponsiveGridLayout <span class="kw">from</span> <span class="str">"sap/ui/layout/form/ResponsiveGridLayout"</span>;</pre>
-<h2>Since</h2>
-<p>1.16.0</p>
 <p>The <code>ResponsiveGridLayout</code> control renders a sap.ui.layout.form.Form Form using a responsive
 grid. Internally the sap.ui.layout.Grid Grid control is used for rendering. Using this layout,
 the sap.ui.layout.form.Form Form is rendered in a responsive way. Depending on the available
@@ -55,6 +53,8 @@ not bring the expected result. In such cases, sap.ui.layout.GridGata GridData sh
 for all content controls to disable the default behavior.</p>
 <p>This control cannot be used stand-alone, it just renders a sap.ui.layout.form.Form Form, so it
 must be assigned to a sap.ui.layout.form.Form Form using the <code>layout</code> aggregation.</p>
+<h2>Since</h2>
+<p>1.16.0</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../FormLayout/classes/FormLayout.html"><code>FormLayout</code></a></li>
@@ -100,11 +100,6 @@ of the syntax of the settings object.</p>
 <blockquote>
 <p><strong>getAdjustLabelSpan</strong>(): <code>boolean</code></p>
 </blockquote>
-<h4>Returns</h4>
-<p><code>boolean</code></p>
-<p>Value of property <code>adjustLabelSpan</code></p>
-<h4>Since</h4>
-<p>1.34.0</p>
 <p>Gets current value of property #getAdjustLabelSpan adjustLabelSpan.</p>
 <p>If set, the usage of <code>labelSpanL</code> and <code>labelSpanM</code> are dependent on the number of sap.ui.layout.form.FormContainer FormContainers
 in one row. If only one sap.ui.layout.form.FormContainer FormContainer is displayed in one row,
@@ -115,212 +110,212 @@ has its own sap.ui.layout.Grid Grid inside).</p>
 <p>If not set, the usage of <code>labelSpanL</code> and <code>labelSpanM</code> are dependent on the sap.ui.layout.form.Form Form
 size. The number of sap.ui.layout.form.FormContainer FormContainers doesn&#39;t matter in this case.</p>
 <p>Default value is <code>true</code>.</p>
+<h4>Returns</h4>
+<p><code>boolean</code></p>
+<p>Value of property <code>adjustLabelSpan</code></p>
+<h4>Since</h4>
+<p>1.34.0</p>
 <hr>
 <h3>getBreakpointL()</h3>
 <blockquote>
 <p><strong>getBreakpointL</strong>(): <code>number</code></p>
 </blockquote>
+<p>Gets current value of property #getBreakpointL breakpointL.</p>
+<p>Breakpoint (in pixel) between Medium size and Large size.</p>
+<p>Default value is <code>1024</code>.</p>
 <h4>Returns</h4>
 <p><code>number</code></p>
 <p>Value of property <code>breakpointL</code></p>
 <h4>Since</h4>
 <p>1.16.3</p>
-<p>Gets current value of property #getBreakpointL breakpointL.</p>
-<p>Breakpoint (in pixel) between Medium size and Large size.</p>
-<p>Default value is <code>1024</code>.</p>
 <hr>
 <h3>getBreakpointM()</h3>
 <blockquote>
 <p><strong>getBreakpointM</strong>(): <code>number</code></p>
 </blockquote>
+<p>Gets current value of property #getBreakpointM breakpointM.</p>
+<p>Breakpoint (in pixel) between Small size and Medium size.</p>
+<p>Default value is <code>600</code>.</p>
 <h4>Returns</h4>
 <p><code>number</code></p>
 <p>Value of property <code>breakpointM</code></p>
 <h4>Since</h4>
 <p>1.16.3</p>
-<p>Gets current value of property #getBreakpointM breakpointM.</p>
-<p>Breakpoint (in pixel) between Small size and Medium size.</p>
-<p>Default value is <code>600</code>.</p>
 <hr>
 <h3>getBreakpointXL()</h3>
 <blockquote>
 <p><strong>getBreakpointXL</strong>(): <code>number</code></p>
 </blockquote>
+<p>Gets current value of property #getBreakpointXL breakpointXL.</p>
+<p>Breakpoint (in pixel) between large size and extra large (XL) size.</p>
+<p>Default value is <code>1440</code>.</p>
 <h4>Returns</h4>
 <p><code>number</code></p>
 <p>Value of property <code>breakpointXL</code></p>
 <h4>Since</h4>
 <p>1.34.0</p>
-<p>Gets current value of property #getBreakpointXL breakpointXL.</p>
-<p>Breakpoint (in pixel) between large size and extra large (XL) size.</p>
-<p>Default value is <code>1440</code>.</p>
 <hr>
 <h3>getColumnsL()</h3>
 <blockquote>
 <p><strong>getColumnsL</strong>(): <code>number</code></p>
 </blockquote>
+<p>Gets current value of property #getColumnsL columnsL.</p>
+<p>Number of columns for large size.</p>
+<p>The number of columns for large size must not be smaller than the number of columns for medium size.</p>
+<p>Default value is <code>2</code>.</p>
 <h4>Returns</h4>
 <p><code>number</code></p>
 <p>Value of property <code>columnsL</code></p>
 <h4>Since</h4>
 <p>1.16.3</p>
-<p>Gets current value of property #getColumnsL columnsL.</p>
-<p>Number of columns for large size.</p>
-<p>The number of columns for large size must not be smaller than the number of columns for medium size.</p>
-<p>Default value is <code>2</code>.</p>
 <hr>
 <h3>getColumnsM()</h3>
 <blockquote>
 <p><strong>getColumnsM</strong>(): <code>number</code></p>
 </blockquote>
+<p>Gets current value of property #getColumnsM columnsM.</p>
+<p>Number of columns for medium size.</p>
+<p>Default value is <code>1</code>.</p>
 <h4>Returns</h4>
 <p><code>number</code></p>
 <p>Value of property <code>columnsM</code></p>
 <h4>Since</h4>
 <p>1.16.3</p>
-<p>Gets current value of property #getColumnsM columnsM.</p>
-<p>Number of columns for medium size.</p>
-<p>Default value is <code>1</code>.</p>
 <hr>
 <h3>getColumnsXL()</h3>
 <blockquote>
 <p><strong>getColumnsXL</strong>(): <code>number</code></p>
 </blockquote>
-<h4>Returns</h4>
-<p><code>number</code></p>
-<p>Value of property <code>columnsXL</code></p>
-<h4>Since</h4>
-<p>1.34.0</p>
 <p>Gets current value of property #getColumnsXL columnsXL.</p>
 <p>Number of columns for extra large size.</p>
 <p>The number of columns for extra large size must not be smaller than the number of columns for large size.
 <strong>Note:</strong> If the default value -1 is not overwritten with the meaningful one then the <code>columnsL</code> value
 is used (from the backward compatibility reasons).</p>
 <p>Default value is <code>-1</code>.</p>
+<h4>Returns</h4>
+<p><code>number</code></p>
+<p>Value of property <code>columnsXL</code></p>
+<h4>Since</h4>
+<p>1.34.0</p>
 <hr>
 <h3>getEmptySpanL()</h3>
 <blockquote>
 <p><strong>getEmptySpanL</strong>(): <code>number</code></p>
 </blockquote>
+<p>Gets current value of property #getEmptySpanL emptySpanL.</p>
+<p>Number of grid cells that are empty at the end of each line on large size.</p>
+<p>Default value is <code>0</code>.</p>
 <h4>Returns</h4>
 <p><code>number</code></p>
 <p>Value of property <code>emptySpanL</code></p>
 <h4>Since</h4>
 <p>1.16.3</p>
-<p>Gets current value of property #getEmptySpanL emptySpanL.</p>
-<p>Number of grid cells that are empty at the end of each line on large size.</p>
-<p>Default value is <code>0</code>.</p>
 <hr>
 <h3>getEmptySpanM()</h3>
 <blockquote>
 <p><strong>getEmptySpanM</strong>(): <code>number</code></p>
 </blockquote>
+<p>Gets current value of property #getEmptySpanM emptySpanM.</p>
+<p>Number of grid cells that are empty at the end of each line on medium size.</p>
+<p>Default value is <code>0</code>.</p>
 <h4>Returns</h4>
 <p><code>number</code></p>
 <p>Value of property <code>emptySpanM</code></p>
 <h4>Since</h4>
 <p>1.16.3</p>
-<p>Gets current value of property #getEmptySpanM emptySpanM.</p>
-<p>Number of grid cells that are empty at the end of each line on medium size.</p>
-<p>Default value is <code>0</code>.</p>
 <hr>
 <h3>getEmptySpanS()</h3>
 <blockquote>
 <p><strong>getEmptySpanS</strong>(): <code>number</code></p>
 </blockquote>
+<p>Gets current value of property #getEmptySpanS emptySpanS.</p>
+<p>Number of grid cells that are empty at the end of each line on small size.</p>
+<p>Default value is <code>0</code>.</p>
 <h4>Returns</h4>
 <p><code>number</code></p>
 <p>Value of property <code>emptySpanS</code></p>
 <h4>Since</h4>
 <p>1.16.3</p>
-<p>Gets current value of property #getEmptySpanS emptySpanS.</p>
-<p>Number of grid cells that are empty at the end of each line on small size.</p>
-<p>Default value is <code>0</code>.</p>
 <hr>
 <h3>getEmptySpanXL()</h3>
 <blockquote>
 <p><strong>getEmptySpanXL</strong>(): <code>number</code></p>
 </blockquote>
-<h4>Returns</h4>
-<p><code>number</code></p>
-<p>Value of property <code>emptySpanXL</code></p>
-<h4>Since</h4>
-<p>1.34.0</p>
 <p>Gets current value of property #getEmptySpanXL emptySpanXL.</p>
 <p>Number of grid cells that are empty at the end of each line on extra large size.</p>
 <p><strong>Note:</strong> If the default value -1 is not overwritten with the meaningful one then the <code>emptySpanL</code> value
 is used.</p>
 <p>Default value is <code>-1</code>.</p>
+<h4>Returns</h4>
+<p><code>number</code></p>
+<p>Value of property <code>emptySpanXL</code></p>
+<h4>Since</h4>
+<p>1.34.0</p>
 <hr>
 <h3>getLabelSpanL()</h3>
 <blockquote>
 <p><strong>getLabelSpanL</strong>(): <code>number</code></p>
 </blockquote>
-<h4>Returns</h4>
-<p><code>number</code></p>
-<p>Value of property <code>labelSpanL</code></p>
-<h4>Since</h4>
-<p>1.16.3</p>
 <p>Gets current value of property #getLabelSpanL labelSpanL.</p>
 <p>Default span for labels in large size.</p>
 <p><strong>Note:</strong> If <code>adjustLabelSpan</code> is set, this property is only used if more than 1 sap.ui.layout.form.FormContainer FormContainer
 is in one line. If only 1 sap.ui.layout.form.FormContainer FormContainer is in the line, then
 the <code>labelSpanM</code> value is used.</p>
 <p>Default value is <code>4</code>.</p>
+<h4>Returns</h4>
+<p><code>number</code></p>
+<p>Value of property <code>labelSpanL</code></p>
+<h4>Since</h4>
+<p>1.16.3</p>
 <hr>
 <h3>getLabelSpanM()</h3>
 <blockquote>
 <p><strong>getLabelSpanM</strong>(): <code>number</code></p>
 </blockquote>
-<h4>Returns</h4>
-<p><code>number</code></p>
-<p>Value of property <code>labelSpanM</code></p>
-<h4>Since</h4>
-<p>1.16.3</p>
 <p>Gets current value of property #getLabelSpanM labelSpanM.</p>
 <p>Default span for labels in medium size.</p>
 <p><strong>Note:</strong> If <code>adjustLabelSpan</code> is set this property is used for full-size sap.ui.layout.form.FormContainer FormContainers.
 If more than one sap.ui.layout.form.FormContainer FormContainer is in one line, <code>labelSpanL</code>
 is used.</p>
 <p>Default value is <code>2</code>.</p>
+<h4>Returns</h4>
+<p><code>number</code></p>
+<p>Value of property <code>labelSpanM</code></p>
+<h4>Since</h4>
+<p>1.16.3</p>
 <hr>
 <h3>getLabelSpanS()</h3>
 <blockquote>
 <p><strong>getLabelSpanS</strong>(): <code>number</code></p>
 </blockquote>
+<p>Gets current value of property #getLabelSpanS labelSpanS.</p>
+<p>Default span for labels in small size.</p>
+<p>Default value is <code>12</code>.</p>
 <h4>Returns</h4>
 <p><code>number</code></p>
 <p>Value of property <code>labelSpanS</code></p>
 <h4>Since</h4>
 <p>1.16.3</p>
-<p>Gets current value of property #getLabelSpanS labelSpanS.</p>
-<p>Default span for labels in small size.</p>
-<p>Default value is <code>12</code>.</p>
 <hr>
 <h3>getLabelSpanXL()</h3>
 <blockquote>
 <p><strong>getLabelSpanXL</strong>(): <code>number</code></p>
 </blockquote>
-<h4>Returns</h4>
-<p><code>number</code></p>
-<p>Value of property <code>labelSpanXL</code></p>
-<h4>Since</h4>
-<p>1.34.0</p>
 <p>Gets current value of property #getLabelSpanXL labelSpanXL.</p>
 <p>Default span for labels in extra large size.</p>
 <p><strong>Note:</strong> If the default value -1 is not overwritten with the meaningful one then the <code>labelSpanL</code> value
 is used.</p>
 <p>Default value is <code>-1</code>.</p>
+<h4>Returns</h4>
+<p><code>number</code></p>
+<p>Value of property <code>labelSpanXL</code></p>
+<h4>Since</h4>
+<p>1.34.0</p>
 <hr>
 <h3>getSingleContainerFullSize()</h3>
 <blockquote>
 <p><strong>getSingleContainerFullSize</strong>(): <code>boolean</code></p>
 </blockquote>
-<h4>Returns</h4>
-<p><code>boolean</code></p>
-<p>Value of property <code>singleContainerFullSize</code></p>
-<h4>Since</h4>
-<p>1.34.0</p>
 <p>Gets current value of property #getSingleContainerFullSize singleContainerFullSize.</p>
 <p>If the sap.ui.layout.form.Form Form contains only one single sap.ui.layout.form.FormContainer FormContainer
 and this property is set, the sap.ui.layout.form.FormContainer FormContainer is displayed using
@@ -329,20 +324,16 @@ and <code>columnsM</code> are ignored.</p>
 <p>In all other cases the sap.ui.layout.form.FormContainer FormContainer is displayed in the size
 of one column.</p>
 <p>Default value is <code>true</code>.</p>
+<h4>Returns</h4>
+<p><code>boolean</code></p>
+<p>Value of property <code>singleContainerFullSize</code></p>
+<h4>Since</h4>
+<p>1.34.0</p>
 <hr>
 <h3>setAdjustLabelSpan()</h3>
 <blockquote>
 <p><strong>setAdjustLabelSpan</strong>(<code>bAdjustLabelSpan?</code>): <code>this</code></p>
 </blockquote>
-<h4>Parameters</h4>
-<h5>bAdjustLabelSpan?</h5>
-<p><code>boolean</code></p>
-<p>New value for property <code>adjustLabelSpan</code></p>
-<h4>Returns</h4>
-<p><code>this</code></p>
-<p>Reference to <code>this</code> in order to allow method chaining</p>
-<h4>Since</h4>
-<p>1.34.0</p>
 <p>Sets a new value for property #getAdjustLabelSpan adjustLabelSpan.</p>
 <p>If set, the usage of <code>labelSpanL</code> and <code>labelSpanM</code> are dependent on the number of sap.ui.layout.form.FormContainer FormContainers
 in one row. If only one sap.ui.layout.form.FormContainer FormContainer is displayed in one row,
@@ -354,11 +345,24 @@ has its own sap.ui.layout.Grid Grid inside).</p>
 size. The number of sap.ui.layout.form.FormContainer FormContainers doesn&#39;t matter in this case.</p>
 <p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <p>Default value is <code>true</code>.</p>
+<h4>Parameters</h4>
+<h5>bAdjustLabelSpan?</h5>
+<p><code>boolean</code></p>
+<p>New value for property <code>adjustLabelSpan</code></p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<h4>Since</h4>
+<p>1.34.0</p>
 <hr>
 <h3>setBreakpointL()</h3>
 <blockquote>
 <p><strong>setBreakpointL</strong>(<code>iBreakpointL?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getBreakpointL breakpointL.</p>
+<p>Breakpoint (in pixel) between Medium size and Large size.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>1024</code>.</p>
 <h4>Parameters</h4>
 <h5>iBreakpointL?</h5>
 <p><code>number</code></p>
@@ -368,15 +372,15 @@ size. The number of sap.ui.layout.form.FormContainer FormContainers doesn&#39;t 
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.16.3</p>
-<p>Sets a new value for property #getBreakpointL breakpointL.</p>
-<p>Breakpoint (in pixel) between Medium size and Large size.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>1024</code>.</p>
 <hr>
 <h3>setBreakpointM()</h3>
 <blockquote>
 <p><strong>setBreakpointM</strong>(<code>iBreakpointM?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getBreakpointM breakpointM.</p>
+<p>Breakpoint (in pixel) between Small size and Medium size.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>600</code>.</p>
 <h4>Parameters</h4>
 <h5>iBreakpointM?</h5>
 <p><code>number</code></p>
@@ -386,15 +390,15 @@ size. The number of sap.ui.layout.form.FormContainer FormContainers doesn&#39;t 
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.16.3</p>
-<p>Sets a new value for property #getBreakpointM breakpointM.</p>
-<p>Breakpoint (in pixel) between Small size and Medium size.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>600</code>.</p>
 <hr>
 <h3>setBreakpointXL()</h3>
 <blockquote>
 <p><strong>setBreakpointXL</strong>(<code>iBreakpointXL?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getBreakpointXL breakpointXL.</p>
+<p>Breakpoint (in pixel) between large size and extra large (XL) size.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>1440</code>.</p>
 <h4>Parameters</h4>
 <h5>iBreakpointXL?</h5>
 <p><code>number</code></p>
@@ -404,15 +408,16 @@ size. The number of sap.ui.layout.form.FormContainer FormContainers doesn&#39;t 
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.34.0</p>
-<p>Sets a new value for property #getBreakpointXL breakpointXL.</p>
-<p>Breakpoint (in pixel) between large size and extra large (XL) size.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>1440</code>.</p>
 <hr>
 <h3>setColumnsL()</h3>
 <blockquote>
 <p><strong>setColumnsL</strong>(<code>iColumnsL?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getColumnsL columnsL.</p>
+<p>Number of columns for large size.</p>
+<p>The number of columns for large size must not be smaller than the number of columns for medium size.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>2</code>.</p>
 <h4>Parameters</h4>
 <h5>iColumnsL?</h5>
 <p><code>number</code></p>
@@ -422,16 +427,15 @@ size. The number of sap.ui.layout.form.FormContainer FormContainers doesn&#39;t 
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.16.3</p>
-<p>Sets a new value for property #getColumnsL columnsL.</p>
-<p>Number of columns for large size.</p>
-<p>The number of columns for large size must not be smaller than the number of columns for medium size.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>2</code>.</p>
 <hr>
 <h3>setColumnsM()</h3>
 <blockquote>
 <p><strong>setColumnsM</strong>(<code>iColumnsM?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getColumnsM columnsM.</p>
+<p>Number of columns for medium size.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>1</code>.</p>
 <h4>Parameters</h4>
 <h5>iColumnsM?</h5>
 <p><code>number</code></p>
@@ -441,15 +445,18 @@ size. The number of sap.ui.layout.form.FormContainer FormContainers doesn&#39;t 
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.16.3</p>
-<p>Sets a new value for property #getColumnsM columnsM.</p>
-<p>Number of columns for medium size.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>1</code>.</p>
 <hr>
 <h3>setColumnsXL()</h3>
 <blockquote>
 <p><strong>setColumnsXL</strong>(<code>iColumnsXL?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getColumnsXL columnsXL.</p>
+<p>Number of columns for extra large size.</p>
+<p>The number of columns for extra large size must not be smaller than the number of columns for large size.
+<strong>Note:</strong> If the default value -1 is not overwritten with the meaningful one then the <code>columnsL</code> value
+is used (from the backward compatibility reasons).</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>-1</code>.</p>
 <h4>Parameters</h4>
 <h5>iColumnsXL?</h5>
 <p><code>number</code></p>
@@ -459,18 +466,15 @@ size. The number of sap.ui.layout.form.FormContainer FormContainers doesn&#39;t 
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.34.0</p>
-<p>Sets a new value for property #getColumnsXL columnsXL.</p>
-<p>Number of columns for extra large size.</p>
-<p>The number of columns for extra large size must not be smaller than the number of columns for large size.
-<strong>Note:</strong> If the default value -1 is not overwritten with the meaningful one then the <code>columnsL</code> value
-is used (from the backward compatibility reasons).</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>-1</code>.</p>
 <hr>
 <h3>setEmptySpanL()</h3>
 <blockquote>
 <p><strong>setEmptySpanL</strong>(<code>iEmptySpanL?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getEmptySpanL emptySpanL.</p>
+<p>Number of grid cells that are empty at the end of each line on large size.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>0</code>.</p>
 <h4>Parameters</h4>
 <h5>iEmptySpanL?</h5>
 <p><code>number</code></p>
@@ -480,15 +484,15 @@ is used (from the backward compatibility reasons).</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.16.3</p>
-<p>Sets a new value for property #getEmptySpanL emptySpanL.</p>
-<p>Number of grid cells that are empty at the end of each line on large size.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>0</code>.</p>
 <hr>
 <h3>setEmptySpanM()</h3>
 <blockquote>
 <p><strong>setEmptySpanM</strong>(<code>iEmptySpanM?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getEmptySpanM emptySpanM.</p>
+<p>Number of grid cells that are empty at the end of each line on medium size.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>0</code>.</p>
 <h4>Parameters</h4>
 <h5>iEmptySpanM?</h5>
 <p><code>number</code></p>
@@ -498,15 +502,15 @@ is used (from the backward compatibility reasons).</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.16.3</p>
-<p>Sets a new value for property #getEmptySpanM emptySpanM.</p>
-<p>Number of grid cells that are empty at the end of each line on medium size.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>0</code>.</p>
 <hr>
 <h3>setEmptySpanS()</h3>
 <blockquote>
 <p><strong>setEmptySpanS</strong>(<code>iEmptySpanS?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getEmptySpanS emptySpanS.</p>
+<p>Number of grid cells that are empty at the end of each line on small size.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>0</code>.</p>
 <h4>Parameters</h4>
 <h5>iEmptySpanS?</h5>
 <p><code>number</code></p>
@@ -516,15 +520,17 @@ is used (from the backward compatibility reasons).</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.16.3</p>
-<p>Sets a new value for property #getEmptySpanS emptySpanS.</p>
-<p>Number of grid cells that are empty at the end of each line on small size.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>0</code>.</p>
 <hr>
 <h3>setEmptySpanXL()</h3>
 <blockquote>
 <p><strong>setEmptySpanXL</strong>(<code>iEmptySpanXL?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getEmptySpanXL emptySpanXL.</p>
+<p>Number of grid cells that are empty at the end of each line on extra large size.</p>
+<p><strong>Note:</strong> If the default value -1 is not overwritten with the meaningful one then the <code>emptySpanL</code> value
+is used.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>-1</code>.</p>
 <h4>Parameters</h4>
 <h5>iEmptySpanXL?</h5>
 <p><code>number</code></p>
@@ -534,17 +540,18 @@ is used (from the backward compatibility reasons).</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.34.0</p>
-<p>Sets a new value for property #getEmptySpanXL emptySpanXL.</p>
-<p>Number of grid cells that are empty at the end of each line on extra large size.</p>
-<p><strong>Note:</strong> If the default value -1 is not overwritten with the meaningful one then the <code>emptySpanL</code> value
-is used.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>-1</code>.</p>
 <hr>
 <h3>setLabelSpanL()</h3>
 <blockquote>
 <p><strong>setLabelSpanL</strong>(<code>iLabelSpanL?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getLabelSpanL labelSpanL.</p>
+<p>Default span for labels in large size.</p>
+<p><strong>Note:</strong> If <code>adjustLabelSpan</code> is set, this property is only used if more than 1 sap.ui.layout.form.FormContainer FormContainer
+is in one line. If only 1 sap.ui.layout.form.FormContainer FormContainer is in the line, then
+the <code>labelSpanM</code> value is used.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>4</code>.</p>
 <h4>Parameters</h4>
 <h5>iLabelSpanL?</h5>
 <p><code>number</code></p>
@@ -554,18 +561,18 @@ is used.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.16.3</p>
-<p>Sets a new value for property #getLabelSpanL labelSpanL.</p>
-<p>Default span for labels in large size.</p>
-<p><strong>Note:</strong> If <code>adjustLabelSpan</code> is set, this property is only used if more than 1 sap.ui.layout.form.FormContainer FormContainer
-is in one line. If only 1 sap.ui.layout.form.FormContainer FormContainer is in the line, then
-the <code>labelSpanM</code> value is used.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>4</code>.</p>
 <hr>
 <h3>setLabelSpanM()</h3>
 <blockquote>
 <p><strong>setLabelSpanM</strong>(<code>iLabelSpanM?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getLabelSpanM labelSpanM.</p>
+<p>Default span for labels in medium size.</p>
+<p><strong>Note:</strong> If <code>adjustLabelSpan</code> is set this property is used for full-size sap.ui.layout.form.FormContainer FormContainers.
+If more than one sap.ui.layout.form.FormContainer FormContainer is in one line, <code>labelSpanL</code>
+is used.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>2</code>.</p>
 <h4>Parameters</h4>
 <h5>iLabelSpanM?</h5>
 <p><code>number</code></p>
@@ -575,18 +582,15 @@ the <code>labelSpanM</code> value is used.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.16.3</p>
-<p>Sets a new value for property #getLabelSpanM labelSpanM.</p>
-<p>Default span for labels in medium size.</p>
-<p><strong>Note:</strong> If <code>adjustLabelSpan</code> is set this property is used for full-size sap.ui.layout.form.FormContainer FormContainers.
-If more than one sap.ui.layout.form.FormContainer FormContainer is in one line, <code>labelSpanL</code>
-is used.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>2</code>.</p>
 <hr>
 <h3>setLabelSpanS()</h3>
 <blockquote>
 <p><strong>setLabelSpanS</strong>(<code>iLabelSpanS?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getLabelSpanS labelSpanS.</p>
+<p>Default span for labels in small size.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>12</code>.</p>
 <h4>Parameters</h4>
 <h5>iLabelSpanS?</h5>
 <p><code>number</code></p>
@@ -596,15 +600,17 @@ is used.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.16.3</p>
-<p>Sets a new value for property #getLabelSpanS labelSpanS.</p>
-<p>Default span for labels in small size.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>12</code>.</p>
 <hr>
 <h3>setLabelSpanXL()</h3>
 <blockquote>
 <p><strong>setLabelSpanXL</strong>(<code>iLabelSpanXL?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getLabelSpanXL labelSpanXL.</p>
+<p>Default span for labels in extra large size.</p>
+<p><strong>Note:</strong> If the default value -1 is not overwritten with the meaningful one then the <code>labelSpanL</code> value
+is used.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>-1</code>.</p>
 <h4>Parameters</h4>
 <h5>iLabelSpanXL?</h5>
 <p><code>number</code></p>
@@ -614,26 +620,11 @@ is used.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.34.0</p>
-<p>Sets a new value for property #getLabelSpanXL labelSpanXL.</p>
-<p>Default span for labels in extra large size.</p>
-<p><strong>Note:</strong> If the default value -1 is not overwritten with the meaningful one then the <code>labelSpanL</code> value
-is used.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>-1</code>.</p>
 <hr>
 <h3>setSingleContainerFullSize()</h3>
 <blockquote>
 <p><strong>setSingleContainerFullSize</strong>(<code>bSingleContainerFullSize?</code>): <code>this</code></p>
 </blockquote>
-<h4>Parameters</h4>
-<h5>bSingleContainerFullSize?</h5>
-<p><code>boolean</code></p>
-<p>New value for property <code>singleContainerFullSize</code></p>
-<h4>Returns</h4>
-<p><code>this</code></p>
-<p>Reference to <code>this</code> in order to allow method chaining</p>
-<h4>Since</h4>
-<p>1.34.0</p>
 <p>Sets a new value for property #getSingleContainerFullSize singleContainerFullSize.</p>
 <p>If the sap.ui.layout.form.Form Form contains only one single sap.ui.layout.form.FormContainer FormContainer
 and this property is set, the sap.ui.layout.form.FormContainer FormContainer is displayed using
@@ -643,6 +634,15 @@ and <code>columnsM</code> are ignored.</p>
 of one column.</p>
 <p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <p>Default value is <code>true</code>.</p>
+<h4>Parameters</h4>
+<h5>bSingleContainerFullSize?</h5>
+<p><code>boolean</code></p>
+<p>New value for property <code>singleContainerFullSize</code></p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<h4>Since</h4>
+<p>1.34.0</p>
 <hr>
 <h3>extend()</h3>
 <blockquote>
@@ -683,6 +683,6 @@ used by this class</p>
 <p><a href="../../FormLayout/classes/FormLayout.html"><code>FormLayout</code></a>.<a href="../../FormLayout/classes/FormLayout.html#getmetadata-1"><code>getMetadata</code></a></p>
 <hr>
 
-<footer>Generated from <code>@openui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@openui5/types@1.120.46</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Class: GridContainer — OpenUI5 TypeScript API</title>
-<meta name="description" content="Class: GridContainer — OpenUI5 TypeScript API Reference (1.120.0)">
+<meta name="description" content="Class: GridContainer — OpenUI5 TypeScript API Reference (1.120.46)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/openui5/1.120/sap.f/sap/f/GridContainer/classes/GridContainer.html">
 <meta property="og:title" content="Class: GridContainer — OpenUI5 TypeScript API">
-<meta property="og:description" content="Class: GridContainer — OpenUI5 TypeScript API Reference (1.120.0)">
+<meta property="og:description" content="Class: GridContainer — OpenUI5 TypeScript API Reference (1.120.46)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/openui5/1.120/sap.f/sap/f/GridContainer/classes/GridContainer.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,13 +33,11 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../index.html">OpenUI5 API</a> › <a href="../../../../../sap.f/README.html">sap.f</a> › sap › f › <a href="../../../../../sap.f/sap/f/GridContainer/README.html">GridContainer</a> › classes</nav>
-<p><a href="../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.0)</strong></a></p>
+<p><a href="../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.46)</strong></a></p>
 <hr>
-<p><a href="../../../../../README.html">OpenUI5 TypeScript API (1.120.0)</a> / <a href="../../../../README.html">sap.f</a> / <a href="../README.html">sap/f/GridContainer</a> / GridContainer</p>
+<p><a href="../../../../../README.html">OpenUI5 TypeScript API (1.120.46)</a> / <a href="../../../../README.html">sap.f</a> / <a href="../README.html">sap/f/GridContainer</a> / GridContainer</p>
 <h1>Class: GridContainer</h1>
 <pre class="sig"><span class="kw">import</span> GridContainer <span class="kw">from</span> <span class="str">"sap/f/GridContainer"</span>;</pre>
-<h2>Since</h2>
-<p>1.65</p>
 <p>A layout container control used for aligning items with various sizes in a simple grid.</p>
 <p>Overview:</p>
 <p>The control is used to align tiles, cards and other controls in configuration, such as a home page or
@@ -99,6 +97,8 @@ different sizes. When the user presses an arrow key in a direction outward of th
 <code>borderReached</code> event will be fired. The implementation of the <code>borderReached</code> event allows the application
 developer to control where the focus goes, and depending on the surrounding layout pass the focus to
 a specific place in a neighboring <code>GridContainer</code> using the method #focusItemByDirection.</p>
+<h2>Since</h2>
+<p>1.65</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></li>
@@ -385,9 +385,9 @@ otherwise it will be bound to this <code>sap.f.GridContainer</code> itself.</p>
 <p><strong>destroyLayoutXS</strong>(): <code>this</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
-<p>(since 1.71) - Disclaimer: this property is in a beta state - incompatible API changes
-may be done before its official public release. Use at your own discretion.</p>
 <p>Destroys the layoutXS in the aggregation #getLayoutXS layoutXS.</p>
+<p> (since 1.71) - Disclaimer: this property is in a beta state - incompatible API changes
+may be done before its official public release. Use at your own discretion.</p>
 <h4>Returns</h4>
 <p><code>this</code></p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
@@ -449,6 +449,7 @@ may be done before its official public release. Use at your own discretion.</p>
 <blockquote>
 <p><strong>fireBorderReached</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
+<p>Fires event #event:borderReached borderReached to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/GridContainer$BorderReachedEventParameters.html"><code>GridContainer$BorderReachedEventParameters</code></a></p>
@@ -458,12 +459,12 @@ may be done before its official public release. Use at your own discretion.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Fires event #event:borderReached borderReached to attached listeners.</p>
 <hr>
 <h3>fireColumnsChange()</h3>
 <blockquote>
 <p><strong>fireColumnsChange</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
+<p>Fires event #event:columnsChange columnsChange to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/GridContainer$ColumnsChangeEventParameters.html"><code>GridContainer$ColumnsChangeEventParameters</code></a></p>
@@ -473,12 +474,12 @@ may be done before its official public release. Use at your own discretion.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Fires event #event:columnsChange columnsChange to attached listeners.</p>
 <hr>
 <h3>fireLayoutChange()</h3>
 <blockquote>
 <p><strong>fireLayoutChange</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
+<p>Fires event #event:layoutChange layoutChange to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/GridContainer$LayoutChangeEventParameters.html"><code>GridContainer$LayoutChangeEventParameters</code></a></p>
@@ -488,16 +489,15 @@ may be done before its official public release. Use at your own discretion.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Fires event #event:layoutChange layoutChange to attached listeners.</p>
 <hr>
 <h3>focusItem()</h3>
 <blockquote>
 <p><strong>focusItem</strong>(<code>iIndex</code>): <code>void</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
-<p>(since 1.81) - Behavior might change.</p>
 <p>Focuses the item on the given index. Should be called after successful drop operation.</p>
 <p>**Note:**Should not be called before the <code>GridContainer</code> has been rendered.</p>
+<p> (since 1.81) - Behavior might change.</p>
 <h4>Parameters</h4>
 <h5>iIndex</h5>
 <p><code>number</code></p>
@@ -510,7 +510,6 @@ may be done before its official public release. Use at your own discretion.</p>
 <p><strong>focusItemByDirection</strong>(<code>sDirection</code>, <code>iRow</code>, <code>iColumn</code>): <code>void</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
-<p>(since 1.85) - Behavior might change.</p>
 <p>Focuses an item in the given direction - up, down, left or right, from the starting position specified
 by row and column.</p>
 <p>If the direction is up or down, the method focuses the nearest item in the same column, located in the
@@ -518,6 +517,7 @@ specified direction.</p>
 <p>If the direction is left or right, the method focuses the nearest item at the same row, in the specified
 direction.</p>
 <p>**Note:**Should be called after the rendering of <code>GridContainer</code> is ready.</p>
+<p> (since 1.85) - Behavior might change.</p>
 <h4>Parameters</h4>
 <h5>sDirection</h5>
 <p><code>&quot;Down&quot;</code> | <code>&quot;Up&quot;</code> | <a href="../../library/enumerations/NavigationDirection.html"><code>NavigationDirection</code></a> | <code>&quot;Left&quot;</code> | <code>&quot;Right&quot;</code></p>
@@ -545,13 +545,13 @@ direction.</p>
 <p><strong>getAllowDenseFill</strong>(): <code>boolean</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
-<p>(since 1.66) - Disclaimer: this property is in a beta state - incompatible API changes
-may be done before its official public release. Use at your own discretion.</p>
 <p>Gets current value of property #getAllowDenseFill allowDenseFill.</p>
 <p>Increases the density when arranging the items. Smaller items will take up all of the available space,
 ignoring their order.</p>
 <p><strong>Note:</strong> The order of the items is ignored. An item which is normally at the bottom, can appear on top.</p>
 <p>Default value is <code>false</code>.</p>
+<p> (since 1.66) - Disclaimer: this property is in a beta state - incompatible API changes
+may be done before its official public release. Use at your own discretion.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>Value of property <code>allowDenseFill</code></p>
@@ -589,14 +589,14 @@ the <code>GridContainer</code>, instead of the device screen size (media Query).
 <p><strong>getInlineBlockLayout</strong>(): <code>boolean</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
-<p>(since 1.66) - Disclaimer: this property is in a beta state - incompatible API changes
-may be done before its official public release. Use at your own discretion.</p>
 <p>Gets current value of property #getInlineBlockLayout inlineBlockLayout.</p>
 <p>Makes the grid items act like an inline-block elements. They will be arranged in rows with height equal
 to the highest item in the row.</p>
 <p><strong>Note:</strong> If set to <code>true</code> the properties <code>rowSize</code> for grid layout, and <code>minRows</code> and <code>rows</code> per item
 will be ignored.</p>
 <p>Default value is <code>false</code>.</p>
+<p> (since 1.66) - Disclaimer: this property is in a beta state - incompatible API changes
+may be done before its official public release. Use at your own discretion.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>Value of property <code>inlineBlockLayout</code></p>
@@ -664,10 +664,10 @@ in only a single aggregation.</p>
 <p><strong>getLayoutXS</strong>(): <a href="../../GridContainerSettings/classes/GridContainerSettings.html"><code>GridContainerSettings</code></a></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
-<p>(since 1.71) - Disclaimer: this property is in a beta state - incompatible API changes
-may be done before its official public release. Use at your own discretion.</p>
 <p>Gets content of aggregation #getLayoutXS layoutXS.</p>
 <p>The sap.f.GridContainerSettings applied for size &quot;XS&quot;. Range: up to 374px.</p>
+<p> (since 1.71) - Disclaimer: this property is in a beta state - incompatible API changes
+may be done before its official public release. Use at your own discretion.</p>
 <h4>Returns</h4>
 <p><a href="../../GridContainerSettings/classes/GridContainerSettings.html"><code>GridContainerSettings</code></a></p>
 <hr>
@@ -676,12 +676,12 @@ may be done before its official public release. Use at your own discretion.</p>
 <p><strong>getMinHeight</strong>(): <code>string</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
-<p>(since 1.81) - Disclaimer: this property is in a beta state - incompatible API changes
-may be done before its official public release.</p>
 <p>Gets current value of property #getMinHeight minHeight.</p>
 <p>Defines the minimum height of the grid.</p>
 <p>Allows an empty grid to be available as a drop target.</p>
 <p>Default value is <code>&quot;2rem&quot;</code>.</p>
+<p> (since 1.81) - Disclaimer: this property is in a beta state - incompatible API changes
+may be done before its official public release.</p>
 <h4>Returns</h4>
 <p><code>string</code></p>
 <p>Value of property <code>minHeight</code></p>
@@ -813,14 +813,14 @@ the last position.</p>
 <p><strong>setAllowDenseFill</strong>(<code>bAllowDenseFill?</code>): <code>this</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
-<p>(since 1.66) - Disclaimer: this property is in a beta state - incompatible API changes
-may be done before its official public release. Use at your own discretion.</p>
 <p>Sets a new value for property #getAllowDenseFill allowDenseFill.</p>
 <p>Increases the density when arranging the items. Smaller items will take up all of the available space,
 ignoring their order.</p>
 <p><strong>Note:</strong> The order of the items is ignored. An item which is normally at the bottom, can appear on top.</p>
 <p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <p>Default value is <code>false</code>.</p>
+<p> (since 1.66) - Disclaimer: this property is in a beta state - incompatible API changes
+may be done before its official public release. Use at your own discretion.</p>
 <h4>Parameters</h4>
 <h5>bAllowDenseFill?</h5>
 <p><code>boolean</code></p>
@@ -851,8 +851,6 @@ the <code>GridContainer</code>, instead of the device screen size (media Query).
 <p><strong>setInlineBlockLayout</strong>(<code>bInlineBlockLayout?</code>): <code>this</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
-<p>(since 1.66) - Disclaimer: this property is in a beta state - incompatible API changes
-may be done before its official public release. Use at your own discretion.</p>
 <p>Sets a new value for property #getInlineBlockLayout inlineBlockLayout.</p>
 <p>Makes the grid items act like an inline-block elements. They will be arranged in rows with height equal
 to the highest item in the row.</p>
@@ -860,6 +858,8 @@ to the highest item in the row.</p>
 will be ignored.</p>
 <p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <p>Default value is <code>false</code>.</p>
+<p> (since 1.66) - Disclaimer: this property is in a beta state - incompatible API changes
+may be done before its official public release. Use at your own discretion.</p>
 <h4>Parameters</h4>
 <h5>bInlineBlockLayout?</h5>
 <p><code>boolean</code></p>
@@ -938,9 +938,9 @@ will be ignored.</p>
 <p><strong>setLayoutXS</strong>(<code>oLayoutXS</code>): <code>this</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
-<p>(since 1.71) - Disclaimer: this property is in a beta state - incompatible API changes
-may be done before its official public release. Use at your own discretion.</p>
 <p>Sets the aggregated #getLayoutXS layoutXS.</p>
+<p> (since 1.71) - Disclaimer: this property is in a beta state - incompatible API changes
+may be done before its official public release. Use at your own discretion.</p>
 <h4>Parameters</h4>
 <h5>oLayoutXS</h5>
 <p><a href="../../GridContainerSettings/classes/GridContainerSettings.html"><code>GridContainerSettings</code></a></p>
@@ -954,13 +954,13 @@ may be done before its official public release. Use at your own discretion.</p>
 <p><strong>setMinHeight</strong>(<code>sMinHeight?</code>): <code>this</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
-<p>(since 1.81) - Disclaimer: this property is in a beta state - incompatible API changes
-may be done before its official public release.</p>
 <p>Sets a new value for property #getMinHeight minHeight.</p>
 <p>Defines the minimum height of the grid.</p>
 <p>Allows an empty grid to be available as a drop target.</p>
 <p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <p>Default value is <code>&quot;2rem&quot;</code>.</p>
+<p> (since 1.81) - Disclaimer: this property is in a beta state - incompatible API changes
+may be done before its official public release.</p>
 <h4>Parameters</h4>
 <h5>sMinHeight?</h5>
 <p><code>string</code></p>
@@ -1041,6 +1041,6 @@ used by this class</p>
 <p><a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a>.<a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html#getmetadata-1"><code>getMetadata</code></a></p>
 <hr>
 
-<footer>Generated from <code>@openui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@openui5/types@1.120.46</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

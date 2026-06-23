@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Class: ItemBase — OpenUI5 TypeScript API</title>
-<meta name="description" content="Class: ItemBase — OpenUI5 TypeScript API Reference (1.120.0)">
+<meta name="description" content="Class: ItemBase — OpenUI5 TypeScript API Reference (1.120.46)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/openui5/1.120/sap.m/sap/m/table/columnmenu/ItemBase/classes/ItemBase.html">
 <meta property="og:title" content="Class: ItemBase — OpenUI5 TypeScript API">
-<meta property="og:description" content="Class: ItemBase — OpenUI5 TypeScript API Reference (1.120.0)">
+<meta property="og:description" content="Class: ItemBase — OpenUI5 TypeScript API Reference (1.120.46)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/openui5/1.120/sap.m/sap/m/table/columnmenu/ItemBase/classes/ItemBase.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,15 +33,15 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../../index.html">OpenUI5 API</a> › <a href="../../../../../../../sap.m/README.html">sap.m</a> › sap › m › table › columnmenu › <a href="../../../../../../../sap.m/sap/m/table/columnmenu/ItemBase/README.html">ItemBase</a> › classes</nav>
-<p><a href="../../../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.0)</strong></a></p>
+<p><a href="../../../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.46)</strong></a></p>
 <hr>
-<p><a href="../../../../../../../README.html">OpenUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../../README.html">sap.m</a> / <a href="../README.html">sap/m/table/columnmenu/ItemBase</a> / ItemBase</p>
+<p><a href="../../../../../../../README.html">OpenUI5 TypeScript API (1.120.46)</a> / <a href="../../../../../../README.html">sap.m</a> / <a href="../README.html">sap/m/table/columnmenu/ItemBase</a> / ItemBase</p>
 <h1>Class: ItemBase</h1>
 <pre class="sig"><span class="kw">import</span> ItemBase <span class="kw">from</span> <span class="str">"sap/m/table/columnmenu/ItemBase"</span>;</pre>
-<h2>Since</h2>
-<p>1.110</p>
 <p>The <code>ItemBase</code> class is used as a base class for menu items for the <code>sap.m.table.columnmenu.Menu</code>. This
 faceless class can be used to specify control- and application-specific menu items.</p>
+<h2>Since</h2>
+<p>1.110</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../Entry/classes/Entry.html"><code>Entry</code></a></li>
@@ -96,6 +96,7 @@ can be used.</p>
 <blockquote>
 <p><strong>changeButtonSettings</strong>(<code>oButtonSettings</code>): <code>void</code></p>
 </blockquote>
+<p>Changes the button settings of an item.</p>
 <h4>Parameters</h4>
 <h5>oButtonSettings</h5>
 <p><code>object</code></p>
@@ -104,47 +105,47 @@ can be used.</p>
 <p><code>void</code></p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Changes the button settings of an item.</p>
 <hr>
 <h3>getButtonSettings()</h3>
 <blockquote>
 <p><strong>getButtonSettings</strong>(): <code>object</code></p>
 </blockquote>
+<p>Retrieves the button settings.</p>
 <h4>Returns</h4>
 <p><code>object</code></p>
 <p>The button settings</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Retrieves the button settings.</p>
 <hr>
 <h3>getEffectiveItems()</h3>
 <blockquote>
 <p><strong>getEffectiveItems</strong>(): <code>ItemBase</code>[]</p>
 </blockquote>
+<p>Retrieves the effective items of the item.</p>
+<p>This method allows subclasses to return composition of other items, if they contain multiple items or
+controls.</p>
 <h4>Returns</h4>
 <p><code>ItemBase</code>[]</p>
 <p>A composition of effective items</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Retrieves the effective items of the item.</p>
-<p>This method allows subclasses to return composition of other items, if they contain multiple items or
-controls.</p>
 <hr>
 <h3>getIcon()</h3>
 <blockquote>
 <p><strong>getIcon</strong>(): <code>string</code></p>
 </blockquote>
+<p>Retrieves the icon specified for an item.</p>
 <h4>Returns</h4>
 <p><code>string</code></p>
 <p>The specified icon</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Retrieves the icon specified for an item.</p>
 <hr>
 <h3>onBack()</h3>
 <blockquote>
 <p><strong>onBack</strong>(<code>oEvent</code>): <code>void</code></p>
 </blockquote>
+<p>Event handler for a back event.</p>
 <h4>Parameters</h4>
 <h5>oEvent</h5>
 <p><code>Event</code></p>
@@ -153,12 +154,12 @@ controls.</p>
 <p><code>void</code></p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Event handler for a back event.</p>
 <hr>
 <h3>onCancel()</h3>
 <blockquote>
 <p><strong>onCancel</strong>(<code>oEvent</code>): <code>void</code></p>
 </blockquote>
+<p>Event handler for a cancel event.</p>
 <h4>Parameters</h4>
 <h5>oEvent</h5>
 <p><code>Event</code></p>
@@ -167,12 +168,12 @@ controls.</p>
 <p><code>void</code></p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Event handler for a cancel event.</p>
 <hr>
 <h3>onConfirm()</h3>
 <blockquote>
 <p><strong>onConfirm</strong>(<code>oEvent</code>): <code>void</code></p>
 </blockquote>
+<p>Event handler for a confirm event.</p>
 <h4>Parameters</h4>
 <h5>oEvent</h5>
 <p><code>Event</code></p>
@@ -181,12 +182,12 @@ controls.</p>
 <p><code>void</code></p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Event handler for a confirm event.</p>
 <hr>
 <h3>onPress()</h3>
 <blockquote>
 <p><strong>onPress</strong>(<code>oEvent</code>): <code>void</code></p>
 </blockquote>
+<p>Event handler for a press event.</p>
 <h4>Parameters</h4>
 <h5>oEvent</h5>
 <p><code>Event</code></p>
@@ -195,12 +196,12 @@ controls.</p>
 <p><code>void</code></p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Event handler for a press event.</p>
 <hr>
 <h3>onReset()</h3>
 <blockquote>
 <p><strong>onReset</strong>(<code>oEvent</code>): <code>void</code></p>
 </blockquote>
+<p>Event handler for a reset event.</p>
 <h4>Parameters</h4>
 <h5>oEvent</h5>
 <p><code>Event</code></p>
@@ -209,7 +210,6 @@ controls.</p>
 <p><code>void</code></p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Event handler for a reset event.</p>
 <hr>
 <h3>extend()</h3>
 <blockquote>
@@ -250,6 +250,6 @@ used by this class</p>
 <p><a href="../../Entry/classes/Entry.html"><code>Entry</code></a>.<a href="../../Entry/classes/Entry.html#getmetadata-1"><code>getMetadata</code></a></p>
 <hr>
 
-<footer>Generated from <code>@openui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@openui5/types@1.120.46</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

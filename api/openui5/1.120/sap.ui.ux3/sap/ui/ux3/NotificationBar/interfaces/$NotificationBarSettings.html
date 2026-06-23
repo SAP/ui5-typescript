@@ -2,12 +2,12 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>Interface: $NotificationBarSettings — OpenUI5 TypeScript API</title>
-<meta name="description" content="Interface: $NotificationBarSettings — OpenUI5 TypeScript API Reference (1.120.0)">
+<title>~~Interface: $NotificationBarSettings~~ — OpenUI5 TypeScript API</title>
+<meta name="description" content="~~Interface: $NotificationBarSettings~~ — OpenUI5 TypeScript API Reference (1.120.46)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/openui5/1.120/sap.ui.ux3/sap/ui/ux3/NotificationBar/interfaces/$NotificationBarSettings.html">
-<meta property="og:title" content="Interface: $NotificationBarSettings — OpenUI5 TypeScript API">
-<meta property="og:description" content="Interface: $NotificationBarSettings — OpenUI5 TypeScript API Reference (1.120.0)">
+<meta property="og:title" content="~~Interface: $NotificationBarSettings~~ — OpenUI5 TypeScript API">
+<meta property="og:description" content="~~Interface: $NotificationBarSettings~~ — OpenUI5 TypeScript API Reference (1.120.46)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/openui5/1.120/sap.ui.ux3/sap/ui/ux3/NotificationBar/interfaces/$NotificationBarSettings.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,25 +33,28 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../index.html">OpenUI5 API</a> › <a href="../../../../../../sap.ui.ux3/README.html">sap.ui.ux3</a> › sap › ui › ux3 › <a href="../../../../../../sap.ui.ux3/sap/ui/ux3/NotificationBar/README.html">NotificationBar</a> › interfaces</nav>
-<p><a href="../../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.0)</strong></a></p>
+<p><a href="../../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.46)</strong></a></p>
 <hr>
-<p><a href="../../../../../../README.html">OpenUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../README.html">sap.ui.ux3</a> / <a href="../README.html">sap/ui/ux3/NotificationBar</a> / $NotificationBarSettings</p>
-<h1>Interface: $NotificationBarSettings</h1>
+<p><a href="../../../../../../README.html">OpenUI5 TypeScript API (1.120.46)</a> / <a href="../../../../../README.html">sap.ui.ux3</a> / <a href="../README.html">sap/ui/ux3/NotificationBar</a> / $NotificationBarSettings</p>
+<h1><del>Interface: $NotificationBarSettings</del></h1>
 <pre class="sig"><span class="kw">import</span> { $NotificationBarSettings } <span class="kw">from</span> <span class="str">"sap/ui/ux3/NotificationBar"</span>;</pre>
+<p>Describes the settings that can be provided to the NotificationBar constructor.</p>
+<h2>Deprecated</h2>
+<p>(since 1.38) - Instead, use the <code>sap.m.MessagePopover</code> control.</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../../../../../sap.ui.core/sap/ui/core/Control/interfaces/$ControlSettings.html"><code>$ControlSettings</code></a></li>
 </ul>
 <h2>Properties</h2>
-<h3>alwaysShowToggler?</h3>
+<h3><del>alwaysShowToggler?</del></h3>
 <blockquote>
 <p><code>optional</code> <strong>alwaysShowToggler?</strong>: <code>boolean</code> | <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
+<p>This property defines if the toggler should be displayed the whole time when the NotificationBar is shown.</p>
 <h4>Since</h4>
 <p>1.24.5</p>
-<p>This property defines if the toggler should be displayed the whole time when the NotificationBar is shown.</p>
 <hr>
-<h3>display?</h3>
+<h3><del>display?</del></h3>
 <blockquote>
 <p><code>optional</code> <strong>display?</strong>: (<code>oEvent</code>) =&gt; <code>void</code></p>
 </blockquote>
@@ -63,22 +66,25 @@ to decide what to do.</p>
 <h4>Returns</h4>
 <p><code>void</code></p>
 <hr>
-<h3>messageNotifier?</h3>
+<h3><del>messageNotifier?</del></h3>
 <blockquote>
 <p><code>optional</code> <strong>messageNotifier?</strong>: <a href="../../../../../../sap.ui.core/sap/ui/core/Element/classes/UI5Element.html"><code>UI5Element</code></a></p>
 </blockquote>
 <p>Notifier that shows messages</p>
 <hr>
-<h3>notifiers?</h3>
+<h3><del>notifiers?</del></h3>
 <blockquote>
 <p><code>optional</code> <strong>notifiers?</strong>: <code>`{${string}}`</code> | <a href="../../../../../../sap.ui.core/sap/ui/core/Element/classes/UI5Element.html"><code>UI5Element</code></a> | <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/AggregationBindingInfo.html"><code>AggregationBindingInfo</code></a> | <a href="../../../../../../sap.ui.core/sap/ui/core/Element/classes/UI5Element.html"><code>UI5Element</code></a>[]</p>
 </blockquote>
 <p>Notifiers that monitor something within the application and display the corresponding notifications.</p>
 <hr>
-<h3>resize?</h3>
+<h3><del>resize?</del></h3>
 <blockquote>
 <p><code>optional</code> <strong>resize?</strong>: (<code>oEvent</code>) =&gt; <code>void</code></p>
 </blockquote>
+<p>This event is thrown when the bar was resized (to the different valid states: Min, Max, Default, None).
+The event itself can be used from SAPUI5-version 1.12.2 since there was a bug in the previous versions
+firing this event.</p>
 <h4>Parameters</h4>
 <h5>oEvent</h5>
 <p><a href="../type-aliases/NotificationBar$ResizeEvent.html"><code>NotificationBar$ResizeEvent</code></a></p>
@@ -86,22 +92,19 @@ to decide what to do.</p>
 <p><code>void</code></p>
 <h4>Since</h4>
 <p>1.12.2</p>
-<p>This event is thrown when the bar was resized (to the different valid states: Min, Max, Default, None).
-The event itself can be used from SAPUI5-version 1.12.2 since there was a bug in the previous versions
-firing this event.</p>
 <hr>
-<h3>resizeEnabled?</h3>
+<h3><del>resizeEnabled?</del></h3>
 <blockquote>
 <p><code>optional</code> <strong>resizeEnabled?</strong>: <code>boolean</code> | <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
 <p>This property enables the bar to be resized by the user.</p>
 <hr>
-<h3>visibleStatus?</h3>
+<h3><del>visibleStatus?</del></h3>
 <blockquote>
 <p><code>optional</code> <strong>visibleStatus?</strong>: <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code> | <code>&quot;None&quot;</code> | <code>&quot;Default&quot;</code> | <a href="../../library/enumerations/NotificationBarStatus.html"><code>NotificationBarStatus</code></a> | <code>&quot;Max&quot;</code> | <code>&quot;Min&quot;</code></p>
 </blockquote>
 <p>This property displays the bar corresponding to given status</p>
 
-<footer>Generated from <code>@openui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@openui5/types@1.120.46</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

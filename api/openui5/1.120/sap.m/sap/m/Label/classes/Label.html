@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Class: Label — OpenUI5 TypeScript API</title>
-<meta name="description" content="Class: Label — OpenUI5 TypeScript API Reference (1.120.0)">
+<meta name="description" content="Class: Label — OpenUI5 TypeScript API Reference (1.120.46)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/openui5/1.120/sap.m/sap/m/Label/classes/Label.html">
 <meta property="og:title" content="Class: Label — OpenUI5 TypeScript API">
-<meta property="og:description" content="Class: Label — OpenUI5 TypeScript API Reference (1.120.0)">
+<meta property="og:description" content="Class: Label — OpenUI5 TypeScript API Reference (1.120.46)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/openui5/1.120/sap.m/sap/m/Label/classes/Label.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,9 +33,9 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../index.html">OpenUI5 API</a> › <a href="../../../../../sap.m/README.html">sap.m</a> › sap › m › <a href="../../../../../sap.m/sap/m/Label/README.html">Label</a> › classes</nav>
-<p><a href="../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.0)</strong></a></p>
+<p><a href="../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.46)</strong></a></p>
 <hr>
-<p><a href="../../../../../README.html">OpenUI5 TypeScript API (1.120.0)</a> / <a href="../../../../README.html">sap.m</a> / <a href="../README.html">sap/m/Label</a> / Label</p>
+<p><a href="../../../../../README.html">OpenUI5 TypeScript API (1.120.46)</a> / <a href="../../../../README.html">sap.m</a> / <a href="../README.html">sap/m/Label</a> / Label</p>
 <h1>Class: Label</h1>
 <pre class="sig"><span class="kw">import</span> Label <span class="kw">from</span> <span class="str">"sap/m/Label"</span>;</pre>
 <p>Provides a textual label for other controls.</p>
@@ -141,14 +141,14 @@ See:
 <blockquote>
 <p><strong>getAccessibilityInfo</strong>(): <a href="../../../../../sap.ui.core/sap/ui/core/library/type-aliases/AccessibilityInfo.html"><code>AccessibilityInfo</code></a></p>
 </blockquote>
+<p>Provides the current accessibility state of the control.
+See:
+	sap.ui.core.Control#getAccessibilityInfo.</p>
 <h4>Returns</h4>
 <p><a href="../../../../../sap.ui.core/sap/ui/core/library/type-aliases/AccessibilityInfo.html"><code>AccessibilityInfo</code></a></p>
 <p>AccessibilityInfo of the <code>sap.m.Label</code></p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Provides the current accessibility state of the control.
-See:
-	sap.ui.core.Control#getAccessibilityInfo.</p>
 <h4>Overrides</h4>
 <p><a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a>.<a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html#getaccessibilityinfo"><code>getAccessibilityInfo</code></a></p>
 <hr>
@@ -167,15 +167,15 @@ See:
 <blockquote>
 <p><strong>getDisplayOnly</strong>(): <code>boolean</code></p>
 </blockquote>
+<p>Gets current value of property #getDisplayOnly displayOnly.</p>
+<p>Determines if the label is in displayOnly mode.</p>
+<p><strong>Note:</strong> This property should be used only in Form controls in preview mode.</p>
+<p>Default value is <code>false</code>.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>Value of property <code>displayOnly</code></p>
 <h4>Since</h4>
 <p>1.50.0</p>
-<p>Gets current value of property #getDisplayOnly displayOnly.</p>
-<p>Determines if the label is in displayOnly mode.</p>
-<p><strong>Note:</strong> This property should be used only in Form controls in preview mode.</p>
-<p>Default value is <code>false</code>.</p>
 <hr>
 <h3>getLabelFor()</h3>
 <blockquote>
@@ -211,17 +211,17 @@ is set to true and associated input field is empty an asterisk character is adde
 <blockquote>
 <p><strong>getShowColon</strong>(): <code>boolean</code></p>
 </blockquote>
-<h4>Returns</h4>
-<p><code>boolean</code></p>
-<p>Value of property <code>showColon</code></p>
-<h4>Since</h4>
-<p>1.98</p>
 <p>Gets current value of property #getShowColon showColon.</p>
 <p>Defines whether a colon (:) character is added to the label.</p>
 <p><strong>Note:</strong> By default when the <code>Label</code> is in the <code>sap.ui.layout.form.Form</code> and <code>sap.ui.layout.form.SimpleForm</code>
 controls the colon (:) character is displayed automatically regardless of the value of the <code>showColon</code>
 property.</p>
 <p>Default value is <code>false</code>.</p>
+<h4>Returns</h4>
+<p><code>boolean</code></p>
+<p>Value of property <code>showColon</code></p>
+<h4>Since</h4>
+<p>1.98</p>
 <hr>
 <h3>getText()</h3>
 <blockquote>
@@ -260,14 +260,14 @@ from its parent container.</p>
 <blockquote>
 <p><strong>getVAlign</strong>(): <code>&quot;Bottom&quot;</code> | <code>&quot;Top&quot;</code> | <code>&quot;Middle&quot;</code> | <code>&quot;Inherit&quot;</code> | <a href="../../../../../sap.ui.core/sap/ui/core/library/enumerations/VerticalAlign.html"><code>VerticalAlign</code></a></p>
 </blockquote>
+<p>Gets current value of property #getVAlign vAlign.</p>
+<p>Specifies the vertical alignment of the <code>Label</code> related to the tallest and lowest element on the line.</p>
+<p>Default value is <code>Inherit</code>.</p>
 <h4>Returns</h4>
 <p><code>&quot;Bottom&quot;</code> | <code>&quot;Top&quot;</code> | <code>&quot;Middle&quot;</code> | <code>&quot;Inherit&quot;</code> | <a href="../../../../../sap.ui.core/sap/ui/core/library/enumerations/VerticalAlign.html"><code>VerticalAlign</code></a></p>
 <p>Value of property <code>vAlign</code></p>
 <h4>Since</h4>
 <p>1.54</p>
-<p>Gets current value of property #getVAlign vAlign.</p>
-<p>Specifies the vertical alignment of the <code>Label</code> related to the tallest and lowest element on the line.</p>
-<p>Default value is <code>Inherit</code>.</p>
 <hr>
 <h3>getWidth()</h3>
 <blockquote>
@@ -284,29 +284,29 @@ from its parent container.</p>
 <blockquote>
 <p><strong>getWrapping</strong>(): <code>boolean</code></p>
 </blockquote>
+<p>Gets current value of property #getWrapping wrapping.</p>
+<p>Determines the wrapping of the text within the <code>Label</code>. If set to true the <code>Label</code> will wrap, when set
+to false the <code>Label</code> will be truncated and replaced with ellipsis which is the default behavior.</p>
+<p>Default value is <code>false</code>.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>Value of property <code>wrapping</code></p>
 <h4>Since</h4>
 <p>1.50</p>
-<p>Gets current value of property #getWrapping wrapping.</p>
-<p>Determines the wrapping of the text within the <code>Label</code>. If set to true the <code>Label</code> will wrap, when set
-to false the <code>Label</code> will be truncated and replaced with ellipsis which is the default behavior.</p>
-<p>Default value is <code>false</code>.</p>
 <hr>
 <h3>getWrappingType()</h3>
 <blockquote>
 <p><strong>getWrappingType</strong>(): <a href="../../library/enumerations/WrappingType.html"><code>WrappingType</code></a> | <code>&quot;Hyphenated&quot;</code> | <code>&quot;Normal&quot;</code></p>
 </blockquote>
+<p>Gets current value of property #getWrappingType wrappingType.</p>
+<p>Defines the type of text wrapping to be used (hyphenated or normal).</p>
+<p><strong>Note:</strong> This property takes effect only when the <code>wrapping</code> property is set to <code>true</code>.</p>
+<p>Default value is <code>Normal</code>.</p>
 <h4>Returns</h4>
 <p><a href="../../library/enumerations/WrappingType.html"><code>WrappingType</code></a> | <code>&quot;Hyphenated&quot;</code> | <code>&quot;Normal&quot;</code></p>
 <p>Value of property <code>wrappingType</code></p>
 <h4>Since</h4>
 <p>1.60</p>
-<p>Gets current value of property #getWrappingType wrappingType.</p>
-<p>Defines the type of text wrapping to be used (hyphenated or normal).</p>
-<p><strong>Note:</strong> This property takes effect only when the <code>wrapping</code> property is set to <code>true</code>.</p>
-<p>Default value is <code>Normal</code>.</p>
 <hr>
 <h3>setDesign()</h3>
 <blockquote>
@@ -328,6 +328,11 @@ to false the <code>Label</code> will be truncated and replaced with ellipsis whi
 <blockquote>
 <p><strong>setDisplayOnly</strong>(<code>bDisplayOnly?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getDisplayOnly displayOnly.</p>
+<p>Determines if the label is in displayOnly mode.</p>
+<p><strong>Note:</strong> This property should be used only in Form controls in preview mode.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>false</code>.</p>
 <h4>Parameters</h4>
 <h5>bDisplayOnly?</h5>
 <p><code>boolean</code></p>
@@ -337,11 +342,6 @@ to false the <code>Label</code> will be truncated and replaced with ellipsis whi
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.50.0</p>
-<p>Sets a new value for property #getDisplayOnly displayOnly.</p>
-<p>Determines if the label is in displayOnly mode.</p>
-<p><strong>Note:</strong> This property should be used only in Form controls in preview mode.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>false</code>.</p>
 <hr>
 <h3>setLabelFor()</h3>
 <blockquote>
@@ -378,6 +378,13 @@ is set to true and associated input field is empty an asterisk character is adde
 <blockquote>
 <p><strong>setShowColon</strong>(<code>bShowColon?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getShowColon showColon.</p>
+<p>Defines whether a colon (:) character is added to the label.</p>
+<p><strong>Note:</strong> By default when the <code>Label</code> is in the <code>sap.ui.layout.form.Form</code> and <code>sap.ui.layout.form.SimpleForm</code>
+controls the colon (:) character is displayed automatically regardless of the value of the <code>showColon</code>
+property.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>false</code>.</p>
 <h4>Parameters</h4>
 <h5>bShowColon?</h5>
 <p><code>boolean</code></p>
@@ -387,13 +394,6 @@ is set to true and associated input field is empty an asterisk character is adde
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.98</p>
-<p>Sets a new value for property #getShowColon showColon.</p>
-<p>Defines whether a colon (:) character is added to the label.</p>
-<p><strong>Note:</strong> By default when the <code>Label</code> is in the <code>sap.ui.layout.form.Form</code> and <code>sap.ui.layout.form.SimpleForm</code>
-controls the colon (:) character is displayed automatically regardless of the value of the <code>showColon</code>
-property.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>false</code>.</p>
 <hr>
 <h3>setText()</h3>
 <blockquote>
@@ -447,6 +447,10 @@ from its parent container.</p>
 <blockquote>
 <p><strong>setVAlign</strong>(<code>sVAlign?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getVAlign vAlign.</p>
+<p>Specifies the vertical alignment of the <code>Label</code> related to the tallest and lowest element on the line.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>Inherit</code>.</p>
 <h4>Parameters</h4>
 <h5>sVAlign?</h5>
 <p><code>&quot;Bottom&quot;</code> | <code>&quot;Top&quot;</code> | <code>&quot;Middle&quot;</code> | <code>&quot;Inherit&quot;</code> | <a href="../../../../../sap.ui.core/sap/ui/core/library/enumerations/VerticalAlign.html"><code>VerticalAlign</code></a></p>
@@ -456,10 +460,6 @@ from its parent container.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.54</p>
-<p>Sets a new value for property #getVAlign vAlign.</p>
-<p>Specifies the vertical alignment of the <code>Label</code> related to the tallest and lowest element on the line.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>Inherit</code>.</p>
 <hr>
 <h3>setWidth()</h3>
 <blockquote>
@@ -481,6 +481,11 @@ from its parent container.</p>
 <blockquote>
 <p><strong>setWrapping</strong>(<code>bWrapping?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getWrapping wrapping.</p>
+<p>Determines the wrapping of the text within the <code>Label</code>. If set to true the <code>Label</code> will wrap, when set
+to false the <code>Label</code> will be truncated and replaced with ellipsis which is the default behavior.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>false</code>.</p>
 <h4>Parameters</h4>
 <h5>bWrapping?</h5>
 <p><code>boolean</code></p>
@@ -490,16 +495,16 @@ from its parent container.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.50</p>
-<p>Sets a new value for property #getWrapping wrapping.</p>
-<p>Determines the wrapping of the text within the <code>Label</code>. If set to true the <code>Label</code> will wrap, when set
-to false the <code>Label</code> will be truncated and replaced with ellipsis which is the default behavior.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>false</code>.</p>
 <hr>
 <h3>setWrappingType()</h3>
 <blockquote>
 <p><strong>setWrappingType</strong>(<code>sWrappingType?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getWrappingType wrappingType.</p>
+<p>Defines the type of text wrapping to be used (hyphenated or normal).</p>
+<p><strong>Note:</strong> This property takes effect only when the <code>wrapping</code> property is set to <code>true</code>.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>Normal</code>.</p>
 <h4>Parameters</h4>
 <h5>sWrappingType?</h5>
 <p><a href="../../library/enumerations/WrappingType.html"><code>WrappingType</code></a> | <code>&quot;Hyphenated&quot;</code> | <code>&quot;Normal&quot;</code></p>
@@ -509,11 +514,6 @@ to false the <code>Label</code> will be truncated and replaced with ellipsis whi
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.60</p>
-<p>Sets a new value for property #getWrappingType wrappingType.</p>
-<p>Defines the type of text wrapping to be used (hyphenated or normal).</p>
-<p><strong>Note:</strong> This property takes effect only when the <code>wrapping</code> property is set to <code>true</code>.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>Normal</code>.</p>
 <hr>
 <h3>extend()</h3>
 <blockquote>
@@ -554,6 +554,6 @@ used by this class</p>
 <p><a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a>.<a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html#getmetadata-1"><code>getMetadata</code></a></p>
 <hr>
 
-<footer>Generated from <code>@openui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@openui5/types@1.120.46</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

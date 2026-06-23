@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Interface: $QuickViewPageSettings — OpenUI5 TypeScript API</title>
-<meta name="description" content="Interface: $QuickViewPageSettings — OpenUI5 TypeScript API Reference (1.120.0)">
+<meta name="description" content="Interface: $QuickViewPageSettings — OpenUI5 TypeScript API Reference (1.120.46)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/openui5/1.120/sap.m/sap/m/QuickViewPage/interfaces/$QuickViewPageSettings.html">
 <meta property="og:title" content="Interface: $QuickViewPageSettings — OpenUI5 TypeScript API">
-<meta property="og:description" content="Interface: $QuickViewPageSettings — OpenUI5 TypeScript API Reference (1.120.0)">
+<meta property="og:description" content="Interface: $QuickViewPageSettings — OpenUI5 TypeScript API Reference (1.120.46)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/openui5/1.120/sap.m/sap/m/QuickViewPage/interfaces/$QuickViewPageSettings.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,11 +33,12 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../index.html">OpenUI5 API</a> › <a href="../../../../../sap.m/README.html">sap.m</a> › sap › m › <a href="../../../../../sap.m/sap/m/QuickViewPage/README.html">QuickViewPage</a> › interfaces</nav>
-<p><a href="../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.0)</strong></a></p>
+<p><a href="../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.46)</strong></a></p>
 <hr>
-<p><a href="../../../../../README.html">OpenUI5 TypeScript API (1.120.0)</a> / <a href="../../../../README.html">sap.m</a> / <a href="../README.html">sap/m/QuickViewPage</a> / $QuickViewPageSettings</p>
+<p><a href="../../../../../README.html">OpenUI5 TypeScript API (1.120.46)</a> / <a href="../../../../README.html">sap.m</a> / <a href="../README.html">sap/m/QuickViewPage</a> / $QuickViewPageSettings</p>
 <h1>Interface: $QuickViewPageSettings</h1>
 <pre class="sig"><span class="kw">import</span> { $QuickViewPageSettings } <span class="kw">from</span> <span class="str">"sap/m/QuickViewPage"</span>;</pre>
+<p>Describes the settings that can be provided to the QuickViewPage constructor.</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../../../../sap.ui.core/sap/ui/core/Control/interfaces/$ControlSettings.html"><code>$ControlSettings</code></a></li>
@@ -47,20 +48,20 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 <blockquote>
 <p><code>optional</code> <strong>avatar?</strong>: <a href="../../Avatar/classes/Avatar.html"><code>Avatar</code></a></p>
 </blockquote>
-<h4>Since</h4>
-<p>1.92</p>
 <p>Specifies the avatar displayed under the header of the page. <strong>Note:</strong> To achieve the recommended design
 and behavior don&#39;t use the <code>displaySize</code>, <code>customDisplaySize</code>, <code>customFontSize</code> properties and <code>detailBox</code>
 aggregation of <code>sap.m.Avatar</code>.</p>
+<h4>Since</h4>
+<p>1.92</p>
 <hr>
 <h3><del>crossAppNavCallback?</del></h3>
 <blockquote>
 <p><code>optional</code> <strong>crossAppNavCallback?</strong>: <code>object</code> | <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<h4>Deprecated</h4>
-<p>(since 1.111) - Attach avatar <code>press</code> event instead.</p>
 <p>Specifies the application which provides target and param configuration for cross-application navigation
 from the &#39;page header&#39;.</p>
+<h4>Deprecated</h4>
+<p>(since 1.111) - Attach avatar <code>press</code> event instead.</p>
 <hr>
 <h3>description?</h3>
 <blockquote>
@@ -72,12 +73,12 @@ from the &#39;page header&#39;.</p>
 <blockquote>
 <p><code>optional</code> <strong>fallbackIcon?</strong>: <code>string</code> | <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a></p>
 </blockquote>
+<p>Defines the fallback icon displayed in case of wrong image src or loading issues.</p>
+<p><strong>Note:</strong> Accepted values are only icons from the SAP icon font.</p>
 <h4>Since</h4>
 <p>1.69</p>
 <h4>Deprecated</h4>
 <p>(since 1.92) - Use the <code>avatar</code> aggregation and use its property <code>fallbackIcon</code> instead.</p>
-<p>Defines the fallback icon displayed in case of wrong image src or loading issues.</p>
-<p><strong>Note:</strong> Accepted values are only icons from the SAP icon font.</p>
 <hr>
 <h3>groups?</h3>
 <blockquote>
@@ -95,9 +96,9 @@ from the &#39;page header&#39;.</p>
 <blockquote>
 <p><code>optional</code> <strong>icon?</strong>: <code>string</code> | <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a></p>
 </blockquote>
+<p>Specifies the URL of the icon or image displayed under the header of the page.</p>
 <h4>Deprecated</h4>
 <p>(since 1.92) - Use the <code>avatar</code> aggregation instead.</p>
-<p>Specifies the URL of the icon or image displayed under the header of the page.</p>
 <hr>
 <h3>pageId?</h3>
 <blockquote>
@@ -119,6 +120,6 @@ from the &#39;page header&#39;.</p>
 listeners this URL is not opened automatically.</p>
 <hr>
 
-<footer>Generated from <code>@openui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@openui5/types@1.120.46</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

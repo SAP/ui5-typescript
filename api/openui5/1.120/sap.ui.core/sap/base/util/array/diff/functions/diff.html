@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Function: diff() — OpenUI5 TypeScript API</title>
-<meta name="description" content="Function: diff() — OpenUI5 TypeScript API Reference (1.120.0)">
+<meta name="description" content="Function: diff() — OpenUI5 TypeScript API Reference (1.120.46)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/openui5/1.120/sap.ui.core/sap/base/util/array/diff/functions/diff.html">
 <meta property="og:title" content="Function: diff() — OpenUI5 TypeScript API">
-<meta property="og:description" content="Function: diff() — OpenUI5 TypeScript API Reference (1.120.0)">
+<meta property="og:description" content="Function: diff() — OpenUI5 TypeScript API Reference (1.120.46)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/openui5/1.120/sap.ui.core/sap/base/util/array/diff/functions/diff.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,13 +33,33 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../../index.html">OpenUI5 API</a> › <a href="../../../../../../../sap.ui.core/README.html">sap.ui.core</a> › sap › base › util › array › <a href="../../../../../../../sap.ui.core/sap/base/util/array/diff/README.html">diff</a> › functions</nav>
-<p><a href="../../../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.0)</strong></a></p>
+<p><a href="../../../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.46)</strong></a></p>
 <hr>
-<p><a href="../../../../../../../README.html">OpenUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../../README.html">sap.ui.core</a> / <a href="../README.html">sap/base/util/array/diff</a> / diff</p>
+<p><a href="../../../../../../../README.html">OpenUI5 TypeScript API (1.120.46)</a> / <a href="../../../../../../README.html">sap.ui.core</a> / <a href="../README.html">sap/base/util/array/diff</a> / diff</p>
 <h1>Function: diff()</h1>
 <blockquote>
 <p><strong>diff</strong>(<code>aOld</code>, <code>aNew</code>, <code>vConfigOrSymbol?</code>): <code>object</code>[]</p>
 </blockquote>
+<p>Calculates delta of old list and new list.</p>
+<p>This function implements the algorithm described in &quot;A Technique for Isolating Differences Between Files&quot;
+(Commun. ACM, April 1978, Volume 21, Number 4, Pages 264-268).</p>
+<p>Items in the arrays are not compared directly. Instead, a substitute symbol is determined for each item
+by applying the provided function <code>fnSymbol</code> to it. Items with strictly equal symbols are assumed to
+represent the same logical item:</p>
+<pre><code class="language-javascript">
+  fnSymbol(a) === fnSymbol(b)   &lt;=&gt;   a &#39;is logically the same as&#39; b
+</code></pre>
+<p> As an additional constraint, casting the symbols to string should not modify the comparison result.
+If this second constraint is not met, this method might report more diffs than necessary.</p>
+<p>If no symbol function is provided, a default implementation is used which applies <code>JSON.stringify</code> to
+non-string items and reduces the strings to a hash code. It is not guaranteed that this default implementation
+fulfills the above constraint in all cases, but it is a compromise between implementation effort, generality
+and performance. If items are known to be non-stringifiable (e.g. because they may contain cyclic references)
+or when hash collisions are likely, an own <code>symbol</code> function must be provided via the configuration object.</p>
+<p>The result of the diff is a sequence of update operations, each consisting of a <code>type</code> (either <code>&quot;insert&quot;</code>,
+<code>&quot;delete&quot;</code> or <code>&quot;replace&quot;</code> when enabled via configuration object) and an <code>index</code>. By applying the operations
+one after the other to the old array, it can be transformed to an array whose items are equal to the
+new array.</p>
 <h2>Parameters</h2>
 <h3>aOld</h3>
 <p><code>any</code>[]</p>
@@ -66,27 +86,7 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 <p>List of update operations</p>
 <h2>Since</h2>
 <p>1.58</p>
-<p>Calculates delta of old list and new list.</p>
-<p>This function implements the algorithm described in &quot;A Technique for Isolating Differences Between Files&quot;
-(Commun. ACM, April 1978, Volume 21, Number 4, Pages 264-268).</p>
-<p>Items in the arrays are not compared directly. Instead, a substitute symbol is determined for each item
-by applying the provided function <code>fnSymbol</code> to it. Items with strictly equal symbols are assumed to
-represent the same logical item:</p>
-<pre><code class="language-javascript">
-  fnSymbol(a) === fnSymbol(b)   &lt;=&gt;   a &#39;is logically the same as&#39; b
-</code></pre>
-<p> As an additional constraint, casting the symbols to string should not modify the comparison result.
-If this second constraint is not met, this method might report more diffs than necessary.</p>
-<p>If no symbol function is provided, a default implementation is used which applies <code>JSON.stringify</code> to
-non-string items and reduces the strings to a hash code. It is not guaranteed that this default implementation
-fulfills the above constraint in all cases, but it is a compromise between implementation effort, generality
-and performance. If items are known to be non-stringifiable (e.g. because they may contain cyclic references)
-or when hash collisions are likely, an own <code>symbol</code> function must be provided via the configuration object.</p>
-<p>The result of the diff is a sequence of update operations, each consisting of a <code>type</code> (either <code>&quot;insert&quot;</code>,
-<code>&quot;delete&quot;</code> or <code>&quot;replace&quot;</code> when enabled via configuration object) and an <code>index</code>. By applying the operations
-one after the other to the old array, it can be transformed to an array whose items are equal to the
-new array.</p>
 
-<footer>Generated from <code>@openui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@openui5/types@1.120.46</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

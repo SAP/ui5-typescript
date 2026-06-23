@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Class: ObjectPageHeaderContent — OpenUI5 TypeScript API</title>
-<meta name="description" content="Class: ObjectPageHeaderContent — OpenUI5 TypeScript API Reference (1.120.0)">
+<meta name="description" content="Class: ObjectPageHeaderContent — OpenUI5 TypeScript API Reference (1.120.46)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/openui5/1.120/sap.uxap/sap/uxap/ObjectPageHeaderContent/classes/ObjectPageHeaderContent.html">
 <meta property="og:title" content="Class: ObjectPageHeaderContent — OpenUI5 TypeScript API">
-<meta property="og:description" content="Class: ObjectPageHeaderContent — OpenUI5 TypeScript API Reference (1.120.0)">
+<meta property="og:description" content="Class: ObjectPageHeaderContent — OpenUI5 TypeScript API Reference (1.120.46)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/openui5/1.120/sap.uxap/sap/uxap/ObjectPageHeaderContent/classes/ObjectPageHeaderContent.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,13 +33,11 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../index.html">OpenUI5 API</a> › <a href="../../../../../sap.uxap/README.html">sap.uxap</a> › sap › uxap › <a href="../../../../../sap.uxap/sap/uxap/ObjectPageHeaderContent/README.html">ObjectPageHeaderContent</a> › classes</nav>
-<p><a href="../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.0)</strong></a></p>
+<p><a href="../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.46)</strong></a></p>
 <hr>
-<p><a href="../../../../../README.html">OpenUI5 TypeScript API (1.120.0)</a> / <a href="../../../../README.html">sap.uxap</a> / <a href="../README.html">sap/uxap/ObjectPageHeaderContent</a> / ObjectPageHeaderContent</p>
+<p><a href="../../../../../README.html">OpenUI5 TypeScript API (1.120.46)</a> / <a href="../../../../README.html">sap.uxap</a> / <a href="../README.html">sap/uxap/ObjectPageHeaderContent</a> / ObjectPageHeaderContent</p>
 <h1>Class: ObjectPageHeaderContent</h1>
 <pre class="sig"><span class="kw">import</span> ObjectPageHeaderContent <span class="kw">from</span> <span class="str">"sap/uxap/ObjectPageHeaderContent"</span>;</pre>
-<h2>Since</h2>
-<p>1.30</p>
 <p>Header content for the classic header of the sap.uxap.ObjectPageLayout.</p>
 <p>Overview:</p>
 <p>The <code>ObjectPageHeaderContent</code> represents the movable part of the <code>ObjectPageLayout</code>&#39;s classic header.
@@ -50,6 +48,8 @@ additional information of the object.</p>
 	 - <a href="https://ui5.sap.com/#/topic/d2ef0099542d44dc868719d908e576d0">Object Page Headers</a>
 	 - <a href="https://ui5.sap.com/#/topic/0fecbce45e39406aa939bd25e89823f4">Object Page Classic Header</a>
 	 - <a href="https://experience.sap.com/fiori-design-web/object-page/">UX Guidelines: Object Page</a></p>
+<h2>Since</h2>
+<p>1.30</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></li>
@@ -141,15 +141,15 @@ See:
 <blockquote>
 <p><strong>getContentDesign</strong>(): <code>&quot;Light&quot;</code> | <a href="../../library/enumerations/ObjectPageHeaderDesign.html"><code>ObjectPageHeaderDesign</code></a> | <code>&quot;Dark&quot;</code></p>
 </blockquote>
+<p>Gets current value of property #getContentDesign contentDesign.</p>
+<p>Determines the design of the header - Light or Dark. **Note: **This property is deprecated. It will continue
+to work in the Blue Crystal theme, but it will not be taken into account for the Belize themes.</p>
+<p>Default value is <code>Light</code>.</p>
 <h4>Returns</h4>
 <p><code>&quot;Light&quot;</code> | <a href="../../library/enumerations/ObjectPageHeaderDesign.html"><code>ObjectPageHeaderDesign</code></a> | <code>&quot;Dark&quot;</code></p>
 <p>Value of property <code>contentDesign</code></p>
 <h4>Deprecated</h4>
 <p>(since 1.40.1)</p>
-<p>Gets current value of property #getContentDesign contentDesign.</p>
-<p>Determines the design of the header - Light or Dark. **Note: **This property is deprecated. It will continue
-to work in the Blue Crystal theme, but it will not be taken into account for the Belize themes.</p>
-<p>Default value is <code>Light</code>.</p>
 <hr>
 <h3>indexOfContent()</h3>
 <blockquote>
@@ -210,6 +210,11 @@ is inserted at the last position</p>
 <blockquote>
 <p><strong>setContentDesign</strong>(<code>sContentDesign?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getContentDesign contentDesign.</p>
+<p>Determines the design of the header - Light or Dark. **Note: **This property is deprecated. It will continue
+to work in the Blue Crystal theme, but it will not be taken into account for the Belize themes.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>Light</code>.</p>
 <h4>Parameters</h4>
 <h5>sContentDesign?</h5>
 <p><code>&quot;Light&quot;</code> | <a href="../../library/enumerations/ObjectPageHeaderDesign.html"><code>ObjectPageHeaderDesign</code></a> | <code>&quot;Dark&quot;</code></p>
@@ -219,11 +224,6 @@ is inserted at the last position</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Deprecated</h4>
 <p>(since 1.40.1)</p>
-<p>Sets a new value for property #getContentDesign contentDesign.</p>
-<p>Determines the design of the header - Light or Dark. **Note: **This property is deprecated. It will continue
-to work in the Blue Crystal theme, but it will not be taken into account for the Belize themes.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>Light</code>.</p>
 <hr>
 <h3>extend()</h3>
 <blockquote>
@@ -264,6 +264,6 @@ used by this class</p>
 <p><a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a>.<a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html#getmetadata-1"><code>getMetadata</code></a></p>
 <hr>
 
-<footer>Generated from <code>@openui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@openui5/types@1.120.46</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

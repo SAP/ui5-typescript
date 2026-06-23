@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Interface: $SearchFieldSettings — OpenUI5 TypeScript API</title>
-<meta name="description" content="Interface: $SearchFieldSettings — OpenUI5 TypeScript API Reference (1.120.0)">
+<meta name="description" content="Interface: $SearchFieldSettings — OpenUI5 TypeScript API Reference (1.120.46)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/openui5/1.120/sap.m/sap/m/SearchField/interfaces/$SearchFieldSettings.html">
 <meta property="og:title" content="Interface: $SearchFieldSettings — OpenUI5 TypeScript API">
-<meta property="og:description" content="Interface: $SearchFieldSettings — OpenUI5 TypeScript API Reference (1.120.0)">
+<meta property="og:description" content="Interface: $SearchFieldSettings — OpenUI5 TypeScript API Reference (1.120.46)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/openui5/1.120/sap.m/sap/m/SearchField/interfaces/$SearchFieldSettings.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,11 +33,12 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../index.html">OpenUI5 API</a> › <a href="../../../../../sap.m/README.html">sap.m</a> › sap › m › <a href="../../../../../sap.m/sap/m/SearchField/README.html">SearchField</a> › interfaces</nav>
-<p><a href="../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.0)</strong></a></p>
+<p><a href="../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.46)</strong></a></p>
 <hr>
-<p><a href="../../../../../README.html">OpenUI5 TypeScript API (1.120.0)</a> / <a href="../../../../README.html">sap.m</a> / <a href="../README.html">sap/m/SearchField</a> / $SearchFieldSettings</p>
+<p><a href="../../../../../README.html">OpenUI5 TypeScript API (1.120.46)</a> / <a href="../../../../README.html">sap.m</a> / <a href="../README.html">sap/m/SearchField</a> / $SearchFieldSettings</p>
 <h1>Interface: $SearchFieldSettings</h1>
 <pre class="sig"><span class="kw">import</span> { $SearchFieldSettings } <span class="kw">from</span> <span class="str">"sap/m/SearchField"</span>;</pre>
+<p>Describes the settings that can be provided to the SearchField constructor.</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../../../../sap.ui.core/sap/ui/core/Control/interfaces/$ControlSettings.html"><code>$ControlSettings</code></a></li>
@@ -59,6 +60,8 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 <blockquote>
 <p><code>optional</code> <strong>change?</strong>: (<code>oEvent</code>) =&gt; <code>void</code></p>
 </blockquote>
+<p>This event is fired when the user changes the value of the search field. Unlike the <code>liveChange</code> event,
+the <code>change</code> event is not fired for each key press.</p>
 <h4>Parameters</h4>
 <h5>oEvent</h5>
 <p><a href="../type-aliases/SearchField$ChangeEvent.html"><code>SearchField$ChangeEvent</code></a></p>
@@ -66,8 +69,6 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 <p><code>void</code></p>
 <h4>Since</h4>
 <p>1.77</p>
-<p>This event is fired when the user changes the value of the search field. Unlike the <code>liveChange</code> event,
-the <code>change</code> event is not fired for each key press.</p>
 <hr>
 <h3>enabled?</h3>
 <blockquote>
@@ -79,16 +80,18 @@ the <code>change</code> event is not fired for each key press.</p>
 <blockquote>
 <p><code>optional</code> <strong>enableSuggestions?</strong>: <code>boolean</code> | <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<h4>Since</h4>
-<p>1.34</p>
 <p>If <code>true</code>, a <code>suggest</code> event is fired when user types in the input and when the input is focused. On
 a phone device, a full screen dialog with suggestions is always shown even if the suggestions list is
 empty.</p>
+<h4>Since</h4>
+<p>1.34</p>
 <hr>
 <h3>liveChange?</h3>
 <blockquote>
 <p><code>optional</code> <strong>liveChange?</strong>: (<code>oEvent</code>) =&gt; <code>void</code></p>
 </blockquote>
+<p>This event is fired each time when the value of the search field is changed by the user - e.g. at each
+key press. Do not invalidate a focused search field, especially during the liveChange event.</p>
 <h4>Parameters</h4>
 <h5>oEvent</h5>
 <p><a href="../type-aliases/SearchField$LiveChangeEvent.html"><code>SearchField$LiveChangeEvent</code></a></p>
@@ -96,8 +99,6 @@ empty.</p>
 <p><code>void</code></p>
 <h4>Since</h4>
 <p>1.9.1</p>
-<p>This event is fired each time when the value of the search field is changed by the user - e.g. at each
-key press. Do not invalidate a focused search field, especially during the liveChange event.</p>
 <hr>
 <h3>maxLength?</h3>
 <blockquote>
@@ -117,12 +118,12 @@ be <code>null</code> in that case).</p>
 <blockquote>
 <p><code>optional</code> <strong>refreshButtonTooltip?</strong>: <code>string</code> | <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a></p>
 </blockquote>
+<p>Tooltip text of the refresh button. If it is not set, the Default tooltip text is the word &quot;Refresh&quot;
+in the current local language (if supported) or in English. Tooltips are not displayed on touch devices.</p>
 <h4>Since</h4>
 <p>1.16</p>
 <h4>Deprecated</h4>
 <p>(since 1.110.0)</p>
-<p>Tooltip text of the refresh button. If it is not set, the Default tooltip text is the word &quot;Refresh&quot;
-in the current local language (if supported) or in English. Tooltips are not displayed on touch devices.</p>
 <hr>
 <h3>search?</h3>
 <blockquote>
@@ -139,47 +140,50 @@ in the current local language (if supported) or in English. Tooltips are not dis
 <blockquote>
 <p><code>optional</code> <strong>selectOnFocus?</strong>: <code>boolean</code> | <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
+<p>Normally, search text is selected for copy when the SearchField is focused by keyboard navigation. If
+an application re-renders the SearchField during the liveChange event, set this property to <code>false</code> to
+disable text selection by focus.</p>
 <h4>Since</h4>
 <p>1.20</p>
 <h4>Deprecated</h4>
 <p>(since 1.38) - This parameter is deprecated and has no effect in run time. The cursor position
 of a focused search field is restored after re-rendering automatically.</p>
-<p>Normally, search text is selected for copy when the SearchField is focused by keyboard navigation. If
-an application re-renders the SearchField during the liveChange event, set this property to <code>false</code> to
-disable text selection by focus.</p>
 <hr>
 <h3><del>showMagnifier?</del></h3>
 <blockquote>
 <p><code>optional</code> <strong>showMagnifier?</strong>: <code>boolean</code> | <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
+<p>Set to <code>false</code> to hide the magnifier icon.</p>
 <h4>Deprecated</h4>
 <p>(since 1.16.0) - This parameter is deprecated. Use &quot;showSearchButton&quot; instead.</p>
-<p>Set to <code>false</code> to hide the magnifier icon.</p>
 <hr>
 <h3>showRefreshButton?</h3>
 <blockquote>
 <p><code>optional</code> <strong>showRefreshButton?</strong>: <code>boolean</code> | <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<h4>Since</h4>
-<p>1.16</p>
 <p>Set to <code>true</code> to display a refresh button in place of the search icon. By pressing the refresh button
 or F5 key on keyboard, the user can reload the results list without changing the search string. Note:
 if &quot;showSearchButton&quot; property is set to <code>false</code>, both the search and refresh buttons are not displayed
 even if the &quot;showRefreshButton&quot; property is true.</p>
+<h4>Since</h4>
+<p>1.16</p>
 <hr>
 <h3>showSearchButton?</h3>
 <blockquote>
 <p><code>optional</code> <strong>showSearchButton?</strong>: <code>boolean</code> | <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<h4>Since</h4>
-<p>1.23</p>
 <p>Set to <code>true</code> to show the search button with the magnifier icon. If <code>false</code>, both the search and refresh
 buttons are not displayed even if the &quot;showRefreshButton&quot; property is <code>true</code>.</p>
+<h4>Since</h4>
+<p>1.23</p>
 <hr>
 <h3>suggest?</h3>
 <blockquote>
 <p><code>optional</code> <strong>suggest?</strong>: (<code>oEvent</code>) =&gt; <code>void</code></p>
 </blockquote>
+<p>This event is fired when the search field is initially focused or its value is changed by the user. This
+event means that suggestion data should be updated, in case if suggestions are used. Use the value parameter
+to create new suggestions for it.</p>
 <h4>Parameters</h4>
 <h5>oEvent</h5>
 <p><a href="../type-aliases/SearchField$SuggestEvent.html"><code>SearchField$SuggestEvent</code></a></p>
@@ -187,22 +191,19 @@ buttons are not displayed even if the &quot;showRefreshButton&quot; property is 
 <p><code>void</code></p>
 <h4>Since</h4>
 <p>1.34</p>
-<p>This event is fired when the search field is initially focused or its value is changed by the user. This
-event means that suggestion data should be updated, in case if suggestions are used. Use the value parameter
-to create new suggestions for it.</p>
 <hr>
 <h3>suggestionItems?</h3>
 <blockquote>
 <p><code>optional</code> <strong>suggestionItems?</strong>: <code>`{${string}}`</code> | <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/AggregationBindingInfo.html"><code>AggregationBindingInfo</code></a> | <a href="../../SuggestionItem/classes/SuggestionItem.html"><code>SuggestionItem</code></a> | <a href="../../SuggestionItem/classes/SuggestionItem.html"><code>SuggestionItem</code></a>[]</p>
 </blockquote>
-<h4>Since</h4>
-<p>1.34</p>
 <p><code>SuggestionItems</code> are the items which will be shown in the suggestions list. The following properties
 can be used:
 	 - <code>key</code> is not displayed and may be used as internal technical field
 	 - <code>text</code> is displayed as normal suggestion text
 	 - <code>icon</code>
 	 - <code>description</code> - additional text may be used to visually display search item type or category</p>
+<h4>Since</h4>
+<p>1.34</p>
 <hr>
 <h3>value?</h3>
 <blockquote>
@@ -224,6 +225,6 @@ can be used:
 </blockquote>
 <p>Defines the CSS width of the input. If not set, width is 100%.</p>
 
-<footer>Generated from <code>@openui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@openui5/types@1.120.46</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Class: ResourceBundle — OpenUI5 TypeScript API</title>
-<meta name="description" content="Class: ResourceBundle — OpenUI5 TypeScript API Reference (1.120.0)">
+<meta name="description" content="Class: ResourceBundle — OpenUI5 TypeScript API Reference (1.120.46)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/openui5/1.120/sap.ui.core/sap/base/i18n/ResourceBundle/classes/ResourceBundle.html">
 <meta property="og:title" content="Class: ResourceBundle — OpenUI5 TypeScript API">
-<meta property="og:description" content="Class: ResourceBundle — OpenUI5 TypeScript API Reference (1.120.0)">
+<meta property="og:description" content="Class: ResourceBundle — OpenUI5 TypeScript API Reference (1.120.46)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/openui5/1.120/sap.ui.core/sap/base/i18n/ResourceBundle/classes/ResourceBundle.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,13 +33,11 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../index.html">OpenUI5 API</a> › <a href="../../../../../../sap.ui.core/README.html">sap.ui.core</a> › sap › base › i18n › <a href="../../../../../../sap.ui.core/sap/base/i18n/ResourceBundle/README.html">ResourceBundle</a> › classes</nav>
-<p><a href="../../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.0)</strong></a></p>
+<p><a href="../../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.46)</strong></a></p>
 <hr>
-<p><a href="../../../../../../README.html">OpenUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../README.html">sap.ui.core</a> / <a href="../README.html">sap/base/i18n/ResourceBundle</a> / ResourceBundle</p>
+<p><a href="../../../../../../README.html">OpenUI5 TypeScript API (1.120.46)</a> / <a href="../../../../../README.html">sap.ui.core</a> / <a href="../README.html">sap/base/i18n/ResourceBundle</a> / ResourceBundle</p>
 <h1>Class: ResourceBundle</h1>
 <pre class="sig"><span class="kw">import</span> ResourceBundle <span class="kw">from</span> <span class="str">"sap/base/i18n/ResourceBundle"</span>;</pre>
-<h2>Since</h2>
-<p>1.58</p>
 <p>Contains locale-specific texts.</p>
 <p>If you need a locale-specific text within your application, you can use the resource bundle to load the
 locale-specific file from the server and access the texts of it.</p>
@@ -60,6 +58,8 @@ most development projects contain at least English texts). If that also fails, t
 <p>If none of the requested files can be found or none of them contains a text for the given key, then the
 key itself is returned as text.</p>
 <p>Exception: Fallback for &quot;zh_HK&quot; is &quot;zh_TW&quot; before &quot;zh&quot;.</p>
+<h2>Since</h2>
+<p>1.58</p>
 <h2>Constructors</h2>
 <h3>Constructor</h3>
 <blockquote>
@@ -181,7 +181,7 @@ can either be a BCP47 language tag or a JDK compatible locale string (e.g. &quot
 An empty string (<code>&quot;&quot;</code>) represents the &#39;raw&#39; bundle. <strong>Note:</strong> The given language tags can use modern
 or legacy ISO639 language codes. Whatever language code is used in the list of supported locales will
 also be used when requesting a file from the server. If the <code>locale</code> contains a legacy language code
-like &quot;sh&quot; and the <code>supportedLocales</code> contains [...,&quot;sr&quot;,...], &quot;sr&quot; will be used in the URL. This mapping
+like &quot;iw&quot; and the <code>supportedLocales</code> contains [...,&quot;he&quot;,...], &quot;he&quot; will be used in the URL. This mapping
 works in both directions.</p>
 <h6>terminologies?</h6>
 <p><code>Record</code>&lt;<code>string</code>, <a href="../type-aliases/TerminologyConfiguration.html"><code>TerminologyConfiguration</code></a>&gt;</p>
@@ -197,6 +197,6 @@ e.g. &quot;mybundle.properties&quot;) if not provided, <code>bundleUrl</code> or
 <p><code>ResourceBundle</code> | <code>Promise</code>&lt;<code>ResourceBundle</code>&gt;</p>
 <p>A new resource bundle or a Promise on that bundle (in asynchronous case)</p>
 
-<footer>Generated from <code>@openui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@openui5/types@1.120.46</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

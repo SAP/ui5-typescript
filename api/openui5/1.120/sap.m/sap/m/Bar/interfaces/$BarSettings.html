@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Interface: $BarSettings — OpenUI5 TypeScript API</title>
-<meta name="description" content="Interface: $BarSettings — OpenUI5 TypeScript API Reference (1.120.0)">
+<meta name="description" content="Interface: $BarSettings — OpenUI5 TypeScript API Reference (1.120.46)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/openui5/1.120/sap.m/sap/m/Bar/interfaces/$BarSettings.html">
 <meta property="og:title" content="Interface: $BarSettings — OpenUI5 TypeScript API">
-<meta property="og:description" content="Interface: $BarSettings — OpenUI5 TypeScript API Reference (1.120.0)">
+<meta property="og:description" content="Interface: $BarSettings — OpenUI5 TypeScript API Reference (1.120.46)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/openui5/1.120/sap.m/sap/m/Bar/interfaces/$BarSettings.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,11 +33,12 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../index.html">OpenUI5 API</a> › <a href="../../../../../sap.m/README.html">sap.m</a> › sap › m › <a href="../../../../../sap.m/sap/m/Bar/README.html">Bar</a> › interfaces</nav>
-<p><a href="../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.0)</strong></a></p>
+<p><a href="../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.46)</strong></a></p>
 <hr>
-<p><a href="../../../../../README.html">OpenUI5 TypeScript API (1.120.0)</a> / <a href="../../../../README.html">sap.m</a> / <a href="../README.html">sap/m/Bar</a> / $BarSettings</p>
+<p><a href="../../../../../README.html">OpenUI5 TypeScript API (1.120.46)</a> / <a href="../../../../README.html">sap.m</a> / <a href="../README.html">sap/m/Bar</a> / $BarSettings</p>
 <h1>Interface: $BarSettings</h1>
 <pre class="sig"><span class="kw">import</span> { $BarSettings } <span class="kw">from</span> <span class="str">"sap/m/Bar"</span>;</pre>
+<p>Describes the settings that can be provided to the Bar constructor.</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../../../../sap.ui.core/sap/ui/core/Control/interfaces/$ControlSettings.html"><code>$ControlSettings</code></a></li>
@@ -48,6 +49,8 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 <p><code>optional</code> <strong>ariaLabelledBy?</strong>: (<code>string</code> | <a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a>)[]</p>
 </blockquote>
 <p>Association to controls / ids which label this control (see WAI-ARIA attribute aria-labelledby).</p>
+<p>**Note:**The aria-labelledby attribute will not be rendered when there are less than two interactive
+elements inside the Bar (for example, one Button).</p>
 <hr>
 <h3>contentLeft?</h3>
 <blockquote>
@@ -74,44 +77,44 @@ the middle content, the middle content will be centered in the space between the
 <blockquote>
 <p><code>optional</code> <strong>design?</strong>: <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code> | <code>&quot;Auto&quot;</code> | <a href="../../library/enumerations/BarDesign.html"><code>BarDesign</code></a> | <code>&quot;Footer&quot;</code> | <code>&quot;Header&quot;</code> | <code>&quot;SubHeader&quot;</code></p>
 </blockquote>
-<h4>Since</h4>
-<p>1.22</p>
 <p>Determines the design of the bar. If set to auto, it becomes dependent on the place where the bar is
 placed.</p>
+<h4>Since</h4>
+<p>1.22</p>
 <hr>
 <h3><del>enableFlexBox?</del></h3>
 <blockquote>
 <p><code>optional</code> <strong>enableFlexBox?</strong>: <code>boolean</code> | <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
+<p>If this flag is set to true, contentMiddle will be rendered as a HBox and layoutData can be used to allocate
+available space.</p>
 <h4>Deprecated</h4>
 <p>(since 1.16) - replaced by <code>contentMiddle</code> aggregation. <code>contentMiddle</code> will always occupy
 of the 100% width when no <code>contentLeft</code> and <code>contentRight</code> are being set.</p>
-<p>If this flag is set to true, contentMiddle will be rendered as a HBox and layoutData can be used to allocate
-available space.</p>
 <hr>
 <h3>titleAlignment?</h3>
 <blockquote>
 <p><code>optional</code> <strong>titleAlignment?</strong>: <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code> | <code>&quot;None&quot;</code> | <code>&quot;Auto&quot;</code> | <code>&quot;Center&quot;</code> | <a href="../../library/enumerations/TitleAlignment.html"><code>TitleAlignment</code></a> | <code>&quot;Start&quot;</code></p>
 </blockquote>
-<h4>Since</h4>
-<p>1.85</p>
 <p>Specifies the Title alignment (theme specific). If set to <code>TitleAlignment.None</code>, the automatic title
 alignment depending on the theme settings will be disabled. If set to <code>TitleAlignment.Auto</code>, the Title
 will be aligned as it is set in the theme (if not set, the default value is <code>center</code>); Other possible
 values are <code>TitleAlignment.Start</code> (left or right depending on LTR/RTL), and <code>TitleAlignment.Center</code> (centered)</p>
+<h4>Since</h4>
+<p>1.85</p>
 <hr>
 <h3><del>translucent?</del></h3>
 <blockquote>
 <p><code>optional</code> <strong>translucent?</strong>: <code>boolean</code> | <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
+<p>Indicates whether the Bar is partially translucent. It is only applied for touch devices.</p>
 <h4>Since</h4>
 <p>1.12</p>
 <h4>Deprecated</h4>
 <p>(since 1.18.6) - This property has no effect since release 1.18.6 and should not be used.
 Translucent bar may overlay an input and make it difficult to edit.</p>
-<p>Indicates whether the Bar is partially translucent. It is only applied for touch devices.</p>
 <hr>
 
-<footer>Generated from <code>@openui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@openui5/types@1.120.46</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Class: Avatar — OpenUI5 TypeScript API</title>
-<meta name="description" content="Class: Avatar — OpenUI5 TypeScript API Reference (1.120.0)">
+<meta name="description" content="Class: Avatar — OpenUI5 TypeScript API Reference (1.120.46)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/openui5/1.120/sap.m/sap/m/Avatar/classes/Avatar.html">
 <meta property="og:title" content="Class: Avatar — OpenUI5 TypeScript API">
-<meta property="og:description" content="Class: Avatar — OpenUI5 TypeScript API Reference (1.120.0)">
+<meta property="og:description" content="Class: Avatar — OpenUI5 TypeScript API Reference (1.120.46)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/openui5/1.120/sap.m/sap/m/Avatar/classes/Avatar.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,13 +33,11 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../index.html">OpenUI5 API</a> › <a href="../../../../../sap.m/README.html">sap.m</a> › sap › m › <a href="../../../../../sap.m/sap/m/Avatar/README.html">Avatar</a> › classes</nav>
-<p><a href="../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.0)</strong></a></p>
+<p><a href="../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.46)</strong></a></p>
 <hr>
-<p><a href="../../../../../README.html">OpenUI5 TypeScript API (1.120.0)</a> / <a href="../../../../README.html">sap.m</a> / <a href="../README.html">sap/m/Avatar</a> / Avatar</p>
+<p><a href="../../../../../README.html">OpenUI5 TypeScript API (1.120.46)</a> / <a href="../../../../README.html">sap.m</a> / <a href="../README.html">sap/m/Avatar</a> / Avatar</p>
 <h1>Class: Avatar</h1>
 <pre class="sig"><span class="kw">import</span> Avatar <span class="kw">from</span> <span class="str">"sap/m/Avatar"</span>;</pre>
-<h2>Since</h2>
-<p>1.73</p>
 <p>An image-like control that has different display options for representing images, initials, and icons.</p>
 <p>Overview:</p>
 <p>The <code>Avatar</code> control allows the usage of different content, shapes, and sizes depending on the use case.</p>
@@ -54,6 +52,8 @@ or if there&#39;s a non-Latin character present, a default image placeholder wil
     avalable area  <strong>Note:</strong> To set a custom size for the <code>Avatar</code>, you have to choose the <code>Custom</code>
     value for the <code>displaySize</code> property. Then, you have to set both the <code>customDisplaySize</code> and <code>customFontSize</code>
     properties.</p>
+<h2>Since</h2>
+<p>1.73</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></li>
@@ -212,6 +212,7 @@ of the possible properties of <code>oBindingInfo</code>.</p>
 <blockquote>
 <p><strong>firePress</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
+<p>Fires event #event:press press to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><code>object</code></p>
@@ -221,22 +222,21 @@ of the possible properties of <code>oBindingInfo</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Fires event #event:press press to attached listeners.</p>
 <hr>
 <h3>getActive()</h3>
 <blockquote>
 <p><strong>getActive</strong>(): <code>boolean</code></p>
 </blockquote>
-<h4>Returns</h4>
-<p><code>boolean</code></p>
-<p>Value of property <code>active</code></p>
-<h4>Since</h4>
-<p>1.120.0</p>
 <p>Gets current value of property #getActive active.</p>
 <p>Determines whether the <code>Avatar</code> is active/toggled (default is set to <code>false</code>). Active state is meant
 to be toggled when user clicks on the <code>Avatar</code>. The Active state is only applied, when the <code>Avatar</code> has
 <code>press</code> listeners.</p>
 <p>Default value is <code>false</code>.</p>
+<h4>Returns</h4>
+<p><code>boolean</code></p>
+<p>Value of property <code>active</code></p>
+<h4>Since</h4>
+<p>1.120.0</p>
 <hr>
 <h3>getAriaDescribedBy()</h3>
 <blockquote>
@@ -250,11 +250,6 @@ to be toggled when user clicks on the <code>Avatar</code>. The Active state is o
 <blockquote>
 <p><strong>getAriaHasPopup</strong>(): <a href="../../../../../sap.ui.core/sap/ui/core/library/namespaces/aria/enumerations/HasPopup.html"><code>HasPopup</code></a> | <code>&quot;Dialog&quot;</code> | <code>&quot;Grid&quot;</code> | <code>&quot;ListBox&quot;</code> | <code>&quot;Menu&quot;</code> | <code>&quot;None&quot;</code> | <code>&quot;Tree&quot;</code></p>
 </blockquote>
-<h4>Returns</h4>
-<p><a href="../../../../../sap.ui.core/sap/ui/core/library/namespaces/aria/enumerations/HasPopup.html"><code>HasPopup</code></a> | <code>&quot;Dialog&quot;</code> | <code>&quot;Grid&quot;</code> | <code>&quot;ListBox&quot;</code> | <code>&quot;Menu&quot;</code> | <code>&quot;None&quot;</code> | <code>&quot;Tree&quot;</code></p>
-<p>Value of property <code>ariaHasPopup</code></p>
-<h4>Since</h4>
-<p>1.99.0</p>
 <p>Gets current value of property #getAriaHasPopup ariaHasPopup.</p>
 <p>Specifies the value of the <code>aria-haspopup</code> attribute</p>
 <p>If the value is <code>None</code>, the attribute will not be rendered. Otherwise it will be rendered with the selected
@@ -265,6 +260,11 @@ if you have menu -&gt; menu; if you have list -&gt; list; if you have dialog con
 Do not use it, if you open a standard sap.m.Dialog, MessageBox or other type of dialogs displayed as
 on overlay over the application.</p>
 <p>Default value is <code>None</code>.</p>
+<h4>Returns</h4>
+<p><a href="../../../../../sap.ui.core/sap/ui/core/library/namespaces/aria/enumerations/HasPopup.html"><code>HasPopup</code></a> | <code>&quot;Dialog&quot;</code> | <code>&quot;Grid&quot;</code> | <code>&quot;ListBox&quot;</code> | <code>&quot;Menu&quot;</code> | <code>&quot;None&quot;</code> | <code>&quot;Tree&quot;</code></p>
+<p>Value of property <code>ariaHasPopup</code></p>
+<h4>Since</h4>
+<p>1.99.0</p>
 <hr>
 <h3>getAriaLabelledBy()</h3>
 <blockquote>
@@ -289,11 +289,6 @@ on overlay over the application.</p>
 <blockquote>
 <p><strong>getBadgeIcon</strong>(): <code>string</code></p>
 </blockquote>
-<h4>Returns</h4>
-<p><code>string</code></p>
-<p>Value of property <code>badgeIcon</code></p>
-<h4>Since</h4>
-<p>1.77</p>
 <p>Gets current value of property #getBadgeIcon badgeIcon.</p>
 <p>Defines what type of icon is displayed as visual affordance. It can be predefined or custom.</p>
 <p>The predefined icons are recommended for:
@@ -301,34 +296,39 @@ on overlay over the application.</p>
 	 - Suggesting an image change: <code>sap-icon://camera</code>
 	 - Suggesting an editing action: <code>sap-icon://edit</code></p>
 <p>Default value is <code>empty string</code>.</p>
+<h4>Returns</h4>
+<p><code>string</code></p>
+<p>Value of property <code>badgeIcon</code></p>
+<h4>Since</h4>
+<p>1.77</p>
 <hr>
 <h3>getBadgeTooltip()</h3>
 <blockquote>
 <p><strong>getBadgeTooltip</strong>(): <code>string</code></p>
 </blockquote>
-<h4>Returns</h4>
-<p><code>string</code></p>
-<p>Value of property <code>badgeTooltip</code></p>
-<h4>Since</h4>
-<p>1.77</p>
 <p>Gets current value of property #getBadgeTooltip badgeTooltip.</p>
 <p>Defines a custom tooltip for the <code>badgeIcon</code>. If set, it overrides the available default values.</p>
 <p>If not set, default tooltips are used as follows:
 	 - Specific default tooltips are displayed for each of the predefined <code>badgeIcons</code>.
 	 - For any other icons, the displayed tooltip is the same as the main control tooltip.</p>
+<h4>Returns</h4>
+<p><code>string</code></p>
+<p>Value of property <code>badgeTooltip</code></p>
+<h4>Since</h4>
+<p>1.77</p>
 <hr>
 <h3>getBadgeValueState()</h3>
 <blockquote>
 <p><strong>getBadgeValueState</strong>(): <code>&quot;None&quot;</code> | <a href="../../../../../sap.ui.core/sap/ui/core/library/enumerations/ValueState.html"><code>ValueState</code></a> | <code>&quot;Error&quot;</code> | <code>&quot;Information&quot;</code> | <code>&quot;Success&quot;</code> | <code>&quot;Warning&quot;</code></p>
 </blockquote>
+<p>Gets current value of property #getBadgeValueState badgeValueState.</p>
+<p>Visualizes the validation state of the badge, e.g. <code>Error</code>, <code>Warning</code>, <code>Success</code>, <code>Information</code>.</p>
+<p>Default value is <code>None</code>.</p>
 <h4>Returns</h4>
 <p><code>&quot;None&quot;</code> | <a href="../../../../../sap.ui.core/sap/ui/core/library/enumerations/ValueState.html"><code>ValueState</code></a> | <code>&quot;Error&quot;</code> | <code>&quot;Information&quot;</code> | <code>&quot;Success&quot;</code> | <code>&quot;Warning&quot;</code></p>
 <p>Value of property <code>badgeValueState</code></p>
 <h4>Since</h4>
 <p>1.116.0</p>
-<p>Gets current value of property #getBadgeValueState badgeValueState.</p>
-<p>Visualizes the validation state of the badge, e.g. <code>Error</code>, <code>Warning</code>, <code>Success</code>, <code>Information</code>.</p>
-<p>Default value is <code>None</code>.</p>
 <hr>
 <h3>getCustomDisplaySize()</h3>
 <blockquote>
@@ -358,15 +358,15 @@ on overlay over the application.</p>
 <blockquote>
 <p><strong>getDecorative</strong>(): <code>boolean</code></p>
 </blockquote>
+<p>Gets current value of property #getDecorative decorative.</p>
+<p>Defines whether the <code>sap.m.Avatar</code> is used for decorative purposes and is ignored by accessibility tools.</p>
+<p><strong>Note:</strong> This property doesn&#39;t take effect if <code>sap.m.Avatar</code> has a <code>press</code> handler.</p>
+<p>Default value is <code>false</code>.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>Value of property <code>decorative</code></p>
 <h4>Since</h4>
 <p>1.97</p>
-<p>Gets current value of property #getDecorative decorative.</p>
-<p>Defines whether the <code>sap.m.Avatar</code> is used for decorative purposes and is ignored by accessibility tools.</p>
-<p><strong>Note:</strong> This property doesn&#39;t take effect if <code>sap.m.Avatar</code> has a <code>press</code> handler.</p>
-<p>Default value is <code>false</code>.</p>
 <hr>
 <h3>getDetailBox()</h3>
 <blockquote>
@@ -405,15 +405,15 @@ control.</p>
 <blockquote>
 <p><strong>getEnabled</strong>(): <code>boolean</code></p>
 </blockquote>
+<p>Gets current value of property #getEnabled enabled.</p>
+<p>Determines whether the <code>Avatar</code> is enabled (default is set to <code>true</code>). A disabled <code>Button</code> has different
+colors depending on the sap.m.AvatarColor AvatarColor.</p>
+<p>Default value is <code>true</code>.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>Value of property <code>enabled</code></p>
 <h4>Since</h4>
 <p>1.117.0</p>
-<p>Gets current value of property #getEnabled enabled.</p>
-<p>Determines whether the <code>Avatar</code> is enabled (default is set to <code>true</code>). A disabled <code>Button</code> has different
-colors depending on the sap.m.AvatarColor AvatarColor.</p>
-<p>Default value is <code>true</code>.</p>
 <hr>
 <h3>getFallbackIcon()</h3>
 <blockquote>
@@ -518,6 +518,12 @@ colors depending on the sap.m.AvatarColor AvatarColor.</p>
 <blockquote>
 <p><strong>setActive</strong>(<code>bActive?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getActive active.</p>
+<p>Determines whether the <code>Avatar</code> is active/toggled (default is set to <code>false</code>). Active state is meant
+to be toggled when user clicks on the <code>Avatar</code>. The Active state is only applied, when the <code>Avatar</code> has
+<code>press</code> listeners.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>false</code>.</p>
 <h4>Parameters</h4>
 <h5>bActive?</h5>
 <p><code>boolean</code></p>
@@ -527,26 +533,11 @@ colors depending on the sap.m.AvatarColor AvatarColor.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.120.0</p>
-<p>Sets a new value for property #getActive active.</p>
-<p>Determines whether the <code>Avatar</code> is active/toggled (default is set to <code>false</code>). Active state is meant
-to be toggled when user clicks on the <code>Avatar</code>. The Active state is only applied, when the <code>Avatar</code> has
-<code>press</code> listeners.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>false</code>.</p>
 <hr>
 <h3>setAriaHasPopup()</h3>
 <blockquote>
 <p><strong>setAriaHasPopup</strong>(<code>sAriaHasPopup?</code>): <code>this</code></p>
 </blockquote>
-<h4>Parameters</h4>
-<h5>sAriaHasPopup?</h5>
-<p><a href="../../../../../sap.ui.core/sap/ui/core/library/namespaces/aria/enumerations/HasPopup.html"><code>HasPopup</code></a> | <code>&quot;Dialog&quot;</code> | <code>&quot;Grid&quot;</code> | <code>&quot;ListBox&quot;</code> | <code>&quot;Menu&quot;</code> | <code>&quot;None&quot;</code> | <code>&quot;Tree&quot;</code></p>
-<p>New value for property <code>ariaHasPopup</code></p>
-<h4>Returns</h4>
-<p><code>this</code></p>
-<p>Reference to <code>this</code> in order to allow method chaining</p>
-<h4>Since</h4>
-<p>1.99.0</p>
 <p>Sets a new value for property #getAriaHasPopup ariaHasPopup.</p>
 <p>Specifies the value of the <code>aria-haspopup</code> attribute</p>
 <p>If the value is <code>None</code>, the attribute will not be rendered. Otherwise it will be rendered with the selected
@@ -558,6 +549,15 @@ Do not use it, if you open a standard sap.m.Dialog, MessageBox or other type of 
 on overlay over the application.</p>
 <p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <p>Default value is <code>None</code>.</p>
+<h4>Parameters</h4>
+<h5>sAriaHasPopup?</h5>
+<p><a href="../../../../../sap.ui.core/sap/ui/core/library/namespaces/aria/enumerations/HasPopup.html"><code>HasPopup</code></a> | <code>&quot;Dialog&quot;</code> | <code>&quot;Grid&quot;</code> | <code>&quot;ListBox&quot;</code> | <code>&quot;Menu&quot;</code> | <code>&quot;None&quot;</code> | <code>&quot;Tree&quot;</code></p>
+<p>New value for property <code>ariaHasPopup</code></p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<h4>Since</h4>
+<p>1.99.0</p>
 <hr>
 <h3>setBackgroundColor()</h3>
 <blockquote>
@@ -579,6 +579,14 @@ on overlay over the application.</p>
 <blockquote>
 <p><strong>setBadgeIcon</strong>(<code>sBadgeIcon?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getBadgeIcon badgeIcon.</p>
+<p>Defines what type of icon is displayed as visual affordance. It can be predefined or custom.</p>
+<p>The predefined icons are recommended for:
+	 - Suggesting a zooming action: <code>sap-icon://zoom-in</code>
+	 - Suggesting an image change: <code>sap-icon://camera</code>
+	 - Suggesting an editing action: <code>sap-icon://edit</code></p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>empty string</code>.</p>
 <h4>Parameters</h4>
 <h5>sBadgeIcon?</h5>
 <p><code>string</code></p>
@@ -588,19 +596,17 @@ on overlay over the application.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.77</p>
-<p>Sets a new value for property #getBadgeIcon badgeIcon.</p>
-<p>Defines what type of icon is displayed as visual affordance. It can be predefined or custom.</p>
-<p>The predefined icons are recommended for:
-	 - Suggesting a zooming action: <code>sap-icon://zoom-in</code>
-	 - Suggesting an image change: <code>sap-icon://camera</code>
-	 - Suggesting an editing action: <code>sap-icon://edit</code></p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>empty string</code>.</p>
 <hr>
 <h3>setBadgeTooltip()</h3>
 <blockquote>
 <p><strong>setBadgeTooltip</strong>(<code>sBadgeTooltip?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getBadgeTooltip badgeTooltip.</p>
+<p>Defines a custom tooltip for the <code>badgeIcon</code>. If set, it overrides the available default values.</p>
+<p>If not set, default tooltips are used as follows:
+	 - Specific default tooltips are displayed for each of the predefined <code>badgeIcons</code>.
+	 - For any other icons, the displayed tooltip is the same as the main control tooltip.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <h4>Parameters</h4>
 <h5>sBadgeTooltip?</h5>
 <p><code>string</code></p>
@@ -610,17 +616,15 @@ on overlay over the application.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.77</p>
-<p>Sets a new value for property #getBadgeTooltip badgeTooltip.</p>
-<p>Defines a custom tooltip for the <code>badgeIcon</code>. If set, it overrides the available default values.</p>
-<p>If not set, default tooltips are used as follows:
-	 - Specific default tooltips are displayed for each of the predefined <code>badgeIcons</code>.
-	 - For any other icons, the displayed tooltip is the same as the main control tooltip.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <hr>
 <h3>setBadgeValueState()</h3>
 <blockquote>
 <p><strong>setBadgeValueState</strong>(<code>sBadgeValueState?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getBadgeValueState badgeValueState.</p>
+<p>Visualizes the validation state of the badge, e.g. <code>Error</code>, <code>Warning</code>, <code>Success</code>, <code>Information</code>.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>None</code>.</p>
 <h4>Parameters</h4>
 <h5>sBadgeValueState?</h5>
 <p><code>&quot;None&quot;</code> | <a href="../../../../../sap.ui.core/sap/ui/core/library/enumerations/ValueState.html"><code>ValueState</code></a> | <code>&quot;Error&quot;</code> | <code>&quot;Information&quot;</code> | <code>&quot;Success&quot;</code> | <code>&quot;Warning&quot;</code></p>
@@ -630,10 +634,6 @@ on overlay over the application.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.116.0</p>
-<p>Sets a new value for property #getBadgeValueState badgeValueState.</p>
-<p>Visualizes the validation state of the badge, e.g. <code>Error</code>, <code>Warning</code>, <code>Success</code>, <code>Information</code>.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>None</code>.</p>
 <hr>
 <h3>setCustomDisplaySize()</h3>
 <blockquote>
@@ -673,6 +673,11 @@ on overlay over the application.</p>
 <blockquote>
 <p><strong>setDecorative</strong>(<code>bDecorative?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getDecorative decorative.</p>
+<p>Defines whether the <code>sap.m.Avatar</code> is used for decorative purposes and is ignored by accessibility tools.</p>
+<p><strong>Note:</strong> This property doesn&#39;t take effect if <code>sap.m.Avatar</code> has a <code>press</code> handler.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>false</code>.</p>
 <h4>Parameters</h4>
 <h5>bDecorative?</h5>
 <p><code>boolean</code></p>
@@ -682,11 +687,6 @@ on overlay over the application.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.97</p>
-<p>Sets a new value for property #getDecorative decorative.</p>
-<p>Defines whether the <code>sap.m.Avatar</code> is used for decorative purposes and is ignored by accessibility tools.</p>
-<p><strong>Note:</strong> This property doesn&#39;t take effect if <code>sap.m.Avatar</code> has a <code>press</code> handler.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>false</code>.</p>
 <hr>
 <h3>setDetailBox()</h3>
 <blockquote>
@@ -737,6 +737,11 @@ on overlay over the application.</p>
 <blockquote>
 <p><strong>setEnabled</strong>(<code>bEnabled?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getEnabled enabled.</p>
+<p>Determines whether the <code>Avatar</code> is enabled (default is set to <code>true</code>). A disabled <code>Button</code> has different
+colors depending on the sap.m.AvatarColor AvatarColor.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>true</code>.</p>
 <h4>Parameters</h4>
 <h5>bEnabled?</h5>
 <p><code>boolean</code></p>
@@ -746,11 +751,6 @@ on overlay over the application.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.117.0</p>
-<p>Sets a new value for property #getEnabled enabled.</p>
-<p>Determines whether the <code>Avatar</code> is enabled (default is set to <code>true</code>). A disabled <code>Button</code> has different
-colors depending on the sap.m.AvatarColor AvatarColor.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>true</code>.</p>
 <hr>
 <h3>setFallbackIcon()</h3>
 <blockquote>
@@ -880,6 +880,6 @@ used by this class</p>
 <p><a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a>.<a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html#getmetadata-1"><code>getMetadata</code></a></p>
 <hr>
 
-<footer>Generated from <code>@openui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@openui5/types@1.120.46</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

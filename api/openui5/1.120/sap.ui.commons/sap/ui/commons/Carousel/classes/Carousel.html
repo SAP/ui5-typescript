@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>~~Class: Carousel~~ — OpenUI5 TypeScript API</title>
-<meta name="description" content="~~Class: Carousel~~ — OpenUI5 TypeScript API Reference (1.120.0)">
+<meta name="description" content="~~Class: Carousel~~ — OpenUI5 TypeScript API Reference (1.120.46)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/openui5/1.120/sap.ui.commons/sap/ui/commons/Carousel/classes/Carousel.html">
 <meta property="og:title" content="~~Class: Carousel~~ — OpenUI5 TypeScript API">
-<meta property="og:description" content="~~Class: Carousel~~ — OpenUI5 TypeScript API Reference (1.120.0)">
+<meta property="og:description" content="~~Class: Carousel~~ — OpenUI5 TypeScript API Reference (1.120.46)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/openui5/1.120/sap.ui.commons/sap/ui/commons/Carousel/classes/Carousel.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,18 +33,18 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../index.html">OpenUI5 API</a> › <a href="../../../../../../sap.ui.commons/README.html">sap.ui.commons</a> › sap › ui › commons › <a href="../../../../../../sap.ui.commons/sap/ui/commons/Carousel/README.html">Carousel</a> › classes</nav>
-<p><a href="../../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.0)</strong></a></p>
+<p><a href="../../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.46)</strong></a></p>
 <hr>
-<p><a href="../../../../../../README.html">OpenUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../README.html">sap.ui.commons</a> / <a href="../README.html">sap/ui/commons/Carousel</a> / Carousel</p>
+<p><a href="../../../../../../README.html">OpenUI5 TypeScript API (1.120.46)</a> / <a href="../../../../../README.html">sap.ui.commons</a> / <a href="../README.html">sap/ui/commons/Carousel</a> / Carousel</p>
 <h1><del>Class: Carousel</del></h1>
 <pre class="sig"><span class="kw">import</span> Carousel <span class="kw">from</span> <span class="str">"sap/ui/commons/Carousel"</span>;</pre>
+<p>Carousel holds multiple controls and displays them vertically or horizontally next to each other. You
+can define how many content items should be displayed at once or let the Carousel determine that for
+you. Navigation is done through buttons or keys.</p>
 <h2>Since</h2>
 <p>1.8.0</p>
 <h2>Deprecated</h2>
 <p>(since 1.38) - Instead, use the <code>sap.m.Carousel</code> control.</p>
-<p>Carousel holds multiple controls and displays them vertically or horizontally next to each other. You
-can define how many content items should be displayed at once or let the Carousel determine that for
-you. Navigation is done through buttons or keys.</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></li>
@@ -177,26 +177,26 @@ of the possible properties of <code>oBindingInfo</code>.</p>
 <blockquote>
 <p><strong>getFirstVisibleIndex</strong>(): <code>number</code></p>
 </blockquote>
+<p>Gets current value of property #getFirstVisibleIndex firstVisibleIndex.</p>
+<p>The index of the element in the content aggreation which is displayed first on rendering</p>
+<p>Default value is <code>0</code>.</p>
 <h4>Returns</h4>
 <p><code>number</code></p>
 <p>Value of property <code>firstVisibleIndex</code></p>
 <h4>Since</h4>
 <p>1.11.0</p>
-<p>Gets current value of property #getFirstVisibleIndex firstVisibleIndex.</p>
-<p>The index of the element in the content aggreation which is displayed first on rendering</p>
-<p>Default value is <code>0</code>.</p>
 <hr>
 <h3><del>getFocusDomRef()</del></h3>
 <blockquote>
 <p><strong>getFocusDomRef</strong>(): <code>Element</code></p>
 </blockquote>
+<p>Returns the DOM Element that should get the focus.</p>
+<p>To be overwritten by the specific control method.</p>
 <h4>Returns</h4>
 <p><code>Element</code></p>
 <p>Returns the DOM Element that should get the focus</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Returns the DOM Element that should get the focus.</p>
-<p>To be overwritten by the specific control method.</p>
 <h4>Overrides</h4>
 <p><a href="../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a>.<a href="../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html#getfocusdomref"><code>getFocusDomRef</code></a></p>
 <hr>
@@ -381,6 +381,8 @@ is inserted at the last position</p>
 <blockquote>
 <p><strong>setFirstVisibleIndex</strong>(<code>iFirstVisibleIndex</code>): <code>this</code></p>
 </blockquote>
+<p>Setter for property <code>firstVisibleIndex</code>.</p>
+<p>Default value is <code>0</code></p>
 <h4>Parameters</h4>
 <h5>iFirstVisibleIndex</h5>
 <p><code>number</code></p>
@@ -390,8 +392,6 @@ is inserted at the last position</p>
 <p><code>this</code> to allow method chaining</p>
 <h4>Since</h4>
 <p>1.11.0</p>
-<p>Setter for property <code>firstVisibleIndex</code>.</p>
-<p>Default value is <code>0</code></p>
 <hr>
 <h3><del>setHandleSize()</del></h3>
 <blockquote>
@@ -546,6 +546,6 @@ used by this class</p>
 <p><a href="../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a>.<a href="../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html#getmetadata-1"><code>getMetadata</code></a></p>
 <hr>
 
-<footer>Generated from <code>@openui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@openui5/types@1.120.46</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

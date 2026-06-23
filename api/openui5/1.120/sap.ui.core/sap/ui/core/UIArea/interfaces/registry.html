@@ -2,12 +2,12 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>Interface: registry — OpenUI5 TypeScript API</title>
-<meta name="description" content="Interface: registry — OpenUI5 TypeScript API Reference (1.120.0)">
+<title>~~Interface: registry~~ — OpenUI5 TypeScript API</title>
+<meta name="description" content="~~Interface: registry~~ — OpenUI5 TypeScript API Reference (1.120.46)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/openui5/1.120/sap.ui.core/sap/ui/core/UIArea/interfaces/registry.html">
-<meta property="og:title" content="Interface: registry — OpenUI5 TypeScript API">
-<meta property="og:description" content="Interface: registry — OpenUI5 TypeScript API Reference (1.120.0)">
+<meta property="og:title" content="~~Interface: registry~~ — OpenUI5 TypeScript API">
+<meta property="og:description" content="~~Interface: registry~~ — OpenUI5 TypeScript API Reference (1.120.46)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/openui5/1.120/sap.ui.core/sap/ui/core/UIArea/interfaces/registry.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,22 +33,30 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../index.html">OpenUI5 API</a> › <a href="../../../../../../sap.ui.core/README.html">sap.ui.core</a> › sap › ui › core › <a href="../../../../../../sap.ui.core/sap/ui/core/UIArea/README.html">UIArea</a> › interfaces</nav>
-<p><a href="../../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.0)</strong></a></p>
+<p><a href="../../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.46)</strong></a></p>
 <hr>
-<p><a href="../../../../../../README.html">OpenUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../README.html">sap.ui.core</a> / <a href="../README.html">sap/ui/core/UIArea</a> / registry</p>
-<h1>Interface: registry</h1>
+<p><a href="../../../../../../README.html">OpenUI5 TypeScript API (1.120.46)</a> / <a href="../../../../../README.html">sap.ui.core</a> / <a href="../README.html">sap/ui/core/UIArea</a> / registry</p>
+<h1><del>Interface: registry</del></h1>
 <pre class="sig"><span class="kw">import</span> { registry } <span class="kw">from</span> <span class="str">"sap/ui/core/UIArea"</span>;</pre>
+<p>Registry of all <code>sap.ui.core.UIArea</code>s that currently exist.</p>
 <h2>Since</h2>
 <p>1.107</p>
-<p>Registry of all <code>sap.ui.core.Element</code>s that currently exist.</p>
+<h2>Deprecated</h2>
+<p>(since 1.120) - without a replacement. Applications should not be interested in the set of
+<code>UIArea</code>s. They should only assign controls to them, by using sap.ui.core.Control.prototype.placeAt Control.prototype.placeAt
+or use the API of a <code>UIArea</code> as reachable via sap.ui.core.Control.prototype.getUIArea Control.prototype.getUIArea.</p>
 <h2>Properties</h2>
-<h3>size</h3>
+<h3><del>size</del></h3>
 <blockquote>
 <p><strong>size</strong>: <code>number</code></p>
 </blockquote>
 <p>Number of existing UIAreas.</p>
+<h4>Deprecated</h4>
+<p>(since 1.120) - without a replacement. Applications should not be interested in the set of
+<code>UIArea</code>s. They should only assign controls to them, by using sap.ui.core.Control.prototype.placeAt Control.prototype.placeAt
+or use the API of a <code>UIArea</code> as reachable via sap.ui.core.Control.prototype.getUIArea Control.prototype.getUIArea.</p>
 <h2>Methods</h2>
-<h3>all()</h3>
+<h3><del>all()</del></h3>
 <blockquote>
 <p><strong>all</strong>(): <code>Record</code>&lt;<a href="../../library/type-aliases/ID.html"><code>ID</code></a>, <a href="../classes/UIArea.html"><code>UIArea</code></a>&gt;</p>
 </blockquote>
@@ -61,8 +69,12 @@ methods of <code>Object.prototype</code>, e.g. <code>toString</code> etc.</p>
 <h4>Returns</h4>
 <p><code>Record</code>&lt;<a href="../../library/type-aliases/ID.html"><code>ID</code></a>, <a href="../classes/UIArea.html"><code>UIArea</code></a>&gt;</p>
 <p>Object with all UIAreas, keyed by their ID</p>
+<h4>Deprecated</h4>
+<p>(since 1.120) - without a replacement. Applications should not be interested in the set of
+all <code>UIArea</code>s. They should only assign controls to them, by using sap.ui.core.Control.prototype.placeAt Control.prototype.placeAt
+or use the API of a <code>UIArea</code> as reachable via sap.ui.core.Control.prototype.getUIArea Control.prototype.getUIArea.</p>
 <hr>
-<h3>filter()</h3>
+<h3><del>filter()</del></h3>
 <blockquote>
 <p><strong>filter</strong>(<code>callback</code>, <code>thisArg?</code>): <a href="../classes/UIArea.html"><code>UIArea</code></a>[]</p>
 </blockquote>
@@ -93,8 +105,12 @@ of UI5).</p>
 <p><a href="../classes/UIArea.html"><code>UIArea</code></a>[]</p>
 <p>Array of UIAreas matching the predicate; order is undefined and might change in newer versions
 of UI5</p>
+<h4>Deprecated</h4>
+<p>(since 1.120) - without a replacement. Applications should not be interested in the set of
+all <code>UIArea</code>s. They should only assign controls to them, by using sap.ui.core.Control.prototype.placeAt Control.prototype.placeAt
+or use the API of a <code>UIArea</code> as reachable via sap.ui.core.Control.prototype.getUIArea Control.prototype.getUIArea.</p>
 <hr>
-<h3>forEach()</h3>
+<h3><del>forEach()</del></h3>
 <blockquote>
 <p><strong>forEach</strong>(<code>callback</code>, <code>thisArg?</code>): <code>void</code></p>
 </blockquote>
@@ -122,8 +138,12 @@ was bound to some context object, that object wins over the given <code>thisArg<
 <p>Context object to provide as <code>this</code> in each call of <code>callback</code></p>
 <h4>Returns</h4>
 <p><code>void</code></p>
+<h4>Deprecated</h4>
+<p>(since 1.120) - without a replacement. Applications should not be interested in the set of
+all <code>UIArea</code>s. They should only assign controls to them, by using sap.ui.core.Control.prototype.placeAt Control.prototype.placeAt
+or use the API of a <code>UIArea</code> as reachable via sap.ui.core.Control.prototype.getUIArea Control.prototype.getUIArea.</p>
 <hr>
-<h3>get()</h3>
+<h3><del>get()</del></h3>
 <blockquote>
 <p><strong>get</strong>(<code>id</code>): <a href="../classes/UIArea.html"><code>UIArea</code></a></p>
 </blockquote>
@@ -137,7 +157,11 @@ returned.</p>
 <h4>Returns</h4>
 <p><a href="../classes/UIArea.html"><code>UIArea</code></a></p>
 <p>UIArea with the given ID or <code>undefined</code></p>
+<h4>Deprecated</h4>
+<p>(since 1.120) - without a replacement. Applications should not be interested in a certain
+<code>UIArea</code>. They should only assign controls to them, by using sap.ui.core.Control.prototype.placeAt Control.prototype.placeAt
+or use the API of a <code>UIArea</code> as reachable via sap.ui.core.Control.prototype.getUIArea Control.prototype.getUIArea.</p>
 
-<footer>Generated from <code>@openui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@openui5/types@1.120.46</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

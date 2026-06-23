@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>~~Class: DataSet~~ — OpenUI5 TypeScript API</title>
-<meta name="description" content="~~Class: DataSet~~ — OpenUI5 TypeScript API Reference (1.120.0)">
+<meta name="description" content="~~Class: DataSet~~ — OpenUI5 TypeScript API Reference (1.120.46)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/openui5/1.120/sap.ui.ux3/sap/ui/ux3/DataSet/classes/DataSet.html">
 <meta property="og:title" content="~~Class: DataSet~~ — OpenUI5 TypeScript API">
-<meta property="og:description" content="~~Class: DataSet~~ — OpenUI5 TypeScript API Reference (1.120.0)">
+<meta property="og:description" content="~~Class: DataSet~~ — OpenUI5 TypeScript API Reference (1.120.46)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/openui5/1.120/sap.ui.ux3/sap/ui/ux3/DataSet/classes/DataSet.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,14 +33,14 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../index.html">OpenUI5 API</a> › <a href="../../../../../../sap.ui.ux3/README.html">sap.ui.ux3</a> › sap › ui › ux3 › <a href="../../../../../../sap.ui.ux3/sap/ui/ux3/DataSet/README.html">DataSet</a> › classes</nav>
-<p><a href="../../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.0)</strong></a></p>
+<p><a href="../../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.46)</strong></a></p>
 <hr>
-<p><a href="../../../../../../README.html">OpenUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../README.html">sap.ui.ux3</a> / <a href="../README.html">sap/ui/ux3/DataSet</a> / DataSet</p>
+<p><a href="../../../../../../README.html">OpenUI5 TypeScript API (1.120.46)</a> / <a href="../../../../../README.html">sap.ui.ux3</a> / <a href="../README.html">sap/ui/ux3/DataSet</a> / DataSet</p>
 <h1><del>Class: DataSet</del></h1>
 <pre class="sig"><span class="kw">import</span> DataSet <span class="kw">from</span> <span class="str">"sap/ui/ux3/DataSet"</span>;</pre>
+<p>DataSet</p>
 <h2>Deprecated</h2>
 <p>(since 1.38) - Use a container by choice from the sap.m library, instead.</p>
-<p>DataSet</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></li>
@@ -86,21 +86,21 @@ of the syntax of the settings object.</p>
 <blockquote>
 <p><strong>_rerenderFilter</strong>(): <code>void</code></p>
 </blockquote>
+<p>Rerendering of the FilterArea</p>
 <h4>Returns</h4>
 <p><code>void</code></p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Rerendering of the FilterArea</p>
 <hr>
 <h3><del>_rerenderToolbar()</del></h3>
 <blockquote>
 <p><strong>_rerenderToolbar</strong>(): <code>void</code></p>
 </blockquote>
+<p>Rerendering of the Toolbar</p>
 <h4>Returns</h4>
 <p><code>void</code></p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Rerendering of the Toolbar</p>
 <hr>
 <h3><del>addFilter()</del></h3>
 <blockquote>
@@ -266,6 +266,7 @@ of the possible properties of <code>oBindingInfo</code>.</p>
 <blockquote>
 <p><strong>createViewSwitch</strong>(<code>oView</code>, <code>iIndex</code>): <code>any</code></p>
 </blockquote>
+<p>Creates a view switch button</p>
 <h4>Parameters</h4>
 <h5>oView</h5>
 <p><code>any</code></p>
@@ -278,7 +279,6 @@ of the possible properties of <code>oBindingInfo</code>.</p>
 <p>viewSwitch instance</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Creates a view switch button</p>
 <hr>
 <h3><del>destroyFilter()</del></h3>
 <blockquote>
@@ -346,6 +346,7 @@ this <code>sap.ui.ux3.DataSet</code>.</p>
 <blockquote>
 <p><strong>fireSearch</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
+<p>Fires event #event:search search to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/DataSet$SearchEventParameters.html"><code>DataSet$SearchEventParameters</code></a></p>
@@ -355,12 +356,12 @@ this <code>sap.ui.ux3.DataSet</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Fires event #event:search search to attached listeners.</p>
 <hr>
 <h3><del>fireSelectionChanged()</del></h3>
 <blockquote>
 <p><strong>fireSelectionChanged</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
+<p>Fires event #event:selectionChanged selectionChanged to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/DataSet$SelectionChangedEventParameters.html"><code>DataSet$SelectionChangedEventParameters</code></a></p>
@@ -370,7 +371,6 @@ this <code>sap.ui.ux3.DataSet</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Fires event #event:selectionChanged selectionChanged to attached listeners.</p>
 <hr>
 <h3><del>getFilter()</del></h3>
 <blockquote>
@@ -394,12 +394,12 @@ this <code>sap.ui.ux3.DataSet</code>.</p>
 <blockquote>
 <p><strong>getLeadSelection</strong>(): <code>number</code></p>
 </blockquote>
+<p>Returns the LeadSelection index</p>
 <h4>Returns</h4>
 <p><code>number</code></p>
 <p>selected index</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Returns the LeadSelection index</p>
 <hr>
 <h3><del>getMultiSelect()</del></h3>
 <blockquote>
@@ -432,6 +432,7 @@ this <code>sap.ui.ux3.DataSet</code>.</p>
 <blockquote>
 <p><strong>getSelectedItemId</strong>(<code>iIndex</code>): <code>string</code></p>
 </blockquote>
+<p>Returns id of selected Item from given index</p>
 <h4>Parameters</h4>
 <h5>iIndex</h5>
 <p><code>number</code></p>
@@ -441,7 +442,6 @@ this <code>sap.ui.ux3.DataSet</code>.</p>
 <p>id of selected item</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Returns id of selected Item from given index</p>
 <hr>
 <h3><del>getSelectedView()</del></h3>
 <blockquote>
@@ -594,6 +594,7 @@ the last position</p>
 <blockquote>
 <p><strong>isSelectedIndex</strong>(<code>iIndex</code>): <code>boolean</code></p>
 </blockquote>
+<p>Returns true if iIndex is selected</p>
 <h4>Parameters</h4>
 <h5>iIndex</h5>
 <p><code>number</code></p>
@@ -603,7 +604,6 @@ the last position</p>
 <p>index selected true/false</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Returns true if iIndex is selected</p>
 <hr>
 <h3><del>removeAllFilter()</del></h3>
 <blockquote>
@@ -689,6 +689,7 @@ the last position</p>
 <blockquote>
 <p><strong>setLeadSelection</strong>(<code>iIIndex</code>): <code>void</code></p>
 </blockquote>
+<p>Set the LeadSelection index</p>
 <h4>Parameters</h4>
 <h5>iIIndex</h5>
 <p><code>number</code></p>
@@ -697,7 +698,6 @@ the last position</p>
 <p><code>void</code></p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Set the LeadSelection index</p>
 <hr>
 <h3><del>setMultiSelect()</del></h3>
 <blockquote>
@@ -821,6 +821,6 @@ used by this class</p>
 <p><a href="../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a>.<a href="../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html#getmetadata-1"><code>getMetadata</code></a></p>
 <hr>
 
-<footer>Generated from <code>@openui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@openui5/types@1.120.46</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

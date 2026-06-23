@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>~~Class: P13nDialog~~ — OpenUI5 TypeScript API</title>
-<meta name="description" content="~~Class: P13nDialog~~ — OpenUI5 TypeScript API Reference (1.120.0)">
+<meta name="description" content="~~Class: P13nDialog~~ — OpenUI5 TypeScript API Reference (1.120.46)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/openui5/1.120/sap.m/sap/m/P13nDialog/classes/P13nDialog.html">
 <meta property="og:title" content="~~Class: P13nDialog~~ — OpenUI5 TypeScript API">
-<meta property="og:description" content="~~Class: P13nDialog~~ — OpenUI5 TypeScript API Reference (1.120.0)">
+<meta property="og:description" content="~~Class: P13nDialog~~ — OpenUI5 TypeScript API Reference (1.120.46)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/openui5/1.120/sap.m/sap/m/P13nDialog/classes/P13nDialog.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,18 +33,18 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../index.html">OpenUI5 API</a> › <a href="../../../../../sap.m/README.html">sap.m</a> › sap › m › <a href="../../../../../sap.m/sap/m/P13nDialog/README.html">P13nDialog</a> › classes</nav>
-<p><a href="../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.0)</strong></a></p>
+<p><a href="../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.46)</strong></a></p>
 <hr>
-<p><a href="../../../../../README.html">OpenUI5 TypeScript API (1.120.0)</a> / <a href="../../../../README.html">sap.m</a> / <a href="../README.html">sap/m/P13nDialog</a> / P13nDialog</p>
+<p><a href="../../../../../README.html">OpenUI5 TypeScript API (1.120.46)</a> / <a href="../../../../README.html">sap.m</a> / <a href="../README.html">sap/m/P13nDialog</a> / P13nDialog</p>
 <h1><del>Class: P13nDialog</del></h1>
 <pre class="sig"><span class="kw">import</span> P13nDialog <span class="kw">from</span> <span class="str">"sap/m/P13nDialog"</span>;</pre>
+<p>The P13nDialog control provides a dialog that contains one or more panels. On each of the panels, one
+or more changes with regards to a table can be processed. For example, a panel to set a column to invisible,
+change the order of the columns or a panel to sort or filter tables.</p>
 <h2>Since</h2>
 <p>1.26.0</p>
 <h2>Deprecated</h2>
 <p>(since 1.98) - Use the sap.m.p13n.Popup instead.</p>
-<p>The P13nDialog control provides a dialog that contains one or more panels. On each of the panels, one
-or more changes with regards to a table can be processed. For example, a panel to set a column to invisible,
-change the order of the columns or a panel to sort or filter tables.</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../Dialog/classes/Dialog.html"><code>Dialog</code></a></li>
@@ -308,6 +308,7 @@ of the possible properties of <code>oBindingInfo</code>.</p>
 <blockquote>
 <p><strong>fireCancel</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
+<p>Fires event #event:cancel cancel to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><code>object</code></p>
@@ -317,12 +318,12 @@ of the possible properties of <code>oBindingInfo</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Fires event #event:cancel cancel to attached listeners.</p>
 <hr>
 <h3><del>fireOk()</del></h3>
 <blockquote>
 <p><strong>fireOk</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
+<p>Fires event #event:ok ok to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><code>object</code></p>
@@ -332,12 +333,12 @@ of the possible properties of <code>oBindingInfo</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Fires event #event:ok ok to attached listeners.</p>
 <hr>
 <h3><del>fireReset()</del></h3>
 <blockquote>
 <p><strong>fireReset</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
+<p>Fires event #event:reset reset to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><code>object</code></p>
@@ -347,7 +348,6 @@ of the possible properties of <code>oBindingInfo</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Fires event #event:reset reset to attached listeners.</p>
 <hr>
 <h3><del>getInitialVisiblePanelType()</del></h3>
 <blockquote>
@@ -388,15 +388,15 @@ data must be reset.</p>
 <blockquote>
 <p><strong>getShowResetEnabled</strong>(): <code>boolean</code></p>
 </blockquote>
+<p>Gets current value of property #getShowResetEnabled showResetEnabled.</p>
+<p>This property determines whether the &#39;Restore&#39; button is enabled and is taken into account only if <code>showReset</code>
+is set to <code>true</code>.</p>
+<p>Default value is <code>false</code>.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>Value of property <code>showResetEnabled</code></p>
 <h4>Since</h4>
 <p>1.36.0</p>
-<p>Gets current value of property #getShowResetEnabled showResetEnabled.</p>
-<p>This property determines whether the &#39;Restore&#39; button is enabled and is taken into account only if <code>showReset</code>
-is set to <code>true</code>.</p>
-<p>Default value is <code>false</code>.</p>
 <hr>
 <h3><del>getValidationExecutor()</del></h3>
 <blockquote>
@@ -513,6 +513,11 @@ data must be reset.</p>
 <blockquote>
 <p><strong>setShowResetEnabled</strong>(<code>bShowResetEnabled?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getShowResetEnabled showResetEnabled.</p>
+<p>This property determines whether the &#39;Restore&#39; button is enabled and is taken into account only if <code>showReset</code>
+is set to <code>true</code>.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>false</code>.</p>
 <h4>Parameters</h4>
 <h5>bShowResetEnabled?</h5>
 <p><code>boolean</code></p>
@@ -522,11 +527,6 @@ data must be reset.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.36.0</p>
-<p>Sets a new value for property #getShowResetEnabled showResetEnabled.</p>
-<p>This property determines whether the &#39;Restore&#39; button is enabled and is taken into account only if <code>showReset</code>
-is set to <code>true</code>.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>false</code>.</p>
 <hr>
 <h3><del>setValidationExecutor()</del></h3>
 <blockquote>
@@ -592,6 +592,6 @@ used by this class</p>
 <p><a href="../../Dialog/classes/Dialog.html"><code>Dialog</code></a>.<a href="../../Dialog/classes/Dialog.html#getmetadata-1"><code>getMetadata</code></a></p>
 <hr>
 
-<footer>Generated from <code>@openui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@openui5/types@1.120.46</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

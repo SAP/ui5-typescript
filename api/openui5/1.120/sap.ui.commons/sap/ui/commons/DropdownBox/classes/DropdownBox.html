@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>~~Class: DropdownBox~~ — OpenUI5 TypeScript API</title>
-<meta name="description" content="~~Class: DropdownBox~~ — OpenUI5 TypeScript API Reference (1.120.0)">
+<meta name="description" content="~~Class: DropdownBox~~ — OpenUI5 TypeScript API Reference (1.120.46)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/openui5/1.120/sap.ui.commons/sap/ui/commons/DropdownBox/classes/DropdownBox.html">
 <meta property="og:title" content="~~Class: DropdownBox~~ — OpenUI5 TypeScript API">
-<meta property="og:description" content="~~Class: DropdownBox~~ — OpenUI5 TypeScript API Reference (1.120.0)">
+<meta property="og:description" content="~~Class: DropdownBox~~ — OpenUI5 TypeScript API Reference (1.120.46)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/openui5/1.120/sap.ui.commons/sap/ui/commons/DropdownBox/classes/DropdownBox.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,15 +33,15 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../index.html">OpenUI5 API</a> › <a href="../../../../../../sap.ui.commons/README.html">sap.ui.commons</a> › sap › ui › commons › <a href="../../../../../../sap.ui.commons/sap/ui/commons/DropdownBox/README.html">DropdownBox</a> › classes</nav>
-<p><a href="../../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.0)</strong></a></p>
+<p><a href="../../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.46)</strong></a></p>
 <hr>
-<p><a href="../../../../../../README.html">OpenUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../README.html">sap.ui.commons</a> / <a href="../README.html">sap/ui/commons/DropdownBox</a> / DropdownBox</p>
+<p><a href="../../../../../../README.html">OpenUI5 TypeScript API (1.120.46)</a> / <a href="../../../../../README.html">sap.ui.commons</a> / <a href="../README.html">sap/ui/commons/DropdownBox</a> / DropdownBox</p>
 <h1><del>Class: DropdownBox</del></h1>
 <pre class="sig"><span class="kw">import</span> DropdownBox <span class="kw">from</span> <span class="str">"sap/ui/commons/DropdownBox"</span>;</pre>
-<h2>Deprecated</h2>
-<p>(since 1.38) - replaced by sap.m.ComboBox</p>
 <p>The control provides a field that allows end users to an entry out of a list of pre-defined items. The
 choosable items can be provided in the form of a complete <code>ListBox</code>, single <code>ListItems</code>.</p>
+<h2>Deprecated</h2>
+<p>(since 1.38) - replaced by sap.m.ComboBox</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../ComboBox/classes/ComboBox.html"><code>ComboBox</code></a></li>
@@ -157,6 +157,7 @@ of the DropdownBox have changed. Otherwise invalid items may appear in the histo
 <blockquote>
 <p><strong>fireSearchHelp</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
+<p>Fires event #event:searchHelp searchHelp to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/DropdownBox$SearchHelpEventParameters.html"><code>DropdownBox$SearchHelpEventParameters</code></a></p>
@@ -166,7 +167,6 @@ of the DropdownBox have changed. Otherwise invalid items may appear in the histo
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Fires event #event:searchHelp searchHelp to attached listeners.</p>
 <hr>
 <h3><del>getMaxHistoryItems()</del></h3>
 <blockquote>
@@ -238,6 +238,7 @@ access (if needed)</p>
 <blockquote>
 <p><strong>onAfterRendering</strong>(<code>oEvent</code>): <code>void</code></p>
 </blockquote>
+<p>Ensure that handed in ListBoxes are taken from the visible UI immediately.</p>
 <h4>Parameters</h4>
 <h5>oEvent</h5>
 <p><code>Event</code></p>
@@ -246,7 +247,6 @@ access (if needed)</p>
 <p><code>void</code></p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Ensure that handed in ListBoxes are taken from the visible UI immediately.</p>
 <h4>Overrides</h4>
 <p><a href="../../ComboBox/classes/ComboBox.html"><code>ComboBox</code></a>.<a href="../../ComboBox/classes/ComboBox.html#onafterrendering"><code>onAfterRendering</code></a></p>
 <hr>
@@ -254,6 +254,7 @@ access (if needed)</p>
 <blockquote>
 <p><strong>onclick</strong>(<code>oEvent</code>): <code>void</code></p>
 </blockquote>
+<p>Handle the click event happening in the DropdownBox</p>
 <h4>Parameters</h4>
 <h5>oEvent</h5>
 <p><code>Event</code></p>
@@ -262,12 +263,12 @@ access (if needed)</p>
 <p><code>void</code></p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Handle the click event happening in the DropdownBox</p>
 <hr>
 <h3><del>onfocusin()</del></h3>
 <blockquote>
 <p><strong>onfocusin</strong>(<code>oEvent</code>): <code>void</code></p>
 </blockquote>
+<p>Handle focusin event Ensures the text gets selected when focus gets into the field</p>
 <h4>Parameters</h4>
 <h5>oEvent</h5>
 <p><code>Event</code></p>
@@ -276,7 +277,6 @@ access (if needed)</p>
 <p><code>void</code></p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Handle focusin event Ensures the text gets selected when focus gets into the field</p>
 <h4>Overrides</h4>
 <p><a href="../../ComboBox/classes/ComboBox.html"><code>ComboBox</code></a>.<a href="../../ComboBox/classes/ComboBox.html#onfocusin"><code>onfocusin</code></a></p>
 <hr>
@@ -284,6 +284,7 @@ access (if needed)</p>
 <blockquote>
 <p><strong>onkeydown</strong>(<code>oEvent</code>): <code>void</code></p>
 </blockquote>
+<p>Handle keydown event</p>
 <h4>Parameters</h4>
 <h5>oEvent</h5>
 <p><code>Event</code></p>
@@ -292,12 +293,12 @@ access (if needed)</p>
 <p><code>void</code></p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Handle keydown event</p>
 <hr>
 <h3><del>onkeypress()</del></h3>
 <blockquote>
 <p><strong>onkeypress</strong>(<code>oEvent</code>): <code>void</code></p>
 </blockquote>
+<p>Handle keypress event</p>
 <h4>Parameters</h4>
 <h5>oEvent</h5>
 <p><code>Event</code></p>
@@ -306,12 +307,13 @@ access (if needed)</p>
 <p><code>void</code></p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Handle keypress event</p>
 <hr>
 <h3><del>onkeyup()</del></h3>
 <blockquote>
 <p><strong>onkeyup</strong>(<code>oEvent</code>): <code>void</code></p>
 </blockquote>
+<p>Handle keyup event This must only be considered if it is from Backspace-key in IE or after paste. In
+case there is a keyup with a tab this results from being entered via tabbing and can be ignored, too.</p>
 <h4>Parameters</h4>
 <h5>oEvent</h5>
 <p><code>Event</code></p>
@@ -320,8 +322,6 @@ access (if needed)</p>
 <p><code>void</code></p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Handle keyup event This must only be considered if it is from Backspace-key in IE or after paste. In
-case there is a keyup with a tab this results from being entered via tabbing and can be ignored, too.</p>
 <h4>Overrides</h4>
 <p><a href="../../ComboBox/classes/ComboBox.html"><code>ComboBox</code></a>.<a href="../../ComboBox/classes/ComboBox.html#onkeyup"><code>onkeyup</code></a></p>
 <hr>
@@ -329,6 +329,7 @@ case there is a keyup with a tab this results from being entered via tabbing and
 <blockquote>
 <p><strong>onpaste</strong>(<code>oEvent</code>): <code>void</code></p>
 </blockquote>
+<p>Handle paste event</p>
 <h4>Parameters</h4>
 <h5>oEvent</h5>
 <p><code>Event</code></p>
@@ -337,12 +338,13 @@ case there is a keyup with a tab this results from being entered via tabbing and
 <p><code>void</code></p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Handle paste event</p>
 <hr>
 <h3><del>onsapdelete()</del></h3>
 <blockquote>
 <p><strong>onsapdelete</strong>(<code>oEvent</code>): <code>void</code></p>
 </blockquote>
+<p>Handle pseudo event onsapdelete. If triggered with open dropdown and current item provided by history
+feature, removes the selected item from this instance&#39;s history.</p>
 <h4>Parameters</h4>
 <h5>oEvent</h5>
 <p><code>Event</code></p>
@@ -351,13 +353,12 @@ case there is a keyup with a tab this results from being entered via tabbing and
 <p><code>void</code></p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Handle pseudo event onsapdelete. If triggered with open dropdown and current item provided by history
-feature, removes the selected item from this instance&#39;s history.</p>
 <hr>
 <h3><del>onsaphome()</del></h3>
 <blockquote>
 <p><strong>onsaphome</strong>(<code>oEvent</code>): <code>void</code></p>
 </blockquote>
+<p>Handle pseudo event onsaphome</p>
 <h4>Parameters</h4>
 <h5>oEvent</h5>
 <p><code>Event</code></p>
@@ -366,12 +367,12 @@ feature, removes the selected item from this instance&#39;s history.</p>
 <p><code>void</code></p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Handle pseudo event onsaphome</p>
 <hr>
 <h3><del>onsapleft()</del></h3>
 <blockquote>
 <p><strong>onsapleft</strong>(<code>oEvent</code>): <code>void</code></p>
 </blockquote>
+<p>Move the cursor one step to the left (and adapt selection)</p>
 <h4>Parameters</h4>
 <h5>oEvent</h5>
 <p><code>Event</code></p>
@@ -380,12 +381,12 @@ feature, removes the selected item from this instance&#39;s history.</p>
 <p><code>void</code></p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Move the cursor one step to the left (and adapt selection)</p>
 <hr>
 <h3><del>onsapright()</del></h3>
 <blockquote>
 <p><strong>onsapright</strong>(<code>oEvent</code>): <code>void</code></p>
 </blockquote>
+<p>Move the cursor one step to the right (and adapt selection)</p>
 <h4>Parameters</h4>
 <h5>oEvent</h5>
 <p><code>Event</code></p>
@@ -394,12 +395,12 @@ feature, removes the selected item from this instance&#39;s history.</p>
 <p><code>void</code></p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Move the cursor one step to the right (and adapt selection)</p>
 <hr>
 <h3><del>onsapshow()</del></h3>
 <blockquote>
 <p><strong>onsapshow</strong>(<code>oEvent</code>): <code>void</code></p>
 </blockquote>
+<p>Handle sapshow pseudo events on the control</p>
 <h4>Parameters</h4>
 <h5>oEvent</h5>
 <p><code>Event</code></p>
@@ -408,7 +409,6 @@ feature, removes the selected item from this instance&#39;s history.</p>
 <p><code>void</code></p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Handle sapshow pseudo events on the control</p>
 <h4>Overrides</h4>
 <p><a href="../../ComboBox/classes/ComboBox.html"><code>ComboBox</code></a>.<a href="../../ComboBox/classes/ComboBox.html#onsapshow"><code>onsapshow</code></a></p>
 <hr>
@@ -416,6 +416,7 @@ feature, removes the selected item from this instance&#39;s history.</p>
 <blockquote>
 <p><strong>onselect</strong>(<code>oEvent</code>): <code>void</code></p>
 </blockquote>
+<p>Handle the select event happening in the DropdownBox</p>
 <h4>Parameters</h4>
 <h5>oEvent</h5>
 <p><code>Event</code></p>
@@ -424,7 +425,6 @@ feature, removes the selected item from this instance&#39;s history.</p>
 <p><code>void</code></p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Handle the select event happening in the DropdownBox</p>
 <hr>
 <h3><del>setMaxHistoryItems()</del></h3>
 <blockquote>
@@ -549,6 +549,6 @@ used by this class</p>
 <p><a href="../../ComboBox/classes/ComboBox.html"><code>ComboBox</code></a>.<a href="../../ComboBox/classes/ComboBox.html#getmetadata-1"><code>getMetadata</code></a></p>
 <hr>
 
-<footer>Generated from <code>@openui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@openui5/types@1.120.46</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

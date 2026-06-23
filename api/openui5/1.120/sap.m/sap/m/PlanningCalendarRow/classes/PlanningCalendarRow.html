@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Class: PlanningCalendarRow — OpenUI5 TypeScript API</title>
-<meta name="description" content="Class: PlanningCalendarRow — OpenUI5 TypeScript API Reference (1.120.0)">
+<meta name="description" content="Class: PlanningCalendarRow — OpenUI5 TypeScript API Reference (1.120.46)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/openui5/1.120/sap.m/sap/m/PlanningCalendarRow/classes/PlanningCalendarRow.html">
 <meta property="og:title" content="Class: PlanningCalendarRow — OpenUI5 TypeScript API">
-<meta property="og:description" content="Class: PlanningCalendarRow — OpenUI5 TypeScript API Reference (1.120.0)">
+<meta property="og:description" content="Class: PlanningCalendarRow — OpenUI5 TypeScript API Reference (1.120.46)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/openui5/1.120/sap.m/sap/m/PlanningCalendarRow/classes/PlanningCalendarRow.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,17 +33,17 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../index.html">OpenUI5 API</a> › <a href="../../../../../sap.m/README.html">sap.m</a> › sap › m › <a href="../../../../../sap.m/sap/m/PlanningCalendarRow/README.html">PlanningCalendarRow</a> › classes</nav>
-<p><a href="../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.0)</strong></a></p>
+<p><a href="../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.46)</strong></a></p>
 <hr>
-<p><a href="../../../../../README.html">OpenUI5 TypeScript API (1.120.0)</a> / <a href="../../../../README.html">sap.m</a> / <a href="../README.html">sap/m/PlanningCalendarRow</a> / PlanningCalendarRow</p>
+<p><a href="../../../../../README.html">OpenUI5 TypeScript API (1.120.46)</a> / <a href="../../../../README.html">sap.m</a> / <a href="../README.html">sap/m/PlanningCalendarRow</a> / PlanningCalendarRow</p>
 <h1>Class: PlanningCalendarRow</h1>
 <pre class="sig"><span class="kw">import</span> PlanningCalendarRow <span class="kw">from</span> <span class="str">"sap/m/PlanningCalendarRow"</span>;</pre>
-<h2>Since</h2>
-<p>1.34</p>
 <p>Represents a row in the sap.m.PlanningCalendar.</p>
 <p>This element holds the data of one row in the sap.m.PlanningCalendar. Once the header information
 (for example, person information) is assigned, the appointments are assigned. The <code>sap.m.PlanningCalendarRow</code>
 allows you to modify appointments at row level.</p>
+<h2>Since</h2>
+<p>1.34</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../../../../sap.ui.core/sap/ui/core/Element/classes/UI5Element.html"><code>UI5Element</code></a></li>
@@ -103,6 +103,7 @@ of the syntax of the settings object.</p>
 <p><strong>addHeaderContent</strong>(<code>oHeaderContent</code>): <code>this</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
+<p>Adds some headerContent to the aggregation #getHeaderContent headerContent.</p>
 <h4>Parameters</h4>
 <h5>oHeaderContent</h5>
 <p><a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></p>
@@ -114,7 +115,6 @@ of the syntax of the settings object.</p>
 <p>1.67
  (since 1.67) - providing only limited functionality. Also, the API might be changed in
 the future.</p>
-<p>Adds some headerContent to the aggregation #getHeaderContent headerContent.</p>
 <hr>
 <h3>addIntervalHeader()</h3>
 <blockquote>
@@ -133,6 +133,7 @@ the future.</p>
 <blockquote>
 <p><strong>addSpecialDate</strong>(<code>oSpecialDate</code>): <code>this</code></p>
 </blockquote>
+<p>Adds some specialDate to the aggregation #getSpecialDates specialDates.</p>
 <h4>Parameters</h4>
 <h5>oSpecialDate</h5>
 <p><a href="../../../../../sap.ui.unified/sap/ui/unified/DateTypeRange/classes/DateTypeRange.html"><code>DateTypeRange</code></a></p>
@@ -142,13 +143,17 @@ the future.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.56</p>
-<p>Adds some specialDate to the aggregation #getSpecialDates specialDates.</p>
 <hr>
 <h3>attachAppointmentCreate()</h3>
 <h4>Call Signature</h4>
 <blockquote>
 <p><strong>attachAppointmentCreate</strong>(<code>oData</code>, <code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
+<p>Attaches event handler <code>fnFunction</code> to the #event:appointmentCreate appointmentCreate event of
+this <code>sap.m.PlanningCalendarRow</code>.</p>
+<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
+otherwise it will be bound to this <code>sap.m.PlanningCalendarRow</code> itself.</p>
+<p>Fired if an appointment is created.</p>
 <h5>Parameters</h5>
 <h6>oData</h6>
 <p><code>object</code></p>
@@ -165,15 +170,15 @@ object when firing the event</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Since</h5>
 <p>1.56</p>
+<h4>Call Signature</h4>
+<blockquote>
+<p><strong>attachAppointmentCreate</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
+</blockquote>
 <p>Attaches event handler <code>fnFunction</code> to the #event:appointmentCreate appointmentCreate event of
 this <code>sap.m.PlanningCalendarRow</code>.</p>
 <p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
 otherwise it will be bound to this <code>sap.m.PlanningCalendarRow</code> itself.</p>
 <p>Fired if an appointment is created.</p>
-<h4>Call Signature</h4>
-<blockquote>
-<p><strong>attachAppointmentCreate</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
-</blockquote>
 <h5>Parameters</h5>
 <h6>fnFunction</h6>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -186,17 +191,23 @@ otherwise it will be bound to this <code>sap.m.PlanningCalendarRow</code> itself
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Since</h5>
 <p>1.56</p>
-<p>Attaches event handler <code>fnFunction</code> to the #event:appointmentCreate appointmentCreate event of
-this <code>sap.m.PlanningCalendarRow</code>.</p>
-<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
-otherwise it will be bound to this <code>sap.m.PlanningCalendarRow</code> itself.</p>
-<p>Fired if an appointment is created.</p>
 <hr>
 <h3>attachAppointmentDragEnter()</h3>
 <h4>Call Signature</h4>
 <blockquote>
 <p><strong>attachAppointmentDragEnter</strong>(<code>oData</code>, <code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
+<p>Attaches event handler <code>fnFunction</code> to the #event:appointmentDragEnter appointmentDragEnter event
+of this <code>sap.m.PlanningCalendarRow</code>.</p>
+<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
+otherwise it will be bound to this <code>sap.m.PlanningCalendarRow</code> itself.</p>
+<p>Fired if an appointment is dropped.</p>
+<p>When this event handler is attached, the default behavior of the <code>enableAppointmentsDragAndDrop</code> property
+to move appointments only within their original calendar row is no longer valid. You can move the appointment
+around all rows for which <code>enableAppointmentsDragAndDrop</code> is set to true. In this case, the drop target
+area is indicated by a placeholder. In the event handler you can call the <code>preventDefault</code> method of
+the event to prevent this default behavior. In this case, the placeholder will no longer be available
+and it will not be possible to drop the appointment in the row.</p>
 <h5>Parameters</h5>
 <h6>oData</h6>
 <p><code>object</code></p>
@@ -213,6 +224,10 @@ object when firing the event</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Since</h5>
 <p>1.56</p>
+<h4>Call Signature</h4>
+<blockquote>
+<p><strong>attachAppointmentDragEnter</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
+</blockquote>
 <p>Attaches event handler <code>fnFunction</code> to the #event:appointmentDragEnter appointmentDragEnter event
 of this <code>sap.m.PlanningCalendarRow</code>.</p>
 <p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
@@ -224,10 +239,6 @@ around all rows for which <code>enableAppointmentsDragAndDrop</code> is set to t
 area is indicated by a placeholder. In the event handler you can call the <code>preventDefault</code> method of
 the event to prevent this default behavior. In this case, the placeholder will no longer be available
 and it will not be possible to drop the appointment in the row.</p>
-<h4>Call Signature</h4>
-<blockquote>
-<p><strong>attachAppointmentDragEnter</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
-</blockquote>
 <h5>Parameters</h5>
 <h6>fnFunction</h6>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -240,23 +251,17 @@ and it will not be possible to drop the appointment in the row.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Since</h5>
 <p>1.56</p>
-<p>Attaches event handler <code>fnFunction</code> to the #event:appointmentDragEnter appointmentDragEnter event
-of this <code>sap.m.PlanningCalendarRow</code>.</p>
-<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
-otherwise it will be bound to this <code>sap.m.PlanningCalendarRow</code> itself.</p>
-<p>Fired if an appointment is dropped.</p>
-<p>When this event handler is attached, the default behavior of the <code>enableAppointmentsDragAndDrop</code> property
-to move appointments only within their original calendar row is no longer valid. You can move the appointment
-around all rows for which <code>enableAppointmentsDragAndDrop</code> is set to true. In this case, the drop target
-area is indicated by a placeholder. In the event handler you can call the <code>preventDefault</code> method of
-the event to prevent this default behavior. In this case, the placeholder will no longer be available
-and it will not be possible to drop the appointment in the row.</p>
 <hr>
 <h3>attachAppointmentDrop()</h3>
 <h4>Call Signature</h4>
 <blockquote>
 <p><strong>attachAppointmentDrop</strong>(<code>oData</code>, <code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
+<p>Attaches event handler <code>fnFunction</code> to the #event:appointmentDrop appointmentDrop event of this
+<code>sap.m.PlanningCalendarRow</code>.</p>
+<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
+otherwise it will be bound to this <code>sap.m.PlanningCalendarRow</code> itself.</p>
+<p>Fired if an appointment is dropped.</p>
 <h5>Parameters</h5>
 <h6>oData</h6>
 <p><code>object</code></p>
@@ -273,15 +278,15 @@ object when firing the event</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Since</h5>
 <p>1.54</p>
+<h4>Call Signature</h4>
+<blockquote>
+<p><strong>attachAppointmentDrop</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
+</blockquote>
 <p>Attaches event handler <code>fnFunction</code> to the #event:appointmentDrop appointmentDrop event of this
 <code>sap.m.PlanningCalendarRow</code>.</p>
 <p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
 otherwise it will be bound to this <code>sap.m.PlanningCalendarRow</code> itself.</p>
 <p>Fired if an appointment is dropped.</p>
-<h4>Call Signature</h4>
-<blockquote>
-<p><strong>attachAppointmentDrop</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
-</blockquote>
 <h5>Parameters</h5>
 <h6>fnFunction</h6>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -294,17 +299,17 @@ otherwise it will be bound to this <code>sap.m.PlanningCalendarRow</code> itself
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Since</h5>
 <p>1.54</p>
-<p>Attaches event handler <code>fnFunction</code> to the #event:appointmentDrop appointmentDrop event of this
-<code>sap.m.PlanningCalendarRow</code>.</p>
-<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
-otherwise it will be bound to this <code>sap.m.PlanningCalendarRow</code> itself.</p>
-<p>Fired if an appointment is dropped.</p>
 <hr>
 <h3>attachAppointmentResize()</h3>
 <h4>Call Signature</h4>
 <blockquote>
 <p><strong>attachAppointmentResize</strong>(<code>oData</code>, <code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
+<p>Attaches event handler <code>fnFunction</code> to the #event:appointmentResize appointmentResize event of
+this <code>sap.m.PlanningCalendarRow</code>.</p>
+<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
+otherwise it will be bound to this <code>sap.m.PlanningCalendarRow</code> itself.</p>
+<p>Fired if an appointment is resized.</p>
 <h5>Parameters</h5>
 <h6>oData</h6>
 <p><code>object</code></p>
@@ -321,15 +326,15 @@ object when firing the event</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Since</h5>
 <p>1.56</p>
+<h4>Call Signature</h4>
+<blockquote>
+<p><strong>attachAppointmentResize</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
+</blockquote>
 <p>Attaches event handler <code>fnFunction</code> to the #event:appointmentResize appointmentResize event of
 this <code>sap.m.PlanningCalendarRow</code>.</p>
 <p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
 otherwise it will be bound to this <code>sap.m.PlanningCalendarRow</code> itself.</p>
 <p>Fired if an appointment is resized.</p>
-<h4>Call Signature</h4>
-<blockquote>
-<p><strong>attachAppointmentResize</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
-</blockquote>
 <h5>Parameters</h5>
 <h6>fnFunction</h6>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -342,11 +347,6 @@ otherwise it will be bound to this <code>sap.m.PlanningCalendarRow</code> itself
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Since</h5>
 <p>1.56</p>
-<p>Attaches event handler <code>fnFunction</code> to the #event:appointmentResize appointmentResize event of
-this <code>sap.m.PlanningCalendarRow</code>.</p>
-<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
-otherwise it will be bound to this <code>sap.m.PlanningCalendarRow</code> itself.</p>
-<p>Fired if an appointment is resized.</p>
 <hr>
 <h3>destroyAppointments()</h3>
 <blockquote>
@@ -362,6 +362,7 @@ otherwise it will be bound to this <code>sap.m.PlanningCalendarRow</code> itself
 <p><strong>destroyHeaderContent</strong>(): <code>this</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
+<p>Destroys all the headerContent in the aggregation #getHeaderContent headerContent.</p>
 <h4>Returns</h4>
 <p><code>this</code></p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
@@ -369,7 +370,6 @@ otherwise it will be bound to this <code>sap.m.PlanningCalendarRow</code> itself
 <p>1.67
  (since 1.67) - providing only limited functionality. Also, the API might be changed in
 the future.</p>
-<p>Destroys all the headerContent in the aggregation #getHeaderContent headerContent.</p>
 <hr>
 <h3>destroyIntervalHeaders()</h3>
 <blockquote>
@@ -384,17 +384,20 @@ the future.</p>
 <blockquote>
 <p><strong>destroySpecialDates</strong>(): <code>this</code></p>
 </blockquote>
+<p>Destroys all the specialDates in the aggregation #getSpecialDates specialDates.</p>
 <h4>Returns</h4>
 <p><code>this</code></p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.56</p>
-<p>Destroys all the specialDates in the aggregation #getSpecialDates specialDates.</p>
 <hr>
 <h3>detachAppointmentCreate()</h3>
 <blockquote>
 <p><strong>detachAppointmentCreate</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
+<p>Detaches event handler <code>fnFunction</code> from the #event:appointmentCreate appointmentCreate event
+of this <code>sap.m.PlanningCalendarRow</code>.</p>
+<p>The passed function and listener object must match the ones used for event registration.</p>
 <h4>Parameters</h4>
 <h5>fnFunction</h5>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -407,14 +410,14 @@ the future.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.56</p>
-<p>Detaches event handler <code>fnFunction</code> from the #event:appointmentCreate appointmentCreate event
-of this <code>sap.m.PlanningCalendarRow</code>.</p>
-<p>The passed function and listener object must match the ones used for event registration.</p>
 <hr>
 <h3>detachAppointmentDragEnter()</h3>
 <blockquote>
 <p><strong>detachAppointmentDragEnter</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
+<p>Detaches event handler <code>fnFunction</code> from the #event:appointmentDragEnter appointmentDragEnter
+event of this <code>sap.m.PlanningCalendarRow</code>.</p>
+<p>The passed function and listener object must match the ones used for event registration.</p>
 <h4>Parameters</h4>
 <h5>fnFunction</h5>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -427,14 +430,14 @@ of this <code>sap.m.PlanningCalendarRow</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.56</p>
-<p>Detaches event handler <code>fnFunction</code> from the #event:appointmentDragEnter appointmentDragEnter
-event of this <code>sap.m.PlanningCalendarRow</code>.</p>
-<p>The passed function and listener object must match the ones used for event registration.</p>
 <hr>
 <h3>detachAppointmentDrop()</h3>
 <blockquote>
 <p><strong>detachAppointmentDrop</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
+<p>Detaches event handler <code>fnFunction</code> from the #event:appointmentDrop appointmentDrop event of
+this <code>sap.m.PlanningCalendarRow</code>.</p>
+<p>The passed function and listener object must match the ones used for event registration.</p>
 <h4>Parameters</h4>
 <h5>fnFunction</h5>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -447,14 +450,14 @@ event of this <code>sap.m.PlanningCalendarRow</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.54</p>
-<p>Detaches event handler <code>fnFunction</code> from the #event:appointmentDrop appointmentDrop event of
-this <code>sap.m.PlanningCalendarRow</code>.</p>
-<p>The passed function and listener object must match the ones used for event registration.</p>
 <hr>
 <h3>detachAppointmentResize()</h3>
 <blockquote>
 <p><strong>detachAppointmentResize</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
+<p>Detaches event handler <code>fnFunction</code> from the #event:appointmentResize appointmentResize event
+of this <code>sap.m.PlanningCalendarRow</code>.</p>
+<p>The passed function and listener object must match the ones used for event registration.</p>
 <h4>Parameters</h4>
 <h5>fnFunction</h5>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -467,14 +470,12 @@ this <code>sap.m.PlanningCalendarRow</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.56</p>
-<p>Detaches event handler <code>fnFunction</code> from the #event:appointmentResize appointmentResize event
-of this <code>sap.m.PlanningCalendarRow</code>.</p>
-<p>The passed function and listener object must match the ones used for event registration.</p>
 <hr>
 <h3>fireAppointmentCreate()</h3>
 <blockquote>
 <p><strong>fireAppointmentCreate</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
+<p>Fires event #event:appointmentCreate appointmentCreate to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/PlanningCalendarRow$AppointmentCreateEventParameters.html"><code>PlanningCalendarRow$AppointmentCreateEventParameters</code></a></p>
@@ -486,12 +487,14 @@ of this <code>sap.m.PlanningCalendarRow</code>.</p>
 <p>1.56</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Fires event #event:appointmentCreate appointmentCreate to attached listeners.</p>
 <hr>
 <h3>fireAppointmentDragEnter()</h3>
 <blockquote>
 <p><strong>fireAppointmentDragEnter</strong>(<code>mParameters?</code>): <code>boolean</code></p>
 </blockquote>
+<p>Fires event #event:appointmentDragEnter appointmentDragEnter to attached listeners.</p>
+<p>Listeners may prevent the default action of this event by calling the <code>preventDefault</code> method on the
+event object. The return value of this method indicates whether the default action should be executed.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/PlanningCalendarRow$AppointmentDragEnterEventParameters.html"><code>PlanningCalendarRow$AppointmentDragEnterEventParameters</code></a></p>
@@ -503,14 +506,12 @@ of this <code>sap.m.PlanningCalendarRow</code>.</p>
 <p>1.56</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Fires event #event:appointmentDragEnter appointmentDragEnter to attached listeners.</p>
-<p>Listeners may prevent the default action of this event by calling the <code>preventDefault</code> method on the
-event object. The return value of this method indicates whether the default action should be executed.</p>
 <hr>
 <h3>fireAppointmentDrop()</h3>
 <blockquote>
 <p><strong>fireAppointmentDrop</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
+<p>Fires event #event:appointmentDrop appointmentDrop to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/PlanningCalendarRow$AppointmentDropEventParameters.html"><code>PlanningCalendarRow$AppointmentDropEventParameters</code></a></p>
@@ -522,12 +523,12 @@ event object. The return value of this method indicates whether the default acti
 <p>1.54</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Fires event #event:appointmentDrop appointmentDrop to attached listeners.</p>
 <hr>
 <h3>fireAppointmentResize()</h3>
 <blockquote>
 <p><strong>fireAppointmentResize</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
+<p>Fires event #event:appointmentResize appointmentResize to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/PlanningCalendarRow$AppointmentResizeEventParameters.html"><code>PlanningCalendarRow$AppointmentResizeEventParameters</code></a></p>
@@ -539,7 +540,6 @@ event object. The return value of this method indicates whether the default acti
 <p>1.56</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Fires event #event:appointmentResize appointmentResize to attached listeners.</p>
 <hr>
 <h3>getAppointments()</h3>
 <blockquote>
@@ -556,11 +556,6 @@ rendered.</p>
 <blockquote>
 <p><strong>getEnableAppointmentsCreate</strong>(): <code>boolean</code></p>
 </blockquote>
-<h4>Returns</h4>
-<p><code>boolean</code></p>
-<p>Value of property <code>enableAppointmentsCreate</code></p>
-<h4>Since</h4>
-<p>1.56</p>
 <p>Gets current value of property #getEnableAppointmentsCreate enableAppointmentsCreate.</p>
 <p>Determines whether the appointments can be created by dragging on empty cells.</p>
 <p>See #property:enableAppointmentsResize enableAppointmentsResize for the specific points for events
@@ -568,16 +563,16 @@ snapping</p>
 <p><strong>Notes:</strong> In &quot;One month&quot; view, the appointments cannot be created on small screen (as there they are
 displayed as a list below the dates).</p>
 <p>Default value is <code>false</code>.</p>
+<h4>Returns</h4>
+<p><code>boolean</code></p>
+<p>Value of property <code>enableAppointmentsCreate</code></p>
+<h4>Since</h4>
+<p>1.56</p>
 <hr>
 <h3>getEnableAppointmentsDragAndDrop()</h3>
 <blockquote>
 <p><strong>getEnableAppointmentsDragAndDrop</strong>(): <code>boolean</code></p>
 </blockquote>
-<h4>Returns</h4>
-<p><code>boolean</code></p>
-<p>Value of property <code>enableAppointmentsDragAndDrop</code></p>
-<h4>Since</h4>
-<p>1.54</p>
 <p>Gets current value of property #getEnableAppointmentsDragAndDrop enableAppointmentsDragAndDrop.</p>
 <p>Determines whether the appointments in the row are draggable.</p>
 <p>The drag and drop interaction is visualized by a placeholder highlighting the area where the appointment
@@ -608,16 +603,16 @@ is preserved.</p>
 <p><strong>Note:</strong> In &quot;One month&quot; view, the appointments are not draggable on small screen (as there they are
 displayed as a list below the dates). Group appointments are also not draggable.</p>
 <p>Default value is <code>false</code>.</p>
+<h4>Returns</h4>
+<p><code>boolean</code></p>
+<p>Value of property <code>enableAppointmentsDragAndDrop</code></p>
+<h4>Since</h4>
+<p>1.54</p>
 <hr>
 <h3>getEnableAppointmentsResize()</h3>
 <blockquote>
 <p><strong>getEnableAppointmentsResize</strong>(): <code>boolean</code></p>
 </blockquote>
-<h4>Returns</h4>
-<p><code>boolean</code></p>
-<p>Value of property <code>enableAppointmentsResize</code></p>
-<h4>Since</h4>
-<p>1.56</p>
 <p>Gets current value of property #getEnableAppointmentsResize enableAppointmentsResize.</p>
 <p>Determines whether the appointments in the row are resizable.</p>
 <p>The resize interaction is visualized by making the appointment transparent.</p>
@@ -634,22 +629,27 @@ set to the 00:00:00 and first day of the following month.</p>
 <p><strong>Notes:</strong> In &quot;One month&quot; view, the appointments are not resizable on small screen (as there they are
 displayed as a list below the dates). Group appointments are also not resizable</p>
 <p>Default value is <code>false</code>.</p>
+<h4>Returns</h4>
+<p><code>boolean</code></p>
+<p>Value of property <code>enableAppointmentsResize</code></p>
+<h4>Since</h4>
+<p>1.56</p>
 <hr>
 <h3>getHeaderContent()</h3>
 <blockquote>
 <p><strong>getHeaderContent</strong>(): <a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a>[]</p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
+<p>Gets content of aggregation #getHeaderContent headerContent.</p>
+<p>Holds the header content of the row.</p>
+<p><strong>Note:</strong> If the <code>headerContent</code> aggregation is added, then the set icon, description, title and tooltip
+are ignored.</p>
 <h4>Returns</h4>
 <p><a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a>[]</p>
 <h4>Since</h4>
 <p>1.67
  (since 1.67) - providing only limited functionality. Also, the API might be changed in
 the future.</p>
-<p>Gets content of aggregation #getHeaderContent headerContent.</p>
-<p>Holds the header content of the row.</p>
-<p><strong>Note:</strong> If the <code>headerContent</code> aggregation is added, then the set icon, description, title and tooltip
-are ignored.</p>
 <hr>
 <h3>getIcon()</h3>
 <blockquote>
@@ -739,15 +739,15 @@ have more than one selected row in your binding.</p>
 <blockquote>
 <p><strong>getSpecialDates</strong>(): <a href="../../../../../sap.ui.unified/sap/ui/unified/DateTypeRange/classes/DateTypeRange.html"><code>DateTypeRange</code></a>[]</p>
 </blockquote>
-<h4>Returns</h4>
-<p><a href="../../../../../sap.ui.unified/sap/ui/unified/DateTypeRange/classes/DateTypeRange.html"><code>DateTypeRange</code></a>[]</p>
-<h4>Since</h4>
-<p>1.56</p>
 <p>Gets content of aggregation #getSpecialDates specialDates.</p>
 <p>Holds the special dates in the context of a row. A single date or a date range can be set.</p>
 <p><strong>Note</strong> Only date or date ranges of type <code>sap.ui.unified.CalendarDayType.NonWorking</code> will be visualized
 in the <code>PlanningCalendarRow</code>. If the aggregation is set as another type, the date or date range will
 be ignored and will not be displayed in the control.</p>
+<h4>Returns</h4>
+<p><a href="../../../../../sap.ui.unified/sap/ui/unified/DateTypeRange/classes/DateTypeRange.html"><code>DateTypeRange</code></a>[]</p>
+<h4>Since</h4>
+<p>1.56</p>
 <hr>
 <h3>getText()</h3>
 <blockquote>
@@ -788,6 +788,8 @@ and returns its index if found or -1 otherwise.</p>
 <p><strong>indexOfHeaderContent</strong>(<code>oHeaderContent</code>): <code>number</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
+<p>Checks for the provided <code>sap.ui.core.Control</code> in the aggregation #getHeaderContent headerContent.
+and returns its index if found or -1 otherwise.</p>
 <h4>Parameters</h4>
 <h5>oHeaderContent</h5>
 <p><a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></p>
@@ -799,8 +801,6 @@ and returns its index if found or -1 otherwise.</p>
 <p>1.67
  (since 1.67) - providing only limited functionality. Also, the API might be changed in
 the future.</p>
-<p>Checks for the provided <code>sap.ui.core.Control</code> in the aggregation #getHeaderContent headerContent.
-and returns its index if found or -1 otherwise.</p>
 <hr>
 <h3>indexOfIntervalHeader()</h3>
 <blockquote>
@@ -820,6 +820,8 @@ and returns its index if found or -1 otherwise.</p>
 <blockquote>
 <p><strong>indexOfSpecialDate</strong>(<code>oSpecialDate</code>): <code>number</code></p>
 </blockquote>
+<p>Checks for the provided <code>sap.ui.unified.DateTypeRange</code> in the aggregation #getSpecialDates specialDates.
+and returns its index if found or -1 otherwise.</p>
 <h4>Parameters</h4>
 <h5>oSpecialDate</h5>
 <p><a href="../../../../../sap.ui.unified/sap/ui/unified/DateTypeRange/classes/DateTypeRange.html"><code>DateTypeRange</code></a></p>
@@ -829,8 +831,6 @@ and returns its index if found or -1 otherwise.</p>
 <p>The index of the provided control in the aggregation if found, or -1 otherwise</p>
 <h4>Since</h4>
 <p>1.56</p>
-<p>Checks for the provided <code>sap.ui.unified.DateTypeRange</code> in the aggregation #getSpecialDates specialDates.
-and returns its index if found or -1 otherwise.</p>
 <hr>
 <h3>insertAppointment()</h3>
 <blockquote>
@@ -855,6 +855,7 @@ is inserted at the last position</p>
 <p><strong>insertHeaderContent</strong>(<code>oHeaderContent</code>, <code>iIndex</code>): <code>this</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
+<p>Inserts a headerContent into the aggregation #getHeaderContent headerContent.</p>
 <h4>Parameters</h4>
 <h5>oHeaderContent</h5>
 <p><a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></p>
@@ -871,7 +872,6 @@ is inserted at the last position</p>
 <p>1.67
  (since 1.67) - providing only limited functionality. Also, the API might be changed in
 the future.</p>
-<p>Inserts a headerContent into the aggregation #getHeaderContent headerContent.</p>
 <hr>
 <h3>insertIntervalHeader()</h3>
 <blockquote>
@@ -895,6 +895,7 @@ is inserted at the last position</p>
 <blockquote>
 <p><strong>insertSpecialDate</strong>(<code>oSpecialDate</code>, <code>iIndex</code>): <code>this</code></p>
 </blockquote>
+<p>Inserts a specialDate into the aggregation #getSpecialDates specialDates.</p>
 <h4>Parameters</h4>
 <h5>oSpecialDate</h5>
 <p><a href="../../../../../sap.ui.unified/sap/ui/unified/DateTypeRange/classes/DateTypeRange.html"><code>DateTypeRange</code></a></p>
@@ -909,7 +910,6 @@ is inserted at the last position</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.56</p>
-<p>Inserts a specialDate into the aggregation #getSpecialDates specialDates.</p>
 <hr>
 <h3>removeAllAppointments()</h3>
 <blockquote>
@@ -926,6 +926,8 @@ is inserted at the last position</p>
 <p><strong>removeAllHeaderContent</strong>(): <a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a>[]</p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
+<p>Removes all the controls from the aggregation #getHeaderContent headerContent.</p>
+<p>Additionally, it unregisters them from the hosting UIArea.</p>
 <h4>Returns</h4>
 <p><a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a>[]</p>
 <p>An array of the removed elements (might be empty)</p>
@@ -933,8 +935,6 @@ is inserted at the last position</p>
 <p>1.67
  (since 1.67) - providing only limited functionality. Also, the API might be changed in
 the future.</p>
-<p>Removes all the controls from the aggregation #getHeaderContent headerContent.</p>
-<p>Additionally, it unregisters them from the hosting UIArea.</p>
 <hr>
 <h3>removeAllIntervalHeaders()</h3>
 <blockquote>
@@ -950,13 +950,13 @@ the future.</p>
 <blockquote>
 <p><strong>removeAllSpecialDates</strong>(): <a href="../../../../../sap.ui.unified/sap/ui/unified/DateTypeRange/classes/DateTypeRange.html"><code>DateTypeRange</code></a>[]</p>
 </blockquote>
+<p>Removes all the controls from the aggregation #getSpecialDates specialDates.</p>
+<p>Additionally, it unregisters them from the hosting UIArea.</p>
 <h4>Returns</h4>
 <p><a href="../../../../../sap.ui.unified/sap/ui/unified/DateTypeRange/classes/DateTypeRange.html"><code>DateTypeRange</code></a>[]</p>
 <p>An array of the removed elements (might be empty)</p>
 <h4>Since</h4>
 <p>1.56</p>
-<p>Removes all the controls from the aggregation #getSpecialDates specialDates.</p>
-<p>Additionally, it unregisters them from the hosting UIArea.</p>
 <hr>
 <h3>removeAppointment()</h3>
 <blockquote>
@@ -976,6 +976,7 @@ the future.</p>
 <p><strong>removeHeaderContent</strong>(<code>vHeaderContent</code>): <a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
+<p>Removes a headerContent from the aggregation #getHeaderContent headerContent.</p>
 <h4>Parameters</h4>
 <h5>vHeaderContent</h5>
 <p><code>string</code> | <code>number</code> | <a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></p>
@@ -987,7 +988,6 @@ the future.</p>
 <p>1.67
  (since 1.67) - providing only limited functionality. Also, the API might be changed in
 the future.</p>
-<p>Removes a headerContent from the aggregation #getHeaderContent headerContent.</p>
 <hr>
 <h3>removeIntervalHeader()</h3>
 <blockquote>
@@ -1006,6 +1006,7 @@ the future.</p>
 <blockquote>
 <p><strong>removeSpecialDate</strong>(<code>vSpecialDate</code>): <a href="../../../../../sap.ui.unified/sap/ui/unified/DateTypeRange/classes/DateTypeRange.html"><code>DateTypeRange</code></a></p>
 </blockquote>
+<p>Removes a specialDate from the aggregation #getSpecialDates specialDates.</p>
 <h4>Parameters</h4>
 <h5>vSpecialDate</h5>
 <p><code>string</code> | <code>number</code> | <a href="../../../../../sap.ui.unified/sap/ui/unified/DateTypeRange/classes/DateTypeRange.html"><code>DateTypeRange</code></a></p>
@@ -1015,12 +1016,19 @@ the future.</p>
 <p>The removed specialDate or <code>null</code></p>
 <h4>Since</h4>
 <p>1.56</p>
-<p>Removes a specialDate from the aggregation #getSpecialDates specialDates.</p>
 <hr>
 <h3>setEnableAppointmentsCreate()</h3>
 <blockquote>
 <p><strong>setEnableAppointmentsCreate</strong>(<code>bEnableAppointmentsCreate?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getEnableAppointmentsCreate enableAppointmentsCreate.</p>
+<p>Determines whether the appointments can be created by dragging on empty cells.</p>
+<p>See #property:enableAppointmentsResize enableAppointmentsResize for the specific points for events
+snapping</p>
+<p><strong>Notes:</strong> In &quot;One month&quot; view, the appointments cannot be created on small screen (as there they are
+displayed as a list below the dates).</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>false</code>.</p>
 <h4>Parameters</h4>
 <h5>bEnableAppointmentsCreate?</h5>
 <p><code>boolean</code></p>
@@ -1030,28 +1038,11 @@ the future.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.56</p>
-<p>Sets a new value for property #getEnableAppointmentsCreate enableAppointmentsCreate.</p>
-<p>Determines whether the appointments can be created by dragging on empty cells.</p>
-<p>See #property:enableAppointmentsResize enableAppointmentsResize for the specific points for events
-snapping</p>
-<p><strong>Notes:</strong> In &quot;One month&quot; view, the appointments cannot be created on small screen (as there they are
-displayed as a list below the dates).</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>false</code>.</p>
 <hr>
 <h3>setEnableAppointmentsDragAndDrop()</h3>
 <blockquote>
 <p><strong>setEnableAppointmentsDragAndDrop</strong>(<code>bEnableAppointmentsDragAndDrop?</code>): <code>this</code></p>
 </blockquote>
-<h4>Parameters</h4>
-<h5>bEnableAppointmentsDragAndDrop?</h5>
-<p><code>boolean</code></p>
-<p>New value for property <code>enableAppointmentsDragAndDrop</code></p>
-<h4>Returns</h4>
-<p><code>this</code></p>
-<p>Reference to <code>this</code> in order to allow method chaining</p>
-<h4>Since</h4>
-<p>1.54</p>
 <p>Sets a new value for property #getEnableAppointmentsDragAndDrop enableAppointmentsDragAndDrop.</p>
 <p>Determines whether the appointments in the row are draggable.</p>
 <p>The drag and drop interaction is visualized by a placeholder highlighting the area where the appointment
@@ -1083,20 +1074,20 @@ is preserved.</p>
 displayed as a list below the dates). Group appointments are also not draggable.</p>
 <p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <p>Default value is <code>false</code>.</p>
+<h4>Parameters</h4>
+<h5>bEnableAppointmentsDragAndDrop?</h5>
+<p><code>boolean</code></p>
+<p>New value for property <code>enableAppointmentsDragAndDrop</code></p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<h4>Since</h4>
+<p>1.54</p>
 <hr>
 <h3>setEnableAppointmentsResize()</h3>
 <blockquote>
 <p><strong>setEnableAppointmentsResize</strong>(<code>bEnableAppointmentsResize?</code>): <code>this</code></p>
 </blockquote>
-<h4>Parameters</h4>
-<h5>bEnableAppointmentsResize?</h5>
-<p><code>boolean</code></p>
-<p>New value for property <code>enableAppointmentsResize</code></p>
-<h4>Returns</h4>
-<p><code>this</code></p>
-<p>Reference to <code>this</code> in order to allow method chaining</p>
-<h4>Since</h4>
-<p>1.56</p>
 <p>Sets a new value for property #getEnableAppointmentsResize enableAppointmentsResize.</p>
 <p>Determines whether the appointments in the row are resizable.</p>
 <p>The resize interaction is visualized by making the appointment transparent.</p>
@@ -1114,6 +1105,15 @@ set to the 00:00:00 and first day of the following month.</p>
 displayed as a list below the dates). Group appointments are also not resizable</p>
 <p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <p>Default value is <code>false</code>.</p>
+<h4>Parameters</h4>
+<h5>bEnableAppointmentsResize?</h5>
+<p><code>boolean</code></p>
+<p>New value for property <code>enableAppointmentsResize</code></p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<h4>Since</h4>
+<p>1.56</p>
 <hr>
 <h3>setIcon()</h3>
 <blockquote>
@@ -1285,6 +1285,6 @@ used by this class</p>
 <p><a href="../../../../../sap.ui.core/sap/ui/core/Element/classes/UI5Element.html"><code>UI5Element</code></a>.<a href="../../../../../sap.ui.core/sap/ui/core/Element/classes/UI5Element.html#getmetadata-1"><code>getMetadata</code></a></p>
 <hr>
 
-<footer>Generated from <code>@openui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@openui5/types@1.120.46</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

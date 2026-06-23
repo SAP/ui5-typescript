@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Interface: AnnotationHelper — OpenUI5 TypeScript API</title>
-<meta name="description" content="Interface: AnnotationHelper — OpenUI5 TypeScript API Reference (1.120.0)">
+<meta name="description" content="Interface: AnnotationHelper — OpenUI5 TypeScript API Reference (1.120.46)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/openui5/1.120/sap.ui.core/sap/ui/model/odata/v4/AnnotationHelper/interfaces/AnnotationHelper.html">
 <meta property="og:title" content="Interface: AnnotationHelper — OpenUI5 TypeScript API">
-<meta property="og:description" content="Interface: AnnotationHelper — OpenUI5 TypeScript API Reference (1.120.0)">
+<meta property="og:description" content="Interface: AnnotationHelper — OpenUI5 TypeScript API Reference (1.120.46)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/openui5/1.120/sap.ui.core/sap/ui/model/odata/v4/AnnotationHelper/interfaces/AnnotationHelper.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,45 +33,20 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../../../index.html">OpenUI5 API</a> › <a href="../../../../../../../../sap.ui.core/README.html">sap.ui.core</a> › sap › ui › model › odata › v4 › <a href="../../../../../../../../sap.ui.core/sap/ui/model/odata/v4/AnnotationHelper/README.html">AnnotationHelper</a> › interfaces</nav>
-<p><a href="../../../../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.0)</strong></a></p>
+<p><a href="../../../../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.46)</strong></a></p>
 <hr>
-<p><a href="../../../../../../../../README.html">OpenUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../../../README.html">sap.ui.core</a> / <a href="../README.html">sap/ui/model/odata/v4/AnnotationHelper</a> / AnnotationHelper</p>
+<p><a href="../../../../../../../../README.html">OpenUI5 TypeScript API (1.120.46)</a> / <a href="../../../../../../../README.html">sap.ui.core</a> / <a href="../README.html">sap/ui/model/odata/v4/AnnotationHelper</a> / AnnotationHelper</p>
 <h1>Interface: AnnotationHelper</h1>
 <pre class="sig"><span class="kw">import</span> AnnotationHelper <span class="kw">from</span> <span class="str">"sap/ui/model/odata/v4/AnnotationHelper"</span>;</pre>
-<h2>Since</h2>
-<p>1.43.0</p>
 <p>A collection of methods which help to consume OData V4 annotations in XML template views. Every context argument must belong to an sap.ui.model.odata.v4.ODataMetaModel
 instance.</p>
+<h2>Since</h2>
+<p>1.43.0</p>
 <h2>Methods</h2>
 <h3>format()</h3>
 <blockquote>
 <p><strong>format</strong>(<code>vRawValue</code>, <code>oDetails</code>): <code>string</code> | <code>Promise</code>&lt;<code>string</code>&gt;</p>
 </blockquote>
-<h4>Parameters</h4>
-<h5>vRawValue</h5>
-<p><code>any</code></p>
-<p>The raw value from the meta model</p>
-<h5>oDetails</h5>
-<p>The details object</p>
-<h6>arguments?</h6>
-<p><code>any</code>[]</p>
-<p>Optional arguments: first an optional map of binding parameters, then an optional map of format options;
-both will be added to each resulting data binding</p>
-<h6>context</h6>
-<p><a href="../../../../Context/classes/Context.html"><code>Context</code></a></p>
-<p>Points to the given raw value, that is <code>oDetails.context.getProperty(&quot;&quot;) === vRawValue</code></p>
-<h6>overload?</h6>
-<p><code>object</code></p>
-<p>The single operation overload that was targeted by annotations on an operation or a parameter; needed
-to strip off the binding parameter&#39;s name from any dynamic &quot;14.5.12 Expression edm:Path&quot; and &quot;14.5.13
-Expression edm:PropertyPath&quot; where it might be used as a first segment (since 1.71.0). This does not
-apply to annotations on a parameter (since 1.76.0).</p>
-<h4>Returns</h4>
-<p><code>string</code> | <code>Promise</code>&lt;<code>string</code>&gt;</p>
-<p>A data binding, or a fixed text, or a sequence thereof, or a <code>Promise</code> resolving with that string,
-for example if not all type information is already available</p>
-<h4>Since</h4>
-<p>1.63.0</p>
 <p>A function that helps to interpret OData V4 annotations.</p>
 <p>Unsupported or incorrect values are turned into a string nevertheless, but are indicated as such. In
 such a case, an error describing the problem is logged to the console. Proper escaping is used to make
@@ -223,11 +198,37 @@ a relative data binding, just like a &quot;14.5.12 Expression edm:Path&quot;. Th
 <p>See:
 	sap.ui.model.odata.v4.AnnotationHelper.resolve$Path
 	sap.ui.model.odata.v4.AnnotationHelper.value</p>
+<h4>Parameters</h4>
+<h5>vRawValue</h5>
+<p><code>any</code></p>
+<p>The raw value from the meta model</p>
+<h5>oDetails</h5>
+<p>The details object</p>
+<h6>arguments?</h6>
+<p><code>any</code>[]</p>
+<p>Optional arguments: first an optional map of binding parameters, then an optional map of format options;
+both will be added to each resulting data binding</p>
+<h6>context</h6>
+<p><a href="../../../../Context/classes/Context.html"><code>Context</code></a></p>
+<p>Points to the given raw value, that is <code>oDetails.context.getProperty(&quot;&quot;) === vRawValue</code></p>
+<h6>overload?</h6>
+<p><code>object</code></p>
+<p>The single operation overload that was targeted by annotations on an operation or a parameter; needed
+to strip off the binding parameter&#39;s name from any dynamic &quot;14.5.12 Expression edm:Path&quot; and &quot;14.5.13
+Expression edm:PropertyPath&quot; where it might be used as a first segment (since 1.71.0). This does not
+apply to annotations on a parameter (since 1.76.0).</p>
+<h4>Returns</h4>
+<p><code>string</code> | <code>Promise</code>&lt;<code>string</code>&gt;</p>
+<p>A data binding, or a fixed text, or a sequence thereof, or a <code>Promise</code> resolving with that string,
+for example if not all type information is already available</p>
+<h4>Since</h4>
+<p>1.63.0</p>
 <hr>
 <h3>getNavigationBinding()</h3>
 <blockquote>
 <p><strong>getNavigationBinding</strong>(<code>sPath</code>): <code>string</code></p>
 </blockquote>
+<p>Returns a data binding according to the result of sap.ui.model.odata.v4.AnnotationHelper.getNavigationPath.</p>
 <h4>Parameters</h4>
 <h5>sPath</h5>
 <p><code>string</code></p>
@@ -239,12 +240,17 @@ or &quot;@com.sap.vocabularies.UI.v1.FieldGroup#Dimensions&quot;</p>
 for example &quot;{ToSupplier}&quot; or &quot;&quot;</p>
 <h4>Since</h4>
 <p>1.43.0</p>
-<p>Returns a data binding according to the result of sap.ui.model.odata.v4.AnnotationHelper.getNavigationPath.</p>
 <hr>
 <h3>getNavigationPath()</h3>
 <blockquote>
 <p><strong>getNavigationPath</strong>(<code>sPath</code>): <code>string</code></p>
 </blockquote>
+<p>A function that helps to interpret OData V4 annotations. It knows about the syntax of the path value
+used by the following dynamic expressions:
+	 &quot;14.5.2 Expression edm:AnnotationPath&quot;  &quot;14.5.11 Expression edm:NavigationPropertyPath&quot;  &quot;14.5.12
+Expression edm:Path&quot;  &quot;14.5.13 Expression edm:PropertyPath&quot;  It returns the path of structural
+and navigation properties from the given path value, but removes &quot;$count&quot;, types casts, term casts, and
+annotations on navigation properties.</p>
 <h4>Parameters</h4>
 <h5>sPath</h5>
 <p><code>string</code></p>
@@ -255,17 +261,12 @@ or &quot;@com.sap.vocabularies.UI.v1.FieldGroup#Dimensions&quot;</p>
 <p>The path of structural and navigation properties, for example &quot;ToSupplier&quot; or &quot;&quot;</p>
 <h4>Since</h4>
 <p>1.43.0</p>
-<p>A function that helps to interpret OData V4 annotations. It knows about the syntax of the path value
-used by the following dynamic expressions:
-	 &quot;14.5.2 Expression edm:AnnotationPath&quot;  &quot;14.5.11 Expression edm:NavigationPropertyPath&quot;  &quot;14.5.12
-Expression edm:Path&quot;  &quot;14.5.13 Expression edm:PropertyPath&quot;  It returns the path of structural
-and navigation properties from the given path value, but removes &quot;$count&quot;, types casts, term casts, and
-annotations on navigation properties.</p>
 <hr>
 <h3>getValueListType()</h3>
 <blockquote>
 <p><strong>getValueListType</strong>(<code>vRawValue</code>, <code>oDetails</code>): <code>&quot;None&quot;</code> | <code>&quot;Standard&quot;</code> | <a href="../../ValueListType/enumerations/ValueListType.html"><code>ValueListType</code></a> | <code>&quot;Fixed&quot;</code> | <code>Promise</code>&lt;&quot;None&quot; | &quot;Standard&quot; | ValueListType | &quot;Fixed&quot;&gt;</p>
 </blockquote>
+<p>Determines which type of value list exists for the given property.</p>
 <h4>Parameters</h4>
 <h5>vRawValue</h5>
 <p><code>any</code></p>
@@ -288,12 +289,21 @@ to <code>oDetails.schemaChildName</code>)</p>
 if the property cannot be found in the metadata</p>
 <h4>Since</h4>
 <p>1.47.0</p>
-<p>Determines which type of value list exists for the given property.</p>
 <hr>
 <h3>isMultiple()</h3>
 <blockquote>
 <p><strong>isMultiple</strong>(<code>sPath</code>, <code>oDetails</code>): <code>boolean</code> | <code>Promise</code>&lt;<code>boolean</code>&gt;</p>
 </blockquote>
+<p>A function that helps to interpret OData V4 annotations. It knows about the syntax of the path value
+used by the following dynamic expressions:
+	 &quot;14.5.2 Expression edm:AnnotationPath&quot;  &quot;14.5.11 Expression edm:NavigationPropertyPath&quot;  &quot;14.5.12
+Expression edm:Path&quot;  &quot;14.5.13 Expression edm:PropertyPath&quot;  It returns the information whether
+the given path ends with &quot;$count&quot; or with a multi-valued structural or navigation property. Term casts
+and annotations on navigation properties are ignored.</p>
+<p>Example:</p>
+<pre><code class="language-javascript">
+&lt;template:if test=&quot;{facet&gt;Target/$AnnotationPath@@sap.ui.model.odata.v4.AnnotationHelper.isMultiple}&quot;&gt;
+</code></pre>
 <h4>Parameters</h4>
 <h5>sPath</h5>
 <p><code>string</code></p>
@@ -317,21 +327,19 @@ property, <code>false</code> otherwise. If <code>oDetails.$$valueAsPromise</code
 with the boolean value.</p>
 <h4>Since</h4>
 <p>1.43.0</p>
-<p>A function that helps to interpret OData V4 annotations. It knows about the syntax of the path value
-used by the following dynamic expressions:
-	 &quot;14.5.2 Expression edm:AnnotationPath&quot;  &quot;14.5.11 Expression edm:NavigationPropertyPath&quot;  &quot;14.5.12
-Expression edm:Path&quot;  &quot;14.5.13 Expression edm:PropertyPath&quot;  It returns the information whether
-the given path ends with &quot;$count&quot; or with a multi-valued structural or navigation property. Term casts
-and annotations on navigation properties are ignored.</p>
-<p>Example:</p>
-<pre><code class="language-javascript">
-&lt;template:if test=&quot;{facet&gt;Target/$AnnotationPath@@sap.ui.model.odata.v4.AnnotationHelper.isMultiple}&quot;&gt;
-</code></pre>
 <hr>
 <h3>label()</h3>
 <blockquote>
 <p><strong>label</strong>(<code>vRawValue</code>, <code>oDetails</code>): <code>string</code> | <code>Promise</code>&lt;<code>string</code>&gt;</p>
 </blockquote>
+<p>Returns the value for the label of a <code>com.sap.vocabularies.UI.v1.DataFieldAbstract</code> from the meta model.
+If no <code>Label</code> property is available, but the data field has a <code>Value</code> property with an <code>edm:Path</code> expression
+as value, the label will be taken from the <code>com.sap.vocabularies.Common.v1.Label</code> annotation of the path&#39;s
+target property.</p>
+<p>Example:</p>
+<pre><code class="language-javascript">
+&lt;Label text=&quot;{meta&gt;@@sap.ui.model.odata.v4.AnnotationHelper.label}&quot; /&gt;
+</code></pre>
 <h4>Parameters</h4>
 <h5>vRawValue</h5>
 <p><code>any</code></p>
@@ -350,19 +358,15 @@ and annotations on navigation properties are ignored.</p>
 is <code>true</code> a <code>Promise</code> may be returned resolving with the value for the label.</p>
 <h4>Since</h4>
 <p>1.49.0</p>
-<p>Returns the value for the label of a <code>com.sap.vocabularies.UI.v1.DataFieldAbstract</code> from the meta model.
-If no <code>Label</code> property is available, but the data field has a <code>Value</code> property with an <code>edm:Path</code> expression
-as value, the label will be taken from the <code>com.sap.vocabularies.Common.v1.Label</code> annotation of the path&#39;s
-target property.</p>
-<p>Example:</p>
-<pre><code class="language-javascript">
-&lt;Label text=&quot;{meta&gt;@@sap.ui.model.odata.v4.AnnotationHelper.label}&quot; /&gt;
-</code></pre>
 <hr>
 <h3>resolve$Path()</h3>
 <blockquote>
 <p><strong>resolve$Path</strong>(<code>oContext</code>): <code>string</code></p>
 </blockquote>
+<p>Helper function for a <code>template:with</code> instruction that returns an equivalent to the given context&#39;s path,
+without &quot;$AnnotationPath&quot;, &quot;$NavigationPropertyPath&quot;, &quot;$Path&quot;, and &quot;$PropertyPath&quot; segments.
+See:
+	sap.ui.model.odata.v4.AnnotationHelper.format</p>
 <h4>Parameters</h4>
 <h5>oContext</h5>
 <p><a href="../../../../Context/classes/Context.html"><code>Context</code></a></p>
@@ -372,39 +376,11 @@ target property.</p>
 <p>An equivalent to the given context&#39;s path, without the mentioned segments</p>
 <h4>Since</h4>
 <p>1.63.0</p>
-<p>Helper function for a <code>template:with</code> instruction that returns an equivalent to the given context&#39;s path,
-without &quot;$AnnotationPath&quot;, &quot;$NavigationPropertyPath&quot;, &quot;$Path&quot;, and &quot;$PropertyPath&quot; segments.
-See:
-	sap.ui.model.odata.v4.AnnotationHelper.format</p>
 <hr>
 <h3>value()</h3>
 <blockquote>
 <p><strong>value</strong>(<code>vRawValue</code>, <code>oDetails</code>): <code>string</code></p>
 </blockquote>
-<h4>Parameters</h4>
-<h5>vRawValue</h5>
-<p><code>any</code></p>
-<p>The raw value from the meta model</p>
-<h5>oDetails</h5>
-<p>The details object</p>
-<h6>arguments?</h6>
-<p><code>any</code>[]</p>
-<p>Optional arguments: an optional map of binding parameters; this will be added to each resulting data
-binding</p>
-<h6>context</h6>
-<p><a href="../../../../Context/classes/Context.html"><code>Context</code></a></p>
-<p>Points to the given raw value, that is <code>oDetails.context.getProperty(&quot;&quot;) === vRawValue</code></p>
-<h6>overload?</h6>
-<p><code>object</code></p>
-<p>The single operation overload that was targeted by annotations on an operation or a parameter; needed
-to strip off the binding parameter&#39;s name from any dynamic &quot;14.5.12 Expression edm:Path&quot; and &quot;14.5.13
-Expression edm:PropertyPath&quot; where it might be used as a first segment (since 1.72.0). This does not
-apply to annotations on a parameter (since 1.76.0).</p>
-<h4>Returns</h4>
-<p><code>string</code></p>
-<p>A data binding or a fixed text or a sequence thereof</p>
-<h4>Since</h4>
-<p>1.43.0</p>
 <p>A function that helps to interpret OData V4 annotations.</p>
 <p>Unsupported or incorrect values are turned into a string nevertheless, but are indicated as such. In
 such a case, an error describing the problem is logged to the console.</p>
@@ -498,7 +474,31 @@ a relative data binding, just like a &quot;14.5.12 Expression edm:Path&quot;. Th
 </code></pre>
 <p>See:
 	sap.ui.model.odata.v4.AnnotationHelper.format</p>
+<h4>Parameters</h4>
+<h5>vRawValue</h5>
+<p><code>any</code></p>
+<p>The raw value from the meta model</p>
+<h5>oDetails</h5>
+<p>The details object</p>
+<h6>arguments?</h6>
+<p><code>any</code>[]</p>
+<p>Optional arguments: an optional map of binding parameters; this will be added to each resulting data
+binding</p>
+<h6>context</h6>
+<p><a href="../../../../Context/classes/Context.html"><code>Context</code></a></p>
+<p>Points to the given raw value, that is <code>oDetails.context.getProperty(&quot;&quot;) === vRawValue</code></p>
+<h6>overload?</h6>
+<p><code>object</code></p>
+<p>The single operation overload that was targeted by annotations on an operation or a parameter; needed
+to strip off the binding parameter&#39;s name from any dynamic &quot;14.5.12 Expression edm:Path&quot; and &quot;14.5.13
+Expression edm:PropertyPath&quot; where it might be used as a first segment (since 1.72.0). This does not
+apply to annotations on a parameter (since 1.76.0).</p>
+<h4>Returns</h4>
+<p><code>string</code></p>
+<p>A data binding or a fixed text or a sequence thereof</p>
+<h4>Since</h4>
+<p>1.43.0</p>
 
-<footer>Generated from <code>@openui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@openui5/types@1.120.46</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

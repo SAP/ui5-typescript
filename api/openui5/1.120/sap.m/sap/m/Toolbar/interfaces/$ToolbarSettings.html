@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Interface: $ToolbarSettings — OpenUI5 TypeScript API</title>
-<meta name="description" content="Interface: $ToolbarSettings — OpenUI5 TypeScript API Reference (1.120.0)">
+<meta name="description" content="Interface: $ToolbarSettings — OpenUI5 TypeScript API Reference (1.120.46)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/openui5/1.120/sap.m/sap/m/Toolbar/interfaces/$ToolbarSettings.html">
 <meta property="og:title" content="Interface: $ToolbarSettings — OpenUI5 TypeScript API">
-<meta property="og:description" content="Interface: $ToolbarSettings — OpenUI5 TypeScript API Reference (1.120.0)">
+<meta property="og:description" content="Interface: $ToolbarSettings — OpenUI5 TypeScript API Reference (1.120.46)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/openui5/1.120/sap.m/sap/m/Toolbar/interfaces/$ToolbarSettings.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,11 +33,12 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../index.html">OpenUI5 API</a> › <a href="../../../../../sap.m/README.html">sap.m</a> › sap › m › <a href="../../../../../sap.m/sap/m/Toolbar/README.html">Toolbar</a> › interfaces</nav>
-<p><a href="../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.0)</strong></a></p>
+<p><a href="../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.46)</strong></a></p>
 <hr>
-<p><a href="../../../../../README.html">OpenUI5 TypeScript API (1.120.0)</a> / <a href="../../../../README.html">sap.m</a> / <a href="../README.html">sap/m/Toolbar</a> / $ToolbarSettings</p>
+<p><a href="../../../../../README.html">OpenUI5 TypeScript API (1.120.46)</a> / <a href="../../../../README.html">sap.m</a> / <a href="../README.html">sap/m/Toolbar</a> / $ToolbarSettings</p>
 <h1>Interface: $ToolbarSettings</h1>
 <pre class="sig"><span class="kw">import</span> { $ToolbarSettings } <span class="kw">from</span> <span class="str">"sap/m/Toolbar"</span>;</pre>
+<p>Describes the settings that can be provided to the Toolbar constructor.</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../../../../sap.ui.core/sap/ui/core/Control/interfaces/$ControlSettings.html"><code>$ControlSettings</code></a></li>
@@ -60,8 +61,6 @@ toolbar itself is meant to be interactive.</p>
 <blockquote>
 <p><code>optional</code> <strong>ariaHasPopup?</strong>: <code>string</code> | <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a></p>
 </blockquote>
-<h4>Since</h4>
-<p>1.79.0</p>
 <p>Defines the aria-haspopup attribute of the <code>Toolbar</code>. if the active <code>design</code> is true.</p>
 <p><strong>Guidance for choosing appropriate value:</strong>
 	 -  We recommend that you use the sap.ui.core.aria.HasPopup enumeration.
@@ -69,6 +68,8 @@ toolbar itself is meant to be interactive.</p>
     (both <code>sap.m.Popover</code> and <code>sap.m.Dialog</code> have role &quot;dialog&quot; assigned internally).
 	 -  If you use other controls, or directly <code>sap.ui.core.Popup</code>, you need to check the container role/type
     and map the value of <code>ariaHasPopup</code> accordingly.</p>
+<h4>Since</h4>
+<p>1.79.0</p>
 <hr>
 <h3>ariaLabelledBy?</h3>
 <blockquote>
@@ -86,10 +87,10 @@ toolbar itself is meant to be interactive.</p>
 <blockquote>
 <p><code>optional</code> <strong>design?</strong>: <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code> | <code>&quot;Transparent&quot;</code> | <code>&quot;Auto&quot;</code> | <code>&quot;Solid&quot;</code> | <a href="../../library/enumerations/ToolbarDesign.html"><code>ToolbarDesign</code></a> | <code>&quot;Info&quot;</code></p>
 </blockquote>
-<h4>Since</h4>
-<p>1.16.8</p>
 <p>Defines the toolbar design.</p>
 <p><strong>Note:</strong> Design settings are theme-dependent. They also determine the default height of the toolbar.</p>
+<h4>Since</h4>
+<p>1.16.8</p>
 <hr>
 <h3>enabled?</h3>
 <blockquote>
@@ -121,10 +122,10 @@ not apply to the toolbar itself, but rather to its items.</p>
 <blockquote>
 <p><code>optional</code> <strong>style?</strong>: <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code> | <code>&quot;Standard&quot;</code> | <code>&quot;Clear&quot;</code> | <a href="../../library/enumerations/ToolbarStyle.html"><code>ToolbarStyle</code></a></p>
 </blockquote>
-<h4>Since</h4>
-<p>1.54</p>
 <p>Defines the visual style of the <code>Toolbar</code>.</p>
 <p><strong>Note:</strong> The visual styles are theme-dependent.</p>
+<h4>Since</h4>
+<p>1.54</p>
 <hr>
 <h3>width?</h3>
 <blockquote>
@@ -133,6 +134,6 @@ not apply to the toolbar itself, but rather to its items.</p>
 <p>Defines the width of the control. By default, Toolbar is a block element. If the width is not explicitly
 set, the control will assume its natural size.</p>
 
-<footer>Generated from <code>@openui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@openui5/types@1.120.46</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

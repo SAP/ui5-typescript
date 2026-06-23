@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Class: UI5Date — OpenUI5 TypeScript API</title>
-<meta name="description" content="Class: UI5Date — OpenUI5 TypeScript API Reference (1.120.0)">
+<meta name="description" content="Class: UI5Date — OpenUI5 TypeScript API Reference (1.120.46)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/openui5/1.120/sap.ui.core/sap/ui/core/date/UI5Date/classes/UI5Date.html">
 <meta property="og:title" content="Class: UI5Date — OpenUI5 TypeScript API">
-<meta property="og:description" content="Class: UI5Date — OpenUI5 TypeScript API Reference (1.120.0)">
+<meta property="og:description" content="Class: UI5Date — OpenUI5 TypeScript API Reference (1.120.46)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/openui5/1.120/sap.ui.core/sap/ui/core/date/UI5Date/classes/UI5Date.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,13 +33,11 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../../index.html">OpenUI5 API</a> › <a href="../../../../../../../sap.ui.core/README.html">sap.ui.core</a> › sap › ui › core › date › <a href="../../../../../../../sap.ui.core/sap/ui/core/date/UI5Date/README.html">UI5Date</a> › classes</nav>
-<p><a href="../../../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.0)</strong></a></p>
+<p><a href="../../../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.46)</strong></a></p>
 <hr>
-<p><a href="../../../../../../../README.html">OpenUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../../README.html">sap.ui.core</a> / <a href="../README.html">sap/ui/core/date/UI5Date</a> / UI5Date</p>
+<p><a href="../../../../../../../README.html">OpenUI5 TypeScript API (1.120.46)</a> / <a href="../../../../../../README.html">sap.ui.core</a> / <a href="../README.html">sap/ui/core/date/UI5Date</a> / UI5Date</p>
 <h1>Class: UI5Date</h1>
 <pre class="sig"><span class="kw">import</span> UI5Date <span class="kw">from</span> <span class="str">"sap/ui/core/date/UI5Date"</span>;</pre>
-<h2>Since</h2>
-<p>1.111.0</p>
 <p>A date implementation considering the configured time zone</p>
 <p>A subclass of JavaScript <code>Date</code> that considers the configured time zone, see sap.ui.core.Configuration#getTimezone.
 All JavaScript <code>Date</code> functions that use the local browser time zone, like <code>getDate</code>, <code>setDate</code>, and
@@ -47,6 +45,8 @@ All JavaScript <code>Date</code> functions that use the local browser time zone,
 <p>Use module:sap/ui/core/date/UI5Date.getInstance to create new date instances.</p>
 <p><strong>Note:</strong> Adjusting the time zone in a running application can lead to unexpected data inconsistencies.
 For more information, see sap.ui.core.Configuration#setTimezone.</p>
+<h2>Since</h2>
+<p>1.111.0</p>
 <h2>Extends</h2>
 <ul>
 <li><code>Date</code></li>
@@ -279,13 +279,13 @@ time</p>
 <blockquote>
 <p><strong>getYear</strong>(): <code>number</code></p>
 </blockquote>
+<p>Returns the year of this date instance minus 1900 according to the configured time zone, see <code>Date.prototype.getYear</code>.</p>
 <h4>Returns</h4>
 <p><code>number</code></p>
 <p>The year of this date instance minus 1900 according to the configured time zone</p>
 <h4>Deprecated</h4>
 <p>(since 1.111) - as it is deprecated in the base class JavaScript Date; use #getFullYear
 instead</p>
-<p>Returns the year of this date instance minus 1900 according to the configured time zone, see <code>Date.prototype.getYear</code>.</p>
 <hr>
 <h3>setDate()</h3>
 <blockquote>
@@ -589,6 +589,7 @@ not be updated</p>
 <blockquote>
 <p><strong>setYear</strong>(<code>iYear</code>): <code>number</code></p>
 </blockquote>
+<p>Sets the year for this date instance plus 1900 considering the configured time zone, see <code>Date.prototype.setYear</code>.</p>
 <h4>Parameters</h4>
 <h5>iYear</h5>
 <p><code>number</code></p>
@@ -601,7 +602,6 @@ not be updated</p>
 <h4>Deprecated</h4>
 <p>(since 1.111) - as it is deprecated in the base class JavaScript Date; use #setFullYear
 instead</p>
-<p>Sets the year for this date instance plus 1900 considering the configured time zone, see <code>Date.prototype.setYear</code>.</p>
 <hr>
 <h3>toDateString()</h3>
 <blockquote>
@@ -795,6 +795,6 @@ See:
 <p>The date instance that considers the configured time zone in all local getters and setters.</p>
 <hr>
 
-<footer>Generated from <code>@openui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@openui5/types@1.120.46</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

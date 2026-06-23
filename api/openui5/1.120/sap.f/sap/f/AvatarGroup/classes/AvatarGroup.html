@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Class: AvatarGroup — OpenUI5 TypeScript API</title>
-<meta name="description" content="Class: AvatarGroup — OpenUI5 TypeScript API Reference (1.120.0)">
+<meta name="description" content="Class: AvatarGroup — OpenUI5 TypeScript API Reference (1.120.46)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/openui5/1.120/sap.f/sap/f/AvatarGroup/classes/AvatarGroup.html">
 <meta property="og:title" content="Class: AvatarGroup — OpenUI5 TypeScript API">
-<meta property="og:description" content="Class: AvatarGroup — OpenUI5 TypeScript API Reference (1.120.0)">
+<meta property="og:description" content="Class: AvatarGroup — OpenUI5 TypeScript API Reference (1.120.46)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/openui5/1.120/sap.f/sap/f/AvatarGroup/classes/AvatarGroup.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,16 +33,12 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../index.html">OpenUI5 API</a> › <a href="../../../../../sap.f/README.html">sap.f</a> › sap › f › <a href="../../../../../sap.f/sap/f/AvatarGroup/README.html">AvatarGroup</a> › classes</nav>
-<p><a href="../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.0)</strong></a></p>
+<p><a href="../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.46)</strong></a></p>
 <hr>
-<p><a href="../../../../../README.html">OpenUI5 TypeScript API (1.120.0)</a> / <a href="../../../../README.html">sap.f</a> / <a href="../README.html">sap/f/AvatarGroup</a> / AvatarGroup</p>
+<p><a href="../../../../../README.html">OpenUI5 TypeScript API (1.120.46)</a> / <a href="../../../../README.html">sap.f</a> / <a href="../README.html">sap/f/AvatarGroup</a> / AvatarGroup</p>
 <h1>Class: AvatarGroup</h1>
 <pre class="sig"><span class="kw">import</span> AvatarGroup <span class="kw">from</span> <span class="str">"sap/f/AvatarGroup"</span>;</pre>
 <p><strong><code>Experimental</code></strong></p>
-<h2>Since</h2>
-<p>1.73
- (since 1.73) - This class is experimental and provides only limited functionality. Also
-the API might be changed in future.</p>
 <p>Displays a group of avatars arranged horizontally. It is useful to visually showcase a group of related
 avatars, such as, project team members or employees.</p>
 <p>Overview:</p>
@@ -63,6 +59,10 @@ displays the number of avatars that have overflowed and are not currently visibl
 	 - You want to display a single avatar.
 	 - You want to display a gallery for simple images.
 	 - You want to use it for other visual content than avatars.</p>
+<h2>Since</h2>
+<p>1.73
+ (since 1.73) - This class is experimental and provides only limited functionality. Also
+the API might be changed in future.</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></li>
@@ -197,6 +197,7 @@ otherwise it will be bound to this <code>sap.f.AvatarGroup</code> itself.</p>
 <p><strong>firePress</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
+<p>Fires event #event:press press to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/AvatarGroup$PressEventParameters.html"><code>AvatarGroup$PressEventParameters</code></a></p>
@@ -206,39 +207,38 @@ otherwise it will be bound to this <code>sap.f.AvatarGroup</code> itself.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Fires event #event:press press to attached listeners.</p>
 <hr>
 <h3>getAvatarCustomDisplaySize()</h3>
 <blockquote>
 <p><strong>getAvatarCustomDisplaySize</strong>(): <code>string</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
-<h4>Returns</h4>
-<p><code>string</code></p>
-<p>Value of property <code>avatarCustomDisplaySize</code></p>
-<h4>Since</h4>
-<p>1.103</p>
 <p>Gets current value of property #getAvatarCustomDisplaySize avatarCustomDisplaySize.</p>
 <p>Specifies a custom display size for each avatar.</p>
 <p><strong>Notes:</strong>
 	 - Supports only <code>px</code> and code&gt;rem values.
 	 - It takes effect only if the <code>avatarDisplaySize</code> property is set to <code>Custom</code>.</p>
 <p>Default value is <code>&quot;3rem&quot;</code>.</p>
+<h4>Returns</h4>
+<p><code>string</code></p>
+<p>Value of property <code>avatarCustomDisplaySize</code></p>
+<h4>Since</h4>
+<p>1.103</p>
 <hr>
 <h3>getAvatarCustomFontSize()</h3>
 <blockquote>
 <p><strong>getAvatarCustomFontSize</strong>(): <code>string</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
+<p>Gets current value of property #getAvatarCustomFontSize avatarCustomFontSize.</p>
+<p>Specifies a custom font size for each avatar.</p>
+<p><strong>Note:</strong> It takes effect only if the <code>avatarDisplaySize</code> property is set to <code>Custom</code>.</p>
+<p>Default value is <code>&quot;1.125rem&quot;</code>.</p>
 <h4>Returns</h4>
 <p><code>string</code></p>
 <p>Value of property <code>avatarCustomFontSize</code></p>
 <h4>Since</h4>
 <p>1.103</p>
-<p>Gets current value of property #getAvatarCustomFontSize avatarCustomFontSize.</p>
-<p>Specifies a custom font size for each avatar.</p>
-<p><strong>Note:</strong> It takes effect only if the <code>avatarDisplaySize</code> property is set to <code>Custom</code>.</p>
-<p>Default value is <code>&quot;1.125rem&quot;</code>.</p>
 <hr>
 <h3>getAvatarDisplaySize()</h3>
 <blockquote>
@@ -338,6 +338,13 @@ the last position</p>
 <p><strong>setAvatarCustomDisplaySize</strong>(<code>sAvatarCustomDisplaySize?</code>): <code>this</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
+<p>Sets a new value for property #getAvatarCustomDisplaySize avatarCustomDisplaySize.</p>
+<p>Specifies a custom display size for each avatar.</p>
+<p><strong>Notes:</strong>
+	 - Supports only <code>px</code> and code&gt;rem values.
+	 - It takes effect only if the <code>avatarDisplaySize</code> property is set to <code>Custom</code>.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>&quot;3rem&quot;</code>.</p>
 <h4>Parameters</h4>
 <h5>sAvatarCustomDisplaySize?</h5>
 <p><code>string</code></p>
@@ -347,19 +354,17 @@ the last position</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.103</p>
-<p>Sets a new value for property #getAvatarCustomDisplaySize avatarCustomDisplaySize.</p>
-<p>Specifies a custom display size for each avatar.</p>
-<p><strong>Notes:</strong>
-	 - Supports only <code>px</code> and code&gt;rem values.
-	 - It takes effect only if the <code>avatarDisplaySize</code> property is set to <code>Custom</code>.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>&quot;3rem&quot;</code>.</p>
 <hr>
 <h3>setAvatarCustomFontSize()</h3>
 <blockquote>
 <p><strong>setAvatarCustomFontSize</strong>(<code>sAvatarCustomFontSize?</code>): <code>this</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
+<p>Sets a new value for property #getAvatarCustomFontSize avatarCustomFontSize.</p>
+<p>Specifies a custom font size for each avatar.</p>
+<p><strong>Note:</strong> It takes effect only if the <code>avatarDisplaySize</code> property is set to <code>Custom</code>.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>&quot;1.125rem&quot;</code>.</p>
 <h4>Parameters</h4>
 <h5>sAvatarCustomFontSize?</h5>
 <p><code>string</code></p>
@@ -369,11 +374,6 @@ the last position</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.103</p>
-<p>Sets a new value for property #getAvatarCustomFontSize avatarCustomFontSize.</p>
-<p>Specifies a custom font size for each avatar.</p>
-<p><strong>Note:</strong> It takes effect only if the <code>avatarDisplaySize</code> property is set to <code>Custom</code>.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>&quot;1.125rem&quot;</code>.</p>
 <hr>
 <h3>setAvatarDisplaySize()</h3>
 <blockquote>
@@ -450,6 +450,6 @@ used by this class</p>
 <p><a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a>.<a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html#getmetadata-1"><code>getMetadata</code></a></p>
 <hr>
 
-<footer>Generated from <code>@openui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@openui5/types@1.120.46</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

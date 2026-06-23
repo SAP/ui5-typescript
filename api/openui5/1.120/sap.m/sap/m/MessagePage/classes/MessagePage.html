@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>~~Class: MessagePage~~ — OpenUI5 TypeScript API</title>
-<meta name="description" content="~~Class: MessagePage~~ — OpenUI5 TypeScript API Reference (1.120.0)">
+<meta name="description" content="~~Class: MessagePage~~ — OpenUI5 TypeScript API Reference (1.120.46)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/openui5/1.120/sap.m/sap/m/MessagePage/classes/MessagePage.html">
 <meta property="og:title" content="~~Class: MessagePage~~ — OpenUI5 TypeScript API">
-<meta property="og:description" content="~~Class: MessagePage~~ — OpenUI5 TypeScript API Reference (1.120.0)">
+<meta property="og:description" content="~~Class: MessagePage~~ — OpenUI5 TypeScript API Reference (1.120.46)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/openui5/1.120/sap.m/sap/m/MessagePage/classes/MessagePage.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,15 +33,11 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../index.html">OpenUI5 API</a> › <a href="../../../../../sap.m/README.html">sap.m</a> › sap › m › <a href="../../../../../sap.m/sap/m/MessagePage/README.html">MessagePage</a> › classes</nav>
-<p><a href="../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.0)</strong></a></p>
+<p><a href="../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.46)</strong></a></p>
 <hr>
-<p><a href="../../../../../README.html">OpenUI5 TypeScript API (1.120.0)</a> / <a href="../../../../README.html">sap.m</a> / <a href="../README.html">sap/m/MessagePage</a> / MessagePage</p>
+<p><a href="../../../../../README.html">OpenUI5 TypeScript API (1.120.46)</a> / <a href="../../../../README.html">sap.m</a> / <a href="../README.html">sap/m/MessagePage</a> / MessagePage</p>
 <h1><del>Class: MessagePage</del></h1>
 <pre class="sig"><span class="kw">import</span> MessagePage <span class="kw">from</span> <span class="str">"sap/m/MessagePage"</span>;</pre>
-<h2>Since</h2>
-<p>1.28</p>
-<h2>Deprecated</h2>
-<p>(since 1.112) - Use the sap.m.IllustratedMessage instead.</p>
 <p>Displays an empty page with an icon and a header when certain conditions are met. Overview: MessagePage
 is displayed when there is no data or matching content. There are different use cases where a MessagePage
 might be visualized, for example:
@@ -51,6 +47,10 @@ might be visualized, for example:
 	 - The application is loading  The layout is unchanged but the text and icon vary depending on
     the use case. Usage: <strong>Note:</strong> The <code>MessagePage</code> is not intended to be used as a top-level control, but
     rather used within controls such as <code>NavContainer</code>, <code>App</code>, <code>Shell</code> or other container controls.</p>
+<h2>Since</h2>
+<p>1.28</p>
+<h2>Deprecated</h2>
+<p>(since 1.112) - Use the sap.m.IllustratedMessage instead.</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></li>
@@ -126,6 +126,7 @@ See:
 <blockquote>
 <p><strong>addButton</strong>(<code>oButton</code>): <code>this</code></p>
 </blockquote>
+<p>Adds some button to the aggregation #getButtons buttons.</p>
 <h4>Parameters</h4>
 <h5>oButton</h5>
 <p><a href="../../Button/classes/Button.html"><code>Button</code></a></p>
@@ -135,13 +136,17 @@ See:
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.54</p>
-<p>Adds some button to the aggregation #getButtons buttons.</p>
 <hr>
 <h3><del>attachNavButtonPress()</del></h3>
 <h4>Call Signature</h4>
 <blockquote>
 <p><strong>attachNavButtonPress</strong>(<code>oData</code>, <code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
+<p>Attaches event handler <code>fnFunction</code> to the #event:navButtonPress navButtonPress event of this
+<code>sap.m.MessagePage</code>.</p>
+<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
+otherwise it will be bound to this <code>sap.m.MessagePage</code> itself.</p>
+<p>This event is fired when Nav Button is pressed.</p>
 <h5>Parameters</h5>
 <h6>oData</h6>
 <p><code>object</code></p>
@@ -158,15 +163,15 @@ object when firing the event</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Since</h5>
 <p>1.28.1</p>
+<h4>Call Signature</h4>
+<blockquote>
+<p><strong>attachNavButtonPress</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
+</blockquote>
 <p>Attaches event handler <code>fnFunction</code> to the #event:navButtonPress navButtonPress event of this
 <code>sap.m.MessagePage</code>.</p>
 <p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
 otherwise it will be bound to this <code>sap.m.MessagePage</code> itself.</p>
 <p>This event is fired when Nav Button is pressed.</p>
-<h4>Call Signature</h4>
-<blockquote>
-<p><strong>attachNavButtonPress</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
-</blockquote>
 <h5>Parameters</h5>
 <h6>fnFunction</h6>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -179,22 +184,17 @@ otherwise it will be bound to this <code>sap.m.MessagePage</code> itself.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Since</h5>
 <p>1.28.1</p>
-<p>Attaches event handler <code>fnFunction</code> to the #event:navButtonPress navButtonPress event of this
-<code>sap.m.MessagePage</code>.</p>
-<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
-otherwise it will be bound to this <code>sap.m.MessagePage</code> itself.</p>
-<p>This event is fired when Nav Button is pressed.</p>
 <hr>
 <h3><del>destroyButtons()</del></h3>
 <blockquote>
 <p><strong>destroyButtons</strong>(): <code>this</code></p>
 </blockquote>
+<p>Destroys all the buttons in the aggregation #getButtons buttons.</p>
 <h4>Returns</h4>
 <p><code>this</code></p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.54</p>
-<p>Destroys all the buttons in the aggregation #getButtons buttons.</p>
 <hr>
 <h3><del>destroyCustomDescription()</del></h3>
 <blockquote>
@@ -218,6 +218,9 @@ otherwise it will be bound to this <code>sap.m.MessagePage</code> itself.</p>
 <blockquote>
 <p><strong>detachNavButtonPress</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
+<p>Detaches event handler <code>fnFunction</code> from the #event:navButtonPress navButtonPress event of this
+<code>sap.m.MessagePage</code>.</p>
+<p>The passed function and listener object must match the ones used for event registration.</p>
 <h4>Parameters</h4>
 <h5>fnFunction</h5>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -230,14 +233,12 @@ otherwise it will be bound to this <code>sap.m.MessagePage</code> itself.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.28.1</p>
-<p>Detaches event handler <code>fnFunction</code> from the #event:navButtonPress navButtonPress event of this
-<code>sap.m.MessagePage</code>.</p>
-<p>The passed function and listener object must match the ones used for event registration.</p>
 <hr>
 <h3><del>fireNavButtonPress()</del></h3>
 <blockquote>
 <p><strong>fireNavButtonPress</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
+<p>Fires event #event:navButtonPress navButtonPress to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><code>object</code></p>
@@ -249,7 +250,6 @@ otherwise it will be bound to this <code>sap.m.MessagePage</code> itself.</p>
 <p>1.28.1</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Fires event #event:navButtonPress navButtonPress to attached listeners.</p>
 <hr>
 <h3><del>getAriaDescribedBy()</del></h3>
 <blockquote>
@@ -271,14 +271,14 @@ otherwise it will be bound to this <code>sap.m.MessagePage</code> itself.</p>
 <blockquote>
 <p><strong>getButtons</strong>(): <a href="../../Button/classes/Button.html"><code>Button</code></a>[]</p>
 </blockquote>
-<h4>Returns</h4>
-<p><a href="../../Button/classes/Button.html"><code>Button</code></a>[]</p>
-<h4>Since</h4>
-<p>1.54</p>
 <p>Gets content of aggregation #getButtons buttons.</p>
 <p>The buttons displayed under the description text.</p>
 <p><strong>Note:</strong> Buttons added to this aggregation are both vertically and horizontally centered. Depending
 on the available space, they may be rendered on several lines.</p>
+<h4>Returns</h4>
+<p><a href="../../Button/classes/Button.html"><code>Button</code></a>[]</p>
+<h4>Since</h4>
+<p>1.54</p>
 <hr>
 <h3><del>getCustomDescription()</del></h3>
 <blockquote>
@@ -317,15 +317,15 @@ aggregation.</p>
 <blockquote>
 <p><strong>getEnableFormattedText</strong>(): <code>boolean</code></p>
 </blockquote>
+<p>Gets current value of property #getEnableFormattedText enableFormattedText.</p>
+<p>Defines whether the value set in the <code>description</code> property is displayed as formatted text in HTML format.</p>
+<p>For details regarding supported HTML tags, see sap.m.FormattedText</p>
+<p>Default value is <code>false</code>.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>Value of property <code>enableFormattedText</code></p>
 <h4>Since</h4>
 <p>1.54</p>
-<p>Gets current value of property #getEnableFormattedText enableFormattedText.</p>
-<p>Defines whether the value set in the <code>description</code> property is displayed as formatted text in HTML format.</p>
-<p>For details regarding supported HTML tags, see sap.m.FormattedText</p>
-<p>Default value is <code>false</code>.</p>
 <hr>
 <h3><del>getIcon()</del></h3>
 <blockquote>
@@ -342,13 +342,13 @@ aggregation.</p>
 <blockquote>
 <p><strong>getIconAlt</strong>(): <code>string</code></p>
 </blockquote>
+<p>Gets current value of property #getIconAlt iconAlt.</p>
+<p>Defines the alt attribute of the icon displayed on the <code>MessagePage</code>.</p>
 <h4>Returns</h4>
 <p><code>string</code></p>
 <p>Value of property <code>iconAlt</code></p>
 <h4>Since</h4>
 <p>1.52</p>
-<p>Gets current value of property #getIconAlt iconAlt.</p>
-<p>Defines the alt attribute of the icon displayed on the <code>MessagePage</code>.</p>
 <hr>
 <h3><del>getShowHeader()</del></h3>
 <blockquote>
@@ -410,20 +410,22 @@ text direction from the DOM.</p>
 <blockquote>
 <p><strong>getTitleLevel</strong>(): <code>&quot;Auto&quot;</code> | <a href="../../../../../sap.ui.core/sap/ui/core/library/enumerations/TitleLevel.html"><code>TitleLevel</code></a> | <code>&quot;H1&quot;</code> | <code>&quot;H2&quot;</code> | <code>&quot;H3&quot;</code> | <code>&quot;H4&quot;</code> | <code>&quot;H5&quot;</code> | <code>&quot;H6&quot;</code></p>
 </blockquote>
+<p>Gets current value of property #getTitleLevel titleLevel.</p>
+<p>Defines the semantic level of the title. When using <code>Auto</code>, no explicit level information is written.</p>
+<p><strong>Note:</strong> Used for accessibility purposes only.</p>
+<p>Default value is <code>Auto</code>.</p>
 <h4>Returns</h4>
 <p><code>&quot;Auto&quot;</code> | <a href="../../../../../sap.ui.core/sap/ui/core/library/enumerations/TitleLevel.html"><code>TitleLevel</code></a> | <code>&quot;H1&quot;</code> | <code>&quot;H2&quot;</code> | <code>&quot;H3&quot;</code> | <code>&quot;H4&quot;</code> | <code>&quot;H5&quot;</code> | <code>&quot;H6&quot;</code></p>
 <p>Value of property <code>titleLevel</code></p>
 <h4>Since</h4>
 <p>1.97</p>
-<p>Gets current value of property #getTitleLevel titleLevel.</p>
-<p>Defines the semantic level of the title. When using <code>Auto</code>, no explicit level information is written.</p>
-<p><strong>Note:</strong> Used for accessibility purposes only.</p>
-<p>Default value is <code>Auto</code>.</p>
 <hr>
 <h3><del>indexOfButton()</del></h3>
 <blockquote>
 <p><strong>indexOfButton</strong>(<code>oButton</code>): <code>number</code></p>
 </blockquote>
+<p>Checks for the provided <code>sap.m.Button</code> in the aggregation #getButtons buttons. and returns its
+index if found or -1 otherwise.</p>
 <h4>Parameters</h4>
 <h5>oButton</h5>
 <p><a href="../../Button/classes/Button.html"><code>Button</code></a></p>
@@ -433,13 +435,12 @@ text direction from the DOM.</p>
 <p>The index of the provided control in the aggregation if found, or -1 otherwise</p>
 <h4>Since</h4>
 <p>1.54</p>
-<p>Checks for the provided <code>sap.m.Button</code> in the aggregation #getButtons buttons. and returns its
-index if found or -1 otherwise.</p>
 <hr>
 <h3><del>insertButton()</del></h3>
 <blockquote>
 <p><strong>insertButton</strong>(<code>oButton</code>, <code>iIndex</code>): <code>this</code></p>
 </blockquote>
+<p>Inserts a button into the aggregation #getButtons buttons.</p>
 <h4>Parameters</h4>
 <h5>oButton</h5>
 <p><a href="../../Button/classes/Button.html"><code>Button</code></a></p>
@@ -454,7 +455,6 @@ at the last position</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.54</p>
-<p>Inserts a button into the aggregation #getButtons buttons.</p>
 <hr>
 <h3><del>removeAllAriaDescribedBy()</del></h3>
 <blockquote>
@@ -478,13 +478,13 @@ at the last position</p>
 <blockquote>
 <p><strong>removeAllButtons</strong>(): <a href="../../Button/classes/Button.html"><code>Button</code></a>[]</p>
 </blockquote>
+<p>Removes all the controls from the aggregation #getButtons buttons.</p>
+<p>Additionally, it unregisters them from the hosting UIArea.</p>
 <h4>Returns</h4>
 <p><a href="../../Button/classes/Button.html"><code>Button</code></a>[]</p>
 <p>An array of the removed elements (might be empty)</p>
 <h4>Since</h4>
 <p>1.54</p>
-<p>Removes all the controls from the aggregation #getButtons buttons.</p>
-<p>Additionally, it unregisters them from the hosting UIArea.</p>
 <hr>
 <h3><del>removeAriaDescribedBy()</del></h3>
 <blockquote>
@@ -516,6 +516,7 @@ at the last position</p>
 <blockquote>
 <p><strong>removeButton</strong>(<code>vButton</code>): <a href="../../Button/classes/Button.html"><code>Button</code></a></p>
 </blockquote>
+<p>Removes a button from the aggregation #getButtons buttons.</p>
 <h4>Parameters</h4>
 <h5>vButton</h5>
 <p><code>string</code> | <code>number</code> | <a href="../../Button/classes/Button.html"><code>Button</code></a></p>
@@ -525,7 +526,6 @@ at the last position</p>
 <p>The removed button or <code>null</code></p>
 <h4>Since</h4>
 <p>1.54</p>
-<p>Removes a button from the aggregation #getButtons buttons.</p>
 <hr>
 <h3><del>setCustomDescription()</del></h3>
 <blockquote>
@@ -573,6 +573,11 @@ at the last position</p>
 <blockquote>
 <p><strong>setEnableFormattedText</strong>(<code>bEnableFormattedText?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getEnableFormattedText enableFormattedText.</p>
+<p>Defines whether the value set in the <code>description</code> property is displayed as formatted text in HTML format.</p>
+<p>For details regarding supported HTML tags, see sap.m.FormattedText</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>false</code>.</p>
 <h4>Parameters</h4>
 <h5>bEnableFormattedText?</h5>
 <p><code>boolean</code></p>
@@ -582,11 +587,6 @@ at the last position</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.54</p>
-<p>Sets a new value for property #getEnableFormattedText enableFormattedText.</p>
-<p>Defines whether the value set in the <code>description</code> property is displayed as formatted text in HTML format.</p>
-<p>For details regarding supported HTML tags, see sap.m.FormattedText</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>false</code>.</p>
 <hr>
 <h3><del>setIcon()</del></h3>
 <blockquote>
@@ -608,6 +608,9 @@ at the last position</p>
 <blockquote>
 <p><strong>setIconAlt</strong>(<code>sIconAlt?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getIconAlt iconAlt.</p>
+<p>Defines the alt attribute of the icon displayed on the <code>MessagePage</code>.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <h4>Parameters</h4>
 <h5>sIconAlt?</h5>
 <p><code>string</code></p>
@@ -617,9 +620,6 @@ at the last position</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.52</p>
-<p>Sets a new value for property #getIconAlt iconAlt.</p>
-<p>Defines the alt attribute of the icon displayed on the <code>MessagePage</code>.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <hr>
 <h3><del>setShowHeader()</del></h3>
 <blockquote>
@@ -706,6 +706,11 @@ text direction from the DOM.</p>
 <blockquote>
 <p><strong>setTitleLevel</strong>(<code>sTitleLevel?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getTitleLevel titleLevel.</p>
+<p>Defines the semantic level of the title. When using <code>Auto</code>, no explicit level information is written.</p>
+<p><strong>Note:</strong> Used for accessibility purposes only.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>Auto</code>.</p>
 <h4>Parameters</h4>
 <h5>sTitleLevel?</h5>
 <p><code>&quot;Auto&quot;</code> | <a href="../../../../../sap.ui.core/sap/ui/core/library/enumerations/TitleLevel.html"><code>TitleLevel</code></a> | <code>&quot;H1&quot;</code> | <code>&quot;H2&quot;</code> | <code>&quot;H3&quot;</code> | <code>&quot;H4&quot;</code> | <code>&quot;H5&quot;</code> | <code>&quot;H6&quot;</code></p>
@@ -715,11 +720,6 @@ text direction from the DOM.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.97</p>
-<p>Sets a new value for property #getTitleLevel titleLevel.</p>
-<p>Defines the semantic level of the title. When using <code>Auto</code>, no explicit level information is written.</p>
-<p><strong>Note:</strong> Used for accessibility purposes only.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>Auto</code>.</p>
 <hr>
 <h3><del>extend()</del></h3>
 <blockquote>
@@ -760,6 +760,6 @@ used by this class</p>
 <p><a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a>.<a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html#getmetadata-1"><code>getMetadata</code></a></p>
 <hr>
 
-<footer>Generated from <code>@openui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@openui5/types@1.120.46</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

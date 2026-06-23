@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Interface: $CalendarRowSettings — OpenUI5 TypeScript API</title>
-<meta name="description" content="Interface: $CalendarRowSettings — OpenUI5 TypeScript API Reference (1.120.0)">
+<meta name="description" content="Interface: $CalendarRowSettings — OpenUI5 TypeScript API Reference (1.120.46)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/openui5/1.120/sap.ui.unified/sap/ui/unified/CalendarRow/interfaces/$CalendarRowSettings.html">
 <meta property="og:title" content="Interface: $CalendarRowSettings — OpenUI5 TypeScript API">
-<meta property="og:description" content="Interface: $CalendarRowSettings — OpenUI5 TypeScript API Reference (1.120.0)">
+<meta property="og:description" content="Interface: $CalendarRowSettings — OpenUI5 TypeScript API Reference (1.120.46)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/openui5/1.120/sap.ui.unified/sap/ui/unified/CalendarRow/interfaces/$CalendarRowSettings.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,11 +33,12 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../index.html">OpenUI5 API</a> › <a href="../../../../../../sap.ui.unified/README.html">sap.ui.unified</a> › sap › ui › unified › <a href="../../../../../../sap.ui.unified/sap/ui/unified/CalendarRow/README.html">CalendarRow</a> › interfaces</nav>
-<p><a href="../../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.0)</strong></a></p>
+<p><a href="../../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.46)</strong></a></p>
 <hr>
-<p><a href="../../../../../../README.html">OpenUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../README.html">sap.ui.unified</a> / <a href="../README.html">sap/ui/unified/CalendarRow</a> / $CalendarRowSettings</p>
+<p><a href="../../../../../../README.html">OpenUI5 TypeScript API (1.120.46)</a> / <a href="../../../../../README.html">sap.ui.unified</a> / <a href="../README.html">sap/ui/unified/CalendarRow</a> / $CalendarRowSettings</p>
 <h1>Interface: $CalendarRowSettings</h1>
 <pre class="sig"><span class="kw">import</span> { $CalendarRowSettings } <span class="kw">from</span> <span class="str">"sap/ui/unified/CalendarRow"</span>;</pre>
+<p>Describes the settings that can be provided to the CalendarRow constructor.</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../../../../../sap.ui.core/sap/ui/core/Control/interfaces/$ControlSettings.html"><code>$ControlSettings</code></a></li>
@@ -47,20 +48,20 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 <blockquote>
 <p><code>optional</code> <strong>appointmentHeight?</strong>: <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code> | <code>&quot;Large&quot;</code> | <code>&quot;Regular&quot;</code> | <a href="../../library/enumerations/CalendarAppointmentHeight.html"><code>CalendarAppointmentHeight</code></a> | <code>&quot;Automatic&quot;</code> | <code>&quot;HalfSize&quot;</code></p>
 </blockquote>
+<p>Defines the height of the CalendarAppoinment</p>
 <h4>Since</h4>
 <p>1.81.0</p>
-<p>Defines the height of the CalendarAppoinment</p>
 <hr>
 <h3>appointmentRoundWidth?</h3>
 <blockquote>
 <p><code>optional</code> <strong>appointmentRoundWidth?</strong>: <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code> | <code>&quot;None&quot;</code> | <a href="../../library/enumerations/CalendarAppointmentRoundWidth.html"><code>CalendarAppointmentRoundWidth</code></a> | <code>&quot;HalfColumn&quot;</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
+<p>Defines rounding of the width of CalendarAppoinment <strong>Note:</strong> This property is applied, when
+the calendar interval type is day and the view shows more than 20 days</p>
 <h4>Since</h4>
 <p>1.81.0
  (since 1.81.0)</p>
-<p>Defines rounding of the width of CalendarAppoinment <strong>Note:</strong> This property is applied, when
-the calendar interval type is day and the view shows more than 20 days</p>
 <hr>
 <h3>appointments?</h3>
 <blockquote>
@@ -73,22 +74,22 @@ the calendar interval type is day and the view shows more than 20 days</p>
 <blockquote>
 <p><code>optional</code> <strong>appointmentsReducedHeight?</strong>: <code>boolean</code> | <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
+<p>If set the appointments without text (only title) are rendered with a smaller height.</p>
+<p><strong>Note:</strong> On phone devices this property is ignored, appointments are always rendered in full height
+to allow touching.</p>
 <h4>Since</h4>
 <p>1.38.0</p>
 <h4>Deprecated</h4>
 <p>(since 1.81) - Please use the <code>appointmentHeight</code> with value &quot;Automatic&quot; property instead.</p>
-<p>If set the appointments without text (only title) are rendered with a smaller height.</p>
-<p><strong>Note:</strong> On phone devices this property is ignored, appointments are always rendered in full height
-to allow touching.</p>
 <hr>
 <h3>appointmentsVisualization?</h3>
 <blockquote>
 <p><code>optional</code> <strong>appointmentsVisualization?</strong>: <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code> | <code>&quot;Standard&quot;</code> | <a href="../../library/enumerations/CalendarAppointmentVisualization.html"><code>CalendarAppointmentVisualization</code></a> | <code>&quot;Filled&quot;</code></p>
 </blockquote>
-<h4>Since</h4>
-<p>1.40.0</p>
 <p>Defines the visualization of the <code>CalendarAppoinment</code></p>
 <p><strong>Note:</strong> The real visualization depends on the used theme.</p>
+<h4>Since</h4>
+<p>1.40.0</p>
 <hr>
 <h3>ariaLabelledBy?</h3>
 <blockquote>
@@ -142,6 +143,7 @@ displayed.</p>
 <blockquote>
 <p><code>optional</code> <strong>intervalSelect?</strong>: (<code>oEvent</code>) =&gt; <code>void</code></p>
 </blockquote>
+<p>Fired if an interval was selected</p>
 <h4>Parameters</h4>
 <h5>oEvent</h5>
 <p><a href="../type-aliases/CalendarRow$IntervalSelectEvent.html"><code>CalendarRow$IntervalSelectEvent</code></a></p>
@@ -149,7 +151,6 @@ displayed.</p>
 <p><code>void</code></p>
 <h4>Since</h4>
 <p>1.38.0</p>
-<p>Fired if an interval was selected</p>
 <hr>
 <h3>intervalSize?</h3>
 <blockquote>
@@ -180,19 +181,19 @@ the next control to be focused</p>
 <blockquote>
 <p><code>optional</code> <strong>legend?</strong>: <code>string</code> | <a href="../../CalendarLegend/classes/CalendarLegend.html"><code>CalendarLegend</code></a></p>
 </blockquote>
-<h4>Since</h4>
-<p>1.40.0</p>
 <p>Association to the <code>CalendarLegend</code> explaining the colors of the <code>Appointments</code>.</p>
 <p><strong>Note</strong> The legend does not have to be rendered but must exist, and all required types must be assigned.</p>
+<h4>Since</h4>
+<p>1.40.0</p>
 <hr>
 <h3>multipleAppointmentsSelection?</h3>
 <blockquote>
 <p><code>optional</code> <strong>multipleAppointmentsSelection?</strong>: <code>boolean</code> | <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<h4>Since</h4>
-<p>1.97</p>
 <p>Determines whether the selection of multiple appointments is enabled.</p>
 <p>Note: selection of multiple appointments is possible using CTRL key regardless of the value of this property.</p>
+<h4>Since</h4>
+<p>1.97</p>
 <hr>
 <h3>nonWorkingDays?</h3>
 <blockquote>
@@ -226,11 +227,11 @@ to 6. (Other values will just be ignored.)</p>
 <blockquote>
 <p><code>optional</code> <strong>showEmptyIntervalHeaders?</strong>: <code>boolean</code> | <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<h4>Since</h4>
-<p>1.38.0</p>
 <p>If set, interval headers are shown even if no <code>intervalHeaders</code> are assigned to the visible time frame.</p>
 <p>If not set, no interval headers are shown if no <code>intervalHeaders</code> are assigned.</p>
 <p><strong>Note:</strong> This property is only used if <code>showIntervalHeaders</code> is set to true.</p>
+<h4>Since</h4>
+<p>1.38.0</p>
 <hr>
 <h3>showIntervalHeaders?</h3>
 <blockquote>
@@ -280,6 +281,6 @@ of the <code>CalendarRow</code> to update the visualization.</p>
 </blockquote>
 <p>Width of the row</p>
 
-<footer>Generated from <code>@openui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@openui5/types@1.120.46</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

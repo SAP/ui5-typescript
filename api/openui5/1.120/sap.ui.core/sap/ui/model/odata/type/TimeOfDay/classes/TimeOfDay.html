@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Class: TimeOfDay — OpenUI5 TypeScript API</title>
-<meta name="description" content="Class: TimeOfDay — OpenUI5 TypeScript API Reference (1.120.0)">
+<meta name="description" content="Class: TimeOfDay — OpenUI5 TypeScript API Reference (1.120.46)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/openui5/1.120/sap.ui.core/sap/ui/model/odata/type/TimeOfDay/classes/TimeOfDay.html">
 <meta property="og:title" content="Class: TimeOfDay — OpenUI5 TypeScript API">
-<meta property="og:description" content="Class: TimeOfDay — OpenUI5 TypeScript API Reference (1.120.0)">
+<meta property="og:description" content="Class: TimeOfDay — OpenUI5 TypeScript API Reference (1.120.46)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/openui5/1.120/sap.ui.core/sap/ui/model/odata/type/TimeOfDay/classes/TimeOfDay.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,15 +33,15 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../../../index.html">OpenUI5 API</a> › <a href="../../../../../../../../sap.ui.core/README.html">sap.ui.core</a> › sap › ui › model › odata › type › <a href="../../../../../../../../sap.ui.core/sap/ui/model/odata/type/TimeOfDay/README.html">TimeOfDay</a> › classes</nav>
-<p><a href="../../../../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.0)</strong></a></p>
+<p><a href="../../../../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.46)</strong></a></p>
 <hr>
-<p><a href="../../../../../../../../README.html">OpenUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../../../README.html">sap.ui.core</a> / <a href="../README.html">sap/ui/model/odata/type/TimeOfDay</a> / TimeOfDay</p>
+<p><a href="../../../../../../../../README.html">OpenUI5 TypeScript API (1.120.46)</a> / <a href="../../../../../../../README.html">sap.ui.core</a> / <a href="../README.html">sap/ui/model/odata/type/TimeOfDay</a> / TimeOfDay</p>
 <h1>Class: TimeOfDay</h1>
 <pre class="sig"><span class="kw">import</span> TimeOfDay <span class="kw">from</span> <span class="str">"sap/ui/model/odata/type/TimeOfDay"</span>;</pre>
-<h2>Since</h2>
-<p>1.37.0</p>
 <p>This class represents the OData V4 primitive type <a href="http://docs.oasis-open.org/odata/odata/v4.0/errata02/os/complete/part3-csdl/odata-v4.0-errata02-os-part3-csdl-complete.html#_The_edm:Documentation_Element">`Edm.TimeOfDay`</a>.
 In sap.ui.model.odata.v4.ODataModel this type is represented as a <code>string</code>.</p>
+<h2>Since</h2>
+<p>1.37.0</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../ODataType/classes/ODataType.html"><code>ODataType</code></a></li>
@@ -74,6 +74,7 @@ In sap.ui.model.odata.v4.ODataModel this type is represented as a <code>string</
 <blockquote>
 <p><strong>formatValue</strong>(<code>sValue</code>, <code>sTargetType</code>): <code>string</code> | <code>Date</code> | <a href="../../../../../core/date/UI5Date/classes/UI5Date.html"><code>UI5Date</code></a></p>
 </blockquote>
+<p>Formats the given value to the given target type.</p>
 <h4>Parameters</h4>
 <h5>sValue</h5>
 <p><code>string</code></p>
@@ -88,7 +89,6 @@ for more information</p>
 <p>The formatted output value in the target type; <code>undefined</code> or <code>null</code> are formatted to <code>null</code></p>
 <h4>Since</h4>
 <p>1.37.0</p>
-<p>Formats the given value to the given target type.</p>
 <h4>Overrides</h4>
 <p><a href="../../ODataType/classes/ODataType.html"><code>ODataType</code></a>.<a href="../../ODataType/classes/ODataType.html#formatvalue"><code>formatValue</code></a></p>
 <hr>
@@ -96,6 +96,8 @@ for more information</p>
 <blockquote>
 <p><strong>getModelValue</strong>(<code>oDate</code>): <code>string</code></p>
 </blockquote>
+<p>Gets the model value according to this type&#39;s constraints and format options for the given date object
+representing a time. Validates the resulting value against the constraints of this type instance.</p>
 <h4>Parameters</h4>
 <h5>oDate</h5>
 <p><code>Date</code> | <a href="../../../../../core/date/UI5Date/classes/UI5Date.html"><code>UI5Date</code></a></p>
@@ -105,19 +107,17 @@ for more information</p>
 <p>The model representation of the time</p>
 <h4>Since</h4>
 <p>1.111.0</p>
-<p>Gets the model value according to this type&#39;s constraints and format options for the given date object
-representing a time. Validates the resulting value against the constraints of this type instance.</p>
 <hr>
 <h3>getName()</h3>
 <blockquote>
 <p><strong>getName</strong>(): <code>string</code></p>
 </blockquote>
+<p>Returns the type&#39;s name.</p>
 <h4>Returns</h4>
 <p><code>string</code></p>
 <p>The type&#39;s name</p>
 <h4>Since</h4>
 <p>1.37.0</p>
-<p>Returns the type&#39;s name.</p>
 <h4>Overrides</h4>
 <p><a href="../../ODataType/classes/ODataType.html"><code>ODataType</code></a>.<a href="../../ODataType/classes/ODataType.html#getname"><code>getName</code></a></p>
 <hr>
@@ -125,6 +125,8 @@ representing a time. Validates the resulting value against the constraints of th
 <blockquote>
 <p><strong>parseValue</strong>(<code>vValue</code>, <code>sSourceType</code>): <code>string</code></p>
 </blockquote>
+<p>Parses the given value, which is expected to be of the given type, to a string with an OData V4 Edm.TimeOfDay
+value.</p>
 <h4>Parameters</h4>
 <h5>vValue</h5>
 <p><code>string</code> | <code>Date</code></p>
@@ -140,8 +142,6 @@ for more information.</p>
 <p>The parsed value</p>
 <h4>Since</h4>
 <p>1.37.0</p>
-<p>Parses the given value, which is expected to be of the given type, to a string with an OData V4 Edm.TimeOfDay
-value.</p>
 <h4>Overrides</h4>
 <p><a href="../../ODataType/classes/ODataType.html"><code>ODataType</code></a>.<a href="../../ODataType/classes/ODataType.html#parsevalue"><code>parseValue</code></a></p>
 <hr>
@@ -149,6 +149,7 @@ value.</p>
 <blockquote>
 <p><strong>validateValue</strong>(<code>sValue</code>): <code>void</code></p>
 </blockquote>
+<p>Validates the given value in model representation and meets the type&#39;s constraints.</p>
 <h4>Parameters</h4>
 <h5>sValue</h5>
 <p><code>string</code></p>
@@ -157,7 +158,6 @@ value.</p>
 <p><code>void</code></p>
 <h4>Since</h4>
 <p>1.37.0</p>
-<p>Validates the given value in model representation and meets the type&#39;s constraints.</p>
 <h4>Overrides</h4>
 <p><a href="../../ODataType/classes/ODataType.html"><code>ODataType</code></a>.<a href="../../ODataType/classes/ODataType.html#validatevalue"><code>validateValue</code></a></p>
 <hr>
@@ -200,6 +200,6 @@ used by this class</p>
 <p><a href="../../ODataType/classes/ODataType.html"><code>ODataType</code></a>.<a href="../../ODataType/classes/ODataType.html#getmetadata-1"><code>getMetadata</code></a></p>
 <hr>
 
-<footer>Generated from <code>@openui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@openui5/types@1.120.46</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

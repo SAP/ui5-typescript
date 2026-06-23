@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Class: PlanningCalendarView — OpenUI5 TypeScript API</title>
-<meta name="description" content="Class: PlanningCalendarView — OpenUI5 TypeScript API Reference (1.120.0)">
+<meta name="description" content="Class: PlanningCalendarView — OpenUI5 TypeScript API Reference (1.120.46)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/openui5/1.120/sap.m/sap/m/PlanningCalendarView/classes/PlanningCalendarView.html">
 <meta property="og:title" content="Class: PlanningCalendarView — OpenUI5 TypeScript API">
-<meta property="og:description" content="Class: PlanningCalendarView — OpenUI5 TypeScript API Reference (1.120.0)">
+<meta property="og:description" content="Class: PlanningCalendarView — OpenUI5 TypeScript API Reference (1.120.46)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/openui5/1.120/sap.m/sap/m/PlanningCalendarView/classes/PlanningCalendarView.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,16 +33,16 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../index.html">OpenUI5 API</a> › <a href="../../../../../sap.m/README.html">sap.m</a> › sap › m › <a href="../../../../../sap.m/sap/m/PlanningCalendarView/README.html">PlanningCalendarView</a> › classes</nav>
-<p><a href="../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.0)</strong></a></p>
+<p><a href="../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.46)</strong></a></p>
 <hr>
-<p><a href="../../../../../README.html">OpenUI5 TypeScript API (1.120.0)</a> / <a href="../../../../README.html">sap.m</a> / <a href="../README.html">sap/m/PlanningCalendarView</a> / PlanningCalendarView</p>
+<p><a href="../../../../../README.html">OpenUI5 TypeScript API (1.120.46)</a> / <a href="../../../../README.html">sap.m</a> / <a href="../README.html">sap/m/PlanningCalendarView</a> / PlanningCalendarView</p>
 <h1>Class: PlanningCalendarView</h1>
 <pre class="sig"><span class="kw">import</span> PlanningCalendarView <span class="kw">from</span> <span class="str">"sap/m/PlanningCalendarView"</span>;</pre>
-<h2>Since</h2>
-<p>1.34.0</p>
 <p>View of the sap.m.PlanningCalendar.</p>
 <p>The <code>PlanningCalendarView</code> defines the type of the intervals (hours, days, months) and how many intervals
 are displayed.</p>
+<h2>Since</h2>
+<p>1.34.0</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../../../../sap.ui.core/sap/ui/core/Element/classes/UI5Element.html"><code>UI5Element</code></a></li>
@@ -88,14 +88,14 @@ of the syntax of the settings object.</p>
 <blockquote>
 <p><strong>getAppointmentHeight</strong>(): <code>&quot;Large&quot;</code> | <code>&quot;Regular&quot;</code> | <a href="../../../../../sap.ui.unified/sap/ui/unified/library/enumerations/CalendarAppointmentHeight.html"><code>CalendarAppointmentHeight</code></a> | <code>&quot;Automatic&quot;</code> | <code>&quot;HalfSize&quot;</code></p>
 </blockquote>
+<p>Gets current value of property #getAppointmentHeight appointmentHeight.</p>
+<p>Determines the different possible sizes for appointments.</p>
+<p>Default value is <code>Regular</code>.</p>
 <h4>Returns</h4>
 <p><code>&quot;Large&quot;</code> | <code>&quot;Regular&quot;</code> | <a href="../../../../../sap.ui.unified/sap/ui/unified/library/enumerations/CalendarAppointmentHeight.html"><code>CalendarAppointmentHeight</code></a> | <code>&quot;Automatic&quot;</code> | <code>&quot;HalfSize&quot;</code></p>
 <p>Value of property <code>appointmentHeight</code></p>
 <h4>Since</h4>
 <p>1.81.0</p>
-<p>Gets current value of property #getAppointmentHeight appointmentHeight.</p>
-<p>Determines the different possible sizes for appointments.</p>
-<p>Default value is <code>Regular</code>.</p>
 <hr>
 <h3>getDescription()</h3>
 <blockquote>
@@ -112,6 +112,8 @@ of the syntax of the settings object.</p>
 <p><strong>getIntervalLabelFormatter</strong>(): <code>object</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
+<p>Gets current value of property #getIntervalLabelFormatter intervalLabelFormatter.</p>
+<p>A function that formats the interval.</p>
 <h4>Returns</h4>
 <p><code>object</code></p>
 <p>Value of property <code>intervalLabelFormatter</code></p>
@@ -119,14 +121,15 @@ of the syntax of the settings object.</p>
 <p>1.93
  (since 1.93) - This class is experimental and provides only limited functionality. Also
 the API might be changed in future.</p>
-<p>Gets current value of property #getIntervalLabelFormatter intervalLabelFormatter.</p>
-<p>A function that formats the interval.</p>
 <hr>
 <h3>getIntervalSize()</h3>
 <blockquote>
 <p><strong>getIntervalSize</strong>(): <code>number</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
+<p>Gets current value of property #getIntervalSize intervalSize.</p>
+<p>An integer that defines the period size.</p>
+<p>Default value is <code>1</code>.</p>
 <h4>Returns</h4>
 <p><code>number</code></p>
 <p>Value of property <code>intervalSize</code></p>
@@ -134,9 +137,6 @@ the API might be changed in future.</p>
 <p>1.93
  (since 1.93) - This class is experimental and provides only limited functionality. Also
 the API might be changed in future.</p>
-<p>Gets current value of property #getIntervalSize intervalSize.</p>
-<p>An integer that defines the period size.</p>
-<p>Default value is <code>1</code>.</p>
 <hr>
 <h3>getIntervalsL()</h3>
 <blockquote>
@@ -202,6 +202,10 @@ the descriptions in the sap.ui.unified.CalendarIntervalType CalendarIntervalType
 <p><strong>getRelative</strong>(): <code>boolean</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
+<p>Gets current value of property #getRelative relative.</p>
+<p>Defines if the view will be relative. NOTE: Relative views, can be only used with intervalType - Day
+and when used they need intervalSize and intervalLabelFormatter defined.</p>
+<p>Default value is <code>false</code>.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>Value of property <code>relative</code></p>
@@ -209,10 +213,6 @@ the descriptions in the sap.ui.unified.CalendarIntervalType CalendarIntervalType
 <p>1.93
  (since 1.93) - This class is experimental and provides only limited functionality. Also
 the API might be changed in future.</p>
-<p>Gets current value of property #getRelative relative.</p>
-<p>Defines if the view will be relative. NOTE: Relative views, can be only used with intervalType - Day
-and when used they need intervalSize and intervalLabelFormatter defined.</p>
-<p>Default value is <code>false</code>.</p>
 <hr>
 <h3>getShowSubIntervals()</h3>
 <blockquote>
@@ -233,6 +233,10 @@ and when used they need intervalSize and intervalLabelFormatter defined.</p>
 <blockquote>
 <p><strong>setAppointmentHeight</strong>(<code>sAppointmentHeight?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getAppointmentHeight appointmentHeight.</p>
+<p>Determines the different possible sizes for appointments.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>Regular</code>.</p>
 <h4>Parameters</h4>
 <h5>sAppointmentHeight?</h5>
 <p><code>&quot;Large&quot;</code> | <code>&quot;Regular&quot;</code> | <a href="../../../../../sap.ui.unified/sap/ui/unified/library/enumerations/CalendarAppointmentHeight.html"><code>CalendarAppointmentHeight</code></a> | <code>&quot;Automatic&quot;</code> | <code>&quot;HalfSize&quot;</code></p>
@@ -242,10 +246,6 @@ and when used they need intervalSize and intervalLabelFormatter defined.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.81.0</p>
-<p>Sets a new value for property #getAppointmentHeight appointmentHeight.</p>
-<p>Determines the different possible sizes for appointments.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>Regular</code>.</p>
 <hr>
 <h3>setDescription()</h3>
 <blockquote>
@@ -267,6 +267,9 @@ and when used they need intervalSize and intervalLabelFormatter defined.</p>
 <p><strong>setIntervalLabelFormatter</strong>(<code>oIntervalLabelFormatter</code>): <code>this</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
+<p>Sets a new value for property #getIntervalLabelFormatter intervalLabelFormatter.</p>
+<p>A function that formats the interval.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <h4>Parameters</h4>
 <h5>oIntervalLabelFormatter</h5>
 <p><code>object</code></p>
@@ -278,15 +281,16 @@ and when used they need intervalSize and intervalLabelFormatter defined.</p>
 <p>1.93
  (since 1.93) - This class is experimental and provides only limited functionality. Also
 the API might be changed in future.</p>
-<p>Sets a new value for property #getIntervalLabelFormatter intervalLabelFormatter.</p>
-<p>A function that formats the interval.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <hr>
 <h3>setIntervalSize()</h3>
 <blockquote>
 <p><strong>setIntervalSize</strong>(<code>iIntervalSize?</code>): <code>this</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
+<p>Sets a new value for property #getIntervalSize intervalSize.</p>
+<p>An integer that defines the period size.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>1</code>.</p>
 <h4>Parameters</h4>
 <h5>iIntervalSize?</h5>
 <p><code>number</code></p>
@@ -298,10 +302,6 @@ the API might be changed in future.</p>
 <p>1.93
  (since 1.93) - This class is experimental and provides only limited functionality. Also
 the API might be changed in future.</p>
-<p>Sets a new value for property #getIntervalSize intervalSize.</p>
-<p>An integer that defines the period size.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>1</code>.</p>
 <hr>
 <h3>setIntervalsL()</h3>
 <blockquote>
@@ -392,6 +392,11 @@ the descriptions in the sap.ui.unified.CalendarIntervalType CalendarIntervalType
 <p><strong>setRelative</strong>(<code>bRelative?</code>): <code>this</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
+<p>Sets a new value for property #getRelative relative.</p>
+<p>Defines if the view will be relative. NOTE: Relative views, can be only used with intervalType - Day
+and when used they need intervalSize and intervalLabelFormatter defined.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>false</code>.</p>
 <h4>Parameters</h4>
 <h5>bRelative?</h5>
 <p><code>boolean</code></p>
@@ -403,11 +408,6 @@ the descriptions in the sap.ui.unified.CalendarIntervalType CalendarIntervalType
 <p>1.93
  (since 1.93) - This class is experimental and provides only limited functionality. Also
 the API might be changed in future.</p>
-<p>Sets a new value for property #getRelative relative.</p>
-<p>Defines if the view will be relative. NOTE: Relative views, can be only used with intervalType - Day
-and when used they need intervalSize and intervalLabelFormatter defined.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>false</code>.</p>
 <hr>
 <h3>setShowSubIntervals()</h3>
 <blockquote>
@@ -468,6 +468,6 @@ used by this class</p>
 <p><a href="../../../../../sap.ui.core/sap/ui/core/Element/classes/UI5Element.html"><code>UI5Element</code></a>.<a href="../../../../../sap.ui.core/sap/ui/core/Element/classes/UI5Element.html#getmetadata-1"><code>getMetadata</code></a></p>
 <hr>
 
-<footer>Generated from <code>@openui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@openui5/types@1.120.46</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

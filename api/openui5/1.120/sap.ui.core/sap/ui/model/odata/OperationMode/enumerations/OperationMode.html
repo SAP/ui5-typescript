@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Enumeration: OperationMode — OpenUI5 TypeScript API</title>
-<meta name="description" content="Enumeration: OperationMode — OpenUI5 TypeScript API Reference (1.120.0)">
+<meta name="description" content="Enumeration: OperationMode — OpenUI5 TypeScript API Reference (1.120.46)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/openui5/1.120/sap.ui.core/sap/ui/model/odata/OperationMode/enumerations/OperationMode.html">
 <meta property="og:title" content="Enumeration: OperationMode — OpenUI5 TypeScript API">
-<meta property="og:description" content="Enumeration: OperationMode — OpenUI5 TypeScript API Reference (1.120.0)">
+<meta property="og:description" content="Enumeration: OperationMode — OpenUI5 TypeScript API Reference (1.120.46)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/openui5/1.120/sap.ui.core/sap/ui/model/odata/OperationMode/enumerations/OperationMode.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,9 +33,9 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../../index.html">OpenUI5 API</a> › <a href="../../../../../../../sap.ui.core/README.html">sap.ui.core</a> › sap › ui › model › odata › <a href="../../../../../../../sap.ui.core/sap/ui/model/odata/OperationMode/README.html">OperationMode</a> › enumerations</nav>
-<p><a href="../../../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.0)</strong></a></p>
+<p><a href="../../../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.46)</strong></a></p>
 <hr>
-<p><a href="../../../../../../../README.html">OpenUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../../README.html">sap.ui.core</a> / <a href="../README.html">sap/ui/model/odata/OperationMode</a> / OperationMode</p>
+<p><a href="../../../../../../../README.html">OpenUI5 TypeScript API (1.120.46)</a> / <a href="../../../../../../README.html">sap.ui.core</a> / <a href="../README.html">sap/ui/model/odata/OperationMode</a> / OperationMode</p>
 <h1>Enumeration: OperationMode</h1>
 <p>Different modes for executing service operations (filtering, sorting)</p>
 <h2>Enumeration Members</h2>
@@ -43,11 +43,6 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 <blockquote>
 <p><strong>Auto</strong>: <code>&quot;Auto&quot;</code></p>
 </blockquote>
-<h4>Deprecated</h4>
-<p>(since 1.102.0) - because filtering and sorting may lead to different results when executed
-on the client and on the server, and thus to inconsistent behavior. If it is certain that the collection
-is completely loaded on the client, use sap.ui.model.odata.OperationMode.Client; otherwise, use
-sap.ui.model.odata.OperationMode.Default or sap.ui.model.odata.OperationMode.Server.</p>
 <p>With operation mode <code>Auto</code>, operations are either processed on the client or on the server. The exact
 behavior depends on the configured sap.ui.model.odata.CountMode CountMode, on the <code>threshold</code>
 and on the size of the data:
@@ -71,6 +66,11 @@ will be applied afterwards on the client.
     requiring an additional request), but it also should be low enough to ensure a fast response in case
     there is much more data than expected.
 	 - Count mode <code>None</code> is not supported together with operation mode <code>Auto</code></p>
+<h4>Deprecated</h4>
+<p>(since 1.102.0) - because filtering and sorting may lead to different results when executed
+on the client and on the server, and thus to inconsistent behavior. If it is certain that the collection
+is completely loaded on the client, use sap.ui.model.odata.OperationMode.Client; otherwise, use
+sap.ui.model.odata.OperationMode.Default or sap.ui.model.odata.OperationMode.Server.</p>
 <hr>
 <h3>Client</h3>
 <blockquote>
@@ -94,6 +94,6 @@ executed on the client (<code>Client</code> mode).</p>
 <p>Operations are executed on the server in the OData service request, by appending corresponding URL parameters
 (<code>$filter</code>, <code>$orderby</code>). Each change in filtering or sorting triggers a new request to the server.</p>
 
-<footer>Generated from <code>@openui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@openui5/types@1.120.46</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

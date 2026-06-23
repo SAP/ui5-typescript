@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Class: ObjectStatus — OpenUI5 TypeScript API</title>
-<meta name="description" content="Class: ObjectStatus — OpenUI5 TypeScript API Reference (1.120.0)">
+<meta name="description" content="Class: ObjectStatus — OpenUI5 TypeScript API Reference (1.120.46)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/openui5/1.120/sap.m/sap/m/ObjectStatus/classes/ObjectStatus.html">
 <meta property="og:title" content="Class: ObjectStatus — OpenUI5 TypeScript API">
-<meta property="og:description" content="Class: ObjectStatus — OpenUI5 TypeScript API Reference (1.120.0)">
+<meta property="og:description" content="Class: ObjectStatus — OpenUI5 TypeScript API Reference (1.120.46)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/openui5/1.120/sap.m/sap/m/ObjectStatus/classes/ObjectStatus.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,9 +33,9 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../index.html">OpenUI5 API</a> › <a href="../../../../../sap.m/README.html">sap.m</a> › sap › m › <a href="../../../../../sap.m/sap/m/ObjectStatus/README.html">ObjectStatus</a> › classes</nav>
-<p><a href="../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.0)</strong></a></p>
+<p><a href="../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.46)</strong></a></p>
 <hr>
-<p><a href="../../../../../README.html">OpenUI5 TypeScript API (1.120.0)</a> / <a href="../../../../README.html">sap.m</a> / <a href="../README.html">sap/m/ObjectStatus</a> / ObjectStatus</p>
+<p><a href="../../../../../README.html">OpenUI5 TypeScript API (1.120.46)</a> / <a href="../../../../README.html">sap.m</a> / <a href="../README.html">sap/m/ObjectStatus</a> / ObjectStatus</p>
 <h1>Class: ObjectStatus</h1>
 <pre class="sig"><span class="kw">import</span> ObjectStatus <span class="kw">from</span> <span class="str">"sap/m/ObjectStatus"</span>;</pre>
 <p>Status information that can be either text with a value state, or an icon.</p>
@@ -129,6 +129,10 @@ See:
 <blockquote>
 <p><strong>attachPress</strong>(<code>oData</code>, <code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
+<p>Attaches event handler <code>fnFunction</code> to the #event:press press event of this <code>sap.m.ObjectStatus</code>.</p>
+<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
+otherwise it will be bound to this <code>sap.m.ObjectStatus</code> itself.</p>
+<p>Fires when the user clicks/taps on active text.</p>
 <h5>Parameters</h5>
 <h6>oData</h6>
 <p><code>object</code></p>
@@ -145,14 +149,14 @@ object when firing the event</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Since</h5>
 <p>1.54</p>
-<p>Attaches event handler <code>fnFunction</code> to the #event:press press event of this <code>sap.m.ObjectStatus</code>.</p>
-<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
-otherwise it will be bound to this <code>sap.m.ObjectStatus</code> itself.</p>
-<p>Fires when the user clicks/taps on active text.</p>
 <h4>Call Signature</h4>
 <blockquote>
 <p><strong>attachPress</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
+<p>Attaches event handler <code>fnFunction</code> to the #event:press press event of this <code>sap.m.ObjectStatus</code>.</p>
+<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
+otherwise it will be bound to this <code>sap.m.ObjectStatus</code> itself.</p>
+<p>Fires when the user clicks/taps on active text.</p>
 <h5>Parameters</h5>
 <h6>fnFunction</h6>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -165,15 +169,13 @@ otherwise it will be bound to this <code>sap.m.ObjectStatus</code> itself.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Since</h5>
 <p>1.54</p>
-<p>Attaches event handler <code>fnFunction</code> to the #event:press press event of this <code>sap.m.ObjectStatus</code>.</p>
-<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
-otherwise it will be bound to this <code>sap.m.ObjectStatus</code> itself.</p>
-<p>Fires when the user clicks/taps on active text.</p>
 <hr>
 <h3>detachPress()</h3>
 <blockquote>
 <p><strong>detachPress</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
+<p>Detaches event handler <code>fnFunction</code> from the #event:press press event of this <code>sap.m.ObjectStatus</code>.</p>
+<p>The passed function and listener object must match the ones used for event registration.</p>
 <h4>Parameters</h4>
 <h5>fnFunction</h5>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -186,13 +188,12 @@ otherwise it will be bound to this <code>sap.m.ObjectStatus</code> itself.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.54</p>
-<p>Detaches event handler <code>fnFunction</code> from the #event:press press event of this <code>sap.m.ObjectStatus</code>.</p>
-<p>The passed function and listener object must match the ones used for event registration.</p>
 <hr>
 <h3>firePress()</h3>
 <blockquote>
 <p><strong>firePress</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
+<p>Fires event #event:press press to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><code>object</code></p>
@@ -204,19 +205,18 @@ otherwise it will be bound to this <code>sap.m.ObjectStatus</code> itself.</p>
 <p>1.54</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Fires event #event:press press to attached listeners.</p>
 <hr>
 <h3>getAccessibilityInfo()</h3>
 <blockquote>
 <p><strong>getAccessibilityInfo</strong>(): <a href="../../../../../sap.ui.core/sap/ui/core/library/type-aliases/AccessibilityInfo.html"><code>AccessibilityInfo</code></a></p>
 </blockquote>
+<p>See:
+	sap.ui.core.Control#getAccessibilityInfo</p>
 <h4>Returns</h4>
 <p><a href="../../../../../sap.ui.core/sap/ui/core/library/type-aliases/AccessibilityInfo.html"><code>AccessibilityInfo</code></a></p>
 <p>Current accessibility state of the control</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>See:
-	sap.ui.core.Control#getAccessibilityInfo</p>
 <h4>Overrides</h4>
 <p><a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a>.<a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html#getaccessibilityinfo"><code>getAccessibilityInfo</code></a></p>
 <hr>
@@ -224,15 +224,15 @@ otherwise it will be bound to this <code>sap.m.ObjectStatus</code> itself.</p>
 <blockquote>
 <p><strong>getActive</strong>(): <code>boolean</code></p>
 </blockquote>
+<p>Gets current value of property #getActive active.</p>
+<p>Indicates if the <code>ObjectStatus</code> text and icon can be clicked/tapped by the user.</p>
+<p><strong>Note:</strong> If you set this property to <code>true</code>, you have to also set the <code>text</code> or <code>icon</code> property.</p>
+<p>Default value is <code>false</code>.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>Value of property <code>active</code></p>
 <h4>Since</h4>
 <p>1.54</p>
-<p>Gets current value of property #getActive active.</p>
-<p>Indicates if the <code>ObjectStatus</code> text and icon can be clicked/tapped by the user.</p>
-<p><strong>Note:</strong> If you set this property to <code>true</code>, you have to also set the <code>text</code> or <code>icon</code> property.</p>
-<p>Default value is <code>false</code>.</p>
 <hr>
 <h3>getAriaDescribedBy()</h3>
 <blockquote>
@@ -254,14 +254,14 @@ otherwise it will be bound to this <code>sap.m.ObjectStatus</code> itself.</p>
 <blockquote>
 <p><strong>getEmptyIndicatorMode</strong>(): <code>&quot;Auto&quot;</code> | <code>&quot;On&quot;</code> | <a href="../../library/enumerations/EmptyIndicatorMode.html"><code>EmptyIndicatorMode</code></a> | <code>&quot;Off&quot;</code></p>
 </blockquote>
+<p>Gets current value of property #getEmptyIndicatorMode emptyIndicatorMode.</p>
+<p>Specifies if an empty indicator should be displayed when there is no text.</p>
+<p>Default value is <code>Off</code>.</p>
 <h4>Returns</h4>
 <p><code>&quot;Auto&quot;</code> | <code>&quot;On&quot;</code> | <a href="../../library/enumerations/EmptyIndicatorMode.html"><code>EmptyIndicatorMode</code></a> | <code>&quot;Off&quot;</code></p>
 <p>Value of property <code>emptyIndicatorMode</code></p>
 <h4>Since</h4>
 <p>1.89</p>
-<p>Gets current value of property #getEmptyIndicatorMode emptyIndicatorMode.</p>
-<p>Specifies if an empty indicator should be displayed when there is no text.</p>
-<p>Default value is <code>Off</code>.</p>
 <hr>
 <h3>getIcon()</h3>
 <blockquote>
@@ -290,14 +290,14 @@ version of image if this version of image doesn&#39;t exist on the server.</p>
 <blockquote>
 <p><strong>getInverted</strong>(): <code>boolean</code></p>
 </blockquote>
+<p>Gets current value of property #getInverted inverted.</p>
+<p>Determines whether the background color reflects the set <code>state</code> instead of the control&#39;s text.</p>
+<p>Default value is <code>false</code>.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>Value of property <code>inverted</code></p>
 <h4>Since</h4>
 <p>1.66</p>
-<p>Gets current value of property #getInverted inverted.</p>
-<p>Determines whether the background color reflects the set <code>state</code> instead of the control&#39;s text.</p>
-<p>Default value is <code>false</code>.</p>
 <hr>
 <h3>getState()</h3>
 <blockquote>
@@ -315,13 +315,13 @@ version 1.66 the <code>state</code> property also accepts values from enum type 
 <blockquote>
 <p><strong>getStateAnnouncementText</strong>(): <code>string</code></p>
 </blockquote>
+<p>Gets current value of property #getStateAnnouncementText stateAnnouncementText.</p>
+<p>Еnables overriding of the default state announcement.</p>
 <h4>Returns</h4>
 <p><code>string</code></p>
 <p>Value of property <code>stateAnnouncementText</code></p>
 <h4>Since</h4>
 <p>1.110</p>
-<p>Gets current value of property #getStateAnnouncementText stateAnnouncementText.</p>
-<p>Еnables overriding of the default state announcement.</p>
 <hr>
 <h3>getText()</h3>
 <blockquote>
@@ -404,6 +404,11 @@ its parent control.</p>
 <blockquote>
 <p><strong>setActive</strong>(<code>bActive?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getActive active.</p>
+<p>Indicates if the <code>ObjectStatus</code> text and icon can be clicked/tapped by the user.</p>
+<p><strong>Note:</strong> If you set this property to <code>true</code>, you have to also set the <code>text</code> or <code>icon</code> property.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>false</code>.</p>
 <h4>Parameters</h4>
 <h5>bActive?</h5>
 <p><code>boolean</code></p>
@@ -413,16 +418,15 @@ its parent control.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.54</p>
-<p>Sets a new value for property #getActive active.</p>
-<p>Indicates if the <code>ObjectStatus</code> text and icon can be clicked/tapped by the user.</p>
-<p><strong>Note:</strong> If you set this property to <code>true</code>, you have to also set the <code>text</code> or <code>icon</code> property.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>false</code>.</p>
 <hr>
 <h3>setEmptyIndicatorMode()</h3>
 <blockquote>
 <p><strong>setEmptyIndicatorMode</strong>(<code>sEmptyIndicatorMode?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getEmptyIndicatorMode emptyIndicatorMode.</p>
+<p>Specifies if an empty indicator should be displayed when there is no text.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>Off</code>.</p>
 <h4>Parameters</h4>
 <h5>sEmptyIndicatorMode?</h5>
 <p><code>&quot;Auto&quot;</code> | <code>&quot;On&quot;</code> | <a href="../../library/enumerations/EmptyIndicatorMode.html"><code>EmptyIndicatorMode</code></a> | <code>&quot;Off&quot;</code></p>
@@ -432,10 +436,6 @@ its parent control.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.89</p>
-<p>Sets a new value for property #getEmptyIndicatorMode emptyIndicatorMode.</p>
-<p>Specifies if an empty indicator should be displayed when there is no text.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>Off</code>.</p>
 <hr>
 <h3>setIcon()</h3>
 <blockquote>
@@ -474,6 +474,10 @@ version of image if this version of image doesn&#39;t exist on the server.</p>
 <blockquote>
 <p><strong>setInverted</strong>(<code>bInverted?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getInverted inverted.</p>
+<p>Determines whether the background color reflects the set <code>state</code> instead of the control&#39;s text.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>false</code>.</p>
 <h4>Parameters</h4>
 <h5>bInverted?</h5>
 <p><code>boolean</code></p>
@@ -483,10 +487,6 @@ version of image if this version of image doesn&#39;t exist on the server.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.66</p>
-<p>Sets a new value for property #getInverted inverted.</p>
-<p>Determines whether the background color reflects the set <code>state</code> instead of the control&#39;s text.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>false</code>.</p>
 <hr>
 <h3>setState()</h3>
 <blockquote>
@@ -505,6 +505,9 @@ version of image if this version of image doesn&#39;t exist on the server.</p>
 <blockquote>
 <p><strong>setStateAnnouncementText</strong>(<code>sStateAnnouncementText</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getStateAnnouncementText stateAnnouncementText.</p>
+<p>Еnables overriding of the default state announcement.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <h4>Parameters</h4>
 <h5>sStateAnnouncementText</h5>
 <p><code>string</code></p>
@@ -514,9 +517,6 @@ version of image if this version of image doesn&#39;t exist on the server.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.110</p>
-<p>Sets a new value for property #getStateAnnouncementText stateAnnouncementText.</p>
-<p>Еnables overriding of the default state announcement.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <hr>
 <h3>setText()</h3>
 <blockquote>
@@ -605,6 +605,6 @@ used by this class</p>
 <p><a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a>.<a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html#getmetadata-1"><code>getMetadata</code></a></p>
 <hr>
 
-<footer>Generated from <code>@openui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@openui5/types@1.120.46</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

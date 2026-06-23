@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Class: JSONTreeBinding — OpenUI5 TypeScript API</title>
-<meta name="description" content="Class: JSONTreeBinding — OpenUI5 TypeScript API Reference (1.120.0)">
+<meta name="description" content="Class: JSONTreeBinding — OpenUI5 TypeScript API Reference (1.120.46)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/openui5/1.120/sap.ui.core/sap/ui/model/json/JSONTreeBinding/classes/JSONTreeBinding.html">
 <meta property="og:title" content="Class: JSONTreeBinding — OpenUI5 TypeScript API">
-<meta property="og:description" content="Class: JSONTreeBinding — OpenUI5 TypeScript API Reference (1.120.0)">
+<meta property="og:description" content="Class: JSONTreeBinding — OpenUI5 TypeScript API Reference (1.120.46)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/openui5/1.120/sap.ui.core/sap/ui/model/json/JSONTreeBinding/classes/JSONTreeBinding.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,59 +33,23 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../../index.html">OpenUI5 API</a> › <a href="../../../../../../../sap.ui.core/README.html">sap.ui.core</a> › sap › ui › model › json › <a href="../../../../../../../sap.ui.core/sap/ui/model/json/JSONTreeBinding/README.html">JSONTreeBinding</a> › classes</nav>
-<p><a href="../../../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.0)</strong></a></p>
+<p><a href="../../../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.46)</strong></a></p>
 <hr>
-<p><a href="../../../../../../../README.html">OpenUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../../README.html">sap.ui.core</a> / <a href="../README.html">sap/ui/model/json/JSONTreeBinding</a> / JSONTreeBinding</p>
+<p><a href="../../../../../../../README.html">OpenUI5 TypeScript API (1.120.46)</a> / <a href="../../../../../../README.html">sap.ui.core</a> / <a href="../README.html">sap/ui/model/json/JSONTreeBinding</a> / JSONTreeBinding</p>
 <h1>Class: JSONTreeBinding</h1>
 <pre class="sig"><span class="kw">import</span> JSONTreeBinding <span class="kw">from</span> <span class="str">"sap/ui/model/json/JSONTreeBinding"</span>;</pre>
-<h2>Ui5-protected</h2>
-<p>DO NOT USE IN APPLICATIONS (only for related classes in the framework)</p>
 <p>Tree binding implementation for JSON format.</p>
 <p>The bound data can contain JSON objects and arrays. Both will be used to build the tree structure. You
 can optionally define a set of arrays to be used for the tree structure in the parameter <code>arrayNames</code>.
 If this parameter is set, all other objects and arrays will be ignored.</p>
+<h2>Ui5-protected</h2>
+<p>DO NOT USE IN APPLICATIONS (only for related classes in the framework)</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../../ClientTreeBinding/classes/ClientTreeBinding.html"><code>ClientTreeBinding</code></a></li>
 </ul>
-<h2>Constructors</h2>
-<h3>Constructor</h3>
-<blockquote>
-<p><strong>new JSONTreeBinding</strong>(<code>oModel</code>, <code>sPath</code>, <code>oContext?</code>, <code>aFilters?</code>, <code>mParameters?</code>): <code>JSONTreeBinding</code></p>
-</blockquote>
-<h4>Parameters</h4>
-<h5>oModel</h5>
-<p><a href="../../JSONModel/classes/JSONModel.html"><code>JSONModel</code></a></p>
-<p>Model instance that this binding is created for and that it belongs to</p>
-<h5>sPath</h5>
-<p><code>string</code></p>
-<p>Path pointing to the tree or array that should be bound</p>
-<h5>oContext?</h5>
-<p><code>object</code></p>
-<p>Context object for this binding, mandatory when a relative binding path is given</p>
-<h5>aFilters?</h5>
-<p><a href="../../../Filter/classes/Filter.html"><code>Filter</code></a> | <a href="../../../Filter/classes/Filter.html"><code>Filter</code></a>[]</p>
-<p>Predefined filters contained in an array</p>
-<h5>mParameters?</h5>
-<p>Additional model-specific parameters</p>
-<h6>arrayNames?</h6>
-<p><code>string</code>[]</p>
-<p>Keys of arrays to be used for building the tree structure. If not specified, all arrays and objects in
-the bound data will be used. Note that for arrays nested inside differently named arrays, you need to
-add both to <code>arrayNames</code>. You always have to add the complete parent chain. If any array is ignored,
-its child arrays will be ignored as well even if they have been added to <code>arrayNames</code>.</p>
-<h4>Returns</h4>
-<p><code>JSONTreeBinding</code></p>
-<h4>Ui5-protected</h4>
-<p>Do not call from applications (only from related classes in the framework)</p>
-<p>Creates a new JSONListBinding.</p>
-<p>This constructor should only be called by subclasses or model implementations, not by application or
-control code. Such code should use sap.ui.model.json.JSONModel#bindTree JSONModel#bindTree on
-the corresponding model instance instead.</p>
-<h4>Overrides</h4>
-<p><a href="../../../ClientTreeBinding/classes/ClientTreeBinding.html"><code>ClientTreeBinding</code></a>.<a href="../../../ClientTreeBinding/classes/ClientTreeBinding.html#constructor"><code>constructor</code></a></p>
 <h2>Methods</h2>
 
-<footer>Generated from <code>@openui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@openui5/types@1.120.46</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

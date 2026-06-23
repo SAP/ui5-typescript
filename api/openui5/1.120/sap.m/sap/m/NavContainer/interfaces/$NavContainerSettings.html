@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Interface: $NavContainerSettings — OpenUI5 TypeScript API</title>
-<meta name="description" content="Interface: $NavContainerSettings — OpenUI5 TypeScript API Reference (1.120.0)">
+<meta name="description" content="Interface: $NavContainerSettings — OpenUI5 TypeScript API Reference (1.120.46)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/openui5/1.120/sap.m/sap/m/NavContainer/interfaces/$NavContainerSettings.html">
 <meta property="og:title" content="Interface: $NavContainerSettings — OpenUI5 TypeScript API">
-<meta property="og:description" content="Interface: $NavContainerSettings — OpenUI5 TypeScript API Reference (1.120.0)">
+<meta property="og:description" content="Interface: $NavContainerSettings — OpenUI5 TypeScript API Reference (1.120.46)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/openui5/1.120/sap.m/sap/m/NavContainer/interfaces/$NavContainerSettings.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,11 +33,12 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../index.html">OpenUI5 API</a> › <a href="../../../../../sap.m/README.html">sap.m</a> › sap › m › <a href="../../../../../sap.m/sap/m/NavContainer/README.html">NavContainer</a> › interfaces</nav>
-<p><a href="../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.0)</strong></a></p>
+<p><a href="../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.46)</strong></a></p>
 <hr>
-<p><a href="../../../../../README.html">OpenUI5 TypeScript API (1.120.0)</a> / <a href="../../../../README.html">sap.m</a> / <a href="../README.html">sap/m/NavContainer</a> / $NavContainerSettings</p>
+<p><a href="../../../../../README.html">OpenUI5 TypeScript API (1.120.46)</a> / <a href="../../../../README.html">sap.m</a> / <a href="../README.html">sap/m/NavContainer</a> / $NavContainerSettings</p>
 <h1>Interface: $NavContainerSettings</h1>
 <pre class="sig"><span class="kw">import</span> { $NavContainerSettings } <span class="kw">from</span> <span class="str">"sap/m/NavContainer"</span>;</pre>
+<p>Describes the settings that can be provided to the NavContainer constructor.</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../../../../sap.ui.core/sap/ui/core/Control/interfaces/$ControlSettings.html"><code>$ControlSettings</code></a></li>
@@ -51,6 +52,10 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 <blockquote>
 <p><code>optional</code> <strong>afterNavigate?</strong>: (<code>oEvent</code>) =&gt; <code>void</code></p>
 </blockquote>
+<p>The event is fired when navigation between two pages has completed (once all events to the child controls
+have been fired). In case of animated transitions this event is fired with some delay after the &quot;navigate&quot;
+event. This event is only fired if the DOM ref of the <code>NavContainer</code> is available. If the DOM ref is
+not available, the <code>navigationFinished</code> event should be used instead.</p>
 <h4>Parameters</h4>
 <h5>oEvent</h5>
 <p><a href="../type-aliases/NavContainer$AfterNavigateEvent.html"><code>NavContainer$AfterNavigateEvent</code></a></p>
@@ -58,17 +63,11 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 <p><code>void</code></p>
 <h4>Since</h4>
 <p>1.7.1</p>
-<p>The event is fired when navigation between two pages has completed (once all events to the child controls
-have been fired). In case of animated transitions this event is fired with some delay after the &quot;navigate&quot;
-event. This event is only fired if the DOM ref of the <code>NavContainer</code> is available. If the DOM ref is
-not available, the <code>navigationFinished</code> event should be used instead.</p>
 <hr>
 <h3>autoFocus?</h3>
 <blockquote>
 <p><code>optional</code> <strong>autoFocus?</strong>: <code>boolean</code> | <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<h4>Since</h4>
-<p>1.30</p>
 <p>Determines whether the initial focus is set automatically on first rendering and after navigating to
 a new page. This is useful when on touch devices the keyboard pops out due to the focus being automatically
 set on an input field. If necessary, the <code>AfterShow</code> event can be used to focus another element, only
@@ -82,16 +81,18 @@ a new page:
     of what is set to the <code>autoFocus</code> property.
 	 - If the <code>autoFocus</code> is set to <code>false</code> and at the same time another wrapping control has its own logic
     for focus restoring upon rerendering, the focus will still appear.</p>
+<h4>Since</h4>
+<p>1.30</p>
 <hr>
 <h3>defaultTransitionName?</h3>
 <blockquote>
 <p><code>optional</code> <strong>defaultTransitionName?</strong>: <code>string</code> | <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a></p>
 </blockquote>
-<h4>Since</h4>
-<p>1.7.1</p>
 <p>The type of the transition/animation to apply when &quot;to()&quot; is called without defining a transition type
 to use. The default is &quot;slide&quot;. Other options are: &quot;baseSlide&quot;, &quot;fade&quot;, &quot;flip&quot; and &quot;show&quot; - and the names
 of any registered custom transitions.</p>
+<h4>Since</h4>
+<p>1.7.1</p>
 <hr>
 <h3>height?</h3>
 <blockquote>
@@ -114,6 +115,9 @@ so this page serves as a sort of &quot;home/root page&quot;.</p>
 <blockquote>
 <p><code>optional</code> <strong>navigate?</strong>: (<code>oEvent</code>) =&gt; <code>void</code></p>
 </blockquote>
+<p>The event is fired when navigation between two pages has been triggered (before any events to the child
+controls are fired). The transition (if any) to the new page has not started yet. This event can be aborted
+by the application with preventDefault(), which means that there will be no navigation.</p>
 <h4>Parameters</h4>
 <h5>oEvent</h5>
 <p><a href="../type-aliases/NavContainer$NavigateEvent.html"><code>NavContainer$NavigateEvent</code></a></p>
@@ -121,14 +125,14 @@ so this page serves as a sort of &quot;home/root page&quot;.</p>
 <p><code>void</code></p>
 <h4>Since</h4>
 <p>1.7.1</p>
-<p>The event is fired when navigation between two pages has been triggered (before any events to the child
-controls are fired). The transition (if any) to the new page has not started yet. This event can be aborted
-by the application with preventDefault(), which means that there will be no navigation.</p>
 <hr>
 <h3>navigationFinished?</h3>
 <blockquote>
 <p><code>optional</code> <strong>navigationFinished?</strong>: (<code>oEvent</code>) =&gt; <code>void</code></p>
 </blockquote>
+<p>The event is fired when navigation between two pages has completed regardless of whether the DOM is ready
+or not. This event is useful when performing navigation without/before rendering of the <code>NavContainer</code>.
+Keep in mind that the DOM is not guaranteed to be ready when this event is fired.</p>
 <h4>Parameters</h4>
 <h5>oEvent</h5>
 <p><a href="../type-aliases/NavContainer$NavigationFinishedEvent.html"><code>NavContainer$NavigationFinishedEvent</code></a></p>
@@ -136,9 +140,6 @@ by the application with preventDefault(), which means that there will be no navi
 <p><code>void</code></p>
 <h4>Since</h4>
 <p>1.111.0</p>
-<p>The event is fired when navigation between two pages has completed regardless of whether the DOM is ready
-or not. This event is useful when performing navigation without/before rendering of the <code>NavContainer</code>.
-Keep in mind that the DOM is not guaranteed to be ready when this event is fired.</p>
 <hr>
 <h3>pages?</h3>
 <blockquote>
@@ -164,6 +165,6 @@ they are documented in the pseudo interface sap.m.NavContainerChild sap.m.NavCon
 <p>The width of the NavContainer. Can be changed when the NavContainer should not cover the whole available
 area.</p>
 
-<footer>Generated from <code>@openui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@openui5/types@1.120.46</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

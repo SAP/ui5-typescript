@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Interface: $ShellSettings — OpenUI5 TypeScript API</title>
-<meta name="description" content="Interface: $ShellSettings — OpenUI5 TypeScript API Reference (1.120.0)">
+<meta name="description" content="Interface: $ShellSettings — OpenUI5 TypeScript API Reference (1.120.46)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/openui5/1.120/sap.m/sap/m/Shell/interfaces/$ShellSettings.html">
 <meta property="og:title" content="Interface: $ShellSettings — OpenUI5 TypeScript API">
-<meta property="og:description" content="Interface: $ShellSettings — OpenUI5 TypeScript API Reference (1.120.0)">
+<meta property="og:description" content="Interface: $ShellSettings — OpenUI5 TypeScript API Reference (1.120.46)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/openui5/1.120/sap.m/sap/m/Shell/interfaces/$ShellSettings.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,11 +33,12 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../index.html">OpenUI5 API</a> › <a href="../../../../../sap.m/README.html">sap.m</a> › sap › m › <a href="../../../../../sap.m/sap/m/Shell/README.html">Shell</a> › interfaces</nav>
-<p><a href="../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.0)</strong></a></p>
+<p><a href="../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.46)</strong></a></p>
 <hr>
-<p><a href="../../../../../README.html">OpenUI5 TypeScript API (1.120.0)</a> / <a href="../../../../README.html">sap.m</a> / <a href="../README.html">sap/m/Shell</a> / $ShellSettings</p>
+<p><a href="../../../../../README.html">OpenUI5 TypeScript API (1.120.46)</a> / <a href="../../../../README.html">sap.m</a> / <a href="../README.html">sap/m/Shell</a> / $ShellSettings</p>
 <h1>Interface: $ShellSettings</h1>
 <pre class="sig"><span class="kw">import</span> { $ShellSettings } <span class="kw">from</span> <span class="str">"sap/m/Shell"</span>;</pre>
+<p>Describes the settings that can be provided to the Shell constructor.</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../../../../sap.ui.core/sap/ui/core/Control/interfaces/$ControlSettings.html"><code>$ControlSettings</code></a></li>
@@ -60,44 +61,44 @@ full screen width.</p>
 <blockquote>
 <p><code>optional</code> <strong>backgroundColor?</strong>: <code>string</code> | <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a></p>
 </blockquote>
-<h4>Since</h4>
-<p>1.11.2</p>
 <p>Defines the background color of the Shell. If set, this color will override the default background defined
 by the theme. This should only be set when really required. Any configured background image will be placed
 above this colored background. Use the backgroundRepeat property to define whether this image should
 be stretched to cover the complete Shell or whether it should be tiled.</p>
+<h4>Since</h4>
+<p>1.11.2</p>
 <hr>
 <h3>backgroundImage?</h3>
 <blockquote>
 <p><code>optional</code> <strong>backgroundImage?</strong>: <code>string</code> | <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a></p>
 </blockquote>
-<h4>Since</h4>
-<p>1.11.2</p>
 <p>Defines the background image of the Shell. If set, this image will override the default background defined
 by the theme. This should only be set when really required. This background image will be placed above
 any color set for the background. Use the backgroundRepeat property to define whether this image should
 be stretched to cover the complete Shell or whether it should be tiled.</p>
+<h4>Since</h4>
+<p>1.11.2</p>
 <hr>
 <h3>backgroundOpacity?</h3>
 <blockquote>
 <p><code>optional</code> <strong>backgroundOpacity?</strong>: <code>number</code> | <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<h4>Since</h4>
-<p>1.11.2</p>
 <p>Defines the opacity of the background image. The opacity can be set between 0 (fully transparent) and
 1 (fully opaque). This can be used to improve readability of the Shell content by making the background
 image partly transparent.</p>
+<h4>Since</h4>
+<p>1.11.2</p>
 <hr>
 <h3>backgroundRepeat?</h3>
 <blockquote>
 <p><code>optional</code> <strong>backgroundRepeat?</strong>: <code>boolean</code> | <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<h4>Since</h4>
-<p>1.11.2</p>
 <p>Determines whether the background image (if configured) should be proportionally stretched to cover the
 whole Shell (false, default) or whether it should be tiled (true). Note: the image will not be displayed
 when the <code>sap.m.Shell</code> content is fully overlapping the <code>sap.m.Shell</code> background (e.g. when &quot;appWidthLimited&quot;
 is set to &quot;false&quot;).</p>
+<h4>Since</h4>
+<p>1.11.2</p>
 <hr>
 <h3>headerRightText?</h3>
 <blockquote>
@@ -164,6 +165,6 @@ on the available screen size.</p>
 map for faster navigation. Depending on this setting an HTML h1-h6 element is used.</p>
 <hr>
 
-<footer>Generated from <code>@openui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@openui5/types@1.120.46</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

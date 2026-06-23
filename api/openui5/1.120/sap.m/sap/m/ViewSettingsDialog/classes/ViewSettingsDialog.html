@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Class: ViewSettingsDialog — OpenUI5 TypeScript API</title>
-<meta name="description" content="Class: ViewSettingsDialog — OpenUI5 TypeScript API Reference (1.120.0)">
+<meta name="description" content="Class: ViewSettingsDialog — OpenUI5 TypeScript API Reference (1.120.46)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/openui5/1.120/sap.m/sap/m/ViewSettingsDialog/classes/ViewSettingsDialog.html">
 <meta property="og:title" content="Class: ViewSettingsDialog — OpenUI5 TypeScript API">
-<meta property="og:description" content="Class: ViewSettingsDialog — OpenUI5 TypeScript API Reference (1.120.0)">
+<meta property="og:description" content="Class: ViewSettingsDialog — OpenUI5 TypeScript API Reference (1.120.46)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/openui5/1.120/sap.m/sap/m/ViewSettingsDialog/classes/ViewSettingsDialog.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,13 +33,11 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../index.html">OpenUI5 API</a> › <a href="../../../../../sap.m/README.html">sap.m</a> › sap › m › <a href="../../../../../sap.m/sap/m/ViewSettingsDialog/README.html">ViewSettingsDialog</a> › classes</nav>
-<p><a href="../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.0)</strong></a></p>
+<p><a href="../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.46)</strong></a></p>
 <hr>
-<p><a href="../../../../../README.html">OpenUI5 TypeScript API (1.120.0)</a> / <a href="../../../../README.html">sap.m</a> / <a href="../README.html">sap/m/ViewSettingsDialog</a> / ViewSettingsDialog</p>
+<p><a href="../../../../../README.html">OpenUI5 TypeScript API (1.120.46)</a> / <a href="../../../../README.html">sap.m</a> / <a href="../README.html">sap/m/ViewSettingsDialog</a> / ViewSettingsDialog</p>
 <h1>Class: ViewSettingsDialog</h1>
 <pre class="sig"><span class="kw">import</span> ViewSettingsDialog <span class="kw">from</span> <span class="str">"sap/m/ViewSettingsDialog"</span>;</pre>
-<h2>Since</h2>
-<p>1.16</p>
 <p>Helps the user to sort, filter, or group data within a (master) sap.m.List or a sap.m.Table.
 The dialog is triggered by icon buttons in the table toolbar. Each button shows a dropdown list icon.</p>
 <p>Overview:</p>
@@ -72,6 +70,8 @@ sap.m.P13nDialog instead)
 </code></pre>
 <p>Responsive behavior:</p>
 <p>The popover dialog appears as a modal window on desktop and tablet screen sizes, but full screen on smartphones.</p>
+<h2>Since</h2>
+<p>1.16</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></li>
@@ -135,6 +135,7 @@ the predefined tabs.</p>
 <blockquote>
 <p><strong>addFilterItem</strong>(<code>oFilterItem</code>): <code>this</code></p>
 </blockquote>
+<p>Adds some filterItem to the aggregation #getFilterItems filterItems.</p>
 <h4>Parameters</h4>
 <h5>oFilterItem</h5>
 <p><a href="../../ViewSettingsItem/classes/ViewSettingsItem.html"><code>ViewSettingsItem</code></a></p>
@@ -144,7 +145,6 @@ the predefined tabs.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.16</p>
-<p>Adds some filterItem to the aggregation #getFilterItems filterItems.</p>
 <hr>
 <h3>addGroupItem()</h3>
 <blockquote>
@@ -422,6 +422,9 @@ otherwise it will be bound to this <code>sap.m.ViewSettingsDialog</code> itself.
 <blockquote>
 <p><strong>bindCustomTabs</strong>(<code>oBindingInfo</code>): <code>this</code></p>
 </blockquote>
+<p>Binds aggregation #getCustomTabs customTabs to model data.</p>
+<p>See sap.ui.base.ManagedObject#bindAggregation ManagedObject.bindAggregation for a detailed description
+of the possible properties of <code>oBindingInfo</code>.</p>
 <h4>Parameters</h4>
 <h5>oBindingInfo</h5>
 <p><a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/AggregationBindingInfo.html"><code>AggregationBindingInfo</code></a></p>
@@ -431,14 +434,14 @@ otherwise it will be bound to this <code>sap.m.ViewSettingsDialog</code> itself.
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.30</p>
-<p>Binds aggregation #getCustomTabs customTabs to model data.</p>
-<p>See sap.ui.base.ManagedObject#bindAggregation ManagedObject.bindAggregation for a detailed description
-of the possible properties of <code>oBindingInfo</code>.</p>
 <hr>
 <h3>bindFilterItems()</h3>
 <blockquote>
 <p><strong>bindFilterItems</strong>(<code>oBindingInfo</code>): <code>this</code></p>
 </blockquote>
+<p>Binds aggregation #getFilterItems filterItems to model data.</p>
+<p>See sap.ui.base.ManagedObject#bindAggregation ManagedObject.bindAggregation for a detailed description
+of the possible properties of <code>oBindingInfo</code>.</p>
 <h4>Parameters</h4>
 <h5>oBindingInfo</h5>
 <p><a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/AggregationBindingInfo.html"><code>AggregationBindingInfo</code></a></p>
@@ -448,14 +451,14 @@ of the possible properties of <code>oBindingInfo</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.16</p>
-<p>Binds aggregation #getFilterItems filterItems to model data.</p>
-<p>See sap.ui.base.ManagedObject#bindAggregation ManagedObject.bindAggregation for a detailed description
-of the possible properties of <code>oBindingInfo</code>.</p>
 <hr>
 <h3>bindGroupItems()</h3>
 <blockquote>
 <p><strong>bindGroupItems</strong>(<code>oBindingInfo</code>): <code>this</code></p>
 </blockquote>
+<p>Binds aggregation #getGroupItems groupItems to model data.</p>
+<p>See sap.ui.base.ManagedObject#bindAggregation ManagedObject.bindAggregation for a detailed description
+of the possible properties of <code>oBindingInfo</code>.</p>
 <h4>Parameters</h4>
 <h5>oBindingInfo</h5>
 <p><a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/AggregationBindingInfo.html"><code>AggregationBindingInfo</code></a></p>
@@ -465,14 +468,14 @@ of the possible properties of <code>oBindingInfo</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.16</p>
-<p>Binds aggregation #getGroupItems groupItems to model data.</p>
-<p>See sap.ui.base.ManagedObject#bindAggregation ManagedObject.bindAggregation for a detailed description
-of the possible properties of <code>oBindingInfo</code>.</p>
 <hr>
 <h3>bindPresetFilterItems()</h3>
 <blockquote>
 <p><strong>bindPresetFilterItems</strong>(<code>oBindingInfo</code>): <code>this</code></p>
 </blockquote>
+<p>Binds aggregation #getPresetFilterItems presetFilterItems to model data.</p>
+<p>See sap.ui.base.ManagedObject#bindAggregation ManagedObject.bindAggregation for a detailed description
+of the possible properties of <code>oBindingInfo</code>.</p>
 <h4>Parameters</h4>
 <h5>oBindingInfo</h5>
 <p><a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/AggregationBindingInfo.html"><code>AggregationBindingInfo</code></a></p>
@@ -482,14 +485,14 @@ of the possible properties of <code>oBindingInfo</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.16</p>
-<p>Binds aggregation #getPresetFilterItems presetFilterItems to model data.</p>
-<p>See sap.ui.base.ManagedObject#bindAggregation ManagedObject.bindAggregation for a detailed description
-of the possible properties of <code>oBindingInfo</code>.</p>
 <hr>
 <h3>bindSortItems()</h3>
 <blockquote>
 <p><strong>bindSortItems</strong>(<code>oBindingInfo</code>): <code>this</code></p>
 </blockquote>
+<p>Binds aggregation #getSortItems sortItems to model data.</p>
+<p>See sap.ui.base.ManagedObject#bindAggregation ManagedObject.bindAggregation for a detailed description
+of the possible properties of <code>oBindingInfo</code>.</p>
 <h4>Parameters</h4>
 <h5>oBindingInfo</h5>
 <p><a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/AggregationBindingInfo.html"><code>AggregationBindingInfo</code></a></p>
@@ -499,9 +502,6 @@ of the possible properties of <code>oBindingInfo</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.16</p>
-<p>Binds aggregation #getSortItems sortItems to model data.</p>
-<p>See sap.ui.base.ManagedObject#bindAggregation ManagedObject.bindAggregation for a detailed description
-of the possible properties of <code>oBindingInfo</code>.</p>
 <hr>
 <h3>clearFilters()</h3>
 <blockquote>
@@ -516,56 +516,56 @@ of the possible properties of <code>oBindingInfo</code>.</p>
 <blockquote>
 <p><strong>destroyCustomTabs</strong>(): <code>this</code></p>
 </blockquote>
+<p>Destroys all the customTabs in the aggregation #getCustomTabs customTabs.</p>
 <h4>Returns</h4>
 <p><code>this</code></p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.30</p>
-<p>Destroys all the customTabs in the aggregation #getCustomTabs customTabs.</p>
 <hr>
 <h3>destroyFilterItems()</h3>
 <blockquote>
 <p><strong>destroyFilterItems</strong>(): <code>this</code></p>
 </blockquote>
+<p>Destroys all the filterItems in the aggregation #getFilterItems filterItems.</p>
 <h4>Returns</h4>
 <p><code>this</code></p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.16</p>
-<p>Destroys all the filterItems in the aggregation #getFilterItems filterItems.</p>
 <hr>
 <h3>destroyGroupItems()</h3>
 <blockquote>
 <p><strong>destroyGroupItems</strong>(): <code>this</code></p>
 </blockquote>
+<p>Destroys all the groupItems in the aggregation #getGroupItems groupItems.</p>
 <h4>Returns</h4>
 <p><code>this</code></p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.16</p>
-<p>Destroys all the groupItems in the aggregation #getGroupItems groupItems.</p>
 <hr>
 <h3>destroyPresetFilterItems()</h3>
 <blockquote>
 <p><strong>destroyPresetFilterItems</strong>(): <code>this</code></p>
 </blockquote>
+<p>Destroys all the presetFilterItems in the aggregation #getPresetFilterItems presetFilterItems.</p>
 <h4>Returns</h4>
 <p><code>this</code></p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.16</p>
-<p>Destroys all the presetFilterItems in the aggregation #getPresetFilterItems presetFilterItems.</p>
 <hr>
 <h3>destroySortItems()</h3>
 <blockquote>
 <p><strong>destroySortItems</strong>(): <code>this</code></p>
 </blockquote>
+<p>Destroys all the sortItems in the aggregation #getSortItems sortItems.</p>
 <h4>Returns</h4>
 <p><code>this</code></p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.16</p>
-<p>Destroys all the sortItems in the aggregation #getSortItems sortItems.</p>
 <hr>
 <h3>detachCancel()</h3>
 <blockquote>
@@ -657,6 +657,7 @@ event of this <code>sap.m.ViewSettingsDialog</code>.</p>
 <blockquote>
 <p><strong>fireCancel</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
+<p>Fires event #event:cancel cancel to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><code>object</code></p>
@@ -666,12 +667,12 @@ event of this <code>sap.m.ViewSettingsDialog</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Fires event #event:cancel cancel to attached listeners.</p>
 <hr>
 <h3>fireConfirm()</h3>
 <blockquote>
 <p><strong>fireConfirm</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
+<p>Fires event #event:confirm confirm to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/ViewSettingsDialog$ConfirmEventParameters.html"><code>ViewSettingsDialog$ConfirmEventParameters</code></a></p>
@@ -681,12 +682,12 @@ event of this <code>sap.m.ViewSettingsDialog</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Fires event #event:confirm confirm to attached listeners.</p>
 <hr>
 <h3>fireFilterDetailPageOpened()</h3>
 <blockquote>
 <p><strong>fireFilterDetailPageOpened</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
+<p>Fires event #event:filterDetailPageOpened filterDetailPageOpened to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/ViewSettingsDialog$FilterDetailPageOpenedEventParameters.html"><code>ViewSettingsDialog$FilterDetailPageOpenedEventParameters</code></a></p>
@@ -696,12 +697,12 @@ event of this <code>sap.m.ViewSettingsDialog</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Fires event #event:filterDetailPageOpened filterDetailPageOpened to attached listeners.</p>
 <hr>
 <h3>fireReset()</h3>
 <blockquote>
 <p><strong>fireReset</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
+<p>Fires event #event:reset reset to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><code>object</code></p>
@@ -711,12 +712,12 @@ event of this <code>sap.m.ViewSettingsDialog</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Fires event #event:reset reset to attached listeners.</p>
 <hr>
 <h3>fireResetFilters()</h3>
 <blockquote>
 <p><strong>fireResetFilters</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
+<p>Fires event #event:resetFilters resetFilters to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><code>object</code></p>
@@ -726,18 +727,17 @@ event of this <code>sap.m.ViewSettingsDialog</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Fires event #event:resetFilters resetFilters to attached listeners.</p>
 <hr>
 <h3>getCustomTabs()</h3>
 <blockquote>
 <p><strong>getCustomTabs</strong>(): <a href="../../ViewSettingsCustomTab/classes/ViewSettingsCustomTab.html"><code>ViewSettingsCustomTab</code></a>[]</p>
 </blockquote>
+<p>Gets content of aggregation #getCustomTabs customTabs.</p>
+<p>The list of all the custom tabs.</p>
 <h4>Returns</h4>
 <p><a href="../../ViewSettingsCustomTab/classes/ViewSettingsCustomTab.html"><code>ViewSettingsCustomTab</code></a>[]</p>
 <h4>Since</h4>
 <p>1.30</p>
-<p>Gets content of aggregation #getCustomTabs customTabs.</p>
-<p>The list of all the custom tabs.</p>
 <hr>
 <h3>getDomRef()</h3>
 <blockquote>
@@ -754,29 +754,29 @@ event of this <code>sap.m.ViewSettingsDialog</code>.</p>
 <blockquote>
 <p><strong>getFilterItems</strong>(): <a href="../../ViewSettingsItem/classes/ViewSettingsItem.html"><code>ViewSettingsItem</code></a>[]</p>
 </blockquote>
-<h4>Returns</h4>
-<p><a href="../../ViewSettingsItem/classes/ViewSettingsItem.html"><code>ViewSettingsItem</code></a>[]</p>
-<h4>Since</h4>
-<p>1.16</p>
 <p>Gets content of aggregation #getFilterItems filterItems.</p>
 <p>The list of items with key and value that can be filtered on (for example, a list of columns for a table).
 A filterItem is associated with one or more detail filters.</p>
 <p><strong>Note:</strong> It is recommended to use the <code>sap.m.ViewSettingsFilterItem</code> as it fits best at the filter page.</p>
+<h4>Returns</h4>
+<p><a href="../../ViewSettingsItem/classes/ViewSettingsItem.html"><code>ViewSettingsItem</code></a>[]</p>
+<h4>Since</h4>
+<p>1.16</p>
 <hr>
 <h3>getFilterSearchOperator()</h3>
 <blockquote>
 <p><strong>getFilterSearchOperator</strong>(): <code>&quot;Contains&quot;</code> | <code>&quot;StartsWith&quot;</code> | <a href="../../library/enumerations/StringFilterOperator.html"><code>StringFilterOperator</code></a> | <code>&quot;AnyWordStartsWith&quot;</code> | <code>&quot;Equals&quot;</code></p>
 </blockquote>
-<h4>Returns</h4>
-<p><code>&quot;Contains&quot;</code> | <code>&quot;StartsWith&quot;</code> | <a href="../../library/enumerations/StringFilterOperator.html"><code>StringFilterOperator</code></a> | <code>&quot;AnyWordStartsWith&quot;</code> | <code>&quot;Equals&quot;</code></p>
-<p>Value of property <code>filterSearchOperator</code></p>
-<h4>Since</h4>
-<p>1.42</p>
 <p>Gets current value of property #getFilterSearchOperator filterSearchOperator.</p>
 <p>Provides a string filter operator which is used when the user searches items in filter details page.
 Possible operators are: <code>AnyWordStartsWith</code>, <code>Contains</code>, <code>StartsWith</code>, <code>Equals</code>. This property will be
 ignored if a custom callback is provided through <code>setFilterSearchCallback</code> method.</p>
 <p>Default value is <code>StartsWith</code>.</p>
+<h4>Returns</h4>
+<p><code>&quot;Contains&quot;</code> | <code>&quot;StartsWith&quot;</code> | <a href="../../library/enumerations/StringFilterOperator.html"><code>StringFilterOperator</code></a> | <code>&quot;AnyWordStartsWith&quot;</code> | <code>&quot;Equals&quot;</code></p>
+<p>Value of property <code>filterSearchOperator</code></p>
+<h4>Since</h4>
+<p>1.42</p>
 <hr>
 <h3>getGroupDescending()</h3>
 <blockquote>
@@ -793,35 +793,35 @@ ignored if a custom callback is provided through <code>setFilterSearchCallback</
 <blockquote>
 <p><strong>getGroupItems</strong>(): <a href="../../ViewSettingsItem/classes/ViewSettingsItem.html"><code>ViewSettingsItem</code></a>[]</p>
 </blockquote>
+<p>Gets content of aggregation #getGroupItems groupItems.</p>
+<p>The list of items with key and value that can be grouped on (for example, a list of columns for a table).</p>
 <h4>Returns</h4>
 <p><a href="../../ViewSettingsItem/classes/ViewSettingsItem.html"><code>ViewSettingsItem</code></a>[]</p>
 <h4>Since</h4>
 <p>1.16</p>
-<p>Gets content of aggregation #getGroupItems groupItems.</p>
-<p>The list of items with key and value that can be grouped on (for example, a list of columns for a table).</p>
 <hr>
 <h3>getPresetFilterItems()</h3>
 <blockquote>
 <p><strong>getPresetFilterItems</strong>(): <a href="../../ViewSettingsItem/classes/ViewSettingsItem.html"><code>ViewSettingsItem</code></a>[]</p>
 </blockquote>
+<p>Gets content of aggregation #getPresetFilterItems presetFilterItems.</p>
+<p>The list of preset filter items with key and value that allows the selection of more complex or custom
+filters. These entries are displayed at the top of the filter tab.</p>
 <h4>Returns</h4>
 <p><a href="../../ViewSettingsItem/classes/ViewSettingsItem.html"><code>ViewSettingsItem</code></a>[]</p>
 <h4>Since</h4>
 <p>1.16</p>
-<p>Gets content of aggregation #getPresetFilterItems presetFilterItems.</p>
-<p>The list of preset filter items with key and value that allows the selection of more complex or custom
-filters. These entries are displayed at the top of the filter tab.</p>
 <hr>
 <h3>getSelectedFilterCompoundKeys()</h3>
 <blockquote>
 <p><strong>getSelectedFilterCompoundKeys</strong>(): <code>Record</code>&lt;<code>string</code>, <a href="../type-aliases/SelectedFilterKeys.html"><code>SelectedFilterKeys</code></a>&gt;</p>
 </blockquote>
+<p>Gets the selected filter object in format { parent_key: { key: boolean, key2: boolean, ...}, ... }.</p>
 <h4>Returns</h4>
 <p><code>Record</code>&lt;<code>string</code>, <a href="../type-aliases/SelectedFilterKeys.html"><code>SelectedFilterKeys</code></a>&gt;</p>
 <p>An object with item and sub-item keys</p>
 <h4>Since</h4>
 <p>1.42</p>
-<p>Gets the selected filter object in format { parent_key: { key: boolean, key2: boolean, ...}, ... }.</p>
 <hr>
 <h3>getSelectedFilterItems()</h3>
 <blockquote>
@@ -837,13 +837,13 @@ filters. These entries are displayed at the top of the filter tab.</p>
 <blockquote>
 <p><strong>getSelectedFilterKeys</strong>(): <a href="../type-aliases/SelectedFilterKeys.html"><code>SelectedFilterKeys</code></a></p>
 </blockquote>
+<p>Gets the selected filter object in format {key: boolean}.</p>
+<p>It can be used to create matching sorters and filters to apply the selected settings to the data.</p>
 <h4>Returns</h4>
 <p><a href="../type-aliases/SelectedFilterKeys.html"><code>SelectedFilterKeys</code></a></p>
 <p>An object with item and sub-item keys</p>
 <h4>Deprecated</h4>
 <p>(since 1.42) - replaced by <code>getSelectedFilterCompoundKeys</code> method</p>
-<p>Gets the selected filter object in format {key: boolean}.</p>
-<p>It can be used to create matching sorters and filters to apply the selected settings to the data.</p>
 <hr>
 <h3>getSelectedFilterString()</h3>
 <blockquote>
@@ -897,12 +897,12 @@ or <code>null</code>.</p>
 <blockquote>
 <p><strong>getSortItems</strong>(): <a href="../../ViewSettingsItem/classes/ViewSettingsItem.html"><code>ViewSettingsItem</code></a>[]</p>
 </blockquote>
+<p>Gets content of aggregation #getSortItems sortItems.</p>
+<p>The list of items with key and value that can be sorted over (for example, a list of columns for a table).</p>
 <h4>Returns</h4>
 <p><a href="../../ViewSettingsItem/classes/ViewSettingsItem.html"><code>ViewSettingsItem</code></a>[]</p>
 <h4>Since</h4>
 <p>1.16</p>
-<p>Gets content of aggregation #getSortItems sortItems.</p>
-<p>The list of items with key and value that can be sorted over (for example, a list of columns for a table).</p>
 <hr>
 <h3>getTitle()</h3>
 <blockquote>
@@ -919,17 +919,17 @@ or <code>null</code>.</p>
 <blockquote>
 <p><strong>getTitleAlignment</strong>(): <code>&quot;None&quot;</code> | <code>&quot;Auto&quot;</code> | <code>&quot;Center&quot;</code> | <a href="../../library/enumerations/TitleAlignment.html"><code>TitleAlignment</code></a> | <code>&quot;Start&quot;</code></p>
 </blockquote>
-<h4>Returns</h4>
-<p><code>&quot;None&quot;</code> | <code>&quot;Auto&quot;</code> | <code>&quot;Center&quot;</code> | <a href="../../library/enumerations/TitleAlignment.html"><code>TitleAlignment</code></a> | <code>&quot;Start&quot;</code></p>
-<p>Value of property <code>titleAlignment</code></p>
-<h4>Since</h4>
-<p>1.72</p>
 <p>Gets current value of property #getTitleAlignment titleAlignment.</p>
 <p>Specifies the Title alignment (theme specific). If set to <code>TitleAlignment.None</code>, the automatic title
 alignment depending on the theme settings will be disabled. If set to <code>TitleAlignment.Auto</code>, the Title
 will be aligned as it is set in the theme (if not set, the default value is <code>center</code>); Other possible
 values are <code>TitleAlignment.Start</code> (left or right depending on LTR/RTL), and <code>TitleAlignment.Center</code> (centered)</p>
 <p>Default value is <code>Auto</code>.</p>
+<h4>Returns</h4>
+<p><code>&quot;None&quot;</code> | <code>&quot;Auto&quot;</code> | <code>&quot;Center&quot;</code> | <a href="../../library/enumerations/TitleAlignment.html"><code>TitleAlignment</code></a> | <code>&quot;Start&quot;</code></p>
+<p>Value of property <code>titleAlignment</code></p>
+<h4>Since</h4>
+<p>1.72</p>
 <hr>
 <h3>hasStyleClass()</h3>
 <blockquote>
@@ -946,6 +946,8 @@ values are <code>TitleAlignment.Start</code> (left or right depending on LTR/RTL
 <blockquote>
 <p><strong>indexOfCustomTab</strong>(<code>oCustomTab</code>): <code>number</code></p>
 </blockquote>
+<p>Checks for the provided <code>sap.m.ViewSettingsCustomTab</code> in the aggregation #getCustomTabs customTabs.
+and returns its index if found or -1 otherwise.</p>
 <h4>Parameters</h4>
 <h5>oCustomTab</h5>
 <p><a href="../../ViewSettingsCustomTab/classes/ViewSettingsCustomTab.html"><code>ViewSettingsCustomTab</code></a></p>
@@ -955,13 +957,13 @@ values are <code>TitleAlignment.Start</code> (left or right depending on LTR/RTL
 <p>The index of the provided control in the aggregation if found, or -1 otherwise</p>
 <h4>Since</h4>
 <p>1.30</p>
-<p>Checks for the provided <code>sap.m.ViewSettingsCustomTab</code> in the aggregation #getCustomTabs customTabs.
-and returns its index if found or -1 otherwise.</p>
 <hr>
 <h3>indexOfFilterItem()</h3>
 <blockquote>
 <p><strong>indexOfFilterItem</strong>(<code>oFilterItem</code>): <code>number</code></p>
 </blockquote>
+<p>Checks for the provided <code>sap.m.ViewSettingsItem</code> in the aggregation #getFilterItems filterItems.
+and returns its index if found or -1 otherwise.</p>
 <h4>Parameters</h4>
 <h5>oFilterItem</h5>
 <p><a href="../../ViewSettingsItem/classes/ViewSettingsItem.html"><code>ViewSettingsItem</code></a></p>
@@ -971,13 +973,13 @@ and returns its index if found or -1 otherwise.</p>
 <p>The index of the provided control in the aggregation if found, or -1 otherwise</p>
 <h4>Since</h4>
 <p>1.16</p>
-<p>Checks for the provided <code>sap.m.ViewSettingsItem</code> in the aggregation #getFilterItems filterItems.
-and returns its index if found or -1 otherwise.</p>
 <hr>
 <h3>indexOfGroupItem()</h3>
 <blockquote>
 <p><strong>indexOfGroupItem</strong>(<code>oGroupItem</code>): <code>number</code></p>
 </blockquote>
+<p>Checks for the provided <code>sap.m.ViewSettingsItem</code> in the aggregation #getGroupItems groupItems.
+and returns its index if found or -1 otherwise.</p>
 <h4>Parameters</h4>
 <h5>oGroupItem</h5>
 <p><a href="../../ViewSettingsItem/classes/ViewSettingsItem.html"><code>ViewSettingsItem</code></a></p>
@@ -987,13 +989,13 @@ and returns its index if found or -1 otherwise.</p>
 <p>The index of the provided control in the aggregation if found, or -1 otherwise</p>
 <h4>Since</h4>
 <p>1.16</p>
-<p>Checks for the provided <code>sap.m.ViewSettingsItem</code> in the aggregation #getGroupItems groupItems.
-and returns its index if found or -1 otherwise.</p>
 <hr>
 <h3>indexOfPresetFilterItem()</h3>
 <blockquote>
 <p><strong>indexOfPresetFilterItem</strong>(<code>oPresetFilterItem</code>): <code>number</code></p>
 </blockquote>
+<p>Checks for the provided <code>sap.m.ViewSettingsItem</code> in the aggregation #getPresetFilterItems presetFilterItems.
+and returns its index if found or -1 otherwise.</p>
 <h4>Parameters</h4>
 <h5>oPresetFilterItem</h5>
 <p><a href="../../ViewSettingsItem/classes/ViewSettingsItem.html"><code>ViewSettingsItem</code></a></p>
@@ -1003,13 +1005,13 @@ and returns its index if found or -1 otherwise.</p>
 <p>The index of the provided control in the aggregation if found, or -1 otherwise</p>
 <h4>Since</h4>
 <p>1.16</p>
-<p>Checks for the provided <code>sap.m.ViewSettingsItem</code> in the aggregation #getPresetFilterItems presetFilterItems.
-and returns its index if found or -1 otherwise.</p>
 <hr>
 <h3>indexOfSortItem()</h3>
 <blockquote>
 <p><strong>indexOfSortItem</strong>(<code>oSortItem</code>): <code>number</code></p>
 </blockquote>
+<p>Checks for the provided <code>sap.m.ViewSettingsItem</code> in the aggregation #getSortItems sortItems.
+and returns its index if found or -1 otherwise.</p>
 <h4>Parameters</h4>
 <h5>oSortItem</h5>
 <p><a href="../../ViewSettingsItem/classes/ViewSettingsItem.html"><code>ViewSettingsItem</code></a></p>
@@ -1019,13 +1021,12 @@ and returns its index if found or -1 otherwise.</p>
 <p>The index of the provided control in the aggregation if found, or -1 otherwise</p>
 <h4>Since</h4>
 <p>1.16</p>
-<p>Checks for the provided <code>sap.m.ViewSettingsItem</code> in the aggregation #getSortItems sortItems.
-and returns its index if found or -1 otherwise.</p>
 <hr>
 <h3>insertCustomTab()</h3>
 <blockquote>
 <p><strong>insertCustomTab</strong>(<code>oCustomTab</code>, <code>iIndex</code>): <code>this</code></p>
 </blockquote>
+<p>Inserts a customTab into the aggregation #getCustomTabs customTabs.</p>
 <h4>Parameters</h4>
 <h5>oCustomTab</h5>
 <p><a href="../../ViewSettingsCustomTab/classes/ViewSettingsCustomTab.html"><code>ViewSettingsCustomTab</code></a></p>
@@ -1040,12 +1041,12 @@ is inserted at the last position</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.30</p>
-<p>Inserts a customTab into the aggregation #getCustomTabs customTabs.</p>
 <hr>
 <h3>insertFilterItem()</h3>
 <blockquote>
 <p><strong>insertFilterItem</strong>(<code>oFilterItem</code>, <code>iIndex</code>): <code>this</code></p>
 </blockquote>
+<p>Inserts a filterItem into the aggregation #getFilterItems filterItems.</p>
 <h4>Parameters</h4>
 <h5>oFilterItem</h5>
 <p><a href="../../ViewSettingsItem/classes/ViewSettingsItem.html"><code>ViewSettingsItem</code></a></p>
@@ -1060,12 +1061,12 @@ is inserted at the last position</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.16</p>
-<p>Inserts a filterItem into the aggregation #getFilterItems filterItems.</p>
 <hr>
 <h3>insertGroupItem()</h3>
 <blockquote>
 <p><strong>insertGroupItem</strong>(<code>oGroupItem</code>, <code>iIndex</code>): <code>this</code></p>
 </blockquote>
+<p>Inserts a groupItem into the aggregation #getGroupItems groupItems.</p>
 <h4>Parameters</h4>
 <h5>oGroupItem</h5>
 <p><a href="../../ViewSettingsItem/classes/ViewSettingsItem.html"><code>ViewSettingsItem</code></a></p>
@@ -1080,12 +1081,12 @@ is inserted at the last position</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.16</p>
-<p>Inserts a groupItem into the aggregation #getGroupItems groupItems.</p>
 <hr>
 <h3>insertPresetFilterItem()</h3>
 <blockquote>
 <p><strong>insertPresetFilterItem</strong>(<code>oPresetFilterItem</code>, <code>iIndex</code>): <code>this</code></p>
 </blockquote>
+<p>Inserts a presetFilterItem into the aggregation #getPresetFilterItems presetFilterItems.</p>
 <h4>Parameters</h4>
 <h5>oPresetFilterItem</h5>
 <p><a href="../../ViewSettingsItem/classes/ViewSettingsItem.html"><code>ViewSettingsItem</code></a></p>
@@ -1100,12 +1101,12 @@ the presetFilterItem is inserted at the last position</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.16</p>
-<p>Inserts a presetFilterItem into the aggregation #getPresetFilterItems presetFilterItems.</p>
 <hr>
 <h3>insertSortItem()</h3>
 <blockquote>
 <p><strong>insertSortItem</strong>(<code>oSortItem</code>, <code>iIndex</code>): <code>this</code></p>
 </blockquote>
+<p>Inserts a sortItem into the aggregation #getSortItems sortItems.</p>
 <h4>Parameters</h4>
 <h5>oSortItem</h5>
 <p><a href="../../ViewSettingsItem/classes/ViewSettingsItem.html"><code>ViewSettingsItem</code></a></p>
@@ -1120,7 +1121,6 @@ is inserted at the last position</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.16</p>
-<p>Inserts a sortItem into the aggregation #getSortItems sortItems.</p>
 <hr>
 <h3>open()</h3>
 <blockquote>
@@ -1140,13 +1140,13 @@ or IDs of custom tabs.</p>
 <blockquote>
 <p><strong>removeAllCustomTabs</strong>(): <a href="../../ViewSettingsCustomTab/classes/ViewSettingsCustomTab.html"><code>ViewSettingsCustomTab</code></a>[]</p>
 </blockquote>
+<p>Removes all the controls from the aggregation #getCustomTabs customTabs.</p>
+<p>Additionally, it unregisters them from the hosting UIArea.</p>
 <h4>Returns</h4>
 <p><a href="../../ViewSettingsCustomTab/classes/ViewSettingsCustomTab.html"><code>ViewSettingsCustomTab</code></a>[]</p>
 <p>An array of the removed elements (might be empty)</p>
 <h4>Since</h4>
 <p>1.30</p>
-<p>Removes all the controls from the aggregation #getCustomTabs customTabs.</p>
-<p>Additionally, it unregisters them from the hosting UIArea.</p>
 <hr>
 <h3>removeAllFilterItems()</h3>
 <blockquote>
@@ -1162,42 +1162,43 @@ filter items are being removed.</p>
 <blockquote>
 <p><strong>removeAllGroupItems</strong>(): <a href="../../ViewSettingsItem/classes/ViewSettingsItem.html"><code>ViewSettingsItem</code></a>[]</p>
 </blockquote>
+<p>Removes all the controls from the aggregation #getGroupItems groupItems.</p>
+<p>Additionally, it unregisters them from the hosting UIArea.</p>
 <h4>Returns</h4>
 <p><a href="../../ViewSettingsItem/classes/ViewSettingsItem.html"><code>ViewSettingsItem</code></a>[]</p>
 <p>An array of the removed elements (might be empty)</p>
 <h4>Since</h4>
 <p>1.16</p>
-<p>Removes all the controls from the aggregation #getGroupItems groupItems.</p>
-<p>Additionally, it unregisters them from the hosting UIArea.</p>
 <hr>
 <h3>removeAllPresetFilterItems()</h3>
 <blockquote>
 <p><strong>removeAllPresetFilterItems</strong>(): <a href="../../ViewSettingsItem/classes/ViewSettingsItem.html"><code>ViewSettingsItem</code></a>[]</p>
 </blockquote>
+<p>Removes all the controls from the aggregation #getPresetFilterItems presetFilterItems.</p>
+<p>Additionally, it unregisters them from the hosting UIArea.</p>
 <h4>Returns</h4>
 <p><a href="../../ViewSettingsItem/classes/ViewSettingsItem.html"><code>ViewSettingsItem</code></a>[]</p>
 <p>An array of the removed elements (might be empty)</p>
 <h4>Since</h4>
 <p>1.16</p>
-<p>Removes all the controls from the aggregation #getPresetFilterItems presetFilterItems.</p>
-<p>Additionally, it unregisters them from the hosting UIArea.</p>
 <hr>
 <h3>removeAllSortItems()</h3>
 <blockquote>
 <p><strong>removeAllSortItems</strong>(): <a href="../../ViewSettingsItem/classes/ViewSettingsItem.html"><code>ViewSettingsItem</code></a>[]</p>
 </blockquote>
+<p>Removes all the controls from the aggregation #getSortItems sortItems.</p>
+<p>Additionally, it unregisters them from the hosting UIArea.</p>
 <h4>Returns</h4>
 <p><a href="../../ViewSettingsItem/classes/ViewSettingsItem.html"><code>ViewSettingsItem</code></a>[]</p>
 <p>An array of the removed elements (might be empty)</p>
 <h4>Since</h4>
 <p>1.16</p>
-<p>Removes all the controls from the aggregation #getSortItems sortItems.</p>
-<p>Additionally, it unregisters them from the hosting UIArea.</p>
 <hr>
 <h3>removeCustomTab()</h3>
 <blockquote>
 <p><strong>removeCustomTab</strong>(<code>vCustomTab</code>): <a href="../../ViewSettingsCustomTab/classes/ViewSettingsCustomTab.html"><code>ViewSettingsCustomTab</code></a></p>
 </blockquote>
+<p>Removes a customTab from the aggregation #getCustomTabs customTabs.</p>
 <h4>Parameters</h4>
 <h5>vCustomTab</h5>
 <p><code>string</code> | <code>number</code> | <a href="../../ViewSettingsCustomTab/classes/ViewSettingsCustomTab.html"><code>ViewSettingsCustomTab</code></a></p>
@@ -1207,7 +1208,6 @@ filter items are being removed.</p>
 <p>The removed customTab or <code>null</code></p>
 <h4>Since</h4>
 <p>1.30</p>
-<p>Removes a customTab from the aggregation #getCustomTabs customTabs.</p>
 <hr>
 <h3>removeFilterItem()</h3>
 <blockquote>
@@ -1227,6 +1227,7 @@ filter.</p>
 <blockquote>
 <p><strong>removeGroupItem</strong>(<code>vGroupItem</code>): <a href="../../ViewSettingsItem/classes/ViewSettingsItem.html"><code>ViewSettingsItem</code></a></p>
 </blockquote>
+<p>Removes a groupItem from the aggregation #getGroupItems groupItems.</p>
 <h4>Parameters</h4>
 <h5>vGroupItem</h5>
 <p><code>string</code> | <code>number</code> | <a href="../../ViewSettingsItem/classes/ViewSettingsItem.html"><code>ViewSettingsItem</code></a></p>
@@ -1236,12 +1237,12 @@ filter.</p>
 <p>The removed groupItem or <code>null</code></p>
 <h4>Since</h4>
 <p>1.16</p>
-<p>Removes a groupItem from the aggregation #getGroupItems groupItems.</p>
 <hr>
 <h3>removePresetFilterItem()</h3>
 <blockquote>
 <p><strong>removePresetFilterItem</strong>(<code>vPresetFilterItem</code>): <a href="../../ViewSettingsItem/classes/ViewSettingsItem.html"><code>ViewSettingsItem</code></a></p>
 </blockquote>
+<p>Removes a presetFilterItem from the aggregation #getPresetFilterItems presetFilterItems.</p>
 <h4>Parameters</h4>
 <h5>vPresetFilterItem</h5>
 <p><code>string</code> | <code>number</code> | <a href="../../ViewSettingsItem/classes/ViewSettingsItem.html"><code>ViewSettingsItem</code></a></p>
@@ -1251,12 +1252,12 @@ filter.</p>
 <p>The removed presetFilterItem or <code>null</code></p>
 <h4>Since</h4>
 <p>1.16</p>
-<p>Removes a presetFilterItem from the aggregation #getPresetFilterItems presetFilterItems.</p>
 <hr>
 <h3>removeSortItem()</h3>
 <blockquote>
 <p><strong>removeSortItem</strong>(<code>vSortItem</code>): <a href="../../ViewSettingsItem/classes/ViewSettingsItem.html"><code>ViewSettingsItem</code></a></p>
 </blockquote>
+<p>Removes a sortItem from the aggregation #getSortItems sortItems.</p>
 <h4>Parameters</h4>
 <h5>vSortItem</h5>
 <p><code>string</code> | <code>number</code> | <a href="../../ViewSettingsItem/classes/ViewSettingsItem.html"><code>ViewSettingsItem</code></a></p>
@@ -1266,7 +1267,6 @@ filter.</p>
 <p>The removed sortItem or <code>null</code></p>
 <h4>Since</h4>
 <p>1.16</p>
-<p>Removes a sortItem from the aggregation #getSortItems sortItems.</p>
 <hr>
 <h3>removeStyleClass()</h3>
 <blockquote>
@@ -1303,6 +1303,8 @@ implementation of setBusy in sap.ui.core.Control</p>
 <blockquote>
 <p><strong>setFilterSearchCallback</strong>(<code>fnTest</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a callback that will check the ViewSettingsItem&#39;s text against the search query. If a callback is
+set, <code>filterSearchOperator</code> property will be ignored, as it serves the same purpose.</p>
 <h4>Parameters</h4>
 <h5>fnTest</h5>
 <p>(<code>p1</code>, <code>p2</code>) =&gt; <code>boolean</code></p>
@@ -1313,13 +1315,17 @@ the value satisfies the query.</p>
 <p>Reference to <code>this</code> for method chaining</p>
 <h4>Since</h4>
 <p>1.42</p>
-<p>Sets a callback that will check the ViewSettingsItem&#39;s text against the search query. If a callback is
-set, <code>filterSearchOperator</code> property will be ignored, as it serves the same purpose.</p>
 <hr>
 <h3>setFilterSearchOperator()</h3>
 <blockquote>
 <p><strong>setFilterSearchOperator</strong>(<code>sFilterSearchOperator?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getFilterSearchOperator filterSearchOperator.</p>
+<p>Provides a string filter operator which is used when the user searches items in filter details page.
+Possible operators are: <code>AnyWordStartsWith</code>, <code>Contains</code>, <code>StartsWith</code>, <code>Equals</code>. This property will be
+ignored if a custom callback is provided through <code>setFilterSearchCallback</code> method.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>StartsWith</code>.</p>
 <h4>Parameters</h4>
 <h5>sFilterSearchOperator?</h5>
 <p><code>&quot;Contains&quot;</code> | <code>&quot;StartsWith&quot;</code> | <a href="../../library/enumerations/StringFilterOperator.html"><code>StringFilterOperator</code></a> | <code>&quot;AnyWordStartsWith&quot;</code> | <code>&quot;Equals&quot;</code></p>
@@ -1329,12 +1335,6 @@ set, <code>filterSearchOperator</code> property will be ignored, as it serves th
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.42</p>
-<p>Sets a new value for property #getFilterSearchOperator filterSearchOperator.</p>
-<p>Provides a string filter operator which is used when the user searches items in filter details page.
-Possible operators are: <code>AnyWordStartsWith</code>, <code>Contains</code>, <code>StartsWith</code>, <code>Equals</code>. This property will be
-ignored if a custom callback is provided through <code>setFilterSearchCallback</code> method.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>StartsWith</code>.</p>
 <hr>
 <h3>setGroupDescending()</h3>
 <blockquote>
@@ -1356,6 +1356,7 @@ ignored if a custom callback is provided through <code>setFilterSearchCallback</
 <blockquote>
 <p><strong>setSelectedFilterCompoundKeys</strong>(<code>oSelectedFilterKeys</code>): <code>this</code></p>
 </blockquote>
+<p>Sets the selected filter object in format { parent_key: { key: boolean, key2: boolean, ...}, ... }.</p>
 <h4>Parameters</h4>
 <h5>oSelectedFilterKeys</h5>
 <p><code>Record</code>&lt;<code>string</code>, <a href="../type-aliases/SelectedFilterKeys.html"><code>SelectedFilterKeys</code></a>&gt;</p>
@@ -1367,12 +1368,13 @@ entry will set the filter to false. It can be used to set the dialog state based
 <p>Reference to <code>this</code> for method chaining</p>
 <h4>Since</h4>
 <p>1.42</p>
-<p>Sets the selected filter object in format { parent_key: { key: boolean, key2: boolean, ...}, ... }.</p>
 <hr>
 <h3><del>setSelectedFilterKeys()</del></h3>
 <blockquote>
 <p><strong>setSelectedFilterKeys</strong>(<code>oSelectedFilterKeys</code>): <code>this</code></p>
 </blockquote>
+<p>Sets the selected filter object in format {key: boolean}. <strong>Note:</strong> Do not use duplicated item keys with
+this method.</p>
 <h4>Parameters</h4>
 <h5>oSelectedFilterKeys</h5>
 <p><a href="../type-aliases/SelectedFilterKeys.html"><code>SelectedFilterKeys</code></a></p>
@@ -1384,8 +1386,6 @@ be used to set the dialog state based on presets.</p>
 <p>Reference to <code>this</code> for method chaining</p>
 <h4>Deprecated</h4>
 <p>(since 1.42) - replaced by <code>setSelectedFilterCompoundKeys</code> method</p>
-<p>Sets the selected filter object in format {key: boolean}. <strong>Note:</strong> Do not use duplicated item keys with
-this method.</p>
 <hr>
 <h3>setSelectedGroupItem()</h3>
 <blockquote>
@@ -1459,6 +1459,13 @@ this method.</p>
 <blockquote>
 <p><strong>setTitleAlignment</strong>(<code>sTitleAlignment?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getTitleAlignment titleAlignment.</p>
+<p>Specifies the Title alignment (theme specific). If set to <code>TitleAlignment.None</code>, the automatic title
+alignment depending on the theme settings will be disabled. If set to <code>TitleAlignment.Auto</code>, the Title
+will be aligned as it is set in the theme (if not set, the default value is <code>center</code>); Other possible
+values are <code>TitleAlignment.Start</code> (left or right depending on LTR/RTL), and <code>TitleAlignment.Center</code> (centered)</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>Auto</code>.</p>
 <h4>Parameters</h4>
 <h5>sTitleAlignment?</h5>
 <p><code>&quot;None&quot;</code> | <code>&quot;Auto&quot;</code> | <code>&quot;Center&quot;</code> | <a href="../../library/enumerations/TitleAlignment.html"><code>TitleAlignment</code></a> | <code>&quot;Start&quot;</code></p>
@@ -1468,13 +1475,6 @@ this method.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.72</p>
-<p>Sets a new value for property #getTitleAlignment titleAlignment.</p>
-<p>Specifies the Title alignment (theme specific). If set to <code>TitleAlignment.None</code>, the automatic title
-alignment depending on the theme settings will be disabled. If set to <code>TitleAlignment.Auto</code>, the Title
-will be aligned as it is set in the theme (if not set, the default value is <code>center</code>); Other possible
-values are <code>TitleAlignment.Start</code> (left or right depending on LTR/RTL), and <code>TitleAlignment.Center</code> (centered)</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>Auto</code>.</p>
 <hr>
 <h3>toggleStyleClass()</h3>
 <blockquote>
@@ -1499,56 +1499,56 @@ will be toggled (removed, if present, and added if not present)</p>
 <blockquote>
 <p><strong>unbindCustomTabs</strong>(): <code>this</code></p>
 </blockquote>
+<p>Unbinds aggregation #getCustomTabs customTabs from model data.</p>
 <h4>Returns</h4>
 <p><code>this</code></p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.30</p>
-<p>Unbinds aggregation #getCustomTabs customTabs from model data.</p>
 <hr>
 <h3>unbindFilterItems()</h3>
 <blockquote>
 <p><strong>unbindFilterItems</strong>(): <code>this</code></p>
 </blockquote>
+<p>Unbinds aggregation #getFilterItems filterItems from model data.</p>
 <h4>Returns</h4>
 <p><code>this</code></p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.16</p>
-<p>Unbinds aggregation #getFilterItems filterItems from model data.</p>
 <hr>
 <h3>unbindGroupItems()</h3>
 <blockquote>
 <p><strong>unbindGroupItems</strong>(): <code>this</code></p>
 </blockquote>
+<p>Unbinds aggregation #getGroupItems groupItems from model data.</p>
 <h4>Returns</h4>
 <p><code>this</code></p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.16</p>
-<p>Unbinds aggregation #getGroupItems groupItems from model data.</p>
 <hr>
 <h3>unbindPresetFilterItems()</h3>
 <blockquote>
 <p><strong>unbindPresetFilterItems</strong>(): <code>this</code></p>
 </blockquote>
+<p>Unbinds aggregation #getPresetFilterItems presetFilterItems from model data.</p>
 <h4>Returns</h4>
 <p><code>this</code></p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.16</p>
-<p>Unbinds aggregation #getPresetFilterItems presetFilterItems from model data.</p>
 <hr>
 <h3>unbindSortItems()</h3>
 <blockquote>
 <p><strong>unbindSortItems</strong>(): <code>this</code></p>
 </blockquote>
+<p>Unbinds aggregation #getSortItems sortItems from model data.</p>
 <h4>Returns</h4>
 <p><code>this</code></p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.16</p>
-<p>Unbinds aggregation #getSortItems sortItems from model data.</p>
 <hr>
 <h3>extend()</h3>
 <blockquote>
@@ -1589,6 +1589,6 @@ used by this class</p>
 <p><a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a>.<a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html#getmetadata-1"><code>getMetadata</code></a></p>
 <hr>
 
-<footer>Generated from <code>@openui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@openui5/types@1.120.46</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

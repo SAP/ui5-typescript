@@ -2,12 +2,12 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>Class: Calendar — OpenUI5 TypeScript API</title>
-<meta name="description" content="Class: Calendar — OpenUI5 TypeScript API Reference (1.120.0)">
+<title>~~Class: Calendar~~ — OpenUI5 TypeScript API</title>
+<meta name="description" content="~~Class: Calendar~~ — OpenUI5 TypeScript API Reference (1.120.46)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/openui5/1.120/sap.ui.webc.main/sap/ui/webc/main/Calendar/classes/Calendar.html">
-<meta property="og:title" content="Class: Calendar — OpenUI5 TypeScript API">
-<meta property="og:description" content="Class: Calendar — OpenUI5 TypeScript API Reference (1.120.0)">
+<meta property="og:title" content="~~Class: Calendar~~ — OpenUI5 TypeScript API">
+<meta property="og:description" content="~~Class: Calendar~~ — OpenUI5 TypeScript API Reference (1.120.46)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/openui5/1.120/sap.ui.webc.main/sap/ui/webc/main/Calendar/classes/Calendar.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,15 +33,12 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../../index.html">OpenUI5 API</a> › <a href="../../../../../../../sap.ui.webc.main/README.html">sap.ui.webc.main</a> › sap › ui › webc › main › <a href="../../../../../../../sap.ui.webc.main/sap/ui/webc/main/Calendar/README.html">Calendar</a> › classes</nav>
-<p><a href="../../../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.0)</strong></a></p>
+<p><a href="../../../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.46)</strong></a></p>
 <hr>
-<p><a href="../../../../../../../README.html">OpenUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../../README.html">sap.ui.webc.main</a> / <a href="../README.html">sap/ui/webc/main/Calendar</a> / Calendar</p>
-<h1>Class: Calendar</h1>
+<p><a href="../../../../../../../README.html">OpenUI5 TypeScript API (1.120.46)</a> / <a href="../../../../../../README.html">sap.ui.webc.main</a> / <a href="../README.html">sap/ui/webc/main/Calendar</a> / Calendar</p>
+<h1><del>Class: Calendar</del></h1>
 <pre class="sig"><span class="kw">import</span> Calendar <span class="kw">from</span> <span class="str">"sap/ui/webc/main/Calendar"</span>;</pre>
 <p><strong><code>Experimental</code></strong></p>
-<h2>Since</h2>
-<p>1.92.0
- (since 1.92.0) - This control is experimental and its API might change significantly.</p>
 <p>Overview:</p>
 <p>The <code>sap.ui.webc.main.Calendar</code> component allows users to select one or more dates.</p>
 <p> Currently selected dates are represented with instances of <code>sap.ui.webc.main.CalendarDate</code> as children
@@ -102,6 +99,13 @@ or Persian calendar, you need to set the <code>primaryCalendarType</code> proper
 following modules:</p>
 <p>Or, you can use the global configuration and set the <code>calendarType</code> key:
  <code>&lt;script data-id=&quot;sap-ui-config&quot; type=&quot;application/json&quot;&gt; { &quot;calendarType&quot;: &quot;Japanese&quot; } &lt;/script&gt;</code></p>
+<h2>Since</h2>
+<p>1.92.0</p>
+<h2>Deprecated</h2>
+<p>(since 1.120) - this Web Components consumption model has been discarded. Until an alternative
+Web Components consumption model is available in the future, use sap.m and sap.f controls with similar
+functionality.
+ (since 1.92.0) - This control is experimental and its API might change significantly.</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../../../../../../sap.ui.core/sap/ui/core/webc/WebComponent/classes/WebComponent.html"><code>WebComponent</code></a></li>
@@ -145,7 +149,7 @@ of the syntax of the settings object.</p>
 <h4>Overrides</h4>
 <p><a href="../../../../../../../sap.ui.core/sap/ui/core/webc/WebComponent/classes/WebComponent.html"><code>WebComponent</code></a>.<a href="../../../../../../../sap.ui.core/sap/ui/core/webc/WebComponent/classes/WebComponent.html#constructor"><code>constructor</code></a></p>
 <h2>Properties</h2>
-<h3>addDate()</h3>
+<h3><del>addDate()</del></h3>
 <blockquote>
 <p><strong>addDate</strong>(<code>oDate</code>): <code>this</code></p>
 </blockquote>
@@ -159,7 +163,7 @@ of the syntax of the settings object.</p>
 <p><code>this</code></p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <hr>
-<h3>attachSelectedDatesChange()</h3>
+<h3><del>attachSelectedDatesChange()</del></h3>
 <h4>Call Signature</h4>
 <blockquote>
 <p><strong>attachSelectedDatesChange</strong>(<code>oData</code>, <code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
@@ -209,7 +213,7 @@ you should do this manually.</p>
 <p><code>this</code></p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <hr>
-<h3>destroyDates()</h3>
+<h3><del>destroyDates()</del></h3>
 <blockquote>
 <p><strong>destroyDates</strong>(): <code>this</code></p>
 </blockquote>
@@ -219,7 +223,7 @@ you should do this manually.</p>
 <p><code>this</code></p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <hr>
-<h3>detachSelectedDatesChange()</h3>
+<h3><del>detachSelectedDatesChange()</del></h3>
 <blockquote>
 <p><strong>detachSelectedDatesChange</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
@@ -238,11 +242,14 @@ of this <code>sap.ui.webc.main.Calendar</code>.</p>
 <p><code>this</code></p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <hr>
-<h3>fireSelectedDatesChange()</h3>
+<h3><del>fireSelectedDatesChange()</del></h3>
 <blockquote>
 <p><strong>fireSelectedDatesChange</strong>(<code>mParameters?</code>): <code>boolean</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
+<p>Fires event #event:selectedDatesChange selectedDatesChange to attached listeners.</p>
+<p>Listeners may prevent the default action of this event by calling the <code>preventDefault</code> method on the
+event object. The return value of this method indicates whether the default action should be executed.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/Calendar$SelectedDatesChangeEventParameters.html"><code>Calendar$SelectedDatesChangeEventParameters</code></a></p>
@@ -252,11 +259,8 @@ of this <code>sap.ui.webc.main.Calendar</code>.</p>
 <p>Whether or not to prevent the default action</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Fires event #event:selectedDatesChange selectedDatesChange to attached listeners.</p>
-<p>Listeners may prevent the default action of this event by calling the <code>preventDefault</code> method on the
-event object. The return value of this method indicates whether the default action should be executed.</p>
 <hr>
-<h3>getDates()</h3>
+<h3><del>getDates()</del></h3>
 <blockquote>
 <p><strong>getDates</strong>(): <a href="../../library/interfaces/ICalendarDate.html"><code>ICalendarDate</code></a>[]</p>
 </blockquote>
@@ -267,7 +271,7 @@ of <code>sap.ui.webc.main.CalendarDate</code>.</p>
 <h4>Returns</h4>
 <p><a href="../../library/interfaces/ICalendarDate.html"><code>ICalendarDate</code></a>[]</p>
 <hr>
-<h3>getFormatPattern()</h3>
+<h3><del>getFormatPattern()</del></h3>
 <blockquote>
 <p><strong>getFormatPattern</strong>(): <code>string</code></p>
 </blockquote>
@@ -279,7 +283,7 @@ of <code>sap.ui.webc.main.CalendarDate</code>.</p>
 <p><code>string</code></p>
 <p>Value of property <code>formatPattern</code></p>
 <hr>
-<h3>getHideWeekNumbers()</h3>
+<h3><del>getHideWeekNumbers()</del></h3>
 <blockquote>
 <p><strong>getHideWeekNumbers</strong>(): <code>boolean</code></p>
 </blockquote>
@@ -293,7 +297,7 @@ set.</p>
 <p><code>boolean</code></p>
 <p>Value of property <code>hideWeekNumbers</code></p>
 <hr>
-<h3>getMaxDate()</h3>
+<h3><del>getMaxDate()</del></h3>
 <blockquote>
 <p><strong>getMaxDate</strong>(): <code>string</code></p>
 </blockquote>
@@ -307,7 +311,7 @@ format (YYYY-MM-dd).</p>
 <p><code>string</code></p>
 <p>Value of property <code>maxDate</code></p>
 <hr>
-<h3>getMinDate()</h3>
+<h3><del>getMinDate()</del></h3>
 <blockquote>
 <p><strong>getMinDate</strong>(): <code>string</code></p>
 </blockquote>
@@ -321,7 +325,7 @@ format (YYYY-MM-dd).</p>
 <p><code>string</code></p>
 <p>Value of property <code>minDate</code></p>
 <hr>
-<h3>getPrimaryCalendarType()</h3>
+<h3><del>getPrimaryCalendarType()</del></h3>
 <blockquote>
 <p><strong>getPrimaryCalendarType</strong>(): <a href="../../../../../../../sap.ui.core/sap/ui/core/CalendarType/enumerations/CalendarType.html"><code>CalendarType</code></a></p>
 </blockquote>
@@ -332,7 +336,7 @@ format (YYYY-MM-dd).</p>
 <p><a href="../../../../../../../sap.ui.core/sap/ui/core/CalendarType/enumerations/CalendarType.html"><code>CalendarType</code></a></p>
 <p>Value of property <code>primaryCalendarType</code></p>
 <hr>
-<h3>getSecondaryCalendarType()</h3>
+<h3><del>getSecondaryCalendarType()</del></h3>
 <blockquote>
 <p><strong>getSecondaryCalendarType</strong>(): <a href="../../../../../../../sap.ui.core/sap/ui/core/CalendarType/enumerations/CalendarType.html"><code>CalendarType</code></a></p>
 </blockquote>
@@ -344,7 +348,7 @@ format (YYYY-MM-dd).</p>
 <p><a href="../../../../../../../sap.ui.core/sap/ui/core/CalendarType/enumerations/CalendarType.html"><code>CalendarType</code></a></p>
 <p>Value of property <code>secondaryCalendarType</code></p>
 <hr>
-<h3>getSelectionMode()</h3>
+<h3><del>getSelectionMode()</del></h3>
 <blockquote>
 <p><strong>getSelectionMode</strong>(): <code>&quot;Multiple&quot;</code> | <code>&quot;Single&quot;</code> | <a href="../../library/enumerations/CalendarSelectionMode.html"><code>CalendarSelectionMode</code></a> | <code>&quot;Range&quot;</code></p>
 </blockquote>
@@ -360,7 +364,7 @@ format (YYYY-MM-dd).</p>
 <p><code>&quot;Multiple&quot;</code> | <code>&quot;Single&quot;</code> | <a href="../../library/enumerations/CalendarSelectionMode.html"><code>CalendarSelectionMode</code></a> | <code>&quot;Range&quot;</code></p>
 <p>Value of property <code>selectionMode</code></p>
 <hr>
-<h3>indexOfDate()</h3>
+<h3><del>indexOfDate()</del></h3>
 <blockquote>
 <p><strong>indexOfDate</strong>(<code>oDate</code>): <code>number</code></p>
 </blockquote>
@@ -375,7 +379,7 @@ and returns its index if found or -1 otherwise.</p>
 <p><code>number</code></p>
 <p>The index of the provided control in the aggregation if found, or -1 otherwise</p>
 <hr>
-<h3>insertDate()</h3>
+<h3><del>insertDate()</del></h3>
 <blockquote>
 <p><strong>insertDate</strong>(<code>oDate</code>, <code>iIndex</code>): <code>this</code></p>
 </blockquote>
@@ -394,7 +398,7 @@ the last position</p>
 <p><code>this</code></p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <hr>
-<h3>removeAllDates()</h3>
+<h3><del>removeAllDates()</del></h3>
 <blockquote>
 <p><strong>removeAllDates</strong>(): <a href="../../library/interfaces/ICalendarDate.html"><code>ICalendarDate</code></a>[]</p>
 </blockquote>
@@ -405,7 +409,7 @@ the last position</p>
 <p><a href="../../library/interfaces/ICalendarDate.html"><code>ICalendarDate</code></a>[]</p>
 <p>An array of the removed elements (might be empty)</p>
 <hr>
-<h3>removeDate()</h3>
+<h3><del>removeDate()</del></h3>
 <blockquote>
 <p><strong>removeDate</strong>(<code>vDate</code>): <a href="../../library/interfaces/ICalendarDate.html"><code>ICalendarDate</code></a></p>
 </blockquote>
@@ -419,7 +423,7 @@ the last position</p>
 <p><a href="../../library/interfaces/ICalendarDate.html"><code>ICalendarDate</code></a></p>
 <p>The removed date or <code>null</code></p>
 <hr>
-<h3>setFormatPattern()</h3>
+<h3><del>setFormatPattern()</del></h3>
 <blockquote>
 <p><strong>setFormatPattern</strong>(<code>sFormatPattern?</code>): <code>this</code></p>
 </blockquote>
@@ -436,7 +440,7 @@ the last position</p>
 <p><code>this</code></p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <hr>
-<h3>setHideWeekNumbers()</h3>
+<h3><del>setHideWeekNumbers()</del></h3>
 <blockquote>
 <p><strong>setHideWeekNumbers</strong>(<code>bHideWeekNumbers?</code>): <code>this</code></p>
 </blockquote>
@@ -455,7 +459,7 @@ set.</p>
 <p><code>this</code></p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <hr>
-<h3>setMaxDate()</h3>
+<h3><del>setMaxDate()</del></h3>
 <blockquote>
 <p><strong>setMaxDate</strong>(<code>sMaxDate?</code>): <code>this</code></p>
 </blockquote>
@@ -474,7 +478,7 @@ format (YYYY-MM-dd).</p>
 <p><code>this</code></p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <hr>
-<h3>setMinDate()</h3>
+<h3><del>setMinDate()</del></h3>
 <blockquote>
 <p><strong>setMinDate</strong>(<code>sMinDate?</code>): <code>this</code></p>
 </blockquote>
@@ -493,7 +497,7 @@ format (YYYY-MM-dd).</p>
 <p><code>this</code></p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <hr>
-<h3>setPrimaryCalendarType()</h3>
+<h3><del>setPrimaryCalendarType()</del></h3>
 <blockquote>
 <p><strong>setPrimaryCalendarType</strong>(<code>sPrimaryCalendarType</code>): <code>this</code></p>
 </blockquote>
@@ -509,7 +513,7 @@ format (YYYY-MM-dd).</p>
 <p><code>this</code></p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <hr>
-<h3>setSecondaryCalendarType()</h3>
+<h3><del>setSecondaryCalendarType()</del></h3>
 <blockquote>
 <p><strong>setSecondaryCalendarType</strong>(<code>sSecondaryCalendarType?</code>): <code>this</code></p>
 </blockquote>
@@ -526,7 +530,7 @@ format (YYYY-MM-dd).</p>
 <p><code>this</code></p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <hr>
-<h3>setSelectionMode()</h3>
+<h3><del>setSelectionMode()</del></h3>
 <blockquote>
 <p><strong>setSelectionMode</strong>(<code>sSelectionMode?</code>): <code>this</code></p>
 </blockquote>
@@ -547,7 +551,7 @@ format (YYYY-MM-dd).</p>
 <p><code>this</code></p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <hr>
-<h3>extend()</h3>
+<h3><del>extend()</del></h3>
 <blockquote>
 <p><code>static</code> <strong>extend</strong>&lt;<code>T</code>&gt;(<code>sClassName</code>, <code>oClassInfo?</code>, <code>FNMetaImpl?</code>): <code>Function</code></p>
 </blockquote>
@@ -575,7 +579,7 @@ used by this class</p>
 <h4>Overrides</h4>
 <p><a href="../../../../../../../sap.ui.core/sap/ui/core/webc/WebComponent/classes/WebComponent.html"><code>WebComponent</code></a>.<a href="../../../../../../../sap.ui.core/sap/ui/core/webc/WebComponent/classes/WebComponent.html#extend"><code>extend</code></a></p>
 <hr>
-<h3>getMetadata()</h3>
+<h3><del>getMetadata()</del></h3>
 <blockquote>
 <p><code>static</code> <strong>getMetadata</strong>(): <a href="../../../../../../../sap.ui.core/sap/ui/core/webc/WebComponentMetadata/classes/WebComponentMetadata.html"><code>WebComponentMetadata</code></a></p>
 </blockquote>
@@ -588,6 +592,6 @@ used by this class</p>
 <p><a href="../../../../../../../sap.ui.core/sap/ui/core/webc/WebComponent/classes/WebComponent.html"><code>WebComponent</code></a>.<a href="../../../../../../../sap.ui.core/sap/ui/core/webc/WebComponent/classes/WebComponent.html#getmetadata-1"><code>getMetadata</code></a></p>
 <hr>
 
-<footer>Generated from <code>@openui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@openui5/types@1.120.46</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

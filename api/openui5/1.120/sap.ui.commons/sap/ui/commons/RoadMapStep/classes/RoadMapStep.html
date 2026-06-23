@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>~~Class: RoadMapStep~~ — OpenUI5 TypeScript API</title>
-<meta name="description" content="~~Class: RoadMapStep~~ — OpenUI5 TypeScript API Reference (1.120.0)">
+<meta name="description" content="~~Class: RoadMapStep~~ — OpenUI5 TypeScript API Reference (1.120.46)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/openui5/1.120/sap.ui.commons/sap/ui/commons/RoadMapStep/classes/RoadMapStep.html">
 <meta property="og:title" content="~~Class: RoadMapStep~~ — OpenUI5 TypeScript API">
-<meta property="og:description" content="~~Class: RoadMapStep~~ — OpenUI5 TypeScript API Reference (1.120.0)">
+<meta property="og:description" content="~~Class: RoadMapStep~~ — OpenUI5 TypeScript API Reference (1.120.46)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/openui5/1.120/sap.ui.commons/sap/ui/commons/RoadMapStep/classes/RoadMapStep.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,14 +33,14 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../index.html">OpenUI5 API</a> › <a href="../../../../../../sap.ui.commons/README.html">sap.ui.commons</a> › sap › ui › commons › <a href="../../../../../../sap.ui.commons/sap/ui/commons/RoadMapStep/README.html">RoadMapStep</a> › classes</nav>
-<p><a href="../../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.0)</strong></a></p>
+<p><a href="../../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.46)</strong></a></p>
 <hr>
-<p><a href="../../../../../../README.html">OpenUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../README.html">sap.ui.commons</a> / <a href="../README.html">sap/ui/commons/RoadMapStep</a> / RoadMapStep</p>
+<p><a href="../../../../../../README.html">OpenUI5 TypeScript API (1.120.46)</a> / <a href="../../../../../README.html">sap.ui.commons</a> / <a href="../README.html">sap/ui/commons/RoadMapStep</a> / RoadMapStep</p>
 <h1><del>Class: RoadMapStep</del></h1>
 <pre class="sig"><span class="kw">import</span> RoadMapStep <span class="kw">from</span> <span class="str">"sap/ui/commons/RoadMapStep"</span>;</pre>
+<p>Step used within a RoadMap Control.</p>
 <h2>Deprecated</h2>
 <p>(since 1.38) - Instead, use the <code>sap.m.Wizard</code> control.</p>
-<p>Step used within a RoadMap Control.</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../../../../../sap.ui.core/sap/ui/core/Element/classes/UI5Element.html"><code>UI5Element</code></a></li>
@@ -86,6 +86,7 @@ of the syntax of the settings object.</p>
 <blockquote>
 <p><strong>addSubStep</strong>(<code>oSubStep</code>): <code>this</code></p>
 </blockquote>
+<p>Adds some subStep to the aggregation #getSubSteps subSteps.</p>
 <h4>Parameters</h4>
 <h5>oSubStep</h5>
 <p><code>RoadMapStep</code></p>
@@ -96,19 +97,18 @@ of the syntax of the settings object.</p>
 <h4>Deprecated</h4>
 <p>(since 1.10.5) - Sub steps will not be supported in future. This feature might be removed
 in one of the next releases.</p>
-<p>Adds some subStep to the aggregation #getSubSteps subSteps.</p>
 <hr>
 <h3><del>destroySubSteps()</del></h3>
 <blockquote>
 <p><strong>destroySubSteps</strong>(): <code>this</code></p>
 </blockquote>
+<p>Destroys all the subSteps in the aggregation #getSubSteps subSteps.</p>
 <h4>Returns</h4>
 <p><code>this</code></p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Deprecated</h4>
 <p>(since 1.10.5) - Sub steps will not be supported in future. This feature might be removed
 in one of the next releases.</p>
-<p>Destroys all the subSteps in the aggregation #getSubSteps subSteps.</p>
 <hr>
 <h3><del>getEnabled()</del></h3>
 <blockquote>
@@ -125,15 +125,15 @@ in one of the next releases.</p>
 <blockquote>
 <p><strong>getExpanded</strong>(): <code>boolean</code></p>
 </blockquote>
+<p>Gets current value of property #getExpanded expanded.</p>
+<p>This property is only relevant when using sub steps.</p>
+<p>Default value is <code>false</code>.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>Value of property <code>expanded</code></p>
 <h4>Deprecated</h4>
 <p>(since 1.10.5) - Note that sub steps will not be supported in future. This feature might
 be removed in one of the next releases.</p>
-<p>Gets current value of property #getExpanded expanded.</p>
-<p>This property is only relevant when using sub steps.</p>
-<p>Default value is <code>false</code>.</p>
 <hr>
 <h3><del>getLabel()</del></h3>
 <blockquote>
@@ -149,14 +149,14 @@ be removed in one of the next releases.</p>
 <blockquote>
 <p><strong>getSubSteps</strong>(): <code>RoadMapStep</code>[]</p>
 </blockquote>
+<p>Gets content of aggregation #getSubSteps subSteps.</p>
+<p>Sub steps for the current step. Will be displayed only in the case that the step is expanded. Otherwise,
+special arrows show the availability of sub steps. One level of sub steps supported.</p>
 <h4>Returns</h4>
 <p><code>RoadMapStep</code>[]</p>
 <h4>Deprecated</h4>
 <p>(since 1.10.5) - Sub steps will not be supported in future. This feature might be removed
 in one of the next releases.</p>
-<p>Gets content of aggregation #getSubSteps subSteps.</p>
-<p>Sub steps for the current step. Will be displayed only in the case that the step is expanded. Otherwise,
-special arrows show the availability of sub steps. One level of sub steps supported.</p>
 <hr>
 <h3><del>getVisible()</del></h3>
 <blockquote>
@@ -173,6 +173,8 @@ special arrows show the availability of sub steps. One level of sub steps suppor
 <blockquote>
 <p><strong>indexOfSubStep</strong>(<code>oSubStep</code>): <code>number</code></p>
 </blockquote>
+<p>Checks for the provided <code>sap.ui.commons.RoadMapStep</code> in the aggregation #getSubSteps subSteps.
+and returns its index if found or -1 otherwise.</p>
 <h4>Parameters</h4>
 <h5>oSubStep</h5>
 <p><code>RoadMapStep</code></p>
@@ -183,13 +185,12 @@ special arrows show the availability of sub steps. One level of sub steps suppor
 <h4>Deprecated</h4>
 <p>(since 1.10.5) - Sub steps will not be supported in future. This feature might be removed
 in one of the next releases.</p>
-<p>Checks for the provided <code>sap.ui.commons.RoadMapStep</code> in the aggregation #getSubSteps subSteps.
-and returns its index if found or -1 otherwise.</p>
 <hr>
 <h3><del>insertSubStep()</del></h3>
 <blockquote>
 <p><strong>insertSubStep</strong>(<code>oSubStep</code>, <code>iIndex</code>): <code>this</code></p>
 </blockquote>
+<p>Inserts a subStep into the aggregation #getSubSteps subSteps.</p>
 <h4>Parameters</h4>
 <h5>oSubStep</h5>
 <p><code>RoadMapStep</code></p>
@@ -205,25 +206,25 @@ is inserted at the last position</p>
 <h4>Deprecated</h4>
 <p>(since 1.10.5) - Sub steps will not be supported in future. This feature might be removed
 in one of the next releases.</p>
-<p>Inserts a subStep into the aggregation #getSubSteps subSteps.</p>
 <hr>
 <h3><del>removeAllSubSteps()</del></h3>
 <blockquote>
 <p><strong>removeAllSubSteps</strong>(): <code>RoadMapStep</code>[]</p>
 </blockquote>
+<p>Removes all the controls from the aggregation #getSubSteps subSteps.</p>
+<p>Additionally, it unregisters them from the hosting UIArea.</p>
 <h4>Returns</h4>
 <p><code>RoadMapStep</code>[]</p>
 <p>An array of the removed elements (might be empty)</p>
 <h4>Deprecated</h4>
 <p>(since 1.10.5) - Sub steps will not be supported in future. This feature might be removed
 in one of the next releases.</p>
-<p>Removes all the controls from the aggregation #getSubSteps subSteps.</p>
-<p>Additionally, it unregisters them from the hosting UIArea.</p>
 <hr>
 <h3><del>removeSubStep()</del></h3>
 <blockquote>
 <p><strong>removeSubStep</strong>(<code>vSubStep</code>): <code>RoadMapStep</code></p>
 </blockquote>
+<p>Removes a subStep from the aggregation #getSubSteps subSteps.</p>
 <h4>Parameters</h4>
 <h5>vSubStep</h5>
 <p><code>string</code> | <code>number</code> | <code>RoadMapStep</code></p>
@@ -234,7 +235,6 @@ in one of the next releases.</p>
 <h4>Deprecated</h4>
 <p>(since 1.10.5) - Sub steps will not be supported in future. This feature might be removed
 in one of the next releases.</p>
-<p>Removes a subStep from the aggregation #getSubSteps subSteps.</p>
 <hr>
 <h3><del>setEnabled()</del></h3>
 <blockquote>
@@ -256,6 +256,10 @@ in one of the next releases.</p>
 <blockquote>
 <p><strong>setExpanded</strong>(<code>bExpanded?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getExpanded expanded.</p>
+<p>This property is only relevant when using sub steps.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>false</code>.</p>
 <h4>Parameters</h4>
 <h5>bExpanded?</h5>
 <p><code>boolean</code></p>
@@ -266,10 +270,6 @@ in one of the next releases.</p>
 <h4>Deprecated</h4>
 <p>(since 1.10.5) - Note that sub steps will not be supported in future. This feature might
 be removed in one of the next releases.</p>
-<p>Sets a new value for property #getExpanded expanded.</p>
-<p>This property is only relevant when using sub steps.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>false</code>.</p>
 <hr>
 <h3><del>setLabel()</del></h3>
 <blockquote>
@@ -341,6 +341,6 @@ used by this class</p>
 <p><a href="../../../../../../sap.ui.core/sap/ui/core/Element/classes/UI5Element.html"><code>UI5Element</code></a>.<a href="../../../../../../sap.ui.core/sap/ui/core/Element/classes/UI5Element.html#getmetadata-1"><code>getMetadata</code></a></p>
 <hr>
 
-<footer>Generated from <code>@openui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@openui5/types@1.120.46</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

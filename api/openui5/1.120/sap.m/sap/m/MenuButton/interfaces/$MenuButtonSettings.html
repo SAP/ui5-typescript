@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Interface: $MenuButtonSettings — OpenUI5 TypeScript API</title>
-<meta name="description" content="Interface: $MenuButtonSettings — OpenUI5 TypeScript API Reference (1.120.0)">
+<meta name="description" content="Interface: $MenuButtonSettings — OpenUI5 TypeScript API Reference (1.120.46)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/openui5/1.120/sap.m/sap/m/MenuButton/interfaces/$MenuButtonSettings.html">
 <meta property="og:title" content="Interface: $MenuButtonSettings — OpenUI5 TypeScript API">
-<meta property="og:description" content="Interface: $MenuButtonSettings — OpenUI5 TypeScript API Reference (1.120.0)">
+<meta property="og:description" content="Interface: $MenuButtonSettings — OpenUI5 TypeScript API Reference (1.120.46)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/openui5/1.120/sap.m/sap/m/MenuButton/interfaces/$MenuButtonSettings.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,11 +33,12 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../index.html">OpenUI5 API</a> › <a href="../../../../../sap.m/README.html">sap.m</a> › sap › m › <a href="../../../../../sap.m/sap/m/MenuButton/README.html">MenuButton</a> › interfaces</nav>
-<p><a href="../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.0)</strong></a></p>
+<p><a href="../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.46)</strong></a></p>
 <hr>
-<p><a href="../../../../../README.html">OpenUI5 TypeScript API (1.120.0)</a> / <a href="../../../../README.html">sap.m</a> / <a href="../README.html">sap/m/MenuButton</a> / $MenuButtonSettings</p>
+<p><a href="../../../../../README.html">OpenUI5 TypeScript API (1.120.46)</a> / <a href="../../../../README.html">sap.m</a> / <a href="../README.html">sap/m/MenuButton</a> / $MenuButtonSettings</p>
 <h1>Interface: $MenuButtonSettings</h1>
 <pre class="sig"><span class="kw">import</span> { $MenuButtonSettings } <span class="kw">from</span> <span class="str">"sap/m/MenuButton"</span>;</pre>
+<p>Describes the settings that can be provided to the MenuButton constructor.</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../../../../sap.ui.core/sap/ui/core/Control/interfaces/$ControlSettings.html"><code>$ControlSettings</code></a></li>
@@ -71,6 +72,8 @@ property is not set or has a different type, the active icon is not displayed.</
 <blockquote>
 <p><code>optional</code> <strong>beforeMenuOpen?</strong>: (<code>oEvent</code>) =&gt; <code>void</code></p>
 </blockquote>
+<p>In <code>Regular</code> button mode – fires when the user presses the button. Alternatively, if the <code>buttonMode</code>
+is set to <code>Split</code> - fires when the user presses the arrow button.</p>
 <h4>Parameters</h4>
 <h5>oEvent</h5>
 <p><a href="../../../../../sap.ui.core/sap/ui/base/Event/classes/Event.html"><code>Event</code></a></p>
@@ -78,8 +81,6 @@ property is not set or has a different type, the active icon is not displayed.</
 <p><code>void</code></p>
 <h4>Since</h4>
 <p>1.94.0</p>
-<p>In <code>Regular</code> button mode – fires when the user presses the button. Alternatively, if the <code>buttonMode</code>
-is set to <code>Split</code> - fires when the user presses the arrow button.</p>
 <hr>
 <h3>buttonMode?</h3>
 <blockquote>
@@ -135,12 +136,12 @@ set this value to <code>false</code> to avoid the attempt of fetching density pe
 <blockquote>
 <p><code>optional</code> <strong>menuPosition?</strong>: <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code> | <em>typeof</em> <a href="../../../../../sap.ui.core/sap/ui/core/Popup/enumerations/Dock.html"><code>Dock</code></a></p>
 </blockquote>
-<h4>Since</h4>
-<p>1.56.0</p>
 <p>Specifies the position of the popup menu with enumerated options. By default, the control opens the menu
 at its bottom left side.</p>
 <p><strong>Note:</strong> In the case that the menu has no space to show itself in the view port of the current window
 it tries to open itself to the inverted direction.</p>
+<h4>Since</h4>
+<p>1.56.0</p>
 <hr>
 <h3>text?</h3>
 <blockquote>
@@ -175,9 +176,8 @@ is selected. Usable only if <code>buttonMode</code> is set to <code>Split</code>
 <blockquote>
 <p><code>optional</code> <strong>width?</strong>: <code>string</code> | <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a></p>
 </blockquote>
-<p>Defines the width of the <code>MenuButton</code>.
-**Note:**As per visual design this width can be maximum of 12rem (192px).</p>
+<p>Defines the width of the <code>MenuButton</code>.</p>
 
-<footer>Generated from <code>@openui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@openui5/types@1.120.46</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

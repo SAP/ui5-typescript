@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Interface: $RowSettingsSettings — OpenUI5 TypeScript API</title>
-<meta name="description" content="Interface: $RowSettingsSettings — OpenUI5 TypeScript API Reference (1.120.0)">
+<meta name="description" content="Interface: $RowSettingsSettings — OpenUI5 TypeScript API Reference (1.120.46)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/openui5/1.120/sap.ui.table/sap/ui/table/RowSettings/interfaces/$RowSettingsSettings.html">
 <meta property="og:title" content="Interface: $RowSettingsSettings — OpenUI5 TypeScript API">
-<meta property="og:description" content="Interface: $RowSettingsSettings — OpenUI5 TypeScript API Reference (1.120.0)">
+<meta property="og:description" content="Interface: $RowSettingsSettings — OpenUI5 TypeScript API Reference (1.120.46)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/openui5/1.120/sap.ui.table/sap/ui/table/RowSettings/interfaces/$RowSettingsSettings.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,11 +33,12 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../index.html">OpenUI5 API</a> › <a href="../../../../../../sap.ui.table/README.html">sap.ui.table</a> › sap › ui › table › <a href="../../../../../../sap.ui.table/sap/ui/table/RowSettings/README.html">RowSettings</a> › interfaces</nav>
-<p><a href="../../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.0)</strong></a></p>
+<p><a href="../../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.46)</strong></a></p>
 <hr>
-<p><a href="../../../../../../README.html">OpenUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../README.html">sap.ui.table</a> / <a href="../README.html">sap/ui/table/RowSettings</a> / $RowSettingsSettings</p>
+<p><a href="../../../../../../README.html">OpenUI5 TypeScript API (1.120.46)</a> / <a href="../../../../../README.html">sap.ui.table</a> / <a href="../README.html">sap/ui/table/RowSettings</a> / $RowSettingsSettings</p>
 <h1>Interface: $RowSettingsSettings</h1>
 <pre class="sig"><span class="kw">import</span> { $RowSettingsSettings } <span class="kw">from</span> <span class="str">"sap/ui/table/RowSettings"</span>;</pre>
+<p>Describes the settings that can be provided to the RowSettings constructor.</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../../../../../sap.ui.core/sap/ui/core/Element/interfaces/$ElementSettings.html"><code>$ElementSettings</code></a></li>
@@ -47,8 +48,6 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 <blockquote>
 <p><code>optional</code> <strong>highlight?</strong>: <code>string</code> | <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a></p>
 </blockquote>
-<h4>Since</h4>
-<p>1.48.0</p>
 <p>The highlight state of the rows.</p>
 <p>If the highlight is set to sap.ui.core.MessageType sap.ui.core.MessageType.None (default), no
 highlights are visible. Valid values for the <code>highlight</code> property are values of the enumerations sap.ui.core.MessageType
@@ -57,28 +56,30 @@ or sap.ui.core.IndicationColor.</p>
 property. If the <code>highlight</code> property is set to a value of sap.ui.core.MessageType, the <code>highlightText</code>
 property does not need to be set because a default text is used. However, the default text can be overridden
 by setting the <code>highlightText</code> property. In all other cases the <code>highlightText</code> property must be set.</p>
+<h4>Since</h4>
+<p>1.48.0</p>
 <hr>
 <h3>highlightText?</h3>
 <blockquote>
 <p><code>optional</code> <strong>highlightText?</strong>: <code>string</code> | <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a></p>
 </blockquote>
-<h4>Since</h4>
-<p>1.62</p>
 <p>Defines the semantics of the sap.ui.table.RowSettings#setHighlight highlight property for accessibility
 purposes. It is only used as an invisible text for screen reader support and does not add a tooltip to
 the highlight.</p>
+<h4>Since</h4>
+<p>1.62</p>
 <hr>
 <h3>navigated?</h3>
 <blockquote>
 <p><code>optional</code> <strong>navigated?</strong>: <code>boolean</code> | <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<h4>Since</h4>
-<p>1.72</p>
 <p>The navigated state of a row.</p>
 <p>If set to <code>true</code>, a navigation indicator is displayed at the end of the row. <strong>Note:</strong> This property
 must be set for <strong>one</strong> row only.</p>
+<h4>Since</h4>
+<p>1.72</p>
 <hr>
 
-<footer>Generated from <code>@openui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@openui5/types@1.120.46</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

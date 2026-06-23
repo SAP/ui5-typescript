@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Class: SlideTile — OpenUI5 TypeScript API</title>
-<meta name="description" content="Class: SlideTile — OpenUI5 TypeScript API Reference (1.120.0)">
+<meta name="description" content="Class: SlideTile — OpenUI5 TypeScript API Reference (1.120.46)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/openui5/1.120/sap.m/sap/m/SlideTile/classes/SlideTile.html">
 <meta property="og:title" content="Class: SlideTile — OpenUI5 TypeScript API">
-<meta property="og:description" content="Class: SlideTile — OpenUI5 TypeScript API Reference (1.120.0)">
+<meta property="og:description" content="Class: SlideTile — OpenUI5 TypeScript API Reference (1.120.46)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/openui5/1.120/sap.m/sap/m/SlideTile/classes/SlideTile.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,14 +33,14 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../index.html">OpenUI5 API</a> › <a href="../../../../../sap.m/README.html">sap.m</a> › sap › m › <a href="../../../../../sap.m/sap/m/SlideTile/README.html">SlideTile</a> › classes</nav>
-<p><a href="../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.0)</strong></a></p>
+<p><a href="../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.46)</strong></a></p>
 <hr>
-<p><a href="../../../../../README.html">OpenUI5 TypeScript API (1.120.0)</a> / <a href="../../../../README.html">sap.m</a> / <a href="../README.html">sap/m/SlideTile</a> / SlideTile</p>
+<p><a href="../../../../../README.html">OpenUI5 TypeScript API (1.120.46)</a> / <a href="../../../../README.html">sap.m</a> / <a href="../README.html">sap/m/SlideTile</a> / SlideTile</p>
 <h1>Class: SlideTile</h1>
 <pre class="sig"><span class="kw">import</span> SlideTile <span class="kw">from</span> <span class="str">"sap/m/SlideTile"</span>;</pre>
+<p>The control that displays multiple GenericTile controls as changing slides.</p>
 <h2>Since</h2>
 <p>1.34</p>
-<p>The control that displays multiple GenericTile controls as changing slides.</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></li>
@@ -100,6 +100,10 @@ of the syntax of the settings object.</p>
 <blockquote>
 <p><strong>attachPress</strong>(<code>oData</code>, <code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
+<p>Attaches event handler <code>fnFunction</code> to the #event:press press event of this <code>sap.m.SlideTile</code>.</p>
+<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
+otherwise it will be bound to this <code>sap.m.SlideTile</code> itself.</p>
+<p>The event is fired when the user chooses the tile. The event is available only in Actions scope.</p>
 <h5>Parameters</h5>
 <h6>oData</h6>
 <p><code>object</code></p>
@@ -116,14 +120,14 @@ object when firing the event</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Since</h5>
 <p>1.46.0</p>
-<p>Attaches event handler <code>fnFunction</code> to the #event:press press event of this <code>sap.m.SlideTile</code>.</p>
-<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
-otherwise it will be bound to this <code>sap.m.SlideTile</code> itself.</p>
-<p>The event is fired when the user chooses the tile. The event is available only in Actions scope.</p>
 <h4>Call Signature</h4>
 <blockquote>
 <p><strong>attachPress</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
+<p>Attaches event handler <code>fnFunction</code> to the #event:press press event of this <code>sap.m.SlideTile</code>.</p>
+<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
+otherwise it will be bound to this <code>sap.m.SlideTile</code> itself.</p>
+<p>The event is fired when the user chooses the tile. The event is available only in Actions scope.</p>
 <h5>Parameters</h5>
 <h6>fnFunction</h6>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -136,10 +140,6 @@ otherwise it will be bound to this <code>sap.m.SlideTile</code> itself.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Since</h5>
 <p>1.46.0</p>
-<p>Attaches event handler <code>fnFunction</code> to the #event:press press event of this <code>sap.m.SlideTile</code>.</p>
-<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
-otherwise it will be bound to this <code>sap.m.SlideTile</code> itself.</p>
-<p>The event is fired when the user chooses the tile. The event is available only in Actions scope.</p>
 <hr>
 <h3>bindTiles()</h3>
 <blockquote>
@@ -169,6 +169,8 @@ of the possible properties of <code>oBindingInfo</code>.</p>
 <blockquote>
 <p><strong>detachPress</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
+<p>Detaches event handler <code>fnFunction</code> from the #event:press press event of this <code>sap.m.SlideTile</code>.</p>
+<p>The passed function and listener object must match the ones used for event registration.</p>
 <h4>Parameters</h4>
 <h5>fnFunction</h5>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -181,13 +183,12 @@ of the possible properties of <code>oBindingInfo</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.46.0</p>
-<p>Detaches event handler <code>fnFunction</code> from the #event:press press event of this <code>sap.m.SlideTile</code>.</p>
-<p>The passed function and listener object must match the ones used for event registration.</p>
 <hr>
 <h3>firePress()</h3>
 <blockquote>
 <p><strong>firePress</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
+<p>Fires event #event:press press to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/SlideTile$PressEventParameters.html"><code>SlideTile$PressEventParameters</code></a></p>
@@ -199,7 +200,6 @@ of the possible properties of <code>oBindingInfo</code>.</p>
 <p>1.46.0</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Fires event #event:press press to attached listeners.</p>
 <hr>
 <h3>getDisplayTime()</h3>
 <blockquote>
@@ -217,26 +217,26 @@ of the possible properties of <code>oBindingInfo</code>.</p>
 <p><strong>getHeight</strong>(): <code>string</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
+<p>Gets current value of property #getHeight height.</p>
+<p>Height of the control.</p>
 <h4>Returns</h4>
 <p><code>string</code></p>
 <p>Value of property <code>height</code></p>
 <h4>Since</h4>
 <p>1.96</p>
-<p>Gets current value of property #getHeight height.</p>
-<p>Height of the control.</p>
 <hr>
 <h3>getScope()</h3>
 <blockquote>
 <p><strong>getScope</strong>(): <a href="../../library/enumerations/GenericTileScope.html"><code>GenericTileScope</code></a> | <code>&quot;ActionMore&quot;</code> | <code>&quot;ActionRemove&quot;</code> | <code>&quot;Actions&quot;</code> | <code>&quot;Display&quot;</code></p>
 </blockquote>
+<p>Gets current value of property #getScope scope.</p>
+<p>Changes the visualization in order to enable additional actions with the SlideTile control.</p>
+<p>Default value is <code>&quot;Display&quot;</code>.</p>
 <h4>Returns</h4>
 <p><a href="../../library/enumerations/GenericTileScope.html"><code>GenericTileScope</code></a> | <code>&quot;ActionMore&quot;</code> | <code>&quot;ActionRemove&quot;</code> | <code>&quot;Actions&quot;</code> | <code>&quot;Display&quot;</code></p>
 <p>Value of property <code>scope</code></p>
 <h4>Since</h4>
 <p>1.46.0</p>
-<p>Gets current value of property #getScope scope.</p>
-<p>Changes the visualization in order to enable additional actions with the SlideTile control.</p>
-<p>Default value is <code>&quot;Display&quot;</code>.</p>
 <hr>
 <h3>getSizeBehavior()</h3>
 <blockquote>
@@ -276,13 +276,13 @@ along with all its inner <code>GenericTile</code> elements, so that they match o
 <blockquote>
 <p><strong>getWidth</strong>(): <code>string</code></p>
 </blockquote>
+<p>Gets current value of property #getWidth width.</p>
+<p>Width of the control.</p>
 <h4>Returns</h4>
 <p><code>string</code></p>
 <p>Value of property <code>width</code></p>
 <h4>Since</h4>
 <p>1.72</p>
-<p>Gets current value of property #getWidth width.</p>
-<p>Width of the control.</p>
 <hr>
 <h3>indexOfTile()</h3>
 <blockquote>
@@ -360,6 +360,9 @@ the last position</p>
 <p><strong>setHeight</strong>(<code>sHeight</code>): <code>this</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
+<p>Sets a new value for property #getHeight height.</p>
+<p>Height of the control.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <h4>Parameters</h4>
 <h5>sHeight</h5>
 <p><code>string</code></p>
@@ -369,14 +372,15 @@ the last position</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.96</p>
-<p>Sets a new value for property #getHeight height.</p>
-<p>Height of the control.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <hr>
 <h3>setScope()</h3>
 <blockquote>
 <p><strong>setScope</strong>(<code>sScope?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getScope scope.</p>
+<p>Changes the visualization in order to enable additional actions with the SlideTile control.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>&quot;Display&quot;</code>.</p>
 <h4>Parameters</h4>
 <h5>sScope?</h5>
 <p><a href="../../library/enumerations/GenericTileScope.html"><code>GenericTileScope</code></a> | <code>&quot;ActionMore&quot;</code> | <code>&quot;ActionRemove&quot;</code> | <code>&quot;Actions&quot;</code> | <code>&quot;Display&quot;</code></p>
@@ -386,10 +390,6 @@ the last position</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.46.0</p>
-<p>Sets a new value for property #getScope scope.</p>
-<p>Changes the visualization in order to enable additional actions with the SlideTile control.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>&quot;Display&quot;</code>.</p>
 <hr>
 <h3>setSizeBehavior()</h3>
 <blockquote>
@@ -430,6 +430,9 @@ along with all its inner <code>GenericTile</code> elements, so that they match o
 <blockquote>
 <p><strong>setWidth</strong>(<code>sWidth</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getWidth width.</p>
+<p>Width of the control.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <h4>Parameters</h4>
 <h5>sWidth</h5>
 <p><code>string</code></p>
@@ -439,9 +442,6 @@ along with all its inner <code>GenericTile</code> elements, so that they match o
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.72</p>
-<p>Sets a new value for property #getWidth width.</p>
-<p>Width of the control.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <hr>
 <h3>unbindTiles()</h3>
 <blockquote>
@@ -491,6 +491,6 @@ used by this class</p>
 <p><a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a>.<a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html#getmetadata-1"><code>getMetadata</code></a></p>
 <hr>
 
-<footer>Generated from <code>@openui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@openui5/types@1.120.46</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

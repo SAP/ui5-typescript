@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Class: DynamicSideContent — OpenUI5 TypeScript API</title>
-<meta name="description" content="Class: DynamicSideContent — OpenUI5 TypeScript API Reference (1.120.0)">
+<meta name="description" content="Class: DynamicSideContent — OpenUI5 TypeScript API Reference (1.120.46)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/openui5/1.120/sap.ui.layout/sap/ui/layout/DynamicSideContent/classes/DynamicSideContent.html">
 <meta property="og:title" content="Class: DynamicSideContent — OpenUI5 TypeScript API">
-<meta property="og:description" content="Class: DynamicSideContent — OpenUI5 TypeScript API Reference (1.120.0)">
+<meta property="og:description" content="Class: DynamicSideContent — OpenUI5 TypeScript API Reference (1.120.46)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/openui5/1.120/sap.ui.layout/sap/ui/layout/DynamicSideContent/classes/DynamicSideContent.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,13 +33,11 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../index.html">OpenUI5 API</a> › <a href="../../../../../../sap.ui.layout/README.html">sap.ui.layout</a> › sap › ui › layout › <a href="../../../../../../sap.ui.layout/sap/ui/layout/DynamicSideContent/README.html">DynamicSideContent</a> › classes</nav>
-<p><a href="../../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.0)</strong></a></p>
+<p><a href="../../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.46)</strong></a></p>
 <hr>
-<p><a href="../../../../../../README.html">OpenUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../README.html">sap.ui.layout</a> / <a href="../README.html">sap/ui/layout/DynamicSideContent</a> / DynamicSideContent</p>
+<p><a href="../../../../../../README.html">OpenUI5 TypeScript API (1.120.46)</a> / <a href="../../../../../README.html">sap.ui.layout</a> / <a href="../README.html">sap/ui/layout/DynamicSideContent</a> / DynamicSideContent</p>
 <h1>Class: DynamicSideContent</h1>
 <pre class="sig"><span class="kw">import</span> DynamicSideContent <span class="kw">from</span> <span class="str">"sap/ui/layout/DynamicSideContent"</span>;</pre>
-<h2>Since</h2>
-<p>1.30</p>
 <p>Layout control that allows additional (side) content to be displayed dynamically.</p>
 <p>Overview:</p>
 <p><code>DynamicSideContent</code> is a layout control that allows additional content to be displayed in a way that
@@ -80,6 +78,8 @@ can only be viewed by triggering it.</p>
 control will not work. <code>DynamicSideContent</code> has the overflow: auto style definition and this prevents
 the sticky elements of the control from becoming fixed at the top of the viewport. This applies for example
 to sap.m.Table and sap.m.PlanningCalendar.</p>
+<h2>Since</h2>
+<p>1.30</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></li>
@@ -156,6 +156,11 @@ See:
 <blockquote>
 <p><strong>attachBreakpointChanged</strong>(<code>oData</code>, <code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
+<p>Attaches event handler <code>fnFunction</code> to the #event:breakpointChanged breakpointChanged event of
+this <code>sap.ui.layout.DynamicSideContent</code>.</p>
+<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
+otherwise it will be bound to this <code>sap.ui.layout.DynamicSideContent</code> itself.</p>
+<p>Fires when the current breakpoint has been changed.</p>
 <h5>Parameters</h5>
 <h6>oData</h6>
 <p><code>object</code></p>
@@ -172,15 +177,15 @@ object when firing the event</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Since</h5>
 <p>1.32</p>
+<h4>Call Signature</h4>
+<blockquote>
+<p><strong>attachBreakpointChanged</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
+</blockquote>
 <p>Attaches event handler <code>fnFunction</code> to the #event:breakpointChanged breakpointChanged event of
 this <code>sap.ui.layout.DynamicSideContent</code>.</p>
 <p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
 otherwise it will be bound to this <code>sap.ui.layout.DynamicSideContent</code> itself.</p>
 <p>Fires when the current breakpoint has been changed.</p>
-<h4>Call Signature</h4>
-<blockquote>
-<p><strong>attachBreakpointChanged</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
-</blockquote>
 <h5>Parameters</h5>
 <h6>fnFunction</h6>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -193,11 +198,6 @@ otherwise it will be bound to this <code>sap.ui.layout.DynamicSideContent</code>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Since</h5>
 <p>1.32</p>
-<p>Attaches event handler <code>fnFunction</code> to the #event:breakpointChanged breakpointChanged event of
-this <code>sap.ui.layout.DynamicSideContent</code>.</p>
-<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
-otherwise it will be bound to this <code>sap.ui.layout.DynamicSideContent</code> itself.</p>
-<p>Fires when the current breakpoint has been changed.</p>
 <hr>
 <h3>destroyMainContent()</h3>
 <blockquote>
@@ -221,6 +221,9 @@ otherwise it will be bound to this <code>sap.ui.layout.DynamicSideContent</code>
 <blockquote>
 <p><strong>detachBreakpointChanged</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
+<p>Detaches event handler <code>fnFunction</code> from the #event:breakpointChanged breakpointChanged event
+of this <code>sap.ui.layout.DynamicSideContent</code>.</p>
+<p>The passed function and listener object must match the ones used for event registration.</p>
 <h4>Parameters</h4>
 <h5>fnFunction</h5>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -233,14 +236,12 @@ otherwise it will be bound to this <code>sap.ui.layout.DynamicSideContent</code>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.32</p>
-<p>Detaches event handler <code>fnFunction</code> from the #event:breakpointChanged breakpointChanged event
-of this <code>sap.ui.layout.DynamicSideContent</code>.</p>
-<p>The passed function and listener object must match the ones used for event registration.</p>
 <hr>
 <h3>fireBreakpointChanged()</h3>
 <blockquote>
 <p><strong>fireBreakpointChanged</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
+<p>Fires event #event:breakpointChanged breakpointChanged to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/DynamicSideContent$BreakpointChangedEventParameters.html"><code>DynamicSideContent$BreakpointChangedEventParameters</code></a></p>
@@ -252,7 +253,6 @@ of this <code>sap.ui.layout.DynamicSideContent</code>.</p>
 <p>1.32</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Fires event #event:breakpointChanged breakpointChanged to attached listeners.</p>
 <hr>
 <h3>getContainerQuery()</h3>
 <blockquote>
@@ -303,6 +303,7 @@ are switching visibility using the toggle method.</p>
 <blockquote>
 <p><strong>getScrollDelegate</strong>(<code>oControl</code>): <a href="../../../../../../sap.ui.core/sap/ui/core/delegate/ScrollEnablement/classes/ScrollEnablement.html"><code>ScrollEnablement</code></a></p>
 </blockquote>
+<p>Returns a scroll helper object used to handle scrolling.</p>
 <h4>Parameters</h4>
 <h5>oControl</h5>
 <p><a href="../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></p>
@@ -312,7 +313,6 @@ are switching visibility using the toggle method.</p>
 <p>The scroll helper instance</p>
 <h4>Since</h4>
 <p>1.78</p>
-<p>Returns a scroll helper object used to handle scrolling.</p>
 <hr>
 <h3>getShowMainContent()</h3>
 <blockquote>
@@ -362,14 +362,14 @@ method for showing the side content on phone.</p>
 <blockquote>
 <p><strong>getSideContentPosition</strong>(): <code>&quot;Begin&quot;</code> | <code>&quot;End&quot;</code> | <a href="../../library/enumerations/SideContentPosition.html"><code>SideContentPosition</code></a></p>
 </blockquote>
+<p>Gets current value of property #getSideContentPosition sideContentPosition.</p>
+<p>Determines whether the side content is on the left or on the right side of the main content.</p>
+<p>Default value is <code>End</code>.</p>
 <h4>Returns</h4>
 <p><code>&quot;Begin&quot;</code> | <code>&quot;End&quot;</code> | <a href="../../library/enumerations/SideContentPosition.html"><code>SideContentPosition</code></a></p>
 <p>Value of property <code>sideContentPosition</code></p>
 <h4>Since</h4>
 <p>1.36</p>
-<p>Gets current value of property #getSideContentPosition sideContentPosition.</p>
-<p>Determines whether the side content is on the left or on the right side of the main content.</p>
-<p>Default value is <code>End</code>.</p>
 <hr>
 <h3>getSideContentVisibility()</h3>
 <blockquote>
@@ -592,6 +592,10 @@ the control, defines the current range.</p>
 <blockquote>
 <p><strong>setSideContentPosition</strong>(<code>sSideContentPosition?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getSideContentPosition sideContentPosition.</p>
+<p>Determines whether the side content is on the left or on the right side of the main content.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>End</code>.</p>
 <h4>Parameters</h4>
 <h5>sSideContentPosition?</h5>
 <p><code>&quot;Begin&quot;</code> | <code>&quot;End&quot;</code> | <a href="../../library/enumerations/SideContentPosition.html"><code>SideContentPosition</code></a></p>
@@ -601,10 +605,6 @@ the control, defines the current range.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.36</p>
-<p>Sets a new value for property #getSideContentPosition sideContentPosition.</p>
-<p>Determines whether the side content is on the left or on the right side of the main content.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>End</code>.</p>
 <hr>
 <h3>setSideContentVisibility()</h3>
 <blockquote>
@@ -672,6 +672,6 @@ used by this class</p>
 <p><a href="../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a>.<a href="../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html#getmetadata-1"><code>getMetadata</code></a></p>
 <hr>
 
-<footer>Generated from <code>@openui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@openui5/types@1.120.46</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

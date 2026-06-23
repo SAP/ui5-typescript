@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Class: ODataMetaModel — OpenUI5 TypeScript API</title>
-<meta name="description" content="Class: ODataMetaModel — OpenUI5 TypeScript API Reference (1.120.0)">
+<meta name="description" content="Class: ODataMetaModel — OpenUI5 TypeScript API Reference (1.120.46)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/openui5/1.120/sap.ui.core/sap/ui/model/odata/ODataMetaModel/classes/ODataMetaModel.html">
 <meta property="og:title" content="Class: ODataMetaModel — OpenUI5 TypeScript API">
-<meta property="og:description" content="Class: ODataMetaModel — OpenUI5 TypeScript API Reference (1.120.0)">
+<meta property="og:description" content="Class: ODataMetaModel — OpenUI5 TypeScript API Reference (1.120.46)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/openui5/1.120/sap.ui.core/sap/ui/model/odata/ODataMetaModel/classes/ODataMetaModel.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,13 +33,11 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../../index.html">OpenUI5 API</a> › <a href="../../../../../../../sap.ui.core/README.html">sap.ui.core</a> › sap › ui › model › odata › <a href="../../../../../../../sap.ui.core/sap/ui/model/odata/ODataMetaModel/README.html">ODataMetaModel</a> › classes</nav>
-<p><a href="../../../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.0)</strong></a></p>
+<p><a href="../../../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.46)</strong></a></p>
 <hr>
-<p><a href="../../../../../../../README.html">OpenUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../../README.html">sap.ui.core</a> / <a href="../README.html">sap/ui/model/odata/ODataMetaModel</a> / ODataMetaModel</p>
+<p><a href="../../../../../../../README.html">OpenUI5 TypeScript API (1.120.46)</a> / <a href="../../../../../../README.html">sap.ui.core</a> / <a href="../README.html">sap/ui/model/odata/ODataMetaModel</a> / ODataMetaModel</p>
 <h1>Class: ODataMetaModel</h1>
 <pre class="sig"><span class="kw">import</span> ODataMetaModel <span class="kw">from</span> <span class="str">"sap/ui/model/odata/ODataMetaModel"</span>;</pre>
-<h2>Since</h2>
-<p>1.27.0</p>
 <p>Implementation of an OData meta model which offers a unified access to both OData V2 metadata and V4
 annotations. It uses the existing sap.ui.model.odata.ODataMetadata as a foundation and merges
 V4 annotations from the existing sap.ui.model.odata.ODataAnnotations directly into the corresponding
@@ -131,6 +129,8 @@ or the entity using <code>/dataServices/schema/[${namespace}===&#39;MySchema&#39
 each object in the array until the result is true (truthy) for the first time. This object is then chosen.</p>
 <p><strong>BEWARE:</strong> Access to this OData meta model will fail before the promise returned by #loaded loaded
 has been resolved!</p>
+<h2>Since</h2>
+<p>1.27.0</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../../MetaModel/classes/MetaModel.html"><code>MetaModel</code></a></li>
@@ -294,6 +294,8 @@ if no such container is found</p>
 <blockquote>
 <p><strong>getODataFunctionImport</strong>(<code>sName</code>, <code>bAsPath?</code>): <code>string</code> | <a href="../type-aliases/FunctionImport.html"><code>FunctionImport</code></a></p>
 </blockquote>
+<p>Returns the OData function import with the given simple or qualified name from the default entity container
+or the respective entity container specified in the qualified name.</p>
 <h4>Parameters</h4>
 <h5>sName</h5>
 <p><code>string</code></p>
@@ -307,8 +309,6 @@ if no such container is found</p>
 (for an object) if no such function import is found</p>
 <h4>Since</h4>
 <p>1.29.0</p>
-<p>Returns the OData function import with the given simple or qualified name from the default entity container
-or the respective entity container specified in the qualified name.</p>
 <hr>
 <h3>getODataProperty()</h3>
 <blockquote>
@@ -369,6 +369,11 @@ if no property was found at all</p>
 <blockquote>
 <p><strong>getODataValueLists</strong>(<code>oPropertyContext</code>): <code>Promise</code>&lt;<code>Record</code>&lt;<code>string</code>, <a href="../type-aliases/ValueListType.html"><code>ValueListType</code></a>&gt;&gt;</p>
 </blockquote>
+<p>Returns a <code>Promise</code> which is resolved with a map representing the <code>com.sap.vocabularies.Common.v1.ValueList</code>
+annotations of the given property or rejected with an error. The key in the map provided on successful
+resolution is the qualifier of the annotation or the empty string if no qualifier is defined. The value
+in the map is the JSON object for the annotation. The map is empty if the property has no <code>com.sap.vocabularies.Common.v1.ValueList</code>
+annotations.</p>
 <h4>Parameters</h4>
 <h5>oPropertyContext</h5>
 <p><a href="../../../Context/classes/Context.html"><code>Context</code></a></p>
@@ -379,11 +384,6 @@ if no property was found at all</p>
 lists as well as the required model elements have been loaded</p>
 <h4>Since</h4>
 <p>1.29.1</p>
-<p>Returns a <code>Promise</code> which is resolved with a map representing the <code>com.sap.vocabularies.Common.v1.ValueList</code>
-annotations of the given property or rejected with an error. The key in the map provided on successful
-resolution is the qualifier of the annotation or the empty string if no qualifier is defined. The value
-in the map is the JSON object for the annotation. The map is empty if the property has no <code>com.sap.vocabularies.Common.v1.ValueList</code>
-annotations.</p>
 <hr>
 <h3>loaded()</h3>
 <blockquote>
@@ -408,6 +408,11 @@ annotations.</p>
 <blockquote>
 <p><strong>requestCurrencyCodes</strong>(): <code>Promise</code>&lt;<code>Record</code>&lt;<code>string</code>, { <code>StandardCode</code>: <code>string</code>; <code>Text</code>: <code>string</code>; <code>UnitSpecificScale</code>: <code>string</code>; }&gt;&gt;</p>
 </blockquote>
+<p>Requests the currency customizing based on the code list reference given in the entity container&#39;s <code>com.sap.vocabularies.CodeList.v1.CurrencyCodes</code>
+annotation. The corresponding HTTP request uses the HTTP headers obtained via sap.ui.model.odata.v2.ODataModel#getHeaders
+from this meta model&#39;s data model.
+See:
+	#requestUnitsOfMeasure</p>
 <h4>Returns</h4>
 <p><code>Promise</code>&lt;<code>Record</code>&lt;<code>string</code>, { <code>StandardCode</code>: <code>string</code>; <code>Text</code>: <code>string</code>; <code>UnitSpecificScale</code>: <code>string</code>; }&gt;&gt;</p>
 <p>A promise resolving with the currency customizing, which is a map from the currency key to an
@@ -422,16 +427,16 @@ annotation is found. It is rejected if the code list URL is not &quot;./$metadat
 code key, or if the customizing cannot be loaded.</p>
 <h4>Since</h4>
 <p>1.88.0</p>
-<p>Requests the currency customizing based on the code list reference given in the entity container&#39;s <code>com.sap.vocabularies.CodeList.v1.CurrencyCodes</code>
-annotation. The corresponding HTTP request uses the HTTP headers obtained via sap.ui.model.odata.v2.ODataModel#getHeaders
-from this meta model&#39;s data model.
-See:
-	#requestUnitsOfMeasure</p>
 <hr>
 <h3>requestUnitsOfMeasure()</h3>
 <blockquote>
 <p><strong>requestUnitsOfMeasure</strong>(): <code>Promise</code>&lt;<code>Record</code>&lt;<code>string</code>, { <code>StandardCode</code>: <code>string</code>; <code>Text</code>: <code>string</code>; <code>UnitSpecificScale</code>: <code>string</code>; }&gt;&gt;</p>
 </blockquote>
+<p>Requests the unit customizing based on the code list reference given in the entity container&#39;s <code>com.sap.vocabularies.CodeList.v1.UnitOfMeasure</code>
+annotation. The corresponding HTTP request uses the HTTP headers obtained via sap.ui.model.odata.v2.ODataModel#getHeaders
+from this meta model&#39;s data model.
+See:
+	#requestCurrencyCodes</p>
 <h4>Returns</h4>
 <p><code>Promise</code>&lt;<code>Record</code>&lt;<code>string</code>, { <code>StandardCode</code>: <code>string</code>; <code>Text</code>: <code>string</code>; <code>UnitSpecificScale</code>: <code>string</code>; }&gt;&gt;</p>
 <p>A promise resolving with the unit customizing, which is a map from the unit key to an object
@@ -446,11 +451,6 @@ annotation is found. It is rejected if the code list URL is not &quot;./$metadat
 code key, or if the customizing cannot be loaded.</p>
 <h4>Since</h4>
 <p>1.88.0</p>
-<p>Requests the unit customizing based on the code list reference given in the entity container&#39;s <code>com.sap.vocabularies.CodeList.v1.UnitOfMeasure</code>
-annotation. The corresponding HTTP request uses the HTTP headers obtained via sap.ui.model.odata.v2.ODataModel#getHeaders
-from this meta model&#39;s data model.
-See:
-	#requestCurrencyCodes</p>
 <hr>
 <h3>setLegacySyntax()</h3>
 <blockquote>
@@ -505,6 +505,6 @@ used by this class</p>
 <p><a href="../../../MetaModel/classes/MetaModel.html"><code>MetaModel</code></a>.<a href="../../../MetaModel/classes/MetaModel.html#getmetadata-1"><code>getMetadata</code></a></p>
 <hr>
 
-<footer>Generated from <code>@openui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@openui5/types@1.120.46</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

@@ -2,12 +2,12 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>Interface: $TabSettings — OpenUI5 TypeScript API</title>
-<meta name="description" content="Interface: $TabSettings — OpenUI5 TypeScript API Reference (1.120.0)">
+<title>~~Interface: $TabSettings~~ — OpenUI5 TypeScript API</title>
+<meta name="description" content="~~Interface: $TabSettings~~ — OpenUI5 TypeScript API Reference (1.120.46)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/openui5/1.120/sap.ui.webc.main/sap/ui/webc/main/Tab/interfaces/$TabSettings.html">
-<meta property="og:title" content="Interface: $TabSettings — OpenUI5 TypeScript API">
-<meta property="og:description" content="Interface: $TabSettings — OpenUI5 TypeScript API Reference (1.120.0)">
+<meta property="og:title" content="~~Interface: $TabSettings~~ — OpenUI5 TypeScript API">
+<meta property="og:description" content="~~Interface: $TabSettings~~ — OpenUI5 TypeScript API Reference (1.120.46)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/openui5/1.120/sap.ui.webc.main/sap/ui/webc/main/Tab/interfaces/$TabSettings.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,34 +33,44 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../../index.html">OpenUI5 API</a> › <a href="../../../../../../../sap.ui.webc.main/README.html">sap.ui.webc.main</a> › sap › ui › webc › main › <a href="../../../../../../../sap.ui.webc.main/sap/ui/webc/main/Tab/README.html">Tab</a> › interfaces</nav>
-<p><a href="../../../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.0)</strong></a></p>
+<p><a href="../../../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.46)</strong></a></p>
 <hr>
-<p><a href="../../../../../../../README.html">OpenUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../../README.html">sap.ui.webc.main</a> / <a href="../README.html">sap/ui/webc/main/Tab</a> / $TabSettings</p>
-<h1>Interface: $TabSettings</h1>
+<p><a href="../../../../../../../README.html">OpenUI5 TypeScript API (1.120.46)</a> / <a href="../../../../../../README.html">sap.ui.webc.main</a> / <a href="../README.html">sap/ui/webc/main/Tab</a> / $TabSettings</p>
+<h1><del>Interface: $TabSettings</del></h1>
 <pre class="sig"><span class="kw">import</span> { $TabSettings } <span class="kw">from</span> <span class="str">"sap/ui/webc/main/Tab"</span>;</pre>
+<p><strong><code>Experimental</code></strong></p>
+<p>Describes the settings that can be provided to the Tab constructor.</p>
+<h2>Deprecated</h2>
+<p>(since 1.120) - this Web Components consumption model has been discarded. Until an alternative
+Web Components consumption model is available in the future, use sap.m and sap.f controls with similar
+functionality.
+ (since 1.92.0) - This control is experimental and its API might change significantly.</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../../../../../../sap.ui.core/sap/ui/core/webc/WebComponent/interfaces/$WebComponentSettings.html"><code>$WebComponentSettings</code></a></li>
 </ul>
 <h2>Properties</h2>
-<h3>additionalText?</h3>
+<h3><del>additionalText?</del></h3>
 <blockquote>
 <p><code>optional</code> <strong>additionalText?</strong>: <code>string</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a></p>
 </blockquote>
+<p><strong><code>Experimental</code></strong></p>
 <p>Represents the &quot;additionalText&quot; text, which is displayed in the tab. In the cases when in the same time
 there are tabs with icons and tabs without icons, if a tab has no icon the &quot;additionalText&quot; is displayed
 larger.</p>
 <hr>
-<h3>content?</h3>
+<h3><del>content?</del></h3>
 <blockquote>
 <p><code>optional</code> <strong>content?</strong>: <code>`{${string}}`</code> | <a href="../../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/AggregationBindingInfo.html"><code>AggregationBindingInfo</code></a> | <a href="../../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a>[]</p>
 </blockquote>
+<p><strong><code>Experimental</code></strong></p>
 <p>Holds the content associated with this tab.</p>
 <hr>
-<h3>design?</h3>
+<h3><del>design?</del></h3>
 <blockquote>
 <p><code>optional</code> <strong>design?</strong>: <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code> | <code>&quot;Critical&quot;</code> | <code>&quot;Neutral&quot;</code> | <code>&quot;Default&quot;</code> | <code>&quot;Negative&quot;</code> | <code>&quot;Positive&quot;</code> | <a href="../../library/enumerations/SemanticColor.html"><code>SemanticColor</code></a></p>
 </blockquote>
+<p><strong><code>Experimental</code></strong></p>
 <p>Defines the component&#39;s design color.</p>
 <p> The design is applied to:
 	 - the component icon
@@ -69,40 +79,45 @@ larger.</p>
 <p> Available designs are: <code>&quot;Default&quot;</code>, <code>&quot;Neutral&quot;</code>, <code>&quot;Positive&quot;</code>, <code>&quot;Critical&quot;</code> and <code>&quot;Negative&quot;</code>.</p>
 <p> <strong>Note:</strong> The design depends on the current theme.</p>
 <hr>
-<h3>enabled?</h3>
+<h3><del>enabled?</del></h3>
 <blockquote>
 <p><code>optional</code> <strong>enabled?</strong>: <code>boolean</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
+<p><strong><code>Experimental</code></strong></p>
 <p>Defines whether the control is enabled. A disabled control can&#39;t be interacted with, and it is not in
 the tab chain.</p>
 <hr>
-<h3>icon?</h3>
+<h3><del>icon?</del></h3>
 <blockquote>
 <p><code>optional</code> <strong>icon?</strong>: <code>string</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a></p>
 </blockquote>
+<p><strong><code>Experimental</code></strong></p>
 <p>Defines the icon source URI to be displayed as graphical element within the component. The SAP-icons
 font provides numerous built-in icons. See all the available icons in the demo:sap/m/demokit/iconExplorer/webapp/index.html Icon Explorer.</p>
 <hr>
-<h3>selected?</h3>
+<h3><del>selected?</del></h3>
 <blockquote>
 <p><code>optional</code> <strong>selected?</strong>: <code>boolean</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
+<p><strong><code>Experimental</code></strong></p>
 <p>Specifies if the component is selected.</p>
 <hr>
-<h3>subTabs?</h3>
+<h3><del>subTabs?</del></h3>
 <blockquote>
 <p><code>optional</code> <strong>subTabs?</strong>: <code>`{${string}}`</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/AggregationBindingInfo.html"><code>AggregationBindingInfo</code></a> | <a href="../../library/interfaces/ITab.html"><code>ITab</code></a> | <a href="../../library/interfaces/ITab.html"><code>ITab</code></a>[]</p>
 </blockquote>
+<p><strong><code>Experimental</code></strong></p>
 <p>Defines hierarchies with nested sub tabs.</p>
 <p> <strong>Note:</strong> Use <code>sap.ui.webc.main.Tab</code> and <code>sap.ui.webc.main.TabSeparator</code> for the intended design.</p>
 <hr>
-<h3>text?</h3>
+<h3><del>text?</del></h3>
 <blockquote>
 <p><code>optional</code> <strong>text?</strong>: <code>string</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a></p>
 </blockquote>
+<p><strong><code>Experimental</code></strong></p>
 <p>The text to be displayed for the item.</p>
 <hr>
 
-<footer>Generated from <code>@openui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@openui5/types@1.120.46</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

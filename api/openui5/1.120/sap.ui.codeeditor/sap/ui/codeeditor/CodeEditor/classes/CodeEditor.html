@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Class: CodeEditor — OpenUI5 TypeScript API</title>
-<meta name="description" content="Class: CodeEditor — OpenUI5 TypeScript API Reference (1.120.0)">
+<meta name="description" content="Class: CodeEditor — OpenUI5 TypeScript API Reference (1.120.46)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/openui5/1.120/sap.ui.codeeditor/sap/ui/codeeditor/CodeEditor/classes/CodeEditor.html">
 <meta property="og:title" content="Class: CodeEditor — OpenUI5 TypeScript API">
-<meta property="og:description" content="Class: CodeEditor — OpenUI5 TypeScript API Reference (1.120.0)">
+<meta property="og:description" content="Class: CodeEditor — OpenUI5 TypeScript API Reference (1.120.46)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/openui5/1.120/sap.ui.codeeditor/sap/ui/codeeditor/CodeEditor/classes/CodeEditor.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,16 +33,16 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../index.html">OpenUI5 API</a> › <a href="../../../../../../sap.ui.codeeditor/README.html">sap.ui.codeeditor</a> › sap › ui › codeeditor › <a href="../../../../../../sap.ui.codeeditor/sap/ui/codeeditor/CodeEditor/README.html">CodeEditor</a> › classes</nav>
-<p><a href="../../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.0)</strong></a></p>
+<p><a href="../../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.46)</strong></a></p>
 <hr>
-<p><a href="../../../../../../README.html">OpenUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../README.html">sap.ui.codeeditor</a> / <a href="../README.html">sap/ui/codeeditor/CodeEditor</a> / CodeEditor</p>
+<p><a href="../../../../../../README.html">OpenUI5 TypeScript API (1.120.46)</a> / <a href="../../../../../README.html">sap.ui.codeeditor</a> / <a href="../README.html">sap/ui/codeeditor/CodeEditor</a> / CodeEditor</p>
 <h1>Class: CodeEditor</h1>
 <pre class="sig"><span class="kw">import</span> CodeEditor <span class="kw">from</span> <span class="str">"sap/ui/codeeditor/CodeEditor"</span>;</pre>
-<h2>Since</h2>
-<p>1.46</p>
 <p>Allows to visualize source code of various types with syntax highlighting, line numbers in editable and
 read only mode. Use this control in scenarios where the user should be able to inspect and edit source
 code. The control currently uses the third-party code editor Ace.</p>
+<h2>Since</h2>
+<p>1.46</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></li>
@@ -88,6 +88,11 @@ of the syntax of the settings object.</p>
 <blockquote>
 <p><strong>addCustomCompleter</strong>(<code>oCustomCompleter</code>): <code>void</code></p>
 </blockquote>
+<p>Defines custom completer - object implementing a getCompletions method. The method has two parameters</p>
+<ul>
+<li>fnCallback method and context object. Context object provides details about oPos and sPrefix as provided
+by the third-party code editor.</li>
+</ul>
 <h4>Parameters</h4>
 <h5>oCustomCompleter</h5>
 <p>Object with getCompletions method</p>
@@ -97,11 +102,6 @@ of the syntax of the settings object.</p>
 <p><code>void</code></p>
 <h4>Since</h4>
 <p>1.52</p>
-<p>Defines custom completer - object implementing a getCompletions method. The method has two parameters</p>
-<ul>
-<li>fnCallback method and context object. Context object provides details about oPos and sPrefix as provided
-by the third-party code editor.</li>
-</ul>
 <hr>
 <h3>attachChange()</h3>
 <h4>Call Signature</h4>
@@ -225,6 +225,7 @@ otherwise it will be bound to this <code>sap.ui.codeeditor.CodeEditor</code> its
 <blockquote>
 <p><strong>fireChange</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
+<p>Fires event #event:change change to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/CodeEditor$ChangeEventParameters.html"><code>CodeEditor$ChangeEventParameters</code></a></p>
@@ -234,12 +235,12 @@ otherwise it will be bound to this <code>sap.ui.codeeditor.CodeEditor</code> its
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Fires event #event:change change to attached listeners.</p>
 <hr>
 <h3>fireLiveChange()</h3>
 <blockquote>
 <p><strong>fireLiveChange</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
+<p>Fires event #event:liveChange liveChange to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/CodeEditor$LiveChangeEventParameters.html"><code>CodeEditor$LiveChangeEventParameters</code></a></p>
@@ -249,7 +250,6 @@ otherwise it will be bound to this <code>sap.ui.codeeditor.CodeEditor</code> its
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Fires event #event:liveChange liveChange to attached listeners.</p>
 <hr>
 <h3>focus()</h3>
 <blockquote>
@@ -336,17 +336,17 @@ tomorrow_night_blue, tomorrow_night_bright, tomorrow_night_eighties, twilight, d
 <blockquote>
 <p><strong>getMaxLines</strong>(): <code>number</code></p>
 </blockquote>
-<h4>Returns</h4>
-<p><code>number</code></p>
-<p>Value of property <code>maxLines</code></p>
-<h4>Since</h4>
-<p>1.48.1</p>
 <p>Gets current value of property #getMaxLines maxLines.</p>
 <p>Sets whether the editor height should auto expand to a maximum number of lines. After reaching the maximum
 number of lines specified, the content of the <code>CodeEditor</code> will become scrollable.</p>
 <p><strong>Note:</strong> Keep in mind that the auto expand <code>CodeEditor</code> behavior requires the <code>height</code> property to be
 set to <code>auto</code>.</p>
 <p>Default value is <code>0</code>.</p>
+<h4>Returns</h4>
+<p><code>number</code></p>
+<p>Value of property <code>maxLines</code></p>
+<h4>Since</h4>
+<p>1.48.1</p>
 <hr>
 <h3>getSyntaxHints()</h3>
 <blockquote>
@@ -419,13 +419,13 @@ mixal, jssm, fsharp, edifact, csp, cssound_score, cssound_orchestra, cssound_doc
 <blockquote>
 <p><strong>prettyPrint</strong>(): <code>void</code></p>
 </blockquote>
+<p>Pretty-prints the content of the editor.</p>
+<p><strong>Note:</strong> Works well only for PHP. For other programming languages, the content might not be formatted
+well. In such cases it is recommended to use your own formatting.</p>
 <h4>Returns</h4>
 <p><code>void</code></p>
 <h4>Since</h4>
 <p>1.54.1</p>
-<p>Pretty-prints the content of the editor.</p>
-<p><strong>Note:</strong> Works well only for PHP. For other programming languages, the content might not be formatted
-well. In such cases it is recommended to use your own formatting.</p>
 <hr>
 <h3>setColorTheme()</h3>
 <blockquote>
@@ -493,6 +493,13 @@ well. In such cases it is recommended to use your own formatting.</p>
 <blockquote>
 <p><strong>setMaxLines</strong>(<code>iMaxLines?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getMaxLines maxLines.</p>
+<p>Sets whether the editor height should auto expand to a maximum number of lines. After reaching the maximum
+number of lines specified, the content of the <code>CodeEditor</code> will become scrollable.</p>
+<p><strong>Note:</strong> Keep in mind that the auto expand <code>CodeEditor</code> behavior requires the <code>height</code> property to be
+set to <code>auto</code>.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>0</code>.</p>
 <h4>Parameters</h4>
 <h5>iMaxLines?</h5>
 <p><code>number</code></p>
@@ -502,13 +509,6 @@ well. In such cases it is recommended to use your own formatting.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.48.1</p>
-<p>Sets a new value for property #getMaxLines maxLines.</p>
-<p>Sets whether the editor height should auto expand to a maximum number of lines. After reaching the maximum
-number of lines specified, the content of the <code>CodeEditor</code> will become scrollable.</p>
-<p><strong>Note:</strong> Keep in mind that the auto expand <code>CodeEditor</code> behavior requires the <code>height</code> property to be
-set to <code>auto</code>.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>0</code>.</p>
 <hr>
 <h3>setSyntaxHints()</h3>
 <blockquote>
@@ -641,6 +641,6 @@ used by this class</p>
 <p><a href="../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a>.<a href="../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html#getmetadata-1"><code>getMetadata</code></a></p>
 <hr>
 
-<footer>Generated from <code>@openui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@openui5/types@1.120.46</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

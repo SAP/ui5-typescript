@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>~~Class: TextField~~ — OpenUI5 TypeScript API</title>
-<meta name="description" content="~~Class: TextField~~ — OpenUI5 TypeScript API Reference (1.120.0)">
+<meta name="description" content="~~Class: TextField~~ — OpenUI5 TypeScript API Reference (1.120.46)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/openui5/1.120/sap.ui.commons/sap/ui/commons/TextField/classes/TextField.html">
 <meta property="og:title" content="~~Class: TextField~~ — OpenUI5 TypeScript API">
-<meta property="og:description" content="~~Class: TextField~~ — OpenUI5 TypeScript API Reference (1.120.0)">
+<meta property="og:description" content="~~Class: TextField~~ — OpenUI5 TypeScript API Reference (1.120.46)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/openui5/1.120/sap.ui.commons/sap/ui/commons/TextField/classes/TextField.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,14 +33,14 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../index.html">OpenUI5 API</a> › <a href="../../../../../../sap.ui.commons/README.html">sap.ui.commons</a> › sap › ui › commons › <a href="../../../../../../sap.ui.commons/sap/ui/commons/TextField/README.html">TextField</a> › classes</nav>
-<p><a href="../../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.0)</strong></a></p>
+<p><a href="../../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.46)</strong></a></p>
 <hr>
-<p><a href="../../../../../../README.html">OpenUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../README.html">sap.ui.commons</a> / <a href="../README.html">sap/ui/commons/TextField</a> / TextField</p>
+<p><a href="../../../../../../README.html">OpenUI5 TypeScript API (1.120.46)</a> / <a href="../../../../../README.html">sap.ui.commons</a> / <a href="../README.html">sap/ui/commons/TextField</a> / TextField</p>
 <h1><del>Class: TextField</del></h1>
 <pre class="sig"><span class="kw">import</span> TextField <span class="kw">from</span> <span class="str">"sap/ui/commons/TextField"</span>;</pre>
+<p>Renders an input field for text input.</p>
 <h2>Deprecated</h2>
 <p>(since 1.38) - replaced by sap.m.Input</p>
-<p>Renders an input field for text input.</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></li>
@@ -113,6 +113,8 @@ of the syntax of the settings object.</p>
 <blockquote>
 <p><strong>_checkChange</strong>(<code>oEvent</code>): <code>void</code></p>
 </blockquote>
+<p>Compares the previous value with the current value and fires the change event if the TextField is editable
+and the value has changed.</p>
 <h4>Parameters</h4>
 <h5>oEvent</h5>
 <p><code>Event</code></p>
@@ -121,8 +123,6 @@ of the syntax of the settings object.</p>
 <p><code>void</code></p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Compares the previous value with the current value and fires the change event if the TextField is editable
-and the value has changed.</p>
 <hr>
 <h3><del>addAriaDescribedBy()</del></h3>
 <blockquote>
@@ -293,6 +293,7 @@ of the possible properties of <code>oBindingInfo</code></p>
 <blockquote>
 <p><strong>fireChange</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
+<p>Fires event #event:change change to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/TextField$ChangeEventParameters.html"><code>TextField$ChangeEventParameters</code></a></p>
@@ -302,12 +303,12 @@ of the possible properties of <code>oBindingInfo</code></p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Fires event #event:change change to attached listeners.</p>
 <hr>
 <h3><del>fireLiveChange()</del></h3>
 <blockquote>
 <p><strong>fireLiveChange</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
+<p>Fires event #event:liveChange liveChange to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/TextField$LiveChangeEventParameters.html"><code>TextField$LiveChangeEventParameters</code></a></p>
@@ -317,19 +318,18 @@ of the possible properties of <code>oBindingInfo</code></p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Fires event #event:liveChange liveChange to attached listeners.</p>
 <hr>
 <h3><del>getAccessibilityInfo()</del></h3>
 <blockquote>
 <p><strong>getAccessibilityInfo</strong>(): <a href="../../../../../../sap.ui.core/sap/ui/core/library/type-aliases/AccessibilityInfo.html"><code>AccessibilityInfo</code></a></p>
 </blockquote>
+<p>See:
+	sap.ui.core.Control#getAccessibilityInfo</p>
 <h4>Returns</h4>
 <p><a href="../../../../../../sap.ui.core/sap/ui/core/library/type-aliases/AccessibilityInfo.html"><code>AccessibilityInfo</code></a></p>
 <p>Current accessibility state of the control</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>See:
-	sap.ui.core.Control#getAccessibilityInfo</p>
 <h4>Overrides</h4>
 <p><a href="../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a>.<a href="../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html#getaccessibilityinfo"><code>getAccessibilityInfo</code></a></p>
 <hr>
@@ -397,12 +397,12 @@ of the possible properties of <code>oBindingInfo</code></p>
 <blockquote>
 <p><strong>getFocusInfo</strong>(): <a href="../type-aliases/FocusInfo.html"><code>FocusInfo</code></a></p>
 </blockquote>
+<p>Returns an object representing the serialized focus information</p>
 <h4>Returns</h4>
 <p><a href="../type-aliases/FocusInfo.html"><code>FocusInfo</code></a></p>
 <p>an object representing the serialized focus information</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Returns an object representing the serialized focus information</p>
 <h4>Overrides</h4>
 <p><a href="../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a>.<a href="../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html#getfocusinfo"><code>getFocusInfo</code></a></p>
 <hr>
@@ -432,12 +432,12 @@ of the possible properties of <code>oBindingInfo</code></p>
 <blockquote>
 <p><strong>getInputDomRef</strong>(): <code>HTMLElement</code></p>
 </blockquote>
+<p>Method for accessing the DOM Ref of the input element.</p>
 <h4>Returns</h4>
 <p><code>HTMLElement</code></p>
 <p>DOM reference or <code>null</code></p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Method for accessing the DOM Ref of the input element.</p>
 <hr>
 <h3><del>getLiveValue()</del></h3>
 <blockquote>
@@ -475,13 +475,13 @@ value via this method. The validated value is accessible via the property value.
 <blockquote>
 <p><strong>getPlaceholder</strong>(): <code>string</code></p>
 </blockquote>
+<p>Gets current value of property #getPlaceholder placeholder.</p>
+<p>Placeholder for the text field.</p>
 <h4>Returns</h4>
 <p><code>string</code></p>
 <p>Value of property <code>placeholder</code></p>
 <h4>Since</h4>
 <p>1.14.0</p>
-<p>Gets current value of property #getPlaceholder placeholder.</p>
-<p>Placeholder for the text field.</p>
 <hr>
 <h3><del>getRequired()</del></h3>
 <blockquote>
@@ -554,6 +554,7 @@ the text field length defines the width.</p>
 <blockquote>
 <p><strong>onfocusin</strong>(<code>oEvent</code>): <code>void</code></p>
 </blockquote>
+<p>Event handler called when control is receiving the focus</p>
 <h4>Parameters</h4>
 <h5>oEvent</h5>
 <p><code>Event</code></p>
@@ -562,12 +563,12 @@ the text field length defines the width.</p>
 <p><code>void</code></p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Event handler called when control is receiving the focus</p>
 <hr>
 <h3><del>onkeyup()</del></h3>
 <blockquote>
 <p><strong>onkeyup</strong>(<code>oEvent</code>): <code>void</code></p>
 </blockquote>
+<p>Event handler for keyup. fire the liveChange event</p>
 <h4>Parameters</h4>
 <h5>oEvent</h5>
 <p><code>Event</code></p>
@@ -576,12 +577,14 @@ the text field length defines the width.</p>
 <p><code>void</code></p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Event handler for keyup. fire the liveChange event</p>
 <hr>
 <h3><del>onsapenter()</del></h3>
 <blockquote>
 <p><strong>onsapenter</strong>(<code>oEvent</code>): <code>void</code></p>
 </blockquote>
+<p>Event handler called when enter key is pressed.
+See:
+	sap.ui.commons.TextField#onfocusout</p>
 <h4>Parameters</h4>
 <h5>oEvent</h5>
 <p><code>Event</code></p>
@@ -590,14 +593,12 @@ the text field length defines the width.</p>
 <p><code>void</code></p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Event handler called when enter key is pressed.
-See:
-	sap.ui.commons.TextField#onfocusout</p>
 <hr>
 <h3><del>onsapfocusleave()</del></h3>
 <blockquote>
 <p><strong>onsapfocusleave</strong>(<code>oEvent</code>): <code>void</code></p>
 </blockquote>
+<p>Event handler called when control is losing the focus</p>
 <h4>Parameters</h4>
 <h5>oEvent</h5>
 <p><code>Event</code></p>
@@ -606,12 +607,13 @@ See:
 <p><code>void</code></p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Event handler called when control is losing the focus</p>
 <hr>
 <h3><del>onselectstart()</del></h3>
 <blockquote>
 <p><strong>onselectstart</strong>(<code>oEvent</code>): <code>void</code></p>
 </blockquote>
+<p>Event handler called when text selection starts. When the text field is disabled, the text should not
+be selectable, so cancel the event.</p>
 <h4>Parameters</h4>
 <h5>oEvent</h5>
 <p><code>Event</code></p>
@@ -620,8 +622,6 @@ See:
 <p><code>void</code></p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Event handler called when text selection starts. When the text field is disabled, the text should not
-be selectable, so cancel the event.</p>
 <hr>
 <h3><del>removeAllAriaDescribedBy()</del></h3>
 <blockquote>
@@ -799,6 +799,9 @@ be selectable, so cancel the event.</p>
 <blockquote>
 <p><strong>setPlaceholder</strong>(<code>sPlaceholder?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getPlaceholder placeholder.</p>
+<p>Placeholder for the text field.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <h4>Parameters</h4>
 <h5>sPlaceholder?</h5>
 <p><code>string</code></p>
@@ -808,9 +811,6 @@ be selectable, so cancel the event.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.14.0</p>
-<p>Sets a new value for property #getPlaceholder placeholder.</p>
-<p>Placeholder for the text field.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <hr>
 <h3><del>setRequired()</del></h3>
 <blockquote>
@@ -957,6 +957,6 @@ used by this class</p>
 <p><a href="../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a>.<a href="../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html#getmetadata-1"><code>getMetadata</code></a></p>
 <hr>
 
-<footer>Generated from <code>@openui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@openui5/types@1.120.46</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

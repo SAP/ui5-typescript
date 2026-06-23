@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Class: RadioButtonGroup — OpenUI5 TypeScript API</title>
-<meta name="description" content="Class: RadioButtonGroup — OpenUI5 TypeScript API Reference (1.120.0)">
+<meta name="description" content="Class: RadioButtonGroup — OpenUI5 TypeScript API Reference (1.120.46)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/openui5/1.120/sap.m/sap/m/RadioButtonGroup/classes/RadioButtonGroup.html">
 <meta property="og:title" content="Class: RadioButtonGroup — OpenUI5 TypeScript API">
-<meta property="og:description" content="Class: RadioButtonGroup — OpenUI5 TypeScript API Reference (1.120.0)">
+<meta property="og:description" content="Class: RadioButtonGroup — OpenUI5 TypeScript API Reference (1.120.46)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/openui5/1.120/sap.m/sap/m/RadioButtonGroup/classes/RadioButtonGroup.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,13 +33,11 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../index.html">OpenUI5 API</a> › <a href="../../../../../sap.m/README.html">sap.m</a> › sap › m › <a href="../../../../../sap.m/sap/m/RadioButtonGroup/README.html">RadioButtonGroup</a> › classes</nav>
-<p><a href="../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.0)</strong></a></p>
+<p><a href="../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.46)</strong></a></p>
 <hr>
-<p><a href="../../../../../README.html">OpenUI5 TypeScript API (1.120.0)</a> / <a href="../../../../README.html">sap.m</a> / <a href="../README.html">sap/m/RadioButtonGroup</a> / RadioButtonGroup</p>
+<p><a href="../../../../../README.html">OpenUI5 TypeScript API (1.120.46)</a> / <a href="../../../../README.html">sap.m</a> / <a href="../README.html">sap/m/RadioButtonGroup</a> / RadioButtonGroup</p>
 <h1>Class: RadioButtonGroup</h1>
 <pre class="sig"><span class="kw">import</span> RadioButtonGroup <span class="kw">from</span> <span class="str">"sap/m/RadioButtonGroup"</span>;</pre>
-<h2>Since</h2>
-<p>1.25.0</p>
 <p>This control is used as a wrapper for a group of sap.m.RadioButton controls, which can be used
 as a single UI element. You can select only one of the grouped radio buttons at a time. Structure:</p>
 <pre><code> - The radio buttons are stored in the `buttons` aggregation.
@@ -52,6 +50,8 @@ row or only one column.  Usage: When to use::
  - Do not put two radio button groups right next to each other as it is difficult to determine which
 buttons belong to which group.
 </code></pre>
+<h2>Since</h2>
+<p>1.25.0</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></li>
@@ -252,6 +252,7 @@ method is called. Event handlers are not cloned.</p>
 <blockquote>
 <p><strong>fireSelect</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
+<p>Fires event #event:select select to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/RadioButtonGroup$SelectEventParameters.html"><code>RadioButtonGroup$SelectEventParameters</code></a></p>
@@ -261,7 +262,6 @@ method is called. Event handlers are not cloned.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Fires event #event:select select to attached listeners.</p>
 <hr>
 <h3>getAriaDescribedBy()</h3>
 <blockquote>
@@ -348,15 +348,15 @@ the selectedIndex property will return -1.</p>
 <blockquote>
 <p><strong>getTextDirection</strong>(): <a href="../../../../../sap.ui.core/sap/ui/core/library/enumerations/TextDirection.html"><code>TextDirection</code></a> | <code>&quot;Inherit&quot;</code> | <code>&quot;LTR&quot;</code> | <code>&quot;RTL&quot;</code></p>
 </blockquote>
+<p>Gets current value of property #getTextDirection textDirection.</p>
+<p>This property specifies the element&#39;s text directionality with enumerated options. By default, the control
+inherits text direction from the DOM.</p>
+<p>Default value is <code>Inherit</code>.</p>
 <h4>Returns</h4>
 <p><a href="../../../../../sap.ui.core/sap/ui/core/library/enumerations/TextDirection.html"><code>TextDirection</code></a> | <code>&quot;Inherit&quot;</code> | <code>&quot;LTR&quot;</code> | <code>&quot;RTL&quot;</code></p>
 <p>Value of property <code>textDirection</code></p>
 <h4>Since</h4>
 <p>1.28.0</p>
-<p>Gets current value of property #getTextDirection textDirection.</p>
-<p>This property specifies the element&#39;s text directionality with enumerated options. By default, the control
-inherits text direction from the DOM.</p>
-<p>Default value is <code>Inherit</code>.</p>
 <hr>
 <h3>getValueState()</h3>
 <blockquote>
@@ -570,6 +570,11 @@ getEnabled returns false.</p>
 <blockquote>
 <p><strong>setTextDirection</strong>(<code>sTextDirection?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getTextDirection textDirection.</p>
+<p>This property specifies the element&#39;s text directionality with enumerated options. By default, the control
+inherits text direction from the DOM.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>Inherit</code>.</p>
 <h4>Parameters</h4>
 <h5>sTextDirection?</h5>
 <p><a href="../../../../../sap.ui.core/sap/ui/core/library/enumerations/TextDirection.html"><code>TextDirection</code></a> | <code>&quot;Inherit&quot;</code> | <code>&quot;LTR&quot;</code> | <code>&quot;RTL&quot;</code></p>
@@ -579,11 +584,6 @@ getEnabled returns false.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.28.0</p>
-<p>Sets a new value for property #getTextDirection textDirection.</p>
-<p>This property specifies the element&#39;s text directionality with enumerated options. By default, the control
-inherits text direction from the DOM.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>Inherit</code>.</p>
 <hr>
 <h3>setValueState()</h3>
 <blockquote>
@@ -675,6 +675,6 @@ used by this class</p>
 <p><a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a>.<a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html#getmetadata-1"><code>getMetadata</code></a></p>
 <hr>
 
-<footer>Generated from <code>@openui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@openui5/types@1.120.46</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Interface: $ObjectAttributeSettings — OpenUI5 TypeScript API</title>
-<meta name="description" content="Interface: $ObjectAttributeSettings — OpenUI5 TypeScript API Reference (1.120.0)">
+<meta name="description" content="Interface: $ObjectAttributeSettings — OpenUI5 TypeScript API Reference (1.120.46)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/openui5/1.120/sap.m/sap/m/ObjectAttribute/interfaces/$ObjectAttributeSettings.html">
 <meta property="og:title" content="Interface: $ObjectAttributeSettings — OpenUI5 TypeScript API">
-<meta property="og:description" content="Interface: $ObjectAttributeSettings — OpenUI5 TypeScript API Reference (1.120.0)">
+<meta property="og:description" content="Interface: $ObjectAttributeSettings — OpenUI5 TypeScript API Reference (1.120.46)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/openui5/1.120/sap.m/sap/m/ObjectAttribute/interfaces/$ObjectAttributeSettings.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,11 +33,12 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../index.html">OpenUI5 API</a> › <a href="../../../../../sap.m/README.html">sap.m</a> › sap › m › <a href="../../../../../sap.m/sap/m/ObjectAttribute/README.html">ObjectAttribute</a> › interfaces</nav>
-<p><a href="../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.0)</strong></a></p>
+<p><a href="../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.46)</strong></a></p>
 <hr>
-<p><a href="../../../../../README.html">OpenUI5 TypeScript API (1.120.0)</a> / <a href="../../../../README.html">sap.m</a> / <a href="../README.html">sap/m/ObjectAttribute</a> / $ObjectAttributeSettings</p>
+<p><a href="../../../../../README.html">OpenUI5 TypeScript API (1.120.46)</a> / <a href="../../../../README.html">sap.m</a> / <a href="../README.html">sap/m/ObjectAttribute</a> / $ObjectAttributeSettings</p>
 <h1>Interface: $ObjectAttributeSettings</h1>
 <pre class="sig"><span class="kw">import</span> { $ObjectAttributeSettings } <span class="kw">from</span> <span class="str">"sap/m/ObjectAttribute"</span>;</pre>
+<p>Describes the settings that can be provided to the ObjectAttribute constructor.</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../../../../sap.ui.core/sap/ui/core/Control/interfaces/$ControlSettings.html"><code>$ControlSettings</code></a></li>
@@ -58,8 +59,6 @@ the <code>textDirection</code> property should be set to ensure correct display.
 <blockquote>
 <p><code>optional</code> <strong>ariaHasPopup?</strong>: <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code> | <a href="../../../../../sap.ui.core/sap/ui/core/library/namespaces/aria/enumerations/HasPopup.html"><code>HasPopup</code></a> | <code>&quot;Dialog&quot;</code> | <code>&quot;Grid&quot;</code> | <code>&quot;ListBox&quot;</code> | <code>&quot;Menu&quot;</code> | <code>&quot;None&quot;</code> | <code>&quot;Tree&quot;</code></p>
 </blockquote>
-<h4>Since</h4>
-<p>1.97.0</p>
 <p>Specifies the value of the <code>aria-haspopup</code> attribute</p>
 <p>If the value is <code>None</code>, the attribute will not be rendered. Otherwise it will be rendered with the selected
 value.</p>
@@ -68,6 +67,8 @@ The value needs to be equal to the main/root role of the popup - e.g. dialog, me
 if you have dialog -&gt; dialog, if you have menu -&gt; menu; if you have list -&gt; list; if you have dialog
 containing a list -&gt; dialog). Do not use it, if you open a standard sap.m.Dialog, MessageBox or other
 type of modal dialogs.</p>
+<h4>Since</h4>
+<p>1.97.0</p>
 <hr>
 <h3>customContent?</h3>
 <blockquote>
@@ -108,6 +109,6 @@ RTL (right-to-left), or Inherit. By default the control inherits the text direct
 <p>Defines the ObjectAttribute title.</p>
 <hr>
 
-<footer>Generated from <code>@openui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@openui5/types@1.120.46</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

@@ -2,12 +2,12 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>Interface: $P13nColumnsPanelSettings — OpenUI5 TypeScript API</title>
-<meta name="description" content="Interface: $P13nColumnsPanelSettings — OpenUI5 TypeScript API Reference (1.120.0)">
+<title>~~Interface: $P13nColumnsPanelSettings~~ — OpenUI5 TypeScript API</title>
+<meta name="description" content="~~Interface: $P13nColumnsPanelSettings~~ — OpenUI5 TypeScript API Reference (1.120.46)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/openui5/1.120/sap.m/sap/m/P13nColumnsPanel/interfaces/$P13nColumnsPanelSettings.html">
-<meta property="og:title" content="Interface: $P13nColumnsPanelSettings — OpenUI5 TypeScript API">
-<meta property="og:description" content="Interface: $P13nColumnsPanelSettings — OpenUI5 TypeScript API Reference (1.120.0)">
+<meta property="og:title" content="~~Interface: $P13nColumnsPanelSettings~~ — OpenUI5 TypeScript API">
+<meta property="og:description" content="~~Interface: $P13nColumnsPanelSettings~~ — OpenUI5 TypeScript API Reference (1.120.46)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/openui5/1.120/sap.m/sap/m/P13nColumnsPanel/interfaces/$P13nColumnsPanelSettings.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,11 +33,14 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../index.html">OpenUI5 API</a> › <a href="../../../../../sap.m/README.html">sap.m</a> › sap › m › <a href="../../../../../sap.m/sap/m/P13nColumnsPanel/README.html">P13nColumnsPanel</a> › interfaces</nav>
-<p><a href="../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.0)</strong></a></p>
+<p><a href="../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.46)</strong></a></p>
 <hr>
-<p><a href="../../../../../README.html">OpenUI5 TypeScript API (1.120.0)</a> / <a href="../../../../README.html">sap.m</a> / <a href="../README.html">sap/m/P13nColumnsPanel</a> / $P13nColumnsPanelSettings</p>
-<h1>Interface: $P13nColumnsPanelSettings</h1>
+<p><a href="../../../../../README.html">OpenUI5 TypeScript API (1.120.46)</a> / <a href="../../../../README.html">sap.m</a> / <a href="../README.html">sap/m/P13nColumnsPanel</a> / $P13nColumnsPanelSettings</p>
+<h1><del>Interface: $P13nColumnsPanelSettings</del></h1>
 <pre class="sig"><span class="kw">import</span> { $P13nColumnsPanelSettings } <span class="kw">from</span> <span class="str">"sap/m/P13nColumnsPanel"</span>;</pre>
+<p>Describes the settings that can be provided to the P13nColumnsPanel constructor.</p>
+<h2>Deprecated</h2>
+<p>(since 1.98) - Use the sap.m.p13n.SelectionPanel instead.</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../P13nPanel/interfaces/$P13nPanelSettings.html"><code>$P13nPanelSettings</code></a></li>
@@ -47,6 +50,7 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 <blockquote>
 <p><code>optional</code> <strong>addColumnsItem?</strong>: (<code>oEvent</code>) =&gt; <code>void</code></p>
 </blockquote>
+<p>Event raised when a <code>columnsItem</code> is added.</p>
 <h4>Parameters</h4>
 <h5>oEvent</h5>
 <p><a href="../type-aliases/P13nColumnsPanel$AddColumnsItemEvent.html"><code>P13nColumnsPanel$AddColumnsItemEvent</code></a></p>
@@ -56,12 +60,12 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 <p>1.26.0</p>
 <h4>Deprecated</h4>
 <p>(since 1.50) - replaced by extended event sap.m.P13nColumnsPanel#event:changeColumnsItems</p>
-<p>Event raised when a <code>columnsItem</code> is added.</p>
 <hr>
-<h3>changeColumnsItems?</h3>
+<h3><del>changeColumnsItems?</del></h3>
 <blockquote>
 <p><code>optional</code> <strong>changeColumnsItems?</strong>: (<code>oEvent</code>) =&gt; <code>void</code></p>
 </blockquote>
+<p>Event raised if <code>columnsItems</code> is changed or new one needs to be created in the model.</p>
 <h4>Parameters</h4>
 <h5>oEvent</h5>
 <p><a href="../type-aliases/P13nColumnsPanel$ChangeColumnsItemsEvent.html"><code>P13nColumnsPanel$ChangeColumnsItemsEvent</code></a></p>
@@ -69,20 +73,21 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 <p><code>void</code></p>
 <h4>Since</h4>
 <p>1.26.7</p>
-<p>Event raised if <code>columnsItems</code> is changed or new one needs to be created in the model.</p>
 <hr>
-<h3>columnsItems?</h3>
+<h3><del>columnsItems?</del></h3>
 <blockquote>
 <p><code>optional</code> <strong>columnsItems?</strong>: <code>`{${string}}`</code> | <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/AggregationBindingInfo.html"><code>AggregationBindingInfo</code></a> | <a href="../../P13nColumnsItem/classes/P13nColumnsItem.html"><code>P13nColumnsItem</code></a> | <a href="../../P13nColumnsItem/classes/P13nColumnsItem.html"><code>P13nColumnsItem</code></a>[]</p>
 </blockquote>
+<p>List of columns that has been changed.</p>
 <h4>Since</h4>
 <p>1.26.0</p>
-<p>List of columns that has been changed.</p>
 <hr>
 <h3><del>setData?</del></h3>
 <blockquote>
 <p><code>optional</code> <strong>setData?</strong>: (<code>oEvent</code>) =&gt; <code>void</code></p>
 </blockquote>
+<p>Event raised if <code>setData</code> is called in model. The event serves the purpose of minimizing such calls since
+they can take up a lot of performance.</p>
 <h4>Parameters</h4>
 <h5>oEvent</h5>
 <p><a href="../../../../../sap.ui.core/sap/ui/base/Event/classes/Event.html"><code>Event</code></a></p>
@@ -92,15 +97,11 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 <p>1.26.7</p>
 <h4>Deprecated</h4>
 <p>(since 1.50) - the event <code>setData</code> is obsolete.</p>
-<p>Event raised if <code>setData</code> is called in model. The event serves the purpose of minimizing such calls since
-they can take up a lot of performance.</p>
 <hr>
-<h3>visibleItemsThreshold?</h3>
+<h3><del>visibleItemsThreshold?</del></h3>
 <blockquote>
 <p><code>optional</code> <strong>visibleItemsThreshold?</strong>: <code>number</code> | <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<h4>Since</h4>
-<p>1.26.7</p>
 <p>Specifies a threshold of visible items. If the end user makes a lot of columns visible, this might cause
 performance to slow down. When this happens, the user can receive a corresponding warning triggered by
 the <code>visibleItemsThreshold</code> property. The property needs to be activated and set to the required value
@@ -112,7 +113,9 @@ core:CustomData key=&quot;p13nDialogSettings&quot;
 value=&#39;\{&quot;columns&quot;:\{&quot;visible&quot;: true, &quot;payload&quot;: \{&quot;visibleItemsThreshold&quot;: 3\}\}\}&#39; /&gt;
 /customData&gt;
 </code></pre>
+<h4>Since</h4>
+<p>1.26.7</p>
 
-<footer>Generated from <code>@openui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@openui5/types@1.120.46</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

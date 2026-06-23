@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>~~Class: Dialog~~ — OpenUI5 TypeScript API</title>
-<meta name="description" content="~~Class: Dialog~~ — OpenUI5 TypeScript API Reference (1.120.0)">
+<meta name="description" content="~~Class: Dialog~~ — OpenUI5 TypeScript API Reference (1.120.46)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/openui5/1.120/sap.ui.commons/sap/ui/commons/Dialog/classes/Dialog.html">
 <meta property="og:title" content="~~Class: Dialog~~ — OpenUI5 TypeScript API">
-<meta property="og:description" content="~~Class: Dialog~~ — OpenUI5 TypeScript API Reference (1.120.0)">
+<meta property="og:description" content="~~Class: Dialog~~ — OpenUI5 TypeScript API Reference (1.120.46)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/openui5/1.120/sap.ui.commons/sap/ui/commons/Dialog/classes/Dialog.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,16 +33,16 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../index.html">OpenUI5 API</a> › <a href="../../../../../../sap.ui.commons/README.html">sap.ui.commons</a> › sap › ui › commons › <a href="../../../../../../sap.ui.commons/sap/ui/commons/Dialog/README.html">Dialog</a> › classes</nav>
-<p><a href="../../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.0)</strong></a></p>
+<p><a href="../../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.46)</strong></a></p>
 <hr>
-<p><a href="../../../../../../README.html">OpenUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../README.html">sap.ui.commons</a> / <a href="../README.html">sap/ui/commons/Dialog</a> / Dialog</p>
+<p><a href="../../../../../../README.html">OpenUI5 TypeScript API (1.120.46)</a> / <a href="../../../../../README.html">sap.ui.commons</a> / <a href="../README.html">sap/ui/commons/Dialog</a> / Dialog</p>
 <h1><del>Class: Dialog</del></h1>
 <pre class="sig"><span class="kw">import</span> Dialog <span class="kw">from</span> <span class="str">"sap/ui/commons/Dialog"</span>;</pre>
-<h2>Deprecated</h2>
-<p>(since 1.38) - Instead, use the <code>sap.m.Dialog</code> control.</p>
 <p>An interactive window appearing on request displaying information to the user. The API supports features
 such as popups with fixed sizes, popups with unlimited width, scrolling bars for large windows, and control
 nesting (for example, a drop-down list can be included in the window).</p>
+<h2>Deprecated</h2>
+<p>(since 1.38) - Instead, use the <code>sap.m.Dialog</code> control.</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></li>
@@ -212,6 +212,7 @@ information about last position and last size.</p>
 <blockquote>
 <p><strong>fireClosed</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
+<p>Fires event #event:closed closed to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/Dialog$ClosedEventParameters.html"><code>Dialog$ClosedEventParameters</code></a></p>
@@ -221,7 +222,6 @@ information about last position and last size.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
-<p>Fires event #event:closed closed to attached listeners.</p>
 <hr>
 <h3><del>getAccessibleRole()</del></h3>
 <blockquote>
@@ -249,14 +249,14 @@ information about last position and last size.</p>
 <blockquote>
 <p><strong>getAutoClose</strong>(): <code>boolean</code></p>
 </blockquote>
+<p>Gets current value of property #getAutoClose autoClose.</p>
+<p>If this property is set to true the Dialog will close if the Dialog loses its focus</p>
+<p>Default value is <code>false</code>.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>Value of property <code>autoClose</code></p>
 <h4>Since</h4>
 <p>1.10</p>
-<p>Gets current value of property #getAutoClose autoClose.</p>
-<p>If this property is set to true the Dialog will close if the Dialog loses its focus</p>
-<p>Default value is <code>false</code>.</p>
 <hr>
 <h3><del>getButtons()</del></h3>
 <blockquote>
@@ -304,6 +304,10 @@ or <code>null</code>.</p>
 <p><strong>getEnabled</strong>(): <code>boolean</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
+<p>Determines whether the dialog is currently enabled or not.</p>
+<p>Applications can&#39;t control the enabled state via a property. A dialog is implicitly enabled depending
+on its <code>openState</code>. Descendant controls that honor the enabled state of their ancestors will appear disabled
+after the dialog is closed.</p>
 <ul>
 <li>Whether a dialog is regarded as &quot;enabled&quot; during the state transitions (OPENING, CLOSING)
 is not fully decided. Currently, it is enabled during the OPENING phase and disabled during the CLOSING
@@ -317,10 +321,6 @@ or code that explicitly triggers pseudo user events will notice a difference.
 &#39;looks&#39; enabled but in fact it is already disabled. This avoids unnecessary redraws for content that
 becomes hidden soon. Should this show to be confusing for end users, it might be changed.</li>
 </ul>
-<p>Determines whether the dialog is currently enabled or not.</p>
-<p>Applications can&#39;t control the enabled state via a property. A dialog is implicitly enabled depending
-on its <code>openState</code>. Descendant controls that honor the enabled state of their ancestors will appear disabled
-after the dialog is closed.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>indicates whether the dialog is currently enabled or not.</p>
@@ -349,16 +349,16 @@ or <code>null</code>.</p>
 <blockquote>
 <p><strong>getKeepInWindow</strong>(): <code>boolean</code></p>
 </blockquote>
-<h4>Returns</h4>
-<p><code>boolean</code></p>
-<p>Value of property <code>keepInWindow</code></p>
-<h4>Since</h4>
-<p>1.9.0</p>
 <p>Gets current value of property #getKeepInWindow keepInWindow.</p>
 <p>Specifies whether Dialog movement should be restricted to the visible area of the window. This only affects
 drag&amp;drop movements by the user. This doesn&#39;t affect modal dialogs -&gt; modal dialogs always stay in the
 window.</p>
 <p>Default value is <code>false</code>.</p>
+<h4>Returns</h4>
+<p><code>boolean</code></p>
+<p>Value of property <code>keepInWindow</code></p>
+<h4>Since</h4>
+<p>1.9.0</p>
 <hr>
 <h3><del>getMaxHeight()</del></h3>
 <blockquote>
@@ -654,6 +654,10 @@ information about the current state check Dialog.getOpenState().</p>
 <blockquote>
 <p><strong>setAutoClose</strong>(<code>bAutoClose?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getAutoClose autoClose.</p>
+<p>If this property is set to true the Dialog will close if the Dialog loses its focus</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>false</code>.</p>
 <h4>Parameters</h4>
 <h5>bAutoClose?</h5>
 <p><code>boolean</code></p>
@@ -663,10 +667,6 @@ information about the current state check Dialog.getOpenState().</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.10</p>
-<p>Sets a new value for property #getAutoClose autoClose.</p>
-<p>If this property is set to true the Dialog will close if the Dialog loses its focus</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>false</code>.</p>
 <hr>
 <h3><del>setContentBorderDesign()</del></h3>
 <blockquote>
@@ -732,6 +732,12 @@ instance may be given</p>
 <blockquote>
 <p><strong>setKeepInWindow</strong>(<code>bKeepInWindow?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getKeepInWindow keepInWindow.</p>
+<p>Specifies whether Dialog movement should be restricted to the visible area of the window. This only affects
+drag&amp;drop movements by the user. This doesn&#39;t affect modal dialogs -&gt; modal dialogs always stay in the
+window.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>false</code>.</p>
 <h4>Parameters</h4>
 <h5>bKeepInWindow?</h5>
 <p><code>boolean</code></p>
@@ -741,12 +747,6 @@ instance may be given</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.9.0</p>
-<p>Sets a new value for property #getKeepInWindow keepInWindow.</p>
-<p>Specifies whether Dialog movement should be restricted to the visible area of the window. This only affects
-drag&amp;drop movements by the user. This doesn&#39;t affect modal dialogs -&gt; modal dialogs always stay in the
-window.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>false</code>.</p>
 <hr>
 <h3><del>setMaxHeight()</del></h3>
 <blockquote>
@@ -965,6 +965,6 @@ used by this class</p>
 <p><a href="../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a>.<a href="../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html#getmetadata-1"><code>getMetadata</code></a></p>
 <hr>
 
-<footer>Generated from <code>@openui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@openui5/types@1.120.46</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

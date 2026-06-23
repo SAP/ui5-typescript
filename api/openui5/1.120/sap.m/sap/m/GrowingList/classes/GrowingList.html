@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>~~Class: GrowingList~~ — OpenUI5 TypeScript API</title>
-<meta name="description" content="~~Class: GrowingList~~ — OpenUI5 TypeScript API Reference (1.120.0)">
+<meta name="description" content="~~Class: GrowingList~~ — OpenUI5 TypeScript API Reference (1.120.46)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/openui5/1.120/sap.m/sap/m/GrowingList/classes/GrowingList.html">
 <meta property="og:title" content="~~Class: GrowingList~~ — OpenUI5 TypeScript API">
-<meta property="og:description" content="~~Class: GrowingList~~ — OpenUI5 TypeScript API Reference (1.120.0)">
+<meta property="og:description" content="~~Class: GrowingList~~ — OpenUI5 TypeScript API Reference (1.120.46)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/openui5/1.120/sap.m/sap/m/GrowingList/classes/GrowingList.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,17 +33,17 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../index.html">OpenUI5 API</a> › <a href="../../../../../sap.m/README.html">sap.m</a> › sap › m › <a href="../../../../../sap.m/sap/m/GrowingList/README.html">GrowingList</a> › classes</nav>
-<p><a href="../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.0)</strong></a></p>
+<p><a href="../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.46)</strong></a></p>
 <hr>
-<p><a href="../../../../../README.html">OpenUI5 TypeScript API (1.120.0)</a> / <a href="../../../../README.html">sap.m</a> / <a href="../README.html">sap/m/GrowingList</a> / GrowingList</p>
+<p><a href="../../../../../README.html">OpenUI5 TypeScript API (1.120.46)</a> / <a href="../../../../README.html">sap.m</a> / <a href="../README.html">sap/m/GrowingList</a> / GrowingList</p>
 <h1><del>Class: GrowingList</del></h1>
 <pre class="sig"><span class="kw">import</span> GrowingList <span class="kw">from</span> <span class="str">"sap/m/GrowingList"</span>;</pre>
-<h2>Deprecated</h2>
-<p>(since 1.16) - Instead use &quot;List&quot; or &quot;Table&quot; control with setting &quot;growing&quot; property to &quot;true&quot;</p>
 <p><code>sap.m.GrowingList</code> control is the container for all list items and inherits from sap.m.List control.
 Everything like the selection, deletion, unread states and inset style are also maintained here. In addition
 the control provides a loading mechanism to request data from the model and append the list items to
 the list. The request is started manually by tapping on the trigger at the end of the list.</p>
+<h2>Deprecated</h2>
+<p>(since 1.16) - Instead use &quot;List&quot; or &quot;Table&quot; control with setting &quot;growing&quot; property to &quot;true&quot;</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../List/classes/List.html"><code>List</code></a></li>
@@ -89,49 +89,56 @@ of the syntax of the settings object.</p>
 <blockquote>
 <p><strong>getScrollToLoad</strong>(): <code>boolean</code></p>
 </blockquote>
-<h4>Returns</h4>
-<p><code>boolean</code></p>
-<p>Value of property <code>scrollToLoad</code></p>
-<h4>Since</h4>
-<p>1.16</p>
 <p>Gets current value of property #getScrollToLoad scrollToLoad.</p>
 <p>If you set this property to true then user needs to scroll end to trigger loading a new page. Default
 value is false which means user needs to scroll end and then click button to load new page. NOTE: This
 property can be set true, if growing property is set &quot;true&quot; and if you only have one instance of this
 control inside the scroll container(e.g Page).</p>
 <p>Default value is <code>false</code>.</p>
+<h4>Returns</h4>
+<p><code>boolean</code></p>
+<p>Value of property <code>scrollToLoad</code></p>
+<h4>Since</h4>
+<p>1.16</p>
 <hr>
 <h3><del>getThreshold()</del></h3>
 <blockquote>
 <p><strong>getThreshold</strong>(): <code>number</code></p>
 </blockquote>
+<p>Gets current value of property #getThreshold threshold.</p>
+<p>Number of items requested from the server. To activate this you should set growing property to &quot;true&quot;</p>
+<p>Default value is <code>20</code>.</p>
 <h4>Returns</h4>
 <p><code>number</code></p>
 <p>Value of property <code>threshold</code></p>
 <h4>Since</h4>
 <p>1.16</p>
-<p>Gets current value of property #getThreshold threshold.</p>
-<p>Number of items requested from the server. To activate this you should set growing property to &quot;true&quot;</p>
-<p>Default value is <code>20</code>.</p>
 <hr>
 <h3><del>getTriggerText()</del></h3>
 <blockquote>
 <p><strong>getTriggerText</strong>(): <code>string</code></p>
 </blockquote>
+<p>Gets current value of property #getTriggerText triggerText.</p>
+<p>Text which is displayed on the trigger at the end of the list. The default is a translated text (&quot;Load
+More Data&quot;) coming from the messagebundle properties. This property can be used only if growing property
+is set &quot;true&quot; and scrollToLoad property is set &quot;false&quot;.</p>
 <h4>Returns</h4>
 <p><code>string</code></p>
 <p>Value of property <code>triggerText</code></p>
 <h4>Since</h4>
 <p>1.16</p>
-<p>Gets current value of property #getTriggerText triggerText.</p>
-<p>Text which is displayed on the trigger at the end of the list. The default is a translated text (&quot;Load
-More Data&quot;) coming from the messagebundle properties. This property can be used only if growing property
-is set &quot;true&quot; and scrollToLoad property is set &quot;false&quot;.</p>
 <hr>
 <h3><del>setScrollToLoad()</del></h3>
 <blockquote>
 <p><strong>setScrollToLoad</strong>(<code>bScrollToLoad?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getScrollToLoad scrollToLoad.</p>
+<p>If you set this property to true then user needs to scroll end to trigger loading a new page. Default
+value is false which means user needs to scroll end and then click button to load new page. NOTE: This
+property can be set true, if growing property is set &quot;true&quot; and if you only have one instance of this
+control inside the scroll container(e.g Page).</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>false</code>.</p>
 <h4>Parameters</h4>
 <h5>bScrollToLoad?</h5>
 <p><code>boolean</code></p>
@@ -141,18 +148,15 @@ is set &quot;true&quot; and scrollToLoad property is set &quot;false&quot;.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.16</p>
-<p>Sets a new value for property #getScrollToLoad scrollToLoad.</p>
-<p>If you set this property to true then user needs to scroll end to trigger loading a new page. Default
-value is false which means user needs to scroll end and then click button to load new page. NOTE: This
-property can be set true, if growing property is set &quot;true&quot; and if you only have one instance of this
-control inside the scroll container(e.g Page).</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>false</code>.</p>
 <hr>
 <h3><del>setThreshold()</del></h3>
 <blockquote>
 <p><strong>setThreshold</strong>(<code>iThreshold?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getThreshold threshold.</p>
+<p>Number of items requested from the server. To activate this you should set growing property to &quot;true&quot;</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>20</code>.</p>
 <h4>Parameters</h4>
 <h5>iThreshold?</h5>
 <p><code>number</code></p>
@@ -162,15 +166,16 @@ control inside the scroll container(e.g Page).</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.16</p>
-<p>Sets a new value for property #getThreshold threshold.</p>
-<p>Number of items requested from the server. To activate this you should set growing property to &quot;true&quot;</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>20</code>.</p>
 <hr>
 <h3><del>setTriggerText()</del></h3>
 <blockquote>
 <p><strong>setTriggerText</strong>(<code>sTriggerText?</code>): <code>this</code></p>
 </blockquote>
+<p>Sets a new value for property #getTriggerText triggerText.</p>
+<p>Text which is displayed on the trigger at the end of the list. The default is a translated text (&quot;Load
+More Data&quot;) coming from the messagebundle properties. This property can be used only if growing property
+is set &quot;true&quot; and scrollToLoad property is set &quot;false&quot;.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <h4>Parameters</h4>
 <h5>sTriggerText?</h5>
 <p><code>string</code></p>
@@ -180,11 +185,6 @@ control inside the scroll container(e.g Page).</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.16</p>
-<p>Sets a new value for property #getTriggerText triggerText.</p>
-<p>Text which is displayed on the trigger at the end of the list. The default is a translated text (&quot;Load
-More Data&quot;) coming from the messagebundle properties. This property can be used only if growing property
-is set &quot;true&quot; and scrollToLoad property is set &quot;false&quot;.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <hr>
 <h3><del>extend()</del></h3>
 <blockquote>
@@ -225,6 +225,6 @@ used by this class</p>
 <p><a href="../../List/classes/List.html"><code>List</code></a>.<a href="../../List/classes/List.html#getmetadata-1"><code>getMetadata</code></a></p>
 <hr>
 
-<footer>Generated from <code>@openui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@openui5/types@1.120.46</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

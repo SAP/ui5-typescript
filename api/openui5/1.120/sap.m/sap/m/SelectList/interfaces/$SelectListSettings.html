@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Interface: $SelectListSettings — OpenUI5 TypeScript API</title>
-<meta name="description" content="Interface: $SelectListSettings — OpenUI5 TypeScript API Reference (1.120.0)">
+<meta name="description" content="Interface: $SelectListSettings — OpenUI5 TypeScript API Reference (1.120.46)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/openui5/1.120/sap.m/sap/m/SelectList/interfaces/$SelectListSettings.html">
 <meta property="og:title" content="Interface: $SelectListSettings — OpenUI5 TypeScript API">
-<meta property="og:description" content="Interface: $SelectListSettings — OpenUI5 TypeScript API Reference (1.120.0)">
+<meta property="og:description" content="Interface: $SelectListSettings — OpenUI5 TypeScript API Reference (1.120.46)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/openui5/1.120/sap.m/sap/m/SelectList/interfaces/$SelectListSettings.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,11 +33,12 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../index.html">OpenUI5 API</a> › <a href="../../../../../sap.m/README.html">sap.m</a> › sap › m › <a href="../../../../../sap.m/sap/m/SelectList/README.html">SelectList</a> › interfaces</nav>
-<p><a href="../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.0)</strong></a></p>
+<p><a href="../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.46)</strong></a></p>
 <hr>
-<p><a href="../../../../../README.html">OpenUI5 TypeScript API (1.120.0)</a> / <a href="../../../../README.html">sap.m</a> / <a href="../README.html">sap/m/SelectList</a> / $SelectListSettings</p>
+<p><a href="../../../../../README.html">OpenUI5 TypeScript API (1.120.46)</a> / <a href="../../../../README.html">sap.m</a> / <a href="../README.html">sap/m/SelectList</a> / $SelectListSettings</p>
 <h1>Interface: $SelectListSettings</h1>
 <pre class="sig"><span class="kw">import</span> { $SelectListSettings } <span class="kw">from</span> <span class="str">"sap/m/SelectList"</span>;</pre>
+<p>Describes the settings that can be provided to the SelectList constructor.</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../../../../sap.ui.core/sap/ui/core/Control/interfaces/$ControlSettings.html"><code>$ControlSettings</code></a></li>
@@ -47,9 +48,9 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 <blockquote>
 <p><code>optional</code> <strong>ariaLabelledBy?</strong>: (<code>string</code> | <a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a>)[]</p>
 </blockquote>
+<p>Association to controls / IDs which label this control (see WAI-ARIA attribute <code>aria-labelledby</code>).</p>
 <h4>Since</h4>
 <p>1.27.0</p>
-<p>Association to controls / IDs which label this control (see WAI-ARIA attribute <code>aria-labelledby</code>).</p>
 <hr>
 <h3>enabled?</h3>
 <blockquote>
@@ -61,14 +62,15 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 <blockquote>
 <p><code>optional</code> <strong>hideDisabledItems?</strong>: <code>boolean</code> | <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
+<p>Determines whether the disabled items are hidden from the DOM structure.</p>
 <h4>Since</h4>
 <p>1.91</p>
-<p>Determines whether the disabled items are hidden from the DOM structure.</p>
 <hr>
 <h3>itemPress?</h3>
 <blockquote>
 <p><code>optional</code> <strong>itemPress?</strong>: (<code>oEvent</code>) =&gt; <code>void</code></p>
 </blockquote>
+<p>This event is fired when an item is pressed.</p>
 <h4>Parameters</h4>
 <h5>oEvent</h5>
 <p><a href="../type-aliases/SelectList$ItemPressEvent.html"><code>SelectList$ItemPressEvent</code></a></p>
@@ -76,7 +78,6 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 <p><code>void</code></p>
 <h4>Since</h4>
 <p>1.32.4</p>
-<p>This event is fired when an item is pressed.</p>
 <hr>
 <h3>items?</h3>
 <blockquote>
@@ -88,11 +89,11 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 <blockquote>
 <p><code>optional</code> <strong>keyboardNavigationMode?</strong>: <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code> | <code>&quot;None&quot;</code> | <a href="../../library/enumerations/SelectListKeyboardNavigationMode.html"><code>SelectListKeyboardNavigationMode</code></a> | <code>&quot;Delimited&quot;</code></p>
 </blockquote>
-<h4>Since</h4>
-<p>1.38</p>
 <p>Defines the keyboard navigation mode.</p>
 <p><strong>Note:</strong> The <code>sap.m.SelectListKeyboardNavigationMode.None</code> enumeration value, is only intended for use
 in some composite controls that handles keyboard navigation by themselves.</p>
+<h4>Since</h4>
+<p>1.38</p>
 <hr>
 <h3>maxWidth?</h3>
 <blockquote>
@@ -136,10 +137,10 @@ enter or space key is pressed.</p>
 <blockquote>
 <p><code>optional</code> <strong>showSecondaryValues?</strong>: <code>boolean</code> | <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<h4>Since</h4>
-<p>1.32.3</p>
 <p>Indicates whether the text values of the <code>additionalText</code> property of a sap.ui.core.ListItem
 are shown.</p>
+<h4>Since</h4>
+<p>1.32.3</p>
 <hr>
 <h3>width?</h3>
 <blockquote>
@@ -147,6 +148,6 @@ are shown.</p>
 </blockquote>
 <p>Sets the width of the control.</p>
 
-<footer>Generated from <code>@openui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@openui5/types@1.120.46</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

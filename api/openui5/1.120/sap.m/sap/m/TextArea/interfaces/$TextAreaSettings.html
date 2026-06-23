@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Interface: $TextAreaSettings — OpenUI5 TypeScript API</title>
-<meta name="description" content="Interface: $TextAreaSettings — OpenUI5 TypeScript API Reference (1.120.0)">
+<meta name="description" content="Interface: $TextAreaSettings — OpenUI5 TypeScript API Reference (1.120.46)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/openui5/1.120/sap.m/sap/m/TextArea/interfaces/$TextAreaSettings.html">
 <meta property="og:title" content="Interface: $TextAreaSettings — OpenUI5 TypeScript API">
-<meta property="og:description" content="Interface: $TextAreaSettings — OpenUI5 TypeScript API Reference (1.120.0)">
+<meta property="og:description" content="Interface: $TextAreaSettings — OpenUI5 TypeScript API Reference (1.120.46)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/openui5/1.120/sap.m/sap/m/TextArea/interfaces/$TextAreaSettings.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,11 +33,12 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../index.html">OpenUI5 API</a> › <a href="../../../../../sap.m/README.html">sap.m</a> › sap › m › <a href="../../../../../sap.m/sap/m/TextArea/README.html">TextArea</a> › interfaces</nav>
-<p><a href="../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.0)</strong></a></p>
+<p><a href="../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.46)</strong></a></p>
 <hr>
-<p><a href="../../../../../README.html">OpenUI5 TypeScript API (1.120.0)</a> / <a href="../../../../README.html">sap.m</a> / <a href="../README.html">sap/m/TextArea</a> / $TextAreaSettings</p>
+<p><a href="../../../../../README.html">OpenUI5 TypeScript API (1.120.46)</a> / <a href="../../../../README.html">sap.m</a> / <a href="../README.html">sap/m/TextArea</a> / $TextAreaSettings</p>
 <h1>Interface: $TextAreaSettings</h1>
 <pre class="sig"><span class="kw">import</span> { $TextAreaSettings } <span class="kw">from</span> <span class="str">"sap/m/TextArea"</span>;</pre>
+<p>Describes the settings that can be provided to the TextArea constructor.</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../InputBase/interfaces/$InputBaseSettings.html"><code>$InputBaseSettings</code></a></li>
@@ -54,18 +55,18 @@ wins over the <code>cols</code> property, if both are set.</p>
 <blockquote>
 <p><code>optional</code> <strong>growing?</strong>: <code>boolean</code> | <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<h4>Since</h4>
-<p>1.38.0</p>
 <p>Indicates the ability of the control to automatically grow and shrink dynamically with its content. <strong>Note:</strong>
 This property should not be used when the <code>height</code> property is set.</p>
+<h4>Since</h4>
+<p>1.38.0</p>
 <hr>
 <h3>growingMaxLines?</h3>
 <blockquote>
 <p><code>optional</code> <strong>growingMaxLines?</strong>: <code>number</code> | <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
+<p>Defines the maximum number of lines that the control can grow.</p>
 <h4>Since</h4>
 <p>1.38.0</p>
-<p>Defines the maximum number of lines that the control can grow.</p>
 <hr>
 <h3>height?</h3>
 <blockquote>
@@ -101,22 +102,22 @@ This property should not be used when the <code>height</code> property is set.</
 <blockquote>
 <p><code>optional</code> <strong>showExceededText?</strong>: <code>boolean</code> | <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<h4>Since</h4>
-<p>1.48</p>
 <p>Determines whether the characters, exceeding the maximum allowed character count, are visible in the
 input field.</p>
 <p>If set to <code>false</code> the user is not allowed to enter more characters than what is set in the <code>maxLength</code>
 property. If set to <code>true</code> the characters exceeding the <code>maxLength</code> value are selected on paste and the
 counter below the input field displays their number.</p>
+<h4>Since</h4>
+<p>1.48</p>
 <hr>
 <h3>valueLiveUpdate?</h3>
 <blockquote>
 <p><code>optional</code> <strong>valueLiveUpdate?</strong>: <code>boolean</code> | <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<h4>Since</h4>
-<p>1.30</p>
 <p>Indicates when the <code>value</code> property gets updated with the user changes. Setting it to <code>true</code> updates
 the <code>value</code> property whenever the user has modified the text shown on the text area.</p>
+<h4>Since</h4>
+<p>1.30</p>
 <hr>
 <h3>wrapping?</h3>
 <blockquote>
@@ -124,6 +125,6 @@ the <code>value</code> property whenever the user has modified the text shown on
 </blockquote>
 <p>Indicates how the control wraps the text, e.g. <code>Soft</code>, <code>Hard</code>, <code>Off</code>.</p>
 
-<footer>Generated from <code>@openui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@openui5/types@1.120.46</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>
