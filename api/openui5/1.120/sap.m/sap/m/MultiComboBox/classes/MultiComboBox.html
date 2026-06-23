@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Class: MultiComboBox — OpenUI5 TypeScript API</title>
-<meta name="description" content="Class: MultiComboBox — OpenUI5 TypeScript API Reference (1.120.46)">
+<meta name="description" content="Class: MultiComboBox — OpenUI5 TypeScript API Reference (1.120.0)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/openui5/1.120/sap.m/sap/m/MultiComboBox/classes/MultiComboBox.html">
 <meta property="og:title" content="Class: MultiComboBox — OpenUI5 TypeScript API">
-<meta property="og:description" content="Class: MultiComboBox — OpenUI5 TypeScript API Reference (1.120.46)">
+<meta property="og:description" content="Class: MultiComboBox — OpenUI5 TypeScript API Reference (1.120.0)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/openui5/1.120/sap.m/sap/m/MultiComboBox/classes/MultiComboBox.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,11 +33,13 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../index.html">OpenUI5 API</a> › <a href="../../../../../sap.m/README.html">sap.m</a> › sap › m › <a href="../../../../../sap.m/sap/m/MultiComboBox/README.html">MultiComboBox</a> › classes</nav>
-<p><a href="../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.46)</strong></a></p>
+<p><a href="../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.0)</strong></a></p>
 <hr>
-<p><a href="../../../../../README.html">OpenUI5 TypeScript API (1.120.46)</a> / <a href="../../../../README.html">sap.m</a> / <a href="../README.html">sap/m/MultiComboBox</a> / MultiComboBox</p>
+<p><a href="../../../../../README.html">OpenUI5 TypeScript API (1.120.0)</a> / <a href="../../../../README.html">sap.m</a> / <a href="../README.html">sap/m/MultiComboBox</a> / MultiComboBox</p>
 <h1>Class: MultiComboBox</h1>
 <pre class="sig"><span class="kw">import</span> MultiComboBox <span class="kw">from</span> <span class="str">"sap/m/MultiComboBox"</span>;</pre>
+<h2>Since</h2>
+<p>1.22.0</p>
 <p>The MultiComboBox control provides a list box with items and a text field allowing the user to either
 type a value directly into the control or choose from the list of existing items.</p>
 <p>A drop-down list for selecting and filtering values. Overview: The MultiComboBox control is commonly
@@ -76,8 +78,6 @@ from the input field. Structure: The MultiComboBox consists of the following ele
  - You can review the tokens by pressing the right or left arrows on the keyboard.
  - You can select single tokens or a range of tokens and you can copy/cut/delete them.
 </code></pre>
-<h2>Since</h2>
-<p>1.22.0</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../ComboBoxBase/classes/ComboBoxBase.html"><code>ComboBoxBase</code></a></li>
@@ -258,7 +258,6 @@ otherwise it will be bound to this <code>sap.m.MultiComboBox</code> itself.</p>
 <blockquote>
 <p><strong>configPicker</strong>(<code>oPicker</code>): <code>void</code></p>
 </blockquote>
-<p><code>MultiComboBox</code> picker configuration</p>
 <h4>Parameters</h4>
 <h5>oPicker</h5>
 <p><a href="../../Popover/classes/Popover.html"><code>Popover</code></a> | <a href="../../Dialog/classes/Dialog.html"><code>Dialog</code></a></p>
@@ -267,6 +266,7 @@ otherwise it will be bound to this <code>sap.m.MultiComboBox</code> itself.</p>
 <p><code>void</code></p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p><code>MultiComboBox</code> picker configuration</p>
 <h4>Overrides</h4>
 <p><a href="../../ComboBoxBase/classes/ComboBoxBase.html"><code>ComboBoxBase</code></a>.<a href="../../ComboBoxBase/classes/ComboBoxBase.html#configpicker"><code>configPicker</code></a></p>
 <hr>
@@ -321,7 +321,6 @@ this <code>sap.m.MultiComboBox</code>.</p>
 <blockquote>
 <p><strong>fireSelectionChange</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
-<p>Fires event #event:selectionChange selectionChange to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/MultiComboBox$SelectionChangeEventParameters.html"><code>MultiComboBox$SelectionChangeEventParameters</code></a></p>
@@ -331,12 +330,12 @@ this <code>sap.m.MultiComboBox</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:selectionChange selectionChange to attached listeners.</p>
 <hr>
 <h3>fireSelectionFinish()</h3>
 <blockquote>
 <p><strong>fireSelectionFinish</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
-<p>Fires event #event:selectionFinish selectionFinish to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/MultiComboBox$SelectionFinishEventParameters.html"><code>MultiComboBox$SelectionFinishEventParameters</code></a></p>
@@ -346,19 +345,20 @@ this <code>sap.m.MultiComboBox</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:selectionFinish selectionFinish to attached listeners.</p>
 <hr>
 <h3>getAccessibilityInfo()</h3>
 <blockquote>
 <p><strong>getAccessibilityInfo</strong>(): <a href="../../../../../sap.ui.core/sap/ui/core/library/type-aliases/AccessibilityInfo.html"><code>AccessibilityInfo</code></a></p>
 </blockquote>
-<p>Gets the accessibility info for the control
-See:
-	sap.ui.core.Control#getAccessibilityInfo</p>
 <h4>Returns</h4>
 <p><a href="../../../../../sap.ui.core/sap/ui/core/library/type-aliases/AccessibilityInfo.html"><code>AccessibilityInfo</code></a></p>
 <p>The accessibility info</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Gets the accessibility info for the control
+See:
+	sap.ui.core.Control#getAccessibilityInfo</p>
 <h4>Overrides</h4>
 <p><a href="../../ComboBoxBase/classes/ComboBoxBase.html"><code>ComboBoxBase</code></a>.<a href="../../ComboBoxBase/classes/ComboBoxBase.html#getaccessibilityinfo"><code>getAccessibilityInfo</code></a></p>
 <hr>
@@ -411,21 +411,21 @@ keys exists the first item matching the key is used.</p>
 <blockquote>
 <p><strong>onAfterRenderingPicker</strong>(): <code>void</code></p>
 </blockquote>
-<p>This hook method is called after the MultiComboBox&#39;s Pop-up is rendered.</p>
 <h4>Returns</h4>
 <p><code>void</code></p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>This hook method is called after the MultiComboBox&#39;s Pop-up is rendered.</p>
 <hr>
 <h3>onBeforeRendering()</h3>
 <blockquote>
 <p><strong>onBeforeRendering</strong>(): <code>void</code></p>
 </blockquote>
-<p>This hook method is called before the MultiComboBox is rendered.</p>
 <h4>Returns</h4>
 <p><code>void</code></p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>This hook method is called before the MultiComboBox is rendered.</p>
 <h4>Overrides</h4>
 <p><a href="../../ComboBoxBase/classes/ComboBoxBase.html"><code>ComboBoxBase</code></a>.<a href="../../ComboBoxBase/classes/ComboBoxBase.html#onbeforerendering"><code>onBeforeRendering</code></a></p>
 <hr>
@@ -433,7 +433,6 @@ keys exists the first item matching the key is used.</p>
 <blockquote>
 <p><strong>onclick</strong>(<code>oEvent</code>): <code>void</code></p>
 </blockquote>
-<p>Handles control click event.</p>
 <h4>Parameters</h4>
 <h5>oEvent</h5>
 <p><code>undefined</code></p>
@@ -441,17 +440,18 @@ keys exists the first item matching the key is used.</p>
 <p><code>void</code></p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Handles control click event.</p>
 <hr>
 <h3>open()</h3>
 <blockquote>
 <p><strong>open</strong>(): <code>this</code></p>
 </blockquote>
-<p>Opens the control&#39;s picker popup.</p>
 <h4>Returns</h4>
 <p><code>this</code></p>
 <p><code>this</code> to allow method chaining.</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Opens the control&#39;s picker popup.</p>
 <h4>Overrides</h4>
 <p><a href="../../ComboBoxBase/classes/ComboBoxBase.html"><code>ComboBoxBase</code></a>.<a href="../../ComboBoxBase/classes/ComboBoxBase.html#open"><code>open</code></a></p>
 <hr>
@@ -541,7 +541,6 @@ is [].</p>
 <blockquote>
 <p><strong>syncPickerContent</strong>(<code>bForceListSync?</code>): <a href="../../Popover/classes/Popover.html"><code>Popover</code></a> | <a href="../../Dialog/classes/Dialog.html"><code>Dialog</code></a></p>
 </blockquote>
-<p>Creates picker if doesn&#39;t exist yet and sync with Control items</p>
 <h4>Parameters</h4>
 <h5>bForceListSync?</h5>
 <p><code>boolean</code></p>
@@ -551,6 +550,7 @@ is [].</p>
 <p>The picker instance</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Creates picker if doesn&#39;t exist yet and sync with Control items</p>
 <h4>Overrides</h4>
 <p><a href="../../ComboBoxBase/classes/ComboBoxBase.html"><code>ComboBoxBase</code></a>.<a href="../../ComboBoxBase/classes/ComboBoxBase.html#syncpickercontent"><code>syncPickerContent</code></a></p>
 <hr>
@@ -569,7 +569,7 @@ contained in <code>oClassInfo</code>.</p>
 <p><code>string</code></p>
 <p>Name of the class being created</p>
 <h5>oClassInfo?</h5>
-<p><a href="../../../../../sap.f/namespaces/sap/type-aliases/ClassInfo.html"><code>ClassInfo</code></a>&lt;<code>T</code>, <code>MultiComboBox</code>&gt;</p>
+<p><code>ClassInfo</code>&lt;<code>T</code>, <code>MultiComboBox</code>&gt;</p>
 <p>Object literal with information about the class</p>
 <h5>FNMetaImpl?</h5>
 <p><code>Function</code></p>
@@ -593,6 +593,6 @@ used by this class</p>
 <p><a href="../../ComboBoxBase/classes/ComboBoxBase.html"><code>ComboBoxBase</code></a>.<a href="../../ComboBoxBase/classes/ComboBoxBase.html#getmetadata-1"><code>getMetadata</code></a></p>
 <hr>
 
-<footer>Generated from <code>@openui5/types@1.120.46</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@openui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Class: CalendarRow — OpenUI5 TypeScript API</title>
-<meta name="description" content="Class: CalendarRow — OpenUI5 TypeScript API Reference (1.120.46)">
+<meta name="description" content="Class: CalendarRow — OpenUI5 TypeScript API Reference (1.120.0)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/openui5/1.120/sap.ui.unified/sap/ui/unified/CalendarRow/classes/CalendarRow.html">
 <meta property="og:title" content="Class: CalendarRow — OpenUI5 TypeScript API">
-<meta property="og:description" content="Class: CalendarRow — OpenUI5 TypeScript API Reference (1.120.46)">
+<meta property="og:description" content="Class: CalendarRow — OpenUI5 TypeScript API Reference (1.120.0)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/openui5/1.120/sap.ui.unified/sap/ui/unified/CalendarRow/classes/CalendarRow.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,14 +33,14 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../index.html">OpenUI5 API</a> › <a href="../../../../../../sap.ui.unified/README.html">sap.ui.unified</a> › sap › ui › unified › <a href="../../../../../../sap.ui.unified/sap/ui/unified/CalendarRow/README.html">CalendarRow</a> › classes</nav>
-<p><a href="../../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.46)</strong></a></p>
+<p><a href="../../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.0)</strong></a></p>
 <hr>
-<p><a href="../../../../../../README.html">OpenUI5 TypeScript API (1.120.46)</a> / <a href="../../../../../README.html">sap.ui.unified</a> / <a href="../README.html">sap/ui/unified/CalendarRow</a> / CalendarRow</p>
+<p><a href="../../../../../../README.html">OpenUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../README.html">sap.ui.unified</a> / <a href="../README.html">sap/ui/unified/CalendarRow</a> / CalendarRow</p>
 <h1>Class: CalendarRow</h1>
 <pre class="sig"><span class="kw">import</span> CalendarRow <span class="kw">from</span> <span class="str">"sap/ui/unified/CalendarRow"</span>;</pre>
-<p>A calendar row with a header and appointments. The Appointments will be placed in the defined interval.</p>
 <h2>Since</h2>
 <p>1.34.0</p>
+<p>A calendar row with a header and appointments. The Appointments will be placed in the defined interval.</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></li>
@@ -126,11 +126,6 @@ of the syntax of the settings object.</p>
 <blockquote>
 <p><strong>attachIntervalSelect</strong>(<code>oData</code>, <code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
-<p>Attaches event handler <code>fnFunction</code> to the #event:intervalSelect intervalSelect event of this
-<code>sap.ui.unified.CalendarRow</code>.</p>
-<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
-otherwise it will be bound to this <code>sap.ui.unified.CalendarRow</code> itself.</p>
-<p>Fired if an interval was selected</p>
 <h5>Parameters</h5>
 <h6>oData</h6>
 <p><code>object</code></p>
@@ -147,15 +142,15 @@ object when firing the event</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Since</h5>
 <p>1.38.0</p>
-<h4>Call Signature</h4>
-<blockquote>
-<p><strong>attachIntervalSelect</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
-</blockquote>
 <p>Attaches event handler <code>fnFunction</code> to the #event:intervalSelect intervalSelect event of this
 <code>sap.ui.unified.CalendarRow</code>.</p>
 <p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
 otherwise it will be bound to this <code>sap.ui.unified.CalendarRow</code> itself.</p>
 <p>Fired if an interval was selected</p>
+<h4>Call Signature</h4>
+<blockquote>
+<p><strong>attachIntervalSelect</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
+</blockquote>
 <h5>Parameters</h5>
 <h6>fnFunction</h6>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -168,6 +163,11 @@ otherwise it will be bound to this <code>sap.ui.unified.CalendarRow</code> itsel
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Since</h5>
 <p>1.38.0</p>
+<p>Attaches event handler <code>fnFunction</code> to the #event:intervalSelect intervalSelect event of this
+<code>sap.ui.unified.CalendarRow</code>.</p>
+<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
+otherwise it will be bound to this <code>sap.ui.unified.CalendarRow</code> itself.</p>
+<p>Fired if an interval was selected</p>
 <hr>
 <h3>attachLeaveRow()</h3>
 <h4>Call Signature</h4>
@@ -321,9 +321,6 @@ otherwise it will be bound to this <code>sap.ui.unified.CalendarRow</code> itsel
 <blockquote>
 <p><strong>detachIntervalSelect</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
-<p>Detaches event handler <code>fnFunction</code> from the #event:intervalSelect intervalSelect event of this
-<code>sap.ui.unified.CalendarRow</code>.</p>
-<p>The passed function and listener object must match the ones used for event registration.</p>
 <h4>Parameters</h4>
 <h5>fnFunction</h5>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -336,6 +333,9 @@ otherwise it will be bound to this <code>sap.ui.unified.CalendarRow</code> itsel
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.38.0</p>
+<p>Detaches event handler <code>fnFunction</code> from the #event:intervalSelect intervalSelect event of this
+<code>sap.ui.unified.CalendarRow</code>.</p>
+<p>The passed function and listener object must match the ones used for event registration.</p>
 <hr>
 <h3>detachLeaveRow()</h3>
 <blockquote>
@@ -393,7 +393,6 @@ this <code>sap.ui.unified.CalendarRow</code>.</p>
 <blockquote>
 <p><strong>fireIntervalSelect</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
-<p>Fires event #event:intervalSelect intervalSelect to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/CalendarRow$IntervalSelectEventParameters.html"><code>CalendarRow$IntervalSelectEventParameters</code></a></p>
@@ -405,12 +404,12 @@ this <code>sap.ui.unified.CalendarRow</code>.</p>
 <p>1.38.0</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:intervalSelect intervalSelect to attached listeners.</p>
 <hr>
 <h3>fireLeaveRow()</h3>
 <blockquote>
 <p><strong>fireLeaveRow</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
-<p>Fires event #event:leaveRow leaveRow to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/CalendarRow$LeaveRowEventParameters.html"><code>CalendarRow$LeaveRowEventParameters</code></a></p>
@@ -420,12 +419,12 @@ this <code>sap.ui.unified.CalendarRow</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:leaveRow leaveRow to attached listeners.</p>
 <hr>
 <h3>fireSelect()</h3>
 <blockquote>
 <p><strong>fireSelect</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
-<p>Fires event #event:select select to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/CalendarRow$SelectEventParameters.html"><code>CalendarRow$SelectEventParameters</code></a></p>
@@ -435,12 +434,12 @@ this <code>sap.ui.unified.CalendarRow</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:select select to attached listeners.</p>
 <hr>
 <h3>fireStartDateChange()</h3>
 <blockquote>
 <p><strong>fireStartDateChange</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
-<p>Fires event #event:startDateChange startDateChange to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><code>object</code></p>
@@ -450,6 +449,7 @@ this <code>sap.ui.unified.CalendarRow</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:startDateChange startDateChange to attached listeners.</p>
 <hr>
 <h3>focusAppointment()</h3>
 <blockquote>
@@ -481,30 +481,30 @@ this <code>sap.ui.unified.CalendarRow</code>.</p>
 <blockquote>
 <p><strong>getAppointmentHeight</strong>(): <code>&quot;Large&quot;</code> | <code>&quot;Regular&quot;</code> | <a href="../../library/enumerations/CalendarAppointmentHeight.html"><code>CalendarAppointmentHeight</code></a> | <code>&quot;Automatic&quot;</code> | <code>&quot;HalfSize&quot;</code></p>
 </blockquote>
-<p>Gets current value of property #getAppointmentHeight appointmentHeight.</p>
-<p>Defines the height of the CalendarAppoinment</p>
-<p>Default value is <code>Regular</code>.</p>
 <h4>Returns</h4>
 <p><code>&quot;Large&quot;</code> | <code>&quot;Regular&quot;</code> | <a href="../../library/enumerations/CalendarAppointmentHeight.html"><code>CalendarAppointmentHeight</code></a> | <code>&quot;Automatic&quot;</code> | <code>&quot;HalfSize&quot;</code></p>
 <p>Value of property <code>appointmentHeight</code></p>
 <h4>Since</h4>
 <p>1.81.0</p>
+<p>Gets current value of property #getAppointmentHeight appointmentHeight.</p>
+<p>Defines the height of the CalendarAppoinment</p>
+<p>Default value is <code>Regular</code>.</p>
 <hr>
 <h3>getAppointmentRoundWidth()</h3>
 <blockquote>
 <p><strong>getAppointmentRoundWidth</strong>(): <code>&quot;None&quot;</code> | <a href="../../library/enumerations/CalendarAppointmentRoundWidth.html"><code>CalendarAppointmentRoundWidth</code></a> | <code>&quot;HalfColumn&quot;</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
-<p>Gets current value of property #getAppointmentRoundWidth appointmentRoundWidth.</p>
-<p>Defines rounding of the width of CalendarAppoinment <strong>Note:</strong> This property is applied, when
-the calendar interval type is day and the view shows more than 20 days</p>
-<p>Default value is <code>None</code>.</p>
 <h4>Returns</h4>
 <p><code>&quot;None&quot;</code> | <a href="../../library/enumerations/CalendarAppointmentRoundWidth.html"><code>CalendarAppointmentRoundWidth</code></a> | <code>&quot;HalfColumn&quot;</code></p>
 <p>Value of property <code>appointmentRoundWidth</code></p>
 <h4>Since</h4>
 <p>1.81.0
  (since 1.81.0)</p>
+<p>Gets current value of property #getAppointmentRoundWidth appointmentRoundWidth.</p>
+<p>Defines rounding of the width of CalendarAppoinment <strong>Note:</strong> This property is applied, when
+the calendar interval type is day and the view shows more than 20 days</p>
+<p>Default value is <code>None</code>.</p>
 <hr>
 <h3>getAppointments()</h3>
 <blockquote>
@@ -520,11 +520,6 @@ the calendar interval type is day and the view shows more than 20 days</p>
 <blockquote>
 <p><strong>getAppointmentsReducedHeight</strong>(): <code>boolean</code></p>
 </blockquote>
-<p>Gets current value of property #getAppointmentsReducedHeight appointmentsReducedHeight.</p>
-<p>If set the appointments without text (only title) are rendered with a smaller height.</p>
-<p><strong>Note:</strong> On phone devices this property is ignored, appointments are always rendered in full height
-to allow touching.</p>
-<p>Default value is <code>false</code>.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>Value of property <code>appointmentsReducedHeight</code></p>
@@ -532,20 +527,25 @@ to allow touching.</p>
 <p>1.38.0</p>
 <h4>Deprecated</h4>
 <p>(since 1.81) - Please use the <code>appointmentHeight</code> with value &quot;Automatic&quot; property instead.</p>
+<p>Gets current value of property #getAppointmentsReducedHeight appointmentsReducedHeight.</p>
+<p>If set the appointments without text (only title) are rendered with a smaller height.</p>
+<p><strong>Note:</strong> On phone devices this property is ignored, appointments are always rendered in full height
+to allow touching.</p>
+<p>Default value is <code>false</code>.</p>
 <hr>
 <h3>getAppointmentsVisualization()</h3>
 <blockquote>
 <p><strong>getAppointmentsVisualization</strong>(): <code>&quot;Standard&quot;</code> | <a href="../../library/enumerations/CalendarAppointmentVisualization.html"><code>CalendarAppointmentVisualization</code></a> | <code>&quot;Filled&quot;</code></p>
 </blockquote>
-<p>Gets current value of property #getAppointmentsVisualization appointmentsVisualization.</p>
-<p>Defines the visualization of the <code>CalendarAppoinment</code></p>
-<p><strong>Note:</strong> The real visualization depends on the used theme.</p>
-<p>Default value is <code>Standard</code>.</p>
 <h4>Returns</h4>
 <p><code>&quot;Standard&quot;</code> | <a href="../../library/enumerations/CalendarAppointmentVisualization.html"><code>CalendarAppointmentVisualization</code></a> | <code>&quot;Filled&quot;</code></p>
 <p>Value of property <code>appointmentsVisualization</code></p>
 <h4>Since</h4>
 <p>1.40.0</p>
+<p>Gets current value of property #getAppointmentsVisualization appointmentsVisualization.</p>
+<p>Defines the visualization of the <code>CalendarAppoinment</code></p>
+<p><strong>Note:</strong> The real visualization depends on the used theme.</p>
+<p>Default value is <code>Standard</code>.</p>
 <hr>
 <h3>getAriaLabelledBy()</h3>
 <blockquote>
@@ -656,25 +656,25 @@ Note: If the value is more than 1, the NonWorkingDays type is not presented.</p>
 <blockquote>
 <p><strong>getLegend</strong>(): <code>string</code></p>
 </blockquote>
-<p>ID of the element which is the current target of the association #getLegend legend, or <code>null</code>.</p>
 <h4>Returns</h4>
 <p><code>string</code></p>
 <h4>Since</h4>
 <p>1.40.0</p>
+<p>ID of the element which is the current target of the association #getLegend legend, or <code>null</code>.</p>
 <hr>
 <h3>getMultipleAppointmentsSelection()</h3>
 <blockquote>
 <p><strong>getMultipleAppointmentsSelection</strong>(): <code>boolean</code></p>
 </blockquote>
-<p>Gets current value of property #getMultipleAppointmentsSelection multipleAppointmentsSelection.</p>
-<p>Determines whether the selection of multiple appointments is enabled.</p>
-<p>Note: selection of multiple appointments is possible using CTRL key regardless of the value of this property.</p>
-<p>Default value is <code>false</code>.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>Value of property <code>multipleAppointmentsSelection</code></p>
 <h4>Since</h4>
 <p>1.97</p>
+<p>Gets current value of property #getMultipleAppointmentsSelection multipleAppointmentsSelection.</p>
+<p>Determines whether the selection of multiple appointments is enabled.</p>
+<p>Note: selection of multiple appointments is possible using CTRL key regardless of the value of this property.</p>
+<p>Default value is <code>false</code>.</p>
 <hr>
 <h3>getNonWorkingDays()</h3>
 <blockquote>
@@ -705,16 +705,16 @@ to 6. (Other values will just be ignored.)</p>
 <blockquote>
 <p><strong>getShowEmptyIntervalHeaders</strong>(): <code>boolean</code></p>
 </blockquote>
-<p>Gets current value of property #getShowEmptyIntervalHeaders showEmptyIntervalHeaders.</p>
-<p>If set, interval headers are shown even if no <code>intervalHeaders</code> are assigned to the visible time frame.</p>
-<p>If not set, no interval headers are shown if no <code>intervalHeaders</code> are assigned.</p>
-<p><strong>Note:</strong> This property is only used if <code>showIntervalHeaders</code> is set to true.</p>
-<p>Default value is <code>true</code>.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>Value of property <code>showEmptyIntervalHeaders</code></p>
 <h4>Since</h4>
 <p>1.38.0</p>
+<p>Gets current value of property #getShowEmptyIntervalHeaders showEmptyIntervalHeaders.</p>
+<p>If set, interval headers are shown even if no <code>intervalHeaders</code> are assigned to the visible time frame.</p>
+<p>If not set, no interval headers are shown if no <code>intervalHeaders</code> are assigned.</p>
+<p><strong>Note:</strong> This property is only used if <code>showIntervalHeaders</code> is set to true.</p>
+<p>Default value is <code>true</code>.</p>
 <hr>
 <h3>getShowIntervalHeaders()</h3>
 <blockquote>
@@ -786,7 +786,7 @@ are used in one container (e.g. <code>PlanningCalendar</code>), it is better if 
 check once and then calls this function of each <code>CalendarRow</code>.</p>
 <h4>Parameters</h4>
 <h5>oEvent</h5>
-<p><a href="../../../../../../sap.ui.core/namespaces/JQuery/interfaces/Event.html"><code>Event</code></a></p>
+<p><code>Event</code></p>
 <p>The event object of the resize handler.</p>
 <h4>Returns</h4>
 <p><code>this</code></p>
@@ -928,10 +928,6 @@ is inserted at the last position</p>
 <blockquote>
 <p><strong>setAppointmentHeight</strong>(<code>sAppointmentHeight?</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getAppointmentHeight appointmentHeight.</p>
-<p>Defines the height of the CalendarAppoinment</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>Regular</code>.</p>
 <h4>Parameters</h4>
 <h5>sAppointmentHeight?</h5>
 <p><code>&quot;Large&quot;</code> | <code>&quot;Regular&quot;</code> | <a href="../../library/enumerations/CalendarAppointmentHeight.html"><code>CalendarAppointmentHeight</code></a> | <code>&quot;Automatic&quot;</code> | <code>&quot;HalfSize&quot;</code></p>
@@ -941,17 +937,16 @@ is inserted at the last position</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.81.0</p>
+<p>Sets a new value for property #getAppointmentHeight appointmentHeight.</p>
+<p>Defines the height of the CalendarAppoinment</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>Regular</code>.</p>
 <hr>
 <h3>setAppointmentRoundWidth()</h3>
 <blockquote>
 <p><strong>setAppointmentRoundWidth</strong>(<code>sAppointmentRoundWidth?</code>): <code>this</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
-<p>Sets a new value for property #getAppointmentRoundWidth appointmentRoundWidth.</p>
-<p>Defines rounding of the width of CalendarAppoinment <strong>Note:</strong> This property is applied, when
-the calendar interval type is day and the view shows more than 20 days</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>None</code>.</p>
 <h4>Parameters</h4>
 <h5>sAppointmentRoundWidth?</h5>
 <p><code>&quot;None&quot;</code> | <a href="../../library/enumerations/CalendarAppointmentRoundWidth.html"><code>CalendarAppointmentRoundWidth</code></a> | <code>&quot;HalfColumn&quot;</code></p>
@@ -962,17 +957,16 @@ the calendar interval type is day and the view shows more than 20 days</p>
 <h4>Since</h4>
 <p>1.81.0
  (since 1.81.0)</p>
+<p>Sets a new value for property #getAppointmentRoundWidth appointmentRoundWidth.</p>
+<p>Defines rounding of the width of CalendarAppoinment <strong>Note:</strong> This property is applied, when
+the calendar interval type is day and the view shows more than 20 days</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>None</code>.</p>
 <hr>
 <h3><del>setAppointmentsReducedHeight()</del></h3>
 <blockquote>
 <p><strong>setAppointmentsReducedHeight</strong>(<code>bAppointmentsReducedHeight?</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getAppointmentsReducedHeight appointmentsReducedHeight.</p>
-<p>If set the appointments without text (only title) are rendered with a smaller height.</p>
-<p><strong>Note:</strong> On phone devices this property is ignored, appointments are always rendered in full height
-to allow touching.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>false</code>.</p>
 <h4>Parameters</h4>
 <h5>bAppointmentsReducedHeight?</h5>
 <p><code>boolean</code></p>
@@ -984,16 +978,17 @@ to allow touching.</p>
 <p>1.38.0</p>
 <h4>Deprecated</h4>
 <p>(since 1.81) - Please use the <code>appointmentHeight</code> with value &quot;Automatic&quot; property instead.</p>
+<p>Sets a new value for property #getAppointmentsReducedHeight appointmentsReducedHeight.</p>
+<p>If set the appointments without text (only title) are rendered with a smaller height.</p>
+<p><strong>Note:</strong> On phone devices this property is ignored, appointments are always rendered in full height
+to allow touching.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>false</code>.</p>
 <hr>
 <h3>setAppointmentsVisualization()</h3>
 <blockquote>
 <p><strong>setAppointmentsVisualization</strong>(<code>sAppointmentsVisualization?</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getAppointmentsVisualization appointmentsVisualization.</p>
-<p>Defines the visualization of the <code>CalendarAppoinment</code></p>
-<p><strong>Note:</strong> The real visualization depends on the used theme.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>Standard</code>.</p>
 <h4>Parameters</h4>
 <h5>sAppointmentsVisualization?</h5>
 <p><code>&quot;Standard&quot;</code> | <a href="../../library/enumerations/CalendarAppointmentVisualization.html"><code>CalendarAppointmentVisualization</code></a> | <code>&quot;Filled&quot;</code></p>
@@ -1003,6 +998,11 @@ to allow touching.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.40.0</p>
+<p>Sets a new value for property #getAppointmentsVisualization appointmentsVisualization.</p>
+<p>Defines the visualization of the <code>CalendarAppoinment</code></p>
+<p><strong>Note:</strong> The real visualization depends on the used theme.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>Standard</code>.</p>
 <hr>
 <h3>setCheckResize()</h3>
 <blockquote>
@@ -1110,7 +1110,6 @@ Note: If the value is more than 1, the NonWorkingDays type is not presented.</p>
 <blockquote>
 <p><strong>setLegend</strong>(<code>oLegend</code>): <code>this</code></p>
 </blockquote>
-<p>Sets the associated #getLegend legend.</p>
 <h4>Parameters</h4>
 <h5>oLegend</h5>
 <p><code>string</code> | <a href="../../CalendarLegend/classes/CalendarLegend.html"><code>CalendarLegend</code></a></p>
@@ -1121,16 +1120,12 @@ may be given</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.40.0</p>
+<p>Sets the associated #getLegend legend.</p>
 <hr>
 <h3>setMultipleAppointmentsSelection()</h3>
 <blockquote>
 <p><strong>setMultipleAppointmentsSelection</strong>(<code>bMultipleAppointmentsSelection?</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getMultipleAppointmentsSelection multipleAppointmentsSelection.</p>
-<p>Determines whether the selection of multiple appointments is enabled.</p>
-<p>Note: selection of multiple appointments is possible using CTRL key regardless of the value of this property.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>false</code>.</p>
 <h4>Parameters</h4>
 <h5>bMultipleAppointmentsSelection?</h5>
 <p><code>boolean</code></p>
@@ -1140,6 +1135,11 @@ may be given</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.97</p>
+<p>Sets a new value for property #getMultipleAppointmentsSelection multipleAppointmentsSelection.</p>
+<p>Determines whether the selection of multiple appointments is enabled.</p>
+<p>Note: selection of multiple appointments is possible using CTRL key regardless of the value of this property.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>false</code>.</p>
 <hr>
 <h3>setNonWorkingDays()</h3>
 <blockquote>
@@ -1180,12 +1180,6 @@ to 6. (Other values will just be ignored.)</p>
 <blockquote>
 <p><strong>setShowEmptyIntervalHeaders</strong>(<code>bShowEmptyIntervalHeaders?</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getShowEmptyIntervalHeaders showEmptyIntervalHeaders.</p>
-<p>If set, interval headers are shown even if no <code>intervalHeaders</code> are assigned to the visible time frame.</p>
-<p>If not set, no interval headers are shown if no <code>intervalHeaders</code> are assigned.</p>
-<p><strong>Note:</strong> This property is only used if <code>showIntervalHeaders</code> is set to true.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>true</code>.</p>
 <h4>Parameters</h4>
 <h5>bShowEmptyIntervalHeaders?</h5>
 <p><code>boolean</code></p>
@@ -1195,6 +1189,12 @@ to 6. (Other values will just be ignored.)</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.38.0</p>
+<p>Sets a new value for property #getShowEmptyIntervalHeaders showEmptyIntervalHeaders.</p>
+<p>If set, interval headers are shown even if no <code>intervalHeaders</code> are assigned to the visible time frame.</p>
+<p>If not set, no interval headers are shown if no <code>intervalHeaders</code> are assigned.</p>
+<p><strong>Note:</strong> This property is only used if <code>showIntervalHeaders</code> is set to true.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>true</code>.</p>
 <hr>
 <h3>setShowIntervalHeaders()</h3>
 <blockquote>
@@ -1307,7 +1307,7 @@ the information contained in <code>oClassInfo</code>.</p>
 <p><code>string</code></p>
 <p>Name of the class being created</p>
 <h5>oClassInfo?</h5>
-<p><a href="../../../../../../sap.f/namespaces/sap/type-aliases/ClassInfo.html"><code>ClassInfo</code></a>&lt;<code>T</code>, <code>CalendarRow</code>&gt;</p>
+<p><code>ClassInfo</code>&lt;<code>T</code>, <code>CalendarRow</code>&gt;</p>
 <p>Object literal with information about the class</p>
 <h5>FNMetaImpl?</h5>
 <p><code>Function</code></p>
@@ -1331,6 +1331,6 @@ used by this class</p>
 <p><a href="../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a>.<a href="../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html#getmetadata-1"><code>getMetadata</code></a></p>
 <hr>
 
-<footer>Generated from <code>@openui5/types@1.120.46</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@openui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

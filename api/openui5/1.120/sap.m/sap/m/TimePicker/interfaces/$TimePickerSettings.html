@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Interface: $TimePickerSettings — OpenUI5 TypeScript API</title>
-<meta name="description" content="Interface: $TimePickerSettings — OpenUI5 TypeScript API Reference (1.120.46)">
+<meta name="description" content="Interface: $TimePickerSettings — OpenUI5 TypeScript API Reference (1.120.0)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/openui5/1.120/sap.m/sap/m/TimePicker/interfaces/$TimePickerSettings.html">
 <meta property="og:title" content="Interface: $TimePickerSettings — OpenUI5 TypeScript API">
-<meta property="og:description" content="Interface: $TimePickerSettings — OpenUI5 TypeScript API Reference (1.120.46)">
+<meta property="og:description" content="Interface: $TimePickerSettings — OpenUI5 TypeScript API Reference (1.120.0)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/openui5/1.120/sap.m/sap/m/TimePicker/interfaces/$TimePickerSettings.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,12 +33,11 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../index.html">OpenUI5 API</a> › <a href="../../../../../sap.m/README.html">sap.m</a> › sap › m › <a href="../../../../../sap.m/sap/m/TimePicker/README.html">TimePicker</a> › interfaces</nav>
-<p><a href="../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.46)</strong></a></p>
+<p><a href="../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.0)</strong></a></p>
 <hr>
-<p><a href="../../../../../README.html">OpenUI5 TypeScript API (1.120.46)</a> / <a href="../../../../README.html">sap.m</a> / <a href="../README.html">sap/m/TimePicker</a> / $TimePickerSettings</p>
+<p><a href="../../../../../README.html">OpenUI5 TypeScript API (1.120.0)</a> / <a href="../../../../README.html">sap.m</a> / <a href="../README.html">sap/m/TimePicker</a> / $TimePickerSettings</p>
 <h1>Interface: $TimePickerSettings</h1>
 <pre class="sig"><span class="kw">import</span> { $TimePickerSettings } <span class="kw">from</span> <span class="str">"sap/m/TimePicker"</span>;</pre>
-<p>Describes the settings that can be provided to the TimePicker constructor.</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../DateTimeField/interfaces/$DateTimeFieldSettings.html"><code>$DateTimeFieldSettings</code></a></li>
@@ -48,7 +47,6 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 <blockquote>
 <p><code>optional</code> <strong>afterValueHelpClose?</strong>: (<code>oEvent</code>) =&gt; <code>void</code></p>
 </blockquote>
-<p>Fired when <code>value help</code> dialog closes.</p>
 <h4>Parameters</h4>
 <h5>oEvent</h5>
 <p><a href="../../../../../sap.ui.core/sap/ui/base/Event/classes/Event.html"><code>Event</code></a></p>
@@ -56,12 +54,12 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 <p><code>void</code></p>
 <h4>Since</h4>
 <p>1.102.0</p>
+<p>Fired when <code>value help</code> dialog closes.</p>
 <hr>
 <h3>afterValueHelpOpen?</h3>
 <blockquote>
 <p><code>optional</code> <strong>afterValueHelpOpen?</strong>: (<code>oEvent</code>) =&gt; <code>void</code></p>
 </blockquote>
-<p>Fired when <code>value help</code> dialog opens.</p>
 <h4>Parameters</h4>
 <h5>oEvent</h5>
 <p><a href="../../../../../sap.ui.core/sap/ui/base/Event/classes/Event.html"><code>Event</code></a></p>
@@ -69,11 +67,14 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 <p><code>void</code></p>
 <h4>Since</h4>
 <p>1.102.0</p>
+<p>Fired when <code>value help</code> dialog opens.</p>
 <hr>
 <h3>hideInput?</h3>
 <blockquote>
 <p><code>optional</code> <strong>hideInput?</strong>: <code>boolean</code> | <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
+<h4>Since</h4>
+<p>1.97</p>
 <p>Determines whether the input field of the picker is hidden or visible. When set to <code>true</code>, the input
 field becomes invisible and there is no way to open the picker popover. In that case it can be opened
 by another control through calling of picker&#39;s <code>openBy</code> method, and the opening control&#39;s DOM reference
@@ -82,16 +83,11 @@ must be provided as parameter.</p>
 popover, those attributes should be added by the application developer. The following is recommended
 to be added to the opening control: a text or tooltip that describes the action (example: &quot;Open Time
 Picker&quot;), and also aria-haspopup attribute with value of <code>sap.ui.core.aria.HasPopup.Dialog</code>.</p>
-<h4>Since</h4>
-<p>1.97</p>
 <hr>
 <h3>liveChange?</h3>
 <blockquote>
 <p><code>optional</code> <strong>liveChange?</strong>: (<code>oEvent</code>) =&gt; <code>void</code></p>
 </blockquote>
-<p>Fired when the value of the <code>TimePicker</code> is changed by user interaction - each keystroke, delete, paste,
-etc.</p>
-<p><strong>Note:</strong> Browsing autocomplete suggestions doesn&#39;t fire the event.</p>
 <h4>Parameters</h4>
 <h5>oEvent</h5>
 <p><a href="../type-aliases/TimePicker$LiveChangeEvent.html"><code>TimePicker$LiveChangeEvent</code></a></p>
@@ -99,6 +95,9 @@ etc.</p>
 <p><code>void</code></p>
 <h4>Since</h4>
 <p>1.104.0</p>
+<p>Fired when the value of the <code>TimePicker</code> is changed by user interaction - each keystroke, delete, paste,
+etc.</p>
+<p><strong>Note:</strong> Browsing autocomplete suggestions doesn&#39;t fire the event.</p>
 <h4>Overrides</h4>
 <p><a href="../../DateTimeField/interfaces/$DateTimeFieldSettings.html"><code>$DateTimeFieldSettings</code></a>.<a href="../../DateTimeField/interfaces/$DateTimeFieldSettings.html#livechange"><code>liveChange</code></a></p>
 <hr>
@@ -129,22 +128,22 @@ one.</p>
 <blockquote>
 <p><code>optional</code> <strong>maskMode?</strong>: <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code> | <code>&quot;On&quot;</code> | <code>&quot;Off&quot;</code> | <a href="../../library/enumerations/TimePickerMaskMode.html"><code>TimePickerMaskMode</code></a></p>
 </blockquote>
+<h4>Since</h4>
+<p>1.54</p>
 <p>Defines whether the mask is enabled. When disabled, there are no restrictions and validation for the
 user and no placeholders are displayed.</p>
 <p><strong>Note:</strong> A disabled mask does not reset any validation rules that are already set. You can update the
 <code>mask</code> property and add new <code>rules</code> while it is disabled. When <code>maskMode</code> is set to <code>On</code> again, the <code>rules</code>
 and the updated <code>mask</code> will be applied.</p>
-<h4>Since</h4>
-<p>1.54</p>
 <hr>
 <h3>minutesStep?</h3>
 <blockquote>
 <p><code>optional</code> <strong>minutesStep?</strong>: <code>number</code> | <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<p>Sets the minutes step. If step is less than 1, it will be automatically converted back to 1. The minutes
-clock is populated only by multiples of the step.</p>
 <h4>Since</h4>
 <p>1.40</p>
+<p>Sets the minutes step. If step is less than 1, it will be automatically converted back to 1. The minutes
+clock is populated only by multiples of the step.</p>
 <hr>
 <h3>placeholderSymbol?</h3>
 <blockquote>
@@ -162,27 +161,27 @@ clock is populated only by multiples of the step.</p>
 <blockquote>
 <p><code>optional</code> <strong>secondsStep?</strong>: <code>number</code> | <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<p>Sets the seconds step. If step is less than 1, it will be automatically converted back to 1. The seconds
-clock is populated only by multiples of the step.</p>
 <h4>Since</h4>
 <p>1.40</p>
+<p>Sets the seconds step. If step is less than 1, it will be automatically converted back to 1. The seconds
+clock is populated only by multiples of the step.</p>
 <hr>
 <h3>showCurrentTimeButton?</h3>
 <blockquote>
 <p><code>optional</code> <strong>showCurrentTimeButton?</strong>: <code>boolean</code> | <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<p>Determines whether there is a shortcut navigation to current time.</p>
 <h4>Since</h4>
 <p>1.98</p>
+<p>Determines whether there is a shortcut navigation to current time.</p>
 <hr>
 <h3>support2400?</h3>
 <blockquote>
 <p><code>optional</code> <strong>support2400?</strong>: <code>boolean</code> | <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<p>Allows to set a value of 24:00, used to indicate the end of the day. Works only with HH or H formats.
-Don&#39;t use it together with am/pm.</p>
 <h4>Since</h4>
 <p>1.54</p>
+<p>Allows to set a value of 24:00, used to indicate the end of the day. Works only with HH or H formats.
+Don&#39;t use it together with am/pm.</p>
 <hr>
 <h3>title?</h3>
 <blockquote>
@@ -191,6 +190,6 @@ Don&#39;t use it together with am/pm.</p>
 <p>Displays the text of the general picker label and is read by screen readers. It is visible only on phone.</p>
 <hr>
 
-<footer>Generated from <code>@openui5/types@1.120.46</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@openui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

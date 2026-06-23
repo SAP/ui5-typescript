@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Class: Event\&lt;ParamsType, SourceType\&gt; — OpenUI5 TypeScript API</title>
-<meta name="description" content="Class: Event\&lt;ParamsType, SourceType\&gt; — OpenUI5 TypeScript API Reference (1.120.46)">
+<meta name="description" content="Class: Event\&lt;ParamsType, SourceType\&gt; — OpenUI5 TypeScript API Reference (1.120.0)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/openui5/1.120/sap.ui.core/sap/ui/base/Event/classes/Event.html">
 <meta property="og:title" content="Class: Event\&lt;ParamsType, SourceType\&gt; — OpenUI5 TypeScript API">
-<meta property="og:description" content="Class: Event\&lt;ParamsType, SourceType\&gt; — OpenUI5 TypeScript API Reference (1.120.46)">
+<meta property="og:description" content="Class: Event\&lt;ParamsType, SourceType\&gt; — OpenUI5 TypeScript API Reference (1.120.0)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/openui5/1.120/sap.ui.core/sap/ui/base/Event/classes/Event.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,9 +33,9 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../index.html">OpenUI5 API</a> › <a href="../../../../../../sap.ui.core/README.html">sap.ui.core</a> › sap › ui › base › <a href="../../../../../../sap.ui.core/sap/ui/base/Event/README.html">Event</a> › classes</nav>
-<p><a href="../../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.46)</strong></a></p>
+<p><a href="../../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.0)</strong></a></p>
 <hr>
-<p><a href="../../../../../../README.html">OpenUI5 TypeScript API (1.120.46)</a> / <a href="../../../../../README.html">sap.ui.core</a> / <a href="../README.html">sap/ui/base/Event</a> / Event</p>
+<p><a href="../../../../../../README.html">OpenUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../README.html">sap.ui.core</a> / <a href="../README.html">sap/ui/base/Event</a> / Event</p>
 <h1>Class: Event&lt;ParamsType, SourceType&gt;</h1>
 <pre class="sig"><span class="kw">import</span> Event <span class="kw">from</span> <span class="str">"sap/ui/base/Event"</span>;</pre>
 <p>An Event object consisting of an ID, a source and a map of parameters. Implements sap.ui.base.Poolable
@@ -141,11 +141,6 @@ the event handler is done.</p>
 <blockquote>
 <p><strong>init</strong>(<code>sId</code>, <code>oSource</code>, <code>oParameters?</code>): <code>void</code></p>
 </blockquote>
-<p>Init this event with its data.</p>
-<p>The <code>init</code> method is called by an object pool when the object is (re-)activated for a new caller.</p>
-<p>When no <code>oParameters</code> are given, an empty object is used instead.
-See:
-	sap.ui.base.Poolable.prototype#init</p>
 <h4>Parameters</h4>
 <h5>sId</h5>
 <p><code>string</code></p>
@@ -160,6 +155,11 @@ See:
 <p><code>void</code></p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Init this event with its data.</p>
+<p>The <code>init</code> method is called by an object pool when the object is (re-)activated for a new caller.</p>
+<p>When no <code>oParameters</code> are given, an empty object is used instead.
+See:
+	sap.ui.base.Poolable.prototype#init</p>
 <h4>Implementation of</h4>
 <p><a href="../../ObjectPool/interfaces/Poolable.html"><code>Poolable</code></a>.<a href="../../ObjectPool/interfaces/Poolable.html#init"><code>init</code></a></p>
 <hr>
@@ -177,13 +177,13 @@ by the event source.</p>
 <blockquote>
 <p><strong>reset</strong>(): <code>void</code></p>
 </blockquote>
-<p>Reset event data, needed for pooling.
-See:
-	sap.ui.base.Poolable.prototype#reset</p>
 <h4>Returns</h4>
 <p><code>void</code></p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Reset event data, needed for pooling.
+See:
+	sap.ui.base.Poolable.prototype#reset</p>
 <h4>Implementation of</h4>
 <p><a href="../../ObjectPool/interfaces/Poolable.html"><code>Poolable</code></a>.<a href="../../ObjectPool/interfaces/Poolable.html#reset"><code>reset</code></a></p>
 <hr>
@@ -202,7 +202,7 @@ contained in <code>oClassInfo</code>.</p>
 <p><code>string</code></p>
 <p>Name of the class being created</p>
 <h5>oClassInfo?</h5>
-<p><a href="../../../../../../sap.f/namespaces/sap/type-aliases/ClassInfo.html"><code>ClassInfo</code></a>&lt;<code>T</code>, <code>Event</code>&lt;<code>object</code>, <a href="../../EventProvider/classes/EventProvider.html"><code>EventProvider</code></a>&gt;&gt;</p>
+<p><code>ClassInfo</code>&lt;<code>T</code>, <code>Event</code>&lt;<code>object</code>, <a href="../../EventProvider/classes/EventProvider.html"><code>EventProvider</code></a>&gt;&gt;</p>
 <p>Object literal with information about the class</p>
 <h5>FNMetaImpl?</h5>
 <p><code>Function</code></p>
@@ -224,6 +224,6 @@ used by this class</p>
 <p>Metadata object describing this class</p>
 <hr>
 
-<footer>Generated from <code>@openui5/types@1.120.46</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@openui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

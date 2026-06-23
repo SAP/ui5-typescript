@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Class: ObjectPageHeader — OpenUI5 TypeScript API</title>
-<meta name="description" content="Class: ObjectPageHeader — OpenUI5 TypeScript API Reference (1.120.46)">
+<meta name="description" content="Class: ObjectPageHeader — OpenUI5 TypeScript API Reference (1.120.0)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/openui5/1.120/sap.uxap/sap/uxap/ObjectPageHeader/classes/ObjectPageHeader.html">
 <meta property="og:title" content="Class: ObjectPageHeader — OpenUI5 TypeScript API">
-<meta property="og:description" content="Class: ObjectPageHeader — OpenUI5 TypeScript API Reference (1.120.46)">
+<meta property="og:description" content="Class: ObjectPageHeader — OpenUI5 TypeScript API Reference (1.120.0)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/openui5/1.120/sap.uxap/sap/uxap/ObjectPageHeader/classes/ObjectPageHeader.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,19 +33,19 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../index.html">OpenUI5 API</a> › <a href="../../../../../sap.uxap/README.html">sap.uxap</a> › sap › uxap › <a href="../../../../../sap.uxap/sap/uxap/ObjectPageHeader/README.html">ObjectPageHeader</a> › classes</nav>
-<p><a href="../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.46)</strong></a></p>
+<p><a href="../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.0)</strong></a></p>
 <hr>
-<p><a href="../../../../../README.html">OpenUI5 TypeScript API (1.120.46)</a> / <a href="../../../../README.html">sap.uxap</a> / <a href="../README.html">sap/uxap/ObjectPageHeader</a> / ObjectPageHeader</p>
+<p><a href="../../../../../README.html">OpenUI5 TypeScript API (1.120.0)</a> / <a href="../../../../README.html">sap.uxap</a> / <a href="../README.html">sap/uxap/ObjectPageHeader</a> / ObjectPageHeader</p>
 <h1>Class: ObjectPageHeader</h1>
 <pre class="sig"><span class="kw">import</span> ObjectPageHeader <span class="kw">from</span> <span class="str">"sap/uxap/ObjectPageHeader"</span>;</pre>
+<h2>Since</h2>
+<p>1.26</p>
 <p>Represents the static part (header title) of the classic header of the sap.uxap.ObjectPageLayout.</p>
 <p>Overview:</p>
 <p>The <code>ObjectPageHeader</code> is used to display the basic information about a business object, such as title/description/picture,
 as well as a list of common actions.</p>
 <p><strong>Note:</strong> The <code>ObjectPageHeader</code> is meant to be used inside the <code>ObjectPageLayout</code> control. Any other
 usage is not supported and can lead to unexpected behavior.</p>
-<h2>Since</h2>
-<p>1.26</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></li>
@@ -127,7 +127,6 @@ See:
 <blockquote>
 <p><strong>addBreadCrumbLink</strong>(<code>oBreadCrumbLink</code>): <code>this</code></p>
 </blockquote>
-<p>Adds some breadCrumbLink to the aggregation #getBreadCrumbsLinks breadCrumbsLinks.</p>
 <h4>Parameters</h4>
 <h5>oBreadCrumbLink</h5>
 <p><a href="../../../../../sap.m/sap/m/Link/classes/Link.html"><code>Link</code></a></p>
@@ -137,6 +136,7 @@ See:
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Deprecated</h4>
 <p>(since 1.50) - use the <code>breadcrumbs</code> aggregation instead.</p>
+<p>Adds some breadCrumbLink to the aggregation #getBreadCrumbsLinks breadCrumbsLinks.</p>
 <hr>
 <h3>attachMarkChangesPress()</h3>
 <h4>Call Signature</h4>
@@ -283,23 +283,23 @@ otherwise it will be bound to this <code>sap.uxap.ObjectPageHeader</code> itself
 <blockquote>
 <p><strong>destroyBreadcrumbs</strong>(): <code>this</code></p>
 </blockquote>
-<p>Destroys the breadcrumbs in the aggregation #getBreadcrumbs breadcrumbs.</p>
 <h4>Returns</h4>
 <p><code>this</code></p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.50</p>
+<p>Destroys the breadcrumbs in the aggregation #getBreadcrumbs breadcrumbs.</p>
 <hr>
 <h3><del>destroyBreadCrumbsLinks()</del></h3>
 <blockquote>
 <p><strong>destroyBreadCrumbsLinks</strong>(): <code>this</code></p>
 </blockquote>
-<p>Destroys all the breadCrumbsLinks in the aggregation #getBreadCrumbsLinks breadCrumbsLinks.</p>
 <h4>Returns</h4>
 <p><code>this</code></p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Deprecated</h4>
 <p>(since 1.50) - use the <code>breadcrumbs</code> aggregation instead.</p>
+<p>Destroys all the breadCrumbsLinks in the aggregation #getBreadCrumbsLinks breadCrumbsLinks.</p>
 <hr>
 <h3>destroyNavigationBar()</h3>
 <blockquote>
@@ -314,23 +314,23 @@ otherwise it will be bound to this <code>sap.uxap.ObjectPageHeader</code> itself
 <blockquote>
 <p><strong>destroySideContentButton</strong>(): <code>this</code></p>
 </blockquote>
-<p>Destroys the sideContentButton in the aggregation #getSideContentButton sideContentButton.</p>
 <h4>Returns</h4>
 <p><code>this</code></p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.38.0</p>
+<p>Destroys the sideContentButton in the aggregation #getSideContentButton sideContentButton.</p>
 <hr>
 <h3>destroyTitleSelectorTooltip()</h3>
 <blockquote>
 <p><strong>destroyTitleSelectorTooltip</strong>(): <code>this</code></p>
 </blockquote>
-<p>Destroys the titleSelectorTooltip in the aggregation #getTitleSelectorTooltip titleSelectorTooltip.</p>
 <h4>Returns</h4>
 <p><code>this</code></p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.56</p>
+<p>Destroys the titleSelectorTooltip in the aggregation #getTitleSelectorTooltip titleSelectorTooltip.</p>
 <hr>
 <h3>detachMarkChangesPress()</h3>
 <blockquote>
@@ -390,7 +390,6 @@ of this <code>sap.uxap.ObjectPageHeader</code>.</p>
 <blockquote>
 <p><strong>fireMarkChangesPress</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
-<p>Fires event #event:markChangesPress markChangesPress to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/ObjectPageHeader$MarkChangesPressEventParameters.html"><code>ObjectPageHeader$MarkChangesPressEventParameters</code></a></p>
@@ -400,12 +399,12 @@ of this <code>sap.uxap.ObjectPageHeader</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:markChangesPress markChangesPress to attached listeners.</p>
 <hr>
 <h3>fireMarkLockedPress()</h3>
 <blockquote>
 <p><strong>fireMarkLockedPress</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
-<p>Fires event #event:markLockedPress markLockedPress to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/ObjectPageHeader$MarkLockedPressEventParameters.html"><code>ObjectPageHeader$MarkLockedPressEventParameters</code></a></p>
@@ -415,12 +414,12 @@ of this <code>sap.uxap.ObjectPageHeader</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:markLockedPress markLockedPress to attached listeners.</p>
 <hr>
 <h3>fireTitleSelectorPress()</h3>
 <blockquote>
 <p><strong>fireTitleSelectorPress</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
-<p>Fires event #event:titleSelectorPress titleSelectorPress to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/ObjectPageHeader$TitleSelectorPressEventParameters.html"><code>ObjectPageHeader$TitleSelectorPressEventParameters</code></a></p>
@@ -430,6 +429,7 @@ of this <code>sap.uxap.ObjectPageHeader</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:titleSelectorPress titleSelectorPress to attached listeners.</p>
 <hr>
 <h3>getActions()</h3>
 <blockquote>
@@ -449,38 +449,38 @@ should be used instead.</p>
 <blockquote>
 <p><strong>getBreadcrumbs</strong>(): <a href="../../../../../sap.m/sap/m/Breadcrumbs/classes/Breadcrumbs.html"><code>Breadcrumbs</code></a></p>
 </blockquote>
-<p>Gets content of aggregation #getBreadcrumbs breadcrumbs.</p>
-<p>The breadcrumbs displayed in the <code>ObjectPageHeader</code>. If this aggregation is set, the <code>breadCrumbsLinks</code>
-aggregation is omitted.</p>
 <h4>Returns</h4>
 <p><a href="../../../../../sap.m/sap/m/Breadcrumbs/classes/Breadcrumbs.html"><code>Breadcrumbs</code></a></p>
 <h4>Since</h4>
 <p>1.50</p>
+<p>Gets content of aggregation #getBreadcrumbs breadcrumbs.</p>
+<p>The breadcrumbs displayed in the <code>ObjectPageHeader</code>. If this aggregation is set, the <code>breadCrumbsLinks</code>
+aggregation is omitted.</p>
 <hr>
 <h3><del>getBreadCrumbsLinks()</del></h3>
 <blockquote>
 <p><strong>getBreadCrumbsLinks</strong>(): <a href="../../../../../sap.m/sap/m/Link/classes/Link.html"><code>Link</code></a>[]</p>
 </blockquote>
-<p>Gets content of aggregation #getBreadCrumbsLinks breadCrumbsLinks.</p>
-<p>A list of all the active link elements in the BreadCrumbs control.</p>
 <h4>Returns</h4>
 <p><a href="../../../../../sap.m/sap/m/Link/classes/Link.html"><code>Link</code></a>[]</p>
 <h4>Deprecated</h4>
 <p>(since 1.50) - use the <code>breadcrumbs</code> aggregation instead.</p>
+<p>Gets content of aggregation #getBreadCrumbsLinks breadCrumbsLinks.</p>
+<p>A list of all the active link elements in the BreadCrumbs control.</p>
 <hr>
 <h3><del>getHeaderDesign()</del></h3>
 <blockquote>
 <p><strong>getHeaderDesign</strong>(): <code>&quot;Light&quot;</code> | <a href="../../library/enumerations/ObjectPageHeaderDesign.html"><code>ObjectPageHeaderDesign</code></a> | <code>&quot;Dark&quot;</code></p>
 </blockquote>
-<p>Gets current value of property #getHeaderDesign headerDesign.</p>
-<p>Determines the design of the header - Light or Dark. **Note: **This property is deprecated. It will continue
-to work in the Blue Crystal theme, but it will not be taken into account for the Belize themes.</p>
-<p>Default value is <code>Light</code>.</p>
 <h4>Returns</h4>
 <p><code>&quot;Light&quot;</code> | <a href="../../library/enumerations/ObjectPageHeaderDesign.html"><code>ObjectPageHeaderDesign</code></a> | <code>&quot;Dark&quot;</code></p>
 <p>Value of property <code>headerDesign</code></p>
 <h4>Deprecated</h4>
 <p>(since 1.40.1)</p>
+<p>Gets current value of property #getHeaderDesign headerDesign.</p>
+<p>Determines the design of the header - Light or Dark. **Note: **This property is deprecated. It will continue
+to work in the Blue Crystal theme, but it will not be taken into account for the Belize themes.</p>
+<p>Default value is <code>Light</code>.</p>
 <hr>
 <h3>getIsActionAreaAlwaysVisible()</h3>
 <blockquote>
@@ -530,15 +530,15 @@ to work in the Blue Crystal theme, but it will not be taken into account for the
 <blockquote>
 <p><strong>getMarkChanges</strong>(): <code>boolean</code></p>
 </blockquote>
-<p>Gets current value of property #getMarkChanges markChanges.</p>
-<p>Marks that there are unsaved changes in the objectPageHeader. The markChanges state cannot be used together
-with the markLocked state. If both are set to true, only the locked state will be displayed.</p>
-<p>Default value is <code>false</code>.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>Value of property <code>markChanges</code></p>
 <h4>Since</h4>
 <p>1.34.0</p>
+<p>Gets current value of property #getMarkChanges markChanges.</p>
+<p>Marks that there are unsaved changes in the objectPageHeader. The markChanges state cannot be used together
+with the markLocked state. If both are set to true, only the locked state will be displayed.</p>
+<p>Default value is <code>false</code>.</p>
 <hr>
 <h3>getMarkFavorite()</h3>
 <blockquote>
@@ -599,14 +599,14 @@ effect.</p>
 <blockquote>
 <p><strong>getObjectImageBackgroundColor</strong>(): <a href="../../../../../sap.m/sap/m/AvatarColor/enumerations/AvatarColor.html"><code>AvatarColor</code></a> | <code>&quot;Accent1&quot;</code> | <code>&quot;Accent10&quot;</code> | <code>&quot;Accent2&quot;</code> | <code>&quot;Accent3&quot;</code> | <code>&quot;Accent4&quot;</code> | <code>&quot;Accent5&quot;</code> | <code>&quot;Accent6&quot;</code> | <code>&quot;Accent7&quot;</code> | <code>&quot;Accent8&quot;</code> | <code>&quot;Accent9&quot;</code> | <code>&quot;Placeholder&quot;</code> | <code>&quot;Random&quot;</code> | <code>&quot;TileIcon&quot;</code> | <code>&quot;Transparent&quot;</code></p>
 </blockquote>
-<p>Gets current value of property #getObjectImageBackgroundColor objectImageBackgroundColor.</p>
-<p>Determines the background color of the image placeholder or icon if valid icon URI is provided.</p>
-<p>Default value is <code>Accent6</code>.</p>
 <h4>Returns</h4>
 <p><a href="../../../../../sap.m/sap/m/AvatarColor/enumerations/AvatarColor.html"><code>AvatarColor</code></a> | <code>&quot;Accent1&quot;</code> | <code>&quot;Accent10&quot;</code> | <code>&quot;Accent2&quot;</code> | <code>&quot;Accent3&quot;</code> | <code>&quot;Accent4&quot;</code> | <code>&quot;Accent5&quot;</code> | <code>&quot;Accent6&quot;</code> | <code>&quot;Accent7&quot;</code> | <code>&quot;Accent8&quot;</code> | <code>&quot;Accent9&quot;</code> | <code>&quot;Placeholder&quot;</code> | <code>&quot;Random&quot;</code> | <code>&quot;TileIcon&quot;</code> | <code>&quot;Transparent&quot;</code></p>
 <p>Value of property <code>objectImageBackgroundColor</code></p>
 <h4>Since</h4>
 <p>1.73</p>
+<p>Gets current value of property #getObjectImageBackgroundColor objectImageBackgroundColor.</p>
+<p>Determines the background color of the image placeholder or icon if valid icon URI is provided.</p>
+<p>Default value is <code>Accent6</code>.</p>
 <hr>
 <h3>getObjectImageDensityAware()</h3>
 <blockquote>
@@ -699,26 +699,26 @@ is invalid.</p>
 <blockquote>
 <p><strong>getSideContentButton</strong>(): <a href="../../../../../sap.m/sap/m/Button/classes/Button.html"><code>Button</code></a></p>
 </blockquote>
-<p>Gets content of aggregation #getSideContentButton sideContentButton.</p>
-<p>A button that is used for opening the side content of the page or some additional content.</p>
 <h4>Returns</h4>
 <p><a href="../../../../../sap.m/sap/m/Button/classes/Button.html"><code>Button</code></a></p>
 <h4>Since</h4>
 <p>1.38.0</p>
+<p>Gets content of aggregation #getSideContentButton sideContentButton.</p>
+<p>A button that is used for opening the side content of the page or some additional content.</p>
 <hr>
 <h3>getTitleSelectorTooltip()</h3>
 <blockquote>
 <p><strong>getTitleSelectorTooltip</strong>(): <code>string</code> | <a href="../../../../../sap.ui.core/sap/ui/core/TooltipBase/classes/TooltipBase.html"><code>TooltipBase</code></a></p>
 </blockquote>
+<h4>Returns</h4>
+<p><code>string</code> | <a href="../../../../../sap.ui.core/sap/ui/core/TooltipBase/classes/TooltipBase.html"><code>TooltipBase</code></a></p>
+<h4>Since</h4>
+<p>1.56</p>
 <p>Gets content of aggregation #getTitleSelectorTooltip titleSelectorTooltip.</p>
 <p>A custom tooltip for the title selector button.</p>
 <p>The custom tooltip will be visible if the <code>showTitleSelector</code> property is set to <code>true</code>.</p>
 <p><strong>Note:</strong> If the aggregation is destroyed or set to invalid value, the default tooltip will be set. The
 default tooltip text is &quot;Related options&quot;.</p>
-<h4>Returns</h4>
-<p><code>string</code> | <a href="../../../../../sap.ui.core/sap/ui/core/TooltipBase/classes/TooltipBase.html"><code>TooltipBase</code></a></p>
-<h4>Since</h4>
-<p>1.56</p>
 <hr>
 <h3>indexOfAction()</h3>
 <blockquote>
@@ -738,8 +738,6 @@ its index if found or -1 otherwise.</p>
 <blockquote>
 <p><strong>indexOfBreadCrumbLink</strong>(<code>oBreadCrumbLink</code>): <code>number</code></p>
 </blockquote>
-<p>Checks for the provided <code>sap.m.Link</code> in the aggregation #getBreadCrumbsLinks breadCrumbsLinks.
-and returns its index if found or -1 otherwise.</p>
 <h4>Parameters</h4>
 <h5>oBreadCrumbLink</h5>
 <p><a href="../../../../../sap.m/sap/m/Link/classes/Link.html"><code>Link</code></a></p>
@@ -749,6 +747,8 @@ and returns its index if found or -1 otherwise.</p>
 <p>The index of the provided control in the aggregation if found, or -1 otherwise</p>
 <h4>Deprecated</h4>
 <p>(since 1.50) - use the <code>breadcrumbs</code> aggregation instead.</p>
+<p>Checks for the provided <code>sap.m.Link</code> in the aggregation #getBreadCrumbsLinks breadCrumbsLinks.
+and returns its index if found or -1 otherwise.</p>
 <hr>
 <h3>insertAction()</h3>
 <blockquote>
@@ -772,7 +772,6 @@ at the last position</p>
 <blockquote>
 <p><strong>insertBreadCrumbLink</strong>(<code>oBreadCrumbLink</code>, <code>iIndex</code>): <code>this</code></p>
 </blockquote>
-<p>Inserts a breadCrumbLink into the aggregation #getBreadCrumbsLinks breadCrumbsLinks.</p>
 <h4>Parameters</h4>
 <h5>oBreadCrumbLink</h5>
 <p><a href="../../../../../sap.m/sap/m/Link/classes/Link.html"><code>Link</code></a></p>
@@ -787,6 +786,7 @@ is inserted at the last position</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Deprecated</h4>
 <p>(since 1.50) - use the <code>breadcrumbs</code> aggregation instead.</p>
+<p>Inserts a breadCrumbLink into the aggregation #getBreadCrumbsLinks breadCrumbsLinks.</p>
 <hr>
 <h3>removeAction()</h3>
 <blockquote>
@@ -815,19 +815,18 @@ is inserted at the last position</p>
 <blockquote>
 <p><strong>removeAllBreadCrumbsLinks</strong>(): <a href="../../../../../sap.m/sap/m/Link/classes/Link.html"><code>Link</code></a>[]</p>
 </blockquote>
-<p>Removes all the controls from the aggregation #getBreadCrumbsLinks breadCrumbsLinks.</p>
-<p>Additionally, it unregisters them from the hosting UIArea.</p>
 <h4>Returns</h4>
 <p><a href="../../../../../sap.m/sap/m/Link/classes/Link.html"><code>Link</code></a>[]</p>
 <p>An array of the removed elements (might be empty)</p>
 <h4>Deprecated</h4>
 <p>(since 1.50) - use the <code>breadcrumbs</code> aggregation instead.</p>
+<p>Removes all the controls from the aggregation #getBreadCrumbsLinks breadCrumbsLinks.</p>
+<p>Additionally, it unregisters them from the hosting UIArea.</p>
 <hr>
 <h3><del>removeBreadCrumbLink()</del></h3>
 <blockquote>
 <p><strong>removeBreadCrumbLink</strong>(<code>vBreadCrumbLink</code>): <a href="../../../../../sap.m/sap/m/Link/classes/Link.html"><code>Link</code></a></p>
 </blockquote>
-<p>Removes a breadCrumbLink from the aggregation #getBreadCrumbsLinks breadCrumbsLinks.</p>
 <h4>Parameters</h4>
 <h5>vBreadCrumbLink</h5>
 <p><code>string</code> | <code>number</code> | <a href="../../../../../sap.m/sap/m/Link/classes/Link.html"><code>Link</code></a></p>
@@ -837,12 +836,12 @@ is inserted at the last position</p>
 <p>The removed breadCrumbLink or <code>null</code></p>
 <h4>Deprecated</h4>
 <p>(since 1.50) - use the <code>breadcrumbs</code> aggregation instead.</p>
+<p>Removes a breadCrumbLink from the aggregation #getBreadCrumbsLinks breadCrumbsLinks.</p>
 <hr>
 <h3>setBreadcrumbs()</h3>
 <blockquote>
 <p><strong>setBreadcrumbs</strong>(<code>oBreadcrumbs</code>): <code>this</code></p>
 </blockquote>
-<p>Sets the aggregated #getBreadcrumbs breadcrumbs.</p>
 <h4>Parameters</h4>
 <h5>oBreadcrumbs</h5>
 <p><a href="../../../../../sap.m/sap/m/Breadcrumbs/classes/Breadcrumbs.html"><code>Breadcrumbs</code></a></p>
@@ -852,6 +851,7 @@ is inserted at the last position</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.50</p>
+<p>Sets the aggregated #getBreadcrumbs breadcrumbs.</p>
 <hr>
 <h3>setIsActionAreaAlwaysVisible()</h3>
 <blockquote>
@@ -921,11 +921,6 @@ is inserted at the last position</p>
 <blockquote>
 <p><strong>setMarkChanges</strong>(<code>bMarkChanges?</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getMarkChanges markChanges.</p>
-<p>Marks that there are unsaved changes in the objectPageHeader. The markChanges state cannot be used together
-with the markLocked state. If both are set to true, only the locked state will be displayed.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>false</code>.</p>
 <h4>Parameters</h4>
 <h5>bMarkChanges?</h5>
 <p><code>boolean</code></p>
@@ -935,6 +930,11 @@ with the markLocked state. If both are set to true, only the locked state will b
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.34.0</p>
+<p>Sets a new value for property #getMarkChanges markChanges.</p>
+<p>Marks that there are unsaved changes in the objectPageHeader. The markChanges state cannot be used together
+with the markLocked state. If both are set to true, only the locked state will be displayed.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>false</code>.</p>
 <hr>
 <h3>setMarkFavorite()</h3>
 <blockquote>
@@ -1019,10 +1019,6 @@ effect.</p>
 <blockquote>
 <p><strong>setObjectImageBackgroundColor</strong>(<code>sObjectImageBackgroundColor?</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getObjectImageBackgroundColor objectImageBackgroundColor.</p>
-<p>Determines the background color of the image placeholder or icon if valid icon URI is provided.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>Accent6</code>.</p>
 <h4>Parameters</h4>
 <h5>sObjectImageBackgroundColor?</h5>
 <p><a href="../../../../../sap.m/sap/m/AvatarColor/enumerations/AvatarColor.html"><code>AvatarColor</code></a> | <code>&quot;Accent1&quot;</code> | <code>&quot;Accent10&quot;</code> | <code>&quot;Accent2&quot;</code> | <code>&quot;Accent3&quot;</code> | <code>&quot;Accent4&quot;</code> | <code>&quot;Accent5&quot;</code> | <code>&quot;Accent6&quot;</code> | <code>&quot;Accent7&quot;</code> | <code>&quot;Accent8&quot;</code> | <code>&quot;Accent9&quot;</code> | <code>&quot;Placeholder&quot;</code> | <code>&quot;Random&quot;</code> | <code>&quot;TileIcon&quot;</code> | <code>&quot;Transparent&quot;</code></p>
@@ -1032,6 +1028,10 @@ effect.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.73</p>
+<p>Sets a new value for property #getObjectImageBackgroundColor objectImageBackgroundColor.</p>
+<p>Determines the background color of the image placeholder or icon if valid icon URI is provided.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>Accent6</code>.</p>
 <hr>
 <h3>setObjectImageDensityAware()</h3>
 <blockquote>
@@ -1164,7 +1164,6 @@ is invalid.</p>
 <blockquote>
 <p><strong>setSideContentButton</strong>(<code>oSideContentButton</code>): <code>this</code></p>
 </blockquote>
-<p>Sets the aggregated #getSideContentButton sideContentButton.</p>
 <h4>Parameters</h4>
 <h5>oSideContentButton</h5>
 <p><a href="../../../../../sap.m/sap/m/Button/classes/Button.html"><code>Button</code></a></p>
@@ -1174,12 +1173,12 @@ is invalid.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.38.0</p>
+<p>Sets the aggregated #getSideContentButton sideContentButton.</p>
 <hr>
 <h3>setTitleSelectorTooltip()</h3>
 <blockquote>
 <p><strong>setTitleSelectorTooltip</strong>(<code>vTitleSelectorTooltip</code>): <code>this</code></p>
 </blockquote>
-<p>Sets the aggregated #getTitleSelectorTooltip titleSelectorTooltip.</p>
 <h4>Parameters</h4>
 <h5>vTitleSelectorTooltip</h5>
 <p><code>string</code> | <a href="../../../../../sap.ui.core/sap/ui/core/TooltipBase/classes/TooltipBase.html"><code>TooltipBase</code></a></p>
@@ -1189,6 +1188,7 @@ is invalid.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.56</p>
+<p>Sets the aggregated #getTitleSelectorTooltip titleSelectorTooltip.</p>
 <hr>
 <h3>extend()</h3>
 <blockquote>
@@ -1205,7 +1205,7 @@ the information contained in <code>oClassInfo</code>.</p>
 <p><code>string</code></p>
 <p>Name of the class being created</p>
 <h5>oClassInfo?</h5>
-<p><a href="../../../../../sap.f/namespaces/sap/type-aliases/ClassInfo.html"><code>ClassInfo</code></a>&lt;<code>T</code>, <code>ObjectPageHeader</code>&gt;</p>
+<p><code>ClassInfo</code>&lt;<code>T</code>, <code>ObjectPageHeader</code>&gt;</p>
 <p>Object literal with information about the class</p>
 <h5>FNMetaImpl?</h5>
 <p><code>Function</code></p>
@@ -1229,6 +1229,6 @@ used by this class</p>
 <p><a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a>.<a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html#getmetadata-1"><code>getMetadata</code></a></p>
 <hr>
 
-<footer>Generated from <code>@openui5/types@1.120.46</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@openui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

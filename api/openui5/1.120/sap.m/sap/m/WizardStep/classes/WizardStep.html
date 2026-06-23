@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Class: WizardStep — OpenUI5 TypeScript API</title>
-<meta name="description" content="Class: WizardStep — OpenUI5 TypeScript API Reference (1.120.46)">
+<meta name="description" content="Class: WizardStep — OpenUI5 TypeScript API Reference (1.120.0)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/openui5/1.120/sap.m/sap/m/WizardStep/classes/WizardStep.html">
 <meta property="og:title" content="Class: WizardStep — OpenUI5 TypeScript API">
-<meta property="og:description" content="Class: WizardStep — OpenUI5 TypeScript API Reference (1.120.46)">
+<meta property="og:description" content="Class: WizardStep — OpenUI5 TypeScript API Reference (1.120.0)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/openui5/1.120/sap.m/sap/m/WizardStep/classes/WizardStep.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,11 +33,13 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../index.html">OpenUI5 API</a> › <a href="../../../../../sap.m/README.html">sap.m</a> › sap › m › <a href="../../../../../sap.m/sap/m/WizardStep/README.html">WizardStep</a> › classes</nav>
-<p><a href="../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.46)</strong></a></p>
+<p><a href="../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.0)</strong></a></p>
 <hr>
-<p><a href="../../../../../README.html">OpenUI5 TypeScript API (1.120.46)</a> / <a href="../../../../README.html">sap.m</a> / <a href="../README.html">sap/m/WizardStep</a> / WizardStep</p>
+<p><a href="../../../../../README.html">OpenUI5 TypeScript API (1.120.0)</a> / <a href="../../../../README.html">sap.m</a> / <a href="../README.html">sap/m/WizardStep</a> / WizardStep</p>
 <h1>Class: WizardStep</h1>
 <pre class="sig"><span class="kw">import</span> WizardStep <span class="kw">from</span> <span class="str">"sap/m/WizardStep"</span>;</pre>
+<h2>Since</h2>
+<p>1.30</p>
 <p>A container control used to aggregate user input controls as part of an sap.m.Wizard. Overview: WizardStep
 gives the developer the ability to validate, invalidate the step and define subsequent steps. The WizardStep
 control control is supposed to be used only as an aggregation of the sap.m.Wizard Wizard control,
@@ -46,8 +48,6 @@ and should not be used as a standalone one. Structure:
 	 - Each wizard step can be validated by setting the <code>validated</code> property. This action will trigger the
     rendering of the Next step button. If the execution needs to branch after a given step, you should
     set all possible next steps in the <code>subsequentSteps</code> aggregation.</p>
-<h2>Since</h2>
-<p>1.30</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></li>
@@ -106,7 +106,6 @@ of the syntax of the settings object.</p>
 <blockquote>
 <p><strong>addSubsequentStep</strong>(<code>vSubsequentStep</code>): <code>this</code></p>
 </blockquote>
-<p>Adds some subsequentStep into the association #getSubsequentSteps subsequentSteps.</p>
 <h4>Parameters</h4>
 <h5>vSubsequentStep</h5>
 <p><code>string</code> | <code>WizardStep</code></p>
@@ -116,6 +115,7 @@ of the syntax of the settings object.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.32</p>
+<p>Adds some subsequentStep into the association #getSubsequentSteps subsequentSteps.</p>
 <hr>
 <h3>attachActivate()</h3>
 <h4>Call Signature</h4>
@@ -250,7 +250,6 @@ from the app developer.</p>
 <blockquote>
 <p><strong>fireActivate</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
-<p>Fires event #event:activate activate to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><code>object</code></p>
@@ -260,12 +259,12 @@ from the app developer.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:activate activate to attached listeners.</p>
 <hr>
 <h3>fireComplete()</h3>
 <blockquote>
 <p><strong>fireComplete</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
-<p>Fires event #event:complete complete to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><code>object</code></p>
@@ -275,6 +274,7 @@ from the app developer.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:complete complete to attached listeners.</p>
 <hr>
 <h3>getContent()</h3>
 <blockquote>
@@ -302,35 +302,35 @@ should have this property defined, otherwise the default numbering will be displ
 <blockquote>
 <p><strong>getNextStep</strong>(): <code>string</code></p>
 </blockquote>
-<p>ID of the element which is the current target of the association #getNextStep nextStep, or <code>null</code>.</p>
 <h4>Returns</h4>
 <p><code>string</code></p>
 <h4>Since</h4>
 <p>1.32</p>
+<p>ID of the element which is the current target of the association #getNextStep nextStep, or <code>null</code>.</p>
 <hr>
 <h3>getOptional()</h3>
 <blockquote>
 <p><strong>getOptional</strong>(): <code>boolean</code></p>
 </blockquote>
-<p>Gets current value of property #getOptional optional.</p>
-<p>Indicates whether or not the step is optional. When a step is optional an &quot;(Optional)&quot; label is displayed
-under the step&#39;s title.</p>
-<p>Default value is <code>false</code>.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>Value of property <code>optional</code></p>
 <h4>Since</h4>
 <p>1.54</p>
+<p>Gets current value of property #getOptional optional.</p>
+<p>Indicates whether or not the step is optional. When a step is optional an &quot;(Optional)&quot; label is displayed
+under the step&#39;s title.</p>
+<p>Default value is <code>false</code>.</p>
 <hr>
 <h3>getSubsequentSteps()</h3>
 <blockquote>
 <p><strong>getSubsequentSteps</strong>(): <code>string</code>[]</p>
 </blockquote>
-<p>Returns array of IDs of the elements which are the current targets of the association #getSubsequentSteps subsequentSteps.</p>
 <h4>Returns</h4>
 <p><code>string</code>[]</p>
 <h4>Since</h4>
 <p>1.32</p>
+<p>Returns array of IDs of the elements which are the current targets of the association #getSubsequentSteps subsequentSteps.</p>
 <hr>
 <h3>getTitle()</h3>
 <blockquote>
@@ -347,15 +347,15 @@ under the step&#39;s title.</p>
 <blockquote>
 <p><strong>getValidated</strong>(): <code>boolean</code></p>
 </blockquote>
-<p>Gets current value of property #getValidated validated.</p>
-<p>Indicates whether or not the step is validated. When a step is validated a Next button is visualized
-in the Wizard control.</p>
-<p>Default value is <code>true</code>.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>Value of property <code>validated</code></p>
 <h4>Since</h4>
 <p>1.32</p>
+<p>Gets current value of property #getValidated validated.</p>
+<p>Indicates whether or not the step is validated. When a step is validated a Next button is visualized
+in the Wizard control.</p>
+<p>Default value is <code>true</code>.</p>
 <hr>
 <h3>indexOfContent()</h3>
 <blockquote>
@@ -403,12 +403,12 @@ is inserted at the last position</p>
 <blockquote>
 <p><strong>removeAllSubsequentSteps</strong>(): <code>string</code>[]</p>
 </blockquote>
-<p>Removes all the controls in the association named #getSubsequentSteps subsequentSteps.</p>
 <h4>Returns</h4>
 <p><code>string</code>[]</p>
 <p>An array of the removed elements (might be empty)</p>
 <h4>Since</h4>
 <p>1.32</p>
+<p>Removes all the controls in the association named #getSubsequentSteps subsequentSteps.</p>
 <hr>
 <h3>removeContent()</h3>
 <blockquote>
@@ -427,7 +427,6 @@ is inserted at the last position</p>
 <blockquote>
 <p><strong>removeSubsequentStep</strong>(<code>vSubsequentStep</code>): <code>string</code></p>
 </blockquote>
-<p>Removes an subsequentStep from the association named #getSubsequentSteps subsequentSteps.</p>
 <h4>Parameters</h4>
 <h5>vSubsequentStep</h5>
 <p><code>string</code> | <code>number</code> | <code>WizardStep</code></p>
@@ -437,6 +436,7 @@ is inserted at the last position</p>
 <p>The removed subsequentStep or <code>null</code></p>
 <h4>Since</h4>
 <p>1.32</p>
+<p>Removes an subsequentStep from the association named #getSubsequentSteps subsequentSteps.</p>
 <hr>
 <h3>setIcon()</h3>
 <blockquote>
@@ -460,7 +460,6 @@ should have this property defined, otherwise the default numbering will be displ
 <blockquote>
 <p><strong>setNextStep</strong>(<code>oNextStep</code>): <code>this</code></p>
 </blockquote>
-<p>Sets the associated #getNextStep nextStep.</p>
 <h4>Parameters</h4>
 <h5>oNextStep</h5>
 <p><code>string</code> | <code>WizardStep</code></p>
@@ -471,16 +470,12 @@ instance may be given</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.32</p>
+<p>Sets the associated #getNextStep nextStep.</p>
 <hr>
 <h3>setOptional()</h3>
 <blockquote>
 <p><strong>setOptional</strong>(<code>bOptional?</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getOptional optional.</p>
-<p>Indicates whether or not the step is optional. When a step is optional an &quot;(Optional)&quot; label is displayed
-under the step&#39;s title.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>false</code>.</p>
 <h4>Parameters</h4>
 <h5>bOptional?</h5>
 <p><code>boolean</code></p>
@@ -490,6 +485,11 @@ under the step&#39;s title.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.54</p>
+<p>Sets a new value for property #getOptional optional.</p>
+<p>Indicates whether or not the step is optional. When a step is optional an &quot;(Optional)&quot; label is displayed
+under the step&#39;s title.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>false</code>.</p>
 <hr>
 <h3>setTitle()</h3>
 <blockquote>
@@ -508,11 +508,6 @@ under the step&#39;s title.</p>
 <blockquote>
 <p><strong>setValidated</strong>(<code>bValidated?</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getValidated validated.</p>
-<p>Indicates whether or not the step is validated. When a step is validated a Next button is visualized
-in the Wizard control.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>true</code>.</p>
 <h4>Parameters</h4>
 <h5>bValidated?</h5>
 <p><code>boolean</code></p>
@@ -522,6 +517,11 @@ in the Wizard control.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.32</p>
+<p>Sets a new value for property #getValidated validated.</p>
+<p>Indicates whether or not the step is validated. When a step is validated a Next button is visualized
+in the Wizard control.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>true</code>.</p>
 <hr>
 <h3>extend()</h3>
 <blockquote>
@@ -538,7 +538,7 @@ contained in <code>oClassInfo</code>.</p>
 <p><code>string</code></p>
 <p>Name of the class being created</p>
 <h5>oClassInfo?</h5>
-<p><a href="../../../../../sap.f/namespaces/sap/type-aliases/ClassInfo.html"><code>ClassInfo</code></a>&lt;<code>T</code>, <code>WizardStep</code>&gt;</p>
+<p><code>ClassInfo</code>&lt;<code>T</code>, <code>WizardStep</code>&gt;</p>
 <p>Object literal with information about the class</p>
 <h5>FNMetaImpl?</h5>
 <p><code>Function</code></p>
@@ -562,6 +562,6 @@ used by this class</p>
 <p><a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a>.<a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html#getmetadata-1"><code>getMetadata</code></a></p>
 <hr>
 
-<footer>Generated from <code>@openui5/types@1.120.46</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@openui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

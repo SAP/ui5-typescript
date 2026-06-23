@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Class: App — OpenUI5 TypeScript API</title>
-<meta name="description" content="Class: App — OpenUI5 TypeScript API Reference (1.120.46)">
+<meta name="description" content="Class: App — OpenUI5 TypeScript API Reference (1.120.0)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/openui5/1.120/sap.m/sap/m/App/classes/App.html">
 <meta property="og:title" content="Class: App — OpenUI5 TypeScript API">
-<meta property="og:description" content="Class: App — OpenUI5 TypeScript API Reference (1.120.46)">
+<meta property="og:description" content="Class: App — OpenUI5 TypeScript API Reference (1.120.0)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/openui5/1.120/sap.m/sap/m/App/classes/App.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,9 +33,9 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../index.html">OpenUI5 API</a> › <a href="../../../../../sap.m/README.html">sap.m</a> › sap › m › <a href="../../../../../sap.m/sap/m/App/README.html">App</a> › classes</nav>
-<p><a href="../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.46)</strong></a></p>
+<p><a href="../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.0)</strong></a></p>
 <hr>
-<p><a href="../../../../../README.html">OpenUI5 TypeScript API (1.120.46)</a> / <a href="../../../../README.html">sap.m</a> / <a href="../README.html">sap/m/App</a> / App</p>
+<p><a href="../../../../../README.html">OpenUI5 TypeScript API (1.120.0)</a> / <a href="../../../../README.html">sap.m</a> / <a href="../README.html">sap/m/App</a> / App</p>
 <h1>Class: App</h1>
 <pre class="sig"><span class="kw">import</span> App <span class="kw">from</span> <span class="str">"sap/m/App"</span>;</pre>
 <p>The root element of a UI5 mobile app.</p>
@@ -98,11 +98,6 @@ See:
 <blockquote>
 <p><strong>attachOrientationChange</strong>(<code>oData</code>, <code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
-<p>Attaches event handler <code>fnFunction</code> to the #event:orientationChange orientationChange event of
-this <code>sap.m.App</code>.</p>
-<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
-otherwise it will be bound to this <code>sap.m.App</code> itself.</p>
-<p>Fired when the orientation (portrait/landscape) of the device is changed.</p>
 <h5>Parameters</h5>
 <h6>oData</h6>
 <p><code>object</code></p>
@@ -119,15 +114,15 @@ object when firing the event</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Deprecated</h5>
 <p>(since 1.20.0) - use sap.ui.Device.orientation.attachHandler instead.</p>
-<h4>Call Signature</h4>
-<blockquote>
-<p><strong>attachOrientationChange</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
-</blockquote>
 <p>Attaches event handler <code>fnFunction</code> to the #event:orientationChange orientationChange event of
 this <code>sap.m.App</code>.</p>
 <p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
 otherwise it will be bound to this <code>sap.m.App</code> itself.</p>
 <p>Fired when the orientation (portrait/landscape) of the device is changed.</p>
+<h4>Call Signature</h4>
+<blockquote>
+<p><strong>attachOrientationChange</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
+</blockquote>
 <h5>Parameters</h5>
 <h6>fnFunction</h6>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -140,14 +135,16 @@ otherwise it will be bound to this <code>sap.m.App</code> itself.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Deprecated</h5>
 <p>(since 1.20.0) - use sap.ui.Device.orientation.attachHandler instead.</p>
+<p>Attaches event handler <code>fnFunction</code> to the #event:orientationChange orientationChange event of
+this <code>sap.m.App</code>.</p>
+<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
+otherwise it will be bound to this <code>sap.m.App</code> itself.</p>
+<p>Fired when the orientation (portrait/landscape) of the device is changed.</p>
 <hr>
 <h3><del>detachOrientationChange()</del></h3>
 <blockquote>
 <p><strong>detachOrientationChange</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
-<p>Detaches event handler <code>fnFunction</code> from the #event:orientationChange orientationChange event
-of this <code>sap.m.App</code>.</p>
-<p>The passed function and listener object must match the ones used for event registration.</p>
 <h4>Parameters</h4>
 <h5>fnFunction</h5>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -160,12 +157,14 @@ of this <code>sap.m.App</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Deprecated</h4>
 <p>(since 1.20.0) - use sap.ui.Device.orientation.attachHandler instead.</p>
+<p>Detaches event handler <code>fnFunction</code> from the #event:orientationChange orientationChange event
+of this <code>sap.m.App</code>.</p>
+<p>The passed function and listener object must match the ones used for event registration.</p>
 <hr>
 <h3><del>fireOrientationChange()</del></h3>
 <blockquote>
 <p><strong>fireOrientationChange</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
-<p>Fires event #event:orientationChange orientationChange to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/App$OrientationChangeEventParameters.html"><code>App$OrientationChangeEventParameters</code></a></p>
@@ -177,67 +176,68 @@ of this <code>sap.m.App</code>.</p>
 <p>(since 1.20.0) - use sap.ui.Device.orientation.attachHandler instead.</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:orientationChange orientationChange to attached listeners.</p>
 <hr>
 <h3>getBackgroundColor()</h3>
 <blockquote>
 <p><strong>getBackgroundColor</strong>(): <code>string</code></p>
 </blockquote>
+<h4>Returns</h4>
+<p><code>string</code></p>
+<p>Value of property <code>backgroundColor</code></p>
+<h4>Since</h4>
+<p>1.11.2</p>
 <p>Gets current value of property #getBackgroundColor backgroundColor.</p>
 <p>Background color of the App. If set, this color will override the default background defined by the theme.
 So this should only be set when really required. Any configured background image will be placed above
 this colored background. But any theme adaptation in the Theme Designer will override this setting. Use
 the &quot;backgroundRepeat&quot; property to define whether this image should be stretched to cover the complete
 App or whether it should be tiled.</p>
-<h4>Returns</h4>
-<p><code>string</code></p>
-<p>Value of property <code>backgroundColor</code></p>
-<h4>Since</h4>
-<p>1.11.2</p>
 <hr>
 <h3>getBackgroundImage()</h3>
 <blockquote>
 <p><strong>getBackgroundImage</strong>(): <code>string</code></p>
 </blockquote>
+<h4>Returns</h4>
+<p><code>string</code></p>
+<p>Value of property <code>backgroundImage</code></p>
+<h4>Since</h4>
+<p>1.11.2</p>
 <p>Gets current value of property #getBackgroundImage backgroundImage.</p>
 <p>Background image of the App. If set, this image will override the default background defined by the theme.
 So this should only be set when really required. This background image will be placed above any color
 set for the background. But any theme adaptation in the Theme Designer will override this image setting.
 Use the &quot;backgroundRepeat&quot; property to define whether this image should be stretched to cover the complete
 App or whether it should be tiled.</p>
-<h4>Returns</h4>
-<p><code>string</code></p>
-<p>Value of property <code>backgroundImage</code></p>
-<h4>Since</h4>
-<p>1.11.2</p>
 <hr>
 <h3>getBackgroundOpacity()</h3>
 <blockquote>
 <p><strong>getBackgroundOpacity</strong>(): <code>number</code></p>
 </blockquote>
-<p>Gets current value of property #getBackgroundOpacity backgroundOpacity.</p>
-<p>Opacity of the background image. The opacity can be set between 0 (fully transparent) and 1 fully opaque).
-This can be used to make the application content better readable by making the background image partly
-transparent.</p>
-<p>Default value is <code>1</code>.</p>
 <h4>Returns</h4>
 <p><code>number</code></p>
 <p>Value of property <code>backgroundOpacity</code></p>
 <h4>Since</h4>
 <p>1.11.2</p>
+<p>Gets current value of property #getBackgroundOpacity backgroundOpacity.</p>
+<p>Opacity of the background image. The opacity can be set between 0 (fully transparent) and 1 fully opaque).
+This can be used to make the application content better readable by making the background image partly
+transparent.</p>
+<p>Default value is <code>1</code>.</p>
 <hr>
 <h3>getBackgroundRepeat()</h3>
 <blockquote>
 <p><strong>getBackgroundRepeat</strong>(): <code>boolean</code></p>
 </blockquote>
-<p>Gets current value of property #getBackgroundRepeat backgroundRepeat.</p>
-<p>Whether the background image (if configured) should be proportionally stretched to cover the whole App
-(false) or whether it should be tiled (true).</p>
-<p>Default value is <code>false</code>.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>Value of property <code>backgroundRepeat</code></p>
 <h4>Since</h4>
 <p>1.11.2</p>
+<p>Gets current value of property #getBackgroundRepeat backgroundRepeat.</p>
+<p>Whether the background image (if configured) should be proportionally stretched to cover the whole App
+(false) or whether it should be tiled (true).</p>
+<p>Default value is <code>false</code>.</p>
 <hr>
 <h3>getHomeIcon()</h3>
 <blockquote>
@@ -269,21 +269,26 @@ the &quot;homeIconPrecomposed&quot; property to &quot;true&quot;.</p>
 <blockquote>
 <p><strong>getIsTopLevel</strong>(): <code>boolean</code></p>
 </blockquote>
-<p>Gets current value of property #getIsTopLevel isTopLevel.</p>
-<p>Determines whether <code>sap.m.App</code> is used as a top level control.</p>
-<p><strong>Note</strong>: When the <code>isTopLevel</code> property set to <code>true</code>, <code>sap.m.App</code> traverses its parent DOM elements
-and sets their height to 100%.</p>
-<p>Default value is <code>true</code>.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>Value of property <code>isTopLevel</code></p>
 <h4>Since</h4>
 <p>1.91</p>
+<p>Gets current value of property #getIsTopLevel isTopLevel.</p>
+<p>Determines whether <code>sap.m.App</code> is used as a top level control.</p>
+<p><strong>Note</strong>: When the <code>isTopLevel</code> property set to <code>true</code>, <code>sap.m.App</code> traverses its parent DOM elements
+and sets their height to 100%.</p>
+<p>Default value is <code>true</code>.</p>
 <hr>
 <h3>getMobileWebAppCapable()</h3>
 <blockquote>
 <p><strong>getMobileWebAppCapable</strong>(): <code>boolean</code></p>
 </blockquote>
+<h4>Returns</h4>
+<p><code>boolean</code></p>
+<p>Value of property <code>mobileWebAppCapable</code></p>
+<h4>Since</h4>
+<p>1.58.0</p>
 <p>Gets current value of property #getMobileWebAppCapable mobileWebAppCapable.</p>
 <p>Determines whether the <code>App</code> is displayed without address bar when opened from an exported home screen
 icon on a mobile device.</p>
@@ -294,23 +299,11 @@ at the moment when the home screen icon is exported by the user. For example, if
 while the property is set to <code>true</code>, the <code>App</code> will have no address bar when opened from that same icon
 regardless of a changed property value to <code>false</code> at a later time.</p>
 <p>Default value is <code>true</code>.</p>
-<h4>Returns</h4>
-<p><code>boolean</code></p>
-<p>Value of property <code>mobileWebAppCapable</code></p>
-<h4>Since</h4>
-<p>1.58.0</p>
 <hr>
 <h3>setBackgroundColor()</h3>
 <blockquote>
 <p><strong>setBackgroundColor</strong>(<code>sBackgroundColor?</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getBackgroundColor backgroundColor.</p>
-<p>Background color of the App. If set, this color will override the default background defined by the theme.
-So this should only be set when really required. Any configured background image will be placed above
-this colored background. But any theme adaptation in the Theme Designer will override this setting. Use
-the &quot;backgroundRepeat&quot; property to define whether this image should be stretched to cover the complete
-App or whether it should be tiled.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <h4>Parameters</h4>
 <h5>sBackgroundColor?</h5>
 <p><code>string</code></p>
@@ -320,18 +313,18 @@ App or whether it should be tiled.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.11.2</p>
+<p>Sets a new value for property #getBackgroundColor backgroundColor.</p>
+<p>Background color of the App. If set, this color will override the default background defined by the theme.
+So this should only be set when really required. Any configured background image will be placed above
+this colored background. But any theme adaptation in the Theme Designer will override this setting. Use
+the &quot;backgroundRepeat&quot; property to define whether this image should be stretched to cover the complete
+App or whether it should be tiled.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <hr>
 <h3>setBackgroundImage()</h3>
 <blockquote>
 <p><strong>setBackgroundImage</strong>(<code>sBackgroundImage?</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getBackgroundImage backgroundImage.</p>
-<p>Background image of the App. If set, this image will override the default background defined by the theme.
-So this should only be set when really required. This background image will be placed above any color
-set for the background. But any theme adaptation in the Theme Designer will override this image setting.
-Use the &quot;backgroundRepeat&quot; property to define whether this image should be stretched to cover the complete
-App or whether it should be tiled.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <h4>Parameters</h4>
 <h5>sBackgroundImage?</h5>
 <p><code>string</code></p>
@@ -341,17 +334,18 @@ App or whether it should be tiled.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.11.2</p>
+<p>Sets a new value for property #getBackgroundImage backgroundImage.</p>
+<p>Background image of the App. If set, this image will override the default background defined by the theme.
+So this should only be set when really required. This background image will be placed above any color
+set for the background. But any theme adaptation in the Theme Designer will override this image setting.
+Use the &quot;backgroundRepeat&quot; property to define whether this image should be stretched to cover the complete
+App or whether it should be tiled.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <hr>
 <h3>setBackgroundOpacity()</h3>
 <blockquote>
 <p><strong>setBackgroundOpacity</strong>(<code>fBackgroundOpacity?</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getBackgroundOpacity backgroundOpacity.</p>
-<p>Opacity of the background image. The opacity can be set between 0 (fully transparent) and 1 fully opaque).
-This can be used to make the application content better readable by making the background image partly
-transparent.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>1</code>.</p>
 <h4>Parameters</h4>
 <h5>fBackgroundOpacity?</h5>
 <p><code>number</code></p>
@@ -361,16 +355,17 @@ transparent.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.11.2</p>
+<p>Sets a new value for property #getBackgroundOpacity backgroundOpacity.</p>
+<p>Opacity of the background image. The opacity can be set between 0 (fully transparent) and 1 fully opaque).
+This can be used to make the application content better readable by making the background image partly
+transparent.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>1</code>.</p>
 <hr>
 <h3>setBackgroundRepeat()</h3>
 <blockquote>
 <p><strong>setBackgroundRepeat</strong>(<code>bBackgroundRepeat?</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getBackgroundRepeat backgroundRepeat.</p>
-<p>Whether the background image (if configured) should be proportionally stretched to cover the whole App
-(false) or whether it should be tiled (true).</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>false</code>.</p>
 <h4>Parameters</h4>
 <h5>bBackgroundRepeat?</h5>
 <p><code>boolean</code></p>
@@ -380,6 +375,11 @@ transparent.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.11.2</p>
+<p>Sets a new value for property #getBackgroundRepeat backgroundRepeat.</p>
+<p>Whether the background image (if configured) should be proportionally stretched to cover the whole App
+(false) or whether it should be tiled (true).</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>false</code>.</p>
 <hr>
 <h3>setHomeIcon()</h3>
 <blockquote>
@@ -416,12 +416,6 @@ the &quot;homeIconPrecomposed&quot; property to &quot;true&quot;.</p>
 <blockquote>
 <p><strong>setIsTopLevel</strong>(<code>bIsTopLevel?</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getIsTopLevel isTopLevel.</p>
-<p>Determines whether <code>sap.m.App</code> is used as a top level control.</p>
-<p><strong>Note</strong>: When the <code>isTopLevel</code> property set to <code>true</code>, <code>sap.m.App</code> traverses its parent DOM elements
-and sets their height to 100%.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>true</code>.</p>
 <h4>Parameters</h4>
 <h5>bIsTopLevel?</h5>
 <p><code>boolean</code></p>
@@ -431,11 +425,26 @@ and sets their height to 100%.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.91</p>
+<p>Sets a new value for property #getIsTopLevel isTopLevel.</p>
+<p>Determines whether <code>sap.m.App</code> is used as a top level control.</p>
+<p><strong>Note</strong>: When the <code>isTopLevel</code> property set to <code>true</code>, <code>sap.m.App</code> traverses its parent DOM elements
+and sets their height to 100%.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>true</code>.</p>
 <hr>
 <h3>setMobileWebAppCapable()</h3>
 <blockquote>
 <p><strong>setMobileWebAppCapable</strong>(<code>bMobileWebAppCapable?</code>): <code>this</code></p>
 </blockquote>
+<h4>Parameters</h4>
+<h5>bMobileWebAppCapable?</h5>
+<p><code>boolean</code></p>
+<p>New value for property <code>mobileWebAppCapable</code></p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<h4>Since</h4>
+<p>1.58.0</p>
 <p>Sets a new value for property #getMobileWebAppCapable mobileWebAppCapable.</p>
 <p>Determines whether the <code>App</code> is displayed without address bar when opened from an exported home screen
 icon on a mobile device.</p>
@@ -447,15 +456,6 @@ while the property is set to <code>true</code>, the <code>App</code> will have n
 regardless of a changed property value to <code>false</code> at a later time.</p>
 <p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <p>Default value is <code>true</code>.</p>
-<h4>Parameters</h4>
-<h5>bMobileWebAppCapable?</h5>
-<p><code>boolean</code></p>
-<p>New value for property <code>mobileWebAppCapable</code></p>
-<h4>Returns</h4>
-<p><code>this</code></p>
-<p>Reference to <code>this</code> in order to allow method chaining</p>
-<h4>Since</h4>
-<p>1.58.0</p>
 <hr>
 <h3>extend()</h3>
 <blockquote>
@@ -472,7 +472,7 @@ contained in <code>oClassInfo</code>.</p>
 <p><code>string</code></p>
 <p>Name of the class being created</p>
 <h5>oClassInfo?</h5>
-<p><a href="../../../../../sap.f/namespaces/sap/type-aliases/ClassInfo.html"><code>ClassInfo</code></a>&lt;<code>T</code>, <code>App</code>&gt;</p>
+<p><code>ClassInfo</code>&lt;<code>T</code>, <code>App</code>&gt;</p>
 <p>Object literal with information about the class</p>
 <h5>FNMetaImpl?</h5>
 <p><code>Function</code></p>
@@ -496,6 +496,6 @@ used by this class</p>
 <p><a href="../../NavContainer/classes/NavContainer.html"><code>NavContainer</code></a>.<a href="../../NavContainer/classes/NavContainer.html#getmetadata-1"><code>getMetadata</code></a></p>
 <hr>
 
-<footer>Generated from <code>@openui5/types@1.120.46</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@openui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

@@ -2,12 +2,12 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>Abstract Class: Binding — OpenUI5 TypeScript API</title>
-<meta name="description" content="Abstract Class: Binding — OpenUI5 TypeScript API Reference (1.120.46)">
+<title>Class: Binding — OpenUI5 TypeScript API</title>
+<meta name="description" content="Class: Binding — OpenUI5 TypeScript API Reference (1.120.0)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/openui5/1.120/sap.ui.core/sap/ui/model/Binding/classes/Binding.html">
-<meta property="og:title" content="Abstract Class: Binding — OpenUI5 TypeScript API">
-<meta property="og:description" content="Abstract Class: Binding — OpenUI5 TypeScript API Reference (1.120.46)">
+<meta property="og:title" content="Class: Binding — OpenUI5 TypeScript API">
+<meta property="og:description" content="Class: Binding — OpenUI5 TypeScript API Reference (1.120.0)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/openui5/1.120/sap.ui.core/sap/ui/model/Binding/classes/Binding.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,10 +33,10 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../index.html">OpenUI5 API</a> › <a href="../../../../../../sap.ui.core/README.html">sap.ui.core</a> › sap › ui › model › <a href="../../../../../../sap.ui.core/sap/ui/model/Binding/README.html">Binding</a> › classes</nav>
-<p><a href="../../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.46)</strong></a></p>
+<p><a href="../../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.0)</strong></a></p>
 <hr>
-<p><a href="../../../../../../README.html">OpenUI5 TypeScript API (1.120.46)</a> / <a href="../../../../../README.html">sap.ui.core</a> / <a href="../README.html">sap/ui/model/Binding</a> / Binding</p>
-<h1>Abstract Class: Binding</h1>
+<p><a href="../../../../../../README.html">OpenUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../README.html">sap.ui.core</a> / <a href="../README.html">sap/ui/model/Binding</a> / Binding</p>
+<h1>Class: Binding</h1>
 <pre class="sig"><span class="kw">import</span> Binding <span class="kw">from</span> <span class="str">"sap/ui/model/Binding"</span>;</pre>
 <p>The Binding is the object, which holds the necessary information for a data binding, like the binding
 path and the binding context, and acts like an interface to the model for the control, so it is the event
@@ -80,10 +80,6 @@ provider for changes in the data model and provides getters for accessing proper
 <blockquote>
 <p><strong>attachAggregatedDataStateChange</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>void</code></p>
 </blockquote>
-<p>Attaches event handler <code>fnFunction</code> to the #event:AggregatedDataStateChange AggregatedDataStateChange
-event of this <code>sap.ui.model.Binding</code>.</p>
-<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
-otherwise it will be bound to this <code>sap.ui.model.Binding</code> itself.</p>
 <h4>Parameters</h4>
 <h5>fnFunction</h5>
 <p><code>Function</code></p>
@@ -95,6 +91,10 @@ otherwise it will be bound to this <code>sap.ui.model.Binding</code> itself.</p>
 <p><code>void</code></p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Attaches event handler <code>fnFunction</code> to the #event:AggregatedDataStateChange AggregatedDataStateChange
+event of this <code>sap.ui.model.Binding</code>.</p>
+<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
+otherwise it will be bound to this <code>sap.ui.model.Binding</code> itself.</p>
 <hr>
 <h3>attachChange()</h3>
 <blockquote>
@@ -151,10 +151,6 @@ otherwise it will be bound to this <code>sap.ui.model.Binding</code> itself.</p>
 <blockquote>
 <p><strong>attachDataStateChange</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>void</code></p>
 </blockquote>
-<p>Attaches the <code>fnFunction</code> event handler to the #event:DataStateChange DataStateChange event of
-thi <code>sap.ui.model.Binding</code>.</p>
-<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
-otherwise it will be bound to this <code>sap.ui.model.Binding</code> itself.</p>
 <h4>Parameters</h4>
 <h5>fnFunction</h5>
 <p><code>Function</code></p>
@@ -166,12 +162,15 @@ otherwise it will be bound to this <code>sap.ui.model.Binding</code> itself.</p>
 <p><code>void</code></p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Attaches the <code>fnFunction</code> event handler to the #event:DataStateChange DataStateChange event of
+thi <code>sap.ui.model.Binding</code>.</p>
+<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
+otherwise it will be bound to this <code>sap.ui.model.Binding</code> itself.</p>
 <hr>
 <h3>attachEvents()</h3>
 <blockquote>
 <p><strong>attachEvents</strong>(<code>oEvents</code>): <code>Binding</code></p>
 </blockquote>
-<p>Attach multiple events.</p>
 <h4>Parameters</h4>
 <h5>oEvents</h5>
 <p><code>Record</code>&lt;<code>string</code>, <code>Function</code>&gt;</p>
@@ -181,14 +180,12 @@ otherwise it will be bound to this <code>sap.ui.model.Binding</code> itself.</p>
 <p>A reference to itself</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Attach multiple events.</p>
 <hr>
 <h3>attachRefresh()</h3>
 <blockquote>
 <p><strong>attachRefresh</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>void</code></p>
 </blockquote>
-<p>Attaches event handler <code>fnFunction</code> to the #event:refresh refresh event of this <code>sap.ui.model.Binding</code>.</p>
-<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
-otherwise it will be bound to this <code>sap.ui.model.Binding</code> itself.</p>
 <h4>Parameters</h4>
 <h5>fnFunction</h5>
 <p><code>Function</code></p>
@@ -200,13 +197,16 @@ otherwise it will be bound to this <code>sap.ui.model.Binding</code> itself.</p>
 <p><code>void</code></p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Attaches event handler <code>fnFunction</code> to the #event:refresh refresh event of this <code>sap.ui.model.Binding</code>.</p>
+<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
+otherwise it will be bound to this <code>sap.ui.model.Binding</code> itself.</p>
 <hr>
 <h3>destroy()</h3>
 <blockquote>
 <p><strong>destroy</strong>(): <code>void</code></p>
 </blockquote>
-<p>Removes all control messages for this binding from sap.ui.core.Messaging in addition to the standard
-clean-up tasks.
+<p>Removes all control messages for this binding from the MessageManager in addition to the standard clean-up
+tasks.
 See:
 	sap.ui.base.EventProvider#destroy</p>
 <h4>Returns</h4>
@@ -218,8 +218,6 @@ See:
 <blockquote>
 <p><strong>detachAggregatedDataStateChange</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>void</code></p>
 </blockquote>
-<p>Detaches event handler <code>fnFunction</code> from the #event:AggregatedDataStateChange AggregatedDataStateChange
-event of this <code>sap.ui.model.Binding</code>.</p>
 <h4>Parameters</h4>
 <h5>fnFunction</h5>
 <p>(<code>evt</code>) =&gt; <code>void</code></p>
@@ -231,6 +229,8 @@ event of this <code>sap.ui.model.Binding</code>.</p>
 <p><code>void</code></p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Detaches event handler <code>fnFunction</code> from the #event:AggregatedDataStateChange AggregatedDataStateChange
+event of this <code>sap.ui.model.Binding</code>.</p>
 <hr>
 <h3>detachChange()</h3>
 <blockquote>
@@ -282,8 +282,6 @@ event of this <code>sap.ui.model.Binding</code>.</p>
 <blockquote>
 <p><strong>detachDataStateChange</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>void</code></p>
 </blockquote>
-<p>Detaches event handler <code>fnFunction</code> from the #event:DataStateChange DataStateChange event of
-this <code>sap.ui.model.Binding</code>.</p>
 <h4>Parameters</h4>
 <h5>fnFunction</h5>
 <p>(<code>evt</code>) =&gt; <code>void</code></p>
@@ -295,12 +293,13 @@ this <code>sap.ui.model.Binding</code>.</p>
 <p><code>void</code></p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Detaches event handler <code>fnFunction</code> from the #event:DataStateChange DataStateChange event of
+this <code>sap.ui.model.Binding</code>.</p>
 <hr>
 <h3>detachEvents()</h3>
 <blockquote>
 <p><strong>detachEvents</strong>(<code>oEvents</code>): <code>Binding</code></p>
 </blockquote>
-<p>Detach multiple events.</p>
 <h4>Parameters</h4>
 <h5>oEvents</h5>
 <p><code>Record</code>&lt;<code>string</code>, <code>Function</code>&gt;</p>
@@ -310,12 +309,12 @@ this <code>sap.ui.model.Binding</code>.</p>
 <p>A reference to itself</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Detach multiple events.</p>
 <hr>
 <h3>detachRefresh()</h3>
 <blockquote>
 <p><strong>detachRefresh</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>void</code></p>
 </blockquote>
-<p>Detaches event handler <code>fnFunction</code> from the #event:refresh refresh event of this <code>sap.ui.model.Binding</code>.</p>
 <h4>Parameters</h4>
 <h5>fnFunction</h5>
 <p><code>Function</code></p>
@@ -327,13 +326,12 @@ this <code>sap.ui.model.Binding</code>.</p>
 <p><code>void</code></p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Detaches event handler <code>fnFunction</code> from the #event:refresh refresh event of this <code>sap.ui.model.Binding</code>.</p>
 <hr>
 <h3>fireDataReceived()</h3>
 <blockquote>
 <p><strong>fireDataReceived</strong>(<code>oParameters</code>): <code>void</code></p>
 </blockquote>
-<p>Fires event #event:dataReceived dataReceived to attached listeners.</p>
-<p>This event may also be fired when an error occurred.</p>
 <h4>Parameters</h4>
 <h5>oParameters</h5>
 <p><a href="../interfaces/Binding$DataReceivedEventParameters.html"><code>Binding$DataReceivedEventParameters</code></a></p>
@@ -342,12 +340,13 @@ this <code>sap.ui.model.Binding</code>.</p>
 <p><code>void</code></p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:dataReceived dataReceived to attached listeners.</p>
+<p>This event may also be fired when an error occurred.</p>
 <hr>
 <h3>fireDataRequested()</h3>
 <blockquote>
 <p><strong>fireDataRequested</strong>(<code>oParameters</code>): <code>void</code></p>
 </blockquote>
-<p>Fires event #event:dataRequested dataRequested to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>oParameters</h5>
 <p><code>object</code></p>
@@ -356,6 +355,7 @@ this <code>sap.ui.model.Binding</code>.</p>
 <p><code>void</code></p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:dataRequested dataRequested to attached listeners.</p>
 <hr>
 <h3>getContext()</h3>
 <blockquote>
@@ -371,12 +371,6 @@ this <code>sap.ui.model.Binding</code>.</p>
 <blockquote>
 <p><strong>getIgnoreMessages</strong>(): <code>boolean</code></p>
 </blockquote>
-<p>Whether this binding does not propagate model messages to the control. By default, all bindings propagate
-messages. If a binding wants to support this feature, it has to override #supportsIgnoreMessages,
-which returns <code>true</code>.</p>
-<p>For example, a binding for a currency code is used in a composite binding for rendering the proper number
-of decimals, but the currency code is not displayed in the attached control. In that case, messages for
-the currency code shall not be displayed at that control, only messages for the amount.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>Whether this binding does not propagate model messages to the control; returns <code>undefined</code> if
@@ -384,6 +378,12 @@ the corresponding binding parameter is not set, which means that model messages 
 control</p>
 <h4>Since</h4>
 <p>1.82.0</p>
+<p>Whether this binding does not propagate model messages to the control. By default, all bindings propagate
+messages. If a binding wants to support this feature, it has to override #supportsIgnoreMessages,
+which returns <code>true</code>.</p>
+<p>For example, a binding for a currency code is used in a composite binding for rendering the proper number
+of decimals, but the currency code is not displayed in the attached control. In that case, messages for
+the currency code shall not be displayed at that control, only messages for the amount.</p>
 <hr>
 <h3>getModel()</h3>
 <blockquote>
@@ -409,24 +409,24 @@ as returned by #getContext.</p>
 <blockquote>
 <p><strong>getResolvedPath</strong>(): <code>string</code></p>
 </blockquote>
-<p>Provides the resolved path for this binding&#39;s path and context and returns it, or <code>undefined</code> if the
-binding is not resolved or has no model.</p>
 <h4>Returns</h4>
 <p><code>string</code></p>
 <p>The resolved path</p>
 <h4>Since</h4>
 <p>1.88.0</p>
+<p>Provides the resolved path for this binding&#39;s path and context and returns it, or <code>undefined</code> if the
+binding is not resolved or has no model.</p>
 <hr>
 <h3>initialize()</h3>
 <blockquote>
 <p><strong>initialize</strong>(): <code>void</code></p>
 </blockquote>
-<p>Initialize the binding. The message should be called when creating a binding. The default implementation
-calls checkUpdate(true).</p>
 <h4>Returns</h4>
 <p><code>void</code></p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Initialize the binding. The message should be called when creating a binding. The default implementation
+calls checkUpdate(true).</p>
 <hr>
 <h3>isInitial()</h3>
 <blockquote>
@@ -450,17 +450,17 @@ calls checkUpdate(true).</p>
 <blockquote>
 <p><strong>isResolved</strong>(): <code>boolean</code></p>
 </blockquote>
+<h4>Returns</h4>
+<p><code>boolean</code></p>
+<p>Whether the binding is resolved</p>
+<h4>Since</h4>
+<p>1.79.0</p>
 <p>Returns whether the binding is resolved, which means the binding&#39;s path is absolute or the binding has
 a model context.
 See:
 	#getContext
 	#getPath
 	#isRelative</p>
-<h4>Returns</h4>
-<p><code>boolean</code></p>
-<p>Whether the binding is resolved</p>
-<h4>Since</h4>
-<p>1.79.0</p>
 <hr>
 <h3>isSuspended()</h3>
 <blockquote>
@@ -501,10 +501,6 @@ was requested while the binding was suspended.</p>
 <blockquote>
 <p><strong>setIgnoreMessages</strong>(<code>bIgnoreMessages</code>): <code>void</code></p>
 </blockquote>
-<p>Sets the indicator whether this binding does not propagate model messages to the control.
-See:
-	#getIgnoreMessages
-	#supportsIgnoreMessages</p>
 <h4>Parameters</h4>
 <h5>bIgnoreMessages</h5>
 <p><code>boolean</code></p>
@@ -513,22 +509,26 @@ See:
 <p><code>void</code></p>
 <h4>Since</h4>
 <p>1.82.0</p>
+<p>Sets the indicator whether this binding does not propagate model messages to the control.
+See:
+	#getIgnoreMessages
+	#supportsIgnoreMessages</p>
 <hr>
 <h3>supportsIgnoreMessages()</h3>
 <blockquote>
 <p><strong>supportsIgnoreMessages</strong>(): <code>boolean</code></p>
 </blockquote>
-<p>Whether this binding supports the feature of not propagating model messages to the control. The default
-implementation returns <code>false</code>.
-See:
-	#getIgnoreMessages
-	#setIgnoreMessages</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p><code>false</code>; subclasses that support this feature need to override this function and need to return
 <code>true</code></p>
 <h4>Since</h4>
 <p>1.82.0</p>
+<p>Whether this binding supports the feature of not propagating model messages to the control. The default
+implementation returns <code>false</code>.
+See:
+	#getIgnoreMessages
+	#setIgnoreMessages</p>
 <hr>
 <h3>suspend()</h3>
 <blockquote>
@@ -545,7 +545,6 @@ in list bindings) will also update and cause a change event although the binding
 <blockquote>
 <p><strong>updateRequired</strong>(<code>oModel</code>): <code>boolean</code></p>
 </blockquote>
-<p>Determines if the binding should be updated by comparing the current model against a specified model.</p>
 <h4>Parameters</h4>
 <h5>oModel</h5>
 <p><code>object</code></p>
@@ -555,6 +554,7 @@ in list bindings) will also update and cause a change event although the binding
 <p>Whether this binding should be updated</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Determines if the binding should be updated by comparing the current model against a specified model.</p>
 <hr>
 <h3>extend()</h3>
 <blockquote>
@@ -571,7 +571,7 @@ information contained in <code>oClassInfo</code>.</p>
 <p><code>string</code></p>
 <p>Name of the class being created</p>
 <h5>oClassInfo?</h5>
-<p><a href="../../../../../../sap.f/namespaces/sap/type-aliases/ClassInfo.html"><code>ClassInfo</code></a>&lt;<code>T</code>, <code>Binding</code>&gt;</p>
+<p><code>ClassInfo</code>&lt;<code>T</code>, <code>Binding</code>&gt;</p>
 <p>Object literal with information about the class</p>
 <h5>FNMetaImpl?</h5>
 <p><code>Function</code></p>
@@ -595,6 +595,6 @@ used by this class</p>
 <p><a href="../../../base/EventProvider/classes/EventProvider.html"><code>EventProvider</code></a>.<a href="../../../base/EventProvider/classes/EventProvider.html#getmetadata-1"><code>getMetadata</code></a></p>
 <hr>
 
-<footer>Generated from <code>@openui5/types@1.120.46</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@openui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

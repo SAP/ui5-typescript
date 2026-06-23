@@ -2,12 +2,12 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>~~Interface: $ProgressIndicatorSettings~~ — OpenUI5 TypeScript API</title>
-<meta name="description" content="~~Interface: $ProgressIndicatorSettings~~ — OpenUI5 TypeScript API Reference (1.120.46)">
+<title>Interface: $ProgressIndicatorSettings — OpenUI5 TypeScript API</title>
+<meta name="description" content="Interface: $ProgressIndicatorSettings — OpenUI5 TypeScript API Reference (1.120.0)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/openui5/1.120/sap.ui.webc.main/sap/ui/webc/main/ProgressIndicator/interfaces/$ProgressIndicatorSettings.html">
-<meta property="og:title" content="~~Interface: $ProgressIndicatorSettings~~ — OpenUI5 TypeScript API">
-<meta property="og:description" content="~~Interface: $ProgressIndicatorSettings~~ — OpenUI5 TypeScript API Reference (1.120.46)">
+<meta property="og:title" content="Interface: $ProgressIndicatorSettings — OpenUI5 TypeScript API">
+<meta property="og:description" content="Interface: $ProgressIndicatorSettings — OpenUI5 TypeScript API Reference (1.120.0)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/openui5/1.120/sap.ui.webc.main/sap/ui/webc/main/ProgressIndicator/interfaces/$ProgressIndicatorSettings.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,69 +33,56 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../../index.html">OpenUI5 API</a> › <a href="../../../../../../../sap.ui.webc.main/README.html">sap.ui.webc.main</a> › sap › ui › webc › main › <a href="../../../../../../../sap.ui.webc.main/sap/ui/webc/main/ProgressIndicator/README.html">ProgressIndicator</a> › interfaces</nav>
-<p><a href="../../../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.46)</strong></a></p>
+<p><a href="../../../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.0)</strong></a></p>
 <hr>
-<p><a href="../../../../../../../README.html">OpenUI5 TypeScript API (1.120.46)</a> / <a href="../../../../../../README.html">sap.ui.webc.main</a> / <a href="../README.html">sap/ui/webc/main/ProgressIndicator</a> / $ProgressIndicatorSettings</p>
-<h1><del>Interface: $ProgressIndicatorSettings</del></h1>
+<p><a href="../../../../../../../README.html">OpenUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../../README.html">sap.ui.webc.main</a> / <a href="../README.html">sap/ui/webc/main/ProgressIndicator</a> / $ProgressIndicatorSettings</p>
+<h1>Interface: $ProgressIndicatorSettings</h1>
 <pre class="sig"><span class="kw">import</span> { $ProgressIndicatorSettings } <span class="kw">from</span> <span class="str">"sap/ui/webc/main/ProgressIndicator"</span>;</pre>
-<p><strong><code>Experimental</code></strong></p>
-<p>Describes the settings that can be provided to the ProgressIndicator constructor.</p>
-<h2>Deprecated</h2>
-<p>(since 1.120) - this Web Components consumption model has been discarded. Until an alternative
-Web Components consumption model is available in the future, use sap.m and sap.f controls with similar
-functionality.
- (since 1.92.0) - This control is experimental and its API might change significantly.</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../../../../../../sap.ui.core/sap/ui/core/webc/WebComponent/interfaces/$WebComponentSettings.html"><code>$WebComponentSettings</code></a></li>
 </ul>
 <h2>Properties</h2>
-<h3><del>accessibleName?</del></h3>
+<h3>accessibleName?</h3>
 <blockquote>
 <p><code>optional</code> <strong>accessibleName?</strong>: <code>string</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a></p>
 </blockquote>
-<p><strong><code>Experimental</code></strong></p>
 <p>Defines the accessible ARIA name of the component.</p>
 <hr>
-<h3><del>displayValue?</del></h3>
+<h3>displayValue?</h3>
 <blockquote>
 <p><code>optional</code> <strong>displayValue?</strong>: <code>string</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a></p>
 </blockquote>
-<p><strong><code>Experimental</code></strong></p>
 <p>Specifies the text value to be displayed in the bar.</p>
 <p><strong>Note:</strong>
 	 - If there is no value provided or the value is empty, the default percentage value is shown.
 	 - If <code>hideValue</code> property is <code>true</code> both the <code>displayValue</code> and <code>value</code> property values are not shown.</p>
 <hr>
-<h3><del>enabled?</del></h3>
+<h3>enabled?</h3>
 <blockquote>
 <p><code>optional</code> <strong>enabled?</strong>: <code>boolean</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<p><strong><code>Experimental</code></strong></p>
 <p>Defines whether the control is enabled. A disabled control can&#39;t be interacted with, and it is not in
 the tab chain.</p>
 <hr>
-<h3><del>hideValue?</del></h3>
+<h3>hideValue?</h3>
 <blockquote>
 <p><code>optional</code> <strong>hideValue?</strong>: <code>boolean</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<p><strong><code>Experimental</code></strong></p>
 <p>Defines whether the component value is shown.</p>
 <hr>
-<h3><del>value?</del></h3>
+<h3>value?</h3>
 <blockquote>
 <p><code>optional</code> <strong>value?</strong>: <code>number</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<p><strong><code>Experimental</code></strong></p>
 <p>Specifies the numerical value in percent for the length of the component.</p>
 <p><strong>Note:</strong> If a value greater than 100 is provided, the percentValue is set to 100. In other cases of
 invalid value, percentValue is set to its default of 0.</p>
 <hr>
-<h3><del>valueState?</del></h3>
+<h3>valueState?</h3>
 <blockquote>
 <p><code>optional</code> <strong>valueState?</strong>: <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code> | <code>&quot;None&quot;</code> | <a href="../../../../../../../sap.ui.core/sap/ui/core/library/enumerations/ValueState.html"><code>ValueState</code></a> | <code>&quot;Error&quot;</code> | <code>&quot;Information&quot;</code> | <code>&quot;Success&quot;</code> | <code>&quot;Warning&quot;</code></p>
 </blockquote>
-<p><strong><code>Experimental</code></strong></p>
 <p>Defines the value state of the component.</p>
 <p> Available options are:
 	 - <code>None</code>
@@ -104,13 +91,12 @@ invalid value, percentValue is set to its default of 0.</p>
 	 - <code>Success</code>
 	 - <code>Information</code></p>
 <hr>
-<h3><del>width?</del></h3>
+<h3>width?</h3>
 <blockquote>
 <p><code>optional</code> <strong>width?</strong>: <code>string</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a></p>
 </blockquote>
-<p><strong><code>Experimental</code></strong></p>
 <p>Defines the width of the control</p>
 
-<footer>Generated from <code>@openui5/types@1.120.46</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@openui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

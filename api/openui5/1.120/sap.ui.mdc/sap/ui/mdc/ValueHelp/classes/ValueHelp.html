@@ -2,12 +2,12 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>Abstract Class: ValueHelp — OpenUI5 TypeScript API</title>
-<meta name="description" content="Abstract Class: ValueHelp — OpenUI5 TypeScript API Reference (1.120.46)">
+<title>Class: ValueHelp — OpenUI5 TypeScript API</title>
+<meta name="description" content="Class: ValueHelp — OpenUI5 TypeScript API Reference (1.120.0)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/openui5/1.120/sap.ui.mdc/sap/ui/mdc/ValueHelp/classes/ValueHelp.html">
-<meta property="og:title" content="Abstract Class: ValueHelp — OpenUI5 TypeScript API">
-<meta property="og:description" content="Abstract Class: ValueHelp — OpenUI5 TypeScript API Reference (1.120.46)">
+<meta property="og:title" content="Class: ValueHelp — OpenUI5 TypeScript API">
+<meta property="og:description" content="Class: ValueHelp — OpenUI5 TypeScript API Reference (1.120.0)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/openui5/1.120/sap.ui.mdc/sap/ui/mdc/ValueHelp/classes/ValueHelp.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,19 +33,19 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../index.html">OpenUI5 API</a> › <a href="../../../../../../sap.ui.mdc/README.html">sap.ui.mdc</a> › sap › ui › mdc › <a href="../../../../../../sap.ui.mdc/sap/ui/mdc/ValueHelp/README.html">ValueHelp</a> › classes</nav>
-<p><a href="../../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.46)</strong></a></p>
+<p><a href="../../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.0)</strong></a></p>
 <hr>
-<p><a href="../../../../../../README.html">OpenUI5 TypeScript API (1.120.46)</a> / <a href="../../../../../README.html">sap.ui.mdc</a> / <a href="../README.html">sap/ui/mdc/ValueHelp</a> / ValueHelp</p>
-<h1>Abstract Class: ValueHelp</h1>
+<p><a href="../../../../../../README.html">OpenUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../README.html">sap.ui.mdc</a> / <a href="../README.html">sap/ui/mdc/ValueHelp</a> / ValueHelp</p>
+<h1>Class: ValueHelp</h1>
 <pre class="sig"><span class="kw">import</span> ValueHelp <span class="kw">from</span> <span class="str">"sap/ui/mdc/ValueHelp"</span>;</pre>
 <p><strong><code>Experimental</code></strong></p>
+<h2>Since</h2>
+<p>1.95.0
+ (since 1.95.0)</p>
 <p>The <code>ValueHelp</code> element can be assigned to the sap.ui.mdc.Field Field, sap.ui.mdc.MultiValueField MultiValueField,
 and sap.ui.mdc.FilterField FilterField controls using the <code>valueHelp</code> association. One <code>ValueHelp</code>
 element instance can be assigned to multiple fields (like in different table rows). It should be placed
 in the control tree on the container holding the fields.</p>
-<h2>Since</h2>
-<p>1.95.0
- (since 1.95.0)</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../Element/classes/Element1.html"><code>Element1</code></a></li>
@@ -413,11 +413,6 @@ otherwise it will be bound to this <code>sap.ui.mdc.ValueHelp</code> itself.</p>
 <p><strong>attachTypeaheadSuggested</strong>(<code>oData</code>, <code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
-<p>Attaches event handler <code>fnFunction</code> to the #event:typeaheadSuggested typeaheadSuggested event
-of this <code>sap.ui.mdc.ValueHelp</code>.</p>
-<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
-otherwise it will be bound to this <code>sap.ui.mdc.ValueHelp</code> itself.</p>
-<p>This event is fired after a suggested item has been found for a type-ahead.</p>
 <h5>Parameters</h5>
 <h6>oData</h6>
 <p><code>object</code></p>
@@ -434,16 +429,16 @@ object when firing the event</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Since</h5>
 <p>1.120.0</p>
-<h4>Call Signature</h4>
-<blockquote>
-<p><strong>attachTypeaheadSuggested</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
-</blockquote>
-<p><strong><code>Experimental</code></strong></p>
 <p>Attaches event handler <code>fnFunction</code> to the #event:typeaheadSuggested typeaheadSuggested event
 of this <code>sap.ui.mdc.ValueHelp</code>.</p>
 <p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
 otherwise it will be bound to this <code>sap.ui.mdc.ValueHelp</code> itself.</p>
 <p>This event is fired after a suggested item has been found for a type-ahead.</p>
+<h4>Call Signature</h4>
+<blockquote>
+<p><strong>attachTypeaheadSuggested</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
+</blockquote>
+<p><strong><code>Experimental</code></strong></p>
 <h5>Parameters</h5>
 <h6>fnFunction</h6>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -456,6 +451,11 @@ otherwise it will be bound to this <code>sap.ui.mdc.ValueHelp</code> itself.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Since</h5>
 <p>1.120.0</p>
+<p>Attaches event handler <code>fnFunction</code> to the #event:typeaheadSuggested typeaheadSuggested event
+of this <code>sap.ui.mdc.ValueHelp</code>.</p>
+<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
+otherwise it will be bound to this <code>sap.ui.mdc.ValueHelp</code> itself.</p>
+<p>This event is fired after a suggested item has been found for a type-ahead.</p>
 <hr>
 <h3>destroyDialog()</h3>
 <blockquote>
@@ -609,9 +609,6 @@ of this <code>sap.ui.mdc.ValueHelp</code>.</p>
 <p><strong>detachTypeaheadSuggested</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
-<p>Detaches event handler <code>fnFunction</code> from the #event:typeaheadSuggested typeaheadSuggested event
-of this <code>sap.ui.mdc.ValueHelp</code>.</p>
-<p>The passed function and listener object must match the ones used for event registration.</p>
 <h4>Parameters</h4>
 <h5>fnFunction</h5>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -624,13 +621,15 @@ of this <code>sap.ui.mdc.ValueHelp</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.120.0</p>
+<p>Detaches event handler <code>fnFunction</code> from the #event:typeaheadSuggested typeaheadSuggested event
+of this <code>sap.ui.mdc.ValueHelp</code>.</p>
+<p>The passed function and listener object must match the ones used for event registration.</p>
 <hr>
 <h3>fireClosed()</h3>
 <blockquote>
 <p><strong>fireClosed</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
-<p>Fires event #event:closed closed to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><code>object</code></p>
@@ -640,13 +639,13 @@ of this <code>sap.ui.mdc.ValueHelp</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:closed closed to attached listeners.</p>
 <hr>
 <h3>fireDisconnect()</h3>
 <blockquote>
 <p><strong>fireDisconnect</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
-<p>Fires event #event:disconnect disconnect to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><code>object</code></p>
@@ -656,13 +655,13 @@ of this <code>sap.ui.mdc.ValueHelp</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:disconnect disconnect to attached listeners.</p>
 <hr>
 <h3>fireNavigated()</h3>
 <blockquote>
 <p><strong>fireNavigated</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
-<p>Fires event #event:navigated navigated to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/ValueHelp$NavigatedEventParameters.html"><code>ValueHelp$NavigatedEventParameters</code></a></p>
@@ -672,13 +671,13 @@ of this <code>sap.ui.mdc.ValueHelp</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:navigated navigated to attached listeners.</p>
 <hr>
 <h3>fireOpen()</h3>
 <blockquote>
 <p><strong>fireOpen</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
-<p>Fires event #event:open open to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/ValueHelp$OpenEventParameters.html"><code>ValueHelp$OpenEventParameters</code></a></p>
@@ -688,13 +687,13 @@ of this <code>sap.ui.mdc.ValueHelp</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:open open to attached listeners.</p>
 <hr>
 <h3>fireOpened()</h3>
 <blockquote>
 <p><strong>fireOpened</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
-<p>Fires event #event:opened opened to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/ValueHelp$OpenedEventParameters.html"><code>ValueHelp$OpenedEventParameters</code></a></p>
@@ -704,13 +703,13 @@ of this <code>sap.ui.mdc.ValueHelp</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:opened opened to attached listeners.</p>
 <hr>
 <h3>fireSelect()</h3>
 <blockquote>
 <p><strong>fireSelect</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
-<p>Fires event #event:select select to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/ValueHelp$SelectEventParameters.html"><code>ValueHelp$SelectEventParameters</code></a></p>
@@ -720,13 +719,13 @@ of this <code>sap.ui.mdc.ValueHelp</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:select select to attached listeners.</p>
 <hr>
 <h3>fireSwitchToValueHelp()</h3>
 <blockquote>
 <p><strong>fireSwitchToValueHelp</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
-<p>Fires event #event:switchToValueHelp switchToValueHelp to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><code>object</code></p>
@@ -736,13 +735,13 @@ of this <code>sap.ui.mdc.ValueHelp</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:switchToValueHelp switchToValueHelp to attached listeners.</p>
 <hr>
 <h3>fireTypeaheadSuggested()</h3>
 <blockquote>
 <p><strong>fireTypeaheadSuggested</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
-<p>Fires event #event:typeaheadSuggested typeaheadSuggested to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/ValueHelp$TypeaheadSuggestedEventParameters.html"><code>ValueHelp$TypeaheadSuggestedEventParameters</code></a></p>
@@ -754,6 +753,7 @@ of this <code>sap.ui.mdc.ValueHelp</code>.</p>
 <p>1.120.0</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:typeaheadSuggested typeaheadSuggested to attached listeners.</p>
 <hr>
 <h3>getConditions()</h3>
 <blockquote>
@@ -963,7 +963,7 @@ information contained in <code>oClassInfo</code>.</p>
 <p><code>string</code></p>
 <p>Name of the class being created</p>
 <h5>oClassInfo?</h5>
-<p><a href="../../../../../../sap.f/namespaces/sap/type-aliases/ClassInfo.html"><code>ClassInfo</code></a>&lt;<code>T</code>, <code>ValueHelp</code>&gt;</p>
+<p><code>ClassInfo</code>&lt;<code>T</code>, <code>ValueHelp</code>&gt;</p>
 <p>Object literal with information about the class</p>
 <h5>FNMetaImpl?</h5>
 <p><code>Function</code></p>
@@ -988,6 +988,6 @@ used by this class</p>
 <p><a href="../../Element/classes/Element1.html"><code>Element1</code></a>.<a href="../../Element/classes/Element1.html#getmetadata-1"><code>getMetadata</code></a></p>
 <hr>
 
-<footer>Generated from <code>@openui5/types@1.120.46</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@openui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

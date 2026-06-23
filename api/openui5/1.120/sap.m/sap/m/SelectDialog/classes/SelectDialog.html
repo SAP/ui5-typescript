@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Class: SelectDialog — OpenUI5 TypeScript API</title>
-<meta name="description" content="Class: SelectDialog — OpenUI5 TypeScript API Reference (1.120.46)">
+<meta name="description" content="Class: SelectDialog — OpenUI5 TypeScript API Reference (1.120.0)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/openui5/1.120/sap.m/sap/m/SelectDialog/classes/SelectDialog.html">
 <meta property="og:title" content="Class: SelectDialog — OpenUI5 TypeScript API">
-<meta property="og:description" content="Class: SelectDialog — OpenUI5 TypeScript API Reference (1.120.46)">
+<meta property="og:description" content="Class: SelectDialog — OpenUI5 TypeScript API Reference (1.120.0)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/openui5/1.120/sap.m/sap/m/SelectDialog/classes/SelectDialog.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,9 +33,9 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../index.html">OpenUI5 API</a> › <a href="../../../../../sap.m/README.html">sap.m</a> › sap › m › <a href="../../../../../sap.m/sap/m/SelectDialog/README.html">SelectDialog</a> › classes</nav>
-<p><a href="../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.46)</strong></a></p>
+<p><a href="../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.0)</strong></a></p>
 <hr>
-<p><a href="../../../../../README.html">OpenUI5 TypeScript API (1.120.46)</a> / <a href="../../../../README.html">sap.m</a> / <a href="../README.html">sap/m/SelectDialog</a> / SelectDialog</p>
+<p><a href="../../../../../README.html">OpenUI5 TypeScript API (1.120.0)</a> / <a href="../../../../README.html">sap.m</a> / <a href="../README.html">sap/m/SelectDialog</a> / SelectDialog</p>
 <h1>Class: SelectDialog</h1>
 <pre class="sig"><span class="kw">import</span> SelectDialog <span class="kw">from</span> <span class="str">"sap/m/SelectDialog"</span>;</pre>
 <p>Overview: A SelectDialog is a dialog containing a list, search functionality to filter it and a confirmation/cancel
@@ -329,14 +329,14 @@ otherwise it will be bound to this <code>sap.m.SelectDialog</code> itself.</p>
 <blockquote>
 <p><strong>clearSelection</strong>(): <code>this</code></p>
 </blockquote>
-<p>Clears the selections in the <code>sap.m.SelectDialog</code> and its internally used <code>sap.m.List</code> control.</p>
-<p>Use this method whenever the application logic expects changes in the model providing data for the SelectDialog
-that will modify the position of the items, or will change the set with completely new items.</p>
 <h4>Returns</h4>
 <p><code>this</code></p>
 <p><code>this</code> to allow method chaining.</p>
 <h4>Since</h4>
 <p>1.68</p>
+<p>Clears the selections in the <code>sap.m.SelectDialog</code> and its internally used <code>sap.m.List</code> control.</p>
+<p>Use this method whenever the application logic expects changes in the model providing data for the SelectDialog
+that will modify the position of the items, or will change the set with completely new items.</p>
 <hr>
 <h3>destroyItems()</h3>
 <blockquote>
@@ -419,7 +419,6 @@ that will modify the position of the items, or will change the set with complete
 <blockquote>
 <p><strong>fireCancel</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
-<p>Fires event #event:cancel cancel to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><code>object</code></p>
@@ -429,12 +428,12 @@ that will modify the position of the items, or will change the set with complete
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:cancel cancel to attached listeners.</p>
 <hr>
 <h3>fireConfirm()</h3>
 <blockquote>
 <p><strong>fireConfirm</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
-<p>Fires event #event:confirm confirm to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/SelectDialog$ConfirmEventParameters.html"><code>SelectDialog$ConfirmEventParameters</code></a></p>
@@ -444,12 +443,12 @@ that will modify the position of the items, or will change the set with complete
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:confirm confirm to attached listeners.</p>
 <hr>
 <h3>fireLiveChange()</h3>
 <blockquote>
 <p><strong>fireLiveChange</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
-<p>Fires event #event:liveChange liveChange to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/SelectDialog$LiveChangeEventParameters.html"><code>SelectDialog$LiveChangeEventParameters</code></a></p>
@@ -459,12 +458,12 @@ that will modify the position of the items, or will change the set with complete
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:liveChange liveChange to attached listeners.</p>
 <hr>
 <h3>fireSearch()</h3>
 <blockquote>
 <p><strong>fireSearch</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
-<p>Fires event #event:search search to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/SelectDialog$SearchEventParameters.html"><code>SelectDialog$SearchEventParameters</code></a></p>
@@ -474,18 +473,19 @@ that will modify the position of the items, or will change the set with complete
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:search search to attached listeners.</p>
 <hr>
 <h3>getConfirmButtonText()</h3>
 <blockquote>
 <p><strong>getConfirmButtonText</strong>(): <code>string</code></p>
 </blockquote>
-<p>Gets current value of property #getConfirmButtonText confirmButtonText.</p>
-<p>Overwrites the default text for the confirmation button.</p>
 <h4>Returns</h4>
 <p><code>string</code></p>
 <p>Value of property <code>confirmButtonText</code></p>
 <h4>Since</h4>
 <p>1.68</p>
+<p>Gets current value of property #getConfirmButtonText confirmButtonText.</p>
+<p>Overwrites the default text for the confirmation button.</p>
 <hr>
 <h3>getContentHeight()</h3>
 <blockquote>
@@ -520,20 +520,25 @@ that will modify the position of the items, or will change the set with complete
 <blockquote>
 <p><strong>getDraggable</strong>(): <code>boolean</code></p>
 </blockquote>
-<p>Gets current value of property #getDraggable draggable.</p>
-<p>When set to <code>true</code>, the SelectDialog is draggable by its header. The default value is <code>false</code>. <strong>Note</strong>:
-The SelectDialog can be draggable only in desktop mode.</p>
-<p>Default value is <code>false</code>.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>Value of property <code>draggable</code></p>
 <h4>Since</h4>
 <p>1.70</p>
+<p>Gets current value of property #getDraggable draggable.</p>
+<p>When set to <code>true</code>, the SelectDialog is draggable by its header. The default value is <code>false</code>. <strong>Note</strong>:
+The SelectDialog can be draggable only in desktop mode.</p>
+<p>Default value is <code>false</code>.</p>
 <hr>
 <h3>getGrowing()</h3>
 <blockquote>
 <p><strong>getGrowing</strong>(): <code>boolean</code></p>
 </blockquote>
+<h4>Returns</h4>
+<p><code>boolean</code></p>
+<p>Value of property <code>growing</code></p>
+<h4>Since</h4>
+<p>1.56</p>
 <p>Gets current value of property #getGrowing growing.</p>
 <p>If set to <code>true</code>, enables the growing feature of the control to load more items by requesting from the
 bound model (progressive loading). <strong>Note:</strong> This feature only works when an <code>items</code> aggregation is bound.
@@ -542,11 +547,6 @@ is set to <code>true</code>, selected count (if present) and search, will work f
 To make sure that all items in the table are loaded at once and the above features work properly, we
 recommend setting the <code>growing</code> property to false.</p>
 <p>Default value is <code>true</code>.</p>
-<h4>Returns</h4>
-<p><code>boolean</code></p>
-<p>Value of property <code>growing</code></p>
-<h4>Since</h4>
-<p>1.56</p>
 <hr>
 <h3>getGrowingThreshold()</h3>
 <blockquote>
@@ -594,6 +594,11 @@ dialog but other combinations are also possible.</p>
 <blockquote>
 <p><strong>getRememberSelections</strong>(): <code>boolean</code></p>
 </blockquote>
+<h4>Returns</h4>
+<p><code>boolean</code></p>
+<p>Value of property <code>rememberSelections</code></p>
+<h4>Since</h4>
+<p>1.18</p>
 <p>Gets current value of property #getRememberSelections rememberSelections.</p>
 <p>This flag controls whether the dialog clears the selection after the confirm event has been fired. If
 the dialog needs to be opened multiple times in the same context to allow for corrections of previous
@@ -601,25 +606,20 @@ user inputs, set this flag to <code>true</code>.</p>
 <p><strong>Note:</strong> The sap.m.SelectDialog uses sap.m.ListBase#rememberSelections this property of the
 ListBase and therefore its behavior and restrictions also apply here.</p>
 <p>Default value is <code>false</code>.</p>
-<h4>Returns</h4>
-<p><code>boolean</code></p>
-<p>Value of property <code>rememberSelections</code></p>
-<h4>Since</h4>
-<p>1.18</p>
 <hr>
 <h3>getResizable()</h3>
 <blockquote>
 <p><strong>getResizable</strong>(): <code>boolean</code></p>
 </blockquote>
-<p>Gets current value of property #getResizable resizable.</p>
-<p>When set to <code>true</code>, the SelectDialog will have a resize handler in its bottom right corner. The default
-value is <code>false</code>. <strong>Note</strong>: The SelectDialog can be resizable only in desktop mode.</p>
-<p>Default value is <code>false</code>.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>Value of property <code>resizable</code></p>
 <h4>Since</h4>
 <p>1.70</p>
+<p>Gets current value of property #getResizable resizable.</p>
+<p>When set to <code>true</code>, the SelectDialog will have a resize handler in its bottom right corner. The default
+value is <code>false</code>. <strong>Note</strong>: The SelectDialog can be resizable only in desktop mode.</p>
+<p>Default value is <code>false</code>.</p>
 <hr>
 <h3>getSearchPlaceholder()</h3>
 <blockquote>
@@ -634,6 +634,11 @@ value is <code>false</code>. <strong>Note</strong>: The SelectDialog can be resi
 <blockquote>
 <p><strong>getShowClearButton</strong>(): <code>boolean</code></p>
 </blockquote>
+<h4>Returns</h4>
+<p><code>boolean</code></p>
+<p>Value of property <code>showClearButton</code></p>
+<h4>Since</h4>
+<p>1.58</p>
 <p>Gets current value of property #getShowClearButton showClearButton.</p>
 <p>This flag controls whether the Clear button is shown. When set to <code>true</code>, it provides a way to clear
 selection mode in Select Dialog. We recommended enabling of the Clear button in the following cases,
@@ -644,11 +649,6 @@ Clear button could be used for clearing selection. In case the application store
 Select Dialog to edit/maintain it. **Note:**When used with oData, only the loaded selections will be
 cleared.</p>
 <p>Default value is <code>false</code>.</p>
-<h4>Returns</h4>
-<p><code>boolean</code></p>
-<p>Value of property <code>showClearButton</code></p>
-<h4>Since</h4>
-<p>1.58</p>
 <hr>
 <h3>getTitle()</h3>
 <blockquote>
@@ -664,16 +664,16 @@ cleared.</p>
 <blockquote>
 <p><strong>getTitleAlignment</strong>(): <code>&quot;None&quot;</code> | <code>&quot;Auto&quot;</code> | <code>&quot;Center&quot;</code> | <a href="../../library/enumerations/TitleAlignment.html"><code>TitleAlignment</code></a> | <code>&quot;Start&quot;</code></p>
 </blockquote>
-<p>Gets current value of property #getTitleAlignment titleAlignment.</p>
-<p>Specifies the Title alignment (theme specific). If set to <code>TitleAlignment.Auto</code>, the Title will be aligned
-as it is set in the theme (if not set, the default value is <code>center</code>); Other possible values are <code>TitleAlignment.Start</code>
-(left or right depending on LTR/RTL), and <code>TitleAlignment.Center</code> (centered)</p>
-<p>Default value is <code>Auto</code>.</p>
 <h4>Returns</h4>
 <p><code>&quot;None&quot;</code> | <code>&quot;Auto&quot;</code> | <code>&quot;Center&quot;</code> | <a href="../../library/enumerations/TitleAlignment.html"><code>TitleAlignment</code></a> | <code>&quot;Start&quot;</code></p>
 <p>Value of property <code>titleAlignment</code></p>
 <h4>Since</h4>
 <p>1.72</p>
+<p>Gets current value of property #getTitleAlignment titleAlignment.</p>
+<p>Specifies the Title alignment (theme specific). If set to <code>TitleAlignment.Auto</code>, the Title will be aligned
+as it is set in the theme (if not set, the default value is <code>center</code>); Other possible values are <code>TitleAlignment.Start</code>
+(left or right depending on LTR/RTL), and <code>TitleAlignment.Center</code> (centered)</p>
+<p>Default value is <code>Auto</code>.</p>
 <hr>
 <h3>hasStyleClass()</h3>
 <blockquote>
@@ -722,24 +722,25 @@ the last position</p>
 <blockquote>
 <p><strong>invalidate</strong>(): <code>this</code></p>
 </blockquote>
-<p>Invalidates the dialog instead of this control (we don&#39;t have a renderer)</p>
 <h4>Returns</h4>
 <p><code>this</code></p>
 <p><code>this</code> pointer for chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Invalidates the dialog instead of this control (we don&#39;t have a renderer)</p>
 <h4>Overrides</h4>
 <p><a href="../../SelectDialogBase/classes/SelectDialogBase.html"><code>SelectDialogBase</code></a>.<a href="../../SelectDialogBase/classes/SelectDialogBase.html#invalidate"><code>invalidate</code></a></p>
 <hr>
 <h3>onAfterRendering()</h3>
 <blockquote>
-<p><strong>onAfterRendering</strong>(): <code>void</code></p>
+<p><strong>onAfterRendering</strong>(): <code>this</code></p>
 </blockquote>
-<p>Is called after renderer is finished to show the busy state</p>
 <h4>Returns</h4>
-<p><code>void</code></p>
+<p><code>this</code></p>
+<p><code>this</code> pointer for chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Is called after renderer is finished to show the busy state</p>
 <h4>Overrides</h4>
 <p><a href="../../SelectDialogBase/classes/SelectDialogBase.html"><code>SelectDialogBase</code></a>.<a href="../../SelectDialogBase/classes/SelectDialogBase.html#onafterrendering"><code>onAfterRendering</code></a></p>
 <hr>
@@ -955,14 +956,6 @@ binding</p>
 <blockquote>
 <p><strong>setRememberSelections</strong>(<code>bRememberSelections?</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getRememberSelections rememberSelections.</p>
-<p>This flag controls whether the dialog clears the selection after the confirm event has been fired. If
-the dialog needs to be opened multiple times in the same context to allow for corrections of previous
-user inputs, set this flag to <code>true</code>.</p>
-<p><strong>Note:</strong> The sap.m.SelectDialog uses sap.m.ListBase#rememberSelections this property of the
-ListBase and therefore its behavior and restrictions also apply here.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>false</code>.</p>
 <h4>Parameters</h4>
 <h5>bRememberSelections?</h5>
 <p><code>boolean</code></p>
@@ -972,6 +965,14 @@ ListBase and therefore its behavior and restrictions also apply here.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.18</p>
+<p>Sets a new value for property #getRememberSelections rememberSelections.</p>
+<p>This flag controls whether the dialog clears the selection after the confirm event has been fired. If
+the dialog needs to be opened multiple times in the same context to allow for corrections of previous
+user inputs, set this flag to <code>true</code>.</p>
+<p><strong>Note:</strong> The sap.m.SelectDialog uses sap.m.ListBase#rememberSelections this property of the
+ListBase and therefore its behavior and restrictions also apply here.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>false</code>.</p>
 <hr>
 <h3>setResizable()</h3>
 <blockquote>
@@ -1029,12 +1030,6 @@ ListBase and therefore its behavior and restrictions also apply here.</p>
 <blockquote>
 <p><strong>setTitleAlignment</strong>(<code>sTitleAlignment?</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getTitleAlignment titleAlignment.</p>
-<p>Specifies the Title alignment (theme specific). If set to <code>TitleAlignment.Auto</code>, the Title will be aligned
-as it is set in the theme (if not set, the default value is <code>center</code>); Other possible values are <code>TitleAlignment.Start</code>
-(left or right depending on LTR/RTL), and <code>TitleAlignment.Center</code> (centered)</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>Auto</code>.</p>
 <h4>Parameters</h4>
 <h5>sTitleAlignment?</h5>
 <p><code>&quot;None&quot;</code> | <code>&quot;Auto&quot;</code> | <code>&quot;Center&quot;</code> | <a href="../../library/enumerations/TitleAlignment.html"><code>TitleAlignment</code></a> | <code>&quot;Start&quot;</code></p>
@@ -1044,6 +1039,12 @@ as it is set in the theme (if not set, the default value is <code>center</code>)
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.72</p>
+<p>Sets a new value for property #getTitleAlignment titleAlignment.</p>
+<p>Specifies the Title alignment (theme specific). If set to <code>TitleAlignment.Auto</code>, the Title will be aligned
+as it is set in the theme (if not set, the default value is <code>center</code>); Other possible values are <code>TitleAlignment.Start</code>
+(left or right depending on LTR/RTL), and <code>TitleAlignment.Center</code> (centered)</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>Auto</code>.</p>
 <hr>
 <h3>toggleStyleClass()</h3>
 <blockquote>
@@ -1079,7 +1080,7 @@ contained in <code>oClassInfo</code>.</p>
 <p><code>string</code></p>
 <p>Name of the class being created</p>
 <h5>oClassInfo?</h5>
-<p><a href="../../../../../sap.f/namespaces/sap/type-aliases/ClassInfo.html"><code>ClassInfo</code></a>&lt;<code>T</code>, <code>SelectDialog</code>&gt;</p>
+<p><code>ClassInfo</code>&lt;<code>T</code>, <code>SelectDialog</code>&gt;</p>
 <p>Object literal with information about the class</p>
 <h5>FNMetaImpl?</h5>
 <p><code>Function</code></p>
@@ -1103,6 +1104,6 @@ used by this class</p>
 <p><a href="../../SelectDialogBase/classes/SelectDialogBase.html"><code>SelectDialogBase</code></a>.<a href="../../SelectDialogBase/classes/SelectDialogBase.html#getmetadata-1"><code>getMetadata</code></a></p>
 <hr>
 
-<footer>Generated from <code>@openui5/types@1.120.46</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@openui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

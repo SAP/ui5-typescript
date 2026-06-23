@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Interface: $CheckBoxSettings — OpenUI5 TypeScript API</title>
-<meta name="description" content="Interface: $CheckBoxSettings — OpenUI5 TypeScript API Reference (1.120.46)">
+<meta name="description" content="Interface: $CheckBoxSettings — OpenUI5 TypeScript API Reference (1.120.0)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/openui5/1.120/sap.m/sap/m/CheckBox/interfaces/$CheckBoxSettings.html">
 <meta property="og:title" content="Interface: $CheckBoxSettings — OpenUI5 TypeScript API">
-<meta property="og:description" content="Interface: $CheckBoxSettings — OpenUI5 TypeScript API Reference (1.120.46)">
+<meta property="og:description" content="Interface: $CheckBoxSettings — OpenUI5 TypeScript API Reference (1.120.0)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/openui5/1.120/sap.m/sap/m/CheckBox/interfaces/$CheckBoxSettings.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,12 +33,11 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../index.html">OpenUI5 API</a> › <a href="../../../../../sap.m/README.html">sap.m</a> › sap › m › <a href="../../../../../sap.m/sap/m/CheckBox/README.html">CheckBox</a> › interfaces</nav>
-<p><a href="../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.46)</strong></a></p>
+<p><a href="../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.0)</strong></a></p>
 <hr>
-<p><a href="../../../../../README.html">OpenUI5 TypeScript API (1.120.46)</a> / <a href="../../../../README.html">sap.m</a> / <a href="../README.html">sap/m/CheckBox</a> / $CheckBoxSettings</p>
+<p><a href="../../../../../README.html">OpenUI5 TypeScript API (1.120.0)</a> / <a href="../../../../README.html">sap.m</a> / <a href="../README.html">sap/m/CheckBox</a> / $CheckBoxSettings</p>
 <h1>Interface: $CheckBoxSettings</h1>
 <pre class="sig"><span class="kw">import</span> { $CheckBoxSettings } <span class="kw">from</span> <span class="str">"sap/m/CheckBox"</span>;</pre>
-<p>Describes the settings that can be provided to the CheckBox constructor.</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../../../../sap.ui.core/sap/ui/core/Control/interfaces/$ControlSettings.html"><code>$ControlSettings</code></a></li>
@@ -67,20 +66,20 @@ state. Default value is &#39;true&#39;</p>
 <blockquote>
 <p><code>optional</code> <strong>displayOnly?</strong>: <code>boolean</code> | <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
+<h4>Since</h4>
+<p>1.54</p>
 <p>Determines whether the <code>CheckBox</code> is in display only state.</p>
 <p>When set to <code>true</code>, the <code>CheckBox</code> is not interactive, not editable, not focusable and not in the tab
 chain. This setting is used for forms in review mode.</p>
 <p> When the property <code>enabled</code> is set to <code>false</code> this property has no effect.</p>
-<h4>Since</h4>
-<p>1.54</p>
 <hr>
 <h3>editable?</h3>
 <blockquote>
 <p><code>optional</code> <strong>editable?</strong>: <code>boolean</code> | <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<p>Specifies whether the user shall be allowed to edit the state of the checkbox</p>
 <h4>Since</h4>
 <p>1.25</p>
+<p>Specifies whether the user shall be allowed to edit the state of the checkbox</p>
 <hr>
 <h3>enabled?</h3>
 <blockquote>
@@ -100,6 +99,8 @@ via submit.</p>
 <blockquote>
 <p><code>optional</code> <strong>partiallySelected?</strong>: <code>boolean</code> | <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
+<h4>Since</h4>
+<p>1.58</p>
 <p>Determines whether the <code>CheckBox</code> is displayed as partially selected.</p>
 <p><strong>Note:</strong> This property leads only to visual change of the checkbox and the state cannot be achieved
 by user interaction. The visual state depends on the value of the <code>selected</code> property:
@@ -107,8 +108,6 @@ by user interaction. The visual state depends on the value of the <code>selected
 <pre><code> - If `selected` = `true` and `partiallySelected` = `false`, the control is displayed as selected
  - If `selected` = `false`, the control is displayed as not selected regardless of what is set for `partiallySelected`
 </code></pre>
-<h4>Since</h4>
-<p>1.58</p>
 <hr>
 <h3>select?</h3>
 <blockquote>
@@ -153,19 +152,19 @@ from its parent container.</p>
 <blockquote>
 <p><code>optional</code> <strong>useEntireWidth?</strong>: <code>boolean</code> | <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<p>Indicates if the given width will be applied to the control as a whole or to its label only.</p>
-<p><strong>Note:</strong> by default the width is set to the label</p>
 <h4>Since</h4>
 <p>1.52</p>
+<p>Indicates if the given width will be applied to the control as a whole or to its label only.</p>
+<p><strong>Note:</strong> by default the width is set to the label</p>
 <hr>
 <h3>valueState?</h3>
 <blockquote>
 <p><code>optional</code> <strong>valueState?</strong>: <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code> | <code>&quot;None&quot;</code> | <a href="../../../../../sap.ui.core/sap/ui/core/library/enumerations/ValueState.html"><code>ValueState</code></a> | <code>&quot;Error&quot;</code> | <code>&quot;Information&quot;</code> | <code>&quot;Success&quot;</code> | <code>&quot;Warning&quot;</code></p>
 </blockquote>
-<p>Accepts the core enumeration ValueState.type that supports &#39;None&#39;, &#39;Error&#39;, &#39;Warning&#39;, &#39;Success&#39; and
-&#39;Information&#39;.</p>
 <h4>Since</h4>
 <p>1.38</p>
+<p>Accepts the core enumeration ValueState.type that supports &#39;None&#39;, &#39;Error&#39;, &#39;Warning&#39;, &#39;Success&#39; and
+&#39;Information&#39;.</p>
 <hr>
 <h3>width?</h3>
 <blockquote>
@@ -179,11 +178,11 @@ and label). Otherwise, <code>width</code> is applied to the label only.</p>
 <blockquote>
 <p><code>optional</code> <strong>wrapping?</strong>: <code>boolean</code> | <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<p>Determines whether the label&#39;s text is wrapped.</p>
-<p>When set to <code>false</code> (default), the label&#39;s text is truncated with ellipsis at the end.</p>
 <h4>Since</h4>
 <p>1.54</p>
+<p>Determines whether the label&#39;s text is wrapped.</p>
+<p>When set to <code>false</code> (default), the label&#39;s text is truncated with ellipsis at the end.</p>
 
-<footer>Generated from <code>@openui5/types@1.120.46</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@openui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

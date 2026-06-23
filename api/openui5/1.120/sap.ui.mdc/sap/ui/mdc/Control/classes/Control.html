@@ -2,12 +2,12 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>Abstract Class: Control — OpenUI5 TypeScript API</title>
-<meta name="description" content="Abstract Class: Control — OpenUI5 TypeScript API Reference (1.120.46)">
+<title>Class: Control — OpenUI5 TypeScript API</title>
+<meta name="description" content="Class: Control — OpenUI5 TypeScript API Reference (1.120.0)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/openui5/1.120/sap.ui.mdc/sap/ui/mdc/Control/classes/Control.html">
-<meta property="og:title" content="Abstract Class: Control — OpenUI5 TypeScript API">
-<meta property="og:description" content="Abstract Class: Control — OpenUI5 TypeScript API Reference (1.120.46)">
+<meta property="og:title" content="Class: Control — OpenUI5 TypeScript API">
+<meta property="og:description" content="Class: Control — OpenUI5 TypeScript API Reference (1.120.0)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/openui5/1.120/sap.ui.mdc/sap/ui/mdc/Control/classes/Control.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,17 +33,17 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../index.html">OpenUI5 API</a> › <a href="../../../../../../sap.ui.mdc/README.html">sap.ui.mdc</a> › sap › ui › mdc › <a href="../../../../../../sap.ui.mdc/sap/ui/mdc/Control/README.html">Control</a> › classes</nav>
-<p><a href="../../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.46)</strong></a></p>
+<p><a href="../../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.0)</strong></a></p>
 <hr>
-<p><a href="../../../../../../README.html">OpenUI5 TypeScript API (1.120.46)</a> / <a href="../../../../../README.html">sap.ui.mdc</a> / <a href="../README.html">sap/ui/mdc/Control</a> / Control</p>
-<h1>Abstract Class: Control</h1>
+<p><a href="../../../../../../README.html">OpenUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../README.html">sap.ui.mdc</a> / <a href="../README.html">sap/ui/mdc/Control</a> / Control</p>
+<h1>Class: Control</h1>
 <pre class="sig"><span class="kw">import</span> Control <span class="kw">from</span> <span class="str">"sap/ui/mdc/Control"</span>;</pre>
 <p><strong><code>Experimental</code></strong></p>
-<p>The base class for controls in the <code>sap.ui.mdc</code> library providing delegate-related functionality (see
-sap.ui.mdc.mixin.DelegateMixin).</p>
 <h2>Since</h2>
 <p>1.61
  (since 1.61)</p>
+<p>The base class for controls in the <code>sap.ui.mdc</code> library providing delegate-related functionality (see
+sap.ui.mdc.mixin.DelegateMixin).</p>
 <h2>Extends</h2>
 <ul>
 <li><code>unknown</code></li>
@@ -100,32 +100,31 @@ be omitted, no matter whether <code>mSettings</code> is given.</p>
 <p><strong>awaitControlDelegate</strong>(): <code>Promise</code>&lt;<a href="../../BaseDelegate/interfaces/BaseDelegate.html"><code>BaseDelegate</code></a>&gt;</p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
-<p>Provides access to the delegate initialization <code>Promise</code>. <strong>Note:</strong> <code>initControlDelegate</code> must be called
-to start the delegate initialization</p>
 <h4>Returns</h4>
 <p><code>Promise</code>&lt;<a href="../../BaseDelegate/interfaces/BaseDelegate.html"><code>BaseDelegate</code></a>&gt;</p>
 <p>Returns a <code>Promise</code> reflecting the delegate initialization</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Provides access to the delegate initialization <code>Promise</code>. <strong>Note:</strong> <code>initControlDelegate</code> must be called
+to start the delegate initialization</p>
 <hr>
 <h3>awaitPropertyHelper()</h3>
 <blockquote>
 <p><strong>awaitPropertyHelper</strong>(): <code>Promise</code>&lt;<code>any</code>&gt;</p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
-<p>Provides access to the property helper initialization <code>Promise</code>.</p>
 <h4>Returns</h4>
 <p><code>Promise</code>&lt;<code>any</code>&gt;</p>
 <p>Returns a <code>Promise</code> that resolves with the property helper</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Provides access to the property helper initialization <code>Promise</code>.</p>
 <hr>
 <h3>finalizePropertyHelper()</h3>
 <blockquote>
 <p><strong>finalizePropertyHelper</strong>(<code>aProperties?</code>, <code>bFinal?</code>): <code>Promise</code>&lt;<code>any</code>&gt;</p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
-<p>Finalize the propertyHelper using the control&#39;s delegate.</p>
 <h4>Parameters</h4>
 <h5>aProperties?</h5>
 <p><code>object</code>[]</p>
@@ -138,6 +137,7 @@ to start the delegate initialization</p>
 <p>Returns a <code>Promise</code> that resolves with the property helper</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Finalize the propertyHelper using the control&#39;s delegate.</p>
 <hr>
 <h3>getControlDelegate()</h3>
 <blockquote>
@@ -164,12 +164,12 @@ to start the delegate initialization</p>
 <p><strong>getPropertyHelper</strong>(): <code>any</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
-<p>Returns the property helper instance, if available.</p>
 <h4>Returns</h4>
 <p><code>any</code></p>
 <p>The property helper</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Returns the property helper instance, if available.</p>
 <hr>
 <h3>getTypeMap()</h3>
 <blockquote>
@@ -186,7 +186,6 @@ to start the delegate initialization</p>
 <p><strong>getTypeUtil</strong>(): <code>any</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
-<p>Returns the <code>typeUtil</code> made available by a delegate module.</p>
 <h4>Returns</h4>
 <p><code>any</code></p>
 <p><code>TypeUtil</code> object</p>
@@ -194,13 +193,13 @@ to start the delegate initialization</p>
 <p>(since 1.115.0) - please see #getTypeMap</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Returns the <code>typeUtil</code> made available by a delegate module.</p>
 <hr>
 <h3>initControlDelegate()</h3>
 <blockquote>
 <p><strong>initControlDelegate</strong>(<code>oPreloadedModule?</code>): <code>Promise</code>&lt;<a href="../../BaseDelegate/interfaces/BaseDelegate.html"><code>BaseDelegate</code></a>&gt;</p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
-<p>Loads and initializes the delegate module related to the enhanced control.</p>
 <h4>Parameters</h4>
 <h5>oPreloadedModule?</h5>
 <p><a href="../../BaseDelegate/interfaces/BaseDelegate.html"><code>BaseDelegate</code></a></p>
@@ -210,13 +209,13 @@ to start the delegate initialization</p>
 <p>Returns a <code>Promise</code> that resolves the delegate module, if available</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Loads and initializes the delegate module related to the enhanced control.</p>
 <hr>
 <h3>initPropertyHelper()</h3>
 <blockquote>
 <p><strong>initPropertyHelper</strong>(<code>PropertyHelperClass?</code>, <code>aProperties?</code>, <code>bFinal?</code>): <code>Promise</code>&lt;<code>any</code>&gt;</p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
-<p>Loads and initializes the property helper related to the enhanced control.</p>
 <h4>Parameters</h4>
 <h5>PropertyHelperClass?</h5>
 <p><code>any</code></p>
@@ -232,18 +231,19 @@ to start the delegate initialization</p>
 <p>Returns a <code>Promise</code> that resolves with the property helper</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Loads and initializes the property helper related to the enhanced control.</p>
 <hr>
 <h3>isPropertyHelperFinal()</h3>
 <blockquote>
 <p><strong>isPropertyHelperFinal</strong>(): <code>boolean</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
-<p>Indicates if the control&#39;s propertyHelper already contains all available properties</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>Returns a <code>boolean</code> indicating the propertyHelper&#39;s final state</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Indicates if the control&#39;s propertyHelper already contains all available properties</p>
 <hr>
 <h3>extend()</h3>
 <blockquote>
@@ -261,7 +261,7 @@ contained in <code>oClassInfo</code>.</p>
 <p><code>string</code></p>
 <p>Name of the class being created</p>
 <h5>oClassInfo?</h5>
-<p><a href="../../../../../../sap.f/namespaces/sap/type-aliases/ClassInfo.html"><code>ClassInfo</code></a>&lt;<code>T</code>, <code>Control</code>&gt;</p>
+<p><code>ClassInfo</code>&lt;<code>T</code>, <code>Control</code>&gt;</p>
 <p>Object literal with information about the class</p>
 <h5>FNMetaImpl?</h5>
 <p><code>Function</code></p>
@@ -281,6 +281,6 @@ used by this class</p>
 <p><a href="../../../../../../sap.ui.core/sap/ui/core/ElementMetadata/classes/ElementMetadata.html"><code>ElementMetadata</code></a></p>
 <p>Metadata object describing this class</p>
 
-<footer>Generated from <code>@openui5/types@1.120.46</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@openui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

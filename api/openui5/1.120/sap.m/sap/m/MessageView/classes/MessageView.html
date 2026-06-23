@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Class: MessageView — OpenUI5 TypeScript API</title>
-<meta name="description" content="Class: MessageView — OpenUI5 TypeScript API Reference (1.120.46)">
+<meta name="description" content="Class: MessageView — OpenUI5 TypeScript API Reference (1.120.0)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/openui5/1.120/sap.m/sap/m/MessageView/classes/MessageView.html">
 <meta property="og:title" content="Class: MessageView — OpenUI5 TypeScript API">
-<meta property="og:description" content="Class: MessageView — OpenUI5 TypeScript API Reference (1.120.46)">
+<meta property="og:description" content="Class: MessageView — OpenUI5 TypeScript API Reference (1.120.0)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/openui5/1.120/sap.m/sap/m/MessageView/classes/MessageView.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,11 +33,13 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../index.html">OpenUI5 API</a> › <a href="../../../../../sap.m/README.html">sap.m</a> › sap › m › <a href="../../../../../sap.m/sap/m/MessageView/README.html">MessageView</a> › classes</nav>
-<p><a href="../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.46)</strong></a></p>
+<p><a href="../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.0)</strong></a></p>
 <hr>
-<p><a href="../../../../../README.html">OpenUI5 TypeScript API (1.120.46)</a> / <a href="../../../../README.html">sap.m</a> / <a href="../README.html">sap/m/MessageView</a> / MessageView</p>
+<p><a href="../../../../../README.html">OpenUI5 TypeScript API (1.120.0)</a> / <a href="../../../../README.html">sap.m</a> / <a href="../README.html">sap/m/MessageView</a> / MessageView</p>
 <h1>Class: MessageView</h1>
 <pre class="sig"><span class="kw">import</span> MessageView <span class="kw">from</span> <span class="str">"sap/m/MessageView"</span>;</pre>
+<h2>Since</h2>
+<p>1.46</p>
 <p>It is used to display a summarized list of different types of messages (error, warning, success, and
 information messages).</p>
 <p>Overview: It is meant to be embedded into container controls (such as sap.m.Popover, sap.m.ResponsivePopover,
@@ -66,8 +68,6 @@ a handler for the `activeTitlePress` event.  Responsive Behavior: The responsive
 is determined by the container in which it is embedded. For that reason the control could not be visualized
 if the container’s sizes are not defined.
 </code></pre>
-<h2>Since</h2>
-<p>1.46</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></li>
@@ -131,11 +131,6 @@ See:
 <blockquote>
 <p><strong>attachActiveTitlePress</strong>(<code>oData</code>, <code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
-<p>Attaches event handler <code>fnFunction</code> to the #event:activeTitlePress activeTitlePress event of
-this <code>sap.m.MessageView</code>.</p>
-<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
-otherwise it will be bound to this <code>sap.m.MessageView</code> itself.</p>
-<p>Event fired when an activeTitle of a MessageItem is pressed.</p>
 <h5>Parameters</h5>
 <h6>oData</h6>
 <p><code>object</code></p>
@@ -152,15 +147,15 @@ object when firing the event</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Since</h5>
 <p>1.58</p>
-<h4>Call Signature</h4>
-<blockquote>
-<p><strong>attachActiveTitlePress</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
-</blockquote>
 <p>Attaches event handler <code>fnFunction</code> to the #event:activeTitlePress activeTitlePress event of
 this <code>sap.m.MessageView</code>.</p>
 <p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
 otherwise it will be bound to this <code>sap.m.MessageView</code> itself.</p>
 <p>Event fired when an activeTitle of a MessageItem is pressed.</p>
+<h4>Call Signature</h4>
+<blockquote>
+<p><strong>attachActiveTitlePress</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
+</blockquote>
 <h5>Parameters</h5>
 <h6>fnFunction</h6>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -173,16 +168,17 @@ otherwise it will be bound to this <code>sap.m.MessageView</code> itself.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Since</h5>
 <p>1.58</p>
+<p>Attaches event handler <code>fnFunction</code> to the #event:activeTitlePress activeTitlePress event of
+this <code>sap.m.MessageView</code>.</p>
+<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
+otherwise it will be bound to this <code>sap.m.MessageView</code> itself.</p>
+<p>Event fired when an activeTitle of a MessageItem is pressed.</p>
 <hr>
 <h3><del>attachAfterOpen()</del></h3>
 <h4>Call Signature</h4>
 <blockquote>
 <p><strong>attachAfterOpen</strong>(<code>oData</code>, <code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
-<p>Attaches event handler <code>fnFunction</code> to the #event:afterOpen afterOpen event of this <code>sap.m.MessageView</code>.</p>
-<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
-otherwise it will be bound to this <code>sap.m.MessageView</code> itself.</p>
-<p>Event fired after the popover is opened.</p>
 <h5>Parameters</h5>
 <h6>oData</h6>
 <p><code>object</code></p>
@@ -199,14 +195,14 @@ object when firing the event</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Deprecated</h5>
 <p>(since 1.72) - Use the appropriate event from the wrapper control, instead.</p>
-<h4>Call Signature</h4>
-<blockquote>
-<p><strong>attachAfterOpen</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
-</blockquote>
 <p>Attaches event handler <code>fnFunction</code> to the #event:afterOpen afterOpen event of this <code>sap.m.MessageView</code>.</p>
 <p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
 otherwise it will be bound to this <code>sap.m.MessageView</code> itself.</p>
 <p>Event fired after the popover is opened.</p>
+<h4>Call Signature</h4>
+<blockquote>
+<p><strong>attachAfterOpen</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
+</blockquote>
 <h5>Parameters</h5>
 <h6>fnFunction</h6>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -219,6 +215,10 @@ otherwise it will be bound to this <code>sap.m.MessageView</code> itself.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Deprecated</h5>
 <p>(since 1.72) - Use the appropriate event from the wrapper control, instead.</p>
+<p>Attaches event handler <code>fnFunction</code> to the #event:afterOpen afterOpen event of this <code>sap.m.MessageView</code>.</p>
+<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
+otherwise it will be bound to this <code>sap.m.MessageView</code> itself.</p>
+<p>Event fired after the popover is opened.</p>
 <hr>
 <h3>attachItemSelect()</h3>
 <h4>Call Signature</h4>
@@ -412,9 +412,6 @@ otherwise it will be bound to this <code>sap.m.MessageView</code> itself.</p>
 <blockquote>
 <p><strong>detachActiveTitlePress</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
-<p>Detaches event handler <code>fnFunction</code> from the #event:activeTitlePress activeTitlePress event of
-this <code>sap.m.MessageView</code>.</p>
-<p>The passed function and listener object must match the ones used for event registration.</p>
 <h4>Parameters</h4>
 <h5>fnFunction</h5>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -427,13 +424,14 @@ this <code>sap.m.MessageView</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.58</p>
+<p>Detaches event handler <code>fnFunction</code> from the #event:activeTitlePress activeTitlePress event of
+this <code>sap.m.MessageView</code>.</p>
+<p>The passed function and listener object must match the ones used for event registration.</p>
 <hr>
 <h3><del>detachAfterOpen()</del></h3>
 <blockquote>
 <p><strong>detachAfterOpen</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
-<p>Detaches event handler <code>fnFunction</code> from the #event:afterOpen afterOpen event of this <code>sap.m.MessageView</code>.</p>
-<p>The passed function and listener object must match the ones used for event registration.</p>
 <h4>Parameters</h4>
 <h5>fnFunction</h5>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -446,6 +444,8 @@ this <code>sap.m.MessageView</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Deprecated</h4>
 <p>(since 1.72) - Use the appropriate event from the wrapper control, instead.</p>
+<p>Detaches event handler <code>fnFunction</code> from the #event:afterOpen afterOpen event of this <code>sap.m.MessageView</code>.</p>
+<p>The passed function and listener object must match the ones used for event registration.</p>
 <hr>
 <h3>detachItemSelect()</h3>
 <blockquote>
@@ -520,7 +520,6 @@ this <code>sap.m.MessageView</code>.</p>
 <blockquote>
 <p><strong>fireActiveTitlePress</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
-<p>Fires event #event:activeTitlePress activeTitlePress to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/MessageView$ActiveTitlePressEventParameters.html"><code>MessageView$ActiveTitlePressEventParameters</code></a></p>
@@ -532,12 +531,12 @@ this <code>sap.m.MessageView</code>.</p>
 <p>1.58</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:activeTitlePress activeTitlePress to attached listeners.</p>
 <hr>
 <h3><del>fireAfterOpen()</del></h3>
 <blockquote>
 <p><strong>fireAfterOpen</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
-<p>Fires event #event:afterOpen afterOpen to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/MessageView$AfterOpenEventParameters.html"><code>MessageView$AfterOpenEventParameters</code></a></p>
@@ -549,12 +548,12 @@ this <code>sap.m.MessageView</code>.</p>
 <p>(since 1.72) - Use the appropriate event from the wrapper control, instead.</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:afterOpen afterOpen to attached listeners.</p>
 <hr>
 <h3>fireItemSelect()</h3>
 <blockquote>
 <p><strong>fireItemSelect</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
-<p>Fires event #event:itemSelect itemSelect to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/MessageView$ItemSelectEventParameters.html"><code>MessageView$ItemSelectEventParameters</code></a></p>
@@ -564,12 +563,12 @@ this <code>sap.m.MessageView</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:itemSelect itemSelect to attached listeners.</p>
 <hr>
 <h3>fireListSelect()</h3>
 <blockquote>
 <p><strong>fireListSelect</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
-<p>Fires event #event:listSelect listSelect to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/MessageView$ListSelectEventParameters.html"><code>MessageView$ListSelectEventParameters</code></a></p>
@@ -579,12 +578,12 @@ this <code>sap.m.MessageView</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:listSelect listSelect to attached listeners.</p>
 <hr>
 <h3>fireLongtextLoaded()</h3>
 <blockquote>
 <p><strong>fireLongtextLoaded</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
-<p>Fires event #event:longtextLoaded longtextLoaded to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><code>object</code></p>
@@ -594,12 +593,12 @@ this <code>sap.m.MessageView</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:longtextLoaded longtextLoaded to attached listeners.</p>
 <hr>
 <h3>fireUrlValidated()</h3>
 <blockquote>
 <p><strong>fireUrlValidated</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
-<p>Fires event #event:urlValidated urlValidated to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><code>object</code></p>
@@ -609,6 +608,7 @@ this <code>sap.m.MessageView</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:urlValidated urlValidated to attached listeners.</p>
 <hr>
 <h3>getAsyncDescriptionHandler()</h3>
 <blockquote>
@@ -828,7 +828,7 @@ contained in <code>oClassInfo</code>.</p>
 <p><code>string</code></p>
 <p>Name of the class being created</p>
 <h5>oClassInfo?</h5>
-<p><a href="../../../../../sap.f/namespaces/sap/type-aliases/ClassInfo.html"><code>ClassInfo</code></a>&lt;<code>T</code>, <code>MessageView</code>&gt;</p>
+<p><code>ClassInfo</code>&lt;<code>T</code>, <code>MessageView</code>&gt;</p>
 <p>Object literal with information about the class</p>
 <h5>FNMetaImpl?</h5>
 <p><code>Function</code></p>
@@ -855,7 +855,6 @@ used by this class</p>
 <blockquote>
 <p><code>static</code> <strong>setDefaultHandlers</strong>(<code>mDefaultHandlers</code>): <code>void</code></p>
 </blockquote>
-<p>Setter for default description and URL validation callbacks across all instances of MessageView</p>
 <h4>Parameters</h4>
 <h5>mDefaultHandlers</h5>
 <p>An object setting default callbacks</p>
@@ -869,7 +868,8 @@ used by this class</p>
 <p><code>void</code></p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Setter for default description and URL validation callbacks across all instances of MessageView</p>
 
-<footer>Generated from <code>@openui5/types@1.120.46</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@openui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

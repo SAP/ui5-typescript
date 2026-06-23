@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Class: Host — OpenUI5 TypeScript API</title>
-<meta name="description" content="Class: Host — OpenUI5 TypeScript API Reference (1.120.46)">
+<meta name="description" content="Class: Host — OpenUI5 TypeScript API Reference (1.120.0)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/openui5/1.120/sap.ui.integration/sap/ui/integration/Host/classes/Host.html">
 <meta property="og:title" content="Class: Host — OpenUI5 TypeScript API">
-<meta property="og:description" content="Class: Host — OpenUI5 TypeScript API Reference (1.120.46)">
+<meta property="og:description" content="Class: Host — OpenUI5 TypeScript API Reference (1.120.0)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/openui5/1.120/sap.ui.integration/sap/ui/integration/Host/classes/Host.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,17 +33,17 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../index.html">OpenUI5 API</a> › <a href="../../../../../../sap.ui.integration/README.html">sap.ui.integration</a> › sap › ui › integration › <a href="../../../../../../sap.ui.integration/sap/ui/integration/Host/README.html">Host</a> › classes</nav>
-<p><a href="../../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.46)</strong></a></p>
+<p><a href="../../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.0)</strong></a></p>
 <hr>
-<p><a href="../../../../../../README.html">OpenUI5 TypeScript API (1.120.46)</a> / <a href="../../../../../README.html">sap.ui.integration</a> / <a href="../README.html">sap/ui/integration/Host</a> / Host</p>
+<p><a href="../../../../../../README.html">OpenUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../README.html">sap.ui.integration</a> / <a href="../README.html">sap/ui/integration/Host</a> / Host</p>
 <h1>Class: Host</h1>
 <pre class="sig"><span class="kw">import</span> Host <span class="kw">from</span> <span class="str">"sap/ui/integration/Host"</span>;</pre>
 <p><strong><code>Experimental</code></strong></p>
-<p>Provides application-level functions and services to an integration card.</p>
-<p>Examples may include, but are not limited to options like: share a card, remove a card.</p>
 <h2>Since</h2>
 <p>1.75
  (since 1.75)</p>
+<p>Provides application-level functions and services to an integration card.</p>
+<p>Examples may include, but are not limited to options like: share a card, remove a card.</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../../../../../sap.ui.core/sap/ui/core/Element/classes/UI5Element.html"><code>UI5Element</code></a></li>
@@ -93,6 +93,8 @@ of the syntax of the settings object.</p>
 <p><strong>attachAction</strong>(<code>oData</code>, <code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
+<p>(since 1.75) - Disclaimer: this event is in a beta state - incompatible API changes may
+be done before its official public release. Use at your own discretion.</p>
 <p>Attaches event handler <code>fnFunction</code> to the #event:action action event of this <code>sap.ui.integration.Host</code>.</p>
 <p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
 otherwise it will be bound to this <code>sap.ui.integration.Host</code> itself.</p>
@@ -100,8 +102,6 @@ otherwise it will be bound to this <code>sap.ui.integration.Host</code> itself.<
 <p>When an action is triggered in the card it can be handled on several places by &quot;action&quot; event handlers.
 In consecutive order those places are: <code>Extension</code>, <code>Card</code>, <code>Host</code>. Each of them can prevent the next
 one to handle the action by calling <code>oEvent.preventDefault()</code>.</p>
-<p> (since 1.75) - Disclaimer: this event is in a beta state - incompatible API changes may
-be done before its official public release. Use at your own discretion.</p>
 <h5>Parameters</h5>
 <h6>oData</h6>
 <p><code>object</code></p>
@@ -121,6 +121,8 @@ object when firing the event</p>
 <p><strong>attachAction</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
+<p>(since 1.75) - Disclaimer: this event is in a beta state - incompatible API changes may
+be done before its official public release. Use at your own discretion.</p>
 <p>Attaches event handler <code>fnFunction</code> to the #event:action action event of this <code>sap.ui.integration.Host</code>.</p>
 <p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
 otherwise it will be bound to this <code>sap.ui.integration.Host</code> itself.</p>
@@ -128,8 +130,6 @@ otherwise it will be bound to this <code>sap.ui.integration.Host</code> itself.<
 <p>When an action is triggered in the card it can be handled on several places by &quot;action&quot; event handlers.
 In consecutive order those places are: <code>Extension</code>, <code>Card</code>, <code>Host</code>. Each of them can prevent the next
 one to handle the action by calling <code>oEvent.preventDefault()</code>.</p>
-<p> (since 1.75) - Disclaimer: this event is in a beta state - incompatible API changes may
-be done before its official public release. Use at your own discretion.</p>
 <h5>Parameters</h5>
 <h6>fnFunction</h6>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -147,6 +147,7 @@ be done before its official public release. Use at your own discretion.</p>
 <p><strong>attachCardConfigurationChange</strong>(<code>oData</code>, <code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
+<p>(since 1.96)</p>
 <p>Attaches event handler <code>fnFunction</code> to the #event:cardConfigurationChange cardConfigurationChange
 event of this <code>sap.ui.integration.Host</code>.</p>
 <p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
@@ -155,7 +156,6 @@ otherwise it will be bound to this <code>sap.ui.integration.Host</code> itself.<
 <ul>
 <li>filter value is changed.</li>
 </ul>
-<p> (since 1.96)</p>
 <h5>Parameters</h5>
 <h6>oData</h6>
 <p><code>object</code></p>
@@ -175,6 +175,7 @@ object when firing the event</p>
 <p><strong>attachCardConfigurationChange</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
+<p>(since 1.96)</p>
 <p>Attaches event handler <code>fnFunction</code> to the #event:cardConfigurationChange cardConfigurationChange
 event of this <code>sap.ui.integration.Host</code>.</p>
 <p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
@@ -183,7 +184,6 @@ otherwise it will be bound to this <code>sap.ui.integration.Host</code> itself.<
 <ul>
 <li>filter value is changed.</li>
 </ul>
-<p> (since 1.96)</p>
 <h5>Parameters</h5>
 <h6>fnFunction</h6>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -201,13 +201,13 @@ otherwise it will be bound to this <code>sap.ui.integration.Host</code> itself.<
 <p><strong>attachCardInitialized</strong>(<code>oData</code>, <code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
+<p>(since 1.116)</p>
 <p>Attaches event handler <code>fnFunction</code> to the #event:cardInitialized cardInitialized event of this
 <code>sap.ui.integration.Host</code>.</p>
 <p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
 otherwise it will be bound to this <code>sap.ui.integration.Host</code> itself.</p>
 <p>Fired when the card is initially ready for the first time. Will not be fired for consecutive refreshes
 or data changes.</p>
-<p> (since 1.116)</p>
 <h5>Parameters</h5>
 <h6>oData</h6>
 <p><code>object</code></p>
@@ -227,13 +227,13 @@ object when firing the event</p>
 <p><strong>attachCardInitialized</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
+<p>(since 1.116)</p>
 <p>Attaches event handler <code>fnFunction</code> to the #event:cardInitialized cardInitialized event of this
 <code>sap.ui.integration.Host</code>.</p>
 <p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
 otherwise it will be bound to this <code>sap.ui.integration.Host</code> itself.</p>
 <p>Fired when the card is initially ready for the first time. Will not be fired for consecutive refreshes
 or data changes.</p>
-<p> (since 1.116)</p>
 <h5>Parameters</h5>
 <h6>fnFunction</h6>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -251,13 +251,13 @@ or data changes.</p>
 <p><strong>attachCardStateChanged</strong>(<code>oData</code>, <code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
+<p>(since 1.107)</p>
 <p>Attaches event handler <code>fnFunction</code> to the #event:cardStateChanged cardStateChanged event of
 this <code>sap.ui.integration.Host</code>.</p>
 <p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
 otherwise it will be bound to this <code>sap.ui.integration.Host</code> itself.</p>
 <p>Fired when the state of a card is changed. For example - the card is ready, new page is selected inside
 the card, a filter is changed or data is refreshed.</p>
-<p> (since 1.107)</p>
 <h5>Parameters</h5>
 <h6>oData</h6>
 <p><code>object</code></p>
@@ -277,13 +277,13 @@ object when firing the event</p>
 <p><strong>attachCardStateChanged</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
+<p>(since 1.107)</p>
 <p>Attaches event handler <code>fnFunction</code> to the #event:cardStateChanged cardStateChanged event of
 this <code>sap.ui.integration.Host</code>.</p>
 <p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
 otherwise it will be bound to this <code>sap.ui.integration.Host</code> itself.</p>
 <p>Fired when the state of a card is changed. For example - the card is ready, new page is selected inside
 the card, a filter is changed or data is refreshed.</p>
-<p> (since 1.107)</p>
 <h5>Parameters</h5>
 <h6>fnFunction</h6>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -301,11 +301,11 @@ the card, a filter is changed or data is refreshed.</p>
 <p><strong>attachMessage</strong>(<code>oData</code>, <code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
+<p>(since 1.91)</p>
 <p>Attaches event handler <code>fnFunction</code> to the #event:message message event of this <code>sap.ui.integration.Host</code>.</p>
 <p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
 otherwise it will be bound to this <code>sap.ui.integration.Host</code> itself.</p>
 <p>Fired when a message from channels like navigator.serviceWorker is received.</p>
-<p> (since 1.91)</p>
 <h5>Parameters</h5>
 <h6>oData</h6>
 <p><code>object</code></p>
@@ -325,11 +325,11 @@ object when firing the event</p>
 <p><strong>attachMessage</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
+<p>(since 1.91)</p>
 <p>Attaches event handler <code>fnFunction</code> to the #event:message message event of this <code>sap.ui.integration.Host</code>.</p>
 <p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
 otherwise it will be bound to this <code>sap.ui.integration.Host</code> itself.</p>
 <p>Fired when a message from channels like navigator.serviceWorker is received.</p>
-<p> (since 1.91)</p>
 <h5>Parameters</h5>
 <h6>fnFunction</h6>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -341,11 +341,12 @@ otherwise it will be bound to this <code>sap.ui.integration.Host</code> itself.<
 <p><code>this</code></p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <hr>
-<h3><del>csrfTokenExpired()</del></h3>
+<h3>csrfTokenExpired()</h3>
 <blockquote>
 <p><strong>csrfTokenExpired</strong>(<code>mCSRFTokenConfig</code>): <code>void</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
+<p>(since 1.97)</p>
 <p>This function is called when a CSRF token has expired.</p>
 <h4>Parameters</h4>
 <h5>mCSRFTokenConfig</h5>
@@ -354,15 +355,13 @@ otherwise it will be bound to this <code>sap.ui.integration.Host</code> itself.<
 <p><code>object</code></p>
 <h4>Returns</h4>
 <p><code>void</code></p>
-<h4>Deprecated</h4>
-<p>(since 1.120.0)
- (since 1.97)</p>
 <hr>
-<h3><del>csrfTokenFetched()</del></h3>
+<h3>csrfTokenFetched()</h3>
 <blockquote>
 <p><strong>csrfTokenFetched</strong>(<code>mCSRFTokenConfig</code>, <code>pCSRFTokenValuePromise</code>): <code>void</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
+<p>(since 1.97)</p>
 <p>This function is called when a CSRF token is fetched.</p>
 <h4>Parameters</h4>
 <h5>mCSRFTokenConfig</h5>
@@ -374,19 +373,16 @@ otherwise it will be bound to this <code>sap.ui.integration.Host</code> itself.<
 <p>A promise which resolves the CSRF token to its value.</p>
 <h4>Returns</h4>
 <p><code>void</code></p>
-<h4>Deprecated</h4>
-<p>(since 1.120.0)
- (since 1.97)</p>
 <hr>
 <h3>detachAction()</h3>
 <blockquote>
 <p><strong>detachAction</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
+<p>(since 1.75) - Disclaimer: this event is in a beta state - incompatible API changes may
+be done before its official public release. Use at your own discretion.</p>
 <p>Detaches event handler <code>fnFunction</code> from the #event:action action event of this <code>sap.ui.integration.Host</code>.</p>
 <p>The passed function and listener object must match the ones used for event registration.</p>
-<p> (since 1.75) - Disclaimer: this event is in a beta state - incompatible API changes may
-be done before its official public release. Use at your own discretion.</p>
 <h4>Parameters</h4>
 <h5>fnFunction</h5>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -403,10 +399,10 @@ be done before its official public release. Use at your own discretion.</p>
 <p><strong>detachCardConfigurationChange</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
+<p>(since 1.96)</p>
 <p>Detaches event handler <code>fnFunction</code> from the #event:cardConfigurationChange cardConfigurationChange
 event of this <code>sap.ui.integration.Host</code>.</p>
 <p>The passed function and listener object must match the ones used for event registration.</p>
-<p> (since 1.96)</p>
 <h4>Parameters</h4>
 <h5>fnFunction</h5>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -423,10 +419,10 @@ event of this <code>sap.ui.integration.Host</code>.</p>
 <p><strong>detachCardInitialized</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
+<p>(since 1.116)</p>
 <p>Detaches event handler <code>fnFunction</code> from the #event:cardInitialized cardInitialized event of
 this <code>sap.ui.integration.Host</code>.</p>
 <p>The passed function and listener object must match the ones used for event registration.</p>
-<p> (since 1.116)</p>
 <h4>Parameters</h4>
 <h5>fnFunction</h5>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -443,10 +439,10 @@ this <code>sap.ui.integration.Host</code>.</p>
 <p><strong>detachCardStateChanged</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
+<p>(since 1.107)</p>
 <p>Detaches event handler <code>fnFunction</code> from the #event:cardStateChanged cardStateChanged event of
 this <code>sap.ui.integration.Host</code>.</p>
 <p>The passed function and listener object must match the ones used for event registration.</p>
-<p> (since 1.107)</p>
 <h4>Parameters</h4>
 <h5>fnFunction</h5>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -463,9 +459,9 @@ this <code>sap.ui.integration.Host</code>.</p>
 <p><strong>detachMessage</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
+<p>(since 1.91)</p>
 <p>Detaches event handler <code>fnFunction</code> from the #event:message message event of this <code>sap.ui.integration.Host</code>.</p>
 <p>The passed function and listener object must match the ones used for event registration.</p>
-<p> (since 1.91)</p>
 <h4>Parameters</h4>
 <h5>fnFunction</h5>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -482,10 +478,7 @@ this <code>sap.ui.integration.Host</code>.</p>
 <p><strong>fireAction</strong>(<code>mParameters?</code>): <code>boolean</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
-<p>Fires event #event:action action to attached listeners.</p>
-<p>Listeners may prevent the default action of this event by calling the <code>preventDefault</code> method on the
-event object. The return value of this method indicates whether the default action should be executed.</p>
-<p> (since 1.75) - Disclaimer: this event is in a beta state - incompatible API changes may
+<p>(since 1.75) - Disclaimer: this event is in a beta state - incompatible API changes may
 be done before its official public release. Use at your own discretion.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
@@ -496,14 +489,16 @@ be done before its official public release. Use at your own discretion.</p>
 <p>Whether or not to prevent the default action</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:action action to attached listeners.</p>
+<p>Listeners may prevent the default action of this event by calling the <code>preventDefault</code> method on the
+event object. The return value of this method indicates whether the default action should be executed.</p>
 <hr>
 <h3>fireCardConfigurationChange()</h3>
 <blockquote>
 <p><strong>fireCardConfigurationChange</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
-<p>Fires event #event:cardConfigurationChange cardConfigurationChange to attached listeners.</p>
-<p> (since 1.96)</p>
+<p>(since 1.96)</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/Host$CardConfigurationChangeEventParameters.html"><code>Host$CardConfigurationChangeEventParameters</code></a></p>
@@ -513,14 +508,14 @@ be done before its official public release. Use at your own discretion.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:cardConfigurationChange cardConfigurationChange to attached listeners.</p>
 <hr>
 <h3>fireCardInitialized()</h3>
 <blockquote>
 <p><strong>fireCardInitialized</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
-<p>Fires event #event:cardInitialized cardInitialized to attached listeners.</p>
-<p> (since 1.116)</p>
+<p>(since 1.116)</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/Host$CardInitializedEventParameters.html"><code>Host$CardInitializedEventParameters</code></a></p>
@@ -530,14 +525,14 @@ be done before its official public release. Use at your own discretion.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:cardInitialized cardInitialized to attached listeners.</p>
 <hr>
 <h3>fireCardStateChanged()</h3>
 <blockquote>
 <p><strong>fireCardStateChanged</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
-<p>Fires event #event:cardStateChanged cardStateChanged to attached listeners.</p>
-<p> (since 1.107)</p>
+<p>(since 1.107)</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/Host$CardStateChangedEventParameters.html"><code>Host$CardStateChangedEventParameters</code></a></p>
@@ -547,14 +542,14 @@ be done before its official public release. Use at your own discretion.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:cardStateChanged cardStateChanged to attached listeners.</p>
 <hr>
 <h3>fireMessage()</h3>
 <blockquote>
 <p><strong>fireMessage</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
-<p>Fires event #event:message message to attached listeners.</p>
-<p> (since 1.91)</p>
+<p>(since 1.91)</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/Host$MessageEventParameters.html"><code>Host$MessageEventParameters</code></a></p>
@@ -564,16 +559,17 @@ be done before its official public release. Use at your own discretion.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:message message to attached listeners.</p>
 <hr>
 <h3>getActions()</h3>
 <blockquote>
 <p><strong>getActions</strong>(): <a href="../../library/type-aliases/CardMenuAction.html"><code>CardMenuAction</code></a>[]</p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
+<p>(since 1.75) - Disclaimer: this property is in a beta state - incompatible API changes
+may be done before its official public release. Use at your own discretion.</p>
 <p>Gets current value of property #getActions actions.</p>
 <p>The actions configuration.</p>
-<p> (since 1.75) - Disclaimer: this property is in a beta state - incompatible API changes
-may be done before its official public release. Use at your own discretion.</p>
 <h4>Returns</h4>
 <p><a href="../../library/type-aliases/CardMenuAction.html"><code>CardMenuAction</code></a>[]</p>
 <p>Value of property <code>actions</code></p>
@@ -583,6 +579,11 @@ may be done before its official public release. Use at your own discretion.</p>
 <p><strong>getContexts</strong>(): <code>Promise</code>&lt;<code>object</code>&gt;</p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
+<h4>Returns</h4>
+<p><code>Promise</code>&lt;<code>object</code>&gt;</p>
+<p>A promise which contains the context structure.</p>
+<h4>Since</h4>
+<p>1.83</p>
 <p>Returns the context object for the Card Editor design-time environment Contexts can be used to configure
 Cards with information available in the host environment. Each entry in the list should contain design-time
 information. A label, placeholder, and description should be provided.</p>
@@ -591,24 +592,12 @@ user&quot;, &quot;placeholder&quot;: &quot;Work Zone user id&quot;, &quot;descri
 on user&quot; } } } ... }</p>
 <p>The context information and texts should be translated as they appear in the design-time UI of the Card
 Editor.</p>
-<h4>Returns</h4>
-<p><code>Promise</code>&lt;<code>object</code>&gt;</p>
-<p>A promise which contains the context structure.</p>
-<h4>Since</h4>
-<p>1.83</p>
 <hr>
 <h3>getContextValue()</h3>
 <blockquote>
 <p><strong>getContextValue</strong>(<code>sPath</code>): <code>Promise</code>&lt;<code>null</code>&gt;</p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
-<p>Resolves the value for a given path in the context of the host Contexts can be used to configure Cards
-with information available in the host environment.</p>
-<p>Example Context Structure: { &quot;sap.workzone&quot;: { &quot;currentUser: { &quot;id&quot;: { &quot;label&quot;: &quot;Id of the Work Zone
-user&quot;, &quot;placeholder&quot;: &quot;Work Zone user id&quot;, &quot;description&quot;: &quot;The value will change based on the logged
-on user&quot; } } } ... }</p>
-<p>Example path to the current user id of the context sPath = &quot;sap.workzone/currentUser/id&quot; parameter: {
-userId: { value: &quot;{context&gt;sap.workzone/currentUser/id}&quot; resolves to UserId } }</p>
 <h4>Parameters</h4>
 <h5>sPath</h5>
 <p><code>string</code></p>
@@ -618,12 +607,20 @@ userId: { value: &quot;{context&gt;sap.workzone/currentUser/id}&quot; resolves t
 <p>A promise which resolves with the value of this context.</p>
 <h4>Since</h4>
 <p>1.83</p>
+<p>Resolves the value for a given path in the context of the host Contexts can be used to configure Cards
+with information available in the host environment.</p>
+<p>Example Context Structure: { &quot;sap.workzone&quot;: { &quot;currentUser: { &quot;id&quot;: { &quot;label&quot;: &quot;Id of the Work Zone
+user&quot;, &quot;placeholder&quot;: &quot;Work Zone user id&quot;, &quot;description&quot;: &quot;The value will change based on the logged
+on user&quot; } } } ... }</p>
+<p>Example path to the current user id of the context sPath = &quot;sap.workzone/currentUser/id&quot; parameter: {
+userId: { value: &quot;{context&gt;sap.workzone/currentUser/id}&quot; resolves to UserId } }</p>
 <hr>
-<h3><del>getCsrfToken()</del></h3>
+<h3>getCsrfToken()</h3>
 <blockquote>
 <p><strong>getCsrfToken</strong>(<code>mCSRFTokenConfig</code>): <code>Promise</code>&lt;<code>string</code>&gt;</p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
+<p>(since 1.97)</p>
 <p>Resolves the CSRF token and returns a Promise with its value.</p>
 <h4>Parameters</h4>
 <h5>mCSRFTokenConfig</h5>
@@ -633,11 +630,6 @@ userId: { value: &quot;{context&gt;sap.workzone/currentUser/id}&quot; resolves t
 <h4>Returns</h4>
 <p><code>Promise</code>&lt;<code>string</code>&gt;</p>
 <p>A promise which resolves the CSRF token to its value.</p>
-<h4>Deprecated</h4>
-<p>(since 1.120.0)
- (since 1.97)</p>
-<h4>Ui5-protected</h4>
-<p>Do not call from applications (only from related classes in the framework)</p>
 <hr>
 <h3>getDestination()</h3>
 <blockquote>
@@ -661,13 +653,13 @@ userId: { value: &quot;{context&gt;sap.workzone/currentUser/id}&quot; resolves t
 <p><strong>getDestinations</strong>(): <code>Promise</code>&lt;<code>object</code>[]&gt;</p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
-<p>Returns the list of destinations for the Card Editor design-time environment List entries are objects
-that contain at least the name. { &quot;name&quot;: &quot;DestinationName&quot; }</p>
 <h4>Returns</h4>
 <p><code>Promise</code>&lt;<code>object</code>[]&gt;</p>
 <p>A promise which resolves with the list of destinations.</p>
 <h4>Since</h4>
 <p>1.83</p>
+<p>Returns the list of destinations for the Card Editor design-time environment List entries are objects
+that contain at least the name. { &quot;name&quot;: &quot;DestinationName&quot; }</p>
 <hr>
 <h3>getResolveDestination()</h3>
 <blockquote>
@@ -690,11 +682,11 @@ the callback may return a <code>Promise</code> with the URL as an argument.</p>
 <p><strong>setActions</strong>(<code>sActions</code>): <code>this</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
+<p>(since 1.75) - Disclaimer: this property is in a beta state - incompatible API changes
+may be done before its official public release. Use at your own discretion.</p>
 <p>Sets a new value for property #getActions actions.</p>
 <p>The actions configuration.</p>
 <p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p> (since 1.75) - Disclaimer: this property is in a beta state - incompatible API changes
-may be done before its official public release. Use at your own discretion.</p>
 <h4>Parameters</h4>
 <h5>sActions</h5>
 <p><a href="../../library/type-aliases/CardMenuAction.html"><code>CardMenuAction</code></a>[]</p>
@@ -739,7 +731,7 @@ information contained in <code>oClassInfo</code>.</p>
 <p><code>string</code></p>
 <p>Name of the class being created</p>
 <h5>oClassInfo?</h5>
-<p><a href="../../../../../../sap.f/namespaces/sap/type-aliases/ClassInfo.html"><code>ClassInfo</code></a>&lt;<code>T</code>, <code>Host</code>&gt;</p>
+<p><code>ClassInfo</code>&lt;<code>T</code>, <code>Host</code>&gt;</p>
 <p>Object literal with information about the class</p>
 <h5>FNMetaImpl?</h5>
 <p><code>Function</code></p>
@@ -764,6 +756,6 @@ used by this class</p>
 <p><a href="../../../../../../sap.ui.core/sap/ui/core/Element/classes/UI5Element.html"><code>UI5Element</code></a>.<a href="../../../../../../sap.ui.core/sap/ui/core/Element/classes/UI5Element.html#getmetadata-1"><code>getMetadata</code></a></p>
 <hr>
 
-<footer>Generated from <code>@openui5/types@1.120.46</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@openui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

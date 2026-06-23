@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Interface: $ControlSettings — OpenUI5 TypeScript API</title>
-<meta name="description" content="Interface: $ControlSettings — OpenUI5 TypeScript API Reference (1.120.46)">
+<meta name="description" content="Interface: $ControlSettings — OpenUI5 TypeScript API Reference (1.120.0)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/openui5/1.120/sap.ui.core/sap/ui/core/Control/interfaces/$ControlSettings.html">
 <meta property="og:title" content="Interface: $ControlSettings — OpenUI5 TypeScript API">
-<meta property="og:description" content="Interface: $ControlSettings — OpenUI5 TypeScript API Reference (1.120.46)">
+<meta property="og:description" content="Interface: $ControlSettings — OpenUI5 TypeScript API Reference (1.120.0)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/openui5/1.120/sap.ui.core/sap/ui/core/Control/interfaces/$ControlSettings.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,12 +33,11 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../index.html">OpenUI5 API</a> › <a href="../../../../../../sap.ui.core/README.html">sap.ui.core</a> › sap › ui › core › <a href="../../../../../../sap.ui.core/sap/ui/core/Control/README.html">Control</a> › interfaces</nav>
-<p><a href="../../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.46)</strong></a></p>
+<p><a href="../../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.0)</strong></a></p>
 <hr>
-<p><a href="../../../../../../README.html">OpenUI5 TypeScript API (1.120.46)</a> / <a href="../../../../../README.html">sap.ui.core</a> / <a href="../README.html">sap/ui/core/Control</a> / $ControlSettings</p>
+<p><a href="../../../../../../README.html">OpenUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../README.html">sap.ui.core</a> / <a href="../README.html">sap/ui/core/Control</a> / $ControlSettings</p>
 <h1>Interface: $ControlSettings</h1>
 <pre class="sig"><span class="kw">import</span> { $ControlSettings } <span class="kw">from</span> <span class="str">"sap/ui/core/Control"</span>;</pre>
-<p>Describes the settings that can be provided to the Control constructor.</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../Element/interfaces/$ElementSettings.html"><code>$ElementSettings</code></a></li>
@@ -306,11 +305,11 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 <blockquote>
 <p><code>optional</code> <strong>blocked?</strong>: <code>boolean</code> | <a href="../../../base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<p>Whether the control is currently in blocked state.</p>
 <h4>Deprecated</h4>
 <p>(since 1.69) - The blocked property is deprecated. There is no accessibility support for
 this property. Blocked controls should not be used inside Controls, which rely on keyboard navigation,
 e.g. List controls.</p>
+<p>Whether the control is currently in blocked state.</p>
 <hr>
 <h3>busy?</h3>
 <blockquote>
@@ -328,17 +327,19 @@ e.g. List controls.</p>
 <blockquote>
 <p><code>optional</code> <strong>busyIndicatorSize?</strong>: <a href="../../../base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code> | <a href="../../library/enumerations/BusyIndicatorSize.html"><code>BusyIndicatorSize</code></a> | <code>&quot;Auto&quot;</code> | <code>&quot;Large&quot;</code> | <code>&quot;Medium&quot;</code> | <code>&quot;Section&quot;</code> | <code>&quot;Small&quot;</code></p>
 </blockquote>
+<h4>Since</h4>
+<p>1.54</p>
 <p>The size of the BusyIndicator. For controls with a width smaller 3rem a <code>sap.ui.core.BusyIndicatorSize.Small</code>
 should be used. If the size could vary in width and the width could get smaller than 3rem, the <code>sap.ui.core.BusyIndicatorSize.Auto</code>
 option could be used. The default is set to <code>sap.ui.core.BusyIndicatorSize.Medium</code> For a full screen
 BusyIndicator use <code>sap.ui.core.BusyIndicatorSize.Large</code>.</p>
-<h4>Since</h4>
-<p>1.54</p>
 <hr>
 <h3>fieldGroupIds?</h3>
 <blockquote>
 <p><code>optional</code> <strong>fieldGroupIds?</strong>: <a href="../../../base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code> | <code>string</code>[]</p>
 </blockquote>
+<h4>Since</h4>
+<p>1.31</p>
 <p>The IDs of a logical field group that this control belongs to.</p>
 <p>All fields in a logical field group should share the same <code>fieldGroupId</code>. Once a logical field group
 is left, the <code>validateFieldGroup</code> event is fired.</p>
@@ -346,8 +347,6 @@ is left, the <code>validateFieldGroup</code> event is fired.</p>
 is suggested to use only valid sap.ui.core.IDs.</p>
 <p>See #attachValidateFieldGroup or consult the <a href="https://ui5.sap.com/#/topic/5b0775397e394b1fb973fa207554003e">Field Group</a>
 documentation.</p>
-<h4>Since</h4>
-<p>1.31</p>
 <hr>
 <h3>validateFieldGroup?</h3>
 <blockquote>
@@ -373,6 +372,6 @@ or consult the <a href="https://ui5.sap.com/#/topic/5b0775397e394b1fb973fa207554
 DOM of the current page. The placeholder will be hidden and have zero dimensions (<code>display: none</code>).</p>
 <p>Also see module:sap/ui/core/InvisibleRenderer InvisibleRenderer.</p>
 
-<footer>Generated from <code>@openui5/types@1.120.46</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@openui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

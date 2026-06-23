@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>~~Class: InPlaceEdit~~ — OpenUI5 TypeScript API</title>
-<meta name="description" content="~~Class: InPlaceEdit~~ — OpenUI5 TypeScript API Reference (1.120.46)">
+<meta name="description" content="~~Class: InPlaceEdit~~ — OpenUI5 TypeScript API Reference (1.120.0)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/openui5/1.120/sap.ui.commons/sap/ui/commons/InPlaceEdit/classes/InPlaceEdit.html">
 <meta property="og:title" content="~~Class: InPlaceEdit~~ — OpenUI5 TypeScript API">
-<meta property="og:description" content="~~Class: InPlaceEdit~~ — OpenUI5 TypeScript API Reference (1.120.46)">
+<meta property="og:description" content="~~Class: InPlaceEdit~~ — OpenUI5 TypeScript API Reference (1.120.0)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/openui5/1.120/sap.ui.commons/sap/ui/commons/InPlaceEdit/classes/InPlaceEdit.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,16 +33,16 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../index.html">OpenUI5 API</a> › <a href="../../../../../../sap.ui.commons/README.html">sap.ui.commons</a> › sap › ui › commons › <a href="../../../../../../sap.ui.commons/sap/ui/commons/InPlaceEdit/README.html">InPlaceEdit</a> › classes</nav>
-<p><a href="../../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.46)</strong></a></p>
+<p><a href="../../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.0)</strong></a></p>
 <hr>
-<p><a href="../../../../../../README.html">OpenUI5 TypeScript API (1.120.46)</a> / <a href="../../../../../README.html">sap.ui.commons</a> / <a href="../README.html">sap/ui/commons/InPlaceEdit</a> / InPlaceEdit</p>
+<p><a href="../../../../../../README.html">OpenUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../README.html">sap.ui.commons</a> / <a href="../README.html">sap/ui/commons/InPlaceEdit</a> / InPlaceEdit</p>
 <h1><del>Class: InPlaceEdit</del></h1>
 <pre class="sig"><span class="kw">import</span> InPlaceEdit <span class="kw">from</span> <span class="str">"sap/ui/commons/InPlaceEdit"</span>;</pre>
-<p>The InPlaceEdit is a functionality to have text in display mode that can be changed in place.</p>
 <h2>Since</h2>
 <p>1.8.0</p>
 <h2>Deprecated</h2>
 <p>(since 1.38) - replaced by sap.m.Input</p>
+<p>The InPlaceEdit is a functionality to have text in display mode that can be changed in place.</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></li>
@@ -133,12 +133,6 @@ key is pressed.</p>
 <blockquote>
 <p><strong>attachLiveChange</strong>(<code>oData</code>, <code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
-<p>Attaches event handler <code>fnFunction</code> to the #event:liveChange liveChange event of this <code>sap.ui.commons.InPlaceEdit</code>.</p>
-<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
-otherwise it will be bound to this <code>sap.ui.commons.InPlaceEdit</code> itself.</p>
-<p>This event if fired during typing into the InPlaceEdit and returns the currently entered value. This
-is not the content of the value property. The value property is only updated by ENTER and by leaving
-the control.</p>
 <h5>Parameters</h5>
 <h6>oData</h6>
 <p><code>object</code></p>
@@ -155,16 +149,16 @@ object when firing the event</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Since</h5>
 <p>1.16.5</p>
-<h4>Call Signature</h4>
-<blockquote>
-<p><strong>attachLiveChange</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
-</blockquote>
 <p>Attaches event handler <code>fnFunction</code> to the #event:liveChange liveChange event of this <code>sap.ui.commons.InPlaceEdit</code>.</p>
 <p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
 otherwise it will be bound to this <code>sap.ui.commons.InPlaceEdit</code> itself.</p>
 <p>This event if fired during typing into the InPlaceEdit and returns the currently entered value. This
 is not the content of the value property. The value property is only updated by ENTER and by leaving
 the control.</p>
+<h4>Call Signature</h4>
+<blockquote>
+<p><strong>attachLiveChange</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
+</blockquote>
 <h5>Parameters</h5>
 <h6>fnFunction</h6>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -177,6 +171,12 @@ the control.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Since</h5>
 <p>1.16.5</p>
+<p>Attaches event handler <code>fnFunction</code> to the #event:liveChange liveChange event of this <code>sap.ui.commons.InPlaceEdit</code>.</p>
+<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
+otherwise it will be bound to this <code>sap.ui.commons.InPlaceEdit</code> itself.</p>
+<p>This event if fired during typing into the InPlaceEdit and returns the currently entered value. This
+is not the content of the value property. The value property is only updated by ENTER and by leaving
+the control.</p>
 <hr>
 <h3><del>clearOldText()</del></h3>
 <blockquote>
@@ -217,8 +217,6 @@ no effect.</p>
 <blockquote>
 <p><strong>detachLiveChange</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
-<p>Detaches event handler <code>fnFunction</code> from the #event:liveChange liveChange event of this <code>sap.ui.commons.InPlaceEdit</code>.</p>
-<p>The passed function and listener object must match the ones used for event registration.</p>
 <h4>Parameters</h4>
 <h5>fnFunction</h5>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -231,12 +229,13 @@ no effect.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.16.5</p>
+<p>Detaches event handler <code>fnFunction</code> from the #event:liveChange liveChange event of this <code>sap.ui.commons.InPlaceEdit</code>.</p>
+<p>The passed function and listener object must match the ones used for event registration.</p>
 <hr>
 <h3><del>fireChange()</del></h3>
 <blockquote>
 <p><strong>fireChange</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
-<p>Fires event #event:change change to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/InPlaceEdit$ChangeEventParameters.html"><code>InPlaceEdit$ChangeEventParameters</code></a></p>
@@ -246,12 +245,12 @@ no effect.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:change change to attached listeners.</p>
 <hr>
 <h3><del>fireLiveChange()</del></h3>
 <blockquote>
 <p><strong>fireLiveChange</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
-<p>Fires event #event:liveChange liveChange to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/InPlaceEdit$LiveChangeEventParameters.html"><code>InPlaceEdit$LiveChangeEventParameters</code></a></p>
@@ -263,18 +262,19 @@ no effect.</p>
 <p>1.16.5</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:liveChange liveChange to attached listeners.</p>
 <hr>
 <h3><del>getAccessibilityInfo()</del></h3>
 <blockquote>
 <p><strong>getAccessibilityInfo</strong>(): <a href="../../../../../../sap.ui.core/sap/ui/core/library/type-aliases/AccessibilityInfo.html"><code>AccessibilityInfo</code></a></p>
 </blockquote>
-<p>See:
-	sap.ui.core.Control#getAccessibilityInfo</p>
 <h4>Returns</h4>
 <p><a href="../../../../../../sap.ui.core/sap/ui/core/library/type-aliases/AccessibilityInfo.html"><code>AccessibilityInfo</code></a></p>
 <p>Current accessibility state of the control.</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>See:
+	sap.ui.core.Control#getAccessibilityInfo</p>
 <h4>Overrides</h4>
 <p><a href="../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a>.<a href="../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html#getaccessibilityinfo"><code>getAccessibilityInfo</code></a></p>
 <hr>
@@ -292,14 +292,14 @@ and Link</p>
 <blockquote>
 <p><strong>getDesign</strong>(): <code>&quot;Small&quot;</code> | <code>&quot;Standard&quot;</code> | <code>&quot;H1&quot;</code> | <code>&quot;H2&quot;</code> | <code>&quot;H3&quot;</code> | <code>&quot;H4&quot;</code> | <code>&quot;H5&quot;</code> | <code>&quot;H6&quot;</code> | <code>&quot;Bold&quot;</code> | <code>&quot;Monospace&quot;</code> | <a href="../../library/enumerations/TextViewDesign.html"><code>TextViewDesign</code></a> | <code>&quot;Italic&quot;</code> | <code>&quot;Underline&quot;</code></p>
 </blockquote>
-<p>Gets current value of property #getDesign design.</p>
-<p>Defines the visual appearance of the control. Currently this is not supported for Labels.</p>
-<p>Default value is <code>Standard</code>.</p>
 <h4>Returns</h4>
 <p><code>&quot;Small&quot;</code> | <code>&quot;Standard&quot;</code> | <code>&quot;H1&quot;</code> | <code>&quot;H2&quot;</code> | <code>&quot;H3&quot;</code> | <code>&quot;H4&quot;</code> | <code>&quot;H5&quot;</code> | <code>&quot;H6&quot;</code> | <code>&quot;Bold&quot;</code> | <code>&quot;Monospace&quot;</code> | <a href="../../library/enumerations/TextViewDesign.html"><code>TextViewDesign</code></a> | <code>&quot;Italic&quot;</code> | <code>&quot;Underline&quot;</code></p>
 <p>Value of property <code>design</code></p>
 <h4>Since</h4>
 <p>1.9.0</p>
+<p>Gets current value of property #getDesign design.</p>
+<p>Defines the visual appearance of the control. Currently this is not supported for Labels.</p>
+<p>Default value is <code>Standard</code>.</p>
 <hr>
 <h3><del>getTooltip()</del></h3>
 <blockquote>
@@ -359,10 +359,6 @@ the content control has an own valueState property this will be used.</p>
 <blockquote>
 <p><strong>setDesign</strong>(<code>sDesign?</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getDesign design.</p>
-<p>Defines the visual appearance of the control. Currently this is not supported for Labels.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>Standard</code>.</p>
 <h4>Parameters</h4>
 <h5>sDesign?</h5>
 <p><code>&quot;Small&quot;</code> | <code>&quot;Standard&quot;</code> | <code>&quot;H1&quot;</code> | <code>&quot;H2&quot;</code> | <code>&quot;H3&quot;</code> | <code>&quot;H4&quot;</code> | <code>&quot;H5&quot;</code> | <code>&quot;H6&quot;</code> | <code>&quot;Bold&quot;</code> | <code>&quot;Monospace&quot;</code> | <a href="../../library/enumerations/TextViewDesign.html"><code>TextViewDesign</code></a> | <code>&quot;Italic&quot;</code> | <code>&quot;Underline&quot;</code></p>
@@ -372,6 +368,10 @@ the content control has an own valueState property this will be used.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.9.0</p>
+<p>Sets a new value for property #getDesign design.</p>
+<p>Defines the visual appearance of the control. Currently this is not supported for Labels.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>Standard</code>.</p>
 <hr>
 <h3><del>setTooltip()</del></h3>
 <blockquote>
@@ -440,7 +440,7 @@ the information contained in <code>oClassInfo</code>.</p>
 <p><code>string</code></p>
 <p>Name of the class being created</p>
 <h5>oClassInfo?</h5>
-<p><a href="../../../../../../sap.f/namespaces/sap/type-aliases/ClassInfo.html"><code>ClassInfo</code></a>&lt;<code>T</code>, <code>InPlaceEdit</code>&gt;</p>
+<p><code>ClassInfo</code>&lt;<code>T</code>, <code>InPlaceEdit</code>&gt;</p>
 <p>Object literal with information about the class</p>
 <h5>FNMetaImpl?</h5>
 <p><code>Function</code></p>
@@ -464,6 +464,6 @@ used by this class</p>
 <p><a href="../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a>.<a href="../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html#getmetadata-1"><code>getMetadata</code></a></p>
 <hr>
 
-<footer>Generated from <code>@openui5/types@1.120.46</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@openui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

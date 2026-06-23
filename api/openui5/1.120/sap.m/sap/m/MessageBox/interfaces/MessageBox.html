@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Interface: MessageBox — OpenUI5 TypeScript API</title>
-<meta name="description" content="Interface: MessageBox — OpenUI5 TypeScript API Reference (1.120.46)">
+<meta name="description" content="Interface: MessageBox — OpenUI5 TypeScript API Reference (1.120.0)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/openui5/1.120/sap.m/sap/m/MessageBox/interfaces/MessageBox.html">
 <meta property="og:title" content="Interface: MessageBox — OpenUI5 TypeScript API">
-<meta property="og:description" content="Interface: MessageBox — OpenUI5 TypeScript API Reference (1.120.46)">
+<meta property="og:description" content="Interface: MessageBox — OpenUI5 TypeScript API Reference (1.120.0)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/openui5/1.120/sap.m/sap/m/MessageBox/interfaces/MessageBox.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,11 +33,13 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../index.html">OpenUI5 API</a> › <a href="../../../../../sap.m/README.html">sap.m</a> › sap › m › <a href="../../../../../sap.m/sap/m/MessageBox/README.html">MessageBox</a> › interfaces</nav>
-<p><a href="../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.46)</strong></a></p>
+<p><a href="../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.0)</strong></a></p>
 <hr>
-<p><a href="../../../../../README.html">OpenUI5 TypeScript API (1.120.46)</a> / <a href="../../../../README.html">sap.m</a> / <a href="../README.html">sap/m/MessageBox</a> / MessageBox</p>
+<p><a href="../../../../../README.html">OpenUI5 TypeScript API (1.120.0)</a> / <a href="../../../../README.html">sap.m</a> / <a href="../README.html">sap/m/MessageBox</a> / MessageBox</p>
 <h1>Interface: MessageBox</h1>
 <pre class="sig"><span class="kw">import</span> MessageBox <span class="kw">from</span> <span class="str">"sap/m/MessageBox"</span>;</pre>
+<h2>Since</h2>
+<p>1.21.2</p>
 <p>Provides easier methods to create sap.m.Dialog with type sap.m.DialogType.Message, such as standard alerts,
 confirmation dialogs, or arbitrary message dialogs.</p>
 <p>MessageBox provides several functions:
@@ -72,8 +74,6 @@ element of the MessageBox control, you have to add the following classes dependi
 <code>sapUiResponsivePadding--header</code>, <code>sapUiResponsivePadding--content</code>, <code>sapUiResponsivePadding--footer</code>.
 See:
 	fiori:<a href="https://experience.sap.com/fiori-design-web/message-box/">https://experience.sap.com/fiori-design-web/message-box/</a> Message Box</p>
-<h2>Since</h2>
-<p>1.21.2</p>
 <h2>Properties</h2>
 <h3>Action</h3>
 <blockquote>
@@ -277,25 +277,6 @@ user can scroll vertically inside the MessageBox when the content is larger than
 <blockquote>
 <p><strong>error</strong>(<code>vMessage</code>, <code>mOptions?</code>): <code>void</code></p>
 </blockquote>
-<p>Displays an error dialog with the given message, an ERROR icon, a CLOSE button.. If a callback is given,
-it is called after the error box has been closed by the user with one of the buttons.</p>
-<pre><code class="language-javascript">
-sap.m.MessageBox.error(&quot;This message should appear in the error message box&quot;, {
-    title: &quot;Error&quot;,                                      // default
-    onClose: null,                                       // default
-    styleClass: &quot;&quot;,                                      // default
-    actions: sap.m.MessageBox.Action.CLOSE,              // default
-    emphasizedAction: null,                              // default
-    initialFocus: null,                                  // default
-    textDirection: sap.ui.core.TextDirection.Inherit     // default
-});
-</code></pre>
-<p>The callback is called with the following signature</p>
-<pre><code class="language-javascript">
-  function (oAction)
-</code></pre>
-<p>The error dialog opened by this method is processed asynchronously. Applications have to use <code>fnCallback</code>
-to continue work after the user closed the error dialog.</p>
 <h4>Parameters</h4>
 <h5>vMessage</h5>
 <p><code>string</code></p>
@@ -362,20 +343,15 @@ user can scroll vertically inside the MessageBox when the content is larger than
 <p><code>void</code></p>
 <h4>Since</h4>
 <p>1.30</p>
-<hr>
-<h3>information()</h3>
-<blockquote>
-<p><strong>information</strong>(<code>vMessage</code>, <code>mOptions?</code>): <code>void</code></p>
-</blockquote>
-<p>Displays an information dialog with the given message, an INFO icon, an OK button. If a callback is given,
-it is called after the info box has been closed by the user with one of the buttons.</p>
+<p>Displays an error dialog with the given message, an ERROR icon, a CLOSE button.. If a callback is given,
+it is called after the error box has been closed by the user with one of the buttons.</p>
 <pre><code class="language-javascript">
-sap.m.MessageBox.information(&quot;This message should appear in the information message box&quot;, {
-    title: &quot;Information&quot;,                                // default
+sap.m.MessageBox.error(&quot;This message should appear in the error message box&quot;, {
+    title: &quot;Error&quot;,                                      // default
     onClose: null,                                       // default
     styleClass: &quot;&quot;,                                      // default
-    actions: sap.m.MessageBox.Action.OK,                 // default
-    emphasizedAction: sap.m.MessageBox.Action.OK,        // default
+    actions: sap.m.MessageBox.Action.CLOSE,              // default
+    emphasizedAction: null,                              // default
     initialFocus: null,                                  // default
     textDirection: sap.ui.core.TextDirection.Inherit     // default
 });
@@ -384,8 +360,13 @@ sap.m.MessageBox.information(&quot;This message should appear in the information
 <pre><code class="language-javascript">
   function (oAction)
 </code></pre>
-<p>The information dialog opened by this method is processed asynchronously. Applications have to use <code>fnCallback</code>
-to continue work after the user closed the information dialog</p>
+<p>The error dialog opened by this method is processed asynchronously. Applications have to use <code>fnCallback</code>
+to continue work after the user closed the error dialog.</p>
+<hr>
+<h3>information()</h3>
+<blockquote>
+<p><strong>information</strong>(<code>vMessage</code>, <code>mOptions?</code>): <code>void</code></p>
+</blockquote>
 <h4>Parameters</h4>
 <h5>vMessage</h5>
 <p><code>string</code></p>
@@ -452,6 +433,25 @@ user can scroll vertically inside the MessageBox when the content is larger than
 <p><code>void</code></p>
 <h4>Since</h4>
 <p>1.30</p>
+<p>Displays an information dialog with the given message, an INFO icon, an OK button. If a callback is given,
+it is called after the info box has been closed by the user with one of the buttons.</p>
+<pre><code class="language-javascript">
+sap.m.MessageBox.information(&quot;This message should appear in the information message box&quot;, {
+    title: &quot;Information&quot;,                                // default
+    onClose: null,                                       // default
+    styleClass: &quot;&quot;,                                      // default
+    actions: sap.m.MessageBox.Action.OK,                 // default
+    emphasizedAction: sap.m.MessageBox.Action.OK,        // default
+    initialFocus: null,                                  // default
+    textDirection: sap.ui.core.TextDirection.Inherit     // default
+});
+</code></pre>
+<p>The callback is called with the following signature</p>
+<pre><code class="language-javascript">
+  function (oAction)
+</code></pre>
+<p>The information dialog opened by this method is processed asynchronously. Applications have to use <code>fnCallback</code>
+to continue work after the user closed the information dialog</p>
 <hr>
 <h3>show()</h3>
 <blockquote>
@@ -556,25 +556,6 @@ user can scroll vertically inside the MessageBox when the content is larger than
 <blockquote>
 <p><strong>success</strong>(<code>vMessage</code>, <code>mOptions?</code>): <code>void</code></p>
 </blockquote>
-<p>Displays a success dialog with the given message, a SUCCESS icon, an OK button. If a callback is given,
-it is called after the success box has been closed by the user with one of the buttons.</p>
-<pre><code class="language-javascript">
-sap.m.MessageBox.success(&quot;This message should appear in the success message box&quot;, {
-    title: &quot;Success&quot;,                                    // default
-    onClose: null,                                       // default
-    styleClass: &quot;&quot;,                                      // default
-    actions: sap.m.MessageBox.Action.OK,                 // default
-    emphasizedAction: sap.m.MessageBox.Action.OK,        // default
-    initialFocus: null,                                  // default
-    textDirection: sap.ui.core.TextDirection.Inherit     // default
-});
-</code></pre>
-<p>The callback is called with the following signature</p>
-<pre><code class="language-javascript">
-  function(oAction)
-</code></pre>
-<p>The success dialog opened by this method is processed asynchronously. Applications have to use <code>fnCallback</code>
-to continue work after the user closed the success dialog</p>
 <h4>Parameters</h4>
 <h5>vMessage</h5>
 <p><code>string</code></p>
@@ -641,16 +622,11 @@ user can scroll vertically inside the MessageBox when the content is larger than
 <p><code>void</code></p>
 <h4>Since</h4>
 <p>1.30</p>
-<hr>
-<h3>warning()</h3>
-<blockquote>
-<p><strong>warning</strong>(<code>vMessage</code>, <code>mOptions?</code>): <code>void</code></p>
-</blockquote>
-<p>Displays a warning dialog with the given message, a WARNING icon, an OK button. If a callback is given,
-it is called after the warning box has been closed by the user with one of the buttons.</p>
+<p>Displays a success dialog with the given message, a SUCCESS icon, an OK button. If a callback is given,
+it is called after the success box has been closed by the user with one of the buttons.</p>
 <pre><code class="language-javascript">
-sap.m.MessageBox.warning(&quot;This message should appear in the warning message box&quot;, {
-    title: &quot;Warning&quot;,                                    // default
+sap.m.MessageBox.success(&quot;This message should appear in the success message box&quot;, {
+    title: &quot;Success&quot;,                                    // default
     onClose: null,                                       // default
     styleClass: &quot;&quot;,                                      // default
     actions: sap.m.MessageBox.Action.OK,                 // default
@@ -661,10 +637,15 @@ sap.m.MessageBox.warning(&quot;This message should appear in the warning message
 </code></pre>
 <p>The callback is called with the following signature</p>
 <pre><code class="language-javascript">
-  function (oAction)
+  function(oAction)
 </code></pre>
-<p>The warning dialog opened by this method is processed asynchronously. Applications have to use <code>fnCallback</code>
-to continue work after the user closed the warning dialog</p>
+<p>The success dialog opened by this method is processed asynchronously. Applications have to use <code>fnCallback</code>
+to continue work after the user closed the success dialog</p>
+<hr>
+<h3>warning()</h3>
+<blockquote>
+<p><strong>warning</strong>(<code>vMessage</code>, <code>mOptions?</code>): <code>void</code></p>
+</blockquote>
 <h4>Parameters</h4>
 <h5>vMessage</h5>
 <p><code>string</code></p>
@@ -731,7 +712,26 @@ user can scroll vertically inside the MessageBox when the content is larger than
 <p><code>void</code></p>
 <h4>Since</h4>
 <p>1.30</p>
+<p>Displays a warning dialog with the given message, a WARNING icon, an OK button. If a callback is given,
+it is called after the warning box has been closed by the user with one of the buttons.</p>
+<pre><code class="language-javascript">
+sap.m.MessageBox.warning(&quot;This message should appear in the warning message box&quot;, {
+    title: &quot;Warning&quot;,                                    // default
+    onClose: null,                                       // default
+    styleClass: &quot;&quot;,                                      // default
+    actions: sap.m.MessageBox.Action.OK,                 // default
+    emphasizedAction: sap.m.MessageBox.Action.OK,        // default
+    initialFocus: null,                                  // default
+    textDirection: sap.ui.core.TextDirection.Inherit     // default
+});
+</code></pre>
+<p>The callback is called with the following signature</p>
+<pre><code class="language-javascript">
+  function (oAction)
+</code></pre>
+<p>The warning dialog opened by this method is processed asynchronously. Applications have to use <code>fnCallback</code>
+to continue work after the user closed the warning dialog</p>
 
-<footer>Generated from <code>@openui5/types@1.120.46</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@openui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

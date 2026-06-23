@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Interface: $FacetFilterListSettings — OpenUI5 TypeScript API</title>
-<meta name="description" content="Interface: $FacetFilterListSettings — OpenUI5 TypeScript API Reference (1.120.46)">
+<meta name="description" content="Interface: $FacetFilterListSettings — OpenUI5 TypeScript API Reference (1.120.0)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/openui5/1.120/sap.m/sap/m/FacetFilterList/interfaces/$FacetFilterListSettings.html">
 <meta property="og:title" content="Interface: $FacetFilterListSettings — OpenUI5 TypeScript API">
-<meta property="og:description" content="Interface: $FacetFilterListSettings — OpenUI5 TypeScript API Reference (1.120.46)">
+<meta property="og:description" content="Interface: $FacetFilterListSettings — OpenUI5 TypeScript API Reference (1.120.0)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/openui5/1.120/sap.m/sap/m/FacetFilterList/interfaces/$FacetFilterListSettings.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,12 +33,11 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../index.html">OpenUI5 API</a> › <a href="../../../../../sap.m/README.html">sap.m</a> › sap › m › <a href="../../../../../sap.m/sap/m/FacetFilterList/README.html">FacetFilterList</a> › interfaces</nav>
-<p><a href="../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.46)</strong></a></p>
+<p><a href="../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.0)</strong></a></p>
 <hr>
-<p><a href="../../../../../README.html">OpenUI5 TypeScript API (1.120.46)</a> / <a href="../../../../README.html">sap.m</a> / <a href="../README.html">sap/m/FacetFilterList</a> / $FacetFilterListSettings</p>
+<p><a href="../../../../../README.html">OpenUI5 TypeScript API (1.120.0)</a> / <a href="../../../../README.html">sap.m</a> / <a href="../README.html">sap/m/FacetFilterList</a> / $FacetFilterListSettings</p>
 <h1>Interface: $FacetFilterListSettings</h1>
 <pre class="sig"><span class="kw">import</span> { $FacetFilterListSettings } <span class="kw">from</span> <span class="str">"sap/m/FacetFilterList"</span>;</pre>
-<p>Describes the settings that can be provided to the FacetFilterList constructor.</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../List/interfaces/$ListSettings.html"><code>$ListSettings</code></a></li>
@@ -107,30 +106,24 @@ filtering behavior has to be defined at application level inside the <code>listO
 <blockquote>
 <p><code>optional</code> <strong>multiSelect?</strong>: <code>boolean</code> | <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<p>Specifies whether multiple or single selection is used.</p>
 <h4>Deprecated</h4>
 <p>(since 1.20.0) - replaced by <code>setMode</code> method. <code>FacetFilterList</code> overrides the <code>setMode</code>
 method to restrict the possible modes to <code>MultiSelect</code> and <code>SingleSelectMaster</code>. All other modes are
 ignored and will not be set.</p>
+<p>Specifies whether multiple or single selection is used.</p>
 <hr>
 <h3>retainListSequence?</h3>
 <blockquote>
 <p><code>optional</code> <strong>retainListSequence?</strong>: <code>boolean</code> | <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<p>Retains the list sequence if it is inactive and made active again.</p>
 <h4>Since</h4>
 <p>1.22.1</p>
+<p>Retains the list sequence if it is inactive and made active again.</p>
 <hr>
 <h3>search?</h3>
 <blockquote>
 <p><code>optional</code> <strong>search?</strong>: (<code>oEvent</code>) =&gt; <code>void</code></p>
 </blockquote>
-<p>Triggered after the Search button is pressed or by pressing Enter in search input field.</p>
-<p>The default filtering behavior of the control can be prevented by calling <code>sap.ui.base.Event.prototype.preventDefault</code>
-function in the <code>search</code> event handler function. Preventing the default behavior is useful in cases when
-items aggregation could be taking long time fetching from the OData model. As a result, no list items
-are loaded initially. If the default filtering behavior is prevented then filtering behavior has to be
-defined at application level inside the <code>search</code> event handler function.</p>
 <h4>Parameters</h4>
 <h5>oEvent</h5>
 <p><a href="../type-aliases/FacetFilterList$SearchEvent.html"><code>FacetFilterList$SearchEvent</code></a></p>
@@ -138,6 +131,12 @@ defined at application level inside the <code>search</code> event handler functi
 <p><code>void</code></p>
 <h4>Since</h4>
 <p>1.76</p>
+<p>Triggered after the Search button is pressed or by pressing Enter in search input field.</p>
+<p>The default filtering behavior of the control can be prevented by calling <code>sap.ui.base.Event.prototype.preventDefault</code>
+function in the <code>search</code> event handler function. Preventing the default behavior is useful in cases when
+items aggregation could be taking long time fetching from the OData model. As a result, no list items
+are loaded initially. If the default filtering behavior is prevented then filtering behavior has to be
+defined at application level inside the <code>search</code> event handler function.</p>
 <hr>
 <h3>sequence?</h3>
 <blockquote>
@@ -150,9 +149,9 @@ by ascending order of sequence.</p>
 <blockquote>
 <p><code>optional</code> <strong>showRemoveFacetIcon?</strong>: <code>boolean</code> | <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<p>Specifies whether remove icon for facet is visible or hidden.</p>
 <h4>Since</h4>
 <p>1.20.4</p>
+<p>Specifies whether remove icon for facet is visible or hidden.</p>
 <hr>
 <h3>title?</h3>
 <blockquote>
@@ -167,6 +166,6 @@ type is set to <code>Simple</code>. It is also displayed as a list item in the f
 </blockquote>
 <p>If set to <code>true</code>, the item text wraps when it is too long.</p>
 
-<footer>Generated from <code>@openui5/types@1.120.46</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@openui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

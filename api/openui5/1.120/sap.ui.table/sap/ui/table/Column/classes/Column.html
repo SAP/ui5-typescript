@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Class: Column — OpenUI5 TypeScript API</title>
-<meta name="description" content="Class: Column — OpenUI5 TypeScript API Reference (1.120.46)">
+<meta name="description" content="Class: Column — OpenUI5 TypeScript API Reference (1.120.0)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/openui5/1.120/sap.ui.table/sap/ui/table/Column/classes/Column.html">
 <meta property="og:title" content="Class: Column — OpenUI5 TypeScript API">
-<meta property="og:description" content="Class: Column — OpenUI5 TypeScript API Reference (1.120.46)">
+<meta property="og:description" content="Class: Column — OpenUI5 TypeScript API Reference (1.120.0)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/openui5/1.120/sap.ui.table/sap/ui/table/Column/classes/Column.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,9 +33,9 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../index.html">OpenUI5 API</a> › <a href="../../../../../../sap.ui.table/README.html">sap.ui.table</a> › sap › ui › table › <a href="../../../../../../sap.ui.table/sap/ui/table/Column/README.html">Column</a> › classes</nav>
-<p><a href="../../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.46)</strong></a></p>
+<p><a href="../../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.0)</strong></a></p>
 <hr>
-<p><a href="../../../../../../README.html">OpenUI5 TypeScript API (1.120.46)</a> / <a href="../../../../../README.html">sap.ui.table</a> / <a href="../README.html">sap/ui/table/Column</a> / Column</p>
+<p><a href="../../../../../../README.html">OpenUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../README.html">sap.ui.table</a> / <a href="../README.html">sap/ui/table/Column</a> / Column</p>
 <h1>Class: Column</h1>
 <pre class="sig"><span class="kw">import</span> Column <span class="kw">from</span> <span class="str">"sap/ui/table/Column"</span>;</pre>
 <p>The column allows you to define column specific properties that will be applied when rendering the table.</p>
@@ -88,7 +88,6 @@ of the syntax of the settings object.</p>
 <blockquote>
 <p><strong>addMultiLabel</strong>(<code>oMultiLabel</code>): <code>this</code></p>
 </blockquote>
-<p>Adds some multiLabel to the aggregation #getMultiLabels multiLabels.</p>
 <h4>Parameters</h4>
 <h5>oMultiLabel</h5>
 <p><a href="../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></p>
@@ -98,17 +97,13 @@ of the syntax of the settings object.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.13.1</p>
+<p>Adds some multiLabel to the aggregation #getMultiLabels multiLabels.</p>
 <hr>
 <h3><del>attachColumnMenuOpen()</del></h3>
 <h4>Call Signature</h4>
 <blockquote>
 <p><strong>attachColumnMenuOpen</strong>(<code>oData</code>, <code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
-<p>Attaches event handler <code>fnFunction</code> to the #event:columnMenuOpen columnMenuOpen event of this
-<code>sap.ui.table.Column</code>.</p>
-<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
-otherwise it will be bound to this <code>sap.ui.table.Column</code> itself.</p>
-<p>Fires before the column menu is opened.</p>
 <h5>Parameters</h5>
 <h6>oData</h6>
 <p><code>object</code></p>
@@ -127,15 +122,15 @@ object when firing the event</p>
 <p>1.33.0</p>
 <h5>Deprecated</h5>
 <p>(since 1.117)</p>
-<h4>Call Signature</h4>
-<blockquote>
-<p><strong>attachColumnMenuOpen</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
-</blockquote>
 <p>Attaches event handler <code>fnFunction</code> to the #event:columnMenuOpen columnMenuOpen event of this
 <code>sap.ui.table.Column</code>.</p>
 <p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
 otherwise it will be bound to this <code>sap.ui.table.Column</code> itself.</p>
 <p>Fires before the column menu is opened.</p>
+<h4>Call Signature</h4>
+<blockquote>
+<p><strong>attachColumnMenuOpen</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
+</blockquote>
 <h5>Parameters</h5>
 <h6>fnFunction</h6>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -150,6 +145,11 @@ otherwise it will be bound to this <code>sap.ui.table.Column</code> itself.</p>
 <p>1.33.0</p>
 <h5>Deprecated</h5>
 <p>(since 1.117)</p>
+<p>Attaches event handler <code>fnFunction</code> to the #event:columnMenuOpen columnMenuOpen event of this
+<code>sap.ui.table.Column</code>.</p>
+<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
+otherwise it will be bound to this <code>sap.ui.table.Column</code> itself.</p>
+<p>Fires before the column menu is opened.</p>
 <hr>
 <h3>destroyLabel()</h3>
 <blockquote>
@@ -164,23 +164,23 @@ otherwise it will be bound to this <code>sap.ui.table.Column</code> itself.</p>
 <blockquote>
 <p><strong>destroyMenu</strong>(): <code>this</code></p>
 </blockquote>
-<p>Destroys the menu in the aggregation #getMenu menu.</p>
 <h4>Returns</h4>
 <p><code>this</code></p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Deprecated</h4>
 <p>(since 1.117) - use the <code>headerMenu</code> association instead.</p>
+<p>Destroys the menu in the aggregation #getMenu menu.</p>
 <hr>
 <h3>destroyMultiLabels()</h3>
 <blockquote>
 <p><strong>destroyMultiLabels</strong>(): <code>this</code></p>
 </blockquote>
-<p>Destroys all the multiLabels in the aggregation #getMultiLabels multiLabels.</p>
 <h4>Returns</h4>
 <p><code>this</code></p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.13.1</p>
+<p>Destroys all the multiLabels in the aggregation #getMultiLabels multiLabels.</p>
 <hr>
 <h3>destroyTemplate()</h3>
 <blockquote>
@@ -195,9 +195,6 @@ otherwise it will be bound to this <code>sap.ui.table.Column</code> itself.</p>
 <blockquote>
 <p><strong>detachColumnMenuOpen</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
-<p>Detaches event handler <code>fnFunction</code> from the #event:columnMenuOpen columnMenuOpen event of this
-<code>sap.ui.table.Column</code>.</p>
-<p>The passed function and listener object must match the ones used for event registration.</p>
 <h4>Parameters</h4>
 <h5>fnFunction</h5>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -212,14 +209,14 @@ otherwise it will be bound to this <code>sap.ui.table.Column</code> itself.</p>
 <p>1.33.0</p>
 <h4>Deprecated</h4>
 <p>(since 1.117)</p>
+<p>Detaches event handler <code>fnFunction</code> from the #event:columnMenuOpen columnMenuOpen event of this
+<code>sap.ui.table.Column</code>.</p>
+<p>The passed function and listener object must match the ones used for event registration.</p>
 <hr>
 <h3><del>fireColumnMenuOpen()</del></h3>
 <blockquote>
 <p><strong>fireColumnMenuOpen</strong>(<code>mParameters?</code>): <code>boolean</code></p>
 </blockquote>
-<p>Fires event #event:columnMenuOpen columnMenuOpen to attached listeners.</p>
-<p>Listeners may prevent the default action of this event by calling the <code>preventDefault</code> method on the
-event object. The return value of this method indicates whether the default action should be executed.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/Column$ColumnMenuOpenEventParameters.html"><code>Column$ColumnMenuOpenEventParameters</code></a></p>
@@ -233,21 +230,24 @@ event object. The return value of this method indicates whether the default acti
 <p>(since 1.117)</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:columnMenuOpen columnMenuOpen to attached listeners.</p>
+<p>Listeners may prevent the default action of this event by calling the <code>preventDefault</code> method on the
+event object. The return value of this method indicates whether the default action should be executed.</p>
 <hr>
 <h3>getAutoResizable()</h3>
 <blockquote>
 <p><strong>getAutoResizable</strong>(): <code>boolean</code></p>
 </blockquote>
-<p>Gets current value of property #getAutoResizable autoResizable.</p>
-<p>Enables auto-resizing of the column on double clicking the resize bar. The width is determined on the
-widest currently displayed content. It does not consider rows which are currently not scrolled into view.
-Currently only implemented to work with the following controls: <code>sap.m.Text, sap.m.Label, sap.m.Link, sap.m.Input, sap.ui.commons.TextView, sap.ui.commons.Label, sap.ui.commons.Link and sap.ui.commons.TextField, sap.ui.commons.Checkbox, sap.m.CheckBox</code></p>
-<p>Default value is <code>false</code>.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>Value of property <code>autoResizable</code></p>
 <h4>Since</h4>
 <p>1.21.1</p>
+<p>Gets current value of property #getAutoResizable autoResizable.</p>
+<p>Enables auto-resizing of the column on double clicking the resize bar. The width is determined on the
+widest currently displayed content. It does not consider rows which are currently not scrolled into view.
+Currently only implemented to work with the following controls: <code>sap.m.Text, sap.m.Label, sap.m.Link, sap.m.Input, sap.ui.commons.TextView, sap.ui.commons.Label, sap.ui.commons.Link and sap.ui.commons.TextField, sap.ui.commons.Checkbox, sap.m.CheckBox</code></p>
+<p>Default value is <code>false</code>.</p>
 <hr>
 <h3>getDefaultFilterOperator()</h3>
 <blockquote>
@@ -301,6 +301,11 @@ entry is a text input field.</p>
 <blockquote>
 <p><strong>getFilterType</strong>(): <code>any</code></p>
 </blockquote>
+<h4>Returns</h4>
+<p><code>any</code></p>
+<p>Value of property <code>filterType</code></p>
+<h4>Since</h4>
+<p>1.9.2</p>
 <p>Gets current value of property #getFilterType filterType.</p>
 <p>Type of filter. It is used to transform the search term into the specified type and should be the same
 as defined in the binding for the column template. Default value is <code>sap.ui.model.type.String</code>. It can
@@ -311,11 +316,6 @@ instead.</p>
 <p><strong>Note:</strong> The usage of string-based type definitions without explicitly loading these types (<code>sap.ui.require</code>)
 in the controller has been deprecated and might no longer work in future releases. Please ensure that
 the types are requested correctly before setting this property.</p>
-<h4>Returns</h4>
-<p><code>any</code></p>
-<p>Value of property <code>filterType</code></p>
-<h4>Since</h4>
-<p>1.9.2</p>
 <hr>
 <h3>getFilterValue()</h3>
 <blockquote>
@@ -345,31 +345,31 @@ some..thing   between
 <blockquote>
 <p><strong>getFlexible</strong>(): <code>boolean</code></p>
 </blockquote>
-<p>Gets current value of property #getFlexible flexible.</p>
-<p>If the table is wider than the sum of widths of the visible columns, the columns will be resized proportionally
-to their widths that were set originally. If set to false, the column will be displayed in the original
-width. If all columns are set to not be flexible, an extra &quot;dummy&quot; column will be created at the end
-of the table.</p>
-<p>Default value is <code>true</code>.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>Value of property <code>flexible</code></p>
 <h4>Deprecated</h4>
 <p>(since 1.44) - this property has no effect. Use the property <code>minWidth</code> in combination with
 the property <code>width=&quot;auto&quot;</code> instead.</p>
+<p>Gets current value of property #getFlexible flexible.</p>
+<p>If the table is wider than the sum of widths of the visible columns, the columns will be resized proportionally
+to their widths that were set originally. If set to false, the column will be displayed in the original
+width. If all columns are set to not be flexible, an extra &quot;dummy&quot; column will be created at the end
+of the table.</p>
+<p>Default value is <code>true</code>.</p>
 <hr>
 <h3><del>getGrouped()</del></h3>
 <blockquote>
 <p><strong>getGrouped</strong>(): <code>boolean</code></p>
 </blockquote>
-<p>Gets current value of property #getGrouped grouped.</p>
-<p>Indicates if the column is grouped.</p>
-<p>Default value is <code>false</code>.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>Value of property <code>grouped</code></p>
 <h4>Deprecated</h4>
 <p>(since 1.118)</p>
+<p>Gets current value of property #getGrouped grouped.</p>
+<p>Indicates if the column is grouped.</p>
+<p>Default value is <code>false</code>.</p>
 <hr>
 <h3>getHAlign()</h3>
 <blockquote>
@@ -387,12 +387,12 @@ alignment. You have to set the text align directly on the template.</p>
 <blockquote>
 <p><strong>getHeaderMenu</strong>(): <code>string</code></p>
 </blockquote>
-<p>ID of the element which is the current target of the association #getHeaderMenu headerMenu, or
-<code>null</code>.</p>
 <h4>Returns</h4>
 <p><code>string</code></p>
 <h4>Since</h4>
 <p>1.110</p>
+<p>ID of the element which is the current target of the association #getHeaderMenu headerMenu, or
+<code>null</code>.</p>
 <hr>
 <h3>getHeaderSpan()</h3>
 <blockquote>
@@ -426,57 +426,57 @@ will be created. Which control this is depends on the loaded libraries.</p>
 <blockquote>
 <p><strong>getMenu</strong>(): <a href="../../../../../../sap.ui.unified/sap/ui/unified/Menu/classes/Menu.html"><code>Menu</code></a></p>
 </blockquote>
+<h4>Returns</h4>
+<p><a href="../../../../../../sap.ui.unified/sap/ui/unified/Menu/classes/Menu.html"><code>Menu</code></a></p>
+<h4>Deprecated</h4>
+<p>(since 1.117) - use the <code>headerMenu</code> association instead.</p>
 <p>Gets content of aggregation #getMenu menu.</p>
 <p>The menu used by the column. By default the sap.ui.table.ColumnMenu is used.</p>
 <p><strong>Note:</strong> Applications must not use or change the default <code>sap.ui.table.ColumnMenu</code> of a column in any
 way or create own instances of <code>sap.ui.table.ColumnMenu</code>. To add a custom menu to a column, use the aggregation
 <code>menu</code> with a new instance of <code>sap.ui.unified.Menu</code>.</p>
-<h4>Returns</h4>
-<p><a href="../../../../../../sap.ui.unified/sap/ui/unified/Menu/classes/Menu.html"><code>Menu</code></a></p>
-<h4>Deprecated</h4>
-<p>(since 1.117) - use the <code>headerMenu</code> association instead.</p>
 <hr>
 <h3>getMinWidth()</h3>
 <blockquote>
 <p><strong>getMinWidth</strong>(): <code>number</code></p>
 </blockquote>
+<h4>Returns</h4>
+<p><code>number</code></p>
+<p>Value of property <code>minWidth</code></p>
+<h4>Since</h4>
+<p>1.44.1</p>
 <p>Gets current value of property #getMinWidth minWidth.</p>
 <p>Defines the minimum width of a column in pixels. This property only has an effect if the given column
 width is flexible, for example with width <code>auto</code>. This property only influences the automatic behavior.
 If a user adjusts the column width manually, the column width can become smaller. Minimal column width
 is device-dependent, for example on desktop devices the column will not be smaller than 48px.</p>
 <p>Default value is <code>0</code>.</p>
-<h4>Returns</h4>
-<p><code>number</code></p>
-<p>Value of property <code>minWidth</code></p>
-<h4>Since</h4>
-<p>1.44.1</p>
 <hr>
 <h3>getMultiLabels()</h3>
 <blockquote>
 <p><strong>getMultiLabels</strong>(): <a href="../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a>[]</p>
 </blockquote>
-<p>Gets content of aggregation #getMultiLabels multiLabels.</p>
-<p>Labels of the column which are displayed in the column header. Define a control for each header row in
-the table. Use this aggregation if you want to use multiple headers per column.</p>
 <h4>Returns</h4>
 <p><a href="../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a>[]</p>
 <h4>Since</h4>
 <p>1.13.1</p>
+<p>Gets content of aggregation #getMultiLabels multiLabels.</p>
+<p>Labels of the column which are displayed in the column header. Define a control for each header row in
+the table. Use this aggregation if you want to use multiple headers per column.</p>
 <hr>
 <h3>getName()</h3>
 <blockquote>
 <p><strong>getName</strong>(): <code>string</code></p>
 </blockquote>
-<p>Gets current value of property #getName name.</p>
-<p>The name of the column which is used for the text representation of this column, for example, in menus.
-If not set, the text from the multiLabels aggregation or the label aggregation (in that order) is used
-as a fallback option.</p>
 <h4>Returns</h4>
 <p><code>string</code></p>
 <p>Value of property <code>name</code></p>
 <h4>Since</h4>
 <p>1.11.1</p>
+<p>Gets current value of property #getName name.</p>
+<p>The name of the column which is used for the text representation of this column, for example, in menus.
+If not set, the text from the multiLabels aggregation or the label aggregation (in that order) is used
+as a fallback option.</p>
 <hr>
 <h3>getResizable()</h3>
 <blockquote>
@@ -494,44 +494,44 @@ as a fallback option.</p>
 <blockquote>
 <p><strong>getShowFilterMenuEntry</strong>(): <code>boolean</code></p>
 </blockquote>
-<p>Gets current value of property #getShowFilterMenuEntry showFilterMenuEntry.</p>
-<p>Defines if the filter menu entry is displayed</p>
-<p>Default value is <code>true</code>.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>Value of property <code>showFilterMenuEntry</code></p>
 <h4>Since</h4>
 <p>1.13.0</p>
+<p>Gets current value of property #getShowFilterMenuEntry showFilterMenuEntry.</p>
+<p>Defines if the filter menu entry is displayed</p>
+<p>Default value is <code>true</code>.</p>
 <hr>
 <h3>getShowSortMenuEntry()</h3>
 <blockquote>
 <p><strong>getShowSortMenuEntry</strong>(): <code>boolean</code></p>
 </blockquote>
-<p>Gets current value of property #getShowSortMenuEntry showSortMenuEntry.</p>
-<p>Defines if the sort menu entries are displayed</p>
-<p>Default value is <code>true</code>.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>Value of property <code>showSortMenuEntry</code></p>
 <h4>Since</h4>
 <p>1.13.0</p>
+<p>Gets current value of property #getShowSortMenuEntry showSortMenuEntry.</p>
+<p>Defines if the sort menu entries are displayed</p>
+<p>Default value is <code>true</code>.</p>
 <hr>
 <h3><del>getSorted()</del></h3>
 <blockquote>
 <p><strong>getSorted</strong>(): <code>boolean</code></p>
 </blockquote>
-<p>Gets current value of property #getSorted sorted.</p>
-<p>Indicates if the column is sorted. This property only controls if a sort indicator is displayed in the
-column header - it does not trigger the sort function. The column can be sorted using sap.ui.table.Table#sort.</p>
-<p>If this property is set to <code>true</code> and the <code>sortOrder</code> property is <code>None</code>, <code>sortOrder</code> is automatically
-set to <code>Ascending</code>. If this property is <code>true</code> and <code>sortOrder</code> is <code>None</code>, the sort indicator is not shown.</p>
-<p>Default value is <code>false</code>.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>Value of property <code>sorted</code></p>
 <h4>Deprecated</h4>
 <p>(since 1.120) - replaced by sap.ui.core.SortOrder SortOrder.None for the <code>sortOrder</code>
 property</p>
+<p>Gets current value of property #getSorted sorted.</p>
+<p>Indicates if the column is sorted. This property only controls if a sort indicator is displayed in the
+column header - it does not trigger the sort function. The column can be sorted using sap.ui.table.Table#sort.</p>
+<p>If this property is set to <code>true</code> and the <code>sortOrder</code> property is <code>None</code>, <code>sortOrder</code> is automatically
+set to <code>Ascending</code>. If this property is <code>true</code> and <code>sortOrder</code> is <code>None</code>, the sort indicator is not shown.</p>
+<p>Default value is <code>false</code>.</p>
 <hr>
 <h3>getSortOrder()</h3>
 <blockquote>
@@ -581,7 +581,6 @@ and keyboard support.</p>
 <blockquote>
 <p><strong>getTemplateClone</strong>(<code>iIndex</code>): <a href="../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></p>
 </blockquote>
-<p>Returns a template clone. It either finds an unused clone or clones a new one from the template.</p>
 <h4>Parameters</h4>
 <h5>iIndex</h5>
 <p><code>number</code></p>
@@ -591,6 +590,7 @@ and keyboard support.</p>
 <p>Clone of the template, or <code>null</code> if no template is defined</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Returns a template clone. It either finds an unused clone or clones a new one from the template.</p>
 <hr>
 <h3>getVisible()</h3>
 <blockquote>
@@ -621,8 +621,6 @@ other columns with width <code>auto</code> get a fixed minimum width and do not 
 <blockquote>
 <p><strong>indexOfMultiLabel</strong>(<code>oMultiLabel</code>): <code>number</code></p>
 </blockquote>
-<p>Checks for the provided <code>sap.ui.core.Control</code> in the aggregation #getMultiLabels multiLabels.
-and returns its index if found or -1 otherwise.</p>
 <h4>Parameters</h4>
 <h5>oMultiLabel</h5>
 <p><a href="../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></p>
@@ -632,12 +630,13 @@ and returns its index if found or -1 otherwise.</p>
 <p>The index of the provided control in the aggregation if found, or -1 otherwise</p>
 <h4>Since</h4>
 <p>1.13.1</p>
+<p>Checks for the provided <code>sap.ui.core.Control</code> in the aggregation #getMultiLabels multiLabels.
+and returns its index if found or -1 otherwise.</p>
 <hr>
 <h3>insertMultiLabel()</h3>
 <blockquote>
 <p><strong>insertMultiLabel</strong>(<code>oMultiLabel</code>, <code>iIndex</code>): <code>this</code></p>
 </blockquote>
-<p>Inserts a multiLabel into the aggregation #getMultiLabels multiLabels.</p>
 <h4>Parameters</h4>
 <h5>oMultiLabel</h5>
 <p><a href="../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></p>
@@ -652,24 +651,24 @@ is inserted at the last position</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.13.1</p>
+<p>Inserts a multiLabel into the aggregation #getMultiLabels multiLabels.</p>
 <hr>
 <h3>removeAllMultiLabels()</h3>
 <blockquote>
 <p><strong>removeAllMultiLabels</strong>(): <a href="../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a>[]</p>
 </blockquote>
-<p>Removes all the controls from the aggregation #getMultiLabels multiLabels.</p>
-<p>Additionally, it unregisters them from the hosting UIArea.</p>
 <h4>Returns</h4>
 <p><a href="../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a>[]</p>
 <p>An array of the removed elements (might be empty)</p>
 <h4>Since</h4>
 <p>1.13.1</p>
+<p>Removes all the controls from the aggregation #getMultiLabels multiLabels.</p>
+<p>Additionally, it unregisters them from the hosting UIArea.</p>
 <hr>
 <h3>removeMultiLabel()</h3>
 <blockquote>
 <p><strong>removeMultiLabel</strong>(<code>vMultiLabel</code>): <a href="../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></p>
 </blockquote>
-<p>Removes a multiLabel from the aggregation #getMultiLabels multiLabels.</p>
 <h4>Parameters</h4>
 <h5>vMultiLabel</h5>
 <p><code>string</code> | <code>number</code> | <a href="../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></p>
@@ -679,17 +678,12 @@ is inserted at the last position</p>
 <p>The removed multiLabel or <code>null</code></p>
 <h4>Since</h4>
 <p>1.13.1</p>
+<p>Removes a multiLabel from the aggregation #getMultiLabels multiLabels.</p>
 <hr>
 <h3>setAutoResizable()</h3>
 <blockquote>
 <p><strong>setAutoResizable</strong>(<code>bAutoResizable?</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getAutoResizable autoResizable.</p>
-<p>Enables auto-resizing of the column on double clicking the resize bar. The width is determined on the
-widest currently displayed content. It does not consider rows which are currently not scrolled into view.
-Currently only implemented to work with the following controls: <code>sap.m.Text, sap.m.Label, sap.m.Link, sap.m.Input, sap.ui.commons.TextView, sap.ui.commons.Label, sap.ui.commons.Link and sap.ui.commons.TextField, sap.ui.commons.Checkbox, sap.m.CheckBox</code></p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>false</code>.</p>
 <h4>Parameters</h4>
 <h5>bAutoResizable?</h5>
 <p><code>boolean</code></p>
@@ -699,6 +693,12 @@ Currently only implemented to work with the following controls: <code>sap.m.Text
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.21.1</p>
+<p>Sets a new value for property #getAutoResizable autoResizable.</p>
+<p>Enables auto-resizing of the column on double clicking the resize bar. The width is determined on the
+widest currently displayed content. It does not consider rows which are currently not scrolled into view.
+Currently only implemented to work with the following controls: <code>sap.m.Text, sap.m.Label, sap.m.Link, sap.m.Input, sap.ui.commons.TextView, sap.ui.commons.Label, sap.ui.commons.Link and sap.ui.commons.TextField, sap.ui.commons.Checkbox, sap.m.CheckBox</code></p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>false</code>.</p>
 <hr>
 <h3>setDefaultFilterOperator()</h3>
 <blockquote>
@@ -816,13 +816,6 @@ some..thing   between
 <blockquote>
 <p><strong>setFlexible</strong>(<code>bFlexible?</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getFlexible flexible.</p>
-<p>If the table is wider than the sum of widths of the visible columns, the columns will be resized proportionally
-to their widths that were set originally. If set to false, the column will be displayed in the original
-width. If all columns are set to not be flexible, an extra &quot;dummy&quot; column will be created at the end
-of the table.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>true</code>.</p>
 <h4>Parameters</h4>
 <h5>bFlexible?</h5>
 <p><code>boolean</code></p>
@@ -833,15 +826,18 @@ of the table.</p>
 <h4>Deprecated</h4>
 <p>(since 1.44) - this property has no effect. Use the property <code>minWidth</code> in combination with
 the property <code>width=&quot;auto&quot;</code> instead.</p>
+<p>Sets a new value for property #getFlexible flexible.</p>
+<p>If the table is wider than the sum of widths of the visible columns, the columns will be resized proportionally
+to their widths that were set originally. If set to false, the column will be displayed in the original
+width. If all columns are set to not be flexible, an extra &quot;dummy&quot; column will be created at the end
+of the table.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>true</code>.</p>
 <hr>
 <h3><del>setGrouped()</del></h3>
 <blockquote>
 <p><strong>setGrouped</strong>(<code>bGrouped?</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getGrouped grouped.</p>
-<p>Indicates if the column is grouped.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>false</code>.</p>
 <h4>Parameters</h4>
 <h5>bGrouped?</h5>
 <p><code>boolean</code></p>
@@ -851,6 +847,10 @@ the property <code>width=&quot;auto&quot;</code> instead.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Deprecated</h4>
 <p>(since 1.118)</p>
+<p>Sets a new value for property #getGrouped grouped.</p>
+<p>Indicates if the column is grouped.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>false</code>.</p>
 <hr>
 <h3>setHAlign()</h3>
 <blockquote>
@@ -873,7 +873,6 @@ alignment. You have to set the text align directly on the template.</p>
 <blockquote>
 <p><strong>setHeaderMenu</strong>(<code>oHeaderMenu</code>): <code>this</code></p>
 </blockquote>
-<p>Sets the associated #getHeaderMenu headerMenu.</p>
 <h4>Parameters</h4>
 <h5>oHeaderMenu</h5>
 <p><code>string</code> | <a href="../../../../../../sap.ui.core/sap/ui/core/library/interfaces/IColumnHeaderMenu.html"><code>IColumnHeaderMenu</code></a></p>
@@ -884,6 +883,7 @@ instance may be given</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.110</p>
+<p>Sets the associated #getHeaderMenu headerMenu.</p>
 <hr>
 <h3>setHeaderSpan()</h3>
 <blockquote>
@@ -923,7 +923,6 @@ which are part of the header with the greatest span will be set to fixed.</p>
 <blockquote>
 <p><strong>setMenu</strong>(<code>oMenu</code>): <code>this</code></p>
 </blockquote>
-<p>Sets the aggregated #getMenu menu.</p>
 <h4>Parameters</h4>
 <h5>oMenu</h5>
 <p><a href="../../../../../../sap.ui.unified/sap/ui/unified/Menu/classes/Menu.html"><code>Menu</code></a></p>
@@ -933,18 +932,12 @@ which are part of the header with the greatest span will be set to fixed.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Deprecated</h4>
 <p>(since 1.117) - use the <code>headerMenu</code> association instead.</p>
+<p>Sets the aggregated #getMenu menu.</p>
 <hr>
 <h3>setMinWidth()</h3>
 <blockquote>
 <p><strong>setMinWidth</strong>(<code>iMinWidth?</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getMinWidth minWidth.</p>
-<p>Defines the minimum width of a column in pixels. This property only has an effect if the given column
-width is flexible, for example with width <code>auto</code>. This property only influences the automatic behavior.
-If a user adjusts the column width manually, the column width can become smaller. Minimal column width
-is device-dependent, for example on desktop devices the column will not be smaller than 48px.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>0</code>.</p>
 <h4>Parameters</h4>
 <h5>iMinWidth?</h5>
 <p><code>number</code></p>
@@ -954,16 +947,18 @@ is device-dependent, for example on desktop devices the column will not be small
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.44.1</p>
+<p>Sets a new value for property #getMinWidth minWidth.</p>
+<p>Defines the minimum width of a column in pixels. This property only has an effect if the given column
+width is flexible, for example with width <code>auto</code>. This property only influences the automatic behavior.
+If a user adjusts the column width manually, the column width can become smaller. Minimal column width
+is device-dependent, for example on desktop devices the column will not be smaller than 48px.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>0</code>.</p>
 <hr>
 <h3>setName()</h3>
 <blockquote>
 <p><strong>setName</strong>(<code>sName?</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getName name.</p>
-<p>The name of the column which is used for the text representation of this column, for example, in menus.
-If not set, the text from the multiLabels aggregation or the label aggregation (in that order) is used
-as a fallback option.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <h4>Parameters</h4>
 <h5>sName?</h5>
 <p><code>string</code></p>
@@ -973,6 +968,11 @@ as a fallback option.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.11.1</p>
+<p>Sets a new value for property #getName name.</p>
+<p>The name of the column which is used for the text representation of this column, for example, in menus.
+If not set, the text from the multiLabels aggregation or the label aggregation (in that order) is used
+as a fallback option.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <hr>
 <h3>setResizable()</h3>
 <blockquote>
@@ -995,10 +995,6 @@ as a fallback option.</p>
 <blockquote>
 <p><strong>setShowFilterMenuEntry</strong>(<code>bShowFilterMenuEntry?</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getShowFilterMenuEntry showFilterMenuEntry.</p>
-<p>Defines if the filter menu entry is displayed</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>true</code>.</p>
 <h4>Parameters</h4>
 <h5>bShowFilterMenuEntry?</h5>
 <p><code>boolean</code></p>
@@ -1008,15 +1004,15 @@ as a fallback option.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.13.0</p>
+<p>Sets a new value for property #getShowFilterMenuEntry showFilterMenuEntry.</p>
+<p>Defines if the filter menu entry is displayed</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>true</code>.</p>
 <hr>
 <h3>setShowSortMenuEntry()</h3>
 <blockquote>
 <p><strong>setShowSortMenuEntry</strong>(<code>bShowSortMenuEntry?</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getShowSortMenuEntry showSortMenuEntry.</p>
-<p>Defines if the sort menu entries are displayed</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>true</code>.</p>
 <h4>Parameters</h4>
 <h5>bShowSortMenuEntry?</h5>
 <p><code>boolean</code></p>
@@ -1026,18 +1022,15 @@ as a fallback option.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.13.0</p>
+<p>Sets a new value for property #getShowSortMenuEntry showSortMenuEntry.</p>
+<p>Defines if the sort menu entries are displayed</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>true</code>.</p>
 <hr>
 <h3><del>setSorted()</del></h3>
 <blockquote>
 <p><strong>setSorted</strong>(<code>bSorted?</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getSorted sorted.</p>
-<p>Indicates if the column is sorted. This property only controls if a sort indicator is displayed in the
-column header - it does not trigger the sort function. The column can be sorted using sap.ui.table.Table#sort.</p>
-<p>If this property is set to <code>true</code> and the <code>sortOrder</code> property is <code>None</code>, <code>sortOrder</code> is automatically
-set to <code>Ascending</code>. If this property is <code>true</code> and <code>sortOrder</code> is <code>None</code>, the sort indicator is not shown.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>false</code>.</p>
 <h4>Parameters</h4>
 <h5>bSorted?</h5>
 <p><code>boolean</code></p>
@@ -1048,6 +1041,13 @@ set to <code>Ascending</code>. If this property is <code>true</code> and <code>s
 <h4>Deprecated</h4>
 <p>(since 1.120) - replaced by sap.ui.core.SortOrder SortOrder.None for the <code>sortOrder</code>
 property</p>
+<p>Sets a new value for property #getSorted sorted.</p>
+<p>Indicates if the column is sorted. This property only controls if a sort indicator is displayed in the
+column header - it does not trigger the sort function. The column can be sorted using sap.ui.table.Table#sort.</p>
+<p>If this property is set to <code>true</code> and the <code>sortOrder</code> property is <code>None</code>, <code>sortOrder</code> is automatically
+set to <code>Ascending</code>. If this property is <code>true</code> and <code>sortOrder</code> is <code>None</code>, the sort indicator is not shown.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>false</code>.</p>
 <hr>
 <h3>setSortOrder()</h3>
 <blockquote>
@@ -1137,18 +1137,17 @@ other columns with width <code>auto</code> get a fixed minimum width and do not 
 <blockquote>
 <p><strong>shouldRender</strong>(): <code>boolean</code></p>
 </blockquote>
-<p>Returns whether the column should be rendered.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>Returns <code>true</code>, if the column should be rendered</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Returns whether the column should be rendered.</p>
 <hr>
 <h3><del>sort()</del></h3>
 <blockquote>
 <p><strong>sort</strong>(<code>bDescending</code>): <code>this</code></p>
 </blockquote>
-<p>Sorts the current column ascending or descending.</p>
 <h4>Parameters</h4>
 <h5>bDescending</h5>
 <p><code>boolean</code></p>
@@ -1158,16 +1157,17 @@ other columns with width <code>auto</code> get a fixed minimum width and do not 
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Deprecated</h4>
 <p>(since 1.5.1) - Please use the function &quot;sap.ui.Table.prototype.sort&quot;.</p>
+<p>Sorts the current column ascending or descending.</p>
 <hr>
 <h3><del>toggleSort()</del></h3>
 <blockquote>
 <p><strong>toggleSort</strong>(): <code>void</code></p>
 </blockquote>
-<p>Toggles the sort order of the column.</p>
 <h4>Returns</h4>
 <p><code>void</code></p>
 <h4>Deprecated</h4>
 <p>(since 1.5.1) - Please use the function &quot;sap.ui.Table.prototype.sort&quot;.</p>
+<p>Toggles the sort order of the column.</p>
 <hr>
 <h3>extend()</h3>
 <blockquote>
@@ -1184,7 +1184,7 @@ contained in <code>oClassInfo</code>.</p>
 <p><code>string</code></p>
 <p>Name of the class being created</p>
 <h5>oClassInfo?</h5>
-<p><a href="../../../../../../sap.f/namespaces/sap/type-aliases/ClassInfo.html"><code>ClassInfo</code></a>&lt;<code>T</code>, <code>Column</code>&gt;</p>
+<p><code>ClassInfo</code>&lt;<code>T</code>, <code>Column</code>&gt;</p>
 <p>Object literal with information about the class</p>
 <h5>FNMetaImpl?</h5>
 <p><code>Function</code></p>
@@ -1208,6 +1208,6 @@ used by this class</p>
 <p><a href="../../../../../../sap.ui.core/sap/ui/core/Element/classes/UI5Element.html"><code>UI5Element</code></a>.<a href="../../../../../../sap.ui.core/sap/ui/core/Element/classes/UI5Element.html#getmetadata-1"><code>getMetadata</code></a></p>
 <hr>
 
-<footer>Generated from <code>@openui5/types@1.120.46</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@openui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

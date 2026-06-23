@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Class: MessageItem — OpenUI5 TypeScript API</title>
-<meta name="description" content="Class: MessageItem — OpenUI5 TypeScript API Reference (1.120.46)">
+<meta name="description" content="Class: MessageItem — OpenUI5 TypeScript API Reference (1.120.0)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/openui5/1.120/sap.m/sap/m/MessageItem/classes/MessageItem.html">
 <meta property="og:title" content="Class: MessageItem — OpenUI5 TypeScript API">
-<meta property="og:description" content="Class: MessageItem — OpenUI5 TypeScript API Reference (1.120.46)">
+<meta property="og:description" content="Class: MessageItem — OpenUI5 TypeScript API Reference (1.120.0)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/openui5/1.120/sap.m/sap/m/MessageItem/classes/MessageItem.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,11 +33,13 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../index.html">OpenUI5 API</a> › <a href="../../../../../sap.m/README.html">sap.m</a> › sap › m › <a href="../../../../../sap.m/sap/m/MessageItem/README.html">MessageItem</a> › classes</nav>
-<p><a href="../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.46)</strong></a></p>
+<p><a href="../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.0)</strong></a></p>
 <hr>
-<p><a href="../../../../../README.html">OpenUI5 TypeScript API (1.120.46)</a> / <a href="../../../../README.html">sap.m</a> / <a href="../README.html">sap/m/MessageItem</a> / MessageItem</p>
+<p><a href="../../../../../README.html">OpenUI5 TypeScript API (1.120.0)</a> / <a href="../../../../README.html">sap.m</a> / <a href="../README.html">sap/m/MessageItem</a> / MessageItem</p>
 <h1>Class: MessageItem</h1>
 <pre class="sig"><span class="kw">import</span> MessageItem <span class="kw">from</span> <span class="str">"sap/m/MessageItem"</span>;</pre>
+<h2>Since</h2>
+<p>1.46</p>
 <p>A wrapper control used to hold different types of system messages. Structure: The message item holds
 the basic set of properties for a system message:
 	 -  Type, title, subtitle and description
@@ -48,8 +50,6 @@ the basic set of properties for a system message:
 `link` aggregation.  Usage: **Note:** The MessageItem control replaces sap.m.MessagePopoverItem
 as a more generic wrapper for messages.
 </code></pre>
-<h2>Since</h2>
-<p>1.46</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../../../../sap.ui.core/sap/ui/core/Item/classes/Item.html"><code>Item</code></a></li>
@@ -108,14 +108,14 @@ of the syntax of the settings object.</p>
 <blockquote>
 <p><strong>getActiveTitle</strong>(): <code>boolean</code></p>
 </blockquote>
-<p>Gets current value of property #getActiveTitle activeTitle.</p>
-<p>Defines whether the title of the item will be interactive.</p>
-<p>Default value is <code>false</code>.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>Value of property <code>activeTitle</code></p>
 <h4>Since</h4>
 <p>1.58</p>
+<p>Gets current value of property #getActiveTitle activeTitle.</p>
+<p>Defines whether the title of the item will be interactive.</p>
+<p>Default value is <code>false</code>.</p>
 <hr>
 <h3>getCounter()</h3>
 <blockquote>
@@ -216,10 +216,6 @@ empty.</p>
 <blockquote>
 <p><strong>setActiveTitle</strong>(<code>bActiveTitle?</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getActiveTitle activeTitle.</p>
-<p>Defines whether the title of the item will be interactive.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>false</code>.</p>
 <h4>Parameters</h4>
 <h5>bActiveTitle?</h5>
 <p><code>boolean</code></p>
@@ -229,6 +225,10 @@ empty.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.58</p>
+<p>Sets a new value for property #getActiveTitle activeTitle.</p>
+<p>Defines whether the title of the item will be interactive.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>false</code>.</p>
 <hr>
 <h3>setCounter()</h3>
 <blockquote>
@@ -382,7 +382,7 @@ contained in <code>oClassInfo</code>.</p>
 <p><code>string</code></p>
 <p>Name of the class being created</p>
 <h5>oClassInfo?</h5>
-<p><a href="../../../../../sap.f/namespaces/sap/type-aliases/ClassInfo.html"><code>ClassInfo</code></a>&lt;<code>T</code>, <code>MessageItem</code>&gt;</p>
+<p><code>ClassInfo</code>&lt;<code>T</code>, <code>MessageItem</code>&gt;</p>
 <p>Object literal with information about the class</p>
 <h5>FNMetaImpl?</h5>
 <p><code>Function</code></p>
@@ -406,6 +406,6 @@ used by this class</p>
 <p><a href="../../../../../sap.ui.core/sap/ui/core/Item/classes/Item.html"><code>Item</code></a>.<a href="../../../../../sap.ui.core/sap/ui/core/Item/classes/Item.html#getmetadata-1"><code>getMetadata</code></a></p>
 <hr>
 
-<footer>Generated from <code>@openui5/types@1.120.46</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@openui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

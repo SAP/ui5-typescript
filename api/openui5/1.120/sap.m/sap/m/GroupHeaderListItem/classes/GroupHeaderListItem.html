@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Class: GroupHeaderListItem — OpenUI5 TypeScript API</title>
-<meta name="description" content="Class: GroupHeaderListItem — OpenUI5 TypeScript API Reference (1.120.46)">
+<meta name="description" content="Class: GroupHeaderListItem — OpenUI5 TypeScript API Reference (1.120.0)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/openui5/1.120/sap.m/sap/m/GroupHeaderListItem/classes/GroupHeaderListItem.html">
 <meta property="og:title" content="Class: GroupHeaderListItem — OpenUI5 TypeScript API">
-<meta property="og:description" content="Class: GroupHeaderListItem — OpenUI5 TypeScript API Reference (1.120.46)">
+<meta property="og:description" content="Class: GroupHeaderListItem — OpenUI5 TypeScript API Reference (1.120.0)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/openui5/1.120/sap.m/sap/m/GroupHeaderListItem/classes/GroupHeaderListItem.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,16 +33,16 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../index.html">OpenUI5 API</a> › <a href="../../../../../sap.m/README.html">sap.m</a> › sap › m › <a href="../../../../../sap.m/sap/m/GroupHeaderListItem/README.html">GroupHeaderListItem</a> › classes</nav>
-<p><a href="../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.46)</strong></a></p>
+<p><a href="../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.0)</strong></a></p>
 <hr>
-<p><a href="../../../../../README.html">OpenUI5 TypeScript API (1.120.46)</a> / <a href="../../../../README.html">sap.m</a> / <a href="../README.html">sap/m/GroupHeaderListItem</a> / GroupHeaderListItem</p>
+<p><a href="../../../../../README.html">OpenUI5 TypeScript API (1.120.0)</a> / <a href="../../../../README.html">sap.m</a> / <a href="../README.html">sap/m/GroupHeaderListItem</a> / GroupHeaderListItem</p>
 <h1>Class: GroupHeaderListItem</h1>
 <pre class="sig"><span class="kw">import</span> GroupHeaderListItem <span class="kw">from</span> <span class="str">"sap/m/GroupHeaderListItem"</span>;</pre>
+<h2>Since</h2>
+<p>1.12</p>
 <p><code>sap.m.GroupHeaderListItem</code> is used to display the title of a group and act as separator between groups
 in <code>sap.m.List</code> and <code>sap.m.Table</code>. <strong>Note:</strong> The inherited properties <code>unread</code>, <code>selected</code>, <code>counter</code>
 and <code>press</code> event from <code>sap.m.ListItemBase</code> are not supported.</p>
-<h2>Since</h2>
-<p>1.12</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../ListItemBase/classes/ListItemBase.html"><code>ListItemBase</code></a></li>
@@ -120,23 +120,20 @@ amounts in the group. <strong>Note:</strong> Will not be displayed if not set.</
 <blockquote>
 <p><strong>getTitleTextDirection</strong>(): <a href="../../../../../sap.ui.core/sap/ui/core/library/enumerations/TextDirection.html"><code>TextDirection</code></a> | <code>&quot;Inherit&quot;</code> | <code>&quot;LTR&quot;</code> | <code>&quot;RTL&quot;</code></p>
 </blockquote>
-<p>Gets current value of property #getTitleTextDirection titleTextDirection.</p>
-<p>Defines the title text directionality with enumerated options. By default, the control inherits text
-direction from the DOM.</p>
-<p>Default value is <code>Inherit</code>.</p>
 <h4>Returns</h4>
 <p><a href="../../../../../sap.ui.core/sap/ui/core/library/enumerations/TextDirection.html"><code>TextDirection</code></a> | <code>&quot;Inherit&quot;</code> | <code>&quot;LTR&quot;</code> | <code>&quot;RTL&quot;</code></p>
 <p>Value of property <code>titleTextDirection</code></p>
 <h4>Since</h4>
 <p>1.28.0</p>
+<p>Gets current value of property #getTitleTextDirection titleTextDirection.</p>
+<p>Defines the title text directionality with enumerated options. By default, the control inherits text
+direction from the DOM.</p>
+<p>Default value is <code>Inherit</code>.</p>
 <hr>
 <h3><del>getUpperCase()</del></h3>
 <blockquote>
 <p><strong>getUpperCase</strong>(): <code>boolean</code></p>
 </blockquote>
-<p>Gets current value of property #getUpperCase upperCase.</p>
-<p>Allows to uppercase the group title.</p>
-<p>Default value is <code>false</code>.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>Value of property <code>upperCase</code></p>
@@ -144,6 +141,9 @@ direction from the DOM.</p>
 <p>1.13.2</p>
 <h4>Deprecated</h4>
 <p>(since 1.40.10)</p>
+<p>Gets current value of property #getUpperCase upperCase.</p>
+<p>Allows to uppercase the group title.</p>
+<p>Default value is <code>false</code>.</p>
 <hr>
 <h3>setCount()</h3>
 <blockquote>
@@ -180,11 +180,6 @@ amounts in the group. <strong>Note:</strong> Will not be displayed if not set.</
 <blockquote>
 <p><strong>setTitleTextDirection</strong>(<code>sTitleTextDirection?</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getTitleTextDirection titleTextDirection.</p>
-<p>Defines the title text directionality with enumerated options. By default, the control inherits text
-direction from the DOM.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>Inherit</code>.</p>
 <h4>Parameters</h4>
 <h5>sTitleTextDirection?</h5>
 <p><a href="../../../../../sap.ui.core/sap/ui/core/library/enumerations/TextDirection.html"><code>TextDirection</code></a> | <code>&quot;Inherit&quot;</code> | <code>&quot;LTR&quot;</code> | <code>&quot;RTL&quot;</code></p>
@@ -194,15 +189,16 @@ direction from the DOM.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.28.0</p>
+<p>Sets a new value for property #getTitleTextDirection titleTextDirection.</p>
+<p>Defines the title text directionality with enumerated options. By default, the control inherits text
+direction from the DOM.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>Inherit</code>.</p>
 <hr>
 <h3><del>setUpperCase()</del></h3>
 <blockquote>
 <p><strong>setUpperCase</strong>(<code>bUpperCase?</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getUpperCase upperCase.</p>
-<p>Allows to uppercase the group title.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>false</code>.</p>
 <h4>Parameters</h4>
 <h5>bUpperCase?</h5>
 <p><code>boolean</code></p>
@@ -214,6 +210,10 @@ direction from the DOM.</p>
 <p>1.13.2</p>
 <h4>Deprecated</h4>
 <p>(since 1.40.10)</p>
+<p>Sets a new value for property #getUpperCase upperCase.</p>
+<p>Allows to uppercase the group title.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>false</code>.</p>
 <hr>
 <h3>extend()</h3>
 <blockquote>
@@ -230,7 +230,7 @@ the information contained in <code>oClassInfo</code>.</p>
 <p><code>string</code></p>
 <p>Name of the class being created</p>
 <h5>oClassInfo?</h5>
-<p><a href="../../../../../sap.f/namespaces/sap/type-aliases/ClassInfo.html"><code>ClassInfo</code></a>&lt;<code>T</code>, <code>GroupHeaderListItem</code>&gt;</p>
+<p><code>ClassInfo</code>&lt;<code>T</code>, <code>GroupHeaderListItem</code>&gt;</p>
 <p>Object literal with information about the class</p>
 <h5>FNMetaImpl?</h5>
 <p><code>Function</code></p>
@@ -254,6 +254,6 @@ used by this class</p>
 <p><a href="../../ListItemBase/classes/ListItemBase.html"><code>ListItemBase</code></a>.<a href="../../ListItemBase/classes/ListItemBase.html#getmetadata-1"><code>getMetadata</code></a></p>
 <hr>
 
-<footer>Generated from <code>@openui5/types@1.120.46</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@openui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Class: DynamicPageTitle — OpenUI5 TypeScript API</title>
-<meta name="description" content="Class: DynamicPageTitle — OpenUI5 TypeScript API Reference (1.120.46)">
+<meta name="description" content="Class: DynamicPageTitle — OpenUI5 TypeScript API Reference (1.120.0)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/openui5/1.120/sap.f/sap/f/DynamicPageTitle/classes/DynamicPageTitle.html">
 <meta property="og:title" content="Class: DynamicPageTitle — OpenUI5 TypeScript API">
-<meta property="og:description" content="Class: DynamicPageTitle — OpenUI5 TypeScript API Reference (1.120.46)">
+<meta property="og:description" content="Class: DynamicPageTitle — OpenUI5 TypeScript API Reference (1.120.0)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/openui5/1.120/sap.f/sap/f/DynamicPageTitle/classes/DynamicPageTitle.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,11 +33,13 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../index.html">OpenUI5 API</a> › <a href="../../../../../sap.f/README.html">sap.f</a> › sap › f › <a href="../../../../../sap.f/sap/f/DynamicPageTitle/README.html">DynamicPageTitle</a> › classes</nav>
-<p><a href="../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.46)</strong></a></p>
+<p><a href="../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.0)</strong></a></p>
 <hr>
-<p><a href="../../../../../README.html">OpenUI5 TypeScript API (1.120.46)</a> / <a href="../../../../README.html">sap.f</a> / <a href="../README.html">sap/f/DynamicPageTitle</a> / DynamicPageTitle</p>
+<p><a href="../../../../../README.html">OpenUI5 TypeScript API (1.120.0)</a> / <a href="../../../../README.html">sap.f</a> / <a href="../README.html">sap/f/DynamicPageTitle</a> / DynamicPageTitle</p>
 <h1>Class: DynamicPageTitle</h1>
 <pre class="sig"><span class="kw">import</span> DynamicPageTitle <span class="kw">from</span> <span class="str">"sap/f/DynamicPageTitle"</span>;</pre>
+<h2>Since</h2>
+<p>1.42</p>
 <p>Title of the sap.f.DynamicPage.</p>
 <p>Overview:</p>
 <p>The <code>DynamicPageTitle</code> control is part of the sap.f.DynamicPage family and is used to serve as
@@ -55,8 +57,6 @@ the bottom of the <code>DynamicPageTitle</code> and the <code>DynamicPageHeader<
 and the app must provide other means for expanding/collapsing the <code>DynamicPageHeader</code>, if necessary.</p>
 <p>Responsive Behavior:</p>
 <p>The responsive behavior of the <code>DynamicPageTitle</code> depends on the behavior of the content that is displayed.</p>
-<h2>Since</h2>
-<p>1.42</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></li>
@@ -119,7 +119,6 @@ of the syntax of the settings object.</p>
 <blockquote>
 <p><strong>addAriaDescribedBy</strong>(<code>vAriaDescribedBy</code>): <code>this</code></p>
 </blockquote>
-<p>Adds some ariaDescribedBy into the association #getAriaDescribedBy ariaDescribedBy.</p>
 <h4>Parameters</h4>
 <h5>vAriaDescribedBy</h5>
 <p><code>string</code> | <a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></p>
@@ -129,12 +128,12 @@ of the syntax of the settings object.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.78</p>
+<p>Adds some ariaDescribedBy into the association #getAriaDescribedBy ariaDescribedBy.</p>
 <hr>
 <h3>addContent()</h3>
 <blockquote>
 <p><strong>addContent</strong>(<code>oContent</code>): <code>this</code></p>
 </blockquote>
-<p>Adds some content to the aggregation #getContent content.</p>
 <h4>Parameters</h4>
 <h5>oContent</h5>
 <p><a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></p>
@@ -144,6 +143,7 @@ of the syntax of the settings object.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.50</p>
+<p>Adds some content to the aggregation #getContent content.</p>
 <hr>
 <h3>addExpandedContent()</h3>
 <blockquote>
@@ -162,7 +162,6 @@ of the syntax of the settings object.</p>
 <blockquote>
 <p><strong>addNavigationAction</strong>(<code>oNavigationAction</code>): <code>this</code></p>
 </blockquote>
-<p>Adds some navigationAction to the aggregation #getNavigationActions navigationActions.</p>
 <h4>Parameters</h4>
 <h5>oNavigationAction</h5>
 <p><a href="../../../../../sap.m/sap/m/Button/classes/Button.html"><code>Button</code></a></p>
@@ -172,6 +171,7 @@ of the syntax of the settings object.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.52</p>
+<p>Adds some navigationAction to the aggregation #getNavigationActions navigationActions.</p>
 <hr>
 <h3>addSnappedContent()</h3>
 <blockquote>
@@ -191,13 +191,6 @@ of the syntax of the settings object.</p>
 <blockquote>
 <p><strong>attachStateChange</strong>(<code>oData</code>, <code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
-<p>Attaches event handler <code>fnFunction</code> to the #event:stateChange stateChange event of this <code>sap.f.DynamicPageTitle</code>.</p>
-<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
-otherwise it will be bound to this <code>sap.f.DynamicPageTitle</code> itself.</p>
-<p>Fired when the title state (expanded/collapsed) is toggled by user interaction. For example, scrolling,
-title clicking/tapping, using expand/collapse button.</p>
-<p>Also fired when the developer toggles the title state by programmatically changing the scroll position
-of the scrollbar of <code>DynamicPage</code>.</p>
 <h5>Parameters</h5>
 <h6>oData</h6>
 <p><code>object</code></p>
@@ -214,10 +207,6 @@ object when firing the event</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Since</h5>
 <p>1.54</p>
-<h4>Call Signature</h4>
-<blockquote>
-<p><strong>attachStateChange</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
-</blockquote>
 <p>Attaches event handler <code>fnFunction</code> to the #event:stateChange stateChange event of this <code>sap.f.DynamicPageTitle</code>.</p>
 <p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
 otherwise it will be bound to this <code>sap.f.DynamicPageTitle</code> itself.</p>
@@ -225,6 +214,10 @@ otherwise it will be bound to this <code>sap.f.DynamicPageTitle</code> itself.</
 title clicking/tapping, using expand/collapse button.</p>
 <p>Also fired when the developer toggles the title state by programmatically changing the scroll position
 of the scrollbar of <code>DynamicPage</code>.</p>
+<h4>Call Signature</h4>
+<blockquote>
+<p><strong>attachStateChange</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
+</blockquote>
 <h5>Parameters</h5>
 <h6>fnFunction</h6>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -237,6 +230,13 @@ of the scrollbar of <code>DynamicPage</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Since</h5>
 <p>1.54</p>
+<p>Attaches event handler <code>fnFunction</code> to the #event:stateChange stateChange event of this <code>sap.f.DynamicPageTitle</code>.</p>
+<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
+otherwise it will be bound to this <code>sap.f.DynamicPageTitle</code> itself.</p>
+<p>Fired when the title state (expanded/collapsed) is toggled by user interaction. For example, scrolling,
+title clicking/tapping, using expand/collapse button.</p>
+<p>Also fired when the developer toggles the title state by programmatically changing the scroll position
+of the scrollbar of <code>DynamicPage</code>.</p>
 <hr>
 <h3>destroyActions()</h3>
 <blockquote>
@@ -251,23 +251,23 @@ of the scrollbar of <code>DynamicPage</code>.</p>
 <blockquote>
 <p><strong>destroyBreadcrumbs</strong>(): <code>this</code></p>
 </blockquote>
-<p>Destroys the breadcrumbs in the aggregation #getBreadcrumbs breadcrumbs.</p>
 <h4>Returns</h4>
 <p><code>this</code></p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.52</p>
+<p>Destroys the breadcrumbs in the aggregation #getBreadcrumbs breadcrumbs.</p>
 <hr>
 <h3>destroyContent()</h3>
 <blockquote>
 <p><strong>destroyContent</strong>(): <code>this</code></p>
 </blockquote>
-<p>Destroys all the content in the aggregation #getContent content.</p>
 <h4>Returns</h4>
 <p><code>this</code></p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.50</p>
+<p>Destroys all the content in the aggregation #getContent content.</p>
 <hr>
 <h3>destroyExpandedContent()</h3>
 <blockquote>
@@ -282,12 +282,12 @@ of the scrollbar of <code>DynamicPage</code>.</p>
 <blockquote>
 <p><strong>destroyExpandedHeading</strong>(): <code>this</code></p>
 </blockquote>
-<p>Destroys the expandedHeading in the aggregation #getExpandedHeading expandedHeading.</p>
 <h4>Returns</h4>
 <p><code>this</code></p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.52</p>
+<p>Destroys the expandedHeading in the aggregation #getExpandedHeading expandedHeading.</p>
 <hr>
 <h3>destroyHeading()</h3>
 <blockquote>
@@ -302,12 +302,12 @@ of the scrollbar of <code>DynamicPage</code>.</p>
 <blockquote>
 <p><strong>destroyNavigationActions</strong>(): <code>this</code></p>
 </blockquote>
-<p>Destroys all the navigationActions in the aggregation #getNavigationActions navigationActions.</p>
 <h4>Returns</h4>
 <p><code>this</code></p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.52</p>
+<p>Destroys all the navigationActions in the aggregation #getNavigationActions navigationActions.</p>
 <hr>
 <h3>destroySnappedContent()</h3>
 <blockquote>
@@ -322,30 +322,28 @@ of the scrollbar of <code>DynamicPage</code>.</p>
 <blockquote>
 <p><strong>destroySnappedHeading</strong>(): <code>this</code></p>
 </blockquote>
-<p>Destroys the snappedHeading in the aggregation #getSnappedHeading snappedHeading.</p>
 <h4>Returns</h4>
 <p><code>this</code></p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.52</p>
+<p>Destroys the snappedHeading in the aggregation #getSnappedHeading snappedHeading.</p>
 <hr>
 <h3>destroySnappedTitleOnMobile()</h3>
 <blockquote>
 <p><strong>destroySnappedTitleOnMobile</strong>(): <code>this</code></p>
 </blockquote>
-<p>Destroys the snappedTitleOnMobile in the aggregation #getSnappedTitleOnMobile snappedTitleOnMobile.</p>
 <h4>Returns</h4>
 <p><code>this</code></p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.63</p>
+<p>Destroys the snappedTitleOnMobile in the aggregation #getSnappedTitleOnMobile snappedTitleOnMobile.</p>
 <hr>
 <h3>detachStateChange()</h3>
 <blockquote>
 <p><strong>detachStateChange</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
-<p>Detaches event handler <code>fnFunction</code> from the #event:stateChange stateChange event of this <code>sap.f.DynamicPageTitle</code>.</p>
-<p>The passed function and listener object must match the ones used for event registration.</p>
 <h4>Parameters</h4>
 <h5>fnFunction</h5>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -358,12 +356,13 @@ of the scrollbar of <code>DynamicPage</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.54</p>
+<p>Detaches event handler <code>fnFunction</code> from the #event:stateChange stateChange event of this <code>sap.f.DynamicPageTitle</code>.</p>
+<p>The passed function and listener object must match the ones used for event registration.</p>
 <hr>
 <h3>fireStateChange()</h3>
 <blockquote>
 <p><strong>fireStateChange</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
-<p>Fires event #event:stateChange stateChange to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/DynamicPageTitle$StateChangeEventParameters.html"><code>DynamicPageTitle$StateChangeEventParameters</code></a></p>
@@ -375,6 +374,7 @@ of the scrollbar of <code>DynamicPage</code>.</p>
 <p>1.54</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:stateChange stateChange to attached listeners.</p>
 <hr>
 <h3>getActions()</h3>
 <blockquote>
@@ -394,6 +394,11 @@ state.</p>
 <blockquote>
 <p><strong>getAreaShrinkRatio</strong>(): <code>string</code></p>
 </blockquote>
+<h4>Returns</h4>
+<p><code>string</code></p>
+<p>Value of property <code>areaShrinkRatio</code></p>
+<h4>Since</h4>
+<p>1.54</p>
 <p>Gets current value of property #getAreaShrinkRatio areaShrinkRatio.</p>
 <p>Assigns shrinking ratio to the <code>DynamicPageTitle</code> areas (Heading, Content, Actions). The greater value
 a section has the faster it shrinks when the screen size is being reduced.</p>
@@ -406,61 +411,56 @@ will reduced by 20px, the Content area - by 70px and the Actions area - by 10px.
 them is equal to 1. For example, value of <code>2:4:8</code> is equal to <code>1:2:4</code>.</p>
 <p> When this property is set the <code>primaryArea</code> property has no effect.</p>
 <p>Default value is <code>&quot;1:1.6:1.6&quot;</code>.</p>
-<h4>Returns</h4>
-<p><code>string</code></p>
-<p>Value of property <code>areaShrinkRatio</code></p>
-<h4>Since</h4>
-<p>1.54</p>
 <hr>
 <h3>getAriaDescribedBy()</h3>
 <blockquote>
 <p><strong>getAriaDescribedBy</strong>(): <code>string</code>[]</p>
 </blockquote>
-<p>Returns array of IDs of the elements which are the current targets of the association #getAriaDescribedBy ariaDescribedBy.</p>
 <h4>Returns</h4>
 <p><code>string</code>[]</p>
 <h4>Since</h4>
 <p>1.78</p>
+<p>Returns array of IDs of the elements which are the current targets of the association #getAriaDescribedBy ariaDescribedBy.</p>
 <hr>
 <h3>getBackgroundDesign()</h3>
 <blockquote>
 <p><strong>getBackgroundDesign</strong>(): <code>&quot;Transparent&quot;</code> | <code>&quot;Solid&quot;</code> | <a href="../../../../../sap.m/sap/m/library/enumerations/BackgroundDesign.html"><code>BackgroundDesign</code></a> | <code>&quot;Translucent&quot;</code></p>
 </blockquote>
-<p>Gets current value of property #getBackgroundDesign backgroundDesign.</p>
-<p>Determines the background color of the <code>DynamicPageTitle</code>.</p>
-<p><strong>Note:</strong> The default value of <code>backgroundDesign</code> property is null. If the property is not set, the color
-of the background is <code>@sapUiObjectHeaderBackground</code>, which depends on the specific theme.</p>
 <h4>Returns</h4>
 <p><code>&quot;Transparent&quot;</code> | <code>&quot;Solid&quot;</code> | <a href="../../../../../sap.m/sap/m/library/enumerations/BackgroundDesign.html"><code>BackgroundDesign</code></a> | <code>&quot;Translucent&quot;</code></p>
 <p>Value of property <code>backgroundDesign</code></p>
 <h4>Since</h4>
 <p>1.58</p>
+<p>Gets current value of property #getBackgroundDesign backgroundDesign.</p>
+<p>Determines the background color of the <code>DynamicPageTitle</code>.</p>
+<p><strong>Note:</strong> The default value of <code>backgroundDesign</code> property is null. If the property is not set, the color
+of the background is <code>@sapUiObjectHeaderBackground</code>, which depends on the specific theme.</p>
 <hr>
 <h3>getBreadcrumbs()</h3>
 <blockquote>
 <p><strong>getBreadcrumbs</strong>(): <a href="../../../../../sap.m/sap/m/library/interfaces/IBreadcrumbs.html"><code>IBreadcrumbs</code></a></p>
 </blockquote>
-<p>Gets content of aggregation #getBreadcrumbs breadcrumbs.</p>
-<p>The breadcrumbs displayed in the <code>DynamicPageTitle</code> top-left area.</p>
 <h4>Returns</h4>
 <p><a href="../../../../../sap.m/sap/m/library/interfaces/IBreadcrumbs.html"><code>IBreadcrumbs</code></a></p>
 <h4>Since</h4>
 <p>1.52</p>
+<p>Gets content of aggregation #getBreadcrumbs breadcrumbs.</p>
+<p>The breadcrumbs displayed in the <code>DynamicPageTitle</code> top-left area.</p>
 <hr>
 <h3>getContent()</h3>
 <blockquote>
 <p><strong>getContent</strong>(): <a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a>[]</p>
 </blockquote>
+<h4>Returns</h4>
+<p><a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a>[]</p>
+<h4>Since</h4>
+<p>1.50</p>
 <p>Gets content of aggregation #getContent content.</p>
 <p>The content is positioned in the <code>DynamicPageTitle</code> middle area and displayed in both expanded and collapsed
 (snapped) states.</p>
 <p><strong>Note:</strong> If the <code>snappedTitleOnMobile</code> aggregation is set, its content overrides this aggregation when
 the control is viewed on a phone mobile device and the <code>DynamicPageHeader</code> is in its collapsed (snapped)
 state.</p>
-<h4>Returns</h4>
-<p><a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a>[]</p>
-<h4>Since</h4>
-<p>1.50</p>
 <hr>
 <h3>getExpandedContent()</h3>
 <blockquote>
@@ -475,16 +475,16 @@ state.</p>
 <blockquote>
 <p><strong>getExpandedHeading</strong>(): <a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></p>
 </blockquote>
+<h4>Returns</h4>
+<p><a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></p>
+<h4>Since</h4>
+<p>1.52</p>
 <p>Gets content of aggregation #getExpandedHeading expandedHeading.</p>
 <p>The <code>expandedHeading</code> is positioned in the <code>DynamicPageTitle</code> left area and is displayed when the header
 is in expanded state only. Use this aggregation to display a title (or any other UI5 control that serves
 as a heading) that has to be present in expanded state only.</p>
 <p><strong>Note:</strong> In order for <code>expandedHeading</code> to be taken into account, <code>heading</code> has to be empty. Combine
 <code>expandedHeading</code> with <code>snappedHeading</code> to switch content when the header switches state.</p>
-<h4>Returns</h4>
-<p><a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></p>
-<h4>Since</h4>
-<p>1.52</p>
 <hr>
 <h3>getHeading()</h3>
 <blockquote>
@@ -508,6 +508,10 @@ that serves as a heading) that has to be present in both expanded and collapsed 
 <blockquote>
 <p><strong>getNavigationActions</strong>(): <a href="../../../../../sap.m/sap/m/Button/classes/Button.html"><code>Button</code></a>[]</p>
 </blockquote>
+<h4>Returns</h4>
+<p><a href="../../../../../sap.m/sap/m/Button/classes/Button.html"><code>Button</code></a>[]</p>
+<h4>Since</h4>
+<p>1.52</p>
 <p>Gets content of aggregation #getNavigationActions navigationActions.</p>
 <p>The <code>DynamicPageTitle</code> navigation actions.</p>
 <p><strong>Notes:</strong>
@@ -518,19 +522,11 @@ that serves as a heading) that has to be present in both expanded and collapsed 
 	 - If the <code>snappedTitleOnMobile</code> aggregation is set, its content overrides this aggregation when the
     control is viewed on a phone mobile device and the <code>DynamicPageHeader</code> is in its collapsed (snapped)
     state.</p>
-<h4>Returns</h4>
-<p><a href="../../../../../sap.m/sap/m/Button/classes/Button.html"><code>Button</code></a>[]</p>
-<h4>Since</h4>
-<p>1.52</p>
 <hr>
 <h3><del>getPrimaryArea()</del></h3>
 <blockquote>
 <p><strong>getPrimaryArea</strong>(): <code>&quot;Begin&quot;</code> | <a href="../../library/enumerations/DynamicPageTitleArea.html"><code>DynamicPageTitleArea</code></a> | <code>&quot;Middle&quot;</code></p>
 </blockquote>
-<p>Gets current value of property #getPrimaryArea primaryArea.</p>
-<p>Determines which of the <code>DynamicPageTitle</code> areas (Begin, Middle) is primary.</p>
-<p><strong>Note:</strong> The primary area is shrinking at lower rate, remaining visible as much as it can.</p>
-<p>Default value is <code>Begin</code>.</p>
 <h4>Returns</h4>
 <p><code>&quot;Begin&quot;</code> | <a href="../../library/enumerations/DynamicPageTitleArea.html"><code>DynamicPageTitleArea</code></a> | <code>&quot;Middle&quot;</code></p>
 <p>Value of property <code>primaryArea</code></p>
@@ -545,6 +541,10 @@ reduced.</p>
 for example <code>1:1.6:1.6</code>.</p>
 <p><code>primaryArea=Middle</code> can be achieved by setting a low number for the Content area to <code>areaShrinkRatio</code>,
 for example <code>1.6:1:1.6</code>.</p>
+<p>Gets current value of property #getPrimaryArea primaryArea.</p>
+<p>Determines which of the <code>DynamicPageTitle</code> areas (Begin, Middle) is primary.</p>
+<p><strong>Note:</strong> The primary area is shrinking at lower rate, remaining visible as much as it can.</p>
+<p>Default value is <code>Begin</code>.</p>
 <hr>
 <h3>getSnappedContent()</h3>
 <blockquote>
@@ -562,6 +562,10 @@ state.</p>
 <blockquote>
 <p><strong>getSnappedHeading</strong>(): <a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></p>
 </blockquote>
+<h4>Returns</h4>
+<p><a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></p>
+<h4>Since</h4>
+<p>1.52</p>
 <p>Gets content of aggregation #getSnappedHeading snappedHeading.</p>
 <p>The <code>snappedHeading</code> is positioned in the <code>DynamicPageTitle</code> left area and is displayed when the header
 is in collapsed (snapped) state only. Use this aggregation to display a title (or any other UI5 control
@@ -572,15 +576,15 @@ that serves as a heading) that has to be present in collapsed state only.</p>
 	 - If the <code>snappedTitleOnMobile</code> aggregation is set, its content overrides this aggregation when the
     control is viewed on a phone mobile device and the <code>DynamicPageHeader</code> is in its collapsed (snapped)
     state.</p>
-<h4>Returns</h4>
-<p><a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></p>
-<h4>Since</h4>
-<p>1.52</p>
 <hr>
 <h3>getSnappedTitleOnMobile()</h3>
 <blockquote>
 <p><strong>getSnappedTitleOnMobile</strong>(): <a href="../../../../../sap.m/sap/m/Title/classes/Title.html"><code>Title</code></a></p>
 </blockquote>
+<h4>Returns</h4>
+<p><a href="../../../../../sap.m/sap/m/Title/classes/Title.html"><code>Title</code></a></p>
+<h4>Since</h4>
+<p>1.63</p>
 <p>Gets content of aggregation #getSnappedTitleOnMobile snappedTitleOnMobile.</p>
 <p>The only content that is displayed in the <code>DynamicPageTitle</code> when it is viewed on a phone mobile device
 and the <code>DynamicPageHeader</code> is in collapsed (snapped) state.</p>
@@ -588,10 +592,6 @@ and the <code>DynamicPageHeader</code> is in collapsed (snapped) state.</p>
 smaller phone screens when the <code>DynamicPageHeader</code> is in its collapsed (snapped) state.</p>
 <p><strong>Note:</strong> The content set in this aggregation overrides all the other <code>DynamicPageTitle</code> aggregations
 and is only visible on phone mobile devices in collapsed (snapped) state of the <code>DynamicPageHeader</code>.</p>
-<h4>Returns</h4>
-<p><a href="../../../../../sap.m/sap/m/Title/classes/Title.html"><code>Title</code></a></p>
-<h4>Since</h4>
-<p>1.63</p>
 <hr>
 <h3>indexOfAction()</h3>
 <blockquote>
@@ -611,8 +611,6 @@ its index if found or -1 otherwise.</p>
 <blockquote>
 <p><strong>indexOfContent</strong>(<code>oContent</code>): <code>number</code></p>
 </blockquote>
-<p>Checks for the provided <code>sap.ui.core.Control</code> in the aggregation #getContent content. and returns
-its index if found or -1 otherwise.</p>
 <h4>Parameters</h4>
 <h5>oContent</h5>
 <p><a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></p>
@@ -622,6 +620,8 @@ its index if found or -1 otherwise.</p>
 <p>The index of the provided control in the aggregation if found, or -1 otherwise</p>
 <h4>Since</h4>
 <p>1.50</p>
+<p>Checks for the provided <code>sap.ui.core.Control</code> in the aggregation #getContent content. and returns
+its index if found or -1 otherwise.</p>
 <hr>
 <h3>indexOfExpandedContent()</h3>
 <blockquote>
@@ -641,8 +641,6 @@ and returns its index if found or -1 otherwise.</p>
 <blockquote>
 <p><strong>indexOfNavigationAction</strong>(<code>oNavigationAction</code>): <code>number</code></p>
 </blockquote>
-<p>Checks for the provided <code>sap.m.Button</code> in the aggregation #getNavigationActions navigationActions.
-and returns its index if found or -1 otherwise.</p>
 <h4>Parameters</h4>
 <h5>oNavigationAction</h5>
 <p><a href="../../../../../sap.m/sap/m/Button/classes/Button.html"><code>Button</code></a></p>
@@ -652,6 +650,8 @@ and returns its index if found or -1 otherwise.</p>
 <p>The index of the provided control in the aggregation if found, or -1 otherwise</p>
 <h4>Since</h4>
 <p>1.52</p>
+<p>Checks for the provided <code>sap.m.Button</code> in the aggregation #getNavigationActions navigationActions.
+and returns its index if found or -1 otherwise.</p>
 <hr>
 <h3>indexOfSnappedContent()</h3>
 <blockquote>
@@ -689,7 +689,6 @@ at the last position</p>
 <blockquote>
 <p><strong>insertContent</strong>(<code>oContent</code>, <code>iIndex</code>): <code>this</code></p>
 </blockquote>
-<p>Inserts a content into the aggregation #getContent content.</p>
 <h4>Parameters</h4>
 <h5>oContent</h5>
 <p><a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></p>
@@ -704,6 +703,7 @@ is inserted at the last position</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.50</p>
+<p>Inserts a content into the aggregation #getContent content.</p>
 <hr>
 <h3>insertExpandedContent()</h3>
 <blockquote>
@@ -727,7 +727,6 @@ the expandedContent is inserted at the last position</p>
 <blockquote>
 <p><strong>insertNavigationAction</strong>(<code>oNavigationAction</code>, <code>iIndex</code>): <code>this</code></p>
 </blockquote>
-<p>Inserts a navigationAction into the aggregation #getNavigationActions navigationActions.</p>
 <h4>Parameters</h4>
 <h5>oNavigationAction</h5>
 <p><a href="../../../../../sap.m/sap/m/Button/classes/Button.html"><code>Button</code></a></p>
@@ -742,6 +741,7 @@ the navigationAction is inserted at the last position</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.52</p>
+<p>Inserts a navigationAction into the aggregation #getNavigationActions navigationActions.</p>
 <hr>
 <h3>insertSnappedContent()</h3>
 <blockquote>
@@ -788,24 +788,24 @@ is inserted at the last position</p>
 <blockquote>
 <p><strong>removeAllAriaDescribedBy</strong>(): <code>string</code>[]</p>
 </blockquote>
-<p>Removes all the controls in the association named #getAriaDescribedBy ariaDescribedBy.</p>
 <h4>Returns</h4>
 <p><code>string</code>[]</p>
 <p>An array of the removed elements (might be empty)</p>
 <h4>Since</h4>
 <p>1.78</p>
+<p>Removes all the controls in the association named #getAriaDescribedBy ariaDescribedBy.</p>
 <hr>
 <h3>removeAllContent()</h3>
 <blockquote>
 <p><strong>removeAllContent</strong>(): <a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a>[]</p>
 </blockquote>
-<p>Removes all the controls from the aggregation #getContent content.</p>
-<p>Additionally, it unregisters them from the hosting UIArea.</p>
 <h4>Returns</h4>
 <p><a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a>[]</p>
 <p>An array of the removed elements (might be empty)</p>
 <h4>Since</h4>
 <p>1.50</p>
+<p>Removes all the controls from the aggregation #getContent content.</p>
+<p>Additionally, it unregisters them from the hosting UIArea.</p>
 <hr>
 <h3>removeAllExpandedContent()</h3>
 <blockquote>
@@ -821,13 +821,13 @@ is inserted at the last position</p>
 <blockquote>
 <p><strong>removeAllNavigationActions</strong>(): <a href="../../../../../sap.m/sap/m/Button/classes/Button.html"><code>Button</code></a>[]</p>
 </blockquote>
-<p>Removes all the controls from the aggregation #getNavigationActions navigationActions.</p>
-<p>Additionally, it unregisters them from the hosting UIArea.</p>
 <h4>Returns</h4>
 <p><a href="../../../../../sap.m/sap/m/Button/classes/Button.html"><code>Button</code></a>[]</p>
 <p>An array of the removed elements (might be empty)</p>
 <h4>Since</h4>
 <p>1.52</p>
+<p>Removes all the controls from the aggregation #getNavigationActions navigationActions.</p>
+<p>Additionally, it unregisters them from the hosting UIArea.</p>
 <hr>
 <h3>removeAllSnappedContent()</h3>
 <blockquote>
@@ -843,7 +843,6 @@ is inserted at the last position</p>
 <blockquote>
 <p><strong>removeAriaDescribedBy</strong>(<code>vAriaDescribedBy</code>): <code>string</code></p>
 </blockquote>
-<p>Removes an ariaDescribedBy from the association named #getAriaDescribedBy ariaDescribedBy.</p>
 <h4>Parameters</h4>
 <h5>vAriaDescribedBy</h5>
 <p><code>string</code> | <code>number</code> | <a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></p>
@@ -853,12 +852,12 @@ is inserted at the last position</p>
 <p>The removed ariaDescribedBy or <code>null</code></p>
 <h4>Since</h4>
 <p>1.78</p>
+<p>Removes an ariaDescribedBy from the association named #getAriaDescribedBy ariaDescribedBy.</p>
 <hr>
 <h3>removeContent()</h3>
 <blockquote>
 <p><strong>removeContent</strong>(<code>vContent</code>): <a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></p>
 </blockquote>
-<p>Removes a content from the aggregation #getContent content.</p>
 <h4>Parameters</h4>
 <h5>vContent</h5>
 <p><code>string</code> | <code>number</code> | <a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></p>
@@ -868,6 +867,7 @@ is inserted at the last position</p>
 <p>The removed content or <code>null</code></p>
 <h4>Since</h4>
 <p>1.50</p>
+<p>Removes a content from the aggregation #getContent content.</p>
 <hr>
 <h3>removeExpandedContent()</h3>
 <blockquote>
@@ -886,7 +886,6 @@ is inserted at the last position</p>
 <blockquote>
 <p><strong>removeNavigationAction</strong>(<code>vNavigationAction</code>): <a href="../../../../../sap.m/sap/m/Button/classes/Button.html"><code>Button</code></a></p>
 </blockquote>
-<p>Removes a navigationAction from the aggregation #getNavigationActions navigationActions.</p>
 <h4>Parameters</h4>
 <h5>vNavigationAction</h5>
 <p><code>string</code> | <code>number</code> | <a href="../../../../../sap.m/sap/m/Button/classes/Button.html"><code>Button</code></a></p>
@@ -896,6 +895,7 @@ is inserted at the last position</p>
 <p>The removed navigationAction or <code>null</code></p>
 <h4>Since</h4>
 <p>1.52</p>
+<p>Removes a navigationAction from the aggregation #getNavigationActions navigationActions.</p>
 <hr>
 <h3>removeSnappedContent()</h3>
 <blockquote>
@@ -914,7 +914,6 @@ is inserted at the last position</p>
 <blockquote>
 <p><strong>setAreaShrinkRatio</strong>(<code>sAreaShrinkRatio</code>): <code>this</code></p>
 </blockquote>
-<p>Sets the value of the <code>areaShrinkRatio</code> property.</p>
 <h4>Parameters</h4>
 <h5>sAreaShrinkRatio</h5>
 <p><code>string</code></p>
@@ -924,16 +923,12 @@ is inserted at the last position</p>
 <p><code>this</code> to allow method chaining</p>
 <h4>Since</h4>
 <p>1.54</p>
+<p>Sets the value of the <code>areaShrinkRatio</code> property.</p>
 <hr>
 <h3>setBackgroundDesign()</h3>
 <blockquote>
 <p><strong>setBackgroundDesign</strong>(<code>sBackgroundDesign</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getBackgroundDesign backgroundDesign.</p>
-<p>Determines the background color of the <code>DynamicPageTitle</code>.</p>
-<p><strong>Note:</strong> The default value of <code>backgroundDesign</code> property is null. If the property is not set, the color
-of the background is <code>@sapUiObjectHeaderBackground</code>, which depends on the specific theme.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <h4>Parameters</h4>
 <h5>sBackgroundDesign</h5>
 <p><code>&quot;Transparent&quot;</code> | <code>&quot;Solid&quot;</code> | <a href="../../../../../sap.m/sap/m/library/enumerations/BackgroundDesign.html"><code>BackgroundDesign</code></a> | <code>&quot;Translucent&quot;</code></p>
@@ -943,12 +938,16 @@ of the background is <code>@sapUiObjectHeaderBackground</code>, which depends on
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.58</p>
+<p>Sets a new value for property #getBackgroundDesign backgroundDesign.</p>
+<p>Determines the background color of the <code>DynamicPageTitle</code>.</p>
+<p><strong>Note:</strong> The default value of <code>backgroundDesign</code> property is null. If the property is not set, the color
+of the background is <code>@sapUiObjectHeaderBackground</code>, which depends on the specific theme.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <hr>
 <h3>setBreadcrumbs()</h3>
 <blockquote>
 <p><strong>setBreadcrumbs</strong>(<code>oBreadcrumbs</code>): <code>this</code></p>
 </blockquote>
-<p>Sets the aggregated #getBreadcrumbs breadcrumbs.</p>
 <h4>Parameters</h4>
 <h5>oBreadcrumbs</h5>
 <p><a href="../../../../../sap.m/sap/m/library/interfaces/IBreadcrumbs.html"><code>IBreadcrumbs</code></a></p>
@@ -958,12 +957,12 @@ of the background is <code>@sapUiObjectHeaderBackground</code>, which depends on
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.52</p>
+<p>Sets the aggregated #getBreadcrumbs breadcrumbs.</p>
 <hr>
 <h3>setExpandedHeading()</h3>
 <blockquote>
 <p><strong>setExpandedHeading</strong>(<code>oExpandedHeading</code>): <code>this</code></p>
 </blockquote>
-<p>Sets the aggregated #getExpandedHeading expandedHeading.</p>
 <h4>Parameters</h4>
 <h5>oExpandedHeading</h5>
 <p><a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></p>
@@ -973,6 +972,7 @@ of the background is <code>@sapUiObjectHeaderBackground</code>, which depends on
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.52</p>
+<p>Sets the aggregated #getExpandedHeading expandedHeading.</p>
 <hr>
 <h3>setHeading()</h3>
 <blockquote>
@@ -991,11 +991,6 @@ of the background is <code>@sapUiObjectHeaderBackground</code>, which depends on
 <blockquote>
 <p><strong>setPrimaryArea</strong>(<code>sPrimaryArea?</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getPrimaryArea primaryArea.</p>
-<p>Determines which of the <code>DynamicPageTitle</code> areas (Begin, Middle) is primary.</p>
-<p><strong>Note:</strong> The primary area is shrinking at lower rate, remaining visible as much as it can.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>Begin</code>.</p>
 <h4>Parameters</h4>
 <h5>sPrimaryArea?</h5>
 <p><code>&quot;Begin&quot;</code> | <a href="../../library/enumerations/DynamicPageTitleArea.html"><code>DynamicPageTitleArea</code></a> | <code>&quot;Middle&quot;</code></p>
@@ -1014,12 +1009,16 @@ reduced.</p>
 for example <code>1:1.6:1.6</code>.</p>
 <p><code>primaryArea=Middle</code> can be achieved by setting a low number for the Content area to <code>areaShrinkRatio</code>,
 for example <code>1.6:1:1.6</code>.</p>
+<p>Sets a new value for property #getPrimaryArea primaryArea.</p>
+<p>Determines which of the <code>DynamicPageTitle</code> areas (Begin, Middle) is primary.</p>
+<p><strong>Note:</strong> The primary area is shrinking at lower rate, remaining visible as much as it can.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>Begin</code>.</p>
 <hr>
 <h3>setSnappedHeading()</h3>
 <blockquote>
 <p><strong>setSnappedHeading</strong>(<code>oSnappedHeading</code>): <code>this</code></p>
 </blockquote>
-<p>Sets the aggregated #getSnappedHeading snappedHeading.</p>
 <h4>Parameters</h4>
 <h5>oSnappedHeading</h5>
 <p><a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></p>
@@ -1029,12 +1028,12 @@ for example <code>1.6:1:1.6</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.52</p>
+<p>Sets the aggregated #getSnappedHeading snappedHeading.</p>
 <hr>
 <h3>setSnappedTitleOnMobile()</h3>
 <blockquote>
 <p><strong>setSnappedTitleOnMobile</strong>(<code>oSnappedTitleOnMobile</code>): <code>this</code></p>
 </blockquote>
-<p>Sets the aggregated #getSnappedTitleOnMobile snappedTitleOnMobile.</p>
 <h4>Parameters</h4>
 <h5>oSnappedTitleOnMobile</h5>
 <p><a href="../../../../../sap.m/sap/m/Title/classes/Title.html"><code>Title</code></a></p>
@@ -1044,6 +1043,7 @@ for example <code>1.6:1:1.6</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.63</p>
+<p>Sets the aggregated #getSnappedTitleOnMobile snappedTitleOnMobile.</p>
 <hr>
 <h3>extend()</h3>
 <blockquote>
@@ -1060,7 +1060,7 @@ information contained in <code>oClassInfo</code>.</p>
 <p><code>string</code></p>
 <p>Name of the class being created</p>
 <h5>oClassInfo?</h5>
-<p><a href="../../../../namespaces/sap/type-aliases/ClassInfo.html"><code>ClassInfo</code></a>&lt;<code>T</code>, <code>DynamicPageTitle</code>&gt;</p>
+<p><code>ClassInfo</code>&lt;<code>T</code>, <code>DynamicPageTitle</code>&gt;</p>
 <p>Object literal with information about the class</p>
 <h5>FNMetaImpl?</h5>
 <p><code>Function</code></p>
@@ -1084,6 +1084,6 @@ used by this class</p>
 <p><a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a>.<a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html#getmetadata-1"><code>getMetadata</code></a></p>
 <hr>
 
-<footer>Generated from <code>@openui5/types@1.120.46</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@openui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

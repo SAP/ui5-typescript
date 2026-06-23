@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Interface: $P13nItemSettings — OpenUI5 TypeScript API</title>
-<meta name="description" content="Interface: $P13nItemSettings — OpenUI5 TypeScript API Reference (1.120.46)">
+<meta name="description" content="Interface: $P13nItemSettings — OpenUI5 TypeScript API Reference (1.120.0)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/openui5/1.120/sap.m/sap/m/P13nItem/interfaces/$P13nItemSettings.html">
 <meta property="og:title" content="Interface: $P13nItemSettings — OpenUI5 TypeScript API">
-<meta property="og:description" content="Interface: $P13nItemSettings — OpenUI5 TypeScript API Reference (1.120.46)">
+<meta property="og:description" content="Interface: $P13nItemSettings — OpenUI5 TypeScript API Reference (1.120.0)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/openui5/1.120/sap.m/sap/m/P13nItem/interfaces/$P13nItemSettings.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,12 +33,11 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../index.html">OpenUI5 API</a> › <a href="../../../../../sap.m/README.html">sap.m</a> › sap › m › <a href="../../../../../sap.m/sap/m/P13nItem/README.html">P13nItem</a> › interfaces</nav>
-<p><a href="../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.46)</strong></a></p>
+<p><a href="../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.0)</strong></a></p>
 <hr>
-<p><a href="../../../../../README.html">OpenUI5 TypeScript API (1.120.46)</a> / <a href="../../../../README.html">sap.m</a> / <a href="../README.html">sap/m/P13nItem</a> / $P13nItemSettings</p>
+<p><a href="../../../../../README.html">OpenUI5 TypeScript API (1.120.0)</a> / <a href="../../../../README.html">sap.m</a> / <a href="../README.html">sap/m/P13nItem</a> / $P13nItemSettings</p>
 <h1>Interface: $P13nItemSettings</h1>
 <pre class="sig"><span class="kw">import</span> { $P13nItemSettings } <span class="kw">from</span> <span class="str">"sap/m/P13nItem"</span>;</pre>
-<p>Describes the settings that can be provided to the P13nItem constructor.</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../../../../sap.ui.core/sap/ui/core/Element/interfaces/$ElementSettings.html"><code>$ElementSettings</code></a></li>
@@ -48,9 +47,9 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 <blockquote>
 <p><code>optional</code> <strong>aggregationRole?</strong>: <code>string</code> | <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a></p>
 </blockquote>
-<p>Defines aggregation role</p>
 <h4>Since</h4>
 <p>1.34.0</p>
+<p>Defines aggregation role</p>
 <hr>
 <h3>columnKey?</h3>
 <blockquote>
@@ -62,14 +61,16 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 <blockquote>
 <p><code>optional</code> <strong>description?</strong>: <code>string</code> | <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a></p>
 </blockquote>
-<p>Defines additional information of the link.</p>
 <h4>Since</h4>
 <p>1.56.0</p>
+<p>Defines additional information of the link.</p>
 <hr>
 <h3>formatSettings?</h3>
 <blockquote>
 <p><code>optional</code> <strong>formatSettings?</strong>: <code>object</code> | <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
+<h4>Since</h4>
+<p>1.52</p>
 <p>A JSON object containing the formatSettings which will be used to pass additional type/format settings
 for the entered value. if type==time or date or datetime the object will be used for the DateFormatter,
 TimeFormatter or DateTimeFormatter</p>
@@ -80,16 +81,14 @@ TimeFormatter or DateTimeFormatter</p>
 		style: &quot;medium&quot; //&quot;short&quot; or &quot;long&quot;
 }
 </code></pre>
-<h4>Since</h4>
-<p>1.52</p>
 <hr>
 <h3>href?</h3>
 <blockquote>
 <p><code>optional</code> <strong>href?</strong>: <code>string</code> | <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a></p>
 </blockquote>
-<p>Defines href of a link.</p>
 <h4>Since</h4>
 <p>1.46.0</p>
+<p>Defines href of a link.</p>
 <hr>
 <h3>isDefault?</h3>
 <blockquote>
@@ -120,17 +119,17 @@ Formatter)</p>
 <blockquote>
 <p><code>optional</code> <strong>press?</strong>: <code>object</code> | <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<p>Defines press handler of a link.</p>
 <h4>Since</h4>
 <p>1.46.0</p>
+<p>Defines press handler of a link.</p>
 <hr>
 <h3>role?</h3>
 <blockquote>
 <p><code>optional</code> <strong>role?</strong>: <code>string</code> | <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a></p>
 </blockquote>
-<p>Defines role. The role is reflected in the manner how the dimension will influence the chart layout.</p>
 <h4>Since</h4>
 <p>1.34.0</p>
+<p>Defines role. The role is reflected in the manner how the dimension will influence the chart layout.</p>
 <hr>
 <h3>scale?</h3>
 <blockquote>
@@ -160,19 +159,19 @@ Formatter)</p>
 <blockquote>
 <p><code>optional</code> <strong>typeInstance?</strong>: <code>object</code> | <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<p>data type instance of the column. Can be used instead of the type, precision, scale and formatSettings
-properties</p>
 <h4>Since</h4>
 <p>1.56</p>
+<p>data type instance of the column. Can be used instead of the type, precision, scale and formatSettings
+properties</p>
 <hr>
 <h3>values?</h3>
 <blockquote>
 <p><code>optional</code> <strong>values?</strong>: <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code> | <code>string</code>[]</p>
 </blockquote>
-<p>the array of values for type bool. e.g. [&quot;&quot;, &quot;Off&quot;, &quot;On&quot;]. The first entry can be empty (used to blank
-the value field). Next value represent the false value, last entry the true value.</p>
 <h4>Since</h4>
 <p>1.34.0</p>
+<p>the array of values for type bool. e.g. [&quot;&quot;, &quot;Off&quot;, &quot;On&quot;]. The first entry can be empty (used to blank
+the value field). Next value represent the false value, last entry the true value.</p>
 <hr>
 <h3>visible?</h3>
 <blockquote>
@@ -186,6 +185,6 @@ the value field). Next value represent the false value, last entry the true valu
 </blockquote>
 <p>Defines column width</p>
 
-<footer>Generated from <code>@openui5/types@1.120.46</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@openui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

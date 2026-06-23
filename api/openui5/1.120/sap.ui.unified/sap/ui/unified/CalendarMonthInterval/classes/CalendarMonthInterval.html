@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Class: CalendarMonthInterval — OpenUI5 TypeScript API</title>
-<meta name="description" content="Class: CalendarMonthInterval — OpenUI5 TypeScript API Reference (1.120.46)">
+<meta name="description" content="Class: CalendarMonthInterval — OpenUI5 TypeScript API Reference (1.120.0)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/openui5/1.120/sap.ui.unified/sap/ui/unified/CalendarMonthInterval/classes/CalendarMonthInterval.html">
 <meta property="og:title" content="Class: CalendarMonthInterval — OpenUI5 TypeScript API">
-<meta property="og:description" content="Class: CalendarMonthInterval — OpenUI5 TypeScript API Reference (1.120.46)">
+<meta property="og:description" content="Class: CalendarMonthInterval — OpenUI5 TypeScript API Reference (1.120.0)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/openui5/1.120/sap.ui.unified/sap/ui/unified/CalendarMonthInterval/classes/CalendarMonthInterval.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,17 +33,17 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../index.html">OpenUI5 API</a> › <a href="../../../../../../sap.ui.unified/README.html">sap.ui.unified</a> › sap › ui › unified › <a href="../../../../../../sap.ui.unified/sap/ui/unified/CalendarMonthInterval/README.html">CalendarMonthInterval</a> › classes</nav>
-<p><a href="../../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.46)</strong></a></p>
+<p><a href="../../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.0)</strong></a></p>
 <hr>
-<p><a href="../../../../../../README.html">OpenUI5 TypeScript API (1.120.46)</a> / <a href="../../../../../README.html">sap.ui.unified</a> / <a href="../README.html">sap/ui/unified/CalendarMonthInterval</a> / CalendarMonthInterval</p>
+<p><a href="../../../../../../README.html">OpenUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../README.html">sap.ui.unified</a> / <a href="../README.html">sap/ui/unified/CalendarMonthInterval</a> / CalendarMonthInterval</p>
 <h1>Class: CalendarMonthInterval</h1>
 <pre class="sig"><span class="kw">import</span> CalendarMonthInterval <span class="kw">from</span> <span class="str">"sap/ui/unified/CalendarMonthInterval"</span>;</pre>
+<h2>Since</h2>
+<p>1.32.0</p>
 <p>Calendar with granularity of months displayed in one line.</p>
 <p><strong>Note:</strong> UI5Date or JavaScript Date objects are used to set and return the months, mark them as selected
 or as a special type. But the date part of the Date object is not used. If a Date object is returned
 the date will be set to the 1st of the corresponding month.</p>
-<h2>Since</h2>
-<p>1.32.0</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></li>
@@ -217,11 +217,6 @@ itself</p>
 <blockquote>
 <p><strong>attachStartDateChange</strong>(<code>oData</code>, <code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
-<p>Attaches event handler <code>fnFunction</code> to the #event:startDateChange startDateChange event of this
-<code>sap.ui.unified.CalendarMonthInterval</code>.</p>
-<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
-otherwise it will be bound to this <code>sap.ui.unified.CalendarMonthInterval</code> itself.</p>
-<p><code>startDate</code> was changed while navigation in <code>CalendarMonthInterval</code></p>
 <h5>Parameters</h5>
 <h6>oData</h6>
 <p><code>object</code></p>
@@ -239,15 +234,15 @@ itself</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Since</h5>
 <p>1.34.0</p>
-<h4>Call Signature</h4>
-<blockquote>
-<p><strong>attachStartDateChange</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
-</blockquote>
 <p>Attaches event handler <code>fnFunction</code> to the #event:startDateChange startDateChange event of this
 <code>sap.ui.unified.CalendarMonthInterval</code>.</p>
 <p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
 otherwise it will be bound to this <code>sap.ui.unified.CalendarMonthInterval</code> itself.</p>
 <p><code>startDate</code> was changed while navigation in <code>CalendarMonthInterval</code></p>
+<h4>Call Signature</h4>
+<blockquote>
+<p><strong>attachStartDateChange</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
+</blockquote>
 <h5>Parameters</h5>
 <h6>fnFunction</h6>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -261,6 +256,11 @@ itself</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Since</h5>
 <p>1.34.0</p>
+<p>Attaches event handler <code>fnFunction</code> to the #event:startDateChange startDateChange event of this
+<code>sap.ui.unified.CalendarMonthInterval</code>.</p>
+<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
+otherwise it will be bound to this <code>sap.ui.unified.CalendarMonthInterval</code> itself.</p>
+<p><code>startDate</code> was changed while navigation in <code>CalendarMonthInterval</code></p>
 <hr>
 <h3>destroySelectedDates()</h3>
 <blockquote>
@@ -318,9 +318,6 @@ itself</p>
 <blockquote>
 <p><strong>detachStartDateChange</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
-<p>Detaches event handler <code>fnFunction</code> from the #event:startDateChange startDateChange event of
-this <code>sap.ui.unified.CalendarMonthInterval</code>.</p>
-<p>The passed function and listener object must match the ones used for event registration.</p>
 <h4>Parameters</h4>
 <h5>fnFunction</h5>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -333,6 +330,9 @@ this <code>sap.ui.unified.CalendarMonthInterval</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.34.0</p>
+<p>Detaches event handler <code>fnFunction</code> from the #event:startDateChange startDateChange event of
+this <code>sap.ui.unified.CalendarMonthInterval</code>.</p>
+<p>The passed function and listener object must match the ones used for event registration.</p>
 <hr>
 <h3>displayDate()</h3>
 <blockquote>
@@ -351,7 +351,6 @@ this <code>sap.ui.unified.CalendarMonthInterval</code>.</p>
 <blockquote>
 <p><strong>fireCancel</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
-<p>Fires event #event:cancel cancel to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><code>object</code></p>
@@ -361,12 +360,12 @@ this <code>sap.ui.unified.CalendarMonthInterval</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:cancel cancel to attached listeners.</p>
 <hr>
 <h3>fireSelect()</h3>
 <blockquote>
 <p><strong>fireSelect</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
-<p>Fires event #event:select select to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><code>object</code></p>
@@ -376,12 +375,12 @@ this <code>sap.ui.unified.CalendarMonthInterval</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:select select to attached listeners.</p>
 <hr>
 <h3>fireStartDateChange()</h3>
 <blockquote>
 <p><strong>fireStartDateChange</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
-<p>Fires event #event:startDateChange startDateChange to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><code>object</code></p>
@@ -393,6 +392,7 @@ this <code>sap.ui.unified.CalendarMonthInterval</code>.</p>
 <p>1.34.0</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:startDateChange startDateChange to attached listeners.</p>
 <hr>
 <h3>focusDate()</h3>
 <blockquote>
@@ -430,41 +430,41 @@ this <code>sap.ui.unified.CalendarMonthInterval</code>.</p>
 <blockquote>
 <p><strong>getLegend</strong>(): <code>string</code></p>
 </blockquote>
-<p>ID of the element which is the current target of the association #getLegend legend, or <code>null</code>.</p>
 <h4>Returns</h4>
 <p><code>string</code></p>
 <h4>Since</h4>
 <p>1.38.5</p>
+<p>ID of the element which is the current target of the association #getLegend legend, or <code>null</code>.</p>
 <hr>
 <h3>getMaxDate()</h3>
 <blockquote>
 <p><strong>getMaxDate</strong>(): <code>object</code></p>
 </blockquote>
-<p>Gets current value of property #getMaxDate maxDate.</p>
-<p>Maximum date that can be shown and selected in the Calendar. This must be a UI5Date or JavaScript Date
-object.</p>
-<p><strong>Note:</strong> If the <code>maxDate</code> is set to be before the <code>minDate</code>, the <code>minDate</code> is set to the begin of the
-month of the <code>maxDate</code>.</p>
 <h4>Returns</h4>
 <p><code>object</code></p>
 <p>Value of property <code>maxDate</code></p>
 <h4>Since</h4>
 <p>1.38.0</p>
+<p>Gets current value of property #getMaxDate maxDate.</p>
+<p>Maximum date that can be shown and selected in the Calendar. This must be a UI5Date or JavaScript Date
+object.</p>
+<p><strong>Note:</strong> If the <code>maxDate</code> is set to be before the <code>minDate</code>, the <code>minDate</code> is set to the begin of the
+month of the <code>maxDate</code>.</p>
 <hr>
 <h3>getMinDate()</h3>
 <blockquote>
 <p><strong>getMinDate</strong>(): <code>object</code></p>
 </blockquote>
-<p>Gets current value of property #getMinDate minDate.</p>
-<p>Minimum date that can be shown and selected in the Calendar. This must be a UI5Date or JavaScript Date
-object.</p>
-<p><strong>Note:</strong> If the <code>minDate</code> is set to be after the <code>maxDate</code>, the <code>maxDate</code> is set to the end of the month
-of the <code>minDate</code>.</p>
 <h4>Returns</h4>
 <p><code>object</code></p>
 <p>Value of property <code>minDate</code></p>
 <h4>Since</h4>
 <p>1.38.0</p>
+<p>Gets current value of property #getMinDate minDate.</p>
+<p>Minimum date that can be shown and selected in the Calendar. This must be a UI5Date or JavaScript Date
+object.</p>
+<p><strong>Note:</strong> If the <code>minDate</code> is set to be after the <code>maxDate</code>, the <code>maxDate</code> is set to the end of the month
+of the <code>minDate</code>.</p>
 <hr>
 <h3>getMonths()</h3>
 <blockquote>
@@ -482,14 +482,14 @@ of the <code>minDate</code>.</p>
 <blockquote>
 <p><strong>getPickerPopup</strong>(): <code>boolean</code></p>
 </blockquote>
-<p>Gets current value of property #getPickerPopup pickerPopup.</p>
-<p>If set, the yearPicker opens on a popup</p>
-<p>Default value is <code>false</code>.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>Value of property <code>pickerPopup</code></p>
 <h4>Since</h4>
 <p>1.34.0</p>
+<p>Gets current value of property #getPickerPopup pickerPopup.</p>
+<p>If set, the yearPicker opens on a popup</p>
+<p>Default value is <code>false</code>.</p>
 <hr>
 <h3>getSelectedDates()</h3>
 <blockquote>
@@ -699,7 +699,6 @@ is inserted at the last position</p>
 <blockquote>
 <p><strong>setLegend</strong>(<code>oLegend</code>): <code>this</code></p>
 </blockquote>
-<p>Sets the associated #getLegend legend.</p>
 <h4>Parameters</h4>
 <h5>oLegend</h5>
 <p><code>string</code> | <a href="../../CalendarLegend/classes/CalendarLegend.html"><code>CalendarLegend</code></a></p>
@@ -710,6 +709,7 @@ may be given</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.38.5</p>
+<p>Sets the associated #getLegend legend.</p>
 <hr>
 <h3>setMaxDate()</h3>
 <blockquote>
@@ -758,10 +758,6 @@ may be given</p>
 <blockquote>
 <p><strong>setPickerPopup</strong>(<code>bPickerPopup?</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getPickerPopup pickerPopup.</p>
-<p>If set, the yearPicker opens on a popup</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>false</code>.</p>
 <h4>Parameters</h4>
 <h5>bPickerPopup?</h5>
 <p><code>boolean</code></p>
@@ -771,6 +767,10 @@ may be given</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.34.0</p>
+<p>Sets a new value for property #getPickerPopup pickerPopup.</p>
+<p>If set, the yearPicker opens on a popup</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>false</code>.</p>
 <hr>
 <h3>setSingleSelection()</h3>
 <blockquote>
@@ -832,7 +832,7 @@ it with the information contained in <code>oClassInfo</code>.</p>
 <p><code>string</code></p>
 <p>Name of the class being created</p>
 <h5>oClassInfo?</h5>
-<p><a href="../../../../../../sap.f/namespaces/sap/type-aliases/ClassInfo.html"><code>ClassInfo</code></a>&lt;<code>T</code>, <code>CalendarMonthInterval</code>&gt;</p>
+<p><code>ClassInfo</code>&lt;<code>T</code>, <code>CalendarMonthInterval</code>&gt;</p>
 <p>Object literal with information about the class</p>
 <h5>FNMetaImpl?</h5>
 <p><code>Function</code></p>
@@ -856,6 +856,6 @@ used by this class</p>
 <p><a href="../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a>.<a href="../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html#getmetadata-1"><code>getMetadata</code></a></p>
 <hr>
 
-<footer>Generated from <code>@openui5/types@1.120.46</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@openui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

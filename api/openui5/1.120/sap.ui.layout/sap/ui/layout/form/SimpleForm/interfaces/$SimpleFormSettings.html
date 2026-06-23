@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Interface: $SimpleFormSettings — OpenUI5 TypeScript API</title>
-<meta name="description" content="Interface: $SimpleFormSettings — OpenUI5 TypeScript API Reference (1.120.46)">
+<meta name="description" content="Interface: $SimpleFormSettings — OpenUI5 TypeScript API Reference (1.120.0)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/openui5/1.120/sap.ui.layout/sap/ui/layout/form/SimpleForm/interfaces/$SimpleFormSettings.html">
 <meta property="og:title" content="Interface: $SimpleFormSettings — OpenUI5 TypeScript API">
-<meta property="og:description" content="Interface: $SimpleFormSettings — OpenUI5 TypeScript API Reference (1.120.46)">
+<meta property="og:description" content="Interface: $SimpleFormSettings — OpenUI5 TypeScript API Reference (1.120.0)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/openui5/1.120/sap.ui.layout/sap/ui/layout/form/SimpleForm/interfaces/$SimpleFormSettings.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,12 +33,11 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../../index.html">OpenUI5 API</a> › <a href="../../../../../../../sap.ui.layout/README.html">sap.ui.layout</a> › sap › ui › layout › form › <a href="../../../../../../../sap.ui.layout/sap/ui/layout/form/SimpleForm/README.html">SimpleForm</a> › interfaces</nav>
-<p><a href="../../../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.46)</strong></a></p>
+<p><a href="../../../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.0)</strong></a></p>
 <hr>
-<p><a href="../../../../../../../README.html">OpenUI5 TypeScript API (1.120.46)</a> / <a href="../../../../../../README.html">sap.ui.layout</a> / <a href="../README.html">sap/ui/layout/form/SimpleForm</a> / $SimpleFormSettings</p>
+<p><a href="../../../../../../../README.html">OpenUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../../README.html">sap.ui.layout</a> / <a href="../README.html">sap/ui/layout/form/SimpleForm</a> / $SimpleFormSettings</p>
 <h1>Interface: $SimpleFormSettings</h1>
 <pre class="sig"><span class="kw">import</span> { $SimpleFormSettings } <span class="kw">from</span> <span class="str">"sap/ui/layout/form/SimpleForm"</span>;</pre>
-<p>Describes the settings that can be provided to the SimpleForm constructor.</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../../../../../../sap.ui.core/sap/ui/core/Control/interfaces/$ControlSettings.html"><code>$ControlSettings</code></a></li>
@@ -52,6 +51,8 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 <blockquote>
 <p><code>optional</code> <strong>adjustLabelSpan?</strong>: <code>boolean</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
+<h4>Since</h4>
+<p>1.34.0</p>
 <p>If set, the usage of <code>labelSpanL</code> and <code>labelSpanM</code> are dependent on the number of <code>FormContainers</code> in
 one row. If only one <code>FormContainer</code> is displayed in one row, <code>labelSpanM</code> is used to define the size
 of the label. This is the same for medium and large <code>Forms</code>. This is done to align the labels on forms
@@ -60,83 +61,81 @@ where full-size <code>FormContainers</code> and multiple-column rows are used in
 <p>If not set, the usage of <code>labelSpanL</code> and <code>labelSpanM</code> are dependent on the <code>Form</code> size. The number of
 <code>FormContainers</code> doesn&#39;t matter in this case.</p>
 <p><strong>Note:</strong> This property is only used if a <code>ResponsiveGridLayout</code> is used as a layout.</p>
-<h4>Since</h4>
-<p>1.34.0</p>
 <hr>
 <h3>ariaLabelledBy?</h3>
 <blockquote>
 <p><code>optional</code> <strong>ariaLabelledBy?</strong>: (<code>string</code> | <a href="../../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a>)[]</p>
 </blockquote>
-<p>Association to controls / IDs which label this control (see WAI-ARIA attribute <code>aria-labelledby</code>).</p>
 <h4>Since</h4>
 <p>1.32.0</p>
+<p>Association to controls / IDs which label this control (see WAI-ARIA attribute <code>aria-labelledby</code>).</p>
 <hr>
 <h3>backgroundDesign?</h3>
 <blockquote>
 <p><code>optional</code> <strong>backgroundDesign?</strong>: <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code> | <code>&quot;Transparent&quot;</code> | <code>&quot;Solid&quot;</code> | <code>&quot;Translucent&quot;</code> | <a href="../../../library/enumerations/BackgroundDesign.html"><code>BackgroundDesign</code></a></p>
 </blockquote>
-<p>Specifies the background color of the <code>SimpleForm</code> content.</p>
-<p>The visualization of the different options depends on the used theme.</p>
 <h4>Since</h4>
 <p>1.36.0</p>
+<p>Specifies the background color of the <code>SimpleForm</code> content.</p>
+<p>The visualization of the different options depends on the used theme.</p>
 <hr>
 <h3>breakpointL?</h3>
 <blockquote>
 <p><code>optional</code> <strong>breakpointL?</strong>: <code>number</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<p>Breakpoint between Medium size and Large size.</p>
-<p><strong>Note:</strong> This property is only used if a <code>ResponsiveGridLayout</code> is used as a layout.</p>
 <h4>Since</h4>
 <p>1.16.3</p>
+<p>Breakpoint between Medium size and Large size.</p>
+<p><strong>Note:</strong> This property is only used if a <code>ResponsiveGridLayout</code> is used as a layout.</p>
 <hr>
 <h3>breakpointM?</h3>
 <blockquote>
 <p><code>optional</code> <strong>breakpointM?</strong>: <code>number</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<p>Breakpoint between Small size and Medium size.</p>
-<p><strong>Note:</strong> This property is only used if a <code>ResponsiveGridLayout</code> is used as a layout.</p>
 <h4>Since</h4>
 <p>1.16.3</p>
+<p>Breakpoint between Small size and Medium size.</p>
+<p><strong>Note:</strong> This property is only used if a <code>ResponsiveGridLayout</code> is used as a layout.</p>
 <hr>
 <h3>breakpointXL?</h3>
 <blockquote>
 <p><code>optional</code> <strong>breakpointXL?</strong>: <code>number</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<p>Breakpoint between Medium size and Large size.</p>
-<p><strong>Note:</strong> This property is only used if a <code>ResponsiveGridLayout</code> is used as a layout.</p>
 <h4>Since</h4>
 <p>1.34.0</p>
+<p>Breakpoint between Medium size and Large size.</p>
+<p><strong>Note:</strong> This property is only used if a <code>ResponsiveGridLayout</code> is used as a layout.</p>
 <hr>
 <h3>columnsL?</h3>
 <blockquote>
 <p><code>optional</code> <strong>columnsL?</strong>: <code>number</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
+<h4>Since</h4>
+<p>1.16.3</p>
 <p>Form columns for large size. The number of columns for large size must not be smaller than the number
 of columns for medium size.</p>
 <p><strong>Note:</strong> This property is only used if a <code>ResponsiveGridLayout</code> or a <code>ColumnLayout</code> is used as a layout.</p>
-<h4>Since</h4>
-<p>1.16.3</p>
 <hr>
 <h3>columnsM?</h3>
 <blockquote>
 <p><code>optional</code> <strong>columnsM?</strong>: <code>number</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<p>Form columns for medium size.</p>
-<p><strong>Note:</strong> This property is only used if a <code>ResponsiveGridLayout</code> or a <code>ColumnLayout</code> is used as a layout.</p>
 <h4>Since</h4>
 <p>1.16.3</p>
+<p>Form columns for medium size.</p>
+<p><strong>Note:</strong> This property is only used if a <code>ResponsiveGridLayout</code> or a <code>ColumnLayout</code> is used as a layout.</p>
 <hr>
 <h3>columnsXL?</h3>
 <blockquote>
 <p><code>optional</code> <strong>columnsXL?</strong>: <code>number</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
+<h4>Since</h4>
+<p>1.34.0</p>
 <p>Form columns for extra large size. The number of columns for extra large size must not be smaller than
 the number of columns for large size.</p>
 <p><strong>Note:</strong> This property is only used if a <code>ResponsiveGridLayout</code> or a <code>ColumnLayout</code> is used as a layout.
 If the default value -1 is not overwritten with the meaningful one then the <code>columnsL</code> value is used
 (from the backward compatibility reasons).</p>
-<h4>Since</h4>
-<p>1.34.0</p>
 <hr>
 <h3>content?</h3>
 <blockquote>
@@ -197,92 +196,92 @@ controls might be wrong. Also, controls that do not fit the mode might be render
 <blockquote>
 <p><code>optional</code> <strong>emptySpanL?</strong>: <code>number</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
+<h4>Since</h4>
+<p>1.16.3</p>
 <p>Number of grid cells that are empty at the end of each line on large size.</p>
 <p><strong>Note:</strong> This property is only used if a <code>ResponsiveGridLayout</code> or a <code>ColumnLayout</code> is used as a layout.
 If a <code>ColumnLayout</code> is used, this property defines the empty cells for large columns.</p>
-<h4>Since</h4>
-<p>1.16.3</p>
 <hr>
 <h3>emptySpanM?</h3>
 <blockquote>
 <p><code>optional</code> <strong>emptySpanM?</strong>: <code>number</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<p>Number of grid cells that are empty at the end of each line on medium size.</p>
-<p><strong>Note:</strong> This property is only used if a <code>ResponsiveGridLayout</code> is used as a layout.</p>
 <h4>Since</h4>
 <p>1.16.3</p>
+<p>Number of grid cells that are empty at the end of each line on medium size.</p>
+<p><strong>Note:</strong> This property is only used if a <code>ResponsiveGridLayout</code> is used as a layout.</p>
 <hr>
 <h3>emptySpanS?</h3>
 <blockquote>
 <p><code>optional</code> <strong>emptySpanS?</strong>: <code>number</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<p>Number of grid cells that are empty at the end of each line on small size.</p>
-<p><strong>Note:</strong> This property is only used if a <code>ResponsiveGridLayout</code> is used as a layout.</p>
 <h4>Since</h4>
 <p>1.16.3</p>
+<p>Number of grid cells that are empty at the end of each line on small size.</p>
+<p><strong>Note:</strong> This property is only used if a <code>ResponsiveGridLayout</code> is used as a layout.</p>
 <hr>
 <h3>emptySpanXL?</h3>
 <blockquote>
 <p><code>optional</code> <strong>emptySpanXL?</strong>: <code>number</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
+<h4>Since</h4>
+<p>1.34.0</p>
 <p>Number of grid cells that are empty at the end of each line on extra large size.</p>
 <p><strong>Note:</strong> This property is only used if a <code>ResponsiveGridLayout</code> is used as a layout. If the default
 value -1 is not overwritten with the meaningful one then the <code>emptySpanL</code> value is used (from the backward
 compatibility reasons).</p>
-<h4>Since</h4>
-<p>1.34.0</p>
 <hr>
 <h3><del>labelMinWidth?</del></h3>
 <blockquote>
 <p><code>optional</code> <strong>labelMinWidth?</strong>: <code>number</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<p>Specifies the min-width in pixels of the label in all form rows.</p>
-<p><strong>Note:</strong> This property is only used if a <code>ResponsiveLayout</code> is used as a layout.</p>
 <h4>Deprecated</h4>
 <p>(since 1.93) - use another <code>Layout</code></p>
+<p>Specifies the min-width in pixels of the label in all form rows.</p>
+<p><strong>Note:</strong> This property is only used if a <code>ResponsiveLayout</code> is used as a layout.</p>
 <hr>
 <h3>labelSpanL?</h3>
 <blockquote>
 <p><code>optional</code> <strong>labelSpanL?</strong>: <code>number</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
+<h4>Since</h4>
+<p>1.16.3</p>
 <p>Default span for labels in large size.</p>
 <p><strong>Note:</strong> If <code>adjustLabelSpan</code> is set, this property is only used if more than 1 <code>FormContainer</code> is in
 one line. If only 1 <code>FormContainer</code> is in the line, then the <code>labelSpanM</code> value is used.</p>
 <p><strong>Note:</strong> This property is only used if <code>ResponsiveGridLayout</code> or <code>ColumnLayout</code> is used as a layout.
 If a <code>ColumnLayout</code> is used, this property defines the label size for large columns.</p>
-<h4>Since</h4>
-<p>1.16.3</p>
 <hr>
 <h3>labelSpanM?</h3>
 <blockquote>
 <p><code>optional</code> <strong>labelSpanM?</strong>: <code>number</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
+<h4>Since</h4>
+<p>1.16.3</p>
 <p>Default span for labels in medium size.</p>
 <p><strong>Note:</strong> If <code>adjustLabelSpan</code> is set, this property is used for full-size <code>FormContainers</code>. If more
 than one <code>FormContainer</code> is in one line, <code>labelSpanL</code> is used.</p>
 <p><strong>Note:</strong> This property is only used if a <code>ResponsiveGridLayout</code> is used as a layout.</p>
-<h4>Since</h4>
-<p>1.16.3</p>
 <hr>
 <h3>labelSpanS?</h3>
 <blockquote>
 <p><code>optional</code> <strong>labelSpanS?</strong>: <code>number</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<p>Default span for labels in small size.</p>
-<p><strong>Note:</strong> This property is only used if a <code>ResponsiveGridLayout</code> is used as a layout.</p>
 <h4>Since</h4>
 <p>1.16.3</p>
+<p>Default span for labels in small size.</p>
+<p><strong>Note:</strong> This property is only used if a <code>ResponsiveGridLayout</code> is used as a layout.</p>
 <hr>
 <h3>labelSpanXL?</h3>
 <blockquote>
 <p><code>optional</code> <strong>labelSpanXL?</strong>: <code>number</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
+<h4>Since</h4>
+<p>1.34.0</p>
 <p>Default span for labels in extra large size.</p>
 <p><strong>Note:</strong> This property is only used if a <code>ResponsiveGridLayout</code> is used as a layout. If the default
 value -1 is not overwritten with the meaningful one then the <code>labelSpanL</code> value is used (from the backward
 compatibility reasons).</p>
-<h4>Since</h4>
-<p>1.34.0</p>
 <hr>
 <h3>layout?</h3>
 <blockquote>
@@ -309,53 +308,53 @@ this property is not used. Please use the properties <code>ColumnsL</code> and <
 <blockquote>
 <p><code>optional</code> <strong>minWidth?</strong>: <code>number</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
+<h4>Deprecated</h4>
+<p>(since 1.93) - use another <code>Layout</code></p>
 <p>The overall minimum width in pixels that is used for the <code>SimpleForm</code>.</p>
 <p>If the available width is below the given <code>minWidth</code> the <code>SimpleForm</code> will create a new row for the next
 group (<code>{@link sap.ui.layout.form.FormContainer FormContainer}</code>). The default value is -1, meaning that
 inner groups (<code>{@link sap.ui.layout.form.FormContainer FormContainers}</code>) will be stacked until <code>maxContainerCols</code>
 is reached, irrespective of whether a <code>width</code> is reached or the available parents width is reached.</p>
 <p><strong>Note:</strong> This property is only used if a <code>ResponsiveLayout</code> is used as a layout.</p>
-<h4>Deprecated</h4>
-<p>(since 1.93) - use another <code>Layout</code></p>
 <hr>
 <h3>singleContainerFullSize?</h3>
 <blockquote>
 <p><code>optional</code> <strong>singleContainerFullSize?</strong>: <code>boolean</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
+<h4>Since</h4>
+<p>1.34.0</p>
 <p>If the <code>Form</code> contains only one single <code>FormContainer</code> and this property is set, the <code>FormContainer</code>
 is displayed using the full size of the <code>Form</code>. In this case the properties <code>columnsL</code> and <code>columnsM</code>
 are ignored.</p>
 <p>In all other cases the <code>FormContainer</code> is displayed in the size of one column.</p>
 <p><strong>Note:</strong> This property is only used if a <code>ResponsiveGridLayout</code> is used as a layout.</p>
-<h4>Since</h4>
-<p>1.34.0</p>
 <hr>
 <h3>title?</h3>
 <blockquote>
 <p><code>optional</code> <strong>title?</strong>: <code>string</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <a href="../../../../../../../sap.ui.core/sap/ui/core/Title/classes/Title.html"><code>Title</code></a></p>
 </blockquote>
-<p>Title element of the <code>SimpleForm</code>. Can either be a <code>Title</code> element, or a string.</p>
 <h4>Since</h4>
 <p>1.16.3</p>
+<p>Title element of the <code>SimpleForm</code>. Can either be a <code>Title</code> element, or a string.</p>
 <hr>
 <h3>toolbar?</h3>
 <blockquote>
 <p><code>optional</code> <strong>toolbar?</strong>: <a href="../../../../../../../sap.ui.core/sap/ui/core/library/interfaces/Toolbar.html"><code>Toolbar</code></a></p>
 </blockquote>
+<h4>Since</h4>
+<p>1.36.0</p>
 <p>Toolbar of the <code>SimpleForm</code>.</p>
 <p><strong>Note:</strong> If a <code>Toolbar</code> is used, the <code>Title</code> is ignored. If a title is needed inside the <code>Toolbar</code> it
 must be added at content to the <code>Toolbar</code>. In this case add the <code>Title</code> to the <code>ariaLabelledBy</code> association.</p>
-<h4>Since</h4>
-<p>1.36.0</p>
 <hr>
 <h3>width?</h3>
 <blockquote>
 <p><code>optional</code> <strong>width?</strong>: <code>string</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a></p>
 </blockquote>
-<p>Width of the form.</p>
 <h4>Since</h4>
 <p>1.28.0</p>
+<p>Width of the form.</p>
 
-<footer>Generated from <code>@openui5/types@1.120.46</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@openui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

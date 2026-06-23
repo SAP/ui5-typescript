@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Class: TimePicker — OpenUI5 TypeScript API</title>
-<meta name="description" content="Class: TimePicker — OpenUI5 TypeScript API Reference (1.120.46)">
+<meta name="description" content="Class: TimePicker — OpenUI5 TypeScript API Reference (1.120.0)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/openui5/1.120/sap.m/sap/m/TimePicker/classes/TimePicker.html">
 <meta property="og:title" content="Class: TimePicker — OpenUI5 TypeScript API">
-<meta property="og:description" content="Class: TimePicker — OpenUI5 TypeScript API Reference (1.120.46)">
+<meta property="og:description" content="Class: TimePicker — OpenUI5 TypeScript API Reference (1.120.0)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/openui5/1.120/sap.m/sap/m/TimePicker/classes/TimePicker.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,11 +33,13 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../index.html">OpenUI5 API</a> › <a href="../../../../../sap.m/README.html">sap.m</a> › sap › m › <a href="../../../../../sap.m/sap/m/TimePicker/README.html">TimePicker</a> › classes</nav>
-<p><a href="../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.46)</strong></a></p>
+<p><a href="../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.0)</strong></a></p>
 <hr>
-<p><a href="../../../../../README.html">OpenUI5 TypeScript API (1.120.46)</a> / <a href="../../../../README.html">sap.m</a> / <a href="../README.html">sap/m/TimePicker</a> / TimePicker</p>
+<p><a href="../../../../../README.html">OpenUI5 TypeScript API (1.120.0)</a> / <a href="../../../../README.html">sap.m</a> / <a href="../README.html">sap/m/TimePicker</a> / TimePicker</p>
 <h1>Class: TimePicker</h1>
 <pre class="sig"><span class="kw">import</span> TimePicker <span class="kw">from</span> <span class="str">"sap/m/TimePicker"</span>;</pre>
+<h2>Since</h2>
+<p>1.32</p>
 <p>A single-field input control that enables the users to fill time related input fields.</p>
 <p>Overview:</p>
 <p>The <code>TimePicker</code> control enables the users to fill time related input fields using touch, mouse, or keyboard
@@ -55,8 +57,6 @@ property or as a UI5Date or JavaScript Date object to the <code>dateValue</code>
 should be used at a time):</p>
 <pre><code> - Use the `value` property if you want to bind the `TimePicker` to a model using the `sap.ui.model.type.Time`
 </code></pre>
-<h2>Since</h2>
-<p>1.32</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../DateTimeField/classes/DateTimeField.html"><code>DateTimeField</code></a></li>
@@ -120,11 +120,6 @@ See:
 <blockquote>
 <p><strong>attachAfterValueHelpClose</strong>(<code>oData</code>, <code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
-<p>Attaches event handler <code>fnFunction</code> to the #event:afterValueHelpClose afterValueHelpClose event
-of this <code>sap.m.TimePicker</code>.</p>
-<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
-otherwise it will be bound to this <code>sap.m.TimePicker</code> itself.</p>
-<p>Fired when <code>value help</code> dialog closes.</p>
 <h5>Parameters</h5>
 <h6>oData</h6>
 <p><code>object</code></p>
@@ -141,15 +136,15 @@ object when firing the event</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Since</h5>
 <p>1.102.0</p>
-<h4>Call Signature</h4>
-<blockquote>
-<p><strong>attachAfterValueHelpClose</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
-</blockquote>
 <p>Attaches event handler <code>fnFunction</code> to the #event:afterValueHelpClose afterValueHelpClose event
 of this <code>sap.m.TimePicker</code>.</p>
 <p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
 otherwise it will be bound to this <code>sap.m.TimePicker</code> itself.</p>
 <p>Fired when <code>value help</code> dialog closes.</p>
+<h4>Call Signature</h4>
+<blockquote>
+<p><strong>attachAfterValueHelpClose</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
+</blockquote>
 <h5>Parameters</h5>
 <h6>fnFunction</h6>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -162,17 +157,17 @@ otherwise it will be bound to this <code>sap.m.TimePicker</code> itself.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Since</h5>
 <p>1.102.0</p>
+<p>Attaches event handler <code>fnFunction</code> to the #event:afterValueHelpClose afterValueHelpClose event
+of this <code>sap.m.TimePicker</code>.</p>
+<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
+otherwise it will be bound to this <code>sap.m.TimePicker</code> itself.</p>
+<p>Fired when <code>value help</code> dialog closes.</p>
 <hr>
 <h3>attachAfterValueHelpOpen()</h3>
 <h4>Call Signature</h4>
 <blockquote>
 <p><strong>attachAfterValueHelpOpen</strong>(<code>oData</code>, <code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
-<p>Attaches event handler <code>fnFunction</code> to the #event:afterValueHelpOpen afterValueHelpOpen event
-of this <code>sap.m.TimePicker</code>.</p>
-<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
-otherwise it will be bound to this <code>sap.m.TimePicker</code> itself.</p>
-<p>Fired when <code>value help</code> dialog opens.</p>
 <h5>Parameters</h5>
 <h6>oData</h6>
 <p><code>object</code></p>
@@ -189,15 +184,15 @@ object when firing the event</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Since</h5>
 <p>1.102.0</p>
-<h4>Call Signature</h4>
-<blockquote>
-<p><strong>attachAfterValueHelpOpen</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
-</blockquote>
 <p>Attaches event handler <code>fnFunction</code> to the #event:afterValueHelpOpen afterValueHelpOpen event
 of this <code>sap.m.TimePicker</code>.</p>
 <p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
 otherwise it will be bound to this <code>sap.m.TimePicker</code> itself.</p>
 <p>Fired when <code>value help</code> dialog opens.</p>
+<h4>Call Signature</h4>
+<blockquote>
+<p><strong>attachAfterValueHelpOpen</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
+</blockquote>
 <h5>Parameters</h5>
 <h6>fnFunction</h6>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -210,18 +205,17 @@ otherwise it will be bound to this <code>sap.m.TimePicker</code> itself.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Since</h5>
 <p>1.102.0</p>
+<p>Attaches event handler <code>fnFunction</code> to the #event:afterValueHelpOpen afterValueHelpOpen event
+of this <code>sap.m.TimePicker</code>.</p>
+<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
+otherwise it will be bound to this <code>sap.m.TimePicker</code> itself.</p>
+<p>Fired when <code>value help</code> dialog opens.</p>
 <hr>
 <h3>attachLiveChange()</h3>
 <h4>Call Signature</h4>
 <blockquote>
 <p><strong>attachLiveChange</strong>(<code>oData</code>, <code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
-<p>Attaches event handler <code>fnFunction</code> to the #event:liveChange liveChange event of this <code>sap.m.TimePicker</code>.</p>
-<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
-otherwise it will be bound to this <code>sap.m.TimePicker</code> itself.</p>
-<p>Fired when the value of the <code>TimePicker</code> is changed by user interaction - each keystroke, delete, paste,
-etc.</p>
-<p><strong>Note:</strong> Browsing autocomplete suggestions doesn&#39;t fire the event.</p>
 <h5>Parameters</h5>
 <h6>oData</h6>
 <p><code>object</code></p>
@@ -238,18 +232,18 @@ object when firing the event</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Since</h5>
 <p>1.104.0</p>
-<h5>Overrides</h5>
-<p><a href="../../DateTimeField/classes/DateTimeField.html"><code>DateTimeField</code></a>.<a href="../../DateTimeField/classes/DateTimeField.html#attachlivechange"><code>attachLiveChange</code></a></p>
-<h4>Call Signature</h4>
-<blockquote>
-<p><strong>attachLiveChange</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
-</blockquote>
 <p>Attaches event handler <code>fnFunction</code> to the #event:liveChange liveChange event of this <code>sap.m.TimePicker</code>.</p>
 <p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
 otherwise it will be bound to this <code>sap.m.TimePicker</code> itself.</p>
 <p>Fired when the value of the <code>TimePicker</code> is changed by user interaction - each keystroke, delete, paste,
 etc.</p>
 <p><strong>Note:</strong> Browsing autocomplete suggestions doesn&#39;t fire the event.</p>
+<h5>Overrides</h5>
+<p><a href="../../DateTimeField/classes/DateTimeField.html"><code>DateTimeField</code></a>.<a href="../../DateTimeField/classes/DateTimeField.html#attachlivechange"><code>attachLiveChange</code></a></p>
+<h4>Call Signature</h4>
+<blockquote>
+<p><strong>attachLiveChange</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
+</blockquote>
 <h5>Parameters</h5>
 <h6>fnFunction</h6>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -262,6 +256,12 @@ etc.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Since</h5>
 <p>1.104.0</p>
+<p>Attaches event handler <code>fnFunction</code> to the #event:liveChange liveChange event of this <code>sap.m.TimePicker</code>.</p>
+<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
+otherwise it will be bound to this <code>sap.m.TimePicker</code> itself.</p>
+<p>Fired when the value of the <code>TimePicker</code> is changed by user interaction - each keystroke, delete, paste,
+etc.</p>
+<p><strong>Note:</strong> Browsing autocomplete suggestions doesn&#39;t fire the event.</p>
 <h5>Overrides</h5>
 <p><a href="../../DateTimeField/classes/DateTimeField.html"><code>DateTimeField</code></a>.<a href="../../DateTimeField/classes/DateTimeField.html#attachlivechange"><code>attachLiveChange</code></a></p>
 <hr>
@@ -278,9 +278,6 @@ etc.</p>
 <blockquote>
 <p><strong>detachAfterValueHelpClose</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
-<p>Detaches event handler <code>fnFunction</code> from the #event:afterValueHelpClose afterValueHelpClose event
-of this <code>sap.m.TimePicker</code>.</p>
-<p>The passed function and listener object must match the ones used for event registration.</p>
 <h4>Parameters</h4>
 <h5>fnFunction</h5>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -293,14 +290,14 @@ of this <code>sap.m.TimePicker</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.102.0</p>
+<p>Detaches event handler <code>fnFunction</code> from the #event:afterValueHelpClose afterValueHelpClose event
+of this <code>sap.m.TimePicker</code>.</p>
+<p>The passed function and listener object must match the ones used for event registration.</p>
 <hr>
 <h3>detachAfterValueHelpOpen()</h3>
 <blockquote>
 <p><strong>detachAfterValueHelpOpen</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
-<p>Detaches event handler <code>fnFunction</code> from the #event:afterValueHelpOpen afterValueHelpOpen event
-of this <code>sap.m.TimePicker</code>.</p>
-<p>The passed function and listener object must match the ones used for event registration.</p>
 <h4>Parameters</h4>
 <h5>fnFunction</h5>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -313,13 +310,14 @@ of this <code>sap.m.TimePicker</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.102.0</p>
+<p>Detaches event handler <code>fnFunction</code> from the #event:afterValueHelpOpen afterValueHelpOpen event
+of this <code>sap.m.TimePicker</code>.</p>
+<p>The passed function and listener object must match the ones used for event registration.</p>
 <hr>
 <h3>detachLiveChange()</h3>
 <blockquote>
 <p><strong>detachLiveChange</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
-<p>Detaches event handler <code>fnFunction</code> from the #event:liveChange liveChange event of this <code>sap.m.TimePicker</code>.</p>
-<p>The passed function and listener object must match the ones used for event registration.</p>
 <h4>Parameters</h4>
 <h5>fnFunction</h5>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -332,6 +330,8 @@ of this <code>sap.m.TimePicker</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.104.0</p>
+<p>Detaches event handler <code>fnFunction</code> from the #event:liveChange liveChange event of this <code>sap.m.TimePicker</code>.</p>
+<p>The passed function and listener object must match the ones used for event registration.</p>
 <h4>Overrides</h4>
 <p><a href="../../DateTimeField/classes/DateTimeField.html"><code>DateTimeField</code></a>.<a href="../../DateTimeField/classes/DateTimeField.html#detachlivechange"><code>detachLiveChange</code></a></p>
 <hr>
@@ -339,7 +339,6 @@ of this <code>sap.m.TimePicker</code>.</p>
 <blockquote>
 <p><strong>fireAfterValueHelpClose</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
-<p>Fires event #event:afterValueHelpClose afterValueHelpClose to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><code>object</code></p>
@@ -351,12 +350,12 @@ of this <code>sap.m.TimePicker</code>.</p>
 <p>1.102.0</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:afterValueHelpClose afterValueHelpClose to attached listeners.</p>
 <hr>
 <h3>fireAfterValueHelpOpen()</h3>
 <blockquote>
 <p><strong>fireAfterValueHelpOpen</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
-<p>Fires event #event:afterValueHelpOpen afterValueHelpOpen to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><code>object</code></p>
@@ -368,15 +367,12 @@ of this <code>sap.m.TimePicker</code>.</p>
 <p>1.102.0</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:afterValueHelpOpen afterValueHelpOpen to attached listeners.</p>
 <hr>
 <h3>fireChange()</h3>
 <blockquote>
 <p><strong>fireChange</strong>(<code>mArguments?</code>): <code>this</code></p>
 </blockquote>
-<p>Fires change event to attached listeners.</p>
-<p>Expects following event parameters:
-	 - value parameter of type <code>string</code> - the new value of the input
-	 - valid parameter of type <code>boolean</code> - indicator for a valid time</p>
 <h4>Parameters</h4>
 <h5>mArguments?</h5>
 <p><code>object</code></p>
@@ -386,6 +382,10 @@ of this <code>sap.m.TimePicker</code>.</p>
 <p>Reference to <code>this</code> for method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires change event to attached listeners.</p>
+<p>Expects following event parameters:
+	 - value parameter of type <code>string</code> - the new value of the input
+	 - valid parameter of type <code>boolean</code> - indicator for a valid time</p>
 <h4>Overrides</h4>
 <p><a href="../../DateTimeField/classes/DateTimeField.html"><code>DateTimeField</code></a>.<a href="../../DateTimeField/classes/DateTimeField.html#firechange"><code>fireChange</code></a></p>
 <hr>
@@ -393,7 +393,6 @@ of this <code>sap.m.TimePicker</code>.</p>
 <blockquote>
 <p><strong>fireChangeEvent</strong>(<code>sValue</code>, <code>oParams?</code>): <code>void</code></p>
 </blockquote>
-<p>Fires the change event for the listeners.</p>
 <h4>Parameters</h4>
 <h5>sValue</h5>
 <p><code>string</code></p>
@@ -405,6 +404,7 @@ of this <code>sap.m.TimePicker</code>.</p>
 <p><code>void</code></p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires the change event for the listeners.</p>
 <h4>Overrides</h4>
 <p><a href="../../DateTimeField/classes/DateTimeField.html"><code>DateTimeField</code></a>.<a href="../../DateTimeField/classes/DateTimeField.html#firechangeevent"><code>fireChangeEvent</code></a></p>
 <hr>
@@ -412,7 +412,6 @@ of this <code>sap.m.TimePicker</code>.</p>
 <blockquote>
 <p><strong>fireLiveChange</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
-<p>Fires event #event:liveChange liveChange to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/TimePicker$LiveChangeEventParameters.html"><code>TimePicker$LiveChangeEventParameters</code></a></p>
@@ -424,6 +423,7 @@ of this <code>sap.m.TimePicker</code>.</p>
 <p>1.104.0</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:liveChange liveChange to attached listeners.</p>
 <h4>Overrides</h4>
 <p><a href="../../DateTimeField/classes/DateTimeField.html"><code>DateTimeField</code></a>.<a href="../../DateTimeField/classes/DateTimeField.html#firelivechange"><code>fireLiveChange</code></a></p>
 <hr>
@@ -431,13 +431,13 @@ of this <code>sap.m.TimePicker</code>.</p>
 <blockquote>
 <p><strong>getAccessibilityInfo</strong>(): <a href="../../../../../sap.ui.core/sap/ui/core/library/type-aliases/AccessibilityInfo.html"><code>AccessibilityInfo</code></a></p>
 </blockquote>
-<p>See:
-	sap.ui.core.Control#getAccessibilityInfo</p>
 <h4>Returns</h4>
 <p><a href="../../../../../sap.ui.core/sap/ui/core/library/type-aliases/AccessibilityInfo.html"><code>AccessibilityInfo</code></a></p>
 <p>Current accessibility state of the control.</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>See:
+	sap.ui.core.Control#getAccessibilityInfo</p>
 <h4>Overrides</h4>
 <p><a href="../../DateTimeField/classes/DateTimeField.html"><code>DateTimeField</code></a>.<a href="../../DateTimeField/classes/DateTimeField.html#getaccessibilityinfo"><code>getAccessibilityInfo</code></a></p>
 <hr>
@@ -473,6 +473,11 @@ the binding itself.</p>
 <blockquote>
 <p><strong>getHideInput</strong>(): <code>boolean</code></p>
 </blockquote>
+<h4>Returns</h4>
+<p><code>boolean</code></p>
+<p>Value of property <code>hideInput</code></p>
+<h4>Since</h4>
+<p>1.97</p>
 <p>Gets current value of property #getHideInput hideInput.</p>
 <p>Determines whether the input field of the picker is hidden or visible. When set to <code>true</code>, the input
 field becomes invisible and there is no way to open the picker popover. In that case it can be opened
@@ -483,11 +488,6 @@ popover, those attributes should be added by the application developer. The foll
 to be added to the opening control: a text or tooltip that describes the action (example: &quot;Open Time
 Picker&quot;), and also aria-haspopup attribute with value of <code>sap.ui.core.aria.HasPopup.Dialog</code>.</p>
 <p>Default value is <code>false</code>.</p>
-<h4>Returns</h4>
-<p><code>boolean</code></p>
-<p>Value of property <code>hideInput</code></p>
-<h4>Since</h4>
-<p>1.97</p>
 <hr>
 <h3>getLocaleId()</h3>
 <blockquote>
@@ -524,6 +524,11 @@ one.</p>
 <blockquote>
 <p><strong>getMaskMode</strong>(): <code>&quot;On&quot;</code> | <code>&quot;Off&quot;</code> | <a href="../../library/enumerations/TimePickerMaskMode.html"><code>TimePickerMaskMode</code></a></p>
 </blockquote>
+<h4>Returns</h4>
+<p><code>&quot;On&quot;</code> | <code>&quot;Off&quot;</code> | <a href="../../library/enumerations/TimePickerMaskMode.html"><code>TimePickerMaskMode</code></a></p>
+<p>Value of property <code>maskMode</code></p>
+<h4>Since</h4>
+<p>1.54</p>
 <p>Gets current value of property #getMaskMode maskMode.</p>
 <p>Defines whether the mask is enabled. When disabled, there are no restrictions and validation for the
 user and no placeholders are displayed.</p>
@@ -531,25 +536,20 @@ user and no placeholders are displayed.</p>
 <code>mask</code> property and add new <code>rules</code> while it is disabled. When <code>maskMode</code> is set to <code>On</code> again, the <code>rules</code>
 and the updated <code>mask</code> will be applied.</p>
 <p>Default value is <code>On</code>.</p>
-<h4>Returns</h4>
-<p><code>&quot;On&quot;</code> | <code>&quot;Off&quot;</code> | <a href="../../library/enumerations/TimePickerMaskMode.html"><code>TimePickerMaskMode</code></a></p>
-<p>Value of property <code>maskMode</code></p>
-<h4>Since</h4>
-<p>1.54</p>
 <hr>
 <h3>getMinutesStep()</h3>
 <blockquote>
 <p><strong>getMinutesStep</strong>(): <code>number</code></p>
 </blockquote>
-<p>Gets current value of property #getMinutesStep minutesStep.</p>
-<p>Sets the minutes step. If step is less than 1, it will be automatically converted back to 1. The minutes
-clock is populated only by multiples of the step.</p>
-<p>Default value is <code>1</code>.</p>
 <h4>Returns</h4>
 <p><code>number</code></p>
 <p>Value of property <code>minutesStep</code></p>
 <h4>Since</h4>
 <p>1.40</p>
+<p>Gets current value of property #getMinutesStep minutesStep.</p>
+<p>Sets the minutes step. If step is less than 1, it will be automatically converted back to 1. The minutes
+clock is populated only by multiples of the step.</p>
+<p>Default value is <code>1</code>.</p>
 <hr>
 <h3>getPlaceholderSymbol()</h3>
 <blockquote>
@@ -575,42 +575,42 @@ clock is populated only by multiples of the step.</p>
 <blockquote>
 <p><strong>getSecondsStep</strong>(): <code>number</code></p>
 </blockquote>
-<p>Gets current value of property #getSecondsStep secondsStep.</p>
-<p>Sets the seconds step. If step is less than 1, it will be automatically converted back to 1. The seconds
-clock is populated only by multiples of the step.</p>
-<p>Default value is <code>1</code>.</p>
 <h4>Returns</h4>
 <p><code>number</code></p>
 <p>Value of property <code>secondsStep</code></p>
 <h4>Since</h4>
 <p>1.40</p>
+<p>Gets current value of property #getSecondsStep secondsStep.</p>
+<p>Sets the seconds step. If step is less than 1, it will be automatically converted back to 1. The seconds
+clock is populated only by multiples of the step.</p>
+<p>Default value is <code>1</code>.</p>
 <hr>
 <h3>getShowCurrentTimeButton()</h3>
 <blockquote>
 <p><strong>getShowCurrentTimeButton</strong>(): <code>boolean</code></p>
 </blockquote>
-<p>Gets current value of property #getShowCurrentTimeButton showCurrentTimeButton.</p>
-<p>Determines whether there is a shortcut navigation to current time.</p>
-<p>Default value is <code>false</code>.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>Value of property <code>showCurrentTimeButton</code></p>
 <h4>Since</h4>
 <p>1.98</p>
+<p>Gets current value of property #getShowCurrentTimeButton showCurrentTimeButton.</p>
+<p>Determines whether there is a shortcut navigation to current time.</p>
+<p>Default value is <code>false</code>.</p>
 <hr>
 <h3>getSupport2400()</h3>
 <blockquote>
 <p><strong>getSupport2400</strong>(): <code>boolean</code></p>
 </blockquote>
-<p>Gets current value of property #getSupport2400 support2400.</p>
-<p>Allows to set a value of 24:00, used to indicate the end of the day. Works only with HH or H formats.
-Don&#39;t use it together with am/pm.</p>
-<p>Default value is <code>false</code>.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>Value of property <code>support2400</code></p>
 <h4>Since</h4>
 <p>1.54</p>
+<p>Gets current value of property #getSupport2400 support2400.</p>
+<p>Allows to set a value of 24:00, used to indicate the end of the day. Works only with HH or H formats.
+Don&#39;t use it together with am/pm.</p>
+<p>Default value is <code>false</code>.</p>
 <hr>
 <h3>getTitle()</h3>
 <blockquote>
@@ -707,14 +707,6 @@ the last position</p>
 <blockquote>
 <p><strong>openBy</strong>(<code>oDomRef</code>): <code>void</code></p>
 </blockquote>
-<p>Opens the picker popover. The popover is positioned relatively to the control given as <code>oDomRef</code> parameter
-on tablet or desktop and is full screen on phone. Therefore the control parameter is only used on tablet
-or desktop and is ignored on phone.</p>
-<p>Note: use this method to open the picker popover only when the <code>hideInput</code> property is set to <code>true</code>.
-Please consider opening of the picker popover by another control only in scenarios that comply with Fiori
-guidelines. For example, opening the picker popover by another popover is not recommended. The application
-developer should implement the following accessibility attributes to the opening control: a text or tooltip
-that describes the action (example: &quot;Open Time Picker&quot;), and aria-haspopup attribute with value of <code>sap.ui.core.aria.HasPopup.Dialog</code>.</p>
 <h4>Parameters</h4>
 <h5>oDomRef</h5>
 <p><code>HTMLElement</code></p>
@@ -724,6 +716,14 @@ control.</p>
 <p><code>void</code></p>
 <h4>Since</h4>
 <p>1.97</p>
+<p>Opens the picker popover. The popover is positioned relatively to the control given as <code>oDomRef</code> parameter
+on tablet or desktop and is full screen on phone. Therefore the control parameter is only used on tablet
+or desktop and is ignored on phone.</p>
+<p>Note: use this method to open the picker popover only when the <code>hideInput</code> property is set to <code>true</code>.
+Please consider opening of the picker popover by another control only in scenarios that comply with Fiori
+guidelines. For example, opening the picker popover by another popover is not recommended. The application
+developer should implement the following accessibility attributes to the opening control: a text or tooltip
+that describes the action (example: &quot;Open Time Picker&quot;), and aria-haspopup attribute with value of <code>sap.ui.core.aria.HasPopup.Dialog</code>.</p>
 <hr>
 <h3>removeAllRules()</h3>
 <blockquote>
@@ -782,6 +782,15 @@ control.</p>
 <blockquote>
 <p><strong>setHideInput</strong>(<code>bHideInput?</code>): <code>this</code></p>
 </blockquote>
+<h4>Parameters</h4>
+<h5>bHideInput?</h5>
+<p><code>boolean</code></p>
+<p>New value for property <code>hideInput</code></p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<h4>Since</h4>
+<p>1.97</p>
 <p>Sets a new value for property #getHideInput hideInput.</p>
 <p>Determines whether the input field of the picker is hidden or visible. When set to <code>true</code>, the input
 field becomes invisible and there is no way to open the picker popover. In that case it can be opened
@@ -793,15 +802,6 @@ to be added to the opening control: a text or tooltip that describes the action 
 Picker&quot;), and also aria-haspopup attribute with value of <code>sap.ui.core.aria.HasPopup.Dialog</code>.</p>
 <p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <p>Default value is <code>false</code>.</p>
-<h4>Parameters</h4>
-<h5>bHideInput?</h5>
-<p><code>boolean</code></p>
-<p>New value for property <code>hideInput</code></p>
-<h4>Returns</h4>
-<p><code>this</code></p>
-<p>Reference to <code>this</code> in order to allow method chaining</p>
-<h4>Since</h4>
-<p>1.97</p>
 <hr>
 <h3>setLocaleId()</h3>
 <blockquote>
@@ -844,14 +844,6 @@ one.</p>
 <blockquote>
 <p><strong>setMaskMode</strong>(<code>sMaskMode?</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getMaskMode maskMode.</p>
-<p>Defines whether the mask is enabled. When disabled, there are no restrictions and validation for the
-user and no placeholders are displayed.</p>
-<p><strong>Note:</strong> A disabled mask does not reset any validation rules that are already set. You can update the
-<code>mask</code> property and add new <code>rules</code> while it is disabled. When <code>maskMode</code> is set to <code>On</code> again, the <code>rules</code>
-and the updated <code>mask</code> will be applied.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>On</code>.</p>
 <h4>Parameters</h4>
 <h5>sMaskMode?</h5>
 <p><code>&quot;On&quot;</code> | <code>&quot;Off&quot;</code> | <a href="../../library/enumerations/TimePickerMaskMode.html"><code>TimePickerMaskMode</code></a></p>
@@ -861,6 +853,14 @@ and the updated <code>mask</code> will be applied.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.54</p>
+<p>Sets a new value for property #getMaskMode maskMode.</p>
+<p>Defines whether the mask is enabled. When disabled, there are no restrictions and validation for the
+user and no placeholders are displayed.</p>
+<p><strong>Note:</strong> A disabled mask does not reset any validation rules that are already set. You can update the
+<code>mask</code> property and add new <code>rules</code> while it is disabled. When <code>maskMode</code> is set to <code>On</code> again, the <code>rules</code>
+and the updated <code>mask</code> will be applied.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>On</code>.</p>
 <hr>
 <h3>setMinutesStep()</h3>
 <blockquote>
@@ -908,10 +908,6 @@ and the updated <code>mask</code> will be applied.</p>
 <blockquote>
 <p><strong>setShowCurrentTimeButton</strong>(<code>bShowCurrentTimeButton?</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getShowCurrentTimeButton showCurrentTimeButton.</p>
-<p>Determines whether there is a shortcut navigation to current time.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>false</code>.</p>
 <h4>Parameters</h4>
 <h5>bShowCurrentTimeButton?</h5>
 <p><code>boolean</code></p>
@@ -921,6 +917,10 @@ and the updated <code>mask</code> will be applied.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.98</p>
+<p>Sets a new value for property #getShowCurrentTimeButton showCurrentTimeButton.</p>
+<p>Determines whether there is a shortcut navigation to current time.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>false</code>.</p>
 <hr>
 <h3>setSupport2400()</h3>
 <blockquote>
@@ -950,7 +950,7 @@ contained in <code>oClassInfo</code>.</p>
 <p><code>string</code></p>
 <p>Name of the class being created</p>
 <h5>oClassInfo?</h5>
-<p><a href="../../../../../sap.f/namespaces/sap/type-aliases/ClassInfo.html"><code>ClassInfo</code></a>&lt;<code>T</code>, <code>TimePicker</code>&gt;</p>
+<p><code>ClassInfo</code>&lt;<code>T</code>, <code>TimePicker</code>&gt;</p>
 <p>Object literal with information about the class</p>
 <h5>FNMetaImpl?</h5>
 <p><code>Function</code></p>
@@ -974,6 +974,6 @@ used by this class</p>
 <p><a href="../../DateTimeField/classes/DateTimeField.html"><code>DateTimeField</code></a>.<a href="../../DateTimeField/classes/DateTimeField.html#getmetadata-1"><code>getMetadata</code></a></p>
 <hr>
 
-<footer>Generated from <code>@openui5/types@1.120.46</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@openui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

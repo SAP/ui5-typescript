@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Class: SearchField — OpenUI5 TypeScript API</title>
-<meta name="description" content="Class: SearchField — OpenUI5 TypeScript API Reference (1.120.46)">
+<meta name="description" content="Class: SearchField — OpenUI5 TypeScript API Reference (1.120.0)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/openui5/1.120/sap.m/sap/m/SearchField/classes/SearchField.html">
 <meta property="og:title" content="Class: SearchField — OpenUI5 TypeScript API">
-<meta property="og:description" content="Class: SearchField — OpenUI5 TypeScript API Reference (1.120.46)">
+<meta property="og:description" content="Class: SearchField — OpenUI5 TypeScript API Reference (1.120.0)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/openui5/1.120/sap.m/sap/m/SearchField/classes/SearchField.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,9 +33,9 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../index.html">OpenUI5 API</a> › <a href="../../../../../sap.m/README.html">sap.m</a> › sap › m › <a href="../../../../../sap.m/sap/m/SearchField/README.html">SearchField</a> › classes</nav>
-<p><a href="../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.46)</strong></a></p>
+<p><a href="../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.0)</strong></a></p>
 <hr>
-<p><a href="../../../../../README.html">OpenUI5 TypeScript API (1.120.46)</a> / <a href="../../../../README.html">sap.m</a> / <a href="../README.html">sap/m/SearchField</a> / SearchField</p>
+<p><a href="../../../../../README.html">OpenUI5 TypeScript API (1.120.0)</a> / <a href="../../../../README.html">sap.m</a> / <a href="../README.html">sap/m/SearchField</a> / SearchField</p>
 <h1>Class: SearchField</h1>
 <pre class="sig"><span class="kw">import</span> SearchField <span class="kw">from</span> <span class="str">"sap/m/SearchField"</span>;</pre>
 <p>An input field to search for a specific item. Overview: A search field is needed when the user needs
@@ -153,7 +153,6 @@ See:
 <blockquote>
 <p><strong>addSuggestionItem</strong>(<code>oSuggestionItem</code>): <code>this</code></p>
 </blockquote>
-<p>Adds some suggestionItem to the aggregation #getSuggestionItems suggestionItems.</p>
 <h4>Parameters</h4>
 <h5>oSuggestionItem</h5>
 <p><a href="../../SuggestionItem/classes/SuggestionItem.html"><code>SuggestionItem</code></a></p>
@@ -163,17 +162,13 @@ See:
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.34</p>
+<p>Adds some suggestionItem to the aggregation #getSuggestionItems suggestionItems.</p>
 <hr>
 <h3>attachChange()</h3>
 <h4>Call Signature</h4>
 <blockquote>
 <p><strong>attachChange</strong>(<code>oData</code>, <code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
-<p>Attaches event handler <code>fnFunction</code> to the #event:change change event of this <code>sap.m.SearchField</code>.</p>
-<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
-otherwise it will be bound to this <code>sap.m.SearchField</code> itself.</p>
-<p>This event is fired when the user changes the value of the search field. Unlike the <code>liveChange</code> event,
-the <code>change</code> event is not fired for each key press.</p>
 <h5>Parameters</h5>
 <h6>oData</h6>
 <p><code>object</code></p>
@@ -190,15 +185,15 @@ object when firing the event</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Since</h5>
 <p>1.77</p>
-<h4>Call Signature</h4>
-<blockquote>
-<p><strong>attachChange</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
-</blockquote>
 <p>Attaches event handler <code>fnFunction</code> to the #event:change change event of this <code>sap.m.SearchField</code>.</p>
 <p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
 otherwise it will be bound to this <code>sap.m.SearchField</code> itself.</p>
 <p>This event is fired when the user changes the value of the search field. Unlike the <code>liveChange</code> event,
 the <code>change</code> event is not fired for each key press.</p>
+<h4>Call Signature</h4>
+<blockquote>
+<p><strong>attachChange</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
+</blockquote>
 <h5>Parameters</h5>
 <h6>fnFunction</h6>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -211,17 +206,17 @@ the <code>change</code> event is not fired for each key press.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Since</h5>
 <p>1.77</p>
+<p>Attaches event handler <code>fnFunction</code> to the #event:change change event of this <code>sap.m.SearchField</code>.</p>
+<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
+otherwise it will be bound to this <code>sap.m.SearchField</code> itself.</p>
+<p>This event is fired when the user changes the value of the search field. Unlike the <code>liveChange</code> event,
+the <code>change</code> event is not fired for each key press.</p>
 <hr>
 <h3>attachLiveChange()</h3>
 <h4>Call Signature</h4>
 <blockquote>
 <p><strong>attachLiveChange</strong>(<code>oData</code>, <code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
-<p>Attaches event handler <code>fnFunction</code> to the #event:liveChange liveChange event of this <code>sap.m.SearchField</code>.</p>
-<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
-otherwise it will be bound to this <code>sap.m.SearchField</code> itself.</p>
-<p>This event is fired each time when the value of the search field is changed by the user - e.g. at each
-key press. Do not invalidate a focused search field, especially during the liveChange event.</p>
 <h5>Parameters</h5>
 <h6>oData</h6>
 <p><code>object</code></p>
@@ -238,15 +233,15 @@ object when firing the event</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Since</h5>
 <p>1.9.1</p>
-<h4>Call Signature</h4>
-<blockquote>
-<p><strong>attachLiveChange</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
-</blockquote>
 <p>Attaches event handler <code>fnFunction</code> to the #event:liveChange liveChange event of this <code>sap.m.SearchField</code>.</p>
 <p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
 otherwise it will be bound to this <code>sap.m.SearchField</code> itself.</p>
 <p>This event is fired each time when the value of the search field is changed by the user - e.g. at each
 key press. Do not invalidate a focused search field, especially during the liveChange event.</p>
+<h4>Call Signature</h4>
+<blockquote>
+<p><strong>attachLiveChange</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
+</blockquote>
 <h5>Parameters</h5>
 <h6>fnFunction</h6>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -259,6 +254,11 @@ key press. Do not invalidate a focused search field, especially during the liveC
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Since</h5>
 <p>1.9.1</p>
+<p>Attaches event handler <code>fnFunction</code> to the #event:liveChange liveChange event of this <code>sap.m.SearchField</code>.</p>
+<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
+otherwise it will be bound to this <code>sap.m.SearchField</code> itself.</p>
+<p>This event is fired each time when the value of the search field is changed by the user - e.g. at each
+key press. Do not invalidate a focused search field, especially during the liveChange event.</p>
 <hr>
 <h3>attachSearch()</h3>
 <h4>Call Signature</h4>
@@ -307,12 +307,6 @@ otherwise it will be bound to this <code>sap.m.SearchField</code> itself.</p>
 <blockquote>
 <p><strong>attachSuggest</strong>(<code>oData</code>, <code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
-<p>Attaches event handler <code>fnFunction</code> to the #event:suggest suggest event of this <code>sap.m.SearchField</code>.</p>
-<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
-otherwise it will be bound to this <code>sap.m.SearchField</code> itself.</p>
-<p>This event is fired when the search field is initially focused or its value is changed by the user. This
-event means that suggestion data should be updated, in case if suggestions are used. Use the value parameter
-to create new suggestions for it.</p>
 <h5>Parameters</h5>
 <h6>oData</h6>
 <p><code>object</code></p>
@@ -329,16 +323,16 @@ object when firing the event</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Since</h5>
 <p>1.34</p>
-<h4>Call Signature</h4>
-<blockquote>
-<p><strong>attachSuggest</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
-</blockquote>
 <p>Attaches event handler <code>fnFunction</code> to the #event:suggest suggest event of this <code>sap.m.SearchField</code>.</p>
 <p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
 otherwise it will be bound to this <code>sap.m.SearchField</code> itself.</p>
 <p>This event is fired when the search field is initially focused or its value is changed by the user. This
 event means that suggestion data should be updated, in case if suggestions are used. Use the value parameter
 to create new suggestions for it.</p>
+<h4>Call Signature</h4>
+<blockquote>
+<p><strong>attachSuggest</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
+</blockquote>
 <h5>Parameters</h5>
 <h6>fnFunction</h6>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -351,6 +345,12 @@ to create new suggestions for it.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Since</h5>
 <p>1.34</p>
+<p>Attaches event handler <code>fnFunction</code> to the #event:suggest suggest event of this <code>sap.m.SearchField</code>.</p>
+<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
+otherwise it will be bound to this <code>sap.m.SearchField</code> itself.</p>
+<p>This event is fired when the search field is initially focused or its value is changed by the user. This
+event means that suggestion data should be updated, in case if suggestions are used. Use the value parameter
+to create new suggestions for it.</p>
 <hr>
 <h3>bindValue()</h3>
 <blockquote>
@@ -371,19 +371,17 @@ of the possible properties of <code>oBindingInfo</code></p>
 <blockquote>
 <p><strong>destroySuggestionItems</strong>(): <code>this</code></p>
 </blockquote>
-<p>Destroys all the suggestionItems in the aggregation #getSuggestionItems suggestionItems.</p>
 <h4>Returns</h4>
 <p><code>this</code></p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.34</p>
+<p>Destroys all the suggestionItems in the aggregation #getSuggestionItems suggestionItems.</p>
 <hr>
 <h3>detachChange()</h3>
 <blockquote>
 <p><strong>detachChange</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
-<p>Detaches event handler <code>fnFunction</code> from the #event:change change event of this <code>sap.m.SearchField</code>.</p>
-<p>The passed function and listener object must match the ones used for event registration.</p>
 <h4>Parameters</h4>
 <h5>fnFunction</h5>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -396,13 +394,13 @@ of the possible properties of <code>oBindingInfo</code></p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.77</p>
+<p>Detaches event handler <code>fnFunction</code> from the #event:change change event of this <code>sap.m.SearchField</code>.</p>
+<p>The passed function and listener object must match the ones used for event registration.</p>
 <hr>
 <h3>detachLiveChange()</h3>
 <blockquote>
 <p><strong>detachLiveChange</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
-<p>Detaches event handler <code>fnFunction</code> from the #event:liveChange liveChange event of this <code>sap.m.SearchField</code>.</p>
-<p>The passed function and listener object must match the ones used for event registration.</p>
 <h4>Parameters</h4>
 <h5>fnFunction</h5>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -415,6 +413,8 @@ of the possible properties of <code>oBindingInfo</code></p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.9.1</p>
+<p>Detaches event handler <code>fnFunction</code> from the #event:liveChange liveChange event of this <code>sap.m.SearchField</code>.</p>
+<p>The passed function and listener object must match the ones used for event registration.</p>
 <hr>
 <h3>detachSearch()</h3>
 <blockquote>
@@ -437,8 +437,6 @@ of the possible properties of <code>oBindingInfo</code></p>
 <blockquote>
 <p><strong>detachSuggest</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
-<p>Detaches event handler <code>fnFunction</code> from the #event:suggest suggest event of this <code>sap.m.SearchField</code>.</p>
-<p>The passed function and listener object must match the ones used for event registration.</p>
 <h4>Parameters</h4>
 <h5>fnFunction</h5>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -451,12 +449,13 @@ of the possible properties of <code>oBindingInfo</code></p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.34</p>
+<p>Detaches event handler <code>fnFunction</code> from the #event:suggest suggest event of this <code>sap.m.SearchField</code>.</p>
+<p>The passed function and listener object must match the ones used for event registration.</p>
 <hr>
 <h3>fireChange()</h3>
 <blockquote>
 <p><strong>fireChange</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
-<p>Fires event #event:change change to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/SearchField$ChangeEventParameters.html"><code>SearchField$ChangeEventParameters</code></a></p>
@@ -468,12 +467,12 @@ of the possible properties of <code>oBindingInfo</code></p>
 <p>1.77</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:change change to attached listeners.</p>
 <hr>
 <h3>fireLiveChange()</h3>
 <blockquote>
 <p><strong>fireLiveChange</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
-<p>Fires event #event:liveChange liveChange to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/SearchField$LiveChangeEventParameters.html"><code>SearchField$LiveChangeEventParameters</code></a></p>
@@ -485,12 +484,12 @@ of the possible properties of <code>oBindingInfo</code></p>
 <p>1.9.1</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:liveChange liveChange to attached listeners.</p>
 <hr>
 <h3>fireSearch()</h3>
 <blockquote>
 <p><strong>fireSearch</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
-<p>Fires event #event:search search to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/SearchField$SearchEventParameters.html"><code>SearchField$SearchEventParameters</code></a></p>
@@ -500,12 +499,12 @@ of the possible properties of <code>oBindingInfo</code></p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:search search to attached listeners.</p>
 <hr>
 <h3>fireSuggest()</h3>
 <blockquote>
 <p><strong>fireSuggest</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
-<p>Fires event #event:suggest suggest to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/SearchField$SuggestEventParameters.html"><code>SearchField$SuggestEventParameters</code></a></p>
@@ -517,6 +516,7 @@ of the possible properties of <code>oBindingInfo</code></p>
 <p>1.34</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:suggest suggest to attached listeners.</p>
 <hr>
 <h3>getAriaDescribedBy()</h3>
 <blockquote>
@@ -549,16 +549,16 @@ of the possible properties of <code>oBindingInfo</code></p>
 <blockquote>
 <p><strong>getEnableSuggestions</strong>(): <code>boolean</code></p>
 </blockquote>
-<p>Gets current value of property #getEnableSuggestions enableSuggestions.</p>
-<p>If <code>true</code>, a <code>suggest</code> event is fired when user types in the input and when the input is focused. On
-a phone device, a full screen dialog with suggestions is always shown even if the suggestions list is
-empty.</p>
-<p>Default value is <code>false</code>.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>Value of property <code>enableSuggestions</code></p>
 <h4>Since</h4>
 <p>1.34</p>
+<p>Gets current value of property #getEnableSuggestions enableSuggestions.</p>
+<p>If <code>true</code>, a <code>suggest</code> event is fired when user types in the input and when the input is focused. On
+a phone device, a full screen dialog with suggestions is always shown even if the suggestions list is
+empty.</p>
+<p>Default value is <code>false</code>.</p>
 <hr>
 <h3>getMaxLength()</h3>
 <blockquote>
@@ -587,7 +587,6 @@ be <code>null</code> in that case).</p>
 <blockquote>
 <p><strong>getPopupAnchorDomRef</strong>(): <code>Element</code></p>
 </blockquote>
-<p>Function returns DOM element which acts as reference point for the opening suggestion menu</p>
 <h4>Returns</h4>
 <p><code>Element</code></p>
 <p>the DOM element at which to open the suggestion list</p>
@@ -595,14 +594,12 @@ be <code>null</code> in that case).</p>
 <p>1.34</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Function returns DOM element which acts as reference point for the opening suggestion menu</p>
 <hr>
 <h3><del>getRefreshButtonTooltip()</del></h3>
 <blockquote>
 <p><strong>getRefreshButtonTooltip</strong>(): <code>string</code></p>
 </blockquote>
-<p>Gets current value of property #getRefreshButtonTooltip refreshButtonTooltip.</p>
-<p>Tooltip text of the refresh button. If it is not set, the Default tooltip text is the word &quot;Refresh&quot;
-in the current local language (if supported) or in English. Tooltips are not displayed on touch devices.</p>
 <h4>Returns</h4>
 <p><code>string</code></p>
 <p>Value of property <code>refreshButtonTooltip</code></p>
@@ -610,16 +607,14 @@ in the current local language (if supported) or in English. Tooltips are not dis
 <p>1.16</p>
 <h4>Deprecated</h4>
 <p>(since 1.110.0)</p>
+<p>Gets current value of property #getRefreshButtonTooltip refreshButtonTooltip.</p>
+<p>Tooltip text of the refresh button. If it is not set, the Default tooltip text is the word &quot;Refresh&quot;
+in the current local language (if supported) or in English. Tooltips are not displayed on touch devices.</p>
 <hr>
 <h3><del>getSelectOnFocus()</del></h3>
 <blockquote>
 <p><strong>getSelectOnFocus</strong>(): <code>boolean</code></p>
 </blockquote>
-<p>Gets current value of property #getSelectOnFocus selectOnFocus.</p>
-<p>Normally, search text is selected for copy when the SearchField is focused by keyboard navigation. If
-an application re-renders the SearchField during the liveChange event, set this property to <code>false</code> to
-disable text selection by focus.</p>
-<p>Default value is <code>true</code>.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>Value of property <code>selectOnFocus</code></p>
@@ -628,54 +623,63 @@ disable text selection by focus.</p>
 <h4>Deprecated</h4>
 <p>(since 1.38) - This parameter is deprecated and has no effect in run time. The cursor position
 of a focused search field is restored after re-rendering automatically.</p>
+<p>Gets current value of property #getSelectOnFocus selectOnFocus.</p>
+<p>Normally, search text is selected for copy when the SearchField is focused by keyboard navigation. If
+an application re-renders the SearchField during the liveChange event, set this property to <code>false</code> to
+disable text selection by focus.</p>
+<p>Default value is <code>true</code>.</p>
 <hr>
 <h3><del>getShowMagnifier()</del></h3>
 <blockquote>
 <p><strong>getShowMagnifier</strong>(): <code>boolean</code></p>
 </blockquote>
-<p>Gets current value of property #getShowMagnifier showMagnifier.</p>
-<p>Set to <code>false</code> to hide the magnifier icon.</p>
-<p>Default value is <code>true</code>.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>Value of property <code>showMagnifier</code></p>
 <h4>Deprecated</h4>
 <p>(since 1.16.0) - This parameter is deprecated. Use &quot;showSearchButton&quot; instead.</p>
+<p>Gets current value of property #getShowMagnifier showMagnifier.</p>
+<p>Set to <code>false</code> to hide the magnifier icon.</p>
+<p>Default value is <code>true</code>.</p>
 <hr>
 <h3>getShowRefreshButton()</h3>
 <blockquote>
 <p><strong>getShowRefreshButton</strong>(): <code>boolean</code></p>
 </blockquote>
+<h4>Returns</h4>
+<p><code>boolean</code></p>
+<p>Value of property <code>showRefreshButton</code></p>
+<h4>Since</h4>
+<p>1.16</p>
 <p>Gets current value of property #getShowRefreshButton showRefreshButton.</p>
 <p>Set to <code>true</code> to display a refresh button in place of the search icon. By pressing the refresh button
 or F5 key on keyboard, the user can reload the results list without changing the search string. Note:
 if &quot;showSearchButton&quot; property is set to <code>false</code>, both the search and refresh buttons are not displayed
 even if the &quot;showRefreshButton&quot; property is true.</p>
 <p>Default value is <code>false</code>.</p>
-<h4>Returns</h4>
-<p><code>boolean</code></p>
-<p>Value of property <code>showRefreshButton</code></p>
-<h4>Since</h4>
-<p>1.16</p>
 <hr>
 <h3>getShowSearchButton()</h3>
 <blockquote>
 <p><strong>getShowSearchButton</strong>(): <code>boolean</code></p>
 </blockquote>
-<p>Gets current value of property #getShowSearchButton showSearchButton.</p>
-<p>Set to <code>true</code> to show the search button with the magnifier icon. If <code>false</code>, both the search and refresh
-buttons are not displayed even if the &quot;showRefreshButton&quot; property is <code>true</code>.</p>
-<p>Default value is <code>true</code>.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>Value of property <code>showSearchButton</code></p>
 <h4>Since</h4>
 <p>1.23</p>
+<p>Gets current value of property #getShowSearchButton showSearchButton.</p>
+<p>Set to <code>true</code> to show the search button with the magnifier icon. If <code>false</code>, both the search and refresh
+buttons are not displayed even if the &quot;showRefreshButton&quot; property is <code>true</code>.</p>
+<p>Default value is <code>true</code>.</p>
 <hr>
 <h3>getSuggestionItems()</h3>
 <blockquote>
 <p><strong>getSuggestionItems</strong>(): <a href="../../SuggestionItem/classes/SuggestionItem.html"><code>SuggestionItem</code></a>[]</p>
 </blockquote>
+<h4>Returns</h4>
+<p><a href="../../SuggestionItem/classes/SuggestionItem.html"><code>SuggestionItem</code></a>[]</p>
+<h4>Since</h4>
+<p>1.34</p>
 <p>Gets content of aggregation #getSuggestionItems suggestionItems.</p>
 <p><code>SuggestionItems</code> are the items which will be shown in the suggestions list. The following properties
 can be used:
@@ -683,10 +687,6 @@ can be used:
 	 - <code>text</code> is displayed as normal suggestion text
 	 - <code>icon</code>
 	 - <code>description</code> - additional text may be used to visually display search item type or category</p>
-<h4>Returns</h4>
-<p><a href="../../SuggestionItem/classes/SuggestionItem.html"><code>SuggestionItem</code></a>[]</p>
-<h4>Since</h4>
-<p>1.34</p>
 <hr>
 <h3>getValue()</h3>
 <blockquote>
@@ -725,8 +725,6 @@ can be used:
 <blockquote>
 <p><strong>indexOfSuggestionItem</strong>(<code>oSuggestionItem</code>): <code>number</code></p>
 </blockquote>
-<p>Checks for the provided <code>sap.m.SuggestionItem</code> in the aggregation #getSuggestionItems suggestionItems.
-and returns its index if found or -1 otherwise.</p>
 <h4>Parameters</h4>
 <h5>oSuggestionItem</h5>
 <p><a href="../../SuggestionItem/classes/SuggestionItem.html"><code>SuggestionItem</code></a></p>
@@ -736,12 +734,13 @@ and returns its index if found or -1 otherwise.</p>
 <p>The index of the provided control in the aggregation if found, or -1 otherwise</p>
 <h4>Since</h4>
 <p>1.34</p>
+<p>Checks for the provided <code>sap.m.SuggestionItem</code> in the aggregation #getSuggestionItems suggestionItems.
+and returns its index if found or -1 otherwise.</p>
 <hr>
 <h3>insertSuggestionItem()</h3>
 <blockquote>
 <p><strong>insertSuggestionItem</strong>(<code>oSuggestionItem</code>, <code>iIndex</code>): <code>this</code></p>
 </blockquote>
-<p>Inserts a suggestionItem into the aggregation #getSuggestionItems suggestionItems.</p>
 <h4>Parameters</h4>
 <h5>oSuggestionItem</h5>
 <p><a href="../../SuggestionItem/classes/SuggestionItem.html"><code>SuggestionItem</code></a></p>
@@ -756,6 +755,7 @@ is inserted at the last position</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.34</p>
+<p>Inserts a suggestionItem into the aggregation #getSuggestionItems suggestionItems.</p>
 <hr>
 <h3>removeAllAriaDescribedBy()</h3>
 <blockquote>
@@ -779,13 +779,13 @@ is inserted at the last position</p>
 <blockquote>
 <p><strong>removeAllSuggestionItems</strong>(): <a href="../../SuggestionItem/classes/SuggestionItem.html"><code>SuggestionItem</code></a>[]</p>
 </blockquote>
-<p>Removes all the controls from the aggregation #getSuggestionItems suggestionItems.</p>
-<p>Additionally, it unregisters them from the hosting UIArea.</p>
 <h4>Returns</h4>
 <p><a href="../../SuggestionItem/classes/SuggestionItem.html"><code>SuggestionItem</code></a>[]</p>
 <p>An array of the removed elements (might be empty)</p>
 <h4>Since</h4>
 <p>1.34</p>
+<p>Removes all the controls from the aggregation #getSuggestionItems suggestionItems.</p>
+<p>Additionally, it unregisters them from the hosting UIArea.</p>
 <hr>
 <h3>removeAriaDescribedBy()</h3>
 <blockquote>
@@ -817,7 +817,6 @@ is inserted at the last position</p>
 <blockquote>
 <p><strong>removeSuggestionItem</strong>(<code>vSuggestionItem</code>): <a href="../../SuggestionItem/classes/SuggestionItem.html"><code>SuggestionItem</code></a></p>
 </blockquote>
-<p>Removes a suggestionItem from the aggregation #getSuggestionItems suggestionItems.</p>
 <h4>Parameters</h4>
 <h5>vSuggestionItem</h5>
 <p><code>string</code> | <code>number</code> | <a href="../../SuggestionItem/classes/SuggestionItem.html"><code>SuggestionItem</code></a></p>
@@ -827,6 +826,7 @@ is inserted at the last position</p>
 <p>The removed suggestionItem or <code>null</code></p>
 <h4>Since</h4>
 <p>1.34</p>
+<p>Removes a suggestionItem from the aggregation #getSuggestionItems suggestionItems.</p>
 <hr>
 <h3>setEnabled()</h3>
 <blockquote>
@@ -848,12 +848,6 @@ is inserted at the last position</p>
 <blockquote>
 <p><strong>setEnableSuggestions</strong>(<code>bEnableSuggestions?</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getEnableSuggestions enableSuggestions.</p>
-<p>If <code>true</code>, a <code>suggest</code> event is fired when user types in the input and when the input is focused. On
-a phone device, a full screen dialog with suggestions is always shown even if the suggestions list is
-empty.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>false</code>.</p>
 <h4>Parameters</h4>
 <h5>bEnableSuggestions?</h5>
 <p><code>boolean</code></p>
@@ -863,6 +857,12 @@ empty.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.34</p>
+<p>Sets a new value for property #getEnableSuggestions enableSuggestions.</p>
+<p>If <code>true</code>, a <code>suggest</code> event is fired when user types in the input and when the input is focused. On
+a phone device, a full screen dialog with suggestions is always shown even if the suggestions list is
+empty.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>false</code>.</p>
 <hr>
 <h3>setMaxLength()</h3>
 <blockquote>
@@ -901,10 +901,6 @@ be <code>null</code> in that case).</p>
 <blockquote>
 <p><strong>setRefreshButtonTooltip</strong>(<code>sRefreshButtonTooltip?</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getRefreshButtonTooltip refreshButtonTooltip.</p>
-<p>Tooltip text of the refresh button. If it is not set, the Default tooltip text is the word &quot;Refresh&quot;
-in the current local language (if supported) or in English. Tooltips are not displayed on touch devices.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <h4>Parameters</h4>
 <h5>sRefreshButtonTooltip?</h5>
 <p><code>string</code></p>
@@ -916,17 +912,15 @@ in the current local language (if supported) or in English. Tooltips are not dis
 <p>1.16</p>
 <h4>Deprecated</h4>
 <p>(since 1.110.0)</p>
+<p>Sets a new value for property #getRefreshButtonTooltip refreshButtonTooltip.</p>
+<p>Tooltip text of the refresh button. If it is not set, the Default tooltip text is the word &quot;Refresh&quot;
+in the current local language (if supported) or in English. Tooltips are not displayed on touch devices.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <hr>
 <h3><del>setSelectOnFocus()</del></h3>
 <blockquote>
 <p><strong>setSelectOnFocus</strong>(<code>bSelectOnFocus?</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getSelectOnFocus selectOnFocus.</p>
-<p>Normally, search text is selected for copy when the SearchField is focused by keyboard navigation. If
-an application re-renders the SearchField during the liveChange event, set this property to <code>false</code> to
-disable text selection by focus.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>true</code>.</p>
 <h4>Parameters</h4>
 <h5>bSelectOnFocus?</h5>
 <p><code>boolean</code></p>
@@ -939,15 +933,17 @@ disable text selection by focus.</p>
 <h4>Deprecated</h4>
 <p>(since 1.38) - This parameter is deprecated and has no effect in run time. The cursor position
 of a focused search field is restored after re-rendering automatically.</p>
+<p>Sets a new value for property #getSelectOnFocus selectOnFocus.</p>
+<p>Normally, search text is selected for copy when the SearchField is focused by keyboard navigation. If
+an application re-renders the SearchField during the liveChange event, set this property to <code>false</code> to
+disable text selection by focus.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>true</code>.</p>
 <hr>
 <h3><del>setShowMagnifier()</del></h3>
 <blockquote>
 <p><strong>setShowMagnifier</strong>(<code>bShowMagnifier?</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getShowMagnifier showMagnifier.</p>
-<p>Set to <code>false</code> to hide the magnifier icon.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>true</code>.</p>
 <h4>Parameters</h4>
 <h5>bShowMagnifier?</h5>
 <p><code>boolean</code></p>
@@ -957,18 +953,15 @@ of a focused search field is restored after re-rendering automatically.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Deprecated</h4>
 <p>(since 1.16.0) - This parameter is deprecated. Use &quot;showSearchButton&quot; instead.</p>
+<p>Sets a new value for property #getShowMagnifier showMagnifier.</p>
+<p>Set to <code>false</code> to hide the magnifier icon.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>true</code>.</p>
 <hr>
 <h3>setShowRefreshButton()</h3>
 <blockquote>
 <p><strong>setShowRefreshButton</strong>(<code>bShowRefreshButton?</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getShowRefreshButton showRefreshButton.</p>
-<p>Set to <code>true</code> to display a refresh button in place of the search icon. By pressing the refresh button
-or F5 key on keyboard, the user can reload the results list without changing the search string. Note:
-if &quot;showSearchButton&quot; property is set to <code>false</code>, both the search and refresh buttons are not displayed
-even if the &quot;showRefreshButton&quot; property is true.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>false</code>.</p>
 <h4>Parameters</h4>
 <h5>bShowRefreshButton?</h5>
 <p><code>boolean</code></p>
@@ -978,16 +971,18 @@ even if the &quot;showRefreshButton&quot; property is true.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.16</p>
+<p>Sets a new value for property #getShowRefreshButton showRefreshButton.</p>
+<p>Set to <code>true</code> to display a refresh button in place of the search icon. By pressing the refresh button
+or F5 key on keyboard, the user can reload the results list without changing the search string. Note:
+if &quot;showSearchButton&quot; property is set to <code>false</code>, both the search and refresh buttons are not displayed
+even if the &quot;showRefreshButton&quot; property is true.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>false</code>.</p>
 <hr>
 <h3>setShowSearchButton()</h3>
 <blockquote>
 <p><strong>setShowSearchButton</strong>(<code>bShowSearchButton?</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getShowSearchButton showSearchButton.</p>
-<p>Set to <code>true</code> to show the search button with the magnifier icon. If <code>false</code>, both the search and refresh
-buttons are not displayed even if the &quot;showRefreshButton&quot; property is <code>true</code>.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>true</code>.</p>
 <h4>Parameters</h4>
 <h5>bShowSearchButton?</h5>
 <p><code>boolean</code></p>
@@ -997,6 +992,11 @@ buttons are not displayed even if the &quot;showRefreshButton&quot; property is 
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.23</p>
+<p>Sets a new value for property #getShowSearchButton showSearchButton.</p>
+<p>Set to <code>true</code> to show the search button with the magnifier icon. If <code>false</code>, both the search and refresh
+buttons are not displayed even if the &quot;showRefreshButton&quot; property is <code>true</code>.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>true</code>.</p>
 <hr>
 <h3>setValue()</h3>
 <blockquote>
@@ -1050,7 +1050,6 @@ buttons are not displayed even if the &quot;showRefreshButton&quot; property is 
 <blockquote>
 <p><strong>suggest</strong>(<code>bShow?</code>): <code>this</code></p>
 </blockquote>
-<p>Toggle visibility of the suggestion list.</p>
 <h4>Parameters</h4>
 <h5>bShow?</h5>
 <p><code>boolean</code></p>
@@ -1063,6 +1062,7 @@ is shown at the moment when the user expects it.</p>
 <p><code>this</code> to allow method chaining</p>
 <h4>Since</h4>
 <p>1.34</p>
+<p>Toggle visibility of the suggestion list.</p>
 <hr>
 <h3>unbindValue()</h3>
 <blockquote>
@@ -1088,7 +1088,7 @@ contained in <code>oClassInfo</code>.</p>
 <p><code>string</code></p>
 <p>Name of the class being created</p>
 <h5>oClassInfo?</h5>
-<p><a href="../../../../../sap.f/namespaces/sap/type-aliases/ClassInfo.html"><code>ClassInfo</code></a>&lt;<code>T</code>, <code>SearchField</code>&gt;</p>
+<p><code>ClassInfo</code>&lt;<code>T</code>, <code>SearchField</code>&gt;</p>
 <p>Object literal with information about the class</p>
 <h5>FNMetaImpl?</h5>
 <p><code>Function</code></p>
@@ -1112,6 +1112,6 @@ used by this class</p>
 <p><a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a>.<a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html#getmetadata-1"><code>getMetadata</code></a></p>
 <hr>
 
-<footer>Generated from <code>@openui5/types@1.120.46</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@openui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

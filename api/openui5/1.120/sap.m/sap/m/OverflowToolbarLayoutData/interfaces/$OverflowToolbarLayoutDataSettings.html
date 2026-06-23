@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Interface: $OverflowToolbarLayoutDataSettings — OpenUI5 TypeScript API</title>
-<meta name="description" content="Interface: $OverflowToolbarLayoutDataSettings — OpenUI5 TypeScript API Reference (1.120.46)">
+<meta name="description" content="Interface: $OverflowToolbarLayoutDataSettings — OpenUI5 TypeScript API Reference (1.120.0)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/openui5/1.120/sap.m/sap/m/OverflowToolbarLayoutData/interfaces/$OverflowToolbarLayoutDataSettings.html">
 <meta property="og:title" content="Interface: $OverflowToolbarLayoutDataSettings — OpenUI5 TypeScript API">
-<meta property="og:description" content="Interface: $OverflowToolbarLayoutDataSettings — OpenUI5 TypeScript API Reference (1.120.46)">
+<meta property="og:description" content="Interface: $OverflowToolbarLayoutDataSettings — OpenUI5 TypeScript API Reference (1.120.0)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/openui5/1.120/sap.m/sap/m/OverflowToolbarLayoutData/interfaces/$OverflowToolbarLayoutDataSettings.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,12 +33,11 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../index.html">OpenUI5 API</a> › <a href="../../../../../sap.m/README.html">sap.m</a> › sap › m › <a href="../../../../../sap.m/sap/m/OverflowToolbarLayoutData/README.html">OverflowToolbarLayoutData</a> › interfaces</nav>
-<p><a href="../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.46)</strong></a></p>
+<p><a href="../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.0)</strong></a></p>
 <hr>
-<p><a href="../../../../../README.html">OpenUI5 TypeScript API (1.120.46)</a> / <a href="../../../../README.html">sap.m</a> / <a href="../README.html">sap/m/OverflowToolbarLayoutData</a> / $OverflowToolbarLayoutDataSettings</p>
+<p><a href="../../../../../README.html">OpenUI5 TypeScript API (1.120.0)</a> / <a href="../../../../README.html">sap.m</a> / <a href="../README.html">sap/m/OverflowToolbarLayoutData</a> / $OverflowToolbarLayoutDataSettings</p>
 <h1>Interface: $OverflowToolbarLayoutDataSettings</h1>
 <pre class="sig"><span class="kw">import</span> { $OverflowToolbarLayoutDataSettings } <span class="kw">from</span> <span class="str">"sap/m/OverflowToolbarLayoutData"</span>;</pre>
-<p>Describes the settings that can be provided to the OverflowToolbarLayoutData constructor.</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../ToolbarLayoutData/interfaces/$ToolbarLayoutDataSettings.html"><code>$ToolbarLayoutDataSettings</code></a></li>
@@ -48,47 +47,47 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 <blockquote>
 <p><code>optional</code> <strong>closeOverflowOnInteraction?</strong>: <code>boolean</code> | <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<p>Defines whether the overflow area is automatically closed when interacting with a control in it</p>
 <h4>Since</h4>
 <p>1.40</p>
+<p>Defines whether the overflow area is automatically closed when interacting with a control in it</p>
 <hr>
 <h3>group?</h3>
 <blockquote>
 <p><code>optional</code> <strong>group?</strong>: <code>number</code> | <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
+<h4>Since</h4>
+<p>1.32</p>
 <p>Defines OverflowToolbar items group number. Default value is 0, which means that the control does not
 belong to any group. Elements that belong to a group overflow together. The overall priority of the group
 is defined by the element with highest priority. Elements that belong to a group are not allowed to have
 AlwaysOverflow or NeverOverflow priority.</p>
-<h4>Since</h4>
-<p>1.32</p>
 <hr>
 <h3><del>moveToOverflow?</del></h3>
 <blockquote>
 <p><code>optional</code> <strong>moveToOverflow?</strong>: <code>boolean</code> | <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<p>The OverflowToolbar item can or cannot move to the overflow area</p>
 <h4>Deprecated</h4>
 <p>(since 1.32)</p>
+<p>The OverflowToolbar item can or cannot move to the overflow area</p>
 <hr>
 <h3>priority?</h3>
 <blockquote>
 <p><code>optional</code> <strong>priority?</strong>: <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code> | <code>&quot;High&quot;</code> | <code>&quot;Low&quot;</code> | <a href="../../library/enumerations/OverflowToolbarPriority.html"><code>OverflowToolbarPriority</code></a> | <code>&quot;Always&quot;</code> | <code>&quot;AlwaysOverflow&quot;</code> | <code>&quot;Disappear&quot;</code> | <code>&quot;Never&quot;</code> | <code>&quot;NeverOverflow&quot;</code></p>
 </blockquote>
-<p>Defines OverflowToolbar items priority. Available priorities are NeverOverflow, High, Low, Disappear
-and AlwaysOverflow.</p>
 <h4>Since</h4>
 <p>1.32</p>
+<p>Defines OverflowToolbar items priority. Available priorities are NeverOverflow, High, Low, Disappear
+and AlwaysOverflow.</p>
 <hr>
 <h3><del>stayInOverflow?</del></h3>
 <blockquote>
 <p><code>optional</code> <strong>stayInOverflow?</strong>: <code>boolean</code> | <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<p>The OverflowToolbar item can or cannot stay in the overflow area</p>
 <h4>Deprecated</h4>
 <p>(since 1.32)</p>
+<p>The OverflowToolbar item can or cannot stay in the overflow area</p>
 <hr>
 
-<footer>Generated from <code>@openui5/types@1.120.46</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@openui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

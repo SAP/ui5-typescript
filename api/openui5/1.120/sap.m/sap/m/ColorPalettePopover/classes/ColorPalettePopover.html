@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Class: ColorPalettePopover — OpenUI5 TypeScript API</title>
-<meta name="description" content="Class: ColorPalettePopover — OpenUI5 TypeScript API Reference (1.120.46)">
+<meta name="description" content="Class: ColorPalettePopover — OpenUI5 TypeScript API Reference (1.120.0)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/openui5/1.120/sap.m/sap/m/ColorPalettePopover/classes/ColorPalettePopover.html">
 <meta property="og:title" content="Class: ColorPalettePopover — OpenUI5 TypeScript API">
-<meta property="og:description" content="Class: ColorPalettePopover — OpenUI5 TypeScript API Reference (1.120.46)">
+<meta property="og:description" content="Class: ColorPalettePopover — OpenUI5 TypeScript API Reference (1.120.0)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/openui5/1.120/sap.m/sap/m/ColorPalettePopover/classes/ColorPalettePopover.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,14 +33,14 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../index.html">OpenUI5 API</a> › <a href="../../../../../sap.m/README.html">sap.m</a> › sap › m › <a href="../../../../../sap.m/sap/m/ColorPalettePopover/README.html">ColorPalettePopover</a> › classes</nav>
-<p><a href="../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.46)</strong></a></p>
+<p><a href="../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.0)</strong></a></p>
 <hr>
-<p><a href="../../../../../README.html">OpenUI5 TypeScript API (1.120.46)</a> / <a href="../../../../README.html">sap.m</a> / <a href="../README.html">sap/m/ColorPalettePopover</a> / ColorPalettePopover</p>
+<p><a href="../../../../../README.html">OpenUI5 TypeScript API (1.120.0)</a> / <a href="../../../../README.html">sap.m</a> / <a href="../README.html">sap/m/ColorPalettePopover</a> / ColorPalettePopover</p>
 <h1>Class: ColorPalettePopover</h1>
 <pre class="sig"><span class="kw">import</span> ColorPalettePopover <span class="kw">from</span> <span class="str">"sap/m/ColorPalettePopover"</span>;</pre>
-<p>A thin wrapper over sap.m.ColorPalette allowing the latter to be used in a popover.</p>
 <h2>Since</h2>
 <p>1.54</p>
+<p>A thin wrapper over sap.m.ColorPalette allowing the latter to be used in a popover.</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></li>
@@ -129,10 +129,6 @@ otherwise it will be bound to this <code>sap.m.ColorPalettePopover</code> itself
 <blockquote>
 <p><strong>attachLiveChange</strong>(<code>oData</code>, <code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
-<p>Attaches event handler <code>fnFunction</code> to the #event:liveChange liveChange event of this <code>sap.m.ColorPalettePopover</code>.</p>
-<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
-otherwise it will be bound to this <code>sap.m.ColorPalettePopover</code> itself.</p>
-<p>Fired when the value is changed by user interaction in the internal ColorPicker of the ColorPalette</p>
 <h5>Parameters</h5>
 <h6>oData</h6>
 <p><code>object</code></p>
@@ -149,14 +145,14 @@ object when firing the event</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Since</h5>
 <p>1.85</p>
-<h4>Call Signature</h4>
-<blockquote>
-<p><strong>attachLiveChange</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
-</blockquote>
 <p>Attaches event handler <code>fnFunction</code> to the #event:liveChange liveChange event of this <code>sap.m.ColorPalettePopover</code>.</p>
 <p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
 otherwise it will be bound to this <code>sap.m.ColorPalettePopover</code> itself.</p>
 <p>Fired when the value is changed by user interaction in the internal ColorPicker of the ColorPalette</p>
+<h4>Call Signature</h4>
+<blockquote>
+<p><strong>attachLiveChange</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
+</blockquote>
 <h5>Parameters</h5>
 <h6>fnFunction</h6>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -169,6 +165,10 @@ otherwise it will be bound to this <code>sap.m.ColorPalettePopover</code> itself
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Since</h5>
 <p>1.85</p>
+<p>Attaches event handler <code>fnFunction</code> to the #event:liveChange liveChange event of this <code>sap.m.ColorPalettePopover</code>.</p>
+<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
+otherwise it will be bound to this <code>sap.m.ColorPalettePopover</code> itself.</p>
+<p>Fired when the value is changed by user interaction in the internal ColorPicker of the ColorPalette</p>
 <hr>
 <h3>close()</h3>
 <blockquote>
@@ -200,8 +200,6 @@ otherwise it will be bound to this <code>sap.m.ColorPalettePopover</code> itself
 <blockquote>
 <p><strong>detachLiveChange</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
-<p>Detaches event handler <code>fnFunction</code> from the #event:liveChange liveChange event of this <code>sap.m.ColorPalettePopover</code>.</p>
-<p>The passed function and listener object must match the ones used for event registration.</p>
 <h4>Parameters</h4>
 <h5>fnFunction</h5>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -214,12 +212,13 @@ otherwise it will be bound to this <code>sap.m.ColorPalettePopover</code> itself
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.85</p>
+<p>Detaches event handler <code>fnFunction</code> from the #event:liveChange liveChange event of this <code>sap.m.ColorPalettePopover</code>.</p>
+<p>The passed function and listener object must match the ones used for event registration.</p>
 <hr>
 <h3>fireColorSelect()</h3>
 <blockquote>
 <p><strong>fireColorSelect</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
-<p>Fires event #event:colorSelect colorSelect to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/ColorPalettePopover$ColorSelectEventParameters.html"><code>ColorPalettePopover$ColorSelectEventParameters</code></a></p>
@@ -229,12 +228,12 @@ otherwise it will be bound to this <code>sap.m.ColorPalettePopover</code> itself
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:colorSelect colorSelect to attached listeners.</p>
 <hr>
 <h3>fireLiveChange()</h3>
 <blockquote>
 <p><strong>fireLiveChange</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
-<p>Fires event #event:liveChange liveChange to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/ColorPalettePopover$LiveChangeEventParameters.html"><code>ColorPalettePopover$LiveChangeEventParameters</code></a></p>
@@ -246,6 +245,7 @@ otherwise it will be bound to this <code>sap.m.ColorPalettePopover</code> itself
 <p>1.85</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:liveChange liveChange to attached listeners.</p>
 <hr>
 <h3>getColors()</h3>
 <blockquote>
@@ -273,14 +273,14 @@ event #event:colorSelect colorSelect.</p>
 <blockquote>
 <p><strong>getDisplayMode</strong>(): <code>&quot;Large&quot;</code> | <code>&quot;Default&quot;</code> | <a href="../../../../../sap.ui.unified/sap/ui/unified/ColorPickerDisplayMode/enumerations/ColorPickerDisplayMode.html"><code>ColorPickerDisplayMode</code></a> | <code>&quot;Simplified&quot;</code></p>
 </blockquote>
-<p>Gets current value of property #getDisplayMode displayMode.</p>
-<p>Determines the <code>displayMode</code> of the <code>ColorPicker</code> among three types - Default, Large and Simplified</p>
-<p>Default value is <code>Default</code>.</p>
 <h4>Returns</h4>
 <p><code>&quot;Large&quot;</code> | <code>&quot;Default&quot;</code> | <a href="../../../../../sap.ui.unified/sap/ui/unified/ColorPickerDisplayMode/enumerations/ColorPickerDisplayMode.html"><code>ColorPickerDisplayMode</code></a> | <code>&quot;Simplified&quot;</code></p>
 <p>Value of property <code>displayMode</code></p>
 <h4>Since</h4>
 <p>1.70</p>
+<p>Gets current value of property #getDisplayMode displayMode.</p>
+<p>Determines the <code>displayMode</code> of the <code>ColorPicker</code> among three types - Default, Large and Simplified</p>
+<p>Default value is <code>Default</code>.</p>
 <hr>
 <h3>getShowDefaultColorButton()</h3>
 <blockquote>
@@ -309,14 +309,14 @@ to choose specific colors, not present in the predefined range.</p>
 <blockquote>
 <p><strong>getShowRecentColorsSection</strong>(): <code>boolean</code></p>
 </blockquote>
-<p>Gets current value of property #getShowRecentColorsSection showRecentColorsSection.</p>
-<p>Indicates if the Recent Colors section is available</p>
-<p>Default value is <code>true</code>.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>Value of property <code>showRecentColorsSection</code></p>
 <h4>Since</h4>
 <p>1.74</p>
+<p>Gets current value of property #getShowRecentColorsSection showRecentColorsSection.</p>
+<p>Indicates if the Recent Colors section is available</p>
+<p>Default value is <code>true</code>.</p>
 <hr>
 <h3>openBy()</h3>
 <blockquote>
@@ -383,10 +383,6 @@ event #event:colorSelect colorSelect.</p>
 <blockquote>
 <p><strong>setDisplayMode</strong>(<code>sDisplayMode?</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getDisplayMode displayMode.</p>
-<p>Determines the <code>displayMode</code> of the <code>ColorPicker</code> among three types - Default, Large and Simplified</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>Default</code>.</p>
 <h4>Parameters</h4>
 <h5>sDisplayMode?</h5>
 <p><code>&quot;Large&quot;</code> | <code>&quot;Default&quot;</code> | <a href="../../../../../sap.ui.unified/sap/ui/unified/ColorPickerDisplayMode/enumerations/ColorPickerDisplayMode.html"><code>ColorPickerDisplayMode</code></a> | <code>&quot;Simplified&quot;</code></p>
@@ -396,6 +392,10 @@ event #event:colorSelect colorSelect.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.70</p>
+<p>Sets a new value for property #getDisplayMode displayMode.</p>
+<p>Determines the <code>displayMode</code> of the <code>ColorPicker</code> among three types - Default, Large and Simplified</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>Default</code>.</p>
 <hr>
 <h3>setShowDefaultColorButton()</h3>
 <blockquote>
@@ -434,10 +434,6 @@ to choose specific colors, not present in the predefined range.</p>
 <blockquote>
 <p><strong>setShowRecentColorsSection</strong>(<code>bShowRecentColorsSection?</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getShowRecentColorsSection showRecentColorsSection.</p>
-<p>Indicates if the Recent Colors section is available</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>true</code>.</p>
 <h4>Parameters</h4>
 <h5>bShowRecentColorsSection?</h5>
 <p><code>boolean</code></p>
@@ -447,6 +443,10 @@ to choose specific colors, not present in the predefined range.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.74</p>
+<p>Sets a new value for property #getShowRecentColorsSection showRecentColorsSection.</p>
+<p>Indicates if the Recent Colors section is available</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>true</code>.</p>
 <hr>
 <h3>extend()</h3>
 <blockquote>
@@ -463,7 +463,7 @@ the information contained in <code>oClassInfo</code>.</p>
 <p><code>string</code></p>
 <p>Name of the class being created</p>
 <h5>oClassInfo?</h5>
-<p><a href="../../../../../sap.f/namespaces/sap/type-aliases/ClassInfo.html"><code>ClassInfo</code></a>&lt;<code>T</code>, <code>ColorPalettePopover</code>&gt;</p>
+<p><code>ClassInfo</code>&lt;<code>T</code>, <code>ColorPalettePopover</code>&gt;</p>
 <p>Object literal with information about the class</p>
 <h5>FNMetaImpl?</h5>
 <p><code>Function</code></p>
@@ -487,6 +487,6 @@ used by this class</p>
 <p><a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a>.<a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html#getmetadata-1"><code>getMetadata</code></a></p>
 <hr>
 
-<footer>Generated from <code>@openui5/types@1.120.46</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@openui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

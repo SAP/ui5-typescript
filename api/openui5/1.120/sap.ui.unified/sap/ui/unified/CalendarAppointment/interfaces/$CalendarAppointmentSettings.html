@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Interface: $CalendarAppointmentSettings — OpenUI5 TypeScript API</title>
-<meta name="description" content="Interface: $CalendarAppointmentSettings — OpenUI5 TypeScript API Reference (1.120.46)">
+<meta name="description" content="Interface: $CalendarAppointmentSettings — OpenUI5 TypeScript API Reference (1.120.0)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/openui5/1.120/sap.ui.unified/sap/ui/unified/CalendarAppointment/interfaces/$CalendarAppointmentSettings.html">
 <meta property="og:title" content="Interface: $CalendarAppointmentSettings — OpenUI5 TypeScript API">
-<meta property="og:description" content="Interface: $CalendarAppointmentSettings — OpenUI5 TypeScript API Reference (1.120.46)">
+<meta property="og:description" content="Interface: $CalendarAppointmentSettings — OpenUI5 TypeScript API Reference (1.120.0)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/openui5/1.120/sap.ui.unified/sap/ui/unified/CalendarAppointment/interfaces/$CalendarAppointmentSettings.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,12 +33,11 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../index.html">OpenUI5 API</a> › <a href="../../../../../../sap.ui.unified/README.html">sap.ui.unified</a> › sap › ui › unified › <a href="../../../../../../sap.ui.unified/sap/ui/unified/CalendarAppointment/README.html">CalendarAppointment</a> › interfaces</nav>
-<p><a href="../../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.46)</strong></a></p>
+<p><a href="../../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.0)</strong></a></p>
 <hr>
-<p><a href="../../../../../../README.html">OpenUI5 TypeScript API (1.120.46)</a> / <a href="../../../../../README.html">sap.ui.unified</a> / <a href="../README.html">sap/ui/unified/CalendarAppointment</a> / $CalendarAppointmentSettings</p>
+<p><a href="../../../../../../README.html">OpenUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../README.html">sap.ui.unified</a> / <a href="../README.html">sap/ui/unified/CalendarAppointment</a> / $CalendarAppointmentSettings</p>
 <h1>Interface: $CalendarAppointmentSettings</h1>
 <pre class="sig"><span class="kw">import</span> { $CalendarAppointmentSettings } <span class="kw">from</span> <span class="str">"sap/ui/unified/CalendarAppointment"</span>;</pre>
-<p>Describes the settings that can be provided to the CalendarAppointment constructor.</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../DateTypeRange/interfaces/$DateTypeRangeSettings.html"><code>$DateTypeRangeSettings</code></a></li>
@@ -48,10 +47,10 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 <blockquote>
 <p><code>optional</code> <strong>color?</strong>: <code>string</code> | <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a></p>
 </blockquote>
-<p>Overrides the color derived from the <code>type</code> property. This property will work only with full hex color
-with pound symbol, e.g.: #FF0000.</p>
 <h4>Since</h4>
 <p>1.46.0</p>
+<p>Overrides the color derived from the <code>type</code> property. This property will work only with full hex color
+with pound symbol, e.g.: #FF0000.</p>
 <h4>Overrides</h4>
 <p><a href="../../DateTypeRange/interfaces/$DateTypeRangeSettings.html"><code>$DateTypeRangeSettings</code></a>.<a href="../../DateTypeRange/interfaces/$DateTypeRangeSettings.html#color"><code>color</code></a></p>
 <hr>
@@ -60,6 +59,10 @@ with pound symbol, e.g.: #FF0000.</p>
 <p><code>optional</code> <strong>customContent?</strong>: <code>`{${string}}`</code> | <a href="../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a> | <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/AggregationBindingInfo.html"><code>AggregationBindingInfo</code></a> | <a href="../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a>[]</p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
+<h4>Since</h4>
+<p>1.93.0
+ (since 1.93) - providing only limited functionality. Also, the API might be changed in
+the future.</p>
 <p>Holds the content of the appointment.</p>
 <p>**Note **, If the <code>customContent</code> aggregation is added then:</p>
 <pre><code> - The `title`, `text`, `description`, and `icon` properties are ignored.
@@ -68,18 +71,14 @@ the height of the content conforms with the height provided by the appointment.
  - Do not use interactive controls as content, as they may trigger unwanted selection of the appointment
 and may lead to unpredictable results.
 </code></pre>
-<h4>Since</h4>
-<p>1.93.0
- (since 1.93) - providing only limited functionality. Also, the API might be changed in
-the future.</p>
 <hr>
 <h3>description?</h3>
 <blockquote>
 <p><code>optional</code> <strong>description?</strong>: <code>string</code> | <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a></p>
 </blockquote>
-<p>Description of the appointment.</p>
 <h4>Since</h4>
 <p>1.81.0</p>
+<p>Description of the appointment.</p>
 <hr>
 <h3>icon?</h3>
 <blockquote>
@@ -119,6 +118,6 @@ the future.</p>
 <p>Title of the appointment.</p>
 <hr>
 
-<footer>Generated from <code>@openui5/types@1.120.46</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@openui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

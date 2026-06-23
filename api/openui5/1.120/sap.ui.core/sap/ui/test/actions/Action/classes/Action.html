@@ -2,12 +2,12 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>Abstract Class: Action — OpenUI5 TypeScript API</title>
-<meta name="description" content="Abstract Class: Action — OpenUI5 TypeScript API Reference (1.120.46)">
+<title>Class: Action — OpenUI5 TypeScript API</title>
+<meta name="description" content="Class: Action — OpenUI5 TypeScript API Reference (1.120.0)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/openui5/1.120/sap.ui.core/sap/ui/test/actions/Action/classes/Action.html">
-<meta property="og:title" content="Abstract Class: Action — OpenUI5 TypeScript API">
-<meta property="og:description" content="Abstract Class: Action — OpenUI5 TypeScript API Reference (1.120.46)">
+<meta property="og:title" content="Class: Action — OpenUI5 TypeScript API">
+<meta property="og:description" content="Class: Action — OpenUI5 TypeScript API Reference (1.120.0)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/openui5/1.120/sap.ui.core/sap/ui/test/actions/Action/classes/Action.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,15 +33,15 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../../index.html">OpenUI5 API</a> › <a href="../../../../../../../sap.ui.core/README.html">sap.ui.core</a> › sap › ui › test › actions › <a href="../../../../../../../sap.ui.core/sap/ui/test/actions/Action/README.html">Action</a> › classes</nav>
-<p><a href="../../../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.46)</strong></a></p>
+<p><a href="../../../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.0)</strong></a></p>
 <hr>
-<p><a href="../../../../../../../README.html">OpenUI5 TypeScript API (1.120.46)</a> / <a href="../../../../../../README.html">sap.ui.core</a> / <a href="../README.html">sap/ui/test/actions/Action</a> / Action</p>
-<h1>Abstract Class: Action</h1>
+<p><a href="../../../../../../../README.html">OpenUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../../README.html">sap.ui.core</a> / <a href="../README.html">sap/ui/test/actions/Action</a> / Action</p>
+<h1>Class: Action</h1>
 <pre class="sig"><span class="kw">import</span> Action <span class="kw">from</span> <span class="str">"sap/ui/test/actions/Action"</span>;</pre>
-<p>Actions for Opa5 - needs to implement an executeOn function that should simulate a user interaction on
-a control</p>
 <h2>Since</h2>
 <p>1.34</p>
+<p>Actions for Opa5 - needs to implement an executeOn function that should simulate a user interaction on
+a control</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../../../base/ManagedObject/classes/ManagedObject.html"><code>ManagedObject</code></a></li>
@@ -71,8 +71,6 @@ of the syntax of the settings object.</p>
 <blockquote>
 <p><strong>executeOn</strong>(<code>element</code>): <code>void</code></p>
 </blockquote>
-<p>Checks if the matcher is matching - will get an instance of sap.ui.core.Control as parameter Should be
-overwritten by subclasses</p>
 <h4>Parameters</h4>
 <h5>element</h5>
 <p><a href="../../../../core/Control/classes/Control.html"><code>Control</code></a></p>
@@ -81,34 +79,29 @@ overwritten by subclasses</p>
 <p><code>void</code></p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Checks if the matcher is matching - will get an instance of sap.ui.core.Control as parameter Should be
+overwritten by subclasses</p>
 <hr>
 <h3>getIdSuffix()</h3>
 <blockquote>
 <p><strong>getIdSuffix</strong>(): <code>string</code></p>
 </blockquote>
+<h4>Returns</h4>
+<p><code>string</code></p>
+<p>Value of property <code>idSuffix</code></p>
+<h4>Since</h4>
+<p>1.38</p>
 <p>Gets current value of property #getIdSuffix idSuffix.</p>
 <p>Use this only if the target property or the default of the action does not work for your control. The
 id suffix of the DOM Element the press action will be executed on. For most of the controls you do not
 have to specify this, since the Control Adapters will find the correct DOM Element. But some controls
 have multiple DOM elements that could be target of your Action. Then you should set this property. For
 a detailed documentation of the suffix see sap.ui.core.Element#$</p>
-<h4>Returns</h4>
-<p><code>string</code></p>
-<p>Value of property <code>idSuffix</code></p>
-<h4>Since</h4>
-<p>1.38</p>
 <hr>
 <h3>setIdSuffix()</h3>
 <blockquote>
 <p><strong>setIdSuffix</strong>(<code>sIdSuffix</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getIdSuffix idSuffix.</p>
-<p>Use this only if the target property or the default of the action does not work for your control. The
-id suffix of the DOM Element the press action will be executed on. For most of the controls you do not
-have to specify this, since the Control Adapters will find the correct DOM Element. But some controls
-have multiple DOM elements that could be target of your Action. Then you should set this property. For
-a detailed documentation of the suffix see sap.ui.core.Element#$</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <h4>Parameters</h4>
 <h5>sIdSuffix</h5>
 <p><code>string</code></p>
@@ -118,6 +111,13 @@ a detailed documentation of the suffix see sap.ui.core.Element#$</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.38</p>
+<p>Sets a new value for property #getIdSuffix idSuffix.</p>
+<p>Use this only if the target property or the default of the action does not work for your control. The
+id suffix of the DOM Element the press action will be executed on. For most of the controls you do not
+have to specify this, since the Control Adapters will find the correct DOM Element. But some controls
+have multiple DOM elements that could be target of your Action. Then you should set this property. For
+a detailed documentation of the suffix see sap.ui.core.Element#$</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <hr>
 <h3>extend()</h3>
 <blockquote>
@@ -134,7 +134,7 @@ the information contained in <code>oClassInfo</code>.</p>
 <p><code>string</code></p>
 <p>Name of the class being created</p>
 <h5>oClassInfo?</h5>
-<p><a href="../../../../../../../sap.f/namespaces/sap/type-aliases/ClassInfo.html"><code>ClassInfo</code></a>&lt;<code>T</code>, <code>Action</code>&gt;</p>
+<p><code>ClassInfo</code>&lt;<code>T</code>, <code>Action</code>&gt;</p>
 <p>Object literal with information about the class</p>
 <h5>FNMetaImpl?</h5>
 <p><code>Function</code></p>
@@ -158,6 +158,6 @@ used by this class</p>
 <p><a href="../../../../base/ManagedObject/classes/ManagedObject.html"><code>ManagedObject</code></a>.<a href="../../../../base/ManagedObject/classes/ManagedObject.html#getmetadata-1"><code>getMetadata</code></a></p>
 <hr>
 
-<footer>Generated from <code>@openui5/types@1.120.46</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@openui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

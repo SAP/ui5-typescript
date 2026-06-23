@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Interface: ISemanticFormContent — OpenUI5 TypeScript API</title>
-<meta name="description" content="Interface: ISemanticFormContent — OpenUI5 TypeScript API Reference (1.120.46)">
+<meta name="description" content="Interface: ISemanticFormContent — OpenUI5 TypeScript API Reference (1.120.0)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/openui5/1.120/sap.ui.core/sap/ui/core/library/interfaces/ISemanticFormContent.html">
 <meta property="og:title" content="Interface: ISemanticFormContent — OpenUI5 TypeScript API">
-<meta property="og:description" content="Interface: ISemanticFormContent — OpenUI5 TypeScript API Reference (1.120.46)">
+<meta property="og:description" content="Interface: ISemanticFormContent — OpenUI5 TypeScript API Reference (1.120.0)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/openui5/1.120/sap.ui.core/sap/ui/core/library/interfaces/ISemanticFormContent.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,18 +33,18 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../index.html">OpenUI5 API</a> › <a href="../../../../../../sap.ui.core/README.html">sap.ui.core</a> › sap › ui › core › <a href="../../../../../../sap.ui.core/sap/ui/core/library/README.html">library</a> › interfaces</nav>
-<p><a href="../../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.46)</strong></a></p>
+<p><a href="../../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.0)</strong></a></p>
 <hr>
-<p><a href="../../../../../../README.html">OpenUI5 TypeScript API (1.120.46)</a> / <a href="../../../../../README.html">sap.ui.core</a> / <a href="../README.html">sap/ui/core/library</a> / ISemanticFormContent</p>
+<p><a href="../../../../../../README.html">OpenUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../README.html">sap.ui.core</a> / <a href="../README.html">sap/ui/core/library</a> / ISemanticFormContent</p>
 <h1>Interface: ISemanticFormContent</h1>
 <pre class="sig"><span class="kw">import</span> { ISemanticFormContent } <span class="kw">from</span> <span class="str">"sap/ui/core/library"</span>;</pre>
+<h2>Since</h2>
+<p>1.86.0</p>
 <p>Marker interface for controls that can be used as content of <code>sap.ui.layout.form.SemanticFormElement</code>.</p>
 <p>If the value-holding property of the control is not <code>valuetext</code>, the name of the value-holding
 property must be returned in the <code>getFormValueProperty</code> function.</p>
 <p>If the value of the control needs some special output formatting (to show a description instead of a
 key), this formatted text needs to be returned in the <code>getFormFormattedValue</code> function.</p>
-<h2>Since</h2>
-<p>1.86.0</p>
 <h2>Properties</h2>
 <h3>__implements__sap_ui_core_ISemanticFormContent</h3>
 <blockquote>
@@ -55,6 +55,11 @@ key), this formatted text needs to be returned in the <code>getFormFormattedValu
 <blockquote>
 <p><code>optional</code> <strong>getFormFormattedValue</strong>(): <code>string</code> | <code>Promise</code>&lt;<code>string</code>&gt;</p>
 </blockquote>
+<h4>Returns</h4>
+<p><code>string</code> | <code>Promise</code>&lt;<code>string</code>&gt;</p>
+<p>Formatted value or a <code>Promise</code> returning the formatted value if resolved</p>
+<h4>Since</h4>
+<p>1.86.0</p>
 <p>Returns the formatted value of a control used in a <code>SemanticFormElement</code>.</p>
 <p>In the <code>SemanticFormElement</code> element, the assigned fields are rendered in edit mode. In display mode,
 a text is rendered that concatenates the values of all assigned fields. In some cases the displayed text
@@ -62,16 +67,16 @@ does not match the value of the field and needs some formatting. In other cases 
 have a <code>value</code> property, so the <code>SemanticFormElement</code> element cannot determine the value.</p>
 <p>This is an optional method. If not defined, the <code>value</code> property or the <code>text</code> property is used to determine
 the value.</p>
-<h4>Returns</h4>
-<p><code>string</code> | <code>Promise</code>&lt;<code>string</code>&gt;</p>
-<p>Formatted value or a <code>Promise</code> returning the formatted value if resolved</p>
-<h4>Since</h4>
-<p>1.86.0</p>
 <hr>
 <h3>getFormObservingProperties()?</h3>
 <blockquote>
 <p><code>optional</code> <strong>getFormObservingProperties</strong>(): <code>string</code>[]</p>
 </blockquote>
+<h4>Returns</h4>
+<p><code>string</code>[]</p>
+<p>Name of the properties</p>
+<h4>Since</h4>
+<p>1.117.0</p>
 <p>Returns the names of the properties of a control that might update the rendering in a <code>SemanticFormElement</code>.</p>
 <p>In the <code>SemanticFormElement</code> element, the assigned fields are rendered in edit mode. In display mode,
 depending on <code>getFormRenderAsControl</code>, either a text is rendered, which concatenates the values of all
@@ -80,29 +85,29 @@ to a different rendering (some controls have a special rendering in display mode
 needs to check the rendering.</p>
 <p>This is an optional method. If not defined, no check for updates (only for property defined in <code>getFormValueProperty</code>)
 is done once the control has been assigned.</p>
-<h4>Returns</h4>
-<p><code>string</code>[]</p>
-<p>Name of the properties</p>
-<h4>Since</h4>
-<p>1.117.0</p>
 <hr>
 <h3>getFormRenderAsControl()?</h3>
 <blockquote>
 <p><code>optional</code> <strong>getFormRenderAsControl</strong>(): <code>string</code></p>
 </blockquote>
-<p>If set to <code>true</code>, the <code>SemanticFormElement</code> also renders the control in display mode, if the used <code>FormLayout</code>
-supports this.</p>
-<p>This is an optional method. If not defined, just the text is rendered.</p>
 <h4>Returns</h4>
 <p><code>string</code></p>
 <p>Name of the value-holding property</p>
 <h4>Since</h4>
 <p>1.117.0</p>
+<p>If set to <code>true</code>, the <code>SemanticFormElement</code> also renders the control in display mode, if the used <code>FormLayout</code>
+supports this.</p>
+<p>This is an optional method. If not defined, just the text is rendered.</p>
 <hr>
 <h3>getFormValueProperty()?</h3>
 <blockquote>
 <p><code>optional</code> <strong>getFormValueProperty</strong>(): <code>string</code></p>
 </blockquote>
+<h4>Returns</h4>
+<p><code>string</code></p>
+<p>Name of the value-holding property</p>
+<h4>Since</h4>
+<p>1.86.0</p>
 <p>Returns the name of the value-holding property of a control used in a <code>SemanticFormElement</code>.</p>
 <p>In the <code>SemanticFormElement</code> element, the assigned fields are rendered in edit mode. In display mode,
 a text is rendered that concatenates the values of all assigned fields. So the concatenated text needs
@@ -110,12 +115,7 @@ to be updated if the value of a control changes. If a control does not have a <c
 element needs to know the propery it has to listen for changes.</p>
 <p>This is an optional method. If not defined, the <code>value</code> property or the <code>text</code> property is used to determine
 the value.</p>
-<h4>Returns</h4>
-<p><code>string</code></p>
-<p>Name of the value-holding property</p>
-<h4>Since</h4>
-<p>1.86.0</p>
 
-<footer>Generated from <code>@openui5/types@1.120.46</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@openui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

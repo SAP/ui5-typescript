@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Class: MultiValueField — OpenUI5 TypeScript API</title>
-<meta name="description" content="Class: MultiValueField — OpenUI5 TypeScript API Reference (1.120.46)">
+<meta name="description" content="Class: MultiValueField — OpenUI5 TypeScript API Reference (1.120.0)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/openui5/1.120/sap.ui.mdc/sap/ui/mdc/MultiValueField/classes/MultiValueField.html">
 <meta property="og:title" content="Class: MultiValueField — OpenUI5 TypeScript API">
-<meta property="og:description" content="Class: MultiValueField — OpenUI5 TypeScript API Reference (1.120.46)">
+<meta property="og:description" content="Class: MultiValueField — OpenUI5 TypeScript API Reference (1.120.0)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/openui5/1.120/sap.ui.mdc/sap/ui/mdc/MultiValueField/classes/MultiValueField.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,12 +33,15 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../index.html">OpenUI5 API</a> › <a href="../../../../../../sap.ui.mdc/README.html">sap.ui.mdc</a> › sap › ui › mdc › <a href="../../../../../../sap.ui.mdc/sap/ui/mdc/MultiValueField/README.html">MultiValueField</a> › classes</nav>
-<p><a href="../../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.46)</strong></a></p>
+<p><a href="../../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.0)</strong></a></p>
 <hr>
-<p><a href="../../../../../../README.html">OpenUI5 TypeScript API (1.120.46)</a> / <a href="../../../../../README.html">sap.ui.mdc</a> / <a href="../README.html">sap/ui/mdc/MultiValueField</a> / MultiValueField</p>
+<p><a href="../../../../../../README.html">OpenUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../README.html">sap.ui.mdc</a> / <a href="../README.html">sap/ui/mdc/MultiValueField</a> / MultiValueField</p>
 <h1>Class: MultiValueField</h1>
 <pre class="sig"><span class="kw">import</span> MultiValueField <span class="kw">from</span> <span class="str">"sap/ui/mdc/MultiValueField"</span>;</pre>
 <p><strong><code>Experimental</code></strong></p>
+<h2>Since</h2>
+<p>1.93.0
+ (since 1.93.0)</p>
 <p>A <code>MultiValueField</code> control can hold multiple values. The values are stored as items. A <code>MultiValueField</code>
 control can be used to bind its items to data of a certain data type. Based on the data type settings,
 a default control is rendered by the <code>MultiValueField</code> control as follows:</p>
@@ -47,9 +50,6 @@ a default control is rendered by the <code>MultiValueField</code> control as fol
  - In edit mode, usually a sap.m.MultiInput MultiInput control is rendered.
  - If `multipleLines` is set, a sap.m.TextArea TextArea control is rendered.
 </code></pre>
-<h2>Since</h2>
-<p>1.93.0
- (since 1.93.0)</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../field/FieldBase/classes/FieldBase.html"><code>FieldBase</code></a></li>
@@ -194,10 +194,6 @@ otherwise it will be bound to this <code>sap.ui.mdc.MultiValueField</code> itsel
 <p><strong>bindConditions</strong>(<code>oBindingInfo</code>): <code>this</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
-<p>Binds property #getConditions conditions to model data.</p>
-<p>See sap.ui.base.ManagedObject#bindProperty ManagedObject.bindProperty for a detailed description
-of the possible properties of oBindingInfo</p>
-<p>Do not use the <code>conditions</code> property, use the <code>value</code> and <code>additionalValue</code> properties instead.</p>
 <h4>Parameters</h4>
 <h5>oBindingInfo</h5>
 <p><a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a></p>
@@ -206,8 +202,13 @@ of the possible properties of oBindingInfo</p>
 <p><code>this</code></p>
 <p>Reference to <code>this</code> to allow method chaining</p>
 <h4>Deprecated</h4>
-<p>(since 1.93) - this property is not supported for the <code>MultiValueField</code>. Use the <code>items</code>
-aggregation to bind the control.</p>
+<ul>
+<li>Not supported, use the <code>value</code> property and <code>additionalValue</code> property to bind the control.</li>
+</ul>
+<p>Binds property #getConditions conditions to model data.</p>
+<p>See sap.ui.base.ManagedObject#bindProperty ManagedObject.bindProperty for a detailed description
+of the possible properties of oBindingInfo</p>
+<p>Do not use the <code>conditions</code> property, use the <code>value</code> and <code>additionalValue</code> properties instead.</p>
 <h4>Overrides</h4>
 <p><a href="../../field/FieldBase/classes/FieldBase.html"><code>FieldBase</code></a>.<a href="../../field/FieldBase/classes/FieldBase.html#bindconditions"><code>bindConditions</code></a></p>
 <hr>
@@ -260,7 +261,6 @@ of the possible properties of <code>oBindingInfo</code>.</p>
 <p><strong>fireChange</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
-<p>Fires event #event:change change to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/MultiValueField$ChangeEventParameters.html"><code>MultiValueField$ChangeEventParameters</code></a></p>
@@ -270,20 +270,22 @@ of the possible properties of <code>oBindingInfo</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:change change to attached listeners.</p>
 <hr>
 <h3><del>getConditions()</del></h3>
 <blockquote>
 <p><strong>getConditions</strong>(): <code>object</code>[]</p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
-<p>Gets current value of property #getConditions conditions.</p>
-<p>Do not use the <code>conditions</code> property, use the <code>items</code> aggregation instead.</p>
 <h4>Returns</h4>
 <p><code>object</code>[]</p>
 <p>conditions of the field</p>
 <h4>Deprecated</h4>
-<p>(since 1.54) - this property is not supported for the <code>MultiValueField</code>. Use the <code>items</code>
-aggregation to bind the control.</p>
+<ul>
+<li>Not supported, use the <code>items</code> aggregation to bind the control.</li>
+</ul>
+<p>Gets current value of property #getConditions conditions.</p>
+<p>Do not use the <code>conditions</code> property, use the <code>items</code> aggregation instead.</p>
 <h4>Overrides</h4>
 <p><a href="../../field/FieldBase/classes/FieldBase.html"><code>FieldBase</code></a>.<a href="../../field/FieldBase/classes/FieldBase.html#getconditions"><code>getConditions</code></a></p>
 <hr>
@@ -292,16 +294,17 @@ aggregation to bind the control.</p>
 <p><strong>getDataType</strong>(): <code>string</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
-<p>Gets current value of property #getDataType dataType.</p>
-<p>The type of data handled by the field. The type is used to parse, format, and validate the value.</p>
-<p><strong>Note:</strong> If the <code>items</code> aggregation is bound to a model using a type, this type is used. In this case
-the value of the <code>dataType</code> property is ignored.</p>
 <h4>Returns</h4>
 <p><code>string</code></p>
 <p>Value of property <code>dataType</code></p>
 <h4>Deprecated</h4>
-<p>(since 1.93) - this property is not supported for the <code>MultiValueField</code>. The type in the
-binding to the <code>items</code> aggregation is used.</p>
+<ul>
+<li>Not supported, the type in the binding to the <code>value</code> property is used.</li>
+</ul>
+<p>Gets current value of property #getDataType dataType.</p>
+<p>The type of data handled by the field. The type is used to parse, format, and validate the value.</p>
+<p><strong>Note:</strong> If the <code>items</code> aggregation is bound to a model using a type, this type is used. In this case
+the value of the <code>dataType</code> property is ignored.</p>
 <h4>Overrides</h4>
 <p><a href="../../field/FieldBase/classes/FieldBase.html"><code>FieldBase</code></a>.<a href="../../field/FieldBase/classes/FieldBase.html#getdatatype"><code>getDataType</code></a></p>
 <hr>
@@ -310,16 +313,18 @@ binding to the <code>items</code> aggregation is used.</p>
 <p><strong>getDataTypeConstraints</strong>(): <code>object</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
-<p>Gets current value of property #getDataTypeConstraints dataTypeConstraints.</p>
-<p>The constraints of the type specified in <code>dataType</code>.</p>
-<p><strong>Note:</strong> If the <code>items</code> aggregation is bound to a model using a type, this type is used. In this case
-the values of the <code>dataType</code> property and the <code>dataTypeConstraints</code> property are ignored.</p>
 <h4>Returns</h4>
 <p><code>object</code></p>
 <p>Value of property <code>dataTypeConstraints</code></p>
 <h4>Deprecated</h4>
-<p>(since 1.93) - this property is not supported for the <code>MultiValueField</code>. The type in the
-binding to the <code>items</code> aggregation is used.</p>
+<ul>
+<li>Not supported, the <code>Constraints</code> of the type in the binding to the <code>value</code> property is
+used.</li>
+</ul>
+<p>Gets current value of property #getDataTypeConstraints dataTypeConstraints.</p>
+<p>The constraints of the type specified in <code>dataType</code>.</p>
+<p><strong>Note:</strong> If the <code>items</code> aggregation is bound to a model using a type, this type is used. In this case
+the values of the <code>dataType</code> property and the <code>dataTypeConstraints</code> property are ignored.</p>
 <h4>Overrides</h4>
 <p><a href="../../field/FieldBase/classes/FieldBase.html"><code>FieldBase</code></a>.<a href="../../field/FieldBase/classes/FieldBase.html#getdatatypeconstraints"><code>getDataTypeConstraints</code></a></p>
 <hr>
@@ -328,16 +333,18 @@ binding to the <code>items</code> aggregation is used.</p>
 <p><strong>getDataTypeFormatOptions</strong>(): <code>object</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
-<p>Gets current value of property #getDataTypeFormatOptions dataTypeFormatOptions.</p>
-<p>The format options of the type specified in <code>dataType</code>.</p>
-<p><strong>Note:</strong> If the <code>items</code> aggregation is bound to a model using a type, this type is used. In this case
-the values of the <code>dataType</code> property and the <code>dataTypeFormatOptions</code> property are ignored.</p>
 <h4>Returns</h4>
 <p><code>object</code></p>
 <p>Value of property <code>dataTypeFormatOptions</code></p>
 <h4>Deprecated</h4>
-<p>(since 1.93) - this property is not supported for the <code>MultiValueField</code>. The type in the
-binding to the <code>items</code> aggregation is used.</p>
+<ul>
+<li>Not supported, the <code>FormatOptions</code> of the type in the binding to the <code>value</code> property is
+used.</li>
+</ul>
+<p>Gets current value of property #getDataTypeFormatOptions dataTypeFormatOptions.</p>
+<p>The format options of the type specified in <code>dataType</code>.</p>
+<p><strong>Note:</strong> If the <code>items</code> aggregation is bound to a model using a type, this type is used. In this case
+the values of the <code>dataType</code> property and the <code>dataTypeFormatOptions</code> property are ignored.</p>
 <h4>Overrides</h4>
 <p><a href="../../field/FieldBase/classes/FieldBase.html"><code>FieldBase</code></a>.<a href="../../field/FieldBase/classes/FieldBase.html#getdatatypeformatoptions"><code>getDataTypeFormatOptions</code></a></p>
 <hr>
@@ -375,12 +382,14 @@ needed any longer.</p>
 <p><strong>getMultipleLines</strong>(): <code>boolean</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
-<p>Gets current value of property #getMultipleLines multipleLines.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>Value for property <code>multipleLines</code></p>
 <h4>Deprecated</h4>
-<p>(since 1.93) - this property is not supported for the <code>MultiValueField</code>.</p>
+<ul>
+<li>This property is not supported for multi-value fields.</li>
+</ul>
+<p>Gets current value of property #getMultipleLines multipleLines.</p>
 <h4>Overrides</h4>
 <p><a href="../../field/FieldBase/classes/FieldBase.html"><code>FieldBase</code></a>.<a href="../../field/FieldBase/classes/FieldBase.html#getmultiplelines"><code>getMultipleLines</code></a></p>
 <hr>
@@ -448,8 +457,6 @@ the last position</p>
 <p><strong>setConditions</strong>(<code>aConditions</code>): <code>this</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
-<p>Sets a new value for property #getConditions conditions.</p>
-<p>Do not use the <code>conditions</code> property, use the <code>items</code> aggregation instead.</p>
 <h4>Parameters</h4>
 <h5>aConditions</h5>
 <p><code>object</code>[]</p>
@@ -458,8 +465,11 @@ the last position</p>
 <p><code>this</code></p>
 <p>Reference to <code>this</code> to allow method chaining</p>
 <h4>Deprecated</h4>
-<p>(since 1.54) - this property is not supported for the <code>MultiValueField</code>. Use the <code>items</code>
-aggregation to bind the control.</p>
+<ul>
+<li>Not supported, use the <code>items</code> aggregation to bind the control.</li>
+</ul>
+<p>Sets a new value for property #getConditions conditions.</p>
+<p>Do not use the <code>conditions</code> property, use the <code>items</code> aggregation instead.</p>
 <h4>Overrides</h4>
 <p><a href="../../field/FieldBase/classes/FieldBase.html"><code>FieldBase</code></a>.<a href="../../field/FieldBase/classes/FieldBase.html#setconditions"><code>setConditions</code></a></p>
 <hr>
@@ -468,10 +478,6 @@ aggregation to bind the control.</p>
 <p><strong>setDataType</strong>(<code>sDataType</code>): <code>this</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
-<p>Sets a new value for property #getDataType dataType. The type of data handled by the field. The
-type is used to parse, format, and validate the value.</p>
-<p><strong>Note:</strong> If the <code>items</code> aggregation is bound to a model using a type, this type is used. In this case
-the value of the <code>dataType</code> property is ignored.</p>
 <h4>Parameters</h4>
 <h5>sDataType</h5>
 <p><code>string</code></p>
@@ -480,8 +486,13 @@ the value of the <code>dataType</code> property is ignored.</p>
 <p><code>this</code></p>
 <p>Reference to <code>this</code> to allow method chaining</p>
 <h4>Deprecated</h4>
-<p>(since 1.93) - this property is not supported for the <code>MultiValueField</code>. The type in the
-binding to the <code>items</code> aggregation is used.</p>
+<ul>
+<li>Not supported, the type in the binding to the <code>items</code> aggregation is used.</li>
+</ul>
+<p>Sets a new value for property #getDataType dataType. The type of data handled by the field. The
+type is used to parse, format, and validate the value.</p>
+<p><strong>Note:</strong> If the <code>items</code> aggregation is bound to a model using a type, this type is used. In this case
+the value of the <code>dataType</code> property is ignored.</p>
 <h4>Overrides</h4>
 <p><a href="../../field/FieldBase/classes/FieldBase.html"><code>FieldBase</code></a>.<a href="../../field/FieldBase/classes/FieldBase.html#setdatatype"><code>setDataType</code></a></p>
 <hr>
@@ -490,10 +501,6 @@ binding to the <code>items</code> aggregation is used.</p>
 <p><strong>setDataTypeConstraints</strong>(<code>oDataTypeConstraints</code>): <code>this</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
-<p>Sets a new value for property #getDataTypeConstraints dataTypeConstraints.</p>
-<p>The constraints of the type specified in <code>dataType</code>.</p>
-<p><strong>Note:</strong> If the <code>items</code> aggregation is bound to a model using a type, this type is used. In this case
-the values of the <code>dataType</code> property and the <code>dataTypeConstraints</code> property are ignored.</p>
 <h4>Parameters</h4>
 <h5>oDataTypeConstraints</h5>
 <p><code>object</code></p>
@@ -502,8 +509,13 @@ the values of the <code>dataType</code> property and the <code>dataTypeConstrain
 <p><code>this</code></p>
 <p>Reference to <code>this</code> to allow method chaining</p>
 <h4>Deprecated</h4>
-<p>(since 1.93) - this property is not supported for the <code>MultiValueField</code>. The type in the
-binding to the <code>items</code> aggregation is used.</p>
+<ul>
+<li>Not supported, the type in the binding to the <code>items</code> aggregation is used.</li>
+</ul>
+<p>Sets a new value for property #getDataTypeConstraints dataTypeConstraints.</p>
+<p>The constraints of the type specified in <code>dataType</code>.</p>
+<p><strong>Note:</strong> If the <code>items</code> aggregation is bound to a model using a type, this type is used. In this case
+the values of the <code>dataType</code> property and the <code>dataTypeConstraints</code> property are ignored.</p>
 <h4>Overrides</h4>
 <p><a href="../../field/FieldBase/classes/FieldBase.html"><code>FieldBase</code></a>.<a href="../../field/FieldBase/classes/FieldBase.html#setdatatypeconstraints"><code>setDataTypeConstraints</code></a></p>
 <hr>
@@ -512,10 +524,6 @@ binding to the <code>items</code> aggregation is used.</p>
 <p><strong>setDataTypeFormatOptions</strong>(<code>oDataTypeFormatOptions</code>): <code>this</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
-<p>Sets a new value for property #getDataTypeFormatOptions dataTypeFormatOptions.</p>
-<p>The format options of the type specified in <code>dataType</code>.</p>
-<p><strong>Note:</strong> If the <code>items</code> aggregation is bound to a model using a type, this type is used. In this case
-the values of the <code>dataType</code> property and the <code>dataTypeFormatOptions</code> property are ignored.</p>
 <h4>Parameters</h4>
 <h5>oDataTypeFormatOptions</h5>
 <p><code>object</code></p>
@@ -524,8 +532,13 @@ the values of the <code>dataType</code> property and the <code>dataTypeFormatOpt
 <p><code>this</code></p>
 <p>Reference to <code>this</code> to allow method chaining</p>
 <h4>Deprecated</h4>
-<p>(since 1.93) - this property is not supported for the <code>MultiValueField</code>. The type in the
-binding to the <code>items</code> aggregation is used.</p>
+<ul>
+<li>Not supported, the type in the binding to the <code>items</code> aggregation is used.</li>
+</ul>
+<p>Sets a new value for property #getDataTypeFormatOptions dataTypeFormatOptions.</p>
+<p>The format options of the type specified in <code>dataType</code>.</p>
+<p><strong>Note:</strong> If the <code>items</code> aggregation is bound to a model using a type, this type is used. In this case
+the values of the <code>dataType</code> property and the <code>dataTypeFormatOptions</code> property are ignored.</p>
 <h4>Overrides</h4>
 <p><a href="../../field/FieldBase/classes/FieldBase.html"><code>FieldBase</code></a>.<a href="../../field/FieldBase/classes/FieldBase.html#setdatatypeformatoptions"><code>setDataTypeFormatOptions</code></a></p>
 <hr>
@@ -558,7 +571,6 @@ needed any longer.</p>
 <p><strong>setMaxConditions</strong>(<code>iMaxConditions</code>): <code>this</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
-<p>This property must not be set for the <code>MultiValueField</code> control.</p>
 <h4>Parameters</h4>
 <h5>iMaxConditions</h5>
 <p><code>number</code></p>
@@ -567,7 +579,10 @@ needed any longer.</p>
 <p><code>this</code></p>
 <p><code>this</code> to allow method chaining.</p>
 <h4>Deprecated</h4>
-<p>(since 1.93) - this property is not supported for the <code>MultiValueField</code> control.</p>
+<ul>
+<li>Not supported, this property is not supported for the <code>MultiValueField</code> control.</li>
+</ul>
+<p>This property must not be set for the <code>MultiValueField</code> control.</p>
 <h4>Overrides</h4>
 <p><a href="../../field/FieldBase/classes/FieldBase.html"><code>FieldBase</code></a>.<a href="../../field/FieldBase/classes/FieldBase.html#setmaxconditions"><code>setMaxConditions</code></a></p>
 <hr>
@@ -576,7 +591,6 @@ needed any longer.</p>
 <p><strong>setMultipleLines</strong>(<code>bMultipleLines?</code>): <code>this</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
-<p>Sets a new value for property #getMultipleLines multipleLines.</p>
 <h4>Parameters</h4>
 <h5>bMultipleLines?</h5>
 <p><code>boolean</code></p>
@@ -585,7 +599,10 @@ needed any longer.</p>
 <p><code>this</code></p>
 <p>Reference to <code>this</code> to allow method chaining</p>
 <h4>Deprecated</h4>
-<p>(since 1.93) - this property is not supported for the <code>MultiValueField</code>.</p>
+<ul>
+<li>This property is not supported for multi-value fields.</li>
+</ul>
+<p>Sets a new value for property #getMultipleLines multipleLines.</p>
 <h4>Overrides</h4>
 <p><a href="../../field/FieldBase/classes/FieldBase.html"><code>FieldBase</code></a>.<a href="../../field/FieldBase/classes/FieldBase.html#setmultiplelines"><code>setMultipleLines</code></a></p>
 <hr>
@@ -594,14 +611,15 @@ needed any longer.</p>
 <p><strong>unbindConditions</strong>(): <code>this</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
-<p>Unbinds property #getConditions conditions from model data.</p>
-<p>Do not use the <code>conditions</code> property, use the <code>value</code> and <code>additionalValue</code> properties instead.</p>
 <h4>Returns</h4>
 <p><code>this</code></p>
 <p>Reference to <code>this</code> to allow method chaining</p>
 <h4>Deprecated</h4>
-<p>(since 1.93) - this property is not supported for the <code>MultiValueField</code>. Use the <code>items</code>
-aggregation to bind the control.</p>
+<ul>
+<li>Not supported, use the <code>value</code> property and <code>additionalValue</code> property to bind the control.</li>
+</ul>
+<p>Unbinds property #getConditions conditions from model data.</p>
+<p>Do not use the <code>conditions</code> property, use the <code>value</code> and <code>additionalValue</code> properties instead.</p>
 <h4>Overrides</h4>
 <p><a href="../../field/FieldBase/classes/FieldBase.html"><code>FieldBase</code></a>.<a href="../../field/FieldBase/classes/FieldBase.html#unbindconditions"><code>unbindConditions</code></a></p>
 <hr>
@@ -631,7 +649,7 @@ the information contained in <code>oClassInfo</code>.</p>
 <p><code>string</code></p>
 <p>Name of the class being created</p>
 <h5>oClassInfo?</h5>
-<p><a href="../../../../../../sap.f/namespaces/sap/type-aliases/ClassInfo.html"><code>ClassInfo</code></a>&lt;<code>T</code>, <code>MultiValueField</code>&gt;</p>
+<p><code>ClassInfo</code>&lt;<code>T</code>, <code>MultiValueField</code>&gt;</p>
 <p>Object literal with information about the class</p>
 <h5>FNMetaImpl?</h5>
 <p><code>Function</code></p>
@@ -655,6 +673,6 @@ used by this class</p>
 <h4>Overrides</h4>
 <p><a href="../../field/FieldBase/classes/FieldBase.html"><code>FieldBase</code></a>.<a href="../../field/FieldBase/classes/FieldBase.html#getmetadata"><code>getMetadata</code></a></p>
 
-<footer>Generated from <code>@openui5/types@1.120.46</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@openui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

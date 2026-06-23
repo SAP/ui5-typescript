@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Class: StepInput — OpenUI5 TypeScript API</title>
-<meta name="description" content="Class: StepInput — OpenUI5 TypeScript API Reference (1.120.46)">
+<meta name="description" content="Class: StepInput — OpenUI5 TypeScript API Reference (1.120.0)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/openui5/1.120/sap.m/sap/m/StepInput/classes/StepInput.html">
 <meta property="og:title" content="Class: StepInput — OpenUI5 TypeScript API">
-<meta property="og:description" content="Class: StepInput — OpenUI5 TypeScript API Reference (1.120.46)">
+<meta property="og:description" content="Class: StepInput — OpenUI5 TypeScript API Reference (1.120.0)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/openui5/1.120/sap.m/sap/m/StepInput/classes/StepInput.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,11 +33,13 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../index.html">OpenUI5 API</a> › <a href="../../../../../sap.m/README.html">sap.m</a> › sap › m › <a href="../../../../../sap.m/sap/m/StepInput/README.html">StepInput</a> › classes</nav>
-<p><a href="../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.46)</strong></a></p>
+<p><a href="../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.0)</strong></a></p>
 <hr>
-<p><a href="../../../../../README.html">OpenUI5 TypeScript API (1.120.46)</a> / <a href="../../../../README.html">sap.m</a> / <a href="../README.html">sap/m/StepInput</a> / StepInput</p>
+<p><a href="../../../../../README.html">OpenUI5 TypeScript API (1.120.0)</a> / <a href="../../../../README.html">sap.m</a> / <a href="../README.html">sap/m/StepInput</a> / StepInput</p>
 <h1>Class: StepInput</h1>
 <pre class="sig"><span class="kw">import</span> StepInput <span class="kw">from</span> <span class="str">"sap/m/StepInput"</span>;</pre>
+<h2>Since</h2>
+<p>1.40</p>
 <p>Allows the user to change the input values with predefined increments (steps).</p>
 <p>Overview:</p>
 <p>The <code>StepInput</code> consists of an input field and buttons with icons to increase/decrease the value.</p>
@@ -73,8 +75,6 @@ is entered from the input which is greater/less than the max/min.</p>
 a greater precision, the value will be rounded.</p>
 <p>This restriction comes from JavaScript itself and it cannot be worked around in a feasible way.</p>
 <p><strong>Note:</strong> Formatting of decimal numbers is browser dependent, regardless of framework number formatting.</p>
-<h2>Since</h2>
-<p>1.40</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></li>
@@ -228,7 +228,6 @@ otherwise it will be bound to this <code>sap.m.StepInput</code> itself.</p>
 <blockquote>
 <p><strong>fireChange</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
-<p>Fires event #event:change change to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/StepInput$ChangeEventParameters.html"><code>StepInput$ChangeEventParameters</code></a></p>
@@ -238,6 +237,7 @@ otherwise it will be bound to this <code>sap.m.StepInput</code> itself.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:change change to attached listeners.</p>
 <hr>
 <h3>getAriaDescribedBy()</h3>
 <blockquote>
@@ -259,28 +259,28 @@ otherwise it will be bound to this <code>sap.m.StepInput</code> itself.</p>
 <blockquote>
 <p><strong>getDescription</strong>(): <code>string</code></p>
 </blockquote>
-<p>Gets current value of property #getDescription description.</p>
-<p>Determines the description text after the input field, for example units of measurement, currencies.</p>
 <h4>Returns</h4>
 <p><code>string</code></p>
 <p>Value of property <code>description</code></p>
 <h4>Since</h4>
 <p>1.54</p>
+<p>Gets current value of property #getDescription description.</p>
+<p>Determines the description text after the input field, for example units of measurement, currencies.</p>
 <hr>
 <h3>getDisplayValuePrecision()</h3>
 <blockquote>
 <p><strong>getDisplayValuePrecision</strong>(): <code>number</code></p>
 </blockquote>
-<p>Gets current value of property #getDisplayValuePrecision displayValuePrecision.</p>
-<p>Determines the number of digits after the decimal point.</p>
-<p>The value should be between 0 (default) and 20. In case the value is not valid it will be set to the
-default value.</p>
-<p>Default value is <code>0</code>.</p>
 <h4>Returns</h4>
 <p><code>number</code></p>
 <p>Value of property <code>displayValuePrecision</code></p>
 <h4>Since</h4>
 <p>1.46</p>
+<p>Gets current value of property #getDisplayValuePrecision displayValuePrecision.</p>
+<p>Determines the number of digits after the decimal point.</p>
+<p>The value should be between 0 (default) and 20. In case the value is not valid it will be set to the
+default value.</p>
+<p>Default value is <code>0</code>.</p>
 <hr>
 <h3>getEditable()</h3>
 <blockquote>
@@ -310,16 +310,16 @@ focused and they are out of the tab-chain.</p>
 <blockquote>
 <p><strong>getFieldWidth</strong>(): <code>string</code></p>
 </blockquote>
-<p>Gets current value of property #getFieldWidth fieldWidth.</p>
-<p>Determines the distribution of space between the input field and the description text . Default value
-is 50% (leaving the other 50% for the description).</p>
-<p><strong>Note:</strong> This property takes effect only if the <code>description</code> property is also set.</p>
-<p>Default value is <code>&#39;50%&#39;</code>.</p>
 <h4>Returns</h4>
 <p><code>string</code></p>
 <p>Value of property <code>fieldWidth</code></p>
 <h4>Since</h4>
 <p>1.54</p>
+<p>Gets current value of property #getFieldWidth fieldWidth.</p>
+<p>Determines the distribution of space between the input field and the description text . Default value
+is 50% (leaving the other 50% for the description).</p>
+<p><strong>Note:</strong> This property takes effect only if the <code>description</code> property is also set.</p>
+<p>Default value is <code>&#39;50%&#39;</code>.</p>
 <hr>
 <h3>getIdForLabel()</h3>
 <blockquote>
@@ -369,40 +369,40 @@ keys. Default value is 2 times larger than the set step.</p>
 <blockquote>
 <p><strong>getName</strong>(): <code>string</code></p>
 </blockquote>
-<p>Gets current value of property #getName name.</p>
-<p>Defines the name of the control for the purposes of form submission.</p>
 <h4>Returns</h4>
 <p><code>string</code></p>
 <p>Value of property <code>name</code></p>
 <h4>Since</h4>
 <p>1.44.15</p>
+<p>Gets current value of property #getName name.</p>
+<p>Defines the name of the control for the purposes of form submission.</p>
 <hr>
 <h3>getPlaceholder()</h3>
 <blockquote>
 <p><strong>getPlaceholder</strong>(): <code>string</code></p>
 </blockquote>
-<p>Gets current value of property #getPlaceholder placeholder.</p>
-<p>Defines a short hint intended to aid the user with data entry when the control has no value.</p>
 <h4>Returns</h4>
 <p><code>string</code></p>
 <p>Value of property <code>placeholder</code></p>
 <h4>Since</h4>
 <p>1.44.15</p>
+<p>Gets current value of property #getPlaceholder placeholder.</p>
+<p>Defines a short hint intended to aid the user with data entry when the control has no value.</p>
 <hr>
 <h3>getRequired()</h3>
 <blockquote>
 <p><strong>getRequired</strong>(): <code>boolean</code></p>
 </blockquote>
-<p>Gets current value of property #getRequired required.</p>
-<p>Indicates that user input is required. This property is only needed for accessibility purposes when a
-single relationship between the field and a label (see aggregation <code>labelFor</code> of <code>sap.m.Label</code>) cannot
-be established (e.g. one label should label multiple fields).</p>
-<p>Default value is <code>false</code>.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>Value of property <code>required</code></p>
 <h4>Since</h4>
 <p>1.44.15</p>
+<p>Gets current value of property #getRequired required.</p>
+<p>Indicates that user input is required. This property is only needed for accessibility purposes when a
+single relationship between the field and a label (see aggregation <code>labelFor</code> of <code>sap.m.Label</code>) cannot
+be established (e.g. one label should label multiple fields).</p>
+<p>Default value is <code>false</code>.</p>
 <hr>
 <h3>getStep()</h3>
 <blockquote>
@@ -427,43 +427,43 @@ be established (e.g. one label should label multiple fields).</p>
 <blockquote>
 <p><strong>getStepMode</strong>(): <a href="../../library/enumerations/StepInputStepModeType.html"><code>StepInputStepModeType</code></a> | <code>&quot;AdditionAndSubtraction&quot;</code> | <code>&quot;Multiple&quot;</code></p>
 </blockquote>
+<h4>Returns</h4>
+<p><a href="../../library/enumerations/StepInputStepModeType.html"><code>StepInputStepModeType</code></a> | <code>&quot;AdditionAndSubtraction&quot;</code> | <code>&quot;Multiple&quot;</code></p>
+<p>Value of property <code>stepMode</code></p>
+<h4>Since</h4>
+<p>1.54</p>
 <p>Gets current value of property #getStepMode stepMode.</p>
 <p>Defines the calculation mode for the provided <code>step</code> and <code>largerStep</code>.</p>
 <p>If the user increases/decreases the value by <code>largerStep</code>, this calculation will consider it as well.
 For example, if the current <code>value</code> is 3, <code>step</code> is 5, <code>largerStep</code> is 5 and the user chooses PageUp,
 the calculation logic will consider the value of 3x5=15 to decide what will be the next <code>value</code>.</p>
 <p>Default value is <code>AdditionAndSubtraction</code>.</p>
-<h4>Returns</h4>
-<p><a href="../../library/enumerations/StepInputStepModeType.html"><code>StepInputStepModeType</code></a> | <code>&quot;AdditionAndSubtraction&quot;</code> | <code>&quot;Multiple&quot;</code></p>
-<p>Value of property <code>stepMode</code></p>
-<h4>Since</h4>
-<p>1.54</p>
 <hr>
 <h3>getTextAlign()</h3>
 <blockquote>
 <p><strong>getTextAlign</strong>(): <code>&quot;Begin&quot;</code> | <code>&quot;End&quot;</code> | <code>&quot;Left&quot;</code> | <code>&quot;Right&quot;</code> | <a href="../../../../../sap.ui.core/sap/ui/core/library/enumerations/TextAlign.html"><code>TextAlign</code></a> | <code>&quot;Center&quot;</code> | <code>&quot;Initial&quot;</code></p>
 </blockquote>
-<p>Gets current value of property #getTextAlign textAlign.</p>
-<p>Defines the horizontal alignment of the text that is displayed inside the input field.</p>
-<p>Default value is <code>End</code>.</p>
 <h4>Returns</h4>
 <p><code>&quot;Begin&quot;</code> | <code>&quot;End&quot;</code> | <code>&quot;Left&quot;</code> | <code>&quot;Right&quot;</code> | <a href="../../../../../sap.ui.core/sap/ui/core/library/enumerations/TextAlign.html"><code>TextAlign</code></a> | <code>&quot;Center&quot;</code> | <code>&quot;Initial&quot;</code></p>
 <p>Value of property <code>textAlign</code></p>
 <h4>Since</h4>
 <p>1.54</p>
+<p>Gets current value of property #getTextAlign textAlign.</p>
+<p>Defines the horizontal alignment of the text that is displayed inside the input field.</p>
+<p>Default value is <code>End</code>.</p>
 <hr>
 <h3>getValidationMode()</h3>
 <blockquote>
 <p><strong>getValidationMode</strong>(): <a href="../../library/enumerations/StepInputValidationMode.html"><code>StepInputValidationMode</code></a> | <code>&quot;FocusOut&quot;</code> | <code>&quot;LiveChange&quot;</code></p>
 </blockquote>
-<p>Gets current value of property #getValidationMode validationMode.</p>
-<p>Defines when the validation of the typed value will happen. By default this happens on focus out.</p>
-<p>Default value is <code>FocusOut</code>.</p>
 <h4>Returns</h4>
 <p><a href="../../library/enumerations/StepInputValidationMode.html"><code>StepInputValidationMode</code></a> | <code>&quot;FocusOut&quot;</code> | <code>&quot;LiveChange&quot;</code></p>
 <p>Value of property <code>validationMode</code></p>
 <h4>Since</h4>
 <p>1.54</p>
+<p>Gets current value of property #getValidationMode validationMode.</p>
+<p>Defines when the validation of the typed value will happen. By default this happens on focus out.</p>
+<p>Default value is <code>FocusOut</code>.</p>
 <hr>
 <h3>getValue()</h3>
 <blockquote>
@@ -492,13 +492,13 @@ ValueState is managed internally only when validation is triggered by user inter
 <blockquote>
 <p><strong>getValueStateText</strong>(): <code>string</code></p>
 </blockquote>
-<p>Gets current value of property #getValueStateText valueStateText.</p>
-<p>Defines the text that appears in the value state message pop-up.</p>
 <h4>Returns</h4>
 <p><code>string</code></p>
 <p>Value of property <code>valueStateText</code></p>
 <h4>Since</h4>
 <p>1.52</p>
+<p>Gets current value of property #getValueStateText valueStateText.</p>
+<p>Defines the text that appears in the value state message pop-up.</p>
 <hr>
 <h3>getWidth()</h3>
 <blockquote>
@@ -558,9 +558,6 @@ ValueState is managed internally only when validation is triggered by user inter
 <blockquote>
 <p><strong>setDescription</strong>(<code>sDescription?</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getDescription description.</p>
-<p>Determines the description text after the input field, for example units of measurement, currencies.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <h4>Parameters</h4>
 <h5>sDescription?</h5>
 <p><code>string</code></p>
@@ -570,17 +567,14 @@ ValueState is managed internally only when validation is triggered by user inter
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.54</p>
+<p>Sets a new value for property #getDescription description.</p>
+<p>Determines the description text after the input field, for example units of measurement, currencies.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <hr>
 <h3>setDisplayValuePrecision()</h3>
 <blockquote>
 <p><strong>setDisplayValuePrecision</strong>(<code>iDisplayValuePrecision?</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getDisplayValuePrecision displayValuePrecision.</p>
-<p>Determines the number of digits after the decimal point.</p>
-<p>The value should be between 0 (default) and 20. In case the value is not valid it will be set to the
-default value.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>0</code>.</p>
 <h4>Parameters</h4>
 <h5>iDisplayValuePrecision?</h5>
 <p><code>number</code></p>
@@ -590,6 +584,12 @@ default value.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.46</p>
+<p>Sets a new value for property #getDisplayValuePrecision displayValuePrecision.</p>
+<p>Determines the number of digits after the decimal point.</p>
+<p>The value should be between 0 (default) and 20. In case the value is not valid it will be set to the
+default value.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>0</code>.</p>
 <hr>
 <h3>setEditable()</h3>
 <blockquote>
@@ -629,12 +629,6 @@ focused and they are out of the tab-chain.</p>
 <blockquote>
 <p><strong>setFieldWidth</strong>(<code>sFieldWidth?</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getFieldWidth fieldWidth.</p>
-<p>Determines the distribution of space between the input field and the description text . Default value
-is 50% (leaving the other 50% for the description).</p>
-<p><strong>Note:</strong> This property takes effect only if the <code>description</code> property is also set.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>&#39;50%&#39;</code>.</p>
 <h4>Parameters</h4>
 <h5>sFieldWidth?</h5>
 <p><code>string</code></p>
@@ -644,6 +638,12 @@ is 50% (leaving the other 50% for the description).</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.54</p>
+<p>Sets a new value for property #getFieldWidth fieldWidth.</p>
+<p>Determines the distribution of space between the input field and the description text . Default value
+is 50% (leaving the other 50% for the description).</p>
+<p><strong>Note:</strong> This property takes effect only if the <code>description</code> property is also set.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>&#39;50%&#39;</code>.</p>
 <hr>
 <h3>setLargerStep()</h3>
 <blockquote>
@@ -666,9 +666,6 @@ keys. Default value is 2 times larger than the set step.</p>
 <blockquote>
 <p><strong>setName</strong>(<code>sName?</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getName name.</p>
-<p>Defines the name of the control for the purposes of form submission.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <h4>Parameters</h4>
 <h5>sName?</h5>
 <p><code>string</code></p>
@@ -678,14 +675,14 @@ keys. Default value is 2 times larger than the set step.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.44.15</p>
+<p>Sets a new value for property #getName name.</p>
+<p>Defines the name of the control for the purposes of form submission.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <hr>
 <h3>setPlaceholder()</h3>
 <blockquote>
 <p><strong>setPlaceholder</strong>(<code>sPlaceholder?</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getPlaceholder placeholder.</p>
-<p>Defines a short hint intended to aid the user with data entry when the control has no value.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <h4>Parameters</h4>
 <h5>sPlaceholder?</h5>
 <p><code>string</code></p>
@@ -695,17 +692,14 @@ keys. Default value is 2 times larger than the set step.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.44.15</p>
+<p>Sets a new value for property #getPlaceholder placeholder.</p>
+<p>Defines a short hint intended to aid the user with data entry when the control has no value.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <hr>
 <h3>setRequired()</h3>
 <blockquote>
 <p><strong>setRequired</strong>(<code>bRequired?</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getRequired required.</p>
-<p>Indicates that user input is required. This property is only needed for accessibility purposes when a
-single relationship between the field and a label (see aggregation <code>labelFor</code> of <code>sap.m.Label</code>) cannot
-be established (e.g. one label should label multiple fields).</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>false</code>.</p>
 <h4>Parameters</h4>
 <h5>bRequired?</h5>
 <p><code>boolean</code></p>
@@ -715,6 +709,12 @@ be established (e.g. one label should label multiple fields).</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.44.15</p>
+<p>Sets a new value for property #getRequired required.</p>
+<p>Indicates that user input is required. This property is only needed for accessibility purposes when a
+single relationship between the field and a label (see aggregation <code>labelFor</code> of <code>sap.m.Label</code>) cannot
+be established (e.g. one label should label multiple fields).</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>false</code>.</p>
 <hr>
 <h3>setStep()</h3>
 <blockquote>
@@ -744,13 +744,6 @@ be established (e.g. one label should label multiple fields).</p>
 <blockquote>
 <p><strong>setStepMode</strong>(<code>sStepMode?</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getStepMode stepMode.</p>
-<p>Defines the calculation mode for the provided <code>step</code> and <code>largerStep</code>.</p>
-<p>If the user increases/decreases the value by <code>largerStep</code>, this calculation will consider it as well.
-For example, if the current <code>value</code> is 3, <code>step</code> is 5, <code>largerStep</code> is 5 and the user chooses PageUp,
-the calculation logic will consider the value of 3x5=15 to decide what will be the next <code>value</code>.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>AdditionAndSubtraction</code>.</p>
 <h4>Parameters</h4>
 <h5>sStepMode?</h5>
 <p><a href="../../library/enumerations/StepInputStepModeType.html"><code>StepInputStepModeType</code></a> | <code>&quot;AdditionAndSubtraction&quot;</code> | <code>&quot;Multiple&quot;</code></p>
@@ -760,15 +753,18 @@ the calculation logic will consider the value of 3x5=15 to decide what will be t
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.54</p>
+<p>Sets a new value for property #getStepMode stepMode.</p>
+<p>Defines the calculation mode for the provided <code>step</code> and <code>largerStep</code>.</p>
+<p>If the user increases/decreases the value by <code>largerStep</code>, this calculation will consider it as well.
+For example, if the current <code>value</code> is 3, <code>step</code> is 5, <code>largerStep</code> is 5 and the user chooses PageUp,
+the calculation logic will consider the value of 3x5=15 to decide what will be the next <code>value</code>.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>AdditionAndSubtraction</code>.</p>
 <hr>
 <h3>setTextAlign()</h3>
 <blockquote>
 <p><strong>setTextAlign</strong>(<code>sTextAlign?</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getTextAlign textAlign.</p>
-<p>Defines the horizontal alignment of the text that is displayed inside the input field.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>End</code>.</p>
 <h4>Parameters</h4>
 <h5>sTextAlign?</h5>
 <p><code>&quot;Begin&quot;</code> | <code>&quot;End&quot;</code> | <code>&quot;Left&quot;</code> | <code>&quot;Right&quot;</code> | <a href="../../../../../sap.ui.core/sap/ui/core/library/enumerations/TextAlign.html"><code>TextAlign</code></a> | <code>&quot;Center&quot;</code> | <code>&quot;Initial&quot;</code></p>
@@ -778,6 +774,10 @@ the calculation logic will consider the value of 3x5=15 to decide what will be t
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.54</p>
+<p>Sets a new value for property #getTextAlign textAlign.</p>
+<p>Defines the horizontal alignment of the text that is displayed inside the input field.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>End</code>.</p>
 <hr>
 <h3>setValue()</h3>
 <blockquote>
@@ -816,9 +816,6 @@ ValueState is managed internally only when validation is triggered by user inter
 <blockquote>
 <p><strong>setValueStateText</strong>(<code>sValueStateText?</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getValueStateText valueStateText.</p>
-<p>Defines the text that appears in the value state message pop-up.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <h4>Parameters</h4>
 <h5>sValueStateText?</h5>
 <p><code>string</code></p>
@@ -828,6 +825,9 @@ ValueState is managed internally only when validation is triggered by user inter
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.52</p>
+<p>Sets a new value for property #getValueStateText valueStateText.</p>
+<p>Defines the text that appears in the value state message pop-up.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <hr>
 <h3>setWidth()</h3>
 <blockquote>
@@ -859,7 +859,7 @@ contained in <code>oClassInfo</code>.</p>
 <p><code>string</code></p>
 <p>Name of the class being created</p>
 <h5>oClassInfo?</h5>
-<p><a href="../../../../../sap.f/namespaces/sap/type-aliases/ClassInfo.html"><code>ClassInfo</code></a>&lt;<code>T</code>, <code>StepInput</code>&gt;</p>
+<p><code>ClassInfo</code>&lt;<code>T</code>, <code>StepInput</code>&gt;</p>
 <p>Object literal with information about the class</p>
 <h5>FNMetaImpl?</h5>
 <p><code>Function</code></p>
@@ -883,6 +883,6 @@ used by this class</p>
 <p><a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a>.<a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html#getmetadata-1"><code>getMetadata</code></a></p>
 <hr>
 
-<footer>Generated from <code>@openui5/types@1.120.46</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@openui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

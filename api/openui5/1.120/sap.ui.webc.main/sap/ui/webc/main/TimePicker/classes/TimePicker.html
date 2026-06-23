@@ -2,12 +2,12 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>~~Class: TimePicker~~ — OpenUI5 TypeScript API</title>
-<meta name="description" content="~~Class: TimePicker~~ — OpenUI5 TypeScript API Reference (1.120.46)">
+<title>Class: TimePicker — OpenUI5 TypeScript API</title>
+<meta name="description" content="Class: TimePicker — OpenUI5 TypeScript API Reference (1.120.0)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/openui5/1.120/sap.ui.webc.main/sap/ui/webc/main/TimePicker/classes/TimePicker.html">
-<meta property="og:title" content="~~Class: TimePicker~~ — OpenUI5 TypeScript API">
-<meta property="og:description" content="~~Class: TimePicker~~ — OpenUI5 TypeScript API Reference (1.120.46)">
+<meta property="og:title" content="Class: TimePicker — OpenUI5 TypeScript API">
+<meta property="og:description" content="Class: TimePicker — OpenUI5 TypeScript API Reference (1.120.0)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/openui5/1.120/sap.ui.webc.main/sap/ui/webc/main/TimePicker/classes/TimePicker.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,12 +33,15 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../../index.html">OpenUI5 API</a> › <a href="../../../../../../../sap.ui.webc.main/README.html">sap.ui.webc.main</a> › sap › ui › webc › main › <a href="../../../../../../../sap.ui.webc.main/sap/ui/webc/main/TimePicker/README.html">TimePicker</a> › classes</nav>
-<p><a href="../../../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.46)</strong></a></p>
+<p><a href="../../../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.0)</strong></a></p>
 <hr>
-<p><a href="../../../../../../../README.html">OpenUI5 TypeScript API (1.120.46)</a> / <a href="../../../../../../README.html">sap.ui.webc.main</a> / <a href="../README.html">sap/ui/webc/main/TimePicker</a> / TimePicker</p>
-<h1><del>Class: TimePicker</del></h1>
+<p><a href="../../../../../../../README.html">OpenUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../../README.html">sap.ui.webc.main</a> / <a href="../README.html">sap/ui/webc/main/TimePicker</a> / TimePicker</p>
+<h1>Class: TimePicker</h1>
 <pre class="sig"><span class="kw">import</span> TimePicker <span class="kw">from</span> <span class="str">"sap/ui/webc/main/TimePicker"</span>;</pre>
 <p><strong><code>Experimental</code></strong></p>
+<h2>Since</h2>
+<p>1.92.0
+ (since 1.92.0) - This control is experimental and its API might change significantly.</p>
 <p>Overview: The <code>sap.ui.webc.main.TimePicker</code> component provides an input field with assigned clocks which
 are opened on user action. The <code>sap.ui.webc.main.TimePicker</code> allows users to select a localized time
 using touch, mouse, or keyboard input. It consists of two parts: the time input field and the clocks.</p>
@@ -75,13 +78,6 @@ is displayed in the input.</p>
 	 - [0]-[9] - Allows direct time selecting (hours/minutes/seconds).
 	 - [:] - Allows switching between hours/minutes/seconds clocks. If the last clock is displayed and [:]
     is pressed, the first clock is beind displayed.</p>
-<h2>Since</h2>
-<p>1.92.0</p>
-<h2>Deprecated</h2>
-<p>(since 1.120) - this Web Components consumption model has been discarded. Until an alternative
-Web Components consumption model is available in the future, use sap.m and sap.f controls with similar
-functionality.
- (since 1.92.0) - This control is experimental and its API might change significantly.</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../../../../../../sap.ui.core/sap/ui/core/webc/WebComponent/classes/WebComponent.html"><code>WebComponent</code></a></li>
@@ -129,7 +125,7 @@ of the syntax of the settings object.</p>
 <h4>Overrides</h4>
 <p><a href="../../../../../../../sap.ui.core/sap/ui/core/webc/WebComponent/classes/WebComponent.html"><code>WebComponent</code></a>.<a href="../../../../../../../sap.ui.core/sap/ui/core/webc/WebComponent/classes/WebComponent.html#constructor"><code>constructor</code></a></p>
 <h2>Properties</h2>
-<h3><del>__implements__sap_ui_core_IFormContent</del></h3>
+<h3>__implements__sap_ui_core_IFormContent</h3>
 <blockquote>
 <p><strong>__implements__sap_ui_core_IFormContent</strong>: <code>boolean</code></p>
 </blockquote>
@@ -137,7 +133,7 @@ of the syntax of the settings object.</p>
 <h4>Implementation of</h4>
 <p><a href="../../../../../../../sap.ui.core/sap/ui/core/library/interfaces/IFormContent.html"><code>IFormContent</code></a>.<a href="../../../../../../../sap.ui.core/sap/ui/core/library/interfaces/IFormContent.html#__implements__sap_ui_core_iformcontent"><code>__implements__sap_ui_core_IFormContent</code></a></p>
 <hr>
-<h3><del>attachChange()</del></h3>
+<h3>attachChange()</h3>
 <h4>Call Signature</h4>
 <blockquote>
 <p><strong>attachChange</strong>(<code>oData</code>, <code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
@@ -183,7 +179,7 @@ field has changed and the focus leaves the input field.</p>
 <p><code>this</code></p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <hr>
-<h3><del>attachInput()</del></h3>
+<h3>attachInput()</h3>
 <h4>Call Signature</h4>
 <blockquote>
 <p><strong>attachInput</strong>(<code>oData</code>, <code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
@@ -227,7 +223,7 @@ otherwise it will be bound to this <code>sap.ui.webc.main.TimePicker</code> itse
 <p><code>this</code></p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <hr>
-<h3><del>closePicker()</del></h3>
+<h3>closePicker()</h3>
 <blockquote>
 <p><strong>closePicker</strong>(): <code>void</code></p>
 </blockquote>
@@ -236,7 +232,7 @@ otherwise it will be bound to this <code>sap.ui.webc.main.TimePicker</code> itse
 <h4>Returns</h4>
 <p><code>void</code></p>
 <hr>
-<h3><del>detachChange()</del></h3>
+<h3>detachChange()</h3>
 <blockquote>
 <p><strong>detachChange</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
@@ -254,7 +250,7 @@ otherwise it will be bound to this <code>sap.ui.webc.main.TimePicker</code> itse
 <p><code>this</code></p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <hr>
-<h3><del>detachInput()</del></h3>
+<h3>detachInput()</h3>
 <blockquote>
 <p><strong>detachInput</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
@@ -272,12 +268,11 @@ otherwise it will be bound to this <code>sap.ui.webc.main.TimePicker</code> itse
 <p><code>this</code></p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <hr>
-<h3><del>fireChange()</del></h3>
+<h3>fireChange()</h3>
 <blockquote>
 <p><strong>fireChange</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
-<p>Fires event #event:change change to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/TimePicker$ChangeEventParameters.html"><code>TimePicker$ChangeEventParameters</code></a></p>
@@ -287,13 +282,13 @@ otherwise it will be bound to this <code>sap.ui.webc.main.TimePicker</code> itse
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:change change to attached listeners.</p>
 <hr>
-<h3><del>fireInput()</del></h3>
+<h3>fireInput()</h3>
 <blockquote>
 <p><strong>fireInput</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
-<p>Fires event #event:input input to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/TimePicker$InputEventParameters.html"><code>TimePicker$InputEventParameters</code></a></p>
@@ -303,8 +298,9 @@ otherwise it will be bound to this <code>sap.ui.webc.main.TimePicker</code> itse
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:input input to attached listeners.</p>
 <hr>
-<h3><del>formatValue()</del></h3>
+<h3>formatValue()</h3>
 <blockquote>
 <p><strong>formatValue</strong>(<code>date</code>): <code>void</code></p>
 </blockquote>
@@ -318,7 +314,7 @@ otherwise it will be bound to this <code>sap.ui.webc.main.TimePicker</code> itse
 <h4>Returns</h4>
 <p><code>void</code></p>
 <hr>
-<h3><del>getDateValue()</del></h3>
+<h3>getDateValue()</h3>
 <blockquote>
 <p><strong>getDateValue</strong>(): <code>void</code></p>
 </blockquote>
@@ -327,7 +323,7 @@ otherwise it will be bound to this <code>sap.ui.webc.main.TimePicker</code> itse
 <h4>Returns</h4>
 <p><code>void</code></p>
 <hr>
-<h3><del>getEnabled()</del></h3>
+<h3>getEnabled()</h3>
 <blockquote>
 <p><strong>getEnabled</strong>(): <code>boolean</code></p>
 </blockquote>
@@ -340,7 +336,7 @@ the tab chain.</p>
 <p><code>boolean</code></p>
 <p>Value of property <code>enabled</code></p>
 <hr>
-<h3><del>getFormatPattern()</del></h3>
+<h3>getFormatPattern()</h3>
 <blockquote>
 <p><strong>getFormatPattern</strong>(): <code>string</code></p>
 </blockquote>
@@ -353,7 +349,7 @@ the tab chain.</p>
 <p><code>string</code></p>
 <p>Value of property <code>formatPattern</code></p>
 <hr>
-<h3><del>getPlaceholder()</del></h3>
+<h3>getPlaceholder()</h3>
 <blockquote>
 <p><strong>getPlaceholder</strong>(): <code>string</code></p>
 </blockquote>
@@ -368,7 +364,7 @@ pattern.</p>
 <p><code>string</code></p>
 <p>Value of property <code>placeholder</code></p>
 <hr>
-<h3><del>getReadonly()</del></h3>
+<h3>getReadonly()</h3>
 <blockquote>
 <p><strong>getReadonly</strong>(): <code>boolean</code></p>
 </blockquote>
@@ -380,7 +376,7 @@ pattern.</p>
 <p><code>boolean</code></p>
 <p>Value of property <code>readonly</code></p>
 <hr>
-<h3><del>getValue()</del></h3>
+<h3>getValue()</h3>
 <blockquote>
 <p><strong>getValue</strong>(): <code>string</code></p>
 </blockquote>
@@ -392,7 +388,7 @@ pattern.</p>
 <p><code>string</code></p>
 <p>Value of property <code>value</code></p>
 <hr>
-<h3><del>getValueState()</del></h3>
+<h3>getValueState()</h3>
 <blockquote>
 <p><strong>getValueState</strong>(): <code>&quot;None&quot;</code> | <a href="../../../../../../../sap.ui.core/sap/ui/core/library/enumerations/ValueState.html"><code>ValueState</code></a> | <code>&quot;Error&quot;</code> | <code>&quot;Information&quot;</code> | <code>&quot;Success&quot;</code> | <code>&quot;Warning&quot;</code></p>
 </blockquote>
@@ -410,7 +406,7 @@ pattern.</p>
 <p><code>&quot;None&quot;</code> | <a href="../../../../../../../sap.ui.core/sap/ui/core/library/enumerations/ValueState.html"><code>ValueState</code></a> | <code>&quot;Error&quot;</code> | <code>&quot;Information&quot;</code> | <code>&quot;Success&quot;</code> | <code>&quot;Warning&quot;</code></p>
 <p>Value of property <code>valueState</code></p>
 <hr>
-<h3><del>getValueStateMessage()</del></h3>
+<h3>getValueStateMessage()</h3>
 <blockquote>
 <p><strong>getValueStateMessage</strong>(): <code>string</code></p>
 </blockquote>
@@ -423,7 +419,7 @@ pattern.</p>
 <p><code>string</code></p>
 <p>Value of property <code>valueStateMessage</code></p>
 <hr>
-<h3><del>getWidth()</del></h3>
+<h3>getWidth()</h3>
 <blockquote>
 <p><strong>getWidth</strong>(): <code>string</code></p>
 </blockquote>
@@ -434,7 +430,7 @@ pattern.</p>
 <p><code>string</code></p>
 <p>Value of property <code>width</code></p>
 <hr>
-<h3><del>isOpen()</del></h3>
+<h3>isOpen()</h3>
 <blockquote>
 <p><strong>isOpen</strong>(): <code>void</code></p>
 </blockquote>
@@ -443,7 +439,7 @@ pattern.</p>
 <h4>Returns</h4>
 <p><code>void</code></p>
 <hr>
-<h3><del>isValid()</del></h3>
+<h3>isValid()</h3>
 <blockquote>
 <p><strong>isValid</strong>(<code>value</code>): <code>void</code></p>
 </blockquote>
@@ -457,7 +453,7 @@ pattern.</p>
 <h4>Returns</h4>
 <p><code>void</code></p>
 <hr>
-<h3><del>openPicker()</del></h3>
+<h3>openPicker()</h3>
 <blockquote>
 <p><strong>openPicker</strong>(): <code>void</code></p>
 </blockquote>
@@ -466,7 +462,7 @@ pattern.</p>
 <h4>Returns</h4>
 <p><code>void</code></p>
 <hr>
-<h3><del>setEnabled()</del></h3>
+<h3>setEnabled()</h3>
 <blockquote>
 <p><strong>setEnabled</strong>(<code>bEnabled?</code>): <code>this</code></p>
 </blockquote>
@@ -484,7 +480,7 @@ the tab chain.</p>
 <p><code>this</code></p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <hr>
-<h3><del>setFormatPattern()</del></h3>
+<h3>setFormatPattern()</h3>
 <blockquote>
 <p><strong>setFormatPattern</strong>(<code>sFormatPattern?</code>): <code>this</code></p>
 </blockquote>
@@ -502,7 +498,7 @@ the tab chain.</p>
 <p><code>this</code></p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <hr>
-<h3><del>setPlaceholder()</del></h3>
+<h3>setPlaceholder()</h3>
 <blockquote>
 <p><strong>setPlaceholder</strong>(<code>sPlaceholder?</code>): <code>this</code></p>
 </blockquote>
@@ -522,7 +518,7 @@ pattern.</p>
 <p><code>this</code></p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <hr>
-<h3><del>setReadonly()</del></h3>
+<h3>setReadonly()</h3>
 <blockquote>
 <p><strong>setReadonly</strong>(<code>bReadonly?</code>): <code>this</code></p>
 </blockquote>
@@ -539,7 +535,7 @@ pattern.</p>
 <p><code>this</code></p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <hr>
-<h3><del>setValue()</del></h3>
+<h3>setValue()</h3>
 <blockquote>
 <p><strong>setValue</strong>(<code>sValue?</code>): <code>this</code></p>
 </blockquote>
@@ -556,7 +552,7 @@ pattern.</p>
 <p><code>this</code></p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <hr>
-<h3><del>setValueState()</del></h3>
+<h3>setValueState()</h3>
 <blockquote>
 <p><strong>setValueState</strong>(<code>sValueState?</code>): <code>this</code></p>
 </blockquote>
@@ -579,7 +575,7 @@ pattern.</p>
 <p><code>this</code></p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <hr>
-<h3><del>setValueStateMessage()</del></h3>
+<h3>setValueStateMessage()</h3>
 <blockquote>
 <p><strong>setValueStateMessage</strong>(<code>sValueStateMessage?</code>): <code>this</code></p>
 </blockquote>
@@ -597,7 +593,7 @@ pattern.</p>
 <p><code>this</code></p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <hr>
-<h3><del>setWidth()</del></h3>
+<h3>setWidth()</h3>
 <blockquote>
 <p><strong>setWidth</strong>(<code>sWidth</code>): <code>this</code></p>
 </blockquote>
@@ -613,7 +609,7 @@ pattern.</p>
 <p><code>this</code></p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <hr>
-<h3><del>extend()</del></h3>
+<h3>extend()</h3>
 <blockquote>
 <p><code>static</code> <strong>extend</strong>&lt;<code>T</code>&gt;(<code>sClassName</code>, <code>oClassInfo?</code>, <code>FNMetaImpl?</code>): <code>Function</code></p>
 </blockquote>
@@ -629,7 +625,7 @@ the information contained in <code>oClassInfo</code>.</p>
 <p><code>string</code></p>
 <p>Name of the class being created</p>
 <h5>oClassInfo?</h5>
-<p><a href="../../../../../../../sap.f/namespaces/sap/type-aliases/ClassInfo.html"><code>ClassInfo</code></a>&lt;<code>T</code>, <code>TimePicker</code>&gt;</p>
+<p><code>ClassInfo</code>&lt;<code>T</code>, <code>TimePicker</code>&gt;</p>
 <p>Object literal with information about the class</p>
 <h5>FNMetaImpl?</h5>
 <p><code>Function</code></p>
@@ -641,7 +637,7 @@ used by this class</p>
 <h4>Overrides</h4>
 <p><a href="../../../../../../../sap.ui.core/sap/ui/core/webc/WebComponent/classes/WebComponent.html"><code>WebComponent</code></a>.<a href="../../../../../../../sap.ui.core/sap/ui/core/webc/WebComponent/classes/WebComponent.html#extend"><code>extend</code></a></p>
 <hr>
-<h3><del>getMetadata()</del></h3>
+<h3>getMetadata()</h3>
 <blockquote>
 <p><code>static</code> <strong>getMetadata</strong>(): <a href="../../../../../../../sap.ui.core/sap/ui/core/webc/WebComponentMetadata/classes/WebComponentMetadata.html"><code>WebComponentMetadata</code></a></p>
 </blockquote>
@@ -654,6 +650,6 @@ used by this class</p>
 <p><a href="../../../../../../../sap.ui.core/sap/ui/core/webc/WebComponent/classes/WebComponent.html"><code>WebComponent</code></a>.<a href="../../../../../../../sap.ui.core/sap/ui/core/webc/WebComponent/classes/WebComponent.html#getmetadata-1"><code>getMetadata</code></a></p>
 <hr>
 
-<footer>Generated from <code>@openui5/types@1.120.46</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@openui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

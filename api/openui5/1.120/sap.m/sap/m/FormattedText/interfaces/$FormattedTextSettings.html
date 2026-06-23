@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Interface: $FormattedTextSettings — OpenUI5 TypeScript API</title>
-<meta name="description" content="Interface: $FormattedTextSettings — OpenUI5 TypeScript API Reference (1.120.46)">
+<meta name="description" content="Interface: $FormattedTextSettings — OpenUI5 TypeScript API Reference (1.120.0)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/openui5/1.120/sap.m/sap/m/FormattedText/interfaces/$FormattedTextSettings.html">
 <meta property="og:title" content="Interface: $FormattedTextSettings — OpenUI5 TypeScript API">
-<meta property="og:description" content="Interface: $FormattedTextSettings — OpenUI5 TypeScript API Reference (1.120.46)">
+<meta property="og:description" content="Interface: $FormattedTextSettings — OpenUI5 TypeScript API Reference (1.120.0)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/openui5/1.120/sap.m/sap/m/FormattedText/interfaces/$FormattedTextSettings.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,12 +33,11 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../index.html">OpenUI5 API</a> › <a href="../../../../../sap.m/README.html">sap.m</a> › sap › m › <a href="../../../../../sap.m/sap/m/FormattedText/README.html">FormattedText</a> › interfaces</nav>
-<p><a href="../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.46)</strong></a></p>
+<p><a href="../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.0)</strong></a></p>
 <hr>
-<p><a href="../../../../../README.html">OpenUI5 TypeScript API (1.120.46)</a> / <a href="../../../../README.html">sap.m</a> / <a href="../README.html">sap/m/FormattedText</a> / $FormattedTextSettings</p>
+<p><a href="../../../../../README.html">OpenUI5 TypeScript API (1.120.0)</a> / <a href="../../../../README.html">sap.m</a> / <a href="../README.html">sap/m/FormattedText</a> / $FormattedTextSettings</p>
 <h1>Interface: $FormattedTextSettings</h1>
 <pre class="sig"><span class="kw">import</span> { $FormattedTextSettings } <span class="kw">from</span> <span class="str">"sap/m/FormattedText"</span>;</pre>
-<p>Describes the settings that can be provided to the FormattedText constructor.</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../../../../sap.ui.core/sap/ui/core/Control/interfaces/$ControlSettings.html"><code>$ControlSettings</code></a></li>
@@ -56,27 +55,21 @@ link in the aggregation, etc.</p>
 <blockquote>
 <p><code>optional</code> <strong>convertedLinksDefaultTarget?</strong>: <code>string</code> | <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a></p>
 </blockquote>
+<h4>Since</h4>
+<p>1.45.5</p>
 <p>Determines the <code>target</code> attribute of the generated HTML anchor tags.</p>
 <p><strong>Note:</strong> Applicable only if <code>ConvertLinksToAnchorTags</code> property is used with a value other than <code>sap.m.LinkConversion.None</code>.
 Options are the standard values for the <code>target</code> attribute of the HTML anchor tag: <code>_self</code>, <code>_top</code>, <code>_blank</code>,
 <code>_parent</code>, <code>_search</code>.</p>
-<h4>Since</h4>
-<p>1.45.5</p>
 <hr>
 <h3>convertLinksToAnchorTags?</h3>
 <blockquote>
 <p><code>optional</code> <strong>convertLinksToAnchorTags?</strong>: <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code> | <code>&quot;None&quot;</code> | <code>&quot;All&quot;</code> | <a href="../../library/enumerations/LinkConversion.html"><code>LinkConversion</code></a> | <code>&quot;ProtocolOnly&quot;</code></p>
 </blockquote>
-<p>Determines whether strings that appear to be links will be converted to HTML anchor tags, and what are
-the criteria for recognizing them.</p>
 <h4>Since</h4>
 <p>1.45.5</p>
-<hr>
-<h3>disableStyleAttribute?</h3>
-<blockquote>
-<p><code>optional</code> <strong>disableStyleAttribute?</strong>: <code>boolean</code> | <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
-</blockquote>
-<p>Disables rendering of the <code>style</code> attribute in the <code>FormattedText</code>.</p>
+<p>Determines whether strings that appear to be links will be converted to HTML anchor tags, and what are
+the criteria for recognizing them.</p>
 <hr>
 <h3>height?</h3>
 <blockquote>
@@ -122,22 +115,22 @@ by the control.</p>
 <blockquote>
 <p><code>optional</code> <strong>textAlign?</strong>: <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code> | <code>&quot;Begin&quot;</code> | <code>&quot;End&quot;</code> | <code>&quot;Left&quot;</code> | <code>&quot;Right&quot;</code> | <a href="../../../../../sap.ui.core/sap/ui/core/library/enumerations/TextAlign.html"><code>TextAlign</code></a> | <code>&quot;Center&quot;</code> | <code>&quot;Initial&quot;</code></p>
 </blockquote>
+<h4>Since</h4>
+<p>1.86.0</p>
 <p>Determines the text alignment in the text elements in the <code>FormattedText</code>.</p>
 <p><strong>Note:</strong> This functionality if set to the root element. To set explicit alignment to an element use
 the <code>style</code> attribute.</p>
-<h4>Since</h4>
-<p>1.86.0</p>
 <hr>
 <h3>textDirection?</h3>
 <blockquote>
 <p><code>optional</code> <strong>textDirection?</strong>: <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code> | <a href="../../../../../sap.ui.core/sap/ui/core/library/enumerations/TextDirection.html"><code>TextDirection</code></a> | <code>&quot;Inherit&quot;</code> | <code>&quot;LTR&quot;</code> | <code>&quot;RTL&quot;</code></p>
 </blockquote>
+<h4>Since</h4>
+<p>1.86.0</p>
 <p>Defines the directionality of the text in the <code>FormattedText</code>, e.g. right-to-left(<code>RTL</code>) or left-to-right
 (<code>LTR</code>).</p>
 <p><strong>Note:</strong> This functionality if set to the root element. Use the <code>bdi</code> element and the <code>dir</code> attribute
 to set explicit direction to an element.</p>
-<h4>Since</h4>
-<p>1.86.0</p>
 <hr>
 <h3>width?</h3>
 <blockquote>
@@ -145,6 +138,6 @@ to set explicit direction to an element.</p>
 </blockquote>
 <p>Optional width of the control in CSS units.</p>
 
-<footer>Generated from <code>@openui5/types@1.120.46</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@openui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

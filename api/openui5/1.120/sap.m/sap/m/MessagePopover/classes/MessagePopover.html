@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Class: MessagePopover — OpenUI5 TypeScript API</title>
-<meta name="description" content="Class: MessagePopover — OpenUI5 TypeScript API Reference (1.120.46)">
+<meta name="description" content="Class: MessagePopover — OpenUI5 TypeScript API Reference (1.120.0)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/openui5/1.120/sap.m/sap/m/MessagePopover/classes/MessagePopover.html">
 <meta property="og:title" content="Class: MessagePopover — OpenUI5 TypeScript API">
-<meta property="og:description" content="Class: MessagePopover — OpenUI5 TypeScript API Reference (1.120.46)">
+<meta property="og:description" content="Class: MessagePopover — OpenUI5 TypeScript API Reference (1.120.0)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/openui5/1.120/sap.m/sap/m/MessagePopover/classes/MessagePopover.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,11 +33,13 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../index.html">OpenUI5 API</a> › <a href="../../../../../sap.m/README.html">sap.m</a> › sap › m › <a href="../../../../../sap.m/sap/m/MessagePopover/README.html">MessagePopover</a> › classes</nav>
-<p><a href="../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.46)</strong></a></p>
+<p><a href="../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.0)</strong></a></p>
 <hr>
-<p><a href="../../../../../README.html">OpenUI5 TypeScript API (1.120.46)</a> / <a href="../../../../README.html">sap.m</a> / <a href="../README.html">sap/m/MessagePopover</a> / MessagePopover</p>
+<p><a href="../../../../../README.html">OpenUI5 TypeScript API (1.120.0)</a> / <a href="../../../../README.html">sap.m</a> / <a href="../README.html">sap/m/MessagePopover</a> / MessagePopover</p>
 <h1>Class: MessagePopover</h1>
 <pre class="sig"><span class="kw">import</span> MessagePopover <span class="kw">from</span> <span class="str">"sap/m/MessagePopover"</span>;</pre>
+<h2>Since</h2>
+<p>1.28</p>
 <p>A <code>MessagePopover</code> is used to display a summarized list of different types of messages (error, warning,
 success, and information messages).</p>
 <p>Overview:</p>
@@ -72,8 +74,6 @@ Behavior: On mobile phones, the `MessagePopover` is automatically shown in full 
 <p> On desktop and tablet, the message popover opens in a popover.
  On desktop the opened popover is resizable, if it is placed in a sap.m.Toolbar, sap.m.Bar,
 or used in sap.m.semantic.SemanticPage.</p>
-<h2>Since</h2>
-<p>1.28</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></li>
@@ -137,11 +137,6 @@ See:
 <blockquote>
 <p><strong>attachActiveTitlePress</strong>(<code>oData</code>, <code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
-<p>Attaches event handler <code>fnFunction</code> to the #event:activeTitlePress activeTitlePress event of
-this <code>sap.m.MessagePopover</code>.</p>
-<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
-otherwise it will be bound to this <code>sap.m.MessagePopover</code> itself.</p>
-<p>Event fired when an active title of a <code>MessageItem</code> is clicked.</p>
 <h5>Parameters</h5>
 <h6>oData</h6>
 <p><code>object</code></p>
@@ -158,15 +153,15 @@ object when firing the event</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Since</h5>
 <p>1.58</p>
-<h4>Call Signature</h4>
-<blockquote>
-<p><strong>attachActiveTitlePress</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
-</blockquote>
 <p>Attaches event handler <code>fnFunction</code> to the #event:activeTitlePress activeTitlePress event of
 this <code>sap.m.MessagePopover</code>.</p>
 <p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
 otherwise it will be bound to this <code>sap.m.MessagePopover</code> itself.</p>
 <p>Event fired when an active title of a <code>MessageItem</code> is clicked.</p>
+<h4>Call Signature</h4>
+<blockquote>
+<p><strong>attachActiveTitlePress</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
+</blockquote>
 <h5>Parameters</h5>
 <h6>fnFunction</h6>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -179,6 +174,11 @@ otherwise it will be bound to this <code>sap.m.MessagePopover</code> itself.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Since</h5>
 <p>1.58</p>
+<p>Attaches event handler <code>fnFunction</code> to the #event:activeTitlePress activeTitlePress event of
+this <code>sap.m.MessagePopover</code>.</p>
+<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
+otherwise it will be bound to this <code>sap.m.MessagePopover</code> itself.</p>
+<p>Event fired when an active title of a <code>MessageItem</code> is clicked.</p>
 <hr>
 <h3>attachAfterClose()</h3>
 <h4>Call Signature</h4>
@@ -549,9 +549,6 @@ otherwise it will be bound to this <code>sap.m.MessagePopover</code> itself.</p>
 <blockquote>
 <p><strong>detachActiveTitlePress</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
-<p>Detaches event handler <code>fnFunction</code> from the #event:activeTitlePress activeTitlePress event of
-this <code>sap.m.MessagePopover</code>.</p>
-<p>The passed function and listener object must match the ones used for event registration.</p>
 <h4>Parameters</h4>
 <h5>fnFunction</h5>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -564,6 +561,9 @@ this <code>sap.m.MessagePopover</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.58</p>
+<p>Detaches event handler <code>fnFunction</code> from the #event:activeTitlePress activeTitlePress event of
+this <code>sap.m.MessagePopover</code>.</p>
+<p>The passed function and listener object must match the ones used for event registration.</p>
 <hr>
 <h3>detachAfterClose()</h3>
 <blockquote>
@@ -706,7 +706,6 @@ this <code>sap.m.MessagePopover</code>.</p>
 <blockquote>
 <p><strong>fireActiveTitlePress</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
-<p>Fires event #event:activeTitlePress activeTitlePress to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/MessagePopover$ActiveTitlePressEventParameters.html"><code>MessagePopover$ActiveTitlePressEventParameters</code></a></p>
@@ -718,12 +717,12 @@ this <code>sap.m.MessagePopover</code>.</p>
 <p>1.58</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:activeTitlePress activeTitlePress to attached listeners.</p>
 <hr>
 <h3>fireAfterClose()</h3>
 <blockquote>
 <p><strong>fireAfterClose</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
-<p>Fires event #event:afterClose afterClose to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/MessagePopover$AfterCloseEventParameters.html"><code>MessagePopover$AfterCloseEventParameters</code></a></p>
@@ -733,12 +732,12 @@ this <code>sap.m.MessagePopover</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:afterClose afterClose to attached listeners.</p>
 <hr>
 <h3>fireAfterOpen()</h3>
 <blockquote>
 <p><strong>fireAfterOpen</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
-<p>Fires event #event:afterOpen afterOpen to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/MessagePopover$AfterOpenEventParameters.html"><code>MessagePopover$AfterOpenEventParameters</code></a></p>
@@ -748,12 +747,12 @@ this <code>sap.m.MessagePopover</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:afterOpen afterOpen to attached listeners.</p>
 <hr>
 <h3>fireBeforeClose()</h3>
 <blockquote>
 <p><strong>fireBeforeClose</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
-<p>Fires event #event:beforeClose beforeClose to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/MessagePopover$BeforeCloseEventParameters.html"><code>MessagePopover$BeforeCloseEventParameters</code></a></p>
@@ -763,12 +762,12 @@ this <code>sap.m.MessagePopover</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:beforeClose beforeClose to attached listeners.</p>
 <hr>
 <h3>fireBeforeOpen()</h3>
 <blockquote>
 <p><strong>fireBeforeOpen</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
-<p>Fires event #event:beforeOpen beforeOpen to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/MessagePopover$BeforeOpenEventParameters.html"><code>MessagePopover$BeforeOpenEventParameters</code></a></p>
@@ -778,12 +777,12 @@ this <code>sap.m.MessagePopover</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:beforeOpen beforeOpen to attached listeners.</p>
 <hr>
 <h3>fireItemSelect()</h3>
 <blockquote>
 <p><strong>fireItemSelect</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
-<p>Fires event #event:itemSelect itemSelect to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/MessagePopover$ItemSelectEventParameters.html"><code>MessagePopover$ItemSelectEventParameters</code></a></p>
@@ -793,12 +792,12 @@ this <code>sap.m.MessagePopover</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:itemSelect itemSelect to attached listeners.</p>
 <hr>
 <h3>fireListSelect()</h3>
 <blockquote>
 <p><strong>fireListSelect</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
-<p>Fires event #event:listSelect listSelect to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/MessagePopover$ListSelectEventParameters.html"><code>MessagePopover$ListSelectEventParameters</code></a></p>
@@ -808,12 +807,12 @@ this <code>sap.m.MessagePopover</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:listSelect listSelect to attached listeners.</p>
 <hr>
 <h3>fireLongtextLoaded()</h3>
 <blockquote>
 <p><strong>fireLongtextLoaded</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
-<p>Fires event #event:longtextLoaded longtextLoaded to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><code>object</code></p>
@@ -823,12 +822,12 @@ this <code>sap.m.MessagePopover</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:longtextLoaded longtextLoaded to attached listeners.</p>
 <hr>
 <h3>fireUrlValidated()</h3>
 <blockquote>
 <p><strong>fireUrlValidated</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
-<p>Fires event #event:urlValidated urlValidated to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><code>object</code></p>
@@ -838,6 +837,7 @@ this <code>sap.m.MessagePopover</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:urlValidated urlValidated to attached listeners.</p>
 <hr>
 <h3>getAsyncDescriptionHandler()</h3>
 <blockquote>
@@ -865,14 +865,14 @@ function. You can use this function in order to validate URLs before displaying 
 <blockquote>
 <p><strong>getGroupItems</strong>(): <code>boolean</code></p>
 </blockquote>
-<p>Gets current value of property #getGroupItems groupItems.</p>
-<p>Defines whether the MessageItems are grouped or not.</p>
-<p>Default value is <code>false</code>.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>Value of property <code>groupItems</code></p>
 <h4>Since</h4>
 <p>1.73</p>
+<p>Gets current value of property #getGroupItems groupItems.</p>
+<p>Defines whether the MessageItems are grouped or not.</p>
+<p>Default value is <code>false</code>.</p>
 <hr>
 <h3>getHeaderButton()</h3>
 <blockquote>
@@ -1040,10 +1040,6 @@ function. You can use this function in order to validate URLs before displaying 
 <blockquote>
 <p><strong>setGroupItems</strong>(<code>bGroupItems?</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getGroupItems groupItems.</p>
-<p>Defines whether the MessageItems are grouped or not.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>false</code>.</p>
 <h4>Parameters</h4>
 <h5>bGroupItems?</h5>
 <p><code>boolean</code></p>
@@ -1053,6 +1049,10 @@ function. You can use this function in order to validate URLs before displaying 
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.73</p>
+<p>Sets a new value for property #getGroupItems groupItems.</p>
+<p>Defines whether the MessageItems are grouped or not.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>false</code>.</p>
 <hr>
 <h3>setHeaderButton()</h3>
 <blockquote>
@@ -1132,7 +1132,7 @@ information contained in <code>oClassInfo</code>.</p>
 <p><code>string</code></p>
 <p>Name of the class being created</p>
 <h5>oClassInfo?</h5>
-<p><a href="../../../../../sap.f/namespaces/sap/type-aliases/ClassInfo.html"><code>ClassInfo</code></a>&lt;<code>T</code>, <code>MessagePopover</code>&gt;</p>
+<p><code>ClassInfo</code>&lt;<code>T</code>, <code>MessagePopover</code>&gt;</p>
 <p>Object literal with information about the class</p>
 <h5>FNMetaImpl?</h5>
 <p><code>Function</code></p>
@@ -1159,7 +1159,6 @@ used by this class</p>
 <blockquote>
 <p><code>static</code> <strong>setDefaultHandlers</strong>(<code>mDefaultHandlers</code>): <code>void</code></p>
 </blockquote>
-<p>Setter for default description and URL validation callbacks across all instances of MessagePopover</p>
 <h4>Parameters</h4>
 <h5>mDefaultHandlers</h5>
 <p>An object setting default callbacks</p>
@@ -1173,7 +1172,8 @@ used by this class</p>
 <p><code>void</code></p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Setter for default description and URL validation callbacks across all instances of MessagePopover</p>
 
-<footer>Generated from <code>@openui5/types@1.120.46</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@openui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

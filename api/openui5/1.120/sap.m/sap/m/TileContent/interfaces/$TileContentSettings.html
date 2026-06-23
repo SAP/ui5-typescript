@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Interface: $TileContentSettings — OpenUI5 TypeScript API</title>
-<meta name="description" content="Interface: $TileContentSettings — OpenUI5 TypeScript API Reference (1.120.46)">
+<meta name="description" content="Interface: $TileContentSettings — OpenUI5 TypeScript API Reference (1.120.0)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/openui5/1.120/sap.m/sap/m/TileContent/interfaces/$TileContentSettings.html">
 <meta property="og:title" content="Interface: $TileContentSettings — OpenUI5 TypeScript API">
-<meta property="og:description" content="Interface: $TileContentSettings — OpenUI5 TypeScript API Reference (1.120.46)">
+<meta property="og:description" content="Interface: $TileContentSettings — OpenUI5 TypeScript API Reference (1.120.0)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/openui5/1.120/sap.m/sap/m/TileContent/interfaces/$TileContentSettings.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,12 +33,11 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../index.html">OpenUI5 API</a> › <a href="../../../../../sap.m/README.html">sap.m</a> › sap › m › <a href="../../../../../sap.m/sap/m/TileContent/README.html">TileContent</a> › interfaces</nav>
-<p><a href="../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.46)</strong></a></p>
+<p><a href="../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.0)</strong></a></p>
 <hr>
-<p><a href="../../../../../README.html">OpenUI5 TypeScript API (1.120.46)</a> / <a href="../../../../README.html">sap.m</a> / <a href="../README.html">sap/m/TileContent</a> / $TileContentSettings</p>
+<p><a href="../../../../../README.html">OpenUI5 TypeScript API (1.120.0)</a> / <a href="../../../../README.html">sap.m</a> / <a href="../README.html">sap/m/TileContent</a> / $TileContentSettings</p>
 <h1>Interface: $TileContentSettings</h1>
 <pre class="sig"><span class="kw">import</span> { $TileContentSettings } <span class="kw">from</span> <span class="str">"sap/m/TileContent"</span>;</pre>
-<p>Describes the settings that can be provided to the TileContent constructor.</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../../../../sap.ui.core/sap/ui/core/Control/interfaces/$ControlSettings.html"><code>$ControlSettings</code></a></li>
@@ -66,9 +65,9 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 <blockquote>
 <p><code>optional</code> <strong>footerColor?</strong>: <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code> | <code>&quot;None&quot;</code> | <code>&quot;Error&quot;</code> | <a href="../../library/enumerations/ValueColor.html"><code>ValueColor</code></a> | <code>&quot;Critical&quot;</code> | <code>&quot;Good&quot;</code> | <code>&quot;Neutral&quot;</code></p>
 </blockquote>
-<p>The semantic color of the footer.</p>
 <h4>Since</h4>
 <p>1.44</p>
+<p>The semantic color of the footer.</p>
 <hr>
 <h3>frameType?</h3>
 <blockquote>
@@ -80,37 +79,35 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 <blockquote>
 <p><code>optional</code> <strong>priority?</strong>: <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code> | <code>&quot;None&quot;</code> | <code>&quot;Medium&quot;</code> | <code>&quot;High&quot;</code> | <code>&quot;Low&quot;</code> | <a href="../../library/enumerations/Priority.html"><code>Priority</code></a> | <code>&quot;VeryHigh&quot;</code></p>
 </blockquote>
-<p>Adds a priority badge before the content. Works only in Generic Tiles in ActionMode or Article Mode containing
-NewsContent.</p>
-<h4>Since</h4>
-<p>1.96</p>
+<p><strong><code>Experimental</code></strong></p>
+<p>(since 1.96)</p>
+<p>Adds a priority badge before the content. Works only in Generic Tile ActionMode.</p>
 <hr>
 <h3>priorityText?</h3>
 <blockquote>
 <p><code>optional</code> <strong>priorityText?</strong>: <code>string</code> | <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a></p>
 </blockquote>
-<p>Sets the Text inside the Priority badge in Generic Tile. Works only in Generic Tiles in ActionMode or
-Article Mode containing NewsContent.</p>
-<h4>Since</h4>
-<p>1.103</p>
+<p><strong><code>Experimental</code></strong></p>
+<p>(since 1.103)</p>
+<p>Sets the Text inside the Priority badge in Generic Tile ActionMode.</p>
 <hr>
 <h3><del>size?</del></h3>
 <blockquote>
 <p><code>optional</code> <strong>size?</strong>: <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code> | <code>&quot;L&quot;</code> | <code>&quot;M&quot;</code> | <code>&quot;S&quot;</code> | <code>&quot;XS&quot;</code> | <code>&quot;Auto&quot;</code> | <a href="../../library/enumerations/Size.html"><code>Size</code></a> | <code>&quot;Responsive&quot;</code></p>
 </blockquote>
-<p>Updates the size of the tile. If it is not set, then the default size is applied based on the device
-tile.</p>
 <h4>Deprecated</h4>
 <p>(since 1.38.0) - The TileContent control has now a fixed size, depending on the used media
 (desktop, tablet or phone).</p>
+<p>Updates the size of the tile. If it is not set, then the default size is applied based on the device
+tile.</p>
 <hr>
 <h3>state?</h3>
 <blockquote>
 <p><code>optional</code> <strong>state?</strong>: <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code> | <a href="../../library/enumerations/LoadState.html"><code>LoadState</code></a> | <code>&quot;Disabled&quot;</code> | <code>&quot;Failed&quot;</code> | <code>&quot;Loaded&quot;</code> | <code>&quot;Loading&quot;</code></p>
 </blockquote>
-<p>The load status.</p>
 <h4>Since</h4>
 <p>1.100.0</p>
+<p>The load status.</p>
 <hr>
 <h3>unit?</h3>
 <blockquote>
@@ -119,6 +116,6 @@ tile.</p>
 <p>The percent sign, the currency symbol, or the unit of measure.</p>
 <hr>
 
-<footer>Generated from <code>@openui5/types@1.120.46</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@openui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

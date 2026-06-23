@@ -2,12 +2,12 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>~~Interface: $MenuSettings~~ — OpenUI5 TypeScript API</title>
-<meta name="description" content="~~Interface: $MenuSettings~~ — OpenUI5 TypeScript API Reference (1.120.46)">
+<title>Interface: $MenuSettings — OpenUI5 TypeScript API</title>
+<meta name="description" content="Interface: $MenuSettings — OpenUI5 TypeScript API Reference (1.120.0)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/openui5/1.120/sap.ui.webc.main/sap/ui/webc/main/Menu/interfaces/$MenuSettings.html">
-<meta property="og:title" content="~~Interface: $MenuSettings~~ — OpenUI5 TypeScript API">
-<meta property="og:description" content="~~Interface: $MenuSettings~~ — OpenUI5 TypeScript API Reference (1.120.46)">
+<meta property="og:title" content="Interface: $MenuSettings — OpenUI5 TypeScript API">
+<meta property="og:description" content="Interface: $MenuSettings — OpenUI5 TypeScript API Reference (1.120.0)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/openui5/1.120/sap.ui.webc.main/sap/ui/webc/main/Menu/interfaces/$MenuSettings.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,28 +33,20 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../../index.html">OpenUI5 API</a> › <a href="../../../../../../../sap.ui.webc.main/README.html">sap.ui.webc.main</a> › sap › ui › webc › main › <a href="../../../../../../../sap.ui.webc.main/sap/ui/webc/main/Menu/README.html">Menu</a> › interfaces</nav>
-<p><a href="../../../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.46)</strong></a></p>
+<p><a href="../../../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.0)</strong></a></p>
 <hr>
-<p><a href="../../../../../../../README.html">OpenUI5 TypeScript API (1.120.46)</a> / <a href="../../../../../../README.html">sap.ui.webc.main</a> / <a href="../README.html">sap/ui/webc/main/Menu</a> / $MenuSettings</p>
-<h1><del>Interface: $MenuSettings</del></h1>
+<p><a href="../../../../../../../README.html">OpenUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../../README.html">sap.ui.webc.main</a> / <a href="../README.html">sap/ui/webc/main/Menu</a> / $MenuSettings</p>
+<h1>Interface: $MenuSettings</h1>
 <pre class="sig"><span class="kw">import</span> { $MenuSettings } <span class="kw">from</span> <span class="str">"sap/ui/webc/main/Menu"</span>;</pre>
-<p><strong><code>Experimental</code></strong></p>
-<p>Describes the settings that can be provided to the Menu constructor.</p>
-<h2>Deprecated</h2>
-<p>(since 1.120) - this Web Components consumption model has been discarded. Until an alternative
-Web Components consumption model is available in the future, use sap.m and sap.f controls with similar
-functionality.
- (since 1.102.0) - This control is experimental and its API might change significantly.</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../../../../../../sap.ui.core/sap/ui/core/webc/WebComponent/interfaces/$WebComponentSettings.html"><code>$WebComponentSettings</code></a></li>
 </ul>
 <h2>Properties</h2>
-<h3><del>afterClose?</del></h3>
+<h3>afterClose?</h3>
 <blockquote>
 <p><code>optional</code> <strong>afterClose?</strong>: (<code>oEvent</code>) =&gt; <code>void</code></p>
 </blockquote>
-<p><strong><code>Experimental</code></strong></p>
 <p>Fired after the menu is closed. <strong>This event does not bubble.</strong></p>
 <h4>Parameters</h4>
 <h5>oEvent</h5>
@@ -62,11 +54,10 @@ functionality.
 <h4>Returns</h4>
 <p><code>void</code></p>
 <hr>
-<h3><del>afterOpen?</del></h3>
+<h3>afterOpen?</h3>
 <blockquote>
 <p><code>optional</code> <strong>afterOpen?</strong>: (<code>oEvent</code>) =&gt; <code>void</code></p>
 </blockquote>
-<p><strong><code>Experimental</code></strong></p>
 <p>Fired after the menu is opened. <strong>This event does not bubble.</strong></p>
 <h4>Parameters</h4>
 <h5>oEvent</h5>
@@ -74,11 +65,10 @@ functionality.
 <h4>Returns</h4>
 <p><code>void</code></p>
 <hr>
-<h3><del>beforeClose?</del></h3>
+<h3>beforeClose?</h3>
 <blockquote>
 <p><code>optional</code> <strong>beforeClose?</strong>: (<code>oEvent</code>) =&gt; <code>void</code></p>
 </blockquote>
-<p><strong><code>Experimental</code></strong></p>
 <p>Fired before the menu is closed. This event can be cancelled, which will prevent the menu from closing.
 <strong>This event does not bubble.</strong></p>
 <h4>Parameters</h4>
@@ -87,11 +77,10 @@ functionality.
 <h4>Returns</h4>
 <p><code>void</code></p>
 <hr>
-<h3><del>beforeOpen?</del></h3>
+<h3>beforeOpen?</h3>
 <blockquote>
 <p><code>optional</code> <strong>beforeOpen?</strong>: (<code>oEvent</code>) =&gt; <code>void</code></p>
 </blockquote>
-<p><strong><code>Experimental</code></strong></p>
 <p>Fired before the menu is opened. This event can be cancelled, which will prevent the menu from opening.
 <strong>This event does not bubble.</strong> <strong>Note:</strong> Since 1.14.0 the event is also fired before a sub-menu opens.</p>
 <h4>Parameters</h4>
@@ -100,35 +89,31 @@ functionality.
 <h4>Returns</h4>
 <p><code>void</code></p>
 <hr>
-<h3><del>busy?</del></h3>
+<h3>busy?</h3>
 <blockquote>
 <p><code>optional</code> <strong>busy?</strong>: <code>boolean</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<p><strong><code>Experimental</code></strong></p>
 <p>Defines if a loading indicator would be displayed inside the corresponding ui5-menu popover.</p>
 <h4>Overrides</h4>
 <p><a href="../../../../../../../sap.ui.core/sap/ui/core/webc/WebComponent/interfaces/$WebComponentSettings.html"><code>$WebComponentSettings</code></a>.<a href="../../../../../../../sap.ui.core/sap/ui/core/webc/WebComponent/interfaces/$WebComponentSettings.html#busy"><code>busy</code></a></p>
 <hr>
-<h3><del>busyDelay?</del></h3>
+<h3>busyDelay?</h3>
 <blockquote>
 <p><code>optional</code> <strong>busyDelay?</strong>: <code>number</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<p><strong><code>Experimental</code></strong></p>
 <p>Defines the delay in milliseconds, after which the busy indicator will be displayed inside the corresponding
 ui5-menu popover..</p>
 <hr>
-<h3><del>headerText?</del></h3>
+<h3>headerText?</h3>
 <blockquote>
 <p><code>optional</code> <strong>headerText?</strong>: <code>string</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a></p>
 </blockquote>
-<p><strong><code>Experimental</code></strong></p>
 <p>Defines the header text of the menu (displayed on mobile).</p>
 <hr>
-<h3><del>itemClick?</del></h3>
+<h3>itemClick?</h3>
 <blockquote>
 <p><code>optional</code> <strong>itemClick?</strong>: (<code>oEvent</code>) =&gt; <code>void</code></p>
 </blockquote>
-<p><strong><code>Experimental</code></strong></p>
 <p>Fired when an item is being clicked. <strong>Note:</strong> Since 1.17.0 the event is preventable, allowing the menu
 to remain open after an item is pressed.</p>
 <h4>Parameters</h4>
@@ -137,29 +122,26 @@ to remain open after an item is pressed.</p>
 <h4>Returns</h4>
 <p><code>void</code></p>
 <hr>
-<h3><del>items?</del></h3>
+<h3>items?</h3>
 <blockquote>
 <p><code>optional</code> <strong>items?</strong>: <code>`{${string}}`</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/AggregationBindingInfo.html"><code>AggregationBindingInfo</code></a> | <a href="../../library/interfaces/IMenuItem.html"><code>IMenuItem</code></a> | <a href="../../library/interfaces/IMenuItem.html"><code>IMenuItem</code></a>[]</p>
 </blockquote>
-<p><strong><code>Experimental</code></strong></p>
 <p>Defines the items of this component.</p>
 <p> <strong>Note:</strong> Use <code>sap.ui.webc.main.MenuItem</code> for the intended design.</p>
 <hr>
-<h3><del>open?</del></h3>
+<h3>open?</h3>
 <blockquote>
 <p><code>optional</code> <strong>open?</strong>: <code>boolean</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<p><strong><code>Experimental</code></strong></p>
 <p>Indicates if the menu is open</p>
 <hr>
-<h3><del>opener?</del></h3>
+<h3>opener?</h3>
 <blockquote>
 <p><code>optional</code> <strong>opener?</strong>: <code>string</code> | <a href="../../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></p>
 </blockquote>
-<p><strong><code>Experimental</code></strong></p>
 <p>Defines the ID or DOM Reference of the element that the menu is shown at</p>
 <hr>
 
-<footer>Generated from <code>@openui5/types@1.120.46</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@openui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

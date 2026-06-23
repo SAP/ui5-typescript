@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>~~Class: NavigationItem~~ — OpenUI5 TypeScript API</title>
-<meta name="description" content="~~Class: NavigationItem~~ — OpenUI5 TypeScript API Reference (1.120.46)">
+<meta name="description" content="~~Class: NavigationItem~~ — OpenUI5 TypeScript API Reference (1.120.0)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/openui5/1.120/sap.ui.ux3/sap/ui/ux3/NavigationItem/classes/NavigationItem.html">
 <meta property="og:title" content="~~Class: NavigationItem~~ — OpenUI5 TypeScript API">
-<meta property="og:description" content="~~Class: NavigationItem~~ — OpenUI5 TypeScript API Reference (1.120.46)">
+<meta property="og:description" content="~~Class: NavigationItem~~ — OpenUI5 TypeScript API Reference (1.120.0)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/openui5/1.120/sap.ui.ux3/sap/ui/ux3/NavigationItem/classes/NavigationItem.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,15 +33,15 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../index.html">OpenUI5 API</a> › <a href="../../../../../../sap.ui.ux3/README.html">sap.ui.ux3</a> › sap › ui › ux3 › <a href="../../../../../../sap.ui.ux3/sap/ui/ux3/NavigationItem/README.html">NavigationItem</a> › classes</nav>
-<p><a href="../../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.46)</strong></a></p>
+<p><a href="../../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.0)</strong></a></p>
 <hr>
-<p><a href="../../../../../../README.html">OpenUI5 TypeScript API (1.120.46)</a> / <a href="../../../../../README.html">sap.ui.ux3</a> / <a href="../README.html">sap/ui/ux3/NavigationItem</a> / NavigationItem</p>
+<p><a href="../../../../../../README.html">OpenUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../README.html">sap.ui.ux3</a> / <a href="../README.html">sap/ui/ux3/NavigationItem</a> / NavigationItem</p>
 <h1><del>Class: NavigationItem</del></h1>
 <pre class="sig"><span class="kw">import</span> NavigationItem <span class="kw">from</span> <span class="str">"sap/ui/ux3/NavigationItem"</span>;</pre>
-<p>Is the item to be used within the NavigationBar</p>
 <h2>Deprecated</h2>
 <p>(since 1.38) - Instead, use the <code>sap.m.IconTabBar</code>, <code>sap.m.TabContainer</code> or <code>sap.uxap.ObjectPageLayout</code>
 control.</p>
+<p>Is the item to be used within the NavigationBar</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../../../../../sap.ui.core/sap/ui/core/Item/classes/Item.html"><code>Item</code></a></li>
@@ -133,16 +133,16 @@ with the respective NavigationItem being selected).</p>
 <blockquote>
 <p><strong>getVisible</strong>(): <code>boolean</code></p>
 </blockquote>
-<p>Gets current value of property #getVisible visible.</p>
-<p>Whether the NavigationItem is currently visible. When making NavigationItems invisible at runtime it
-is the application&#39;s responsibility to make sure it is not the currently selected one - or to select
-another one in this case.</p>
-<p>Default value is <code>true</code>.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>Value of property <code>visible</code></p>
 <h4>Since</h4>
 <p>1.9.0</p>
+<p>Gets current value of property #getVisible visible.</p>
+<p>Whether the NavigationItem is currently visible. When making NavigationItems invisible at runtime it
+is the application&#39;s responsibility to make sure it is not the currently selected one - or to select
+another one in this case.</p>
+<p>Default value is <code>true</code>.</p>
 <hr>
 <h3><del>indexOfSubItem()</del></h3>
 <blockquote>
@@ -223,12 +223,6 @@ with the respective NavigationItem being selected).</p>
 <blockquote>
 <p><strong>setVisible</strong>(<code>bVisible?</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getVisible visible.</p>
-<p>Whether the NavigationItem is currently visible. When making NavigationItems invisible at runtime it
-is the application&#39;s responsibility to make sure it is not the currently selected one - or to select
-another one in this case.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>true</code>.</p>
 <h4>Parameters</h4>
 <h5>bVisible?</h5>
 <p><code>boolean</code></p>
@@ -238,6 +232,12 @@ another one in this case.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.9.0</p>
+<p>Sets a new value for property #getVisible visible.</p>
+<p>Whether the NavigationItem is currently visible. When making NavigationItems invisible at runtime it
+is the application&#39;s responsibility to make sure it is not the currently selected one - or to select
+another one in this case.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>true</code>.</p>
 <hr>
 <h3><del>extend()</del></h3>
 <blockquote>
@@ -254,7 +254,7 @@ the information contained in <code>oClassInfo</code>.</p>
 <p><code>string</code></p>
 <p>Name of the class being created</p>
 <h5>oClassInfo?</h5>
-<p><a href="../../../../../../sap.f/namespaces/sap/type-aliases/ClassInfo.html"><code>ClassInfo</code></a>&lt;<code>T</code>, <code>NavigationItem</code>&gt;</p>
+<p><code>ClassInfo</code>&lt;<code>T</code>, <code>NavigationItem</code>&gt;</p>
 <p>Object literal with information about the class</p>
 <h5>FNMetaImpl?</h5>
 <p><code>Function</code></p>
@@ -278,6 +278,6 @@ used by this class</p>
 <p><a href="../../../../../../sap.ui.core/sap/ui/core/Item/classes/Item.html"><code>Item</code></a>.<a href="../../../../../../sap.ui.core/sap/ui/core/Item/classes/Item.html#getmetadata-1"><code>getMetadata</code></a></p>
 <hr>
 
-<footer>Generated from <code>@openui5/types@1.120.46</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@openui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

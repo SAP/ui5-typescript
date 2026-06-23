@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Class: QuickViewPage — OpenUI5 TypeScript API</title>
-<meta name="description" content="Class: QuickViewPage — OpenUI5 TypeScript API Reference (1.120.46)">
+<meta name="description" content="Class: QuickViewPage — OpenUI5 TypeScript API Reference (1.120.0)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/openui5/1.120/sap.m/sap/m/QuickViewPage/classes/QuickViewPage.html">
 <meta property="og:title" content="Class: QuickViewPage — OpenUI5 TypeScript API">
-<meta property="og:description" content="Class: QuickViewPage — OpenUI5 TypeScript API Reference (1.120.46)">
+<meta property="og:description" content="Class: QuickViewPage — OpenUI5 TypeScript API Reference (1.120.0)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/openui5/1.120/sap.m/sap/m/QuickViewPage/classes/QuickViewPage.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,15 +33,15 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../index.html">OpenUI5 API</a> › <a href="../../../../../sap.m/README.html">sap.m</a> › sap › m › <a href="../../../../../sap.m/sap/m/QuickViewPage/README.html">QuickViewPage</a> › classes</nav>
-<p><a href="../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.46)</strong></a></p>
+<p><a href="../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.0)</strong></a></p>
 <hr>
-<p><a href="../../../../../README.html">OpenUI5 TypeScript API (1.120.46)</a> / <a href="../../../../README.html">sap.m</a> / <a href="../README.html">sap/m/QuickViewPage</a> / QuickViewPage</p>
+<p><a href="../../../../../README.html">OpenUI5 TypeScript API (1.120.0)</a> / <a href="../../../../README.html">sap.m</a> / <a href="../README.html">sap/m/QuickViewPage</a> / QuickViewPage</p>
 <h1>Class: QuickViewPage</h1>
 <pre class="sig"><span class="kw">import</span> QuickViewPage <span class="kw">from</span> <span class="str">"sap/m/QuickViewPage"</span>;</pre>
-<p>QuickViewPage consists of a page header, an avatar, an object name with short description, and an object
-information divided in groups. The control uses the sap.m.SimpleForm control to display information.</p>
 <h2>Since</h2>
 <p>1.28.11</p>
+<p>QuickViewPage consists of a page header, an avatar, an object name with short description, and an object
+information divided in groups. The control uses the sap.m.SimpleForm control to display information.</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></li>
@@ -100,9 +100,6 @@ of the syntax of the settings object.</p>
 <blockquote>
 <p><strong>bindAvatar</strong>(<code>oBindingInfo</code>): <code>this</code></p>
 </blockquote>
-<p>Binds aggregation #getAvatar avatar to model data.</p>
-<p>See sap.ui.base.ManagedObject#bindAggregation ManagedObject.bindAggregation for a detailed description
-of the possible properties of <code>oBindingInfo</code>.</p>
 <h4>Parameters</h4>
 <h5>oBindingInfo</h5>
 <p><a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/AggregationBindingInfo.html"><code>AggregationBindingInfo</code></a></p>
@@ -112,6 +109,9 @@ of the possible properties of <code>oBindingInfo</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.92</p>
+<p>Binds aggregation #getAvatar avatar to model data.</p>
+<p>See sap.ui.base.ManagedObject#bindAggregation ManagedObject.bindAggregation for a detailed description
+of the possible properties of <code>oBindingInfo</code>.</p>
 <hr>
 <h3>bindGroups()</h3>
 <blockquote>
@@ -132,12 +132,12 @@ of the possible properties of <code>oBindingInfo</code>.</p>
 <blockquote>
 <p><strong>destroyAvatar</strong>(): <code>this</code></p>
 </blockquote>
-<p>Destroys the avatar in the aggregation #getAvatar avatar.</p>
 <h4>Returns</h4>
 <p><code>this</code></p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.92</p>
+<p>Destroys the avatar in the aggregation #getAvatar avatar.</p>
 <hr>
 <h3>destroyGroups()</h3>
 <blockquote>
@@ -152,27 +152,27 @@ of the possible properties of <code>oBindingInfo</code>.</p>
 <blockquote>
 <p><strong>getAvatar</strong>(): <a href="../../Avatar/classes/Avatar.html"><code>Avatar</code></a></p>
 </blockquote>
-<p>Gets content of aggregation #getAvatar avatar.</p>
-<p>Specifies the avatar displayed under the header of the page. <strong>Note:</strong> To achieve the recommended design
-and behavior don&#39;t use the <code>displaySize</code>, <code>customDisplaySize</code>, <code>customFontSize</code> properties and <code>detailBox</code>
-aggregation of <code>sap.m.Avatar</code>.</p>
 <h4>Returns</h4>
 <p><a href="../../Avatar/classes/Avatar.html"><code>Avatar</code></a></p>
 <h4>Since</h4>
 <p>1.92</p>
+<p>Gets content of aggregation #getAvatar avatar.</p>
+<p>Specifies the avatar displayed under the header of the page. <strong>Note:</strong> To achieve the recommended design
+and behavior don&#39;t use the <code>displaySize</code>, <code>customDisplaySize</code>, <code>customFontSize</code> properties and <code>detailBox</code>
+aggregation of <code>sap.m.Avatar</code>.</p>
 <hr>
 <h3><del>getCrossAppNavCallback()</del></h3>
 <blockquote>
 <p><strong>getCrossAppNavCallback</strong>(): () =&gt; <code>object</code></p>
 </blockquote>
-<p>Gets current value of property #getCrossAppNavCallback crossAppNavCallback.</p>
-<p>Specifies the application which provides target and param configuration for cross-application navigation
-from the &#39;page header&#39;.</p>
 <h4>Returns</h4>
 <p>Value of property <code>crossAppNavCallback</code></p>
 <p>() =&gt; <code>object</code></p>
 <h4>Deprecated</h4>
 <p>(since 1.111)</p>
+<p>Gets current value of property #getCrossAppNavCallback crossAppNavCallback.</p>
+<p>Specifies the application which provides target and param configuration for cross-application navigation
+from the &#39;page header&#39;.</p>
 <hr>
 <h3>getDescription()</h3>
 <blockquote>
@@ -189,9 +189,6 @@ from the &#39;page header&#39;.</p>
 <blockquote>
 <p><strong>getFallbackIcon</strong>(): <code>string</code></p>
 </blockquote>
-<p>Gets current value of property #getFallbackIcon fallbackIcon.</p>
-<p>Defines the fallback icon displayed in case of wrong image src or loading issues.</p>
-<p><strong>Note:</strong> Accepted values are only icons from the SAP icon font.</p>
 <h4>Returns</h4>
 <p><code>string</code></p>
 <p>Value of property <code>fallbackIcon</code></p>
@@ -199,6 +196,9 @@ from the &#39;page header&#39;.</p>
 <p>1.69</p>
 <h4>Deprecated</h4>
 <p>(since 1.92) - Use the <code>avatar</code> aggregation and use its property <code>fallbackIcon</code> instead.</p>
+<p>Gets current value of property #getFallbackIcon fallbackIcon.</p>
+<p>Defines the fallback icon displayed in case of wrong image src or loading issues.</p>
+<p><strong>Note:</strong> Accepted values are only icons from the SAP icon font.</p>
 <hr>
 <h3>getGroups()</h3>
 <blockquote>
@@ -224,14 +224,14 @@ from the &#39;page header&#39;.</p>
 <blockquote>
 <p><strong>getIcon</strong>(): <code>string</code></p>
 </blockquote>
-<p>Gets current value of property #getIcon icon.</p>
-<p>Specifies the URL of the icon or image displayed under the header of the page.</p>
-<p>Default value is <code>empty string</code>.</p>
 <h4>Returns</h4>
 <p><code>string</code></p>
 <p>Value of property <code>icon</code></p>
 <h4>Deprecated</h4>
 <p>(since 1.92) - Use the <code>avatar</code> aggregation instead.</p>
+<p>Gets current value of property #getIcon icon.</p>
+<p>Specifies the URL of the icon or image displayed under the header of the page.</p>
+<p>Default value is <code>empty string</code>.</p>
 <hr>
 <h3>getPageId()</h3>
 <blockquote>
@@ -326,7 +326,6 @@ the last position</p>
 <blockquote>
 <p><strong>setAvatar</strong>(<code>oAvatar</code>): <code>this</code></p>
 </blockquote>
-<p>Sets the aggregated #getAvatar avatar.</p>
 <h4>Parameters</h4>
 <h5>oAvatar</h5>
 <p><a href="../../Avatar/classes/Avatar.html"><code>Avatar</code></a></p>
@@ -336,15 +335,12 @@ the last position</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.92</p>
+<p>Sets the aggregated #getAvatar avatar.</p>
 <hr>
 <h3><del>setCrossAppNavCallback()</del></h3>
 <blockquote>
 <p><strong>setCrossAppNavCallback</strong>(<code>oCrossAppNavCallback?</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #setCrossAppNavCallback crossAppNavCallback.</p>
-<p>Specifies the application which provides target and param configuration for cross-application navigation
-from the &#39;page header&#39;.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <h4>Parameters</h4>
 <h5>oCrossAppNavCallback?</h5>
 <p>() =&gt; <code>object</code></p>
@@ -354,6 +350,10 @@ from the &#39;page header&#39;.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Deprecated</h4>
 <p>(since 1.111)</p>
+<p>Sets a new value for property #setCrossAppNavCallback crossAppNavCallback.</p>
+<p>Specifies the application which provides target and param configuration for cross-application navigation
+from the &#39;page header&#39;.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <hr>
 <h3>setDescription()</h3>
 <blockquote>
@@ -375,10 +375,6 @@ from the &#39;page header&#39;.</p>
 <blockquote>
 <p><strong>setFallbackIcon</strong>(<code>sFallbackIcon?</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getFallbackIcon fallbackIcon.</p>
-<p>Defines the fallback icon displayed in case of wrong image src or loading issues.</p>
-<p><strong>Note:</strong> Accepted values are only icons from the SAP icon font.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <h4>Parameters</h4>
 <h5>sFallbackIcon?</h5>
 <p><code>string</code></p>
@@ -390,6 +386,10 @@ from the &#39;page header&#39;.</p>
 <p>1.69</p>
 <h4>Deprecated</h4>
 <p>(since 1.92) - Use the <code>avatar</code> aggregation and use its property <code>fallbackIcon</code> instead.</p>
+<p>Sets a new value for property #getFallbackIcon fallbackIcon.</p>
+<p>Defines the fallback icon displayed in case of wrong image src or loading issues.</p>
+<p><strong>Note:</strong> Accepted values are only icons from the SAP icon font.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <hr>
 <h3>setHeader()</h3>
 <blockquote>
@@ -411,10 +411,6 @@ from the &#39;page header&#39;.</p>
 <blockquote>
 <p><strong>setIcon</strong>(<code>sIcon?</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getIcon icon.</p>
-<p>Specifies the URL of the icon or image displayed under the header of the page.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>empty string</code>.</p>
 <h4>Parameters</h4>
 <h5>sIcon?</h5>
 <p><code>string</code></p>
@@ -424,6 +420,10 @@ from the &#39;page header&#39;.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Deprecated</h4>
 <p>(since 1.92) - Use the <code>avatar</code> aggregation instead.</p>
+<p>Sets a new value for property #getIcon icon.</p>
+<p>Specifies the URL of the icon or image displayed under the header of the page.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>empty string</code>.</p>
 <hr>
 <h3>setPageId()</h3>
 <blockquote>
@@ -478,12 +478,12 @@ listeners this URL is not opened automatically.</p>
 <blockquote>
 <p><strong>unbindAvatar</strong>(): <code>this</code></p>
 </blockquote>
-<p>Unbinds aggregation #getAvatar avatar from model data.</p>
 <h4>Returns</h4>
 <p><code>this</code></p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.92</p>
+<p>Unbinds aggregation #getAvatar avatar from model data.</p>
 <hr>
 <h3>unbindGroups()</h3>
 <blockquote>
@@ -509,7 +509,7 @@ contained in <code>oClassInfo</code>.</p>
 <p><code>string</code></p>
 <p>Name of the class being created</p>
 <h5>oClassInfo?</h5>
-<p><a href="../../../../../sap.f/namespaces/sap/type-aliases/ClassInfo.html"><code>ClassInfo</code></a>&lt;<code>T</code>, <code>QuickViewPage</code>&gt;</p>
+<p><code>ClassInfo</code>&lt;<code>T</code>, <code>QuickViewPage</code>&gt;</p>
 <p>Object literal with information about the class</p>
 <h5>FNMetaImpl?</h5>
 <p><code>Function</code></p>
@@ -533,6 +533,6 @@ used by this class</p>
 <p><a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a>.<a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html#getmetadata-1"><code>getMetadata</code></a></p>
 <hr>
 
-<footer>Generated from <code>@openui5/types@1.120.46</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@openui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

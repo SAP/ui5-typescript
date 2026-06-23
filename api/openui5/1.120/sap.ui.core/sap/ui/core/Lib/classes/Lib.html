@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Class: Lib — OpenUI5 TypeScript API</title>
-<meta name="description" content="Class: Lib — OpenUI5 TypeScript API Reference (1.120.46)">
+<meta name="description" content="Class: Lib — OpenUI5 TypeScript API Reference (1.120.0)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/openui5/1.120/sap.ui.core/sap/ui/core/Lib/classes/Lib.html">
 <meta property="og:title" content="Class: Lib — OpenUI5 TypeScript API">
-<meta property="og:description" content="Class: Lib — OpenUI5 TypeScript API Reference (1.120.46)">
+<meta property="og:description" content="Class: Lib — OpenUI5 TypeScript API Reference (1.120.0)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/openui5/1.120/sap.ui.core/sap/ui/core/Lib/classes/Lib.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,17 +33,17 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../index.html">OpenUI5 API</a> › <a href="../../../../../../sap.ui.core/README.html">sap.ui.core</a> › sap › ui › core › <a href="../../../../../../sap.ui.core/sap/ui/core/Lib/README.html">Lib</a> › classes</nav>
-<p><a href="../../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.46)</strong></a></p>
+<p><a href="../../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.0)</strong></a></p>
 <hr>
-<p><a href="../../../../../../README.html">OpenUI5 TypeScript API (1.120.46)</a> / <a href="../../../../../README.html">sap.ui.core</a> / <a href="../README.html">sap/ui/core/Lib</a> / Lib</p>
+<p><a href="../../../../../../README.html">OpenUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../README.html">sap.ui.core</a> / <a href="../README.html">sap/ui/core/Lib</a> / Lib</p>
 <h1>Class: Lib</h1>
 <pre class="sig"><span class="kw">import</span> Lib <span class="kw">from</span> <span class="str">"sap/ui/core/Lib"</span>;</pre>
+<h2>Since</h2>
+<p>1.118</p>
 <p>Constructor must not be used: To load a library, please use the static method #.load.</p>
 <p>This class also provides other static methods which are related to a library, such as #.getResourceBundleFor
 to retrieve the resource bundle of a library, #.init to provide information for a library and
 so on.</p>
-<h2>Since</h2>
-<p>1.118</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../../base/Object/classes/BaseObject.html"><code>BaseObject</code></a></li>
@@ -73,7 +73,7 @@ contained in <code>oClassInfo</code>.</p>
 <p><code>string</code></p>
 <p>Name of the class being created</p>
 <h5>oClassInfo?</h5>
-<p><a href="../../../../../../sap.f/namespaces/sap/type-aliases/ClassInfo.html"><code>ClassInfo</code></a>&lt;<code>T</code>, <code>Lib</code>&gt;</p>
+<p><code>ClassInfo</code>&lt;<code>T</code>, <code>Lib</code>&gt;</p>
 <p>Object literal with information about the class</p>
 <h5>FNMetaImpl?</h5>
 <p><code>Function</code></p>
@@ -141,7 +141,7 @@ this function fires #event:LibraryChanged event with operation &#39;add&#39; for
 <pre><code> - If the object contains a list of `interfaces`, they will be registered with the sap.ui.base.DataType
 class to make them available as aggregation types in managed objects.
 </code></pre>
-<p>If the object contains a list of <code>controls</code> or <code>elements</code>, <a href="../../../../../../sap.f/namespaces/sap/namespaces/ui/functions/lazyRequire.html">lazy stubs</a>
+<p>If the object contains a list of <code>controls</code> or <code>elements</code>, lazy stubs
 will be created for their constructor as well as for their static <code>extend</code> and <code>getMetadata</code> methods.</p>
 <p><strong>Note:</strong> Future versions of UI5 will abandon the concept of lazy stubs as it requires synchronous XMLHttpRequests
 which have been deprecated (see <a href="http://xhr.spec.whatwg.org">http://xhr.spec.whatwg.org</a>). To be on the safe side, productive
@@ -177,15 +177,9 @@ of <code>extensions</code> but will make it available in the library info object
 the same library (its <code>manifest.json</code> file). Future versions of UI5 will ignore the information provided
 in <code>mSettings</code> and will evaluate the descriptor file instead. Library developers therefore must keep
 the information in both files in sync if the <code>manifest.json</code> file is maintained manually.</p>
-<p>Library API-Version 2:</p>
-<p>The Library API Version 2 has been introduced to avoid access to the global namespace when retrieving
-enum types. With Library API Version 2 a library must declare its enum types via module:sap/ui/base/DataType.registerEnum DataType.registerEnum.</p>
 <h4>Parameters</h4>
 <h5>mSettings</h5>
 <p>Info object for the library</p>
-<h6>apiVersion?</h6>
-<p><code>number</code></p>
-<p>The library&#39;s API version; supported values are 1, 2 and <code>undefined</code> (defaults to 1).</p>
 <h6>controls?</h6>
 <p><code>string</code>[]</p>
 <p>Names of control types that this library provides; names are in dot notation (e.g. &quot;sap.ui.core.ComponentContainer&quot;)</p>
@@ -291,6 +285,6 @@ library:</p>
 <p><code>Promise</code>&lt;<code>Lib</code>&gt;</p>
 <p>A promise that resolves with the library instance after the loading of the library is finished</p>
 
-<footer>Generated from <code>@openui5/types@1.120.46</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@openui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Interface: LabelEnablement — OpenUI5 TypeScript API</title>
-<meta name="description" content="Interface: LabelEnablement — OpenUI5 TypeScript API Reference (1.120.46)">
+<meta name="description" content="Interface: LabelEnablement — OpenUI5 TypeScript API Reference (1.120.0)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/openui5/1.120/sap.ui.core/sap/ui/core/LabelEnablement/interfaces/LabelEnablement.html">
 <meta property="og:title" content="Interface: LabelEnablement — OpenUI5 TypeScript API">
-<meta property="og:description" content="Interface: LabelEnablement — OpenUI5 TypeScript API Reference (1.120.46)">
+<meta property="og:description" content="Interface: LabelEnablement — OpenUI5 TypeScript API Reference (1.120.0)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/openui5/1.120/sap.ui.core/sap/ui/core/LabelEnablement/interfaces/LabelEnablement.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,23 +33,31 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../index.html">OpenUI5 API</a> › <a href="../../../../../../sap.ui.core/README.html">sap.ui.core</a> › sap › ui › core › <a href="../../../../../../sap.ui.core/sap/ui/core/LabelEnablement/README.html">LabelEnablement</a> › interfaces</nav>
-<p><a href="../../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.46)</strong></a></p>
+<p><a href="../../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.0)</strong></a></p>
 <hr>
-<p><a href="../../../../../../README.html">OpenUI5 TypeScript API (1.120.46)</a> / <a href="../../../../../README.html">sap.ui.core</a> / <a href="../README.html">sap/ui/core/LabelEnablement</a> / LabelEnablement</p>
+<p><a href="../../../../../../README.html">OpenUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../README.html">sap.ui.core</a> / <a href="../README.html">sap/ui/core/LabelEnablement</a> / LabelEnablement</p>
 <h1>Interface: LabelEnablement</h1>
 <pre class="sig"><span class="kw">import</span> LabelEnablement <span class="kw">from</span> <span class="str">"sap/ui/core/LabelEnablement"</span>;</pre>
-<p>Helper functionality for enhancement of a <code>Label</code> with common label functionality.
-See:
-	sap.ui.core.LabelEnablement#enrich</p>
 <h2>Since</h2>
 <p>1.28.0</p>
 <h2>Ui5-protected</h2>
 <p>DO NOT USE IN APPLICATIONS (only for related classes in the framework)</p>
+<p>Helper functionality for enhancement of a <code>Label</code> with common label functionality.
+See:
+	sap.ui.core.LabelEnablement#enrich</p>
 <h2>Methods</h2>
 <h3>enrich()</h3>
 <blockquote>
 <p><strong>enrich</strong>(<code>oControl</code>): <code>void</code></p>
 </blockquote>
+<h4>Parameters</h4>
+<h5>oControl</h5>
+<p><a href="../../Control/classes/Control.html"><code>Control</code></a></p>
+<p>the label control which should be enriched with further label functionality.</p>
+<h4>Returns</h4>
+<p><code>void</code></p>
+<h4>Ui5-protected</h4>
+<p>Do not call from applications (only from related classes in the framework)</p>
 <p>This function should be called on a label control to enrich its functionality.</p>
 <p><strong>Usage:</strong> The function can be called with a control prototype: <code>sap.ui.core.LabelEnablement.enrich(my.Label.prototype);</code> Or the function can be called on instance level in the init function of a label control: <code>my.Label.prototype.init: function(){ sap.ui.core.LabelEnablement.enrich(this); }</code></p>
 <p><strong>Preconditions:</strong> The given control must implement the interface sap.ui.core.Label and have an association
@@ -62,14 +70,6 @@ If the labeled control supports the aria-labelledby attribute, a reference to th
 <p>In addition an alternative to apply a &#39;for&#39; reference without influencing the labelFor association of
 the API is applied (e.g. used by Form). For this purpose the functions setAlternativeLabelFor and getLabelForRendering
 are added.</p>
-<h4>Parameters</h4>
-<h5>oControl</h5>
-<p><a href="../../Control/classes/Control.html"><code>Control</code></a></p>
-<p>the label control which should be enriched with further label functionality.</p>
-<h4>Returns</h4>
-<p><code>void</code></p>
-<h4>Ui5-protected</h4>
-<p>Do not call from applications (only from related classes in the framework)</p>
 <hr>
 <h3>getReferencingLabels()</h3>
 <blockquote>
@@ -88,8 +88,6 @@ are added.</p>
 <blockquote>
 <p><strong>isRequired</strong>(<code>oElement</code>): <code>boolean</code></p>
 </blockquote>
-<p>Returns <code>true</code> when the given control is required (property &#39;required&#39;) or one of its referencing labels,
-<code>false</code> otherwise.</p>
 <h4>Parameters</h4>
 <h5>oElement</h5>
 <p><a href="../../Element/classes/UI5Element.html"><code>UI5Element</code></a></p>
@@ -100,20 +98,13 @@ are added.</p>
 <code>false</code> otherwise</p>
 <h4>Since</h4>
 <p>1.29.0</p>
+<p>Returns <code>true</code> when the given control is required (property &#39;required&#39;) or one of its referencing labels,
+<code>false</code> otherwise.</p>
 <hr>
 <h3>writeLabelForAttribute()</h3>
 <blockquote>
 <p><strong>writeLabelForAttribute</strong>(<code>oRenderManager</code>, <code>oLabel</code>): <code>void</code></p>
 </blockquote>
-<p>Helper function for the <code>Label</code> control to render the HTML &#39;for&#39; attribute.</p>
-<p>This function should be called at the desired location in the renderer code of the <code>Label</code> control. It
-can be used with both rendering APIs, with the new semantic rendering API (<code>apiVersion 2</code>) as well as
-with the old, string-based API.</p>
-<p>As this method renders an attribute, it can only be called while a start tag is open. For the new semantic
-rendering API, this means it can only be called between an <code>openStart/voidStart</code> call and the corresponding
-<code>openEnd/voidEnd</code> call. In the context of the old rendering API, it can be called only after the prefix
-of a start tag has been written (e.g. after <code>rm.write(&quot;&lt;span id=\&quot;foo\&quot;&quot;);</code>), but before the start
-tag ended, e.g before the right-angle &quot;&gt;&quot; of the start tag has been written.</p>
 <h4>Parameters</h4>
 <h5>oRenderManager</h5>
 <p><a href="../../RenderManager/classes/RenderManager.html"><code>RenderManager</code></a></p>
@@ -125,7 +116,16 @@ tag ended, e.g before the right-angle &quot;&gt;&quot; of the start tag has been
 <p><code>void</code></p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Helper function for the <code>Label</code> control to render the HTML &#39;for&#39; attribute.</p>
+<p>This function should be called at the desired location in the renderer code of the <code>Label</code> control. It
+can be used with both rendering APIs, with the new semantic rendering API (<code>apiVersion 2</code>) as well as
+with the old, string-based API.</p>
+<p>As this method renders an attribute, it can only be called while a start tag is open. For the new semantic
+rendering API, this means it can only be called between an <code>openStart/voidStart</code> call and the corresponding
+<code>openEnd/voidEnd</code> call. In the context of the old rendering API, it can be called only after the prefix
+of a start tag has been written (e.g. after <code>rm.write(&quot;&lt;span id=\&quot;foo\&quot;&quot;);</code>), but before the start
+tag ended, e.g before the right-angle &quot;&gt;&quot; of the start tag has been written.</p>
 
-<footer>Generated from <code>@openui5/types@1.120.46</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@openui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Interface: $ObjectNumberSettings — OpenUI5 TypeScript API</title>
-<meta name="description" content="Interface: $ObjectNumberSettings — OpenUI5 TypeScript API Reference (1.120.46)">
+<meta name="description" content="Interface: $ObjectNumberSettings — OpenUI5 TypeScript API Reference (1.120.0)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/openui5/1.120/sap.m/sap/m/ObjectNumber/interfaces/$ObjectNumberSettings.html">
 <meta property="og:title" content="Interface: $ObjectNumberSettings — OpenUI5 TypeScript API">
-<meta property="og:description" content="Interface: $ObjectNumberSettings — OpenUI5 TypeScript API Reference (1.120.46)">
+<meta property="og:description" content="Interface: $ObjectNumberSettings — OpenUI5 TypeScript API Reference (1.120.0)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/openui5/1.120/sap.m/sap/m/ObjectNumber/interfaces/$ObjectNumberSettings.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,12 +33,11 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../index.html">OpenUI5 API</a> › <a href="../../../../../sap.m/README.html">sap.m</a> › sap › m › <a href="../../../../../sap.m/sap/m/ObjectNumber/README.html">ObjectNumber</a> › interfaces</nav>
-<p><a href="../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.46)</strong></a></p>
+<p><a href="../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.0)</strong></a></p>
 <hr>
-<p><a href="../../../../../README.html">OpenUI5 TypeScript API (1.120.46)</a> / <a href="../../../../README.html">sap.m</a> / <a href="../README.html">sap/m/ObjectNumber</a> / $ObjectNumberSettings</p>
+<p><a href="../../../../../README.html">OpenUI5 TypeScript API (1.120.0)</a> / <a href="../../../../README.html">sap.m</a> / <a href="../README.html">sap/m/ObjectNumber</a> / $ObjectNumberSettings</p>
 <h1>Interface: $ObjectNumberSettings</h1>
 <pre class="sig"><span class="kw">import</span> { $ObjectNumberSettings } <span class="kw">from</span> <span class="str">"sap/m/ObjectNumber"</span>;</pre>
-<p>Describes the settings that can be provided to the ObjectNumber constructor.</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../../../../sap.ui.core/sap/ui/core/Control/interfaces/$ControlSettings.html"><code>$ControlSettings</code></a></li>
@@ -48,10 +47,10 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 <blockquote>
 <p><code>optional</code> <strong>active?</strong>: <code>boolean</code> | <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<p>Indicates if the <code>ObjectNumber</code> text and icon can be clicked/tapped by the user.</p>
-<p><strong>Note:</strong> If you set this property to <code>true</code>, you have to set also the <code>number</code> or <code>unit</code> property.</p>
 <h4>Since</h4>
 <p>1.86</p>
+<p>Indicates if the <code>ObjectNumber</code> text and icon can be clicked/tapped by the user.</p>
+<p><strong>Note:</strong> If you set this property to <code>true</code>, you have to set also the <code>number</code> or <code>unit</code> property.</p>
 <hr>
 <h3>ariaDescribedBy?</h3>
 <blockquote>
@@ -75,17 +74,17 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 <blockquote>
 <p><code>optional</code> <strong>emptyIndicatorMode?</strong>: <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code> | <code>&quot;Auto&quot;</code> | <code>&quot;On&quot;</code> | <a href="../../library/enumerations/EmptyIndicatorMode.html"><code>EmptyIndicatorMode</code></a> | <code>&quot;Off&quot;</code></p>
 </blockquote>
-<p>Specifies if an empty indicator should be displayed when there is no number.</p>
 <h4>Since</h4>
 <p>1.89</p>
+<p>Specifies if an empty indicator should be displayed when there is no number.</p>
 <hr>
 <h3>inverted?</h3>
 <blockquote>
 <p><code>optional</code> <strong>inverted?</strong>: <code>boolean</code> | <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<p>Determines whether the background color reflects the set <code>state</code> instead of the control&#39;s text.</p>
 <h4>Since</h4>
 <p>1.86</p>
+<p>Determines whether the background color reflects the set <code>state</code> instead of the control&#39;s text.</p>
 <hr>
 <h3>number?</h3>
 <blockquote>
@@ -97,15 +96,14 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 <blockquote>
 <p><code>optional</code> <strong>numberUnit?</strong>: <code>string</code> | <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a></p>
 </blockquote>
-<p>Defines the number units qualifier.</p>
 <h4>Deprecated</h4>
 <p>(since 1.16.1) - replaced by <code>unit</code> property</p>
+<p>Defines the number units qualifier.</p>
 <hr>
 <h3>press?</h3>
 <blockquote>
 <p><code>optional</code> <strong>press?</strong>: (<code>oEvent</code>) =&gt; <code>void</code></p>
 </blockquote>
-<p>Fires when the user clicks/taps on active <code>Object Number</code>.</p>
 <h4>Parameters</h4>
 <h5>oEvent</h5>
 <p><a href="../../../../../sap.ui.core/sap/ui/base/Event/classes/Event.html"><code>Event</code></a></p>
@@ -113,6 +111,7 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 <p><code>void</code></p>
 <h4>Since</h4>
 <p>1.86</p>
+<p>Fires when the user clicks/taps on active <code>Object Number</code>.</p>
 <hr>
 <h3>state?</h3>
 <blockquote>
@@ -138,11 +137,11 @@ By default, the control inherits the text direction from its parent control.</p>
 <blockquote>
 <p><code>optional</code> <strong>unit?</strong>: <code>string</code> | <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a></p>
 </blockquote>
-<p>Defines the number units qualifier. If numberUnit and unit are both set, the unit value is used.</p>
 <h4>Since</h4>
 <p>1.16.1</p>
+<p>Defines the number units qualifier. If numberUnit and unit are both set, the unit value is used.</p>
 <hr>
 
-<footer>Generated from <code>@openui5/types@1.120.46</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@openui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

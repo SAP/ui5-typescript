@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>~~Class: Link~~ — OpenUI5 TypeScript API</title>
-<meta name="description" content="~~Class: Link~~ — OpenUI5 TypeScript API Reference (1.120.46)">
+<meta name="description" content="~~Class: Link~~ — OpenUI5 TypeScript API Reference (1.120.0)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/openui5/1.120/sap.ui.commons/sap/ui/commons/Link/classes/Link.html">
 <meta property="og:title" content="~~Class: Link~~ — OpenUI5 TypeScript API">
-<meta property="og:description" content="~~Class: Link~~ — OpenUI5 TypeScript API Reference (1.120.46)">
+<meta property="og:description" content="~~Class: Link~~ — OpenUI5 TypeScript API Reference (1.120.0)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/openui5/1.120/sap.ui.commons/sap/ui/commons/Link/classes/Link.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,16 +33,16 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../index.html">OpenUI5 API</a> › <a href="../../../../../../sap.ui.commons/README.html">sap.ui.commons</a> › sap › ui › commons › <a href="../../../../../../sap.ui.commons/sap/ui/commons/Link/README.html">Link</a> › classes</nav>
-<p><a href="../../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.46)</strong></a></p>
+<p><a href="../../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.0)</strong></a></p>
 <hr>
-<p><a href="../../../../../../README.html">OpenUI5 TypeScript API (1.120.46)</a> / <a href="../../../../../README.html">sap.ui.commons</a> / <a href="../README.html">sap/ui/commons/Link</a> / Link</p>
+<p><a href="../../../../../../README.html">OpenUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../README.html">sap.ui.commons</a> / <a href="../README.html">sap/ui/commons/Link</a> / Link</p>
 <h1><del>Class: Link</del></h1>
 <pre class="sig"><span class="kw">import</span> Link <span class="kw">from</span> <span class="str">"sap/ui/commons/Link"</span>;</pre>
+<h2>Deprecated</h2>
+<p>(since 1.38) - Instead, use the <code>sap.m.Link</code> control.</p>
 <p>Provides an absolute or relative reference to an internal or external URL. The classical target parameters
 are supported. Another usage scenario is triggering an action, for example to open a popup window. In
 both cases, the link is a hypertext link.</p>
-<h2>Deprecated</h2>
-<p>(since 1.38) - Instead, use the <code>sap.m.Link</code> control.</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></li>
@@ -200,9 +200,6 @@ otherwise it will be bound to this <code>sap.ui.commons.Link</code> itself.</p>
 <blockquote>
 <p><strong>firePress</strong>(<code>mParameters?</code>): <code>boolean</code></p>
 </blockquote>
-<p>Fires event #event:press press to attached listeners.</p>
-<p>Listeners may prevent the default action of this event by calling the <code>preventDefault</code> method on the
-event object. The return value of this method indicates whether the default action should be executed.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><code>object</code></p>
@@ -212,6 +209,9 @@ event object. The return value of this method indicates whether the default acti
 <p>Whether or not to prevent the default action</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:press press to attached listeners.</p>
+<p>Listeners may prevent the default action of this event by calling the <code>preventDefault</code> method on the
+event object. The return value of this method indicates whether the default action should be executed.</p>
 <hr>
 <h3><del>focus()</del></h3>
 <blockquote>
@@ -227,13 +227,13 @@ event object. The return value of this method indicates whether the default acti
 <blockquote>
 <p><strong>getAccessibilityInfo</strong>(): <a href="../../../../../../sap.ui.core/sap/ui/core/library/type-aliases/AccessibilityInfo.html"><code>AccessibilityInfo</code></a></p>
 </blockquote>
-<p>See:
-	sap.ui.core.Control#getAccessibilityInfo</p>
 <h4>Returns</h4>
 <p><a href="../../../../../../sap.ui.core/sap/ui/core/library/type-aliases/AccessibilityInfo.html"><code>AccessibilityInfo</code></a></p>
 <p>The object contains the accessibility information of <code>sap.ui.commons.Link</code></p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>See:
+	sap.ui.core.Control#getAccessibilityInfo</p>
 <h4>Overrides</h4>
 <p><a href="../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a>.<a href="../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html#getaccessibilityinfo"><code>getAccessibilityInfo</code></a></p>
 <hr>
@@ -311,14 +311,14 @@ not be set, but instead an event handler for the &quot;press&quot; event should 
 <blockquote>
 <p><strong>getWidth</strong>(): <code>string</code></p>
 </blockquote>
-<p>Gets current value of property #getWidth width.</p>
-<p>Width of text link. When it is set (CSS-size such as % or px), this is the exact size. When left blank,
-the text defines the size.</p>
 <h4>Returns</h4>
 <p><code>string</code></p>
 <p>Value of property <code>width</code></p>
 <h4>Since</h4>
 <p>1.8.0</p>
+<p>Gets current value of property #getWidth width.</p>
+<p>Width of text link. When it is set (CSS-size such as % or px), this is the exact size. When left blank,
+the text defines the size.</p>
 <hr>
 <h3><del>removeAllAriaDescribedBy()</del></h3>
 <blockquote>
@@ -447,10 +447,6 @@ not be set, but instead an event handler for the &quot;press&quot; event should 
 <blockquote>
 <p><strong>setWidth</strong>(<code>sWidth?</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getWidth width.</p>
-<p>Width of text link. When it is set (CSS-size such as % or px), this is the exact size. When left blank,
-the text defines the size.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <h4>Parameters</h4>
 <h5>sWidth?</h5>
 <p><code>string</code></p>
@@ -460,6 +456,10 @@ the text defines the size.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.8.0</p>
+<p>Sets a new value for property #getWidth width.</p>
+<p>Width of text link. When it is set (CSS-size such as % or px), this is the exact size. When left blank,
+the text defines the size.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <hr>
 <h3><del>extend()</del></h3>
 <blockquote>
@@ -476,7 +476,7 @@ contained in <code>oClassInfo</code>.</p>
 <p><code>string</code></p>
 <p>Name of the class being created</p>
 <h5>oClassInfo?</h5>
-<p><a href="../../../../../../sap.f/namespaces/sap/type-aliases/ClassInfo.html"><code>ClassInfo</code></a>&lt;<code>T</code>, <code>Link</code>&gt;</p>
+<p><code>ClassInfo</code>&lt;<code>T</code>, <code>Link</code>&gt;</p>
 <p>Object literal with information about the class</p>
 <h5>FNMetaImpl?</h5>
 <p><code>Function</code></p>
@@ -500,6 +500,6 @@ used by this class</p>
 <p><a href="../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a>.<a href="../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html#getmetadata-1"><code>getMetadata</code></a></p>
 <hr>
 
-<footer>Generated from <code>@openui5/types@1.120.46</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@openui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

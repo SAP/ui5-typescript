@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Interface: $LabelSettings — OpenUI5 TypeScript API</title>
-<meta name="description" content="Interface: $LabelSettings — OpenUI5 TypeScript API Reference (1.120.46)">
+<meta name="description" content="Interface: $LabelSettings — OpenUI5 TypeScript API Reference (1.120.0)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/openui5/1.120/sap.m/sap/m/Label/interfaces/$LabelSettings.html">
 <meta property="og:title" content="Interface: $LabelSettings — OpenUI5 TypeScript API">
-<meta property="og:description" content="Interface: $LabelSettings — OpenUI5 TypeScript API Reference (1.120.46)">
+<meta property="og:description" content="Interface: $LabelSettings — OpenUI5 TypeScript API Reference (1.120.0)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/openui5/1.120/sap.m/sap/m/Label/interfaces/$LabelSettings.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,12 +33,11 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../index.html">OpenUI5 API</a> › <a href="../../../../../sap.m/README.html">sap.m</a> › sap › m › <a href="../../../../../sap.m/sap/m/Label/README.html">Label</a> › interfaces</nav>
-<p><a href="../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.46)</strong></a></p>
+<p><a href="../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.0)</strong></a></p>
 <hr>
-<p><a href="../../../../../README.html">OpenUI5 TypeScript API (1.120.46)</a> / <a href="../../../../README.html">sap.m</a> / <a href="../README.html">sap/m/Label</a> / $LabelSettings</p>
+<p><a href="../../../../../README.html">OpenUI5 TypeScript API (1.120.0)</a> / <a href="../../../../README.html">sap.m</a> / <a href="../README.html">sap/m/Label</a> / $LabelSettings</p>
 <h1>Interface: $LabelSettings</h1>
 <pre class="sig"><span class="kw">import</span> { $LabelSettings } <span class="kw">from</span> <span class="str">"sap/m/Label"</span>;</pre>
-<p>Describes the settings that can be provided to the Label constructor.</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../../../../sap.ui.core/sap/ui/core/Control/interfaces/$ControlSettings.html"><code>$ControlSettings</code></a></li>
@@ -54,10 +53,10 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 <blockquote>
 <p><code>optional</code> <strong>displayOnly?</strong>: <code>boolean</code> | <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<p>Determines if the label is in displayOnly mode.</p>
-<p><strong>Note:</strong> This property should be used only in Form controls in preview mode.</p>
 <h4>Since</h4>
 <p>1.50.0</p>
+<p>Determines if the label is in displayOnly mode.</p>
+<p><strong>Note:</strong> This property should be used only in Form controls in preview mode.</p>
 <hr>
 <h3>labelFor?</h3>
 <blockquote>
@@ -77,12 +76,12 @@ is set to true and associated input field is empty an asterisk character is adde
 <blockquote>
 <p><code>optional</code> <strong>showColon?</strong>: <code>boolean</code> | <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
+<h4>Since</h4>
+<p>1.98</p>
 <p>Defines whether a colon (:) character is added to the label.</p>
 <p><strong>Note:</strong> By default when the <code>Label</code> is in the <code>sap.ui.layout.form.Form</code> and <code>sap.ui.layout.form.SimpleForm</code>
 controls the colon (:) character is displayed automatically regardless of the value of the <code>showColon</code>
 property.</p>
-<h4>Since</h4>
-<p>1.98</p>
 <hr>
 <h3>text?</h3>
 <blockquote>
@@ -107,9 +106,9 @@ from its parent container.</p>
 <blockquote>
 <p><code>optional</code> <strong>vAlign?</strong>: <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code> | <code>&quot;Bottom&quot;</code> | <code>&quot;Top&quot;</code> | <code>&quot;Middle&quot;</code> | <code>&quot;Inherit&quot;</code> | <a href="../../../../../sap.ui.core/sap/ui/core/library/enumerations/VerticalAlign.html"><code>VerticalAlign</code></a></p>
 </blockquote>
-<p>Specifies the vertical alignment of the <code>Label</code> related to the tallest and lowest element on the line.</p>
 <h4>Since</h4>
 <p>1.54</p>
+<p>Specifies the vertical alignment of the <code>Label</code> related to the tallest and lowest element on the line.</p>
 <hr>
 <h3>width?</h3>
 <blockquote>
@@ -121,20 +120,20 @@ from its parent container.</p>
 <blockquote>
 <p><code>optional</code> <strong>wrapping?</strong>: <code>boolean</code> | <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<p>Determines the wrapping of the text within the <code>Label</code>. If set to true the <code>Label</code> will wrap, when set
-to false the <code>Label</code> will be truncated and replaced with ellipsis which is the default behavior.</p>
 <h4>Since</h4>
 <p>1.50</p>
+<p>Determines the wrapping of the text within the <code>Label</code>. If set to true the <code>Label</code> will wrap, when set
+to false the <code>Label</code> will be truncated and replaced with ellipsis which is the default behavior.</p>
 <hr>
 <h3>wrappingType?</h3>
 <blockquote>
 <p><code>optional</code> <strong>wrappingType?</strong>: <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code> | <a href="../../library/enumerations/WrappingType.html"><code>WrappingType</code></a> | <code>&quot;Hyphenated&quot;</code> | <code>&quot;Normal&quot;</code></p>
 </blockquote>
-<p>Defines the type of text wrapping to be used (hyphenated or normal).</p>
-<p><strong>Note:</strong> This property takes effect only when the <code>wrapping</code> property is set to <code>true</code>.</p>
 <h4>Since</h4>
 <p>1.60</p>
+<p>Defines the type of text wrapping to be used (hyphenated or normal).</p>
+<p><strong>Note:</strong> This property takes effect only when the <code>wrapping</code> property is set to <code>true</code>.</p>
 
-<footer>Generated from <code>@openui5/types@1.120.46</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@openui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

@@ -2,12 +2,12 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>Abstract Class: ObjectPageSectionBase — OpenUI5 TypeScript API</title>
-<meta name="description" content="Abstract Class: ObjectPageSectionBase — OpenUI5 TypeScript API Reference (1.120.46)">
+<title>Class: ObjectPageSectionBase — OpenUI5 TypeScript API</title>
+<meta name="description" content="Class: ObjectPageSectionBase — OpenUI5 TypeScript API Reference (1.120.0)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/openui5/1.120/sap.uxap/sap/uxap/ObjectPageSectionBase/classes/ObjectPageSectionBase.html">
-<meta property="og:title" content="Abstract Class: ObjectPageSectionBase — OpenUI5 TypeScript API">
-<meta property="og:description" content="Abstract Class: ObjectPageSectionBase — OpenUI5 TypeScript API Reference (1.120.46)">
+<meta property="og:title" content="Class: ObjectPageSectionBase — OpenUI5 TypeScript API">
+<meta property="og:description" content="Class: ObjectPageSectionBase — OpenUI5 TypeScript API Reference (1.120.0)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/openui5/1.120/sap.uxap/sap/uxap/ObjectPageSectionBase/classes/ObjectPageSectionBase.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,14 +33,14 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../index.html">OpenUI5 API</a> › <a href="../../../../../sap.uxap/README.html">sap.uxap</a> › sap › uxap › <a href="../../../../../sap.uxap/sap/uxap/ObjectPageSectionBase/README.html">ObjectPageSectionBase</a> › classes</nav>
-<p><a href="../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.46)</strong></a></p>
+<p><a href="../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.0)</strong></a></p>
 <hr>
-<p><a href="../../../../../README.html">OpenUI5 TypeScript API (1.120.46)</a> / <a href="../../../../README.html">sap.uxap</a> / <a href="../README.html">sap/uxap/ObjectPageSectionBase</a> / ObjectPageSectionBase</p>
-<h1>Abstract Class: ObjectPageSectionBase</h1>
+<p><a href="../../../../../README.html">OpenUI5 TypeScript API (1.120.0)</a> / <a href="../../../../README.html">sap.uxap</a> / <a href="../README.html">sap/uxap/ObjectPageSectionBase</a> / ObjectPageSectionBase</p>
+<h1>Class: ObjectPageSectionBase</h1>
 <pre class="sig"><span class="kw">import</span> ObjectPageSectionBase <span class="kw">from</span> <span class="str">"sap/uxap/ObjectPageSectionBase"</span>;</pre>
-<p>An abstract container for sections and subsections in the sap.uxap.ObjectPageLayout.</p>
 <h2>Since</h2>
 <p>1.26</p>
+<p>An abstract container for sections and subsections in the sap.uxap.ObjectPageLayout.</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></li>
@@ -121,26 +121,26 @@ used in the anchorBar.</p>
 <blockquote>
 <p><strong>getImportance</strong>(): <code>&quot;Medium&quot;</code> | <code>&quot;High&quot;</code> | <code>&quot;Low&quot;</code> | <a href="../../library/enumerations/Importance.html"><code>Importance</code></a></p>
 </blockquote>
-<p>Gets current value of property #getImportance importance.</p>
-<p>Determines whether the section will be hidden on low resolutions.</p>
-<p>Default value is <code>High</code>.</p>
 <h4>Returns</h4>
 <p><code>&quot;Medium&quot;</code> | <code>&quot;High&quot;</code> | <code>&quot;Low&quot;</code> | <a href="../../library/enumerations/Importance.html"><code>Importance</code></a></p>
 <p>Value of property <code>importance</code></p>
 <h4>Since</h4>
 <p>1.32.0</p>
+<p>Gets current value of property #getImportance importance.</p>
+<p>Determines whether the section will be hidden on low resolutions.</p>
+<p>Default value is <code>High</code>.</p>
 <hr>
 <h3>getSectionText()</h3>
 <blockquote>
 <p><strong>getSectionText</strong>(): <code>string</code></p>
 </blockquote>
-<p>Returns the control name text.</p>
-<p>To be overwritten by the specific control method.</p>
 <h4>Returns</h4>
 <p><code>string</code></p>
 <p>control name text</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Returns the control name text.</p>
+<p>To be overwritten by the specific control method.</p>
 <hr>
 <h3>getTitle()</h3>
 <blockquote>
@@ -159,6 +159,11 @@ is set to <code>false</code>.</p>
 <blockquote>
 <p><strong>getTitleLevel</strong>(): <code>&quot;Auto&quot;</code> | <a href="../../../../../sap.ui.core/sap/ui/core/library/enumerations/TitleLevel.html"><code>TitleLevel</code></a> | <code>&quot;H1&quot;</code> | <code>&quot;H2&quot;</code> | <code>&quot;H3&quot;</code> | <code>&quot;H4&quot;</code> | <code>&quot;H5&quot;</code> | <code>&quot;H6&quot;</code></p>
 </blockquote>
+<h4>Returns</h4>
+<p><code>&quot;Auto&quot;</code> | <a href="../../../../../sap.ui.core/sap/ui/core/library/enumerations/TitleLevel.html"><code>TitleLevel</code></a> | <code>&quot;H1&quot;</code> | <code>&quot;H2&quot;</code> | <code>&quot;H3&quot;</code> | <code>&quot;H4&quot;</code> | <code>&quot;H5&quot;</code> | <code>&quot;H6&quot;</code></p>
+<p>Value of property <code>titleLevel</code></p>
+<h4>Since</h4>
+<p>1.44.0</p>
 <p>Gets current value of property #getTitleLevel titleLevel.</p>
 <p>Determines the ARIA level of the <code>ObjectPageSectionBase</code> title. The ARIA level is used by assisting technologies,
 such as screen readers, to create a hierarchical site map for faster navigation.</p>
@@ -167,28 +172,6 @@ such as screen readers, to create a hierarchical site map for faster navigation.
 For example: if <code>titleLevel</code> is <code>TitleLevel.H1</code>, it will result as aria-level of 1 added to the <code>ObjectPageSectionBase</code>
 title.</p>
 <p>Default value is <code>Auto</code>.</p>
-<h4>Returns</h4>
-<p><code>&quot;Auto&quot;</code> | <a href="../../../../../sap.ui.core/sap/ui/core/library/enumerations/TitleLevel.html"><code>TitleLevel</code></a> | <code>&quot;H1&quot;</code> | <code>&quot;H2&quot;</code> | <code>&quot;H3&quot;</code> | <code>&quot;H4&quot;</code> | <code>&quot;H5&quot;</code> | <code>&quot;H6&quot;</code></p>
-<p>Value of property <code>titleLevel</code></p>
-<h4>Since</h4>
-<p>1.44.0</p>
-<hr>
-<h3>getTitleVisible()</h3>
-<blockquote>
-<p><strong>getTitleVisible</strong>(): <code>boolean</code></p>
-</blockquote>
-<p>Gets current value of property #getTitleVisible titleVisible.</p>
-<p>Defines the actual visibility of the title of <code>ObjectPageSectionBase</code>.</p>
-<p><strong>Note:</strong> This property is read-only. The <code>ObjectPageSectionBase</code> updates it, according to internal rules,
-based on UX specifications. You can only read the value of <code>titleVisible</code> property and use it in your
-binding to determine the aria-levels of the inner Controls.</p>
-<p><strong>Note:</strong> This is a downported feature introduced in version 1.121.0</p>
-<p>Default value is <code>true</code>.</p>
-<h4>Returns</h4>
-<p><code>boolean</code></p>
-<p>Value of property <code>titleVisible</code></p>
-<h4>Since</h4>
-<p>1.120.27</p>
 <hr>
 <h3>getVisible()</h3>
 <blockquote>
@@ -220,10 +203,6 @@ binding to determine the aria-levels of the inner Controls.</p>
 <blockquote>
 <p><strong>setImportance</strong>(<code>sImportance?</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getImportance importance.</p>
-<p>Determines whether the section will be hidden on low resolutions.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>High</code>.</p>
 <h4>Parameters</h4>
 <h5>sImportance?</h5>
 <p><code>&quot;Medium&quot;</code> | <code>&quot;High&quot;</code> | <code>&quot;Low&quot;</code> | <a href="../../library/enumerations/Importance.html"><code>Importance</code></a></p>
@@ -233,6 +212,10 @@ binding to determine the aria-levels of the inner Controls.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.32.0</p>
+<p>Sets a new value for property #getImportance importance.</p>
+<p>Determines whether the section will be hidden on low resolutions.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>High</code>.</p>
 <hr>
 <h3>setTitle()</h3>
 <blockquote>
@@ -256,15 +239,6 @@ is set to <code>false</code>.</p>
 <blockquote>
 <p><strong>setTitleLevel</strong>(<code>sTitleLevel?</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getTitleLevel titleLevel.</p>
-<p>Determines the ARIA level of the <code>ObjectPageSectionBase</code> title. The ARIA level is used by assisting technologies,
-such as screen readers, to create a hierarchical site map for faster navigation.</p>
-<p><strong>Note:</strong> Defining a <code>titleLevel</code> will add <code>aria-level</code> attribute from 1 to 6, instead of changing the
-<code>ObjectPageSectionBase</code> title HTML tag from H1 to H6.
-For example: if <code>titleLevel</code> is <code>TitleLevel.H1</code>, it will result as aria-level of 1 added to the <code>ObjectPageSectionBase</code>
-title.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>Auto</code>.</p>
 <h4>Parameters</h4>
 <h5>sTitleLevel?</h5>
 <p><code>&quot;Auto&quot;</code> | <a href="../../../../../sap.ui.core/sap/ui/core/library/enumerations/TitleLevel.html"><code>TitleLevel</code></a> | <code>&quot;H1&quot;</code> | <code>&quot;H2&quot;</code> | <code>&quot;H3&quot;</code> | <code>&quot;H4&quot;</code> | <code>&quot;H5&quot;</code> | <code>&quot;H6&quot;</code></p>
@@ -274,19 +248,15 @@ title.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.44.0</p>
-<hr>
-<h3>setTitleVisible()</h3>
-<blockquote>
-<p><strong>setTitleVisible</strong>(<code>bVisible</code>): <code>void</code></p>
-</blockquote>
-<p>Sets title visibility</p>
-<h4>Parameters</h4>
-<h5>bVisible</h5>
-<p><code>boolean</code></p>
-<h4>Returns</h4>
-<p><code>void</code></p>
-<h4>Ui5-protected</h4>
-<p>Do not call from applications (only from related classes in the framework)</p>
+<p>Sets a new value for property #getTitleLevel titleLevel.</p>
+<p>Determines the ARIA level of the <code>ObjectPageSectionBase</code> title. The ARIA level is used by assisting technologies,
+such as screen readers, to create a hierarchical site map for faster navigation.</p>
+<p><strong>Note:</strong> Defining a <code>titleLevel</code> will add <code>aria-level</code> attribute from 1 to 6, instead of changing the
+<code>ObjectPageSectionBase</code> title HTML tag from H1 to H6.
+For example: if <code>titleLevel</code> is <code>TitleLevel.H1</code>, it will result as aria-level of 1 added to the <code>ObjectPageSectionBase</code>
+title.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>Auto</code>.</p>
 <hr>
 <h3>setVisible()</h3>
 <blockquote>
@@ -310,13 +280,13 @@ title.</p>
 <blockquote>
 <p><strong>updateInvisibleTextLabelValue</strong>(): <code>this</code></p>
 </blockquote>
-<p>Performs the update of the invisible text label. This method is called for example when the section title
-is changed.</p>
 <h4>Returns</h4>
 <p><code>this</code></p>
 <p>this for chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Performs the update of the invisible text label. This method is called for example when the section title
+is changed.</p>
 <hr>
 <h3>extend()</h3>
 <blockquote>
@@ -333,7 +303,7 @@ with the information contained in <code>oClassInfo</code>.</p>
 <p><code>string</code></p>
 <p>Name of the class being created</p>
 <h5>oClassInfo?</h5>
-<p><a href="../../../../../sap.f/namespaces/sap/type-aliases/ClassInfo.html"><code>ClassInfo</code></a>&lt;<code>T</code>, <code>ObjectPageSectionBase</code>&gt;</p>
+<p><code>ClassInfo</code>&lt;<code>T</code>, <code>ObjectPageSectionBase</code>&gt;</p>
 <p>Object literal with information about the class</p>
 <h5>FNMetaImpl?</h5>
 <p><code>Function</code></p>
@@ -357,6 +327,6 @@ used by this class</p>
 <p><a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a>.<a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html#getmetadata-1"><code>getMetadata</code></a></p>
 <hr>
 
-<footer>Generated from <code>@openui5/types@1.120.46</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@openui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

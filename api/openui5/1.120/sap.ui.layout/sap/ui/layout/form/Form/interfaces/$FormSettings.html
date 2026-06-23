@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Interface: $FormSettings — OpenUI5 TypeScript API</title>
-<meta name="description" content="Interface: $FormSettings — OpenUI5 TypeScript API Reference (1.120.46)">
+<meta name="description" content="Interface: $FormSettings — OpenUI5 TypeScript API Reference (1.120.0)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/openui5/1.120/sap.ui.layout/sap/ui/layout/form/Form/interfaces/$FormSettings.html">
 <meta property="og:title" content="Interface: $FormSettings — OpenUI5 TypeScript API">
-<meta property="og:description" content="Interface: $FormSettings — OpenUI5 TypeScript API Reference (1.120.46)">
+<meta property="og:description" content="Interface: $FormSettings — OpenUI5 TypeScript API Reference (1.120.0)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/openui5/1.120/sap.ui.layout/sap/ui/layout/form/Form/interfaces/$FormSettings.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,12 +33,11 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../../index.html">OpenUI5 API</a> › <a href="../../../../../../../sap.ui.layout/README.html">sap.ui.layout</a> › sap › ui › layout › form › <a href="../../../../../../../sap.ui.layout/sap/ui/layout/form/Form/README.html">Form</a> › interfaces</nav>
-<p><a href="../../../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.46)</strong></a></p>
+<p><a href="../../../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.0)</strong></a></p>
 <hr>
-<p><a href="../../../../../../../README.html">OpenUI5 TypeScript API (1.120.46)</a> / <a href="../../../../../../README.html">sap.ui.layout</a> / <a href="../README.html">sap/ui/layout/form/Form</a> / $FormSettings</p>
+<p><a href="../../../../../../../README.html">OpenUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../../README.html">sap.ui.layout</a> / <a href="../README.html">sap/ui/layout/form/Form</a> / $FormSettings</p>
 <h1>Interface: $FormSettings</h1>
 <pre class="sig"><span class="kw">import</span> { $FormSettings } <span class="kw">from</span> <span class="str">"sap/ui/layout/form/Form"</span>;</pre>
-<p>Describes the settings that can be provided to the Form constructor.</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../../../../../../sap.ui.core/sap/ui/core/Control/interfaces/$ControlSettings.html"><code>$ControlSettings</code></a></li>
@@ -52,14 +51,16 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 <blockquote>
 <p><code>optional</code> <strong>ariaLabelledBy?</strong>: (<code>string</code> | <a href="../../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a>)[]</p>
 </blockquote>
-<p>Association to controls / IDs that label this control (see WAI-ARIA attribute <code>aria-labelledby</code>).</p>
 <h4>Since</h4>
 <p>1.28.0</p>
+<p>Association to controls / IDs that label this control (see WAI-ARIA attribute <code>aria-labelledby</code>).</p>
 <hr>
 <h3>editable?</h3>
 <blockquote>
 <p><code>optional</code> <strong>editable?</strong>: <code>boolean</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
+<h4>Since</h4>
+<p>1.20.0</p>
 <p>Applies a device-specific and theme-specific line height and label alignment to the form rows if the
 form has editable content. If set, all (not only the editable) rows of the form will get the line height
 of editable fields.</p>
@@ -69,8 +70,6 @@ controls in a form with <code>editable</code> set to false are still editable.</
 <p><strong>Warning:</strong> If this property is wrongly set, this might lead to visual issues. The labels and fields
 might be misaligned, the labels might be rendered in the wrong mode, and the spacing between the single
 controls might be wrong. Also, controls that do not fit the mode might be rendered incorrectly.</p>
-<h4>Since</h4>
-<p>1.20.0</p>
 <hr>
 <h3>formContainers?</h3>
 <blockquote>
@@ -101,12 +100,12 @@ to the needed value.</p>
 <blockquote>
 <p><code>optional</code> <strong>toolbar?</strong>: <a href="../../../../../../../sap.ui.core/sap/ui/core/library/interfaces/Toolbar.html"><code>Toolbar</code></a></p>
 </blockquote>
+<h4>Since</h4>
+<p>1.36.0</p>
 <p>Toolbar of the <code>Form</code>.</p>
 <p><strong>Note:</strong> If a <code>Toolbar</code> is used, the <code>Title</code> is ignored. If a title is needed inside the <code>Toolbar</code> it
 must be added at content to the <code>Toolbar</code>. In this case add the <code>Title</code> to the <code>ariaLabelledBy</code> association.
 Use the right title level to meet the visual requirements. This might be theme-dependent.</p>
-<h4>Since</h4>
-<p>1.36.0</p>
 <hr>
 <h3>width?</h3>
 <blockquote>
@@ -114,6 +113,6 @@ Use the right title level to meet the visual requirements. This might be theme-d
 </blockquote>
 <p>Width of the <code>Form</code>.</p>
 
-<footer>Generated from <code>@openui5/types@1.120.46</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@openui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

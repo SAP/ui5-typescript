@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Interface: $ObjectPageSectionBaseSettings — OpenUI5 TypeScript API</title>
-<meta name="description" content="Interface: $ObjectPageSectionBaseSettings — OpenUI5 TypeScript API Reference (1.120.46)">
+<meta name="description" content="Interface: $ObjectPageSectionBaseSettings — OpenUI5 TypeScript API Reference (1.120.0)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/openui5/1.120/sap.uxap/sap/uxap/ObjectPageSectionBase/interfaces/$ObjectPageSectionBaseSettings.html">
 <meta property="og:title" content="Interface: $ObjectPageSectionBaseSettings — OpenUI5 TypeScript API">
-<meta property="og:description" content="Interface: $ObjectPageSectionBaseSettings — OpenUI5 TypeScript API Reference (1.120.46)">
+<meta property="og:description" content="Interface: $ObjectPageSectionBaseSettings — OpenUI5 TypeScript API Reference (1.120.0)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/openui5/1.120/sap.uxap/sap/uxap/ObjectPageSectionBase/interfaces/$ObjectPageSectionBaseSettings.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,12 +33,11 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../index.html">OpenUI5 API</a> › <a href="../../../../../sap.uxap/README.html">sap.uxap</a> › sap › uxap › <a href="../../../../../sap.uxap/sap/uxap/ObjectPageSectionBase/README.html">ObjectPageSectionBase</a> › interfaces</nav>
-<p><a href="../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.46)</strong></a></p>
+<p><a href="../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.0)</strong></a></p>
 <hr>
-<p><a href="../../../../../README.html">OpenUI5 TypeScript API (1.120.46)</a> / <a href="../../../../README.html">sap.uxap</a> / <a href="../README.html">sap/uxap/ObjectPageSectionBase</a> / $ObjectPageSectionBaseSettings</p>
+<p><a href="../../../../../README.html">OpenUI5 TypeScript API (1.120.0)</a> / <a href="../../../../README.html">sap.uxap</a> / <a href="../README.html">sap/uxap/ObjectPageSectionBase</a> / $ObjectPageSectionBaseSettings</p>
 <h1>Interface: $ObjectPageSectionBaseSettings</h1>
 <pre class="sig"><span class="kw">import</span> { $ObjectPageSectionBaseSettings } <span class="kw">from</span> <span class="str">"sap/uxap/ObjectPageSectionBase"</span>;</pre>
-<p>Describes the settings that can be provided to the ObjectPageSectionBase constructor.</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../../../../sap.ui.core/sap/ui/core/Control/interfaces/$ControlSettings.html"><code>$ControlSettings</code></a></li>
@@ -63,9 +62,9 @@ used in the anchorBar.</p>
 <blockquote>
 <p><code>optional</code> <strong>importance?</strong>: <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code> | <code>&quot;Medium&quot;</code> | <code>&quot;High&quot;</code> | <code>&quot;Low&quot;</code> | <a href="../../library/enumerations/Importance.html"><code>Importance</code></a></p>
 </blockquote>
-<p>Determines whether the section will be hidden on low resolutions.</p>
 <h4>Since</h4>
 <p>1.32.0</p>
+<p>Determines whether the section will be hidden on low resolutions.</p>
 <hr>
 <h3>title?</h3>
 <blockquote>
@@ -80,26 +79,14 @@ is set to <code>false</code>.</p>
 <blockquote>
 <p><code>optional</code> <strong>titleLevel?</strong>: <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code> | <code>&quot;Auto&quot;</code> | <a href="../../../../../sap.ui.core/sap/ui/core/library/enumerations/TitleLevel.html"><code>TitleLevel</code></a> | <code>&quot;H1&quot;</code> | <code>&quot;H2&quot;</code> | <code>&quot;H3&quot;</code> | <code>&quot;H4&quot;</code> | <code>&quot;H5&quot;</code> | <code>&quot;H6&quot;</code></p>
 </blockquote>
+<h4>Since</h4>
+<p>1.44.0</p>
 <p>Determines the ARIA level of the <code>ObjectPageSectionBase</code> title. The ARIA level is used by assisting technologies,
 such as screen readers, to create a hierarchical site map for faster navigation.</p>
 <p><strong>Note:</strong> Defining a <code>titleLevel</code> will add <code>aria-level</code> attribute from 1 to 6, instead of changing the
 <code>ObjectPageSectionBase</code> title HTML tag from H1 to H6.
 For example: if <code>titleLevel</code> is <code>TitleLevel.H1</code>, it will result as aria-level of 1 added to the <code>ObjectPageSectionBase</code>
 title.</p>
-<h4>Since</h4>
-<p>1.44.0</p>
-<hr>
-<h3>titleVisible?</h3>
-<blockquote>
-<p><code>optional</code> <strong>titleVisible?</strong>: <code>boolean</code> | <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
-</blockquote>
-<p>Defines the actual visibility of the title of <code>ObjectPageSectionBase</code>.</p>
-<p><strong>Note:</strong> This property is read-only. The <code>ObjectPageSectionBase</code> updates it, according to internal rules,
-based on UX specifications. You can only read the value of <code>titleVisible</code> property and use it in your
-binding to determine the aria-levels of the inner Controls.</p>
-<p><strong>Note:</strong> This is a downported feature introduced in version 1.121.0</p>
-<h4>Since</h4>
-<p>1.120.27</p>
 <hr>
 <h3>visible?</h3>
 <blockquote>
@@ -109,6 +96,6 @@ binding to determine the aria-levels of the inner Controls.</p>
 <h4>Overrides</h4>
 <p><a href="../../../../../sap.ui.core/sap/ui/core/Control/interfaces/$ControlSettings.html"><code>$ControlSettings</code></a>.<a href="../../../../../sap.ui.core/sap/ui/core/Control/interfaces/$ControlSettings.html#visible"><code>visible</code></a></p>
 
-<footer>Generated from <code>@openui5/types@1.120.46</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@openui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Interface: $SinglePlanningCalendarSettings — OpenUI5 TypeScript API</title>
-<meta name="description" content="Interface: $SinglePlanningCalendarSettings — OpenUI5 TypeScript API Reference (1.120.46)">
+<meta name="description" content="Interface: $SinglePlanningCalendarSettings — OpenUI5 TypeScript API Reference (1.120.0)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/openui5/1.120/sap.m/sap/m/SinglePlanningCalendar/interfaces/$SinglePlanningCalendarSettings.html">
 <meta property="og:title" content="Interface: $SinglePlanningCalendarSettings — OpenUI5 TypeScript API">
-<meta property="og:description" content="Interface: $SinglePlanningCalendarSettings — OpenUI5 TypeScript API Reference (1.120.46)">
+<meta property="og:description" content="Interface: $SinglePlanningCalendarSettings — OpenUI5 TypeScript API Reference (1.120.0)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/openui5/1.120/sap.m/sap/m/SinglePlanningCalendar/interfaces/$SinglePlanningCalendarSettings.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,12 +33,11 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../index.html">OpenUI5 API</a> › <a href="../../../../../sap.m/README.html">sap.m</a> › sap › m › <a href="../../../../../sap.m/sap/m/SinglePlanningCalendar/README.html">SinglePlanningCalendar</a> › interfaces</nav>
-<p><a href="../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.46)</strong></a></p>
+<p><a href="../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.0)</strong></a></p>
 <hr>
-<p><a href="../../../../../README.html">OpenUI5 TypeScript API (1.120.46)</a> / <a href="../../../../README.html">sap.m</a> / <a href="../README.html">sap/m/SinglePlanningCalendar</a> / $SinglePlanningCalendarSettings</p>
+<p><a href="../../../../../README.html">OpenUI5 TypeScript API (1.120.0)</a> / <a href="../../../../README.html">sap.m</a> / <a href="../README.html">sap/m/SinglePlanningCalendar</a> / $SinglePlanningCalendarSettings</p>
 <h1>Interface: $SinglePlanningCalendarSettings</h1>
 <pre class="sig"><span class="kw">import</span> { $SinglePlanningCalendarSettings } <span class="kw">from</span> <span class="str">"sap/m/SinglePlanningCalendar"</span>;</pre>
-<p>Describes the settings that can be provided to the SinglePlanningCalendar constructor.</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../../../../sap.ui.core/sap/ui/core/Control/interfaces/$ControlSettings.html"><code>$ControlSettings</code></a></li>
@@ -54,7 +53,6 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 <blockquote>
 <p><code>optional</code> <strong>appointmentCreate?</strong>: (<code>oEvent</code>) =&gt; <code>void</code></p>
 </blockquote>
-<p>Fired if an appointment is created.</p>
 <h4>Parameters</h4>
 <h5>oEvent</h5>
 <p><a href="../type-aliases/SinglePlanningCalendar$AppointmentCreateEvent.html"><code>SinglePlanningCalendar$AppointmentCreateEvent</code></a></p>
@@ -62,12 +60,12 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 <p><code>void</code></p>
 <h4>Since</h4>
 <p>1.65</p>
+<p>Fired if an appointment is created.</p>
 <hr>
 <h3>appointmentDrop?</h3>
 <blockquote>
 <p><code>optional</code> <strong>appointmentDrop?</strong>: (<code>oEvent</code>) =&gt; <code>void</code></p>
 </blockquote>
-<p>Fired if an appointment is dropped.</p>
 <h4>Parameters</h4>
 <h5>oEvent</h5>
 <p><a href="../type-aliases/SinglePlanningCalendar$AppointmentDropEvent.html"><code>SinglePlanningCalendar$AppointmentDropEvent</code></a></p>
@@ -75,12 +73,12 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 <p><code>void</code></p>
 <h4>Since</h4>
 <p>1.64</p>
+<p>Fired if an appointment is dropped.</p>
 <hr>
 <h3>appointmentResize?</h3>
 <blockquote>
 <p><code>optional</code> <strong>appointmentResize?</strong>: (<code>oEvent</code>) =&gt; <code>void</code></p>
 </blockquote>
-<p>Fired when an appointment is resized.</p>
 <h4>Parameters</h4>
 <h5>oEvent</h5>
 <p><a href="../type-aliases/SinglePlanningCalendar$AppointmentResizeEvent.html"><code>SinglePlanningCalendar$AppointmentResizeEvent</code></a></p>
@@ -88,6 +86,7 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 <p><code>void</code></p>
 <h4>Since</h4>
 <p>1.65</p>
+<p>Fired when an appointment is resized.</p>
 <hr>
 <h3>appointments?</h3>
 <blockquote>
@@ -114,16 +113,15 @@ If set, it will not make any effect.</p>
 <blockquote>
 <p><code>optional</code> <strong>calendarWeekNumbering?</strong>: <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code> | <a href="../../../../../sap.ui.core/sap/ui/core/date/CalendarWeekNumbering/enumerations/CalendarWeekNumbering.html"><code>CalendarWeekNumbering</code></a></p>
 </blockquote>
-<p>If set, the calendar week numbering is used for display. If not set, the calendar week numbering of the
-global configuration is used. Note: This property should not be used with firstDayOfWeek property.</p>
 <h4>Since</h4>
 <p>1.110.0</p>
+<p>If set, the calendar week numbering is used for display. If not set, the calendar week numbering of the
+global configuration is used. Note: This property should not be used with firstDayOfWeek property.</p>
 <hr>
 <h3>cellPress?</h3>
 <blockquote>
 <p><code>optional</code> <strong>cellPress?</strong>: (<code>oEvent</code>) =&gt; <code>void</code></p>
 </blockquote>
-<p>Fired when a grid cell is pressed.</p>
 <h4>Parameters</h4>
 <h5>oEvent</h5>
 <p><a href="../type-aliases/SinglePlanningCalendar$CellPressEvent.html"><code>SinglePlanningCalendar$CellPressEvent</code></a></p>
@@ -131,6 +129,7 @@ global configuration is used. Note: This property should not be used with firstD
 <p><code>void</code></p>
 <h4>Since</h4>
 <p>1.65</p>
+<p>Fired when a grid cell is pressed.</p>
 <hr>
 <h3>dateSelectionMode?</h3>
 <blockquote>
@@ -143,32 +142,32 @@ with a combination of <code>Ctrl + mouse click</code></p>
 <blockquote>
 <p><code>optional</code> <strong>enableAppointmentsCreate?</strong>: <code>boolean</code> | <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
+<h4>Since</h4>
+<p>1.65</p>
 <p>Determines whether the appointments can be created by dragging on empty cells.</p>
 <p>See #property:enableAppointmentsResize enableAppointmentsResize for the specific points for events
 snapping</p>
-<h4>Since</h4>
-<p>1.65</p>
 <hr>
 <h3>enableAppointmentsDragAndDrop?</h3>
 <blockquote>
 <p><code>optional</code> <strong>enableAppointmentsDragAndDrop?</strong>: <code>boolean</code> | <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
+<h4>Since</h4>
+<p>1.64</p>
 <p>Determines whether the appointments in the grid are draggable.</p>
 <p>The drag and drop interaction is visualized by a placeholder highlighting the area where the appointment
 can be dropped by the user.</p>
-<h4>Since</h4>
-<p>1.64</p>
 <hr>
 <h3>enableAppointmentsResize?</h3>
 <blockquote>
 <p><code>optional</code> <strong>enableAppointmentsResize?</strong>: <code>boolean</code> | <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
+<h4>Since</h4>
+<p>1.65</p>
 <p>Determines whether the appointments are resizable.</p>
 <p>The resize interaction is visualized by making the appointment transparent.</p>
 <p>The appointment snaps on every interval of 30 minutes. After the resize is finished, the #event:appointmentResize appointmentResize
 event is fired, containing the new start and end UI5Date or JavaScript Date objects.</p>
-<h4>Since</h4>
-<p>1.65</p>
 <hr>
 <h3>endHour?</h3>
 <blockquote>
@@ -181,13 +180,13 @@ the next hours are displayed as non-working. The passed hour is considered as 24
 <blockquote>
 <p><code>optional</code> <strong>firstDayOfWeek?</strong>: <code>number</code> | <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
+<h4>Since</h4>
+<p>1.98</p>
 <p>If set, the first day of the displayed week is this day. Valid values are 0 to 6 starting on Sunday.
 If there is no valid value set, the default of the used locale is used.</p>
 <p>Note: This property will only have effect in Week view and Month view of the SinglePlanningCalendar,
 but it wouldn&#39;t have effect in WorkWeek view. This property should not be used with the calendarWeekNumbering
 property.</p>
-<h4>Since</h4>
-<p>1.98</p>
 <hr>
 <h3>fullDay?</h3>
 <blockquote>
@@ -211,10 +210,10 @@ the <code>startHour</code> and <code>endHour</code>.</p>
 <blockquote>
 <p><code>optional</code> <strong>legend?</strong>: <code>string</code> | <a href="../../PlanningCalendarLegend/classes/PlanningCalendarLegend.html"><code>PlanningCalendarLegend</code></a></p>
 </blockquote>
-<p>Association to the <code>PlanningCalendarLegend</code> explaining the colors of the <code>Appointments</code>.</p>
-<p><strong>Note:</strong> The legend does not have to be rendered but must exist and all required types must be assigned.</p>
 <h4>Since</h4>
 <p>1.65.0</p>
+<p>Association to the <code>PlanningCalendarLegend</code> explaining the colors of the <code>Appointments</code>.</p>
+<p><strong>Note:</strong> The legend does not have to be rendered but must exist and all required types must be assigned.</p>
 <hr>
 <h3>moreLinkPress?</h3>
 <blockquote>
@@ -232,10 +231,10 @@ multiple appointments exist and the available space is not sufficient to display
 <blockquote>
 <p><code>optional</code> <strong>scaleFactor?</strong>: <code>number</code> | <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<p>Determines scale factor for the appointments.</p>
-<p>Acceptable range is from 1 to 6.</p>
 <h4>Since</h4>
 <p>1.99</p>
+<p>Determines scale factor for the appointments.</p>
+<p>Acceptable range is from 1 to 6.</p>
 <hr>
 <h3>selectedDates?</h3>
 <blockquote>
@@ -255,10 +254,10 @@ class.</p>
 <blockquote>
 <p><code>optional</code> <strong>specialDates?</strong>: <code>`{${string}}`</code> | <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/AggregationBindingInfo.html"><code>AggregationBindingInfo</code></a> | <a href="../../../../../sap.ui.unified/sap/ui/unified/DateTypeRange/classes/DateTypeRange.html"><code>DateTypeRange</code></a> | <a href="../../../../../sap.ui.unified/sap/ui/unified/DateTypeRange/classes/DateTypeRange.html"><code>DateTypeRange</code></a>[]</p>
 </blockquote>
-<p>Special days in the header visualized as a date range with type.</p>
-<p><strong>Note:</strong> If one day is assigned to more than one type, only the first type is used.</p>
 <h4>Since</h4>
 <p>1.66</p>
+<p>Special days in the header visualized as a date range with type.</p>
+<p><strong>Note:</strong> If one day is assigned to more than one type, only the first type is used.</p>
 <hr>
 <h3>startDate?</h3>
 <blockquote>
@@ -289,14 +288,14 @@ the previous hours are displayed as non-working. The passed hour is considered a
 <blockquote>
 <p><code>optional</code> <strong>stickyMode?</strong>: <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code> | <code>&quot;None&quot;</code> | <code>&quot;All&quot;</code> | <a href="../../library/enumerations/PlanningCalendarStickyMode.html"><code>PlanningCalendarStickyMode</code></a> | <code>&quot;NavBarAndColHeaders&quot;</code></p>
 </blockquote>
+<h4>Since</h4>
+<p>1.62</p>
 <p>Determines which part of the control will remain fixed at the top of the page during vertical scrolling
 as long as the control is in the viewport.</p>
 <p><strong>Note:</strong> Limited browser support. Browsers which do not support this feature:
 	 - Microsoft Internet Explorer
 	 - Microsoft Edge lower than version 41 (EdgeHTML 16)
 	 - Mozilla Firefox lower than version 59</p>
-<h4>Since</h4>
-<p>1.62</p>
 <hr>
 <h3>title?</h3>
 <blockquote>
@@ -308,7 +307,6 @@ as long as the control is in the viewport.</p>
 <blockquote>
 <p><code>optional</code> <strong>viewChange?</strong>: (<code>oEvent</code>) =&gt; <code>void</code></p>
 </blockquote>
-<p>The view was changed by user interaction.</p>
 <h4>Parameters</h4>
 <h5>oEvent</h5>
 <p><a href="../../../../../sap.ui.core/sap/ui/base/Event/classes/Event.html"><code>Event</code></a></p>
@@ -316,6 +314,7 @@ as long as the control is in the viewport.</p>
 <p><code>void</code></p>
 <h4>Since</h4>
 <p>1.71.0</p>
+<p>The view was changed by user interaction.</p>
 <hr>
 <h3>views?</h3>
 <blockquote>
@@ -325,6 +324,6 @@ as long as the control is in the viewport.</p>
 <p><strong>Note:</strong> If not set, the Week view is available.</p>
 <hr>
 
-<footer>Generated from <code>@openui5/types@1.120.46</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@openui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

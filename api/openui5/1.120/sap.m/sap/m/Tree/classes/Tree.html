@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Class: Tree — OpenUI5 TypeScript API</title>
-<meta name="description" content="Class: Tree — OpenUI5 TypeScript API Reference (1.120.46)">
+<meta name="description" content="Class: Tree — OpenUI5 TypeScript API Reference (1.120.0)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/openui5/1.120/sap.m/sap/m/Tree/classes/Tree.html">
 <meta property="og:title" content="Class: Tree — OpenUI5 TypeScript API">
-<meta property="og:description" content="Class: Tree — OpenUI5 TypeScript API Reference (1.120.46)">
+<meta property="og:description" content="Class: Tree — OpenUI5 TypeScript API Reference (1.120.0)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/openui5/1.120/sap.m/sap/m/Tree/classes/Tree.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,15 +33,15 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../index.html">OpenUI5 API</a> › <a href="../../../../../sap.m/README.html">sap.m</a> › sap › m › <a href="../../../../../sap.m/sap/m/Tree/README.html">Tree</a> › classes</nav>
-<p><a href="../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.46)</strong></a></p>
+<p><a href="../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.0)</strong></a></p>
 <hr>
-<p><a href="../../../../../README.html">OpenUI5 TypeScript API (1.120.46)</a> / <a href="../../../../README.html">sap.m</a> / <a href="../README.html">sap/m/Tree</a> / Tree</p>
+<p><a href="../../../../../README.html">OpenUI5 TypeScript API (1.120.0)</a> / <a href="../../../../README.html">sap.m</a> / <a href="../README.html">sap/m/Tree</a> / Tree</p>
 <h1>Class: Tree</h1>
 <pre class="sig"><span class="kw">import</span> Tree <span class="kw">from</span> <span class="str">"sap/m/Tree"</span>;</pre>
-<p>The <code>Tree</code> control provides a tree structure for displaying data in a hierarchy. <strong>Note:</strong> Growing feature
-is not supported by <code>Tree</code>.</p>
 <h2>Since</h2>
 <p>1.42</p>
+<p>The <code>Tree</code> control provides a tree structure for displaying data in a hierarchy. <strong>Note:</strong> Growing feature
+is not supported by <code>Tree</code>.</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../ListBase/classes/ListBase.html"><code>ListBase</code></a></li>
@@ -92,11 +92,6 @@ See:
 <blockquote>
 <p><strong>attachToggleOpenState</strong>(<code>oData</code>, <code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
-<p>Attaches event handler <code>fnFunction</code> to the #event:toggleOpenState toggleOpenState event of this
-<code>sap.m.Tree</code>.</p>
-<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
-otherwise it will be bound to this <code>sap.m.Tree</code> itself.</p>
-<p>Fired when an item has been expanded or collapsed by user interaction.</p>
 <h5>Parameters</h5>
 <h6>oData</h6>
 <p><code>object</code></p>
@@ -113,15 +108,15 @@ object when firing the event</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Since</h5>
 <p>1.50</p>
-<h4>Call Signature</h4>
-<blockquote>
-<p><strong>attachToggleOpenState</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
-</blockquote>
 <p>Attaches event handler <code>fnFunction</code> to the #event:toggleOpenState toggleOpenState event of this
 <code>sap.m.Tree</code>.</p>
 <p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
 otherwise it will be bound to this <code>sap.m.Tree</code> itself.</p>
 <p>Fired when an item has been expanded or collapsed by user interaction.</p>
+<h4>Call Signature</h4>
+<blockquote>
+<p><strong>attachToggleOpenState</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
+</blockquote>
 <h5>Parameters</h5>
 <h6>fnFunction</h6>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -134,12 +129,16 @@ otherwise it will be bound to this <code>sap.m.Tree</code> itself.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Since</h5>
 <p>1.50</p>
+<p>Attaches event handler <code>fnFunction</code> to the #event:toggleOpenState toggleOpenState event of this
+<code>sap.m.Tree</code>.</p>
+<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
+otherwise it will be bound to this <code>sap.m.Tree</code> itself.</p>
+<p>Fired when an item has been expanded or collapsed by user interaction.</p>
 <hr>
 <h3>collapse()</h3>
 <blockquote>
 <p><strong>collapse</strong>(<code>vParam</code>): <code>this</code></p>
 </blockquote>
-<p>Collapses one or multiple items.</p>
 <h4>Parameters</h4>
 <h5>vParam</h5>
 <p><code>number</code> | <code>number</code>[]</p>
@@ -149,25 +148,23 @@ otherwise it will be bound to this <code>sap.m.Tree</code> itself.</p>
 <p>A reference to the Tree control</p>
 <h4>Since</h4>
 <p>1.56.0</p>
+<p>Collapses one or multiple items.</p>
 <hr>
 <h3>collapseAll()</h3>
 <blockquote>
 <p><strong>collapseAll</strong>(): <code>this</code></p>
 </blockquote>
-<p>Collapses all nodes.</p>
 <h4>Returns</h4>
 <p><code>this</code></p>
 <p>A reference to the Tree control</p>
 <h4>Since</h4>
 <p>1.48.0</p>
+<p>Collapses all nodes.</p>
 <hr>
 <h3>detachToggleOpenState()</h3>
 <blockquote>
 <p><strong>detachToggleOpenState</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
-<p>Detaches event handler <code>fnFunction</code> from the #event:toggleOpenState toggleOpenState event of
-this <code>sap.m.Tree</code>.</p>
-<p>The passed function and listener object must match the ones used for event registration.</p>
 <h4>Parameters</h4>
 <h5>fnFunction</h5>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -180,13 +177,14 @@ this <code>sap.m.Tree</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.50</p>
+<p>Detaches event handler <code>fnFunction</code> from the #event:toggleOpenState toggleOpenState event of
+this <code>sap.m.Tree</code>.</p>
+<p>The passed function and listener object must match the ones used for event registration.</p>
 <hr>
 <h3>expand()</h3>
 <blockquote>
 <p><strong>expand</strong>(<code>vParam</code>): <code>this</code></p>
 </blockquote>
-<p>Expands one or multiple items. Note that items that are hidden at the time of calling this API can&#39;t
-be expanded.</p>
 <h4>Parameters</h4>
 <h5>vParam</h5>
 <p><code>number</code> | <code>number</code>[]</p>
@@ -196,11 +194,22 @@ be expanded.</p>
 <p>A reference to the Tree control</p>
 <h4>Since</h4>
 <p>1.56.0</p>
+<p>Expands one or multiple items. Note that items that are hidden at the time of calling this API can&#39;t
+be expanded.</p>
 <hr>
 <h3>expandToLevel()</h3>
 <blockquote>
 <p><strong>expandToLevel</strong>(<code>iLevel</code>): <code>this</code></p>
 </blockquote>
+<h4>Parameters</h4>
+<h5>iLevel</h5>
+<p><code>number</code></p>
+<p>The level to which the data is expanded</p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Returns <code>this</code> to allow method chaining</p>
+<h4>Since</h4>
+<p>1.48.0</p>
 <p>Defines the level to which the tree is expanded. The function can be used to define the initial expanding
 state. An alternative way to define the initial expanding state is to set the parameter <code>numberOfExpandedLevels</code>
 of the binding.</p>
@@ -213,21 +222,11 @@ of the binding.</p>
      }
   });
 </code></pre>
-<h4>Parameters</h4>
-<h5>iLevel</h5>
-<p><code>number</code></p>
-<p>The level to which the data is expanded</p>
-<h4>Returns</h4>
-<p><code>this</code></p>
-<p>Returns <code>this</code> to allow method chaining</p>
-<h4>Since</h4>
-<p>1.48.0</p>
 <hr>
 <h3>fireToggleOpenState()</h3>
 <blockquote>
 <p><strong>fireToggleOpenState</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
-<p>Fires event #event:toggleOpenState toggleOpenState to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/Tree$ToggleOpenStateEventParameters.html"><code>Tree$ToggleOpenStateEventParameters</code></a></p>
@@ -239,12 +238,12 @@ of the binding.</p>
 <p>1.50</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:toggleOpenState toggleOpenState to attached listeners.</p>
 <hr>
 <h3><del>setGrowing()</del></h3>
 <blockquote>
 <p><strong>setGrowing</strong>(<code>bValue</code>): <code>this</code></p>
 </blockquote>
-<p>The <code>growing</code> property is not supported for control <code>Tree</code>.</p>
 <h4>Parameters</h4>
 <h5>bValue</h5>
 <p><code>boolean</code></p>
@@ -254,6 +253,7 @@ of the binding.</p>
 <p>Returns <code>this</code> to allow method chaining</p>
 <h4>Deprecated</h4>
 <p>(since 1.46)</p>
+<p>The <code>growing</code> property is not supported for control <code>Tree</code>.</p>
 <h4>Overrides</h4>
 <p><a href="../../ListBase/classes/ListBase.html"><code>ListBase</code></a>.<a href="../../ListBase/classes/ListBase.html#setgrowing"><code>setGrowing</code></a></p>
 <hr>
@@ -261,7 +261,6 @@ of the binding.</p>
 <blockquote>
 <p><strong>setGrowingDirection</strong>(<code>sValue</code>): <code>this</code></p>
 </blockquote>
-<p>The <code>growingDirection</code> property is not supported for control <code>Tree</code>.</p>
 <h4>Parameters</h4>
 <h5>sValue</h5>
 <p><a href="../../library/enumerations/ListGrowingDirection.html"><code>ListGrowingDirection</code></a> | <code>&quot;Downwards&quot;</code> | <code>&quot;Upwards&quot;</code></p>
@@ -271,6 +270,7 @@ of the binding.</p>
 <p>Returns <code>this</code> to allow method chaining</p>
 <h4>Deprecated</h4>
 <p>(since 1.46)</p>
+<p>The <code>growingDirection</code> property is not supported for control <code>Tree</code>.</p>
 <h4>Overrides</h4>
 <p><a href="../../ListBase/classes/ListBase.html"><code>ListBase</code></a>.<a href="../../ListBase/classes/ListBase.html#setgrowingdirection"><code>setGrowingDirection</code></a></p>
 <hr>
@@ -278,7 +278,6 @@ of the binding.</p>
 <blockquote>
 <p><strong>setGrowingScrollToLoad</strong>(<code>bValue</code>): <code>this</code></p>
 </blockquote>
-<p>The <code>growingScrollToLoad</code> property is not supported for control <code>Tree</code>.</p>
 <h4>Parameters</h4>
 <h5>bValue</h5>
 <p><code>boolean</code></p>
@@ -288,6 +287,7 @@ of the binding.</p>
 <p>Returns <code>this</code> to allow method chaining</p>
 <h4>Deprecated</h4>
 <p>(since 1.46)</p>
+<p>The <code>growingScrollToLoad</code> property is not supported for control <code>Tree</code>.</p>
 <h4>Overrides</h4>
 <p><a href="../../ListBase/classes/ListBase.html"><code>ListBase</code></a>.<a href="../../ListBase/classes/ListBase.html#setgrowingscrolltoload"><code>setGrowingScrollToLoad</code></a></p>
 <hr>
@@ -295,7 +295,6 @@ of the binding.</p>
 <blockquote>
 <p><strong>setGrowingThreshold</strong>(<code>iValue</code>): <code>this</code></p>
 </blockquote>
-<p>The <code>growingThreshold</code> property is not supported for control <code>Tree</code>.</p>
 <h4>Parameters</h4>
 <h5>iValue</h5>
 <p><code>number</code></p>
@@ -305,6 +304,7 @@ of the binding.</p>
 <p>Returns <code>this</code> to allow method chaining</p>
 <h4>Deprecated</h4>
 <p>(since 1.46)</p>
+<p>The <code>growingThreshold</code> property is not supported for control <code>Tree</code>.</p>
 <h4>Overrides</h4>
 <p><a href="../../ListBase/classes/ListBase.html"><code>ListBase</code></a>.<a href="../../ListBase/classes/ListBase.html#setgrowingthreshold"><code>setGrowingThreshold</code></a></p>
 <hr>
@@ -312,7 +312,6 @@ of the binding.</p>
 <blockquote>
 <p><strong>setGrowingTriggerText</strong>(<code>sValue</code>): <code>this</code></p>
 </blockquote>
-<p>The <code>growingTriggerText</code> property is not supported for control <code>Tree</code>.</p>
 <h4>Parameters</h4>
 <h5>sValue</h5>
 <p><code>string</code></p>
@@ -322,6 +321,7 @@ of the binding.</p>
 <p>Returns <code>this</code> to allow method chaining</p>
 <h4>Deprecated</h4>
 <p>(since 1.46)</p>
+<p>The <code>growingTriggerText</code> property is not supported for control <code>Tree</code>.</p>
 <h4>Overrides</h4>
 <p><a href="../../ListBase/classes/ListBase.html"><code>ListBase</code></a>.<a href="../../ListBase/classes/ListBase.html#setgrowingtriggertext"><code>setGrowingTriggerText</code></a></p>
 <hr>
@@ -340,7 +340,7 @@ contained in <code>oClassInfo</code>.</p>
 <p><code>string</code></p>
 <p>Name of the class being created</p>
 <h5>oClassInfo?</h5>
-<p><a href="../../../../../sap.f/namespaces/sap/type-aliases/ClassInfo.html"><code>ClassInfo</code></a>&lt;<code>T</code>, <code>Tree</code>&gt;</p>
+<p><code>ClassInfo</code>&lt;<code>T</code>, <code>Tree</code>&gt;</p>
 <p>Object literal with information about the class</p>
 <h5>FNMetaImpl?</h5>
 <p><code>Function</code></p>
@@ -364,6 +364,6 @@ used by this class</p>
 <p><a href="../../ListBase/classes/ListBase.html"><code>ListBase</code></a>.<a href="../../ListBase/classes/ListBase.html#getmetadata-1"><code>getMetadata</code></a></p>
 <hr>
 
-<footer>Generated from <code>@openui5/types@1.120.46</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@openui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

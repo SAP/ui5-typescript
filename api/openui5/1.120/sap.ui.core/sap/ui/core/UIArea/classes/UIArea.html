@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Class: UIArea — OpenUI5 TypeScript API</title>
-<meta name="description" content="Class: UIArea — OpenUI5 TypeScript API Reference (1.120.46)">
+<meta name="description" content="Class: UIArea — OpenUI5 TypeScript API Reference (1.120.0)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/openui5/1.120/sap.ui.core/sap/ui/core/UIArea/classes/UIArea.html">
 <meta property="og:title" content="Class: UIArea — OpenUI5 TypeScript API">
-<meta property="og:description" content="Class: UIArea — OpenUI5 TypeScript API Reference (1.120.46)">
+<meta property="og:description" content="Class: UIArea — OpenUI5 TypeScript API Reference (1.120.0)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/openui5/1.120/sap.ui.core/sap/ui/core/UIArea/classes/UIArea.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,9 +33,9 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../index.html">OpenUI5 API</a> › <a href="../../../../../../sap.ui.core/README.html">sap.ui.core</a> › sap › ui › core › <a href="../../../../../../sap.ui.core/sap/ui/core/UIArea/README.html">UIArea</a> › classes</nav>
-<p><a href="../../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.46)</strong></a></p>
+<p><a href="../../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.0)</strong></a></p>
 <hr>
-<p><a href="../../../../../../README.html">OpenUI5 TypeScript API (1.120.46)</a> / <a href="../../../../../README.html">sap.ui.core</a> / <a href="../README.html">sap/ui/core/UIArea</a> / UIArea</p>
+<p><a href="../../../../../../README.html">OpenUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../README.html">sap.ui.core</a> / <a href="../README.html">sap/ui/core/UIArea</a> / UIArea</p>
 <h1>Class: UIArea</h1>
 <pre class="sig"><span class="kw">import</span> UIArea <span class="kw">from</span> <span class="str">"sap/ui/core/UIArea"</span>;</pre>
 <p>An area in a page that hosts a tree of UI elements.</p>
@@ -71,17 +71,13 @@ normal control tree, but nevertheless should receive model or binding context up
 <h4>Overrides</h4>
 <p><a href="../../../base/ManagedObject/classes/ManagedObject.html"><code>ManagedObject</code></a>.<a href="../../../base/ManagedObject/classes/ManagedObject.html#constructor"><code>constructor</code></a></p>
 <h2>Properties</h2>
-<h3><del>registry</del></h3>
+<h3>registry</h3>
 <blockquote>
 <p><code>static</code> <strong>registry</strong>: <a href="../interfaces/registry.html"><code>registry</code></a></p>
 </blockquote>
-<p>Registry of all <code>sap.ui.core.UIArea</code>s that currently exist.</p>
 <h4>Since</h4>
 <p>1.107</p>
-<h4>Deprecated</h4>
-<p>(since 1.120) - without a replacement. Applications should not be interested in the set of
-<code>UIArea</code>s. They should only assign controls to them, by using sap.ui.core.Control.prototype.placeAt Control.prototype.placeAt
-or use the API of a <code>UIArea</code> as reachable via sap.ui.core.Control.prototype.getUIArea Control.prototype.getUIArea.</p>
+<p>Registry of all <code>sap.ui.core.Element</code>s that currently exist.</p>
 <h2>Methods</h2>
 <h3>addContent()</h3>
 <blockquote>
@@ -131,12 +127,12 @@ or use the API of a <code>UIArea</code> as reachable via sap.ui.core.Control.pro
 <blockquote>
 <p><strong>getBindingContext</strong>(): <code>null</code></p>
 </blockquote>
-<p>Provide getBindingContext, as UIArea can be parent of an element.</p>
 <h4>Returns</h4>
 <p><code>null</code></p>
 <p>Always returns null.</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Provide getBindingContext, as UIArea can be parent of an element.</p>
 <h4>Overrides</h4>
 <p><a href="../../../base/ManagedObject/classes/ManagedObject.html"><code>ManagedObject</code></a>.<a href="../../../base/ManagedObject/classes/ManagedObject.html#getbindingcontext"><code>getBindingContext</code></a></p>
 <hr>
@@ -163,13 +159,13 @@ the UIArea.</p>
 <blockquote>
 <p><strong>getEventingParent</strong>(): <a href="../../../base/EventProvider/classes/EventProvider.html"><code>EventProvider</code></a></p>
 </blockquote>
-<p>Returns the Core&#39;s event provider as new eventing parent to enable control event bubbling to the core
-to ensure compatibility with the core validation events.</p>
 <h4>Returns</h4>
 <p><a href="../../../base/EventProvider/classes/EventProvider.html"><code>EventProvider</code></a></p>
 <p>the parent event provider</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Returns the Core&#39;s event provider as new eventing parent to enable control event bubbling to the core
+to ensure compatibility with the core validation events.</p>
 <h4>Overrides</h4>
 <p><a href="../../../base/ManagedObject/classes/ManagedObject.html"><code>ManagedObject</code></a>.<a href="../../../base/ManagedObject/classes/ManagedObject.html#geteventingparent"><code>getEventingParent</code></a></p>
 <hr>
@@ -188,8 +184,6 @@ to ensure compatibility with the core validation events.</p>
 <blockquote>
 <p><strong>getRootControl</strong>(<code>idx</code>): <a href="../../Control/classes/Control.html"><code>Control</code></a></p>
 </blockquote>
-<p>Returns the content control of this <code>UIArea</code> at the specified index. If no index is given the first content
-control is returned.</p>
 <h4>Parameters</h4>
 <h5>idx</h5>
 <p><code>number</code></p>
@@ -199,6 +193,8 @@ control is returned.</p>
 <p>the content control of this <code>UIArea</code> at the specified index.</p>
 <h4>Deprecated</h4>
 <p>(since 1.1) - use function #getContent instead</p>
+<p>Returns the content control of this <code>UIArea</code> at the specified index. If no index is given the first content
+control is returned.</p>
 <hr>
 <h3>getRootNode()</h3>
 <blockquote>
@@ -213,12 +209,12 @@ control is returned.</p>
 <blockquote>
 <p><strong>getUIArea</strong>(): <code>UIArea</code></p>
 </blockquote>
-<p>Returns this UI area. Needed to stop recursive calls from an element to its parent.</p>
 <h4>Returns</h4>
 <p><code>UIArea</code></p>
 <p>this</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Returns this UI area. Needed to stop recursive calls from an element to its parent.</p>
 <hr>
 <h3>indexOfContent()</h3>
 <blockquote>
@@ -288,13 +284,13 @@ is inserted at the last position</p>
 <blockquote>
 <p><strong>invalidate</strong>(): <code>void</code></p>
 </blockquote>
-<p>Triggers asynchronous re-rendering of the <code>UIArea</code>&#39;s content.</p>
-<p>Serves as an end-point for the bubbling of invalidation requests along the element/control aggregation
-hierarchy.</p>
 <h4>Returns</h4>
 <p><code>void</code></p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Triggers asynchronous re-rendering of the <code>UIArea</code>&#39;s content.</p>
+<p>Serves as an end-point for the bubbling of invalidation requests along the element/control aggregation
+hierarchy.</p>
 <h4>Overrides</h4>
 <p><a href="../../../base/ManagedObject/classes/ManagedObject.html"><code>ManagedObject</code></a>.<a href="../../../base/ManagedObject/classes/ManagedObject.html#invalidate"><code>invalidate</code></a></p>
 <hr>
@@ -302,12 +298,12 @@ hierarchy.</p>
 <blockquote>
 <p><strong>isActive</strong>(): <code>boolean</code></p>
 </blockquote>
-<p>Checks whether the control is still valid (is in the DOM)</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>True if the control is still in the active DOM</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Checks whether the control is still valid (is in the DOM)</p>
 <hr>
 <h3>isLocked()</h3>
 <blockquote>
@@ -377,10 +373,6 @@ hierarchy.</p>
 <blockquote>
 <p><strong>setRootControl</strong>(<code>oRootControl</code>): <code>void</code></p>
 </blockquote>
-<p>Sets the root control to be displayed in this UIArea.</p>
-<p>First, all old content controls (if any) will be detached from this UIArea (e.g. their parent relationship
-to this UIArea will be cut off). Then the parent relationship for the new content control (if not empty)
-will be set to this UIArea and finally, the UIArea will be marked for re-rendering.</p>
 <h4>Parameters</h4>
 <h5>oRootControl</h5>
 <p><a href="../../Control/classes/Control.html"><code>Control</code></a> | <a href="../../../base/Interface/classes/Interface.html"><code>Interface</code></a></p>
@@ -389,13 +381,15 @@ will be set to this UIArea and finally, the UIArea will be marked for re-renderi
 <p><code>void</code></p>
 <h4>Deprecated</h4>
 <p>(since 1.1) - use #removeAllContent and #addContent instead</p>
+<p>Sets the root control to be displayed in this UIArea.</p>
+<p>First, all old content controls (if any) will be detached from this UIArea (e.g. their parent relationship
+to this UIArea will be cut off). Then the parent relationship for the new content control (if not empty)
+will be set to this UIArea and finally, the UIArea will be marked for re-rendering.</p>
 <hr>
 <h3><del>setRootNode()</del></h3>
 <blockquote>
 <p><strong>setRootNode</strong>(<code>oRootNode</code>): <code>void</code></p>
 </blockquote>
-<p>Allows setting the root node hosting this instance of <code>UIArea</code>.</p>
-<p>The node must have an ID that will be used as ID for this instance of <code>UIArea</code>.</p>
 <h4>Parameters</h4>
 <h5>oRootNode</h5>
 <p><code>Element</code></p>
@@ -403,9 +397,9 @@ will be set to this UIArea and finally, the UIArea will be marked for re-renderi
 <h4>Returns</h4>
 <p><code>void</code></p>
 <h4>Deprecated</h4>
-<p>(since 1.107) - without a replacement. Applications should not create or modify <code>UIArea</code>s
-programmatically. They should only assign controls to them, by using sap.ui.core.Control.prototype.placeAt Control.prototype.placeAt
-or use the API of a <code>UIArea</code> as reachable via sap.ui.core.Control.prototype.getUIArea Control.prototype.getUIArea.</p>
+<p>(since 1.107.0)</p>
+<p>Allows setting the root node hosting this instance of <code>UIArea</code>.</p>
+<p>The node must have an ID that will be used as ID for this instance of <code>UIArea</code>.</p>
 <hr>
 <h3>unlock()</h3>
 <blockquote>
@@ -420,13 +414,6 @@ or use the API of a <code>UIArea</code> as reachable via sap.ui.core.Control.pro
 <blockquote>
 <p><code>static</code> <strong>configureEventLogging</strong>(<code>mEventTypes?</code>): <code>Record</code>&lt;<code>string</code>, <code>boolean</code>&gt;</p>
 </blockquote>
-<p>Enabled or disables logging of certain event types.</p>
-<p>The event handling code of class UIArea logs all processed browser events with log level DEBUG. Only
-some events that occur too frequently are suppressed by default: <code>mousemove</code>, <code>mouseover</code>, <code>mouseout</code>,
-<code>scroll</code>, <code>dragover</code>, <code>dragenter</code> and <code>dragleave</code>.</p>
-<p>With this method, logging can be disabled for further event types or it can be enabled for some or all
-of the event types listed above. The parameter <code>mEventTypes</code> is a map of boolean values keyed by event
-type names. When the value for an event type coerces to true, events of that type won&#39;t be logged.</p>
 <h4>Parameters</h4>
 <h5>mEventTypes?</h5>
 <p><code>Record</code>&lt;<code>string</code>, <code>boolean</code>&gt;</p>
@@ -436,6 +423,13 @@ type names. When the value for an event type coerces to true, events of that typ
 <p>A copy of the resulting event logging configuration (not normalized)</p>
 <h4>Since</h4>
 <p>1.62</p>
+<p>Enabled or disables logging of certain event types.</p>
+<p>The event handling code of class UIArea logs all processed browser events with log level DEBUG. Only
+some events that occur too frequently are suppressed by default: <code>mousemove</code>, <code>mouseover</code>, <code>mouseout</code>,
+<code>scroll</code>, <code>dragover</code>, <code>dragenter</code> and <code>dragleave</code>.</p>
+<p>With this method, logging can be disabled for further event types or it can be enabled for some or all
+of the event types listed above. The parameter <code>mEventTypes</code> is a map of boolean values keyed by event
+type names. When the value for an event type coerces to true, events of that type won&#39;t be logged.</p>
 <hr>
 <h3>extend()</h3>
 <blockquote>
@@ -452,7 +446,7 @@ contained in <code>oClassInfo</code>.</p>
 <p><code>string</code></p>
 <p>Name of the class being created</p>
 <h5>oClassInfo?</h5>
-<p><a href="../../../../../../sap.f/namespaces/sap/type-aliases/ClassInfo.html"><code>ClassInfo</code></a>&lt;<code>T</code>, <code>UIArea</code>&gt;</p>
+<p><code>ClassInfo</code>&lt;<code>T</code>, <code>UIArea</code>&gt;</p>
 <p>Object literal with information about the class</p>
 <h5>FNMetaImpl?</h5>
 <p><code>Function</code></p>
@@ -476,6 +470,6 @@ used by this class</p>
 <p><a href="../../../base/ManagedObject/classes/ManagedObject.html"><code>ManagedObject</code></a>.<a href="../../../base/ManagedObject/classes/ManagedObject.html#getmetadata-1"><code>getMetadata</code></a></p>
 <hr>
 
-<footer>Generated from <code>@openui5/types@1.120.46</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@openui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

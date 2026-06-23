@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Interface: $FeedListItemSettings — OpenUI5 TypeScript API</title>
-<meta name="description" content="Interface: $FeedListItemSettings — OpenUI5 TypeScript API Reference (1.120.46)">
+<meta name="description" content="Interface: $FeedListItemSettings — OpenUI5 TypeScript API Reference (1.120.0)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/openui5/1.120/sap.m/sap/m/FeedListItem/interfaces/$FeedListItemSettings.html">
 <meta property="og:title" content="Interface: $FeedListItemSettings — OpenUI5 TypeScript API">
-<meta property="og:description" content="Interface: $FeedListItemSettings — OpenUI5 TypeScript API Reference (1.120.46)">
+<meta property="og:description" content="Interface: $FeedListItemSettings — OpenUI5 TypeScript API Reference (1.120.0)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/openui5/1.120/sap.m/sap/m/FeedListItem/interfaces/$FeedListItemSettings.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,12 +33,11 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../index.html">OpenUI5 API</a> › <a href="../../../../../sap.m/README.html">sap.m</a> › sap › m › <a href="../../../../../sap.m/sap/m/FeedListItem/README.html">FeedListItem</a> › interfaces</nav>
-<p><a href="../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.46)</strong></a></p>
+<p><a href="../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.0)</strong></a></p>
 <hr>
-<p><a href="../../../../../README.html">OpenUI5 TypeScript API (1.120.46)</a> / <a href="../../../../README.html">sap.m</a> / <a href="../README.html">sap/m/FeedListItem</a> / $FeedListItemSettings</p>
+<p><a href="../../../../../README.html">OpenUI5 TypeScript API (1.120.0)</a> / <a href="../../../../README.html">sap.m</a> / <a href="../README.html">sap/m/FeedListItem</a> / $FeedListItemSettings</p>
 <h1>Interface: $FeedListItemSettings</h1>
 <pre class="sig"><span class="kw">import</span> { $FeedListItemSettings } <span class="kw">from</span> <span class="str">"sap/m/FeedListItem"</span>;</pre>
-<p>Describes the settings that can be provided to the FeedListItem constructor.</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../ListItemBase/interfaces/$ListItemBaseSettings.html"><code>$ListItemBaseSettings</code></a></li>
@@ -48,9 +47,9 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 <blockquote>
 <p><code>optional</code> <strong>actions?</strong>: <code>`{${string}}`</code> | <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/AggregationBindingInfo.html"><code>AggregationBindingInfo</code></a> | <a href="../../FeedListItemAction/classes/FeedListItemAction.html"><code>FeedListItemAction</code></a> | <a href="../../FeedListItemAction/classes/FeedListItemAction.html"><code>FeedListItemAction</code></a>[]</p>
 </blockquote>
-<p>Contains sap.m.FeedListItemAction elements that are displayed in the action sheet.</p>
 <h4>Since</h4>
 <p>1.52.0</p>
+<p>Contains sap.m.FeedListItemAction elements that are displayed in the action sheet.</p>
 <hr>
 <h3>activeIcon?</h3>
 <blockquote>
@@ -62,26 +61,20 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 <blockquote>
 <p><code>optional</code> <strong>convertedLinksDefaultTarget?</strong>: <code>string</code> | <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a></p>
 </blockquote>
+<h4>Since</h4>
+<p>1.46.1</p>
 <p>Determines the target attribute of the generated HTML anchor tags. Note: Applicable only if ConvertLinksToAnchorTags
 property is used with a value other than sap.m.LinkConversion.None. Options are the standard values for
 the target attribute of the HTML anchor tag: _self, _top, _blank, _parent, _search.</p>
-<h4>Since</h4>
-<p>1.46.1</p>
 <hr>
 <h3>convertLinksToAnchorTags?</h3>
 <blockquote>
 <p><code>optional</code> <strong>convertLinksToAnchorTags?</strong>: <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code> | <code>&quot;None&quot;</code> | <code>&quot;All&quot;</code> | <a href="../../library/enumerations/LinkConversion.html"><code>LinkConversion</code></a> | <code>&quot;ProtocolOnly&quot;</code></p>
 </blockquote>
-<p>Determines whether strings that appear to be links will be converted to HTML anchor tags, and what are
-the criteria for recognizing them.</p>
 <h4>Since</h4>
 <p>1.46.1</p>
-<hr>
-<h3>disableStyleAttribute?</h3>
-<blockquote>
-<p><code>optional</code> <strong>disableStyleAttribute?</strong>: <code>boolean</code> | <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
-</blockquote>
-<p>Disables rendering of the <code>style</code> attribute in the <code>FormattedText</code>.</p>
+<p>Determines whether strings that appear to be links will be converted to HTML anchor tags, and what are
+the criteria for recognizing them.</p>
 <hr>
 <h3>icon?</h3>
 <blockquote>
@@ -101,27 +94,27 @@ if showIcon = true.</p>
 <blockquote>
 <p><code>optional</code> <strong>iconDensityAware?</strong>: <code>boolean</code> | <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
+<h4>Deprecated</h4>
+<p>(since 1.88) - Image is replaced by sap.m.Avatar</p>
 <p>By default, this is set to true but then one or more requests are sent trying to get the density perfect
 version of image if this version of image doesn&#39;t exist on the server.</p>
 <p>If bandwidth is the key for the application, set this value to false.</p>
-<h4>Deprecated</h4>
-<p>(since 1.88) - Image is replaced by sap.m.Avatar</p>
 <hr>
 <h3>iconDisplayShape?</h3>
 <blockquote>
 <p><code>optional</code> <strong>iconDisplayShape?</strong>: <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code> | <a href="../../AvatarShape/enumerations/AvatarShape.html"><code>AvatarShape</code></a> | <code>&quot;Circle&quot;</code> | <code>&quot;Square&quot;</code></p>
 </blockquote>
-<p>Defines the shape of the icon.</p>
 <h4>Since</h4>
 <p>1.88</p>
+<p>Defines the shape of the icon.</p>
 <hr>
 <h3>iconInitials?</h3>
 <blockquote>
 <p><code>optional</code> <strong>iconInitials?</strong>: <code>string</code> | <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a></p>
 </blockquote>
-<p>Defines the initials of the icon.</p>
 <h4>Since</h4>
 <p>1.88</p>
+<p>Defines the initials of the icon.</p>
 <hr>
 <h3>iconPress?</h3>
 <blockquote>
@@ -138,9 +131,9 @@ version of image if this version of image doesn&#39;t exist on the server.</p>
 <blockquote>
 <p><code>optional</code> <strong>iconSize?</strong>: <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code> | <a href="../../AvatarSize/enumerations/AvatarSize.html"><code>AvatarSize</code></a> | <code>&quot;Custom&quot;</code> | <code>&quot;L&quot;</code> | <code>&quot;M&quot;</code> | <code>&quot;S&quot;</code> | <code>&quot;XL&quot;</code> | <code>&quot;XS&quot;</code></p>
 </blockquote>
-<p>Defines the size of the icon.</p>
 <h4>Since</h4>
 <p>1.88</p>
+<p>Defines the size of the icon.</p>
 <hr>
 <h3>info?</h3>
 <blockquote>
@@ -152,11 +145,11 @@ version of image if this version of image doesn&#39;t exist on the server.</p>
 <blockquote>
 <p><code>optional</code> <strong>lessLabel?</strong>: <code>string</code> | <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a></p>
 </blockquote>
+<h4>Since</h4>
+<p>1.60</p>
 <p>Customizable text for the &quot;LESS&quot; link at the end of the feed list item.
  Clicking the &quot;LESS&quot; link collapses the item, hiding the text that exceeds the allowed maximum number
 of characters.</p>
-<h4>Since</h4>
-<p>1.60</p>
 <hr>
 <h3>maxCharacters?</h3>
 <blockquote>
@@ -172,12 +165,12 @@ is able to set the value to its needs.</p>
 <blockquote>
 <p><code>optional</code> <strong>moreLabel?</strong>: <code>string</code> | <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a></p>
 </blockquote>
+<h4>Since</h4>
+<p>1.60</p>
 <p>Customizable text for the &quot;MORE&quot; link at the end of the feed list item.
  When the maximum number of characters defined by the <code>maxCharacters</code> property is exceeded and the text
 of the feed list item is collapsed, the &quot;MORE&quot; link can be used to expand the feed list item and show
 the rest of the text.</p>
-<h4>Since</h4>
-<p>1.60</p>
 <hr>
 <h3>sender?</h3>
 <blockquote>
@@ -221,6 +214,6 @@ the rest of the text.</p>
 <p>This chunks timestamp</p>
 <hr>
 
-<footer>Generated from <code>@openui5/types@1.120.46</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@openui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

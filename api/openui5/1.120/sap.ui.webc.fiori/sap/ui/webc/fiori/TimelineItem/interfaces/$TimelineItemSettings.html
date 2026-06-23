@@ -2,12 +2,12 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>~~Interface: $TimelineItemSettings~~ — OpenUI5 TypeScript API</title>
-<meta name="description" content="~~Interface: $TimelineItemSettings~~ — OpenUI5 TypeScript API Reference (1.120.46)">
+<title>Interface: $TimelineItemSettings — OpenUI5 TypeScript API</title>
+<meta name="description" content="Interface: $TimelineItemSettings — OpenUI5 TypeScript API Reference (1.120.0)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/openui5/1.120/sap.ui.webc.fiori/sap/ui/webc/fiori/TimelineItem/interfaces/$TimelineItemSettings.html">
-<meta property="og:title" content="~~Interface: $TimelineItemSettings~~ — OpenUI5 TypeScript API">
-<meta property="og:description" content="~~Interface: $TimelineItemSettings~~ — OpenUI5 TypeScript API Reference (1.120.46)">
+<meta property="og:title" content="Interface: $TimelineItemSettings — OpenUI5 TypeScript API">
+<meta property="og:description" content="Interface: $TimelineItemSettings — OpenUI5 TypeScript API Reference (1.120.0)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/openui5/1.120/sap.ui.webc.fiori/sap/ui/webc/fiori/TimelineItem/interfaces/$TimelineItemSettings.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,51 +33,40 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../../index.html">OpenUI5 API</a> › <a href="../../../../../../../sap.ui.webc.fiori/README.html">sap.ui.webc.fiori</a> › sap › ui › webc › fiori › <a href="../../../../../../../sap.ui.webc.fiori/sap/ui/webc/fiori/TimelineItem/README.html">TimelineItem</a> › interfaces</nav>
-<p><a href="../../../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.46)</strong></a></p>
+<p><a href="../../../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.0)</strong></a></p>
 <hr>
-<p><a href="../../../../../../../README.html">OpenUI5 TypeScript API (1.120.46)</a> / <a href="../../../../../../README.html">sap.ui.webc.fiori</a> / <a href="../README.html">sap/ui/webc/fiori/TimelineItem</a> / $TimelineItemSettings</p>
-<h1><del>Interface: $TimelineItemSettings</del></h1>
+<p><a href="../../../../../../../README.html">OpenUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../../README.html">sap.ui.webc.fiori</a> / <a href="../README.html">sap/ui/webc/fiori/TimelineItem</a> / $TimelineItemSettings</p>
+<h1>Interface: $TimelineItemSettings</h1>
 <pre class="sig"><span class="kw">import</span> { $TimelineItemSettings } <span class="kw">from</span> <span class="str">"sap/ui/webc/fiori/TimelineItem"</span>;</pre>
-<p><strong><code>Experimental</code></strong></p>
-<p>Describes the settings that can be provided to the TimelineItem constructor.</p>
-<h2>Deprecated</h2>
-<p>(since 1.120) - this Web Components consumption model has been discarded. Until an alternative
-Web Components consumption model is available in the future, use sap.m and sap.f controls with similar
-functionality.
- (since 1.92.0) - This control is experimental and its API might change significantly.</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../../../../../../sap.ui.core/sap/ui/core/webc/WebComponent/interfaces/$WebComponentSettings.html"><code>$WebComponentSettings</code></a></li>
 </ul>
 <h2>Properties</h2>
-<h3><del>content?</del></h3>
+<h3>content?</h3>
 <blockquote>
 <p><code>optional</code> <strong>content?</strong>: <code>`{${string}}`</code> | <a href="../../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/AggregationBindingInfo.html"><code>AggregationBindingInfo</code></a> | <a href="../../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a>[]</p>
 </blockquote>
-<p><strong><code>Experimental</code></strong></p>
 <p>Determines the description of the <code>sap.ui.webc.fiori.TimelineItem</code>.</p>
 <hr>
-<h3><del>icon?</del></h3>
+<h3>icon?</h3>
 <blockquote>
 <p><code>optional</code> <strong>icon?</strong>: <code>string</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a></p>
 </blockquote>
-<p><strong><code>Experimental</code></strong></p>
 <p>Defines the icon to be displayed as graphical element within the <code>sap.ui.webc.fiori.TimelineItem</code>. SAP-icons
 font provides numerous options.</p>
 <p>See all the available icons in the demo:sap/m/demokit/iconExplorer/webapp/index.html Icon Explorer.</p>
 <hr>
-<h3><del>name?</del></h3>
+<h3>name?</h3>
 <blockquote>
 <p><code>optional</code> <strong>name?</strong>: <code>string</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a></p>
 </blockquote>
-<p><strong><code>Experimental</code></strong></p>
 <p>Defines the name of the item, displayed before the <code>title-text</code>.</p>
 <hr>
-<h3><del>nameClick?</del></h3>
+<h3>nameClick?</h3>
 <blockquote>
 <p><code>optional</code> <strong>nameClick?</strong>: (<code>oEvent</code>) =&gt; <code>void</code></p>
 </blockquote>
-<p><strong><code>Experimental</code></strong></p>
 <p>Fired when the item name is pressed either with a click/tap or by using the Enter or Space key.</p>
 <p> <strong>Note:</strong> The event will not be fired if the <code>name-clickable</code> attribute is not set.</p>
 <h4>Parameters</h4>
@@ -86,28 +75,25 @@ font provides numerous options.</p>
 <h4>Returns</h4>
 <p><code>void</code></p>
 <hr>
-<h3><del>nameClickable?</del></h3>
+<h3>nameClickable?</h3>
 <blockquote>
 <p><code>optional</code> <strong>nameClickable?</strong>: <code>boolean</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<p><strong><code>Experimental</code></strong></p>
 <p>Defines if the <code>name</code> is clickable.</p>
 <hr>
-<h3><del>subtitleText?</del></h3>
+<h3>subtitleText?</h3>
 <blockquote>
 <p><code>optional</code> <strong>subtitleText?</strong>: <code>string</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a></p>
 </blockquote>
-<p><strong><code>Experimental</code></strong></p>
 <p>Defines the subtitle text of the component.</p>
 <hr>
-<h3><del>titleText?</del></h3>
+<h3>titleText?</h3>
 <blockquote>
 <p><code>optional</code> <strong>titleText?</strong>: <code>string</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a></p>
 </blockquote>
-<p><strong><code>Experimental</code></strong></p>
 <p>Defines the title text of the component.</p>
 <hr>
 
-<footer>Generated from <code>@openui5/types@1.120.46</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@openui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>~~Class: ODataModel~~ — OpenUI5 TypeScript API</title>
-<meta name="description" content="~~Class: ODataModel~~ — OpenUI5 TypeScript API Reference (1.120.46)">
+<meta name="description" content="~~Class: ODataModel~~ — OpenUI5 TypeScript API Reference (1.120.0)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/openui5/1.120/sap.ui.core/sap/ui/model/odata/ODataModel/classes/ODataModel.html">
 <meta property="og:title" content="~~Class: ODataModel~~ — OpenUI5 TypeScript API">
-<meta property="og:description" content="~~Class: ODataModel~~ — OpenUI5 TypeScript API Reference (1.120.46)">
+<meta property="og:description" content="~~Class: ODataModel~~ — OpenUI5 TypeScript API Reference (1.120.0)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/openui5/1.120/sap.ui.core/sap/ui/model/odata/ODataModel/classes/ODataModel.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,14 +33,14 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../../index.html">OpenUI5 API</a> › <a href="../../../../../../../sap.ui.core/README.html">sap.ui.core</a> › sap › ui › model › odata › <a href="../../../../../../../sap.ui.core/sap/ui/model/odata/ODataModel/README.html">ODataModel</a> › classes</nav>
-<p><a href="../../../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.46)</strong></a></p>
+<p><a href="../../../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.0)</strong></a></p>
 <hr>
-<p><a href="../../../../../../../README.html">OpenUI5 TypeScript API (1.120.46)</a> / <a href="../../../../../../README.html">sap.ui.core</a> / <a href="../README.html">sap/ui/model/odata/ODataModel</a> / ODataModel</p>
+<p><a href="../../../../../../../README.html">OpenUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../../README.html">sap.ui.core</a> / <a href="../README.html">sap/ui/model/odata/ODataModel</a> / ODataModel</p>
 <h1><del>Class: ODataModel</del></h1>
 <pre class="sig"><span class="kw">import</span> ODataModel <span class="kw">from</span> <span class="str">"sap/ui/model/odata/ODataModel"</span>;</pre>
-<p>Model implementation for OData format</p>
 <h2>Deprecated</h2>
 <p>(since 1.48) - please use sap.ui.model.odata.v2.ODataModel instead.</p>
+<p>Model implementation for OData format</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../../Model/classes/Model.html"><code>Model</code></a></li>
@@ -125,10 +125,6 @@ this works only if all requests are asynchronous.</p>
 <blockquote>
 <p><strong>addAnnotationUrl</strong>(<code>vUrl</code>): <code>Promise</code>&lt;<code>any</code>&gt;</p>
 </blockquote>
-<p>Adds (a) new URL(s) to the be parsed for OData annotations, which are then merged into the annotations
-object which can be retrieved by calling the getServiceAnnotations()-method. If a $metadata url is passed
-the data will also be merged into the metadata object, which can be reached by calling the getServiceMetadata()
-method.</p>
 <h4>Parameters</h4>
 <h5>vUrl</h5>
 <p><code>string</code> | <code>string</code>[]</p>
@@ -142,13 +138,15 @@ a $metadata requests. the structure is the same as in the metadata object reache
 method. For non $metadata requests the array will be empty.</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Adds (a) new URL(s) to the be parsed for OData annotations, which are then merged into the annotations
+object which can be retrieved by calling the getServiceAnnotations()-method. If a $metadata url is passed
+the data will also be merged into the metadata object, which can be reached by calling the getServiceMetadata()
+method.</p>
 <hr>
 <h3><del>addAnnotationXML()</del></h3>
 <blockquote>
 <p><strong>addAnnotationXML</strong>(<code>sXMLContent</code>, <code>bSuppressEvents?</code>): <code>Promise</code>&lt;<code>any</code>&gt;</p>
 </blockquote>
-<p>Adds new xml content to be parsed for OData annotations, which are then merged into the annotations object
-which can be retrieved by calling the getServiceAnnotations()-method.</p>
 <h4>Parameters</h4>
 <h5>sXMLContent</h5>
 <p><code>string</code></p>
@@ -162,6 +160,8 @@ which can be retrieved by calling the getServiceAnnotations()-method.</p>
 occur</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Adds new xml content to be parsed for OData annotations, which are then merged into the annotations object
+which can be retrieved by calling the getServiceAnnotations()-method.</p>
 <hr>
 <h3><del>addBatchChangeOperations()</del></h3>
 <blockquote>
@@ -646,7 +646,6 @@ of this <code>sap.ui.model.odata.ODataModel</code>.</p>
 <blockquote>
 <p><strong>fireAnnotationsFailed</strong>(<code>oParameters?</code>): <code>this</code></p>
 </blockquote>
-<p>Fires event #event:annotationsFailed annotationsFailed to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>oParameters?</h5>
 <p>Parameters to pass along with the event</p>
@@ -667,12 +666,12 @@ of this <code>sap.ui.model.odata.ODataModel</code>.</p>
 <p><code>this</code> to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:annotationsFailed annotationsFailed to attached listeners.</p>
 <hr>
 <h3><del>fireAnnotationsLoaded()</del></h3>
 <blockquote>
 <p><strong>fireAnnotationsLoaded</strong>(<code>oParameters?</code>): <code>this</code></p>
 </blockquote>
-<p>Fires event #event:annotationsLoaded annotationsLoaded to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>oParameters?</h5>
 <p>Parameters to pass along with the event</p>
@@ -684,12 +683,12 @@ of this <code>sap.ui.model.odata.ODataModel</code>.</p>
 <p><code>this</code> to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:annotationsLoaded annotationsLoaded to attached listeners.</p>
 <hr>
 <h3><del>fireMetadataFailed()</del></h3>
 <blockquote>
 <p><strong>fireMetadataFailed</strong>(<code>oParameters?</code>): <code>this</code></p>
 </blockquote>
-<p>Fires event #event:metadataFailed metadataFailed to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>oParameters?</h5>
 <p>Parameters to pass along with the event</p>
@@ -710,12 +709,12 @@ of this <code>sap.ui.model.odata.ODataModel</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:metadataFailed metadataFailed to attached listeners.</p>
 <hr>
 <h3><del>fireMetadataLoaded()</del></h3>
 <blockquote>
 <p><strong>fireMetadataLoaded</strong>(<code>oParameters?</code>): <code>this</code></p>
 </blockquote>
-<p>Fires event #event:metadataLoaded metadataLoaded to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>oParameters?</h5>
 <p>Parameters to pass along with the event</p>
@@ -727,12 +726,12 @@ of this <code>sap.ui.model.odata.ODataModel</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:metadataLoaded metadataLoaded to attached listeners.</p>
 <hr>
 <h3><del>forceNoCache()</del></h3>
 <blockquote>
 <p><strong>forceNoCache</strong>(<code>bForceNoCache?</code>): <code>void</code></p>
 </blockquote>
-<p>Force no caching</p>
 <h4>Parameters</h4>
 <h5>bForceNoCache?</h5>
 <p><code>boolean</code></p>
@@ -742,12 +741,12 @@ of this <code>sap.ui.model.odata.ODataModel</code>.</p>
 <h4>Deprecated</h4>
 <p>(since 1.13) - the caching should be controlled by the backend by setting the correct cache
 control header</p>
+<p>Force no caching</p>
 <hr>
 <h3><del>getData()</del></h3>
 <blockquote>
 <p><strong>getData</strong>(<code>sPath</code>, <code>oContext?</code>, <code>bIncludeExpandEntries?</code>): <code>object</code></p>
 </blockquote>
-<p>Return requested data as object if the data has already been loaded and stored in the model.</p>
 <h4>Parameters</h4>
 <h5>sPath</h5>
 <p><code>string</code></p>
@@ -768,17 +767,18 @@ returned.</p>
 <p>oData Object containing the requested data if the path is valid.</p>
 <h4>Deprecated</h4>
 <p>(since 1.6.0) - please use #getProperty instead</p>
+<p>Return requested data as object if the data has already been loaded and stored in the model.</p>
 <hr>
 <h3><del>getDefaultCountMode()</del></h3>
 <blockquote>
 <p><strong>getDefaultCountMode</strong>(): <code>&quot;None&quot;</code> | <code>&quot;Both&quot;</code> | <code>&quot;Inline&quot;</code> | <a href="../../CountMode/enumerations/CountMode.html"><code>CountMode</code></a> | <code>&quot;InlineRepeat&quot;</code> | <code>&quot;Request&quot;</code></p>
 </blockquote>
-<p>Returns the default count mode for retrieving the count of collections.</p>
 <h4>Returns</h4>
 <p><code>&quot;None&quot;</code> | <code>&quot;Both&quot;</code> | <code>&quot;Inline&quot;</code> | <a href="../../CountMode/enumerations/CountMode.html"><code>CountMode</code></a> | <code>&quot;InlineRepeat&quot;</code> | <code>&quot;Request&quot;</code></p>
 <p>The default count mode for retrieving the count of collections</p>
 <h4>Since</h4>
 <p>1.20</p>
+<p>Returns the default count mode for retrieving the count of collections.</p>
 <hr>
 <h3><del>getHeaders()</del></h3>
 <blockquote>
@@ -896,12 +896,12 @@ this function.</p>
 <blockquote>
 <p><strong>isCountSupported</strong>(): <code>boolean</code></p>
 </blockquote>
-<p>Returns whether this model supports <code>$count</code> on its collections.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>Whether this model supports <code>$count</code> on its collections</p>
 <h4>Deprecated</h4>
 <p>(since 1.20) - please use #getDefaultCountMode instead.</p>
+<p>Returns whether this model supports <code>$count</code> on its collections.</p>
 <hr>
 <h3><del>read()</del></h3>
 <blockquote>
@@ -1053,7 +1053,6 @@ the following parameters: oData and response.</p>
 <blockquote>
 <p><strong>setCountSupported</strong>(<code>bCountSupported</code>): <code>void</code></p>
 </blockquote>
-<p>Sets whether this OData service supports <code>$count</code> on its collections.</p>
 <h4>Parameters</h4>
 <h5>bCountSupported</h5>
 <p><code>boolean</code></p>
@@ -1062,11 +1061,20 @@ the following parameters: oData and response.</p>
 <p><code>void</code></p>
 <h4>Deprecated</h4>
 <p>(since 1.20) - please use #setDefaultCountMode instead.</p>
+<p>Sets whether this OData service supports <code>$count</code> on its collections.</p>
 <hr>
 <h3><del>setDefaultCountMode()</del></h3>
 <blockquote>
 <p><strong>setDefaultCountMode</strong>(<code>sCountMode</code>): <code>void</code></p>
 </blockquote>
+<h4>Parameters</h4>
+<h5>sCountMode</h5>
+<p><code>&quot;None&quot;</code> | <code>&quot;Both&quot;</code> | <code>&quot;Inline&quot;</code> | <a href="../../CountMode/enumerations/CountMode.html"><code>CountMode</code></a> | <code>&quot;InlineRepeat&quot;</code> | <code>&quot;Request&quot;</code></p>
+<p>The new default count mode for this model</p>
+<h4>Returns</h4>
+<p><code>void</code></p>
+<h4>Since</h4>
+<p>1.20</p>
 <p>Sets the default mode how to retrieve the item count for a collection in this model.</p>
 <p>The count can be determined in the following ways
 	 - by sending a separate <code>$count</code> request
@@ -1078,14 +1086,6 @@ the following parameters: oData and response.</p>
 that are created afterwards will use the new mode when no mode is defined at their creation.</p>
 <p>If no default count mode is set for an <code>ODataModel</code> (v1), the mode <code>Both</code> will be used for compatibility
 reasons.</p>
-<h4>Parameters</h4>
-<h5>sCountMode</h5>
-<p><code>&quot;None&quot;</code> | <code>&quot;Both&quot;</code> | <code>&quot;Inline&quot;</code> | <a href="../../CountMode/enumerations/CountMode.html"><code>CountMode</code></a> | <code>&quot;InlineRepeat&quot;</code> | <code>&quot;Request&quot;</code></p>
-<p>The new default count mode for this model</p>
-<h4>Returns</h4>
-<p><code>void</code></p>
-<h4>Since</h4>
-<p>1.20</p>
 <hr>
 <h3><del>setHeaders()</del></h3>
 <blockquote>
@@ -1138,7 +1138,6 @@ call the <code>hasPendingChanges</code> method.</p>
 <blockquote>
 <p><strong>setRefreshAfterChange</strong>(<code>bRefreshAfterChange</code>): <code>void</code></p>
 </blockquote>
-<p>Enable/Disable automatic updates of all Bindings after change operations</p>
 <h4>Parameters</h4>
 <h5>bRefreshAfterChange</h5>
 <p><code>boolean</code></p>
@@ -1147,6 +1146,7 @@ call the <code>hasPendingChanges</code> method.</p>
 <p><code>void</code></p>
 <h4>Since</h4>
 <p>1.16.3</p>
+<p>Enable/Disable automatic updates of all Bindings after change operations</p>
 <hr>
 <h3><del>setTokenHandlingEnabled()</del></h3>
 <blockquote>
@@ -1300,7 +1300,7 @@ with the information contained in <code>oClassInfo</code>.</p>
 <p><code>string</code></p>
 <p>Name of the class being created</p>
 <h5>oClassInfo?</h5>
-<p><a href="../../../../../../../sap.f/namespaces/sap/type-aliases/ClassInfo.html"><code>ClassInfo</code></a>&lt;<code>T</code>, <code>ODataModel</code>&gt;</p>
+<p><code>ClassInfo</code>&lt;<code>T</code>, <code>ODataModel</code>&gt;</p>
 <p>Object literal with information about the class</p>
 <h5>FNMetaImpl?</h5>
 <p><code>Function</code></p>
@@ -1324,6 +1324,6 @@ used by this class</p>
 <p><a href="../../../Model/classes/Model.html"><code>Model</code></a>.<a href="../../../Model/classes/Model.html#getmetadata-1"><code>getMetadata</code></a></p>
 <hr>
 
-<footer>Generated from <code>@openui5/types@1.120.46</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@openui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Class: GrowingEnablement — OpenUI5 TypeScript API</title>
-<meta name="description" content="Class: GrowingEnablement — OpenUI5 TypeScript API Reference (1.120.46)">
+<meta name="description" content="Class: GrowingEnablement — OpenUI5 TypeScript API Reference (1.120.0)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/openui5/1.120/sap.m/sap/m/GrowingEnablement/classes/GrowingEnablement.html">
 <meta property="og:title" content="Class: GrowingEnablement — OpenUI5 TypeScript API">
-<meta property="og:description" content="Class: GrowingEnablement — OpenUI5 TypeScript API Reference (1.120.46)">
+<meta property="og:description" content="Class: GrowingEnablement — OpenUI5 TypeScript API Reference (1.120.0)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/openui5/1.120/sap.m/sap/m/GrowingEnablement/classes/GrowingEnablement.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,9 +33,9 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../index.html">OpenUI5 API</a> › <a href="../../../../../sap.m/README.html">sap.m</a> › sap › m › <a href="../../../../../sap.m/sap/m/GrowingEnablement/README.html">GrowingEnablement</a> › classes</nav>
-<p><a href="../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.46)</strong></a></p>
+<p><a href="../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.0)</strong></a></p>
 <hr>
-<p><a href="../../../../../README.html">OpenUI5 TypeScript API (1.120.46)</a> / <a href="../../../../README.html">sap.m</a> / <a href="../README.html">sap/m/GrowingEnablement</a> / GrowingEnablement</p>
+<p><a href="../../../../../README.html">OpenUI5 TypeScript API (1.120.0)</a> / <a href="../../../../README.html">sap.m</a> / <a href="../README.html">sap/m/GrowingEnablement</a> / GrowingEnablement</p>
 <h1>Class: GrowingEnablement</h1>
 <pre class="sig"><span class="kw">import</span> GrowingEnablement <span class="kw">from</span> <span class="str">"sap/m/GrowingEnablement"</span>;</pre>
 <p>Base class for all SAPUI5 Objects.</p>
@@ -43,14 +43,28 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 <ul>
 <li><a href="../../../../../sap.ui.core/sap/ui/base/Object/classes/BaseObject.html"><code>BaseObject</code></a></li>
 </ul>
+<h2>Constructors</h2>
+<h3>Constructor</h3>
+<blockquote>
+<p><strong>new GrowingEnablement</strong>(<code>oControl</code>): <code>GrowingEnablement</code></p>
+</blockquote>
+<h4>Parameters</h4>
+<h5>oControl</h5>
+<p><a href="../../ListBase/classes/ListBase.html"><code>ListBase</code></a></p>
+<p>the ListBase control of which this Growing is the delegate</p>
+<h4>Returns</h4>
+<p><code>GrowingEnablement</code></p>
+<h4>Ui5-protected</h4>
+<p>Do not call from applications (only from related classes in the framework)</p>
+<p>Creates a GrowingEnablement delegate that can be attached to ListBase Controls requiring capabilities
+for growing</p>
+<h4>Overrides</h4>
+<p><a href="../../../../../sap.ui.core/sap/ui/base/Object/classes/BaseObject.html"><code>BaseObject</code></a>.<a href="../../../../../sap.ui.core/sap/ui/base/Object/classes/BaseObject.html#constructor"><code>constructor</code></a></p>
 <h2>Methods</h2>
 <h3>extend()</h3>
 <blockquote>
 <p><code>static</code> <strong>extend</strong>&lt;<code>T</code>&gt;(<code>sClassName</code>, <code>oClassInfo?</code>, <code>FNMetaImpl?</code>): <code>Function</code></p>
 </blockquote>
-<p>Creates a new subclass of class sap.m.GrowingEnablement with name <code>sClassName</code> and enriches it with the
-information contained in <code>oClassInfo</code>.</p>
-<p><code>oClassInfo</code> might contain the same kind of information as described in sap.ui.base.Object.extend.</p>
 <h4>Type Parameters</h4>
 <h5>T</h5>
 <p><code>T</code> <em>extends</em> <code>Record</code>&lt;<code>string</code>, <code>unknown</code>&gt;</p>
@@ -59,7 +73,7 @@ information contained in <code>oClassInfo</code>.</p>
 <p><code>string</code></p>
 <p>Name of the class being created</p>
 <h5>oClassInfo?</h5>
-<p><a href="../../../../../sap.f/namespaces/sap/type-aliases/ClassInfo.html"><code>ClassInfo</code></a>&lt;<code>T</code>, <code>GrowingEnablement</code>&gt;</p>
+<p><code>ClassInfo</code>&lt;<code>T</code>, <code>GrowingEnablement</code>&gt;</p>
 <p>Object literal with information about the class</p>
 <h5>FNMetaImpl?</h5>
 <p><code>Function</code></p>
@@ -70,6 +84,9 @@ used by this class</p>
 <p>Created class / constructor function</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Creates a new subclass of class sap.m.GrowingEnablement with name <code>sClassName</code> and enriches it with the
+information contained in <code>oClassInfo</code>.</p>
+<p><code>oClassInfo</code> might contain the same kind of information as described in sap.ui.base.Object.extend.</p>
 <h4>Overrides</h4>
 <p><a href="../../../../../sap.ui.core/sap/ui/base/Object/classes/BaseObject.html"><code>BaseObject</code></a>.<a href="../../../../../sap.ui.core/sap/ui/base/Object/classes/BaseObject.html#extend"><code>extend</code></a></p>
 <hr>
@@ -77,14 +94,14 @@ used by this class</p>
 <blockquote>
 <p><code>static</code> <strong>getMetadata</strong>(): <a href="../../../../../sap.ui.core/sap/ui/base/Metadata/classes/Metadata.html"><code>Metadata</code></a></p>
 </blockquote>
-<p>Returns a metadata object for class sap.m.GrowingEnablement.</p>
 <h4>Returns</h4>
 <p><a href="../../../../../sap.ui.core/sap/ui/base/Metadata/classes/Metadata.html"><code>Metadata</code></a></p>
 <p>Metadata object describing this class</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Returns a metadata object for class sap.m.GrowingEnablement.</p>
 <hr>
 
-<footer>Generated from <code>@openui5/types@1.120.46</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@openui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

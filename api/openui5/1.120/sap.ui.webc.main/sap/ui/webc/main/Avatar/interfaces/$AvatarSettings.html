@@ -2,12 +2,12 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>~~Interface: $AvatarSettings~~ — OpenUI5 TypeScript API</title>
-<meta name="description" content="~~Interface: $AvatarSettings~~ — OpenUI5 TypeScript API Reference (1.120.46)">
+<title>Interface: $AvatarSettings — OpenUI5 TypeScript API</title>
+<meta name="description" content="Interface: $AvatarSettings — OpenUI5 TypeScript API Reference (1.120.0)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/openui5/1.120/sap.ui.webc.main/sap/ui/webc/main/Avatar/interfaces/$AvatarSettings.html">
-<meta property="og:title" content="~~Interface: $AvatarSettings~~ — OpenUI5 TypeScript API">
-<meta property="og:description" content="~~Interface: $AvatarSettings~~ — OpenUI5 TypeScript API Reference (1.120.46)">
+<meta property="og:title" content="Interface: $AvatarSettings — OpenUI5 TypeScript API">
+<meta property="og:description" content="Interface: $AvatarSettings — OpenUI5 TypeScript API Reference (1.120.0)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/openui5/1.120/sap.ui.webc.main/sap/ui/webc/main/Avatar/interfaces/$AvatarSettings.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,46 +33,36 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../../index.html">OpenUI5 API</a> › <a href="../../../../../../../sap.ui.webc.main/README.html">sap.ui.webc.main</a> › sap › ui › webc › main › <a href="../../../../../../../sap.ui.webc.main/sap/ui/webc/main/Avatar/README.html">Avatar</a> › interfaces</nav>
-<p><a href="../../../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.46)</strong></a></p>
+<p><a href="../../../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.0)</strong></a></p>
 <hr>
-<p><a href="../../../../../../../README.html">OpenUI5 TypeScript API (1.120.46)</a> / <a href="../../../../../../README.html">sap.ui.webc.main</a> / <a href="../README.html">sap/ui/webc/main/Avatar</a> / $AvatarSettings</p>
-<h1><del>Interface: $AvatarSettings</del></h1>
+<p><a href="../../../../../../../README.html">OpenUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../../README.html">sap.ui.webc.main</a> / <a href="../README.html">sap/ui/webc/main/Avatar</a> / $AvatarSettings</p>
+<h1>Interface: $AvatarSettings</h1>
 <pre class="sig"><span class="kw">import</span> { $AvatarSettings } <span class="kw">from</span> <span class="str">"sap/ui/webc/main/Avatar"</span>;</pre>
-<p><strong><code>Experimental</code></strong></p>
-<p>Describes the settings that can be provided to the Avatar constructor.</p>
-<h2>Deprecated</h2>
-<p>(since 1.120) - this Web Components consumption model has been discarded. Until an alternative
-Web Components consumption model is available in the future, use sap.m and sap.f controls with similar
-functionality.
- (since 1.92.0) - This control is experimental and its API might change significantly.</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../../../../../../sap.ui.core/sap/ui/core/webc/WebComponent/interfaces/$WebComponentSettings.html"><code>$WebComponentSettings</code></a></li>
 </ul>
 <h2>Properties</h2>
-<h3><del>accessibleName?</del></h3>
+<h3>accessibleName?</h3>
 <blockquote>
 <p><code>optional</code> <strong>accessibleName?</strong>: <code>string</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a></p>
 </blockquote>
-<p><strong><code>Experimental</code></strong></p>
 <p>Defines the text alternative of the component. If not provided a default text alternative will be set,
 if present.</p>
 <hr>
-<h3><del>badge?</del></h3>
+<h3>badge?</h3>
 <blockquote>
 <p><code>optional</code> <strong>badge?</strong>: <a href="../../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></p>
 </blockquote>
-<p><strong><code>Experimental</code></strong></p>
 <p>Defines the optional badge that will be used for visual affordance. <strong>Note:</strong> While the slot allows for
 custom badges, to achieve the Fiori design, please use <code>sap.ui.webc.main.Badge</code> with <code>sap.ui.webc.main.Icon</code>
 in the corresponding <code>icon</code> slot, without text nodes.</p>
 <p> Example:</p>
 <hr>
-<h3><del>click?</del></h3>
+<h3>click?</h3>
 <blockquote>
 <p><code>optional</code> <strong>click?</strong>: (<code>oEvent</code>) =&gt; <code>void</code></p>
 </blockquote>
-<p><strong><code>Experimental</code></strong></p>
 <p>Fired when the user clicks the control</p>
 <h4>Parameters</h4>
 <h5>oEvent</h5>
@@ -80,11 +70,10 @@ in the corresponding <code>icon</code> slot, without text nodes.</p>
 <h4>Returns</h4>
 <p><code>void</code></p>
 <hr>
-<h3><del>colorScheme?</del></h3>
+<h3>colorScheme?</h3>
 <blockquote>
 <p><code>optional</code> <strong>colorScheme?</strong>: <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code> | <code>&quot;Accent1&quot;</code> | <code>&quot;Accent10&quot;</code> | <code>&quot;Accent2&quot;</code> | <code>&quot;Accent3&quot;</code> | <code>&quot;Accent4&quot;</code> | <code>&quot;Accent5&quot;</code> | <code>&quot;Accent6&quot;</code> | <code>&quot;Accent7&quot;</code> | <code>&quot;Accent8&quot;</code> | <code>&quot;Accent9&quot;</code> | <code>&quot;Placeholder&quot;</code> | <a href="../../library/enumerations/AvatarColorScheme.html"><code>AvatarColorScheme</code></a></p>
 </blockquote>
-<p><strong><code>Experimental</code></strong></p>
 <p>Defines the background color of the desired image.</p>
 <p> Available options are:
 	 - <code>Accent1</code>
@@ -99,19 +88,17 @@ in the corresponding <code>icon</code> slot, without text nodes.</p>
 	 - <code>Accent10</code>
 	 - <code>Placeholder</code></p>
 <hr>
-<h3><del>enabled?</del></h3>
+<h3>enabled?</h3>
 <blockquote>
 <p><code>optional</code> <strong>enabled?</strong>: <code>boolean</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<p><strong><code>Experimental</code></strong></p>
 <p>Defines whether the control is enabled. A disabled control can&#39;t be interacted with, and it is not in
 the tab chain.</p>
 <hr>
-<h3><del>fallbackIcon?</del></h3>
+<h3>fallbackIcon?</h3>
 <blockquote>
 <p><code>optional</code> <strong>fallbackIcon?</strong>: <code>string</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a></p>
 </blockquote>
-<p><strong><code>Experimental</code></strong></p>
 <p>Defines the name of the fallback icon, which should be displayed in the following cases:
 	 - If the initials are not valid (more than 3 letters, unsupported languages or empty initials).
 	 - If there are three initials and they do not fit in the shape (e.g. WWW for some of the sizes).
@@ -125,11 +112,9 @@ See all the available icons in the demo:sap/m/demokit/iconExplorer/webapp/index.
 
 ***
 
-### ~~icon?~~
+### icon?
 
 &gt; `optional` **icon?**: `string` \| [`PropertyBindingInfo`](../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html)
-
-**`Experimental`**
 
 Defines the name of the UI5 Icon, that will be displayed.
  **Note:** If `image` slot is provided, the property will be ignored.
@@ -146,11 +131,9 @@ See all the available icons in the demo:sap/m/demokit/iconExplorer/webapp/index.
 
 ***
 
-### ~~image?~~
+### image?
 
 &gt; `optional` **image?**: [`Control`](../../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html)
-
-**`Experimental`**
 
 Receives the desired `&lt;img&gt;` tag
 
@@ -160,33 +143,27 @@ being defined with the following CSS:   ` ui5-avatar:not(:defined) {  visibility
 
 ***
 
-### ~~initials?~~
+### initials?
 
 &gt; `optional` **initials?**: `string` \| [`PropertyBindingInfo`](../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html)
-
-**`Experimental`**
 
 Defines the displayed initials.
  Up to three Latin letters can be displayed as initials.
 
 ***
 
-### ~~interactive?~~
+### interactive?
 
 &gt; `optional` **interactive?**: `boolean` \| [`PropertyBindingInfo`](../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html) \| `` `{${string}}` ``
-
-**`Experimental`**
 
 Defines if the avatar is interactive (focusable and pressable). **Note:** This property won&#39;t have effect
 if the `disabled` property is set to `true`.
 
 ***
 
-### ~~shape?~~
+### shape?
 
 &gt; `optional` **shape?**: [`PropertyBindingInfo`](../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html) \| `` `{${string}}` `` \| `&quot;Circle&quot;` \| `&quot;Square&quot;` \| [`AvatarShape`](../../library/enumerations/AvatarShape.html)
-
-**`Experimental`**
 
 Defines the shape of the component.
 
@@ -196,11 +173,9 @@ Defines the shape of the component.
 
 ***
 
-### ~~size?~~
+### size?
 
 &gt; `optional` **size?**: [`PropertyBindingInfo`](../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html) \| `` `{${string}}` `` \| `&quot;L&quot;` \| `&quot;M&quot;` \| `&quot;S&quot;` \| `&quot;XL&quot;` \| `&quot;XS&quot;` \| [`AvatarSize`](../../library/enumerations/AvatarSize.html)
-
-**`Experimental`**
 
 Defines predefined size of the component.
 
@@ -214,6 +189,6 @@ Defines predefined size of the component.
 ***
 </code></pre>
 
-<footer>Generated from <code>@openui5/types@1.120.46</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@openui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

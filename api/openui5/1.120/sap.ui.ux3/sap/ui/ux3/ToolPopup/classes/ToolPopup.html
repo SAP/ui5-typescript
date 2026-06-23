@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>~~Class: ToolPopup~~ — OpenUI5 TypeScript API</title>
-<meta name="description" content="~~Class: ToolPopup~~ — OpenUI5 TypeScript API Reference (1.120.46)">
+<meta name="description" content="~~Class: ToolPopup~~ — OpenUI5 TypeScript API Reference (1.120.0)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/openui5/1.120/sap.ui.ux3/sap/ui/ux3/ToolPopup/classes/ToolPopup.html">
 <meta property="og:title" content="~~Class: ToolPopup~~ — OpenUI5 TypeScript API">
-<meta property="og:description" content="~~Class: ToolPopup~~ — OpenUI5 TypeScript API Reference (1.120.46)">
+<meta property="og:description" content="~~Class: ToolPopup~~ — OpenUI5 TypeScript API Reference (1.120.0)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/openui5/1.120/sap.ui.ux3/sap/ui/ux3/ToolPopup/classes/ToolPopup.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,17 +33,17 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../index.html">OpenUI5 API</a> › <a href="../../../../../../sap.ui.ux3/README.html">sap.ui.ux3</a> › sap › ui › ux3 › <a href="../../../../../../sap.ui.ux3/sap/ui/ux3/ToolPopup/README.html">ToolPopup</a> › classes</nav>
-<p><a href="../../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.46)</strong></a></p>
+<p><a href="../../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.0)</strong></a></p>
 <hr>
-<p><a href="../../../../../../README.html">OpenUI5 TypeScript API (1.120.46)</a> / <a href="../../../../../README.html">sap.ui.ux3</a> / <a href="../README.html">sap/ui/ux3/ToolPopup</a> / ToolPopup</p>
+<p><a href="../../../../../../README.html">OpenUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../README.html">sap.ui.ux3</a> / <a href="../README.html">sap/ui/ux3/ToolPopup</a> / ToolPopup</p>
 <h1><del>Class: ToolPopup</del></h1>
 <pre class="sig"><span class="kw">import</span> ToolPopup <span class="kw">from</span> <span class="str">"sap/ui/ux3/ToolPopup"</span>;</pre>
+<h2>Deprecated</h2>
+<p>(since 1.38) - Instead, use the <code>sap.m.Popover</code> control.</p>
 <p>A popup which the user can open from the Shell&#39;s tool pane. Generally, the starting point would be an
 icon. For this pop up, buttons can be defined with any text; therefore, it has the same purpose and similar
 look like any common dialog box. A ToolPopup can have any content. Depending on the application type
 and design, the structure of the texts and input fields can be for example form-like.</p>
-<h2>Deprecated</h2>
-<p>(since 1.38) - Instead, use the <code>sap.m.Popover</code> control.</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></li>
@@ -126,8 +126,6 @@ of the syntax of the settings object.</p>
 <blockquote>
 <p><strong>addFocusableArea</strong>(<code>sID?</code>): <code>void</code></p>
 </blockquote>
-<p>Adds an ID to the Popup that should be focusable as well when using <code>autoclose</code>. Chaining is only possible
-if a valid type (string) is given.</p>
 <h4>Parameters</h4>
 <h5>sID?</h5>
 <p><code>string</code></p>
@@ -136,6 +134,8 @@ if a valid type (string) is given.</p>
 <p><code>void</code></p>
 <h4>Since</h4>
 <p>1.19.0</p>
+<p>Adds an ID to the Popup that should be focusable as well when using <code>autoclose</code>. Chaining is only possible
+if a valid type (string) is given.</p>
 <hr>
 <h3><del>attachClose()</del></h3>
 <h4>Call Signature</h4>
@@ -358,10 +358,6 @@ otherwise it will be bound to this <code>sap.ui.ux3.ToolPopup</code> itself.</p>
 <blockquote>
 <p><strong>attachOpened</strong>(<code>oData</code>, <code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
-<p>Attaches event handler <code>fnFunction</code> to the #event:opened opened event of this <code>sap.ui.ux3.ToolPopup</code>.</p>
-<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
-otherwise it will be bound to this <code>sap.ui.ux3.ToolPopup</code> itself.</p>
-<p>Event is being fired after the ToolPopup has been opened.</p>
 <h5>Parameters</h5>
 <h6>oData</h6>
 <p><code>object</code></p>
@@ -378,14 +374,14 @@ object when firing the event</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Since</h5>
 <p>1.19.0</p>
-<h4>Call Signature</h4>
-<blockquote>
-<p><strong>attachOpened</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
-</blockquote>
 <p>Attaches event handler <code>fnFunction</code> to the #event:opened opened event of this <code>sap.ui.ux3.ToolPopup</code>.</p>
 <p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
 otherwise it will be bound to this <code>sap.ui.ux3.ToolPopup</code> itself.</p>
 <p>Event is being fired after the ToolPopup has been opened.</p>
+<h4>Call Signature</h4>
+<blockquote>
+<p><strong>attachOpened</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
+</blockquote>
 <h5>Parameters</h5>
 <h6>fnFunction</h6>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -398,6 +394,10 @@ otherwise it will be bound to this <code>sap.ui.ux3.ToolPopup</code> itself.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Since</h5>
 <p>1.19.0</p>
+<p>Attaches event handler <code>fnFunction</code> to the #event:opened opened event of this <code>sap.ui.ux3.ToolPopup</code>.</p>
+<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
+otherwise it will be bound to this <code>sap.ui.ux3.ToolPopup</code> itself.</p>
+<p>Event is being fired after the ToolPopup has been opened.</p>
 <hr>
 <h3><del>close()</del></h3>
 <blockquote>
@@ -521,8 +521,6 @@ This makes sense when the ToolPopup is closed programmatically from a different 
 <blockquote>
 <p><strong>detachOpened</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
-<p>Detaches event handler <code>fnFunction</code> from the #event:opened opened event of this <code>sap.ui.ux3.ToolPopup</code>.</p>
-<p>The passed function and listener object must match the ones used for event registration.</p>
 <h4>Parameters</h4>
 <h5>fnFunction</h5>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -535,14 +533,13 @@ This makes sense when the ToolPopup is closed programmatically from a different 
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.19.0</p>
+<p>Detaches event handler <code>fnFunction</code> from the #event:opened opened event of this <code>sap.ui.ux3.ToolPopup</code>.</p>
+<p>The passed function and listener object must match the ones used for event registration.</p>
 <hr>
 <h3><del>fireClose()</del></h3>
 <blockquote>
 <p><strong>fireClose</strong>(<code>mParameters?</code>): <code>boolean</code></p>
 </blockquote>
-<p>Fires event #event:close close to attached listeners.</p>
-<p>Listeners may prevent the default action of this event by calling the <code>preventDefault</code> method on the
-event object. The return value of this method indicates whether the default action should be executed.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><code>object</code></p>
@@ -552,12 +549,14 @@ event object. The return value of this method indicates whether the default acti
 <p>Whether or not to prevent the default action</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:close close to attached listeners.</p>
+<p>Listeners may prevent the default action of this event by calling the <code>preventDefault</code> method on the
+event object. The return value of this method indicates whether the default action should be executed.</p>
 <hr>
 <h3><del>fireClosed()</del></h3>
 <blockquote>
 <p><strong>fireClosed</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
-<p>Fires event #event:closed closed to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><code>object</code></p>
@@ -567,12 +566,12 @@ event object. The return value of this method indicates whether the default acti
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:closed closed to attached listeners.</p>
 <hr>
 <h3><del>fireEnter()</del></h3>
 <blockquote>
 <p><strong>fireEnter</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
-<p>Fires event #event:enter enter to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/ToolPopup$EnterEventParameters.html"><code>ToolPopup$EnterEventParameters</code></a></p>
@@ -582,12 +581,12 @@ event object. The return value of this method indicates whether the default acti
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:enter enter to attached listeners.</p>
 <hr>
 <h3><del>fireIconChanged()</del></h3>
 <blockquote>
 <p><strong>fireIconChanged</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
-<p>Fires event #event:iconChanged iconChanged to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><code>object</code></p>
@@ -597,12 +596,12 @@ event object. The return value of this method indicates whether the default acti
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:iconChanged iconChanged to attached listeners.</p>
 <hr>
 <h3><del>fireOpen()</del></h3>
 <blockquote>
 <p><strong>fireOpen</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
-<p>Fires event #event:open open to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><code>object</code></p>
@@ -612,12 +611,12 @@ event object. The return value of this method indicates whether the default acti
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:open open to attached listeners.</p>
 <hr>
 <h3><del>fireOpened()</del></h3>
 <blockquote>
 <p><strong>fireOpened</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
-<p>Fires event #event:opened opened to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><code>object</code></p>
@@ -629,21 +628,22 @@ event object. The return value of this method indicates whether the default acti
 <p>1.19.0</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:opened opened to attached listeners.</p>
 <hr>
 <h3><del>getAutoClose()</del></h3>
 <blockquote>
 <p><strong>getAutoClose</strong>(): <code>boolean</code></p>
 </blockquote>
-<p>Gets current value of property #getAutoClose autoClose.</p>
-<p>Determines whether the ToolPopup will auto close when it loses focus. If the user e.g. clicks outside
-of the ToolPopup it will be closed. Please don&#39;t use &quot;modal&quot; and &quot;autoclose&quot; at the same time. In this
-case a warning will be prompted to the console and &quot;autoclose&quot; won&#39;t be used.</p>
-<p>Default value is <code>false</code>.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>Value of property <code>autoClose</code></p>
 <h4>Since</h4>
 <p>1.13.2</p>
+<p>Gets current value of property #getAutoClose autoClose.</p>
+<p>Determines whether the ToolPopup will auto close when it loses focus. If the user e.g. clicks outside
+of the ToolPopup it will be closed. Please don&#39;t use &quot;modal&quot; and &quot;autoclose&quot; at the same time. In this
+case a warning will be prompted to the console and &quot;autoclose&quot; won&#39;t be used.</p>
+<p>Default value is <code>false</code>.</p>
 <hr>
 <h3><del>getButtons()</del></h3>
 <blockquote>
@@ -658,14 +658,14 @@ case a warning will be prompted to the console and &quot;autoclose&quot; won&#39
 <blockquote>
 <p><strong>getCloseDuration</strong>(): <code>number</code></p>
 </blockquote>
-<p>Gets current value of property #getCloseDuration closeDuration.</p>
-<p>Time in milliseconds for the close animation.</p>
-<p>Default value is <code>400</code>.</p>
 <h4>Returns</h4>
 <p><code>number</code></p>
 <p>Value of property <code>closeDuration</code></p>
 <h4>Since</h4>
 <p>1.19.0</p>
+<p>Gets current value of property #getCloseDuration closeDuration.</p>
+<p>Time in milliseconds for the close animation.</p>
+<p>Default value is <code>400</code>.</p>
 <hr>
 <h3><del>getContent()</del></h3>
 <blockquote>
@@ -680,17 +680,21 @@ case a warning will be prompted to the console and &quot;autoclose&quot; won&#39
 <blockquote>
 <p><strong>getDefaultButton</strong>(): <code>string</code></p>
 </blockquote>
-<p>ID of the element which is the current target of the association #getDefaultButton defaultButton,
-or <code>null</code>.</p>
 <h4>Returns</h4>
 <p><code>string</code></p>
 <h4>Since</h4>
 <p>1.20.1</p>
+<p>ID of the element which is the current target of the association #getDefaultButton defaultButton,
+or <code>null</code>.</p>
 <hr>
 <h3><del>getEnabled()</del></h3>
 <blockquote>
 <p><strong>getEnabled</strong>(): <code>boolean</code></p>
 </blockquote>
+<h4>Returns</h4>
+<p><code>boolean</code></p>
+<h4>Since</h4>
+<p>1.13.1</p>
 <p>Indicates whether the ToolPopup is currently enabled or not.</p>
 <p>Applications can&#39;t control the enabled state via a property. A ToolPopup is implicitly enabled depending
 on its <code>openState</code>. Descendant controls that honor the enabled state of their ancestors will appear disabled
@@ -706,10 +710,6 @@ or code that explicitly triggers pseudo user events would notice a difference.
  A second aspect that might change is the visual behavior of the content: during the CLOSING phase it
 &#39;looks&#39; enabled but in fact it is already disabled. This avoids unnecessary redraws for content that
 becomes hidden soon. Should this show to be confusing for end users, it might be changed.</p>
-<h4>Returns</h4>
-<p><code>boolean</code></p>
-<h4>Since</h4>
-<p>1.13.1</p>
 <hr>
 <h3><del>getIcon()</del></h3>
 <blockquote>
@@ -747,40 +747,40 @@ or <code>null</code>.</p>
 <blockquote>
 <p><strong>getInverted</strong>(): <code>boolean</code></p>
 </blockquote>
-<p>Gets current value of property #getInverted inverted.</p>
-<p>Specifies whether the ToolPopup has a dark or bright background. If set to true the background and borders
-will be dark. If false they will be bright. This property only has an effect for the GoldReflection-theme.</p>
-<p>Default value is <code>true</code>.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>Value of property <code>inverted</code></p>
 <h4>Since</h4>
 <p>1.11.1</p>
+<p>Gets current value of property #getInverted inverted.</p>
+<p>Specifies whether the ToolPopup has a dark or bright background. If set to true the background and borders
+will be dark. If false they will be bright. This property only has an effect for the GoldReflection-theme.</p>
+<p>Default value is <code>true</code>.</p>
 <hr>
 <h3><del>getMaxHeight()</del></h3>
 <blockquote>
 <p><strong>getMaxHeight</strong>(): <code>string</code></p>
 </blockquote>
-<p>Gets current value of property #getMaxHeight maxHeight.</p>
-<p>Forces a maximum height of the ToolPopup in pixels. If the ToolPopup content is higher than the ToolPopup,
-the content will be scrollable.</p>
 <h4>Returns</h4>
 <p><code>string</code></p>
 <p>Value of property <code>maxHeight</code></p>
 <h4>Since</h4>
 <p>1.13.2</p>
+<p>Gets current value of property #getMaxHeight maxHeight.</p>
+<p>Forces a maximum height of the ToolPopup in pixels. If the ToolPopup content is higher than the ToolPopup,
+the content will be scrollable.</p>
 <hr>
 <h3><del>getMaxWidth()</del></h3>
 <blockquote>
 <p><strong>getMaxWidth</strong>(): <code>string</code></p>
 </blockquote>
-<p>Gets current value of property #getMaxWidth maxWidth.</p>
-<p>Forces a maximum width of the ToolPopup in pixels.</p>
 <h4>Returns</h4>
 <p><code>string</code></p>
 <p>Value of property <code>maxWidth</code></p>
 <h4>Since</h4>
 <p>1.15.0</p>
+<p>Gets current value of property #getMaxWidth maxWidth.</p>
+<p>Forces a maximum width of the ToolPopup in pixels.</p>
 <hr>
 <h3><del>getModal()</del></h3>
 <blockquote>
@@ -800,14 +800,14 @@ won&#39;t be used.</p>
 <blockquote>
 <p><strong>getOpenDuration</strong>(): <code>number</code></p>
 </blockquote>
-<p>Gets current value of property #getOpenDuration openDuration.</p>
-<p>Time in milliseconds for the open animation.</p>
-<p>Default value is <code>400</code>.</p>
 <h4>Returns</h4>
 <p><code>number</code></p>
 <p>Value of property <code>openDuration</code></p>
 <h4>Since</h4>
 <p>1.19.0</p>
+<p>Gets current value of property #getOpenDuration openDuration.</p>
+<p>Time in milliseconds for the open animation.</p>
+<p>Default value is <code>400</code>.</p>
 <hr>
 <h3><del>getOpener()</del></h3>
 <blockquote>
@@ -969,8 +969,6 @@ the possible parameters <code>my</code> and <code>at</code>. These parameters re
 <blockquote>
 <p><strong>removeFocusableArea</strong>(<code>sID?</code>): <code>void</code></p>
 </blockquote>
-<p>Removes an ID to the Popup that should be focusable as well when using <code>autoclose</code>. Chaining is only
-possible if a valid type (string) is given.</p>
 <h4>Parameters</h4>
 <h5>sID?</h5>
 <p><code>string</code></p>
@@ -979,17 +977,13 @@ possible if a valid type (string) is given.</p>
 <p><code>void</code></p>
 <h4>Since</h4>
 <p>1.19.0</p>
+<p>Removes an ID to the Popup that should be focusable as well when using <code>autoclose</code>. Chaining is only
+possible if a valid type (string) is given.</p>
 <hr>
 <h3><del>setAutoClose()</del></h3>
 <blockquote>
 <p><strong>setAutoClose</strong>(<code>bAutoClose?</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getAutoClose autoClose.</p>
-<p>Determines whether the ToolPopup will auto close when it loses focus. If the user e.g. clicks outside
-of the ToolPopup it will be closed. Please don&#39;t use &quot;modal&quot; and &quot;autoclose&quot; at the same time. In this
-case a warning will be prompted to the console and &quot;autoclose&quot; won&#39;t be used.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>false</code>.</p>
 <h4>Parameters</h4>
 <h5>bAutoClose?</h5>
 <p><code>boolean</code></p>
@@ -999,12 +993,17 @@ case a warning will be prompted to the console and &quot;autoclose&quot; won&#39
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.13.2</p>
+<p>Sets a new value for property #getAutoClose autoClose.</p>
+<p>Determines whether the ToolPopup will auto close when it loses focus. If the user e.g. clicks outside
+of the ToolPopup it will be closed. Please don&#39;t use &quot;modal&quot; and &quot;autoclose&quot; at the same time. In this
+case a warning will be prompted to the console and &quot;autoclose&quot; won&#39;t be used.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>false</code>.</p>
 <hr>
 <h3><del>setAutoCloseAreas()</del></h3>
 <blockquote>
 <p><strong>setAutoCloseAreas</strong>(<code>aAutoCloseAreas</code>): <code>void</code></p>
 </blockquote>
-<p>This is just a forward to the Popup&#39;s function (sap.ui.core.Popup.setAutoCloseAreas) with the same functionality.</p>
 <h4>Parameters</h4>
 <h5>aAutoCloseAreas</h5>
 <p><code>Element</code>[]</p>
@@ -1012,15 +1011,12 @@ case a warning will be prompted to the console and &quot;autoclose&quot; won&#39
 <p><code>void</code></p>
 <h4>Since</h4>
 <p>1.19.0</p>
+<p>This is just a forward to the Popup&#39;s function (sap.ui.core.Popup.setAutoCloseAreas) with the same functionality.</p>
 <hr>
 <h3><del>setCloseDuration()</del></h3>
 <blockquote>
 <p><strong>setCloseDuration</strong>(<code>iCloseDuration?</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getCloseDuration closeDuration.</p>
-<p>Time in milliseconds for the close animation.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>400</code>.</p>
 <h4>Parameters</h4>
 <h5>iCloseDuration?</h5>
 <p><code>number</code></p>
@@ -1030,12 +1026,15 @@ case a warning will be prompted to the console and &quot;autoclose&quot; won&#39
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.19.0</p>
+<p>Sets a new value for property #getCloseDuration closeDuration.</p>
+<p>Time in milliseconds for the close animation.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>400</code>.</p>
 <hr>
 <h3><del>setDefaultButton()</del></h3>
 <blockquote>
 <p><strong>setDefaultButton</strong>(<code>oDefaultButton</code>): <code>this</code></p>
 </blockquote>
-<p>Sets the associated #getDefaultButton defaultButton.</p>
 <h4>Parameters</h4>
 <h5>oDefaultButton</h5>
 <p><code>string</code> | <a href="../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></p>
@@ -1046,6 +1045,7 @@ instance may be given</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.20.1</p>
+<p>Sets the associated #getDefaultButton defaultButton.</p>
 <hr>
 <h3><del>setInitialFocus()</del></h3>
 <blockquote>
@@ -1065,11 +1065,6 @@ instance may be given</p>
 <blockquote>
 <p><strong>setInverted</strong>(<code>bInverted?</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getInverted inverted.</p>
-<p>Specifies whether the ToolPopup has a dark or bright background. If set to true the background and borders
-will be dark. If false they will be bright. This property only has an effect for the GoldReflection-theme.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>true</code>.</p>
 <h4>Parameters</h4>
 <h5>bInverted?</h5>
 <p><code>boolean</code></p>
@@ -1079,15 +1074,16 @@ will be dark. If false they will be bright. This property only has an effect for
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.11.1</p>
+<p>Sets a new value for property #getInverted inverted.</p>
+<p>Specifies whether the ToolPopup has a dark or bright background. If set to true the background and borders
+will be dark. If false they will be bright. This property only has an effect for the GoldReflection-theme.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>true</code>.</p>
 <hr>
 <h3><del>setMaxHeight()</del></h3>
 <blockquote>
 <p><strong>setMaxHeight</strong>(<code>sMaxHeight?</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getMaxHeight maxHeight.</p>
-<p>Forces a maximum height of the ToolPopup in pixels. If the ToolPopup content is higher than the ToolPopup,
-the content will be scrollable.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <h4>Parameters</h4>
 <h5>sMaxHeight?</h5>
 <p><code>string</code></p>
@@ -1097,6 +1093,10 @@ the content will be scrollable.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.13.2</p>
+<p>Sets a new value for property #getMaxHeight maxHeight.</p>
+<p>Forces a maximum height of the ToolPopup in pixels. If the ToolPopup content is higher than the ToolPopup,
+the content will be scrollable.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <hr>
 <h3><del>setModal()</del></h3>
 <blockquote>
@@ -1121,10 +1121,6 @@ won&#39;t be used.</p>
 <blockquote>
 <p><strong>setOpenDuration</strong>(<code>iOpenDuration?</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getOpenDuration openDuration.</p>
-<p>Time in milliseconds for the open animation.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>400</code>.</p>
 <h4>Parameters</h4>
 <h5>iOpenDuration?</h5>
 <p><code>number</code></p>
@@ -1134,6 +1130,10 @@ won&#39;t be used.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.19.0</p>
+<p>Sets a new value for property #getOpenDuration openDuration.</p>
+<p>Time in milliseconds for the open animation.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>400</code>.</p>
 <hr>
 <h3><del>setOpener()</del></h3>
 <blockquote>
@@ -1187,7 +1187,7 @@ information contained in <code>oClassInfo</code>.</p>
 <p><code>string</code></p>
 <p>Name of the class being created</p>
 <h5>oClassInfo?</h5>
-<p><a href="../../../../../../sap.f/namespaces/sap/type-aliases/ClassInfo.html"><code>ClassInfo</code></a>&lt;<code>T</code>, <code>ToolPopup</code>&gt;</p>
+<p><code>ClassInfo</code>&lt;<code>T</code>, <code>ToolPopup</code>&gt;</p>
 <p>Object literal with information about the class</p>
 <h5>FNMetaImpl?</h5>
 <p><code>Function</code></p>
@@ -1211,6 +1211,6 @@ used by this class</p>
 <p><a href="../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a>.<a href="../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html#getmetadata-1"><code>getMetadata</code></a></p>
 <hr>
 
-<footer>Generated from <code>@openui5/types@1.120.46</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@openui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

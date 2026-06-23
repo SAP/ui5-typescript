@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Class: RadioButton — OpenUI5 TypeScript API</title>
-<meta name="description" content="Class: RadioButton — OpenUI5 TypeScript API Reference (1.120.46)">
+<meta name="description" content="Class: RadioButton — OpenUI5 TypeScript API Reference (1.120.0)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/openui5/1.120/sap.m/sap/m/RadioButton/classes/RadioButton.html">
 <meta property="og:title" content="Class: RadioButton — OpenUI5 TypeScript API">
-<meta property="og:description" content="Class: RadioButton — OpenUI5 TypeScript API Reference (1.120.46)">
+<meta property="og:description" content="Class: RadioButton — OpenUI5 TypeScript API Reference (1.120.0)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/openui5/1.120/sap.m/sap/m/RadioButton/classes/RadioButton.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,9 +33,9 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../index.html">OpenUI5 API</a> › <a href="../../../../../sap.m/README.html">sap.m</a> › sap › m › <a href="../../../../../sap.m/sap/m/RadioButton/README.html">RadioButton</a> › classes</nav>
-<p><a href="../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.46)</strong></a></p>
+<p><a href="../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.0)</strong></a></p>
 <hr>
-<p><a href="../../../../../README.html">OpenUI5 TypeScript API (1.120.46)</a> / <a href="../../../../README.html">sap.m</a> / <a href="../README.html">sap/m/RadioButton</a> / RadioButton</p>
+<p><a href="../../../../../README.html">OpenUI5 TypeScript API (1.120.0)</a> / <a href="../../../../README.html">sap.m</a> / <a href="../README.html">sap/m/RadioButton</a> / RadioButton</p>
 <h1>Class: RadioButton</h1>
 <pre class="sig"><span class="kw">import</span> RadioButton <span class="kw">from</span> <span class="str">"sap/m/RadioButton"</span>;</pre>
 <p>RadioButton is a control similar to a sap.m.CheckBox checkbox, but it allows you to choose only
@@ -228,7 +228,6 @@ otherwise it will be bound to this <code>sap.m.RadioButton</code> itself.</p>
 <blockquote>
 <p><strong>fireSelect</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
-<p>Fires event #event:select select to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/RadioButton$SelectEventParameters.html"><code>RadioButton$SelectEventParameters</code></a></p>
@@ -238,18 +237,19 @@ otherwise it will be bound to this <code>sap.m.RadioButton</code> itself.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:select select to attached listeners.</p>
 <hr>
 <h3>getAccessibilityInfo()</h3>
 <blockquote>
 <p><strong>getAccessibilityInfo</strong>(): <a href="../../../../../sap.ui.core/sap/ui/core/library/type-aliases/AccessibilityInfo.html"><code>AccessibilityInfo</code></a></p>
 </blockquote>
-<p>See:
-	sap.ui.core.Control#getAccessibilityInfo</p>
 <h4>Returns</h4>
 <p><a href="../../../../../sap.ui.core/sap/ui/core/library/type-aliases/AccessibilityInfo.html"><code>AccessibilityInfo</code></a></p>
 <p>The <code>sap.m.RadioButton</code> accessibility information</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>See:
+	sap.ui.core.Control#getAccessibilityInfo</p>
 <h4>Overrides</h4>
 <p><a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a>.<a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html#getaccessibilityinfo"><code>getAccessibilityInfo</code></a></p>
 <hr>
@@ -285,14 +285,14 @@ on active state. Default value is &#39;true&#39;</p>
 <blockquote>
 <p><strong>getEditable</strong>(): <code>boolean</code></p>
 </blockquote>
-<p>Gets current value of property #getEditable editable.</p>
-<p>Specifies whether the user can select the radio button.</p>
-<p>Default value is <code>true</code>.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>Value of property <code>editable</code></p>
 <h4>Since</h4>
 <p>1.25</p>
+<p>Gets current value of property #getEditable editable.</p>
+<p>Specifies whether the user can select the radio button.</p>
+<p>Default value is <code>true</code>.</p>
 <hr>
 <h3>getEnabled()</h3>
 <blockquote>
@@ -348,15 +348,15 @@ will handle the screen reader support. For example such wrappers are <code>sap.m
 <blockquote>
 <p><strong>getTextAlign</strong>(): <code>&quot;Begin&quot;</code> | <code>&quot;End&quot;</code> | <code>&quot;Left&quot;</code> | <code>&quot;Right&quot;</code> | <a href="../../../../../sap.ui.core/sap/ui/core/library/enumerations/TextAlign.html"><code>TextAlign</code></a> | <code>&quot;Center&quot;</code> | <code>&quot;Initial&quot;</code></p>
 </blockquote>
-<p>Gets current value of property #getTextAlign textAlign.</p>
-<p>Specifies the alignment of the radio button. Available alignment settings are &quot;Begin&quot;, &quot;Center&quot;, &quot;End&quot;,
-&quot;Left&quot;, and &quot;Right&quot;.</p>
-<p>Default value is <code>Begin</code>.</p>
 <h4>Returns</h4>
 <p><code>&quot;Begin&quot;</code> | <code>&quot;End&quot;</code> | <code>&quot;Left&quot;</code> | <code>&quot;Right&quot;</code> | <a href="../../../../../sap.ui.core/sap/ui/core/library/enumerations/TextAlign.html"><code>TextAlign</code></a> | <code>&quot;Center&quot;</code> | <code>&quot;Initial&quot;</code></p>
 <p>Value of property <code>textAlign</code></p>
 <h4>Since</h4>
 <p>1.28</p>
+<p>Gets current value of property #getTextAlign textAlign.</p>
+<p>Specifies the alignment of the radio button. Available alignment settings are &quot;Begin&quot;, &quot;Center&quot;, &quot;End&quot;,
+&quot;Left&quot;, and &quot;Right&quot;.</p>
+<p>Default value is <code>Begin</code>.</p>
 <hr>
 <h3>getTextDirection()</h3>
 <blockquote>
@@ -374,28 +374,28 @@ from its parent container.</p>
 <blockquote>
 <p><strong>getUseEntireWidth</strong>(): <code>boolean</code></p>
 </blockquote>
-<p>Gets current value of property #getUseEntireWidth useEntireWidth.</p>
-<p>Indicates if the given width will be applied for the whole RadioButton or only it&#39;s label. By Default
-width is set only for the label.</p>
-<p>Default value is <code>false</code>.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>Value of property <code>useEntireWidth</code></p>
 <h4>Since</h4>
 <p>1.42</p>
+<p>Gets current value of property #getUseEntireWidth useEntireWidth.</p>
+<p>Indicates if the given width will be applied for the whole RadioButton or only it&#39;s label. By Default
+width is set only for the label.</p>
+<p>Default value is <code>false</code>.</p>
 <hr>
 <h3>getValueState()</h3>
 <blockquote>
 <p><strong>getValueState</strong>(): <code>&quot;None&quot;</code> | <a href="../../../../../sap.ui.core/sap/ui/core/library/enumerations/ValueState.html"><code>ValueState</code></a> | <code>&quot;Error&quot;</code> | <code>&quot;Information&quot;</code> | <code>&quot;Success&quot;</code> | <code>&quot;Warning&quot;</code></p>
 </blockquote>
-<p>Gets current value of property #getValueState valueState.</p>
-<p>Marker for the correctness of the current value e.g., Error, Success, etc.</p>
-<p>Default value is <code>None</code>.</p>
 <h4>Returns</h4>
 <p><code>&quot;None&quot;</code> | <a href="../../../../../sap.ui.core/sap/ui/core/library/enumerations/ValueState.html"><code>ValueState</code></a> | <code>&quot;Error&quot;</code> | <code>&quot;Information&quot;</code> | <code>&quot;Success&quot;</code> | <code>&quot;Warning&quot;</code></p>
 <p>Value of property <code>valueState</code></p>
 <h4>Since</h4>
 <p>1.25</p>
+<p>Gets current value of property #getValueState valueState.</p>
+<p>Marker for the correctness of the current value e.g., Error, Success, etc.</p>
+<p>Default value is <code>None</code>.</p>
 <hr>
 <h3>getWidth()</h3>
 <blockquote>
@@ -416,7 +416,7 @@ set only for the label.</p>
 <p>Pseudo event for pseudo &#39;select&#39; event... space, enter, ... without modifiers (Ctrl, Alt or Shift)</p>
 <h4>Parameters</h4>
 <h5>oEvent</h5>
-<p><a href="../../../../../sap.ui.core/namespaces/JQuery/interfaces/Event.html"><code>Event</code></a></p>
+<p><code>Event</code></p>
 <p>provides information for the event</p>
 <h4>Returns</h4>
 <p><code>void</code></p>
@@ -486,10 +486,6 @@ on active state. Default value is &#39;true&#39;</p>
 <blockquote>
 <p><strong>setEditable</strong>(<code>bEditable?</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getEditable editable.</p>
-<p>Specifies whether the user can select the radio button.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>true</code>.</p>
 <h4>Parameters</h4>
 <h5>bEditable?</h5>
 <p><code>boolean</code></p>
@@ -499,6 +495,10 @@ on active state. Default value is &#39;true&#39;</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.25</p>
+<p>Sets a new value for property #getEditable editable.</p>
+<p>Specifies whether the user can select the radio button.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>true</code>.</p>
 <hr>
 <h3>setEnabled()</h3>
 <blockquote>
@@ -546,7 +546,6 @@ on active state. Default value is &#39;true&#39;</p>
 <blockquote>
 <p><strong>setTabIndex</strong>(<code>iTabIndex</code>): <code>this</code></p>
 </blockquote>
-<p>Sets the tab index of the control</p>
 <h4>Parameters</h4>
 <h5>iTabIndex</h5>
 <p><code>number</code></p>
@@ -557,6 +556,7 @@ on active state. Default value is &#39;true&#39;</p>
 <p>1.16</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Sets the tab index of the control</p>
 <hr>
 <h3>setText()</h3>
 <blockquote>
@@ -577,11 +577,6 @@ on active state. Default value is &#39;true&#39;</p>
 <blockquote>
 <p><strong>setTextAlign</strong>(<code>sTextAlign?</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getTextAlign textAlign.</p>
-<p>Specifies the alignment of the radio button. Available alignment settings are &quot;Begin&quot;, &quot;Center&quot;, &quot;End&quot;,
-&quot;Left&quot;, and &quot;Right&quot;.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>Begin</code>.</p>
 <h4>Parameters</h4>
 <h5>sTextAlign?</h5>
 <p><code>&quot;Begin&quot;</code> | <code>&quot;End&quot;</code> | <code>&quot;Left&quot;</code> | <code>&quot;Right&quot;</code> | <a href="../../../../../sap.ui.core/sap/ui/core/library/enumerations/TextAlign.html"><code>TextAlign</code></a> | <code>&quot;Center&quot;</code> | <code>&quot;Initial&quot;</code></p>
@@ -591,6 +586,11 @@ on active state. Default value is &#39;true&#39;</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.28</p>
+<p>Sets a new value for property #getTextAlign textAlign.</p>
+<p>Specifies the alignment of the radio button. Available alignment settings are &quot;Begin&quot;, &quot;Center&quot;, &quot;End&quot;,
+&quot;Left&quot;, and &quot;Right&quot;.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>Begin</code>.</p>
 <hr>
 <h3>setTextDirection()</h3>
 <blockquote>
@@ -613,11 +613,6 @@ from its parent container.</p>
 <blockquote>
 <p><strong>setUseEntireWidth</strong>(<code>bUseEntireWidth?</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getUseEntireWidth useEntireWidth.</p>
-<p>Indicates if the given width will be applied for the whole RadioButton or only it&#39;s label. By Default
-width is set only for the label.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>false</code>.</p>
 <h4>Parameters</h4>
 <h5>bUseEntireWidth?</h5>
 <p><code>boolean</code></p>
@@ -627,15 +622,16 @@ width is set only for the label.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.42</p>
+<p>Sets a new value for property #getUseEntireWidth useEntireWidth.</p>
+<p>Indicates if the given width will be applied for the whole RadioButton or only it&#39;s label. By Default
+width is set only for the label.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>false</code>.</p>
 <hr>
 <h3>setValueState()</h3>
 <blockquote>
 <p><strong>setValueState</strong>(<code>sValueState?</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getValueState valueState.</p>
-<p>Marker for the correctness of the current value e.g., Error, Success, etc.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>None</code>.</p>
 <h4>Parameters</h4>
 <h5>sValueState?</h5>
 <p><code>&quot;None&quot;</code> | <a href="../../../../../sap.ui.core/sap/ui/core/library/enumerations/ValueState.html"><code>ValueState</code></a> | <code>&quot;Error&quot;</code> | <code>&quot;Information&quot;</code> | <code>&quot;Success&quot;</code> | <code>&quot;Warning&quot;</code></p>
@@ -645,6 +641,10 @@ width is set only for the label.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.25</p>
+<p>Sets a new value for property #getValueState valueState.</p>
+<p>Marker for the correctness of the current value e.g., Error, Success, etc.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>None</code>.</p>
 <hr>
 <h3>setWidth()</h3>
 <blockquote>
@@ -678,7 +678,7 @@ contained in <code>oClassInfo</code>.</p>
 <p><code>string</code></p>
 <p>Name of the class being created</p>
 <h5>oClassInfo?</h5>
-<p><a href="../../../../../sap.f/namespaces/sap/type-aliases/ClassInfo.html"><code>ClassInfo</code></a>&lt;<code>T</code>, <code>RadioButton</code>&gt;</p>
+<p><code>ClassInfo</code>&lt;<code>T</code>, <code>RadioButton</code>&gt;</p>
 <p>Object literal with information about the class</p>
 <h5>FNMetaImpl?</h5>
 <p><code>Function</code></p>
@@ -702,6 +702,6 @@ used by this class</p>
 <p><a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a>.<a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html#getmetadata-1"><code>getMetadata</code></a></p>
 <hr>
 
-<footer>Generated from <code>@openui5/types@1.120.46</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@openui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Class: ShellBar — OpenUI5 TypeScript API</title>
-<meta name="description" content="Class: ShellBar — OpenUI5 TypeScript API Reference (1.120.46)">
+<meta name="description" content="Class: ShellBar — OpenUI5 TypeScript API Reference (1.120.0)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/openui5/1.120/sap.f/sap/f/ShellBar/classes/ShellBar.html">
 <meta property="og:title" content="Class: ShellBar — OpenUI5 TypeScript API">
-<meta property="og:description" content="Class: ShellBar — OpenUI5 TypeScript API Reference (1.120.46)">
+<meta property="og:description" content="Class: ShellBar — OpenUI5 TypeScript API Reference (1.120.0)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/openui5/1.120/sap.f/sap/f/ShellBar/classes/ShellBar.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,11 +33,13 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../index.html">OpenUI5 API</a> › <a href="../../../../../sap.f/README.html">sap.f</a> › sap › f › <a href="../../../../../sap.f/sap/f/ShellBar/README.html">ShellBar</a> › classes</nav>
-<p><a href="../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.46)</strong></a></p>
+<p><a href="../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.0)</strong></a></p>
 <hr>
-<p><a href="../../../../../README.html">OpenUI5 TypeScript API (1.120.46)</a> / <a href="../../../../README.html">sap.f</a> / <a href="../README.html">sap/f/ShellBar</a> / ShellBar</p>
+<p><a href="../../../../../README.html">OpenUI5 TypeScript API (1.120.0)</a> / <a href="../../../../README.html">sap.f</a> / <a href="../README.html">sap/f/ShellBar</a> / ShellBar</p>
 <h1>Class: ShellBar</h1>
 <pre class="sig"><span class="kw">import</span> ShellBar <span class="kw">from</span> <span class="str">"sap/f/ShellBar"</span>;</pre>
+<h2>Since</h2>
+<p>1.63</p>
 <p>A horizontal bar control holding multiple child controls used as application shell header.</p>
 <p>Overview:</p>
 <p>The <code>ShellBar</code> is used as the uppermost section (shell) of the app. It is fully responsive and adaptive,
@@ -45,8 +47,6 @@ and corresponds to the SAP Fiori Design Guidelines.</p>
 <p>Usage:</p>
 <p>Content specified in the <code>ShellBar</code> properties and aggregations is automatically positioned in dedicated
 places of the control.</p>
-<h2>Since</h2>
-<p>1.63</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></li>
@@ -55,7 +55,7 @@ places of the control.</p>
 <ul>
 <li><a href="../../library/interfaces/IShellBar.html"><code>IShellBar</code></a></li>
 <li><a href="../../../../../sap.m/sap/m/library/interfaces/IBar.html"><code>IBar</code></a></li>
-<li><a href="../../../tnt/library/interfaces/IToolHeader.html"><code>IToolHeader</code></a></li>
+<li><a href="../../../../../sap.tnt/sap/tnt/library/interfaces/IToolHeader.html"><code>IToolHeader</code></a></li>
 </ul>
 <h2>Constructors</h2>
 <h3>Constructor</h3>
@@ -114,13 +114,12 @@ of the syntax of the settings object.</p>
 <p><strong>__implements__sap_tnt_IToolHeader</strong>: <code>boolean</code></p>
 </blockquote>
 <h4>Implementation of</h4>
-<p><a href="../../../tnt/library/interfaces/IToolHeader.html"><code>IToolHeader</code></a>.<a href="../../../tnt/library/interfaces/IToolHeader.html#__implements__sap_tnt_itoolheader"><code>__implements__sap_tnt_IToolHeader</code></a></p>
+<p><a href="../../../../../sap.tnt/sap/tnt/library/interfaces/IToolHeader.html"><code>IToolHeader</code></a>.<a href="../../../../../sap.tnt/sap/tnt/library/interfaces/IToolHeader.html#__implements__sap_tnt_itoolheader"><code>__implements__sap_tnt_IToolHeader</code></a></p>
 <hr>
 <h3>_applyContextClassFor()</h3>
 <blockquote>
 <p><strong>_applyContextClassFor</strong>(): <a href="../../../../../sap.m/sap/m/library/interfaces/IBar.html"><code>IBar</code></a></p>
 </blockquote>
-<p>Sets classes according to the context of the page. Possible contexts are header, footer, and subheader.</p>
 <h4>Returns</h4>
 <p><a href="../../../../../sap.m/sap/m/library/interfaces/IBar.html"><code>IBar</code></a></p>
 <p><code>this</code> for chaining</p>
@@ -128,12 +127,12 @@ of the syntax of the settings object.</p>
 <p>1.65</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Sets classes according to the context of the page. Possible contexts are header, footer, and subheader.</p>
 <hr>
 <h3>_applyTag()</h3>
 <blockquote>
 <p><strong>_applyTag</strong>(): <a href="../../../../../sap.m/sap/m/library/interfaces/IBar.html"><code>IBar</code></a></p>
 </blockquote>
-<p>Sets the HTML tag according to the context of the page. Possible contexts are header, footer, and subheader.</p>
 <h4>Returns</h4>
 <p><a href="../../../../../sap.m/sap/m/library/interfaces/IBar.html"><code>IBar</code></a></p>
 <p><code>this</code> for chaining</p>
@@ -141,6 +140,7 @@ of the syntax of the settings object.</p>
 <p>1.65</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Sets the HTML tag according to the context of the page. Possible contexts are header, footer, and subheader.</p>
 <hr>
 <h3>addAdditionalContent()</h3>
 <blockquote>
@@ -159,8 +159,6 @@ of the syntax of the settings object.</p>
 <blockquote>
 <p><strong>applyTagAndContextClassFor</strong>(): <a href="../../../../../sap.m/sap/m/library/interfaces/IBar.html"><code>IBar</code></a></p>
 </blockquote>
-<p>Sets classes and HTML tag according to the context of the page. Possible contexts are header, footer,
-and subheader</p>
 <h4>Returns</h4>
 <p><a href="../../../../../sap.m/sap/m/library/interfaces/IBar.html"><code>IBar</code></a></p>
 <p><code>this</code> for chaining</p>
@@ -168,6 +166,8 @@ and subheader</p>
 <p>1.65</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Sets classes and HTML tag according to the context of the page. Possible contexts are header, footer,
+and subheader</p>
 <hr>
 <h3>attachAvatarPressed()</h3>
 <h4>Call Signature</h4>
@@ -550,12 +550,12 @@ otherwise it will be bound to this <code>sap.f.ShellBar</code> itself.</p>
 <blockquote>
 <p><strong>destroySearchManager</strong>(): <code>this</code></p>
 </blockquote>
-<p>Destroys the searchManager in the aggregation #getSearchManager searchManager.</p>
 <h4>Returns</h4>
 <p><code>this</code></p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.67</p>
+<p>Destroys the searchManager in the aggregation #getSearchManager searchManager.</p>
 <hr>
 <h3>detachAvatarPressed()</h3>
 <blockquote>
@@ -705,7 +705,6 @@ of this <code>sap.f.ShellBar</code>.</p>
 <blockquote>
 <p><strong>fireAvatarPressed</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
-<p>Fires event #event:avatarPressed avatarPressed to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/ShellBar$AvatarPressedEventParameters.html"><code>ShellBar$AvatarPressedEventParameters</code></a></p>
@@ -715,12 +714,12 @@ of this <code>sap.f.ShellBar</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:avatarPressed avatarPressed to attached listeners.</p>
 <hr>
 <h3>fireCopilotPressed()</h3>
 <blockquote>
 <p><strong>fireCopilotPressed</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
-<p>Fires event #event:copilotPressed copilotPressed to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/ShellBar$CopilotPressedEventParameters.html"><code>ShellBar$CopilotPressedEventParameters</code></a></p>
@@ -730,12 +729,12 @@ of this <code>sap.f.ShellBar</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:copilotPressed copilotPressed to attached listeners.</p>
 <hr>
 <h3>fireHomeIconPressed()</h3>
 <blockquote>
 <p><strong>fireHomeIconPressed</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
-<p>Fires event #event:homeIconPressed homeIconPressed to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/ShellBar$HomeIconPressedEventParameters.html"><code>ShellBar$HomeIconPressedEventParameters</code></a></p>
@@ -745,12 +744,12 @@ of this <code>sap.f.ShellBar</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:homeIconPressed homeIconPressed to attached listeners.</p>
 <hr>
 <h3>fireMenuButtonPressed()</h3>
 <blockquote>
 <p><strong>fireMenuButtonPressed</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
-<p>Fires event #event:menuButtonPressed menuButtonPressed to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/ShellBar$MenuButtonPressedEventParameters.html"><code>ShellBar$MenuButtonPressedEventParameters</code></a></p>
@@ -760,12 +759,12 @@ of this <code>sap.f.ShellBar</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:menuButtonPressed menuButtonPressed to attached listeners.</p>
 <hr>
 <h3>fireNavButtonPressed()</h3>
 <blockquote>
 <p><strong>fireNavButtonPressed</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
-<p>Fires event #event:navButtonPressed navButtonPressed to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/ShellBar$NavButtonPressedEventParameters.html"><code>ShellBar$NavButtonPressedEventParameters</code></a></p>
@@ -775,12 +774,12 @@ of this <code>sap.f.ShellBar</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:navButtonPressed navButtonPressed to attached listeners.</p>
 <hr>
 <h3>fireNotificationsPressed()</h3>
 <blockquote>
 <p><strong>fireNotificationsPressed</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
-<p>Fires event #event:notificationsPressed notificationsPressed to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/ShellBar$NotificationsPressedEventParameters.html"><code>ShellBar$NotificationsPressedEventParameters</code></a></p>
@@ -790,12 +789,12 @@ of this <code>sap.f.ShellBar</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:notificationsPressed notificationsPressed to attached listeners.</p>
 <hr>
 <h3>fireProductSwitcherPressed()</h3>
 <blockquote>
 <p><strong>fireProductSwitcherPressed</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
-<p>Fires event #event:productSwitcherPressed productSwitcherPressed to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/ShellBar$ProductSwitcherPressedEventParameters.html"><code>ShellBar$ProductSwitcherPressedEventParameters</code></a></p>
@@ -805,12 +804,12 @@ of this <code>sap.f.ShellBar</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:productSwitcherPressed productSwitcherPressed to attached listeners.</p>
 <hr>
 <h3>fireSearchButtonPressed()</h3>
 <blockquote>
 <p><strong>fireSearchButtonPressed</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
-<p>Fires event #event:searchButtonPressed searchButtonPressed to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/ShellBar$SearchButtonPressedEventParameters.html"><code>ShellBar$SearchButtonPressedEventParameters</code></a></p>
@@ -820,6 +819,7 @@ of this <code>sap.f.ShellBar</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:searchButtonPressed searchButtonPressed to attached listeners.</p>
 <hr>
 <h3>getAdditionalContent()</h3>
 <blockquote>
@@ -835,7 +835,6 @@ of this <code>sap.f.ShellBar</code>.</p>
 <blockquote>
 <p><strong>getContext</strong>(): <a href="../../../../../sap.m/sap/m/BarInPageEnabler/type-aliases/BarContexts.html"><code>BarContexts</code></a></p>
 </blockquote>
-<p>Gets the available Bar contexts.</p>
 <h4>Returns</h4>
 <p><a href="../../../../../sap.m/sap/m/BarInPageEnabler/type-aliases/BarContexts.html"><code>BarContexts</code></a></p>
 <p>with all available contexts</p>
@@ -843,6 +842,7 @@ of this <code>sap.f.ShellBar</code>.</p>
 <p>1.65</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Gets the available Bar contexts.</p>
 <hr>
 <h3>getHomeIcon()</h3>
 <blockquote>
@@ -859,20 +859,19 @@ of this <code>sap.f.ShellBar</code>.</p>
 <blockquote>
 <p><strong>getHomeIconTooltip</strong>(): <code>string</code></p>
 </blockquote>
-<p>Gets current value of property #getHomeIconTooltip homeIconTooltip.</p>
-<p>Defines a custom tooltip for the home icon. If not set, a default tooltip is used.</p>
-<p>Default value is <code>empty string</code>.</p>
 <h4>Returns</h4>
 <p><code>string</code></p>
 <p>Value of property <code>homeIconTooltip</code></p>
 <h4>Since</h4>
 <p>1.67</p>
+<p>Gets current value of property #getHomeIconTooltip homeIconTooltip.</p>
+<p>Defines a custom tooltip for the home icon. If not set, a default tooltip is used.</p>
+<p>Default value is <code>empty string</code>.</p>
 <hr>
 <h3>getHTMLTag()</h3>
 <blockquote>
 <p><strong>getHTMLTag</strong>(): <code>string</code></p>
 </blockquote>
-<p>Gets the HTML tag of the root DOM Reference.</p>
 <h4>Returns</h4>
 <p><code>string</code></p>
 <p>the HTML-tag</p>
@@ -880,6 +879,7 @@ of this <code>sap.f.ShellBar</code>.</p>
 <p>1.65</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Gets the HTML tag of the root DOM Reference.</p>
 <hr>
 <h3>getMenu()</h3>
 <blockquote>
@@ -894,14 +894,14 @@ of this <code>sap.f.ShellBar</code>.</p>
 <blockquote>
 <p><strong>getNotificationsNumber</strong>(): <code>string</code></p>
 </blockquote>
-<p>Gets current value of property #getNotificationsNumber notificationsNumber.</p>
-<p>Defines the displayed number of upcoming notifications.</p>
-<p>Default value is <code>empty string</code>.</p>
 <h4>Returns</h4>
 <p><code>string</code></p>
 <p>Value of property <code>notificationsNumber</code></p>
 <h4>Since</h4>
 <p>1.64</p>
+<p>Gets current value of property #getNotificationsNumber notificationsNumber.</p>
+<p>Defines the displayed number of upcoming notifications.</p>
+<p>Default value is <code>empty string</code>.</p>
 <hr>
 <h3>getProfile()</h3>
 <blockquote>
@@ -916,13 +916,13 @@ of this <code>sap.f.ShellBar</code>.</p>
 <blockquote>
 <p><strong>getSearchManager</strong>(): <a href="../../SearchManager/classes/SearchManager.html"><code>SearchManager</code></a></p>
 </blockquote>
-<p>Gets content of aggregation #getSearchManager searchManager.</p>
-<p>Configurable search.</p>
-<p><strong>Note:</strong> If <code>showSearch</code> is set to <code>true</code>, two search buttons appear.</p>
 <h4>Returns</h4>
 <p><a href="../../SearchManager/classes/SearchManager.html"><code>SearchManager</code></a></p>
 <h4>Since</h4>
 <p>1.67</p>
+<p>Gets content of aggregation #getSearchManager searchManager.</p>
+<p>Configurable search.</p>
+<p><strong>Note:</strong> If <code>showSearch</code> is set to <code>true</code>, two search buttons appear.</p>
 <hr>
 <h3>getSecondTitle()</h3>
 <blockquote>
@@ -1049,7 +1049,6 @@ the additionalContent is inserted at the last position</p>
 <blockquote>
 <p><strong>isContextSensitive</strong>(): <code>boolean</code></p>
 </blockquote>
-<p>Returns if the bar is sensitive to the container context. Implementation of the IBar interface</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>isContextSensitive</p>
@@ -1057,6 +1056,7 @@ the additionalContent is inserted at the last position</p>
 <p>1.65</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Returns if the bar is sensitive to the container context. Implementation of the IBar interface</p>
 <hr>
 <h3>removeAdditionalContent()</h3>
 <blockquote>
@@ -1101,10 +1101,6 @@ the additionalContent is inserted at the last position</p>
 <blockquote>
 <p><strong>setHomeIconTooltip</strong>(<code>sHomeIconTooltip?</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getHomeIconTooltip homeIconTooltip.</p>
-<p>Defines a custom tooltip for the home icon. If not set, a default tooltip is used.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>empty string</code>.</p>
 <h4>Parameters</h4>
 <h5>sHomeIconTooltip?</h5>
 <p><code>string</code></p>
@@ -1114,12 +1110,15 @@ the additionalContent is inserted at the last position</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.67</p>
+<p>Sets a new value for property #getHomeIconTooltip homeIconTooltip.</p>
+<p>Defines a custom tooltip for the home icon. If not set, a default tooltip is used.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>empty string</code>.</p>
 <hr>
 <h3>setHTMLTag()</h3>
 <blockquote>
 <p><strong>setHTMLTag</strong>(<code>sTag</code>): <a href="../../../../../sap.m/sap/m/library/interfaces/IBar.html"><code>IBar</code></a></p>
 </blockquote>
-<p>Sets the HTML tag of the root DOM Reference.</p>
 <h4>Parameters</h4>
 <h5>sTag</h5>
 <p><code>string</code></p>
@@ -1130,6 +1129,7 @@ the additionalContent is inserted at the last position</p>
 <p>1.65</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Sets the HTML tag of the root DOM Reference.</p>
 <hr>
 <h3>setMenu()</h3>
 <blockquote>
@@ -1161,7 +1161,6 @@ the additionalContent is inserted at the last position</p>
 <blockquote>
 <p><strong>setSearchManager</strong>(<code>oSearchManager</code>): <code>this</code></p>
 </blockquote>
-<p>Sets the aggregated #getSearchManager searchManager.</p>
 <h4>Parameters</h4>
 <h5>oSearchManager</h5>
 <p><a href="../../SearchManager/classes/SearchManager.html"><code>SearchManager</code></a></p>
@@ -1171,6 +1170,7 @@ the additionalContent is inserted at the last position</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.67</p>
+<p>Sets the aggregated #getSearchManager searchManager.</p>
 <hr>
 <h3>setSecondTitle()</h3>
 <blockquote>
@@ -1316,7 +1316,7 @@ contained in <code>oClassInfo</code>.</p>
 <p><code>string</code></p>
 <p>Name of the class being created</p>
 <h5>oClassInfo?</h5>
-<p><a href="../../../../namespaces/sap/type-aliases/ClassInfo.html"><code>ClassInfo</code></a>&lt;<code>T</code>, <code>ShellBar</code>&gt;</p>
+<p><code>ClassInfo</code>&lt;<code>T</code>, <code>ShellBar</code>&gt;</p>
 <p>Object literal with information about the class</p>
 <h5>FNMetaImpl?</h5>
 <p><code>Function</code></p>
@@ -1340,6 +1340,6 @@ used by this class</p>
 <p><a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a>.<a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html#getmetadata-1"><code>getMetadata</code></a></p>
 <hr>
 
-<footer>Generated from <code>@openui5/types@1.120.46</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@openui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

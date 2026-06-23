@@ -2,12 +2,12 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>~~Interface: $StandardListItemSettings~~ — OpenUI5 TypeScript API</title>
-<meta name="description" content="~~Interface: $StandardListItemSettings~~ — OpenUI5 TypeScript API Reference (1.120.46)">
+<title>Interface: $StandardListItemSettings — OpenUI5 TypeScript API</title>
+<meta name="description" content="Interface: $StandardListItemSettings — OpenUI5 TypeScript API Reference (1.120.0)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/openui5/1.120/sap.ui.webc.main/sap/ui/webc/main/StandardListItem/interfaces/$StandardListItemSettings.html">
-<meta property="og:title" content="~~Interface: $StandardListItemSettings~~ — OpenUI5 TypeScript API">
-<meta property="og:description" content="~~Interface: $StandardListItemSettings~~ — OpenUI5 TypeScript API Reference (1.120.46)">
+<meta property="og:title" content="Interface: $StandardListItemSettings — OpenUI5 TypeScript API">
+<meta property="og:description" content="Interface: $StandardListItemSettings — OpenUI5 TypeScript API Reference (1.120.0)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/openui5/1.120/sap.ui.webc.main/sap/ui/webc/main/StandardListItem/interfaces/$StandardListItemSettings.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,28 +33,20 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../../index.html">OpenUI5 API</a> › <a href="../../../../../../../sap.ui.webc.main/README.html">sap.ui.webc.main</a> › sap › ui › webc › main › <a href="../../../../../../../sap.ui.webc.main/sap/ui/webc/main/StandardListItem/README.html">StandardListItem</a> › interfaces</nav>
-<p><a href="../../../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.46)</strong></a></p>
+<p><a href="../../../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.0)</strong></a></p>
 <hr>
-<p><a href="../../../../../../../README.html">OpenUI5 TypeScript API (1.120.46)</a> / <a href="../../../../../../README.html">sap.ui.webc.main</a> / <a href="../README.html">sap/ui/webc/main/StandardListItem</a> / $StandardListItemSettings</p>
-<h1><del>Interface: $StandardListItemSettings</del></h1>
+<p><a href="../../../../../../../README.html">OpenUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../../README.html">sap.ui.webc.main</a> / <a href="../README.html">sap/ui/webc/main/StandardListItem</a> / $StandardListItemSettings</p>
+<h1>Interface: $StandardListItemSettings</h1>
 <pre class="sig"><span class="kw">import</span> { $StandardListItemSettings } <span class="kw">from</span> <span class="str">"sap/ui/webc/main/StandardListItem"</span>;</pre>
-<p><strong><code>Experimental</code></strong></p>
-<p>Describes the settings that can be provided to the StandardListItem constructor.</p>
-<h2>Deprecated</h2>
-<p>(since 1.120) - this Web Components consumption model has been discarded. Until an alternative
-Web Components consumption model is available in the future, use sap.m and sap.f controls with similar
-functionality.
- (since 1.92.0) - This control is experimental and its API might change significantly.</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../../../../../../sap.ui.core/sap/ui/core/webc/WebComponent/interfaces/$WebComponentSettings.html"><code>$WebComponentSettings</code></a></li>
 </ul>
 <h2>Properties</h2>
-<h3><del>accessibilityAttributes?</del></h3>
+<h3>accessibilityAttributes?</h3>
 <blockquote>
 <p><code>optional</code> <strong>accessibilityAttributes?</strong>: <code>object</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<p><strong><code>Experimental</code></strong></p>
 <p>An object of strings that defines several additional accessibility attribute values for customization
 depending on the use case.</p>
 <p>It supports the following fields:</p>
@@ -67,50 +59,44 @@ when not all items are present in the DOM. The value of each `aria-posinset` is 
 or equal to 1, and less than or equal to the size of the set when that size is known.
 </code></pre>
 <hr>
-<h3><del>accessibleName?</del></h3>
+<h3>accessibleName?</h3>
 <blockquote>
 <p><code>optional</code> <strong>accessibleName?</strong>: <code>string</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a></p>
 </blockquote>
-<p><strong><code>Experimental</code></strong></p>
 <p>Defines the text alternative of the component. Note: If not provided a default text alternative will
 be set, if present.</p>
 <hr>
-<h3><del>additionalText?</del></h3>
+<h3>additionalText?</h3>
 <blockquote>
 <p><code>optional</code> <strong>additionalText?</strong>: <code>string</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a></p>
 </blockquote>
-<p><strong><code>Experimental</code></strong></p>
 <p>Defines the <code>additionalText</code>, displayed in the end of the list item.</p>
 <hr>
-<h3><del>additionalTextState?</del></h3>
+<h3>additionalTextState?</h3>
 <blockquote>
 <p><code>optional</code> <strong>additionalTextState?</strong>: <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code> | <code>&quot;None&quot;</code> | <a href="../../../../../../../sap.ui.core/sap/ui/core/library/enumerations/ValueState.html"><code>ValueState</code></a> | <code>&quot;Error&quot;</code> | <code>&quot;Information&quot;</code> | <code>&quot;Success&quot;</code> | <code>&quot;Warning&quot;</code></p>
 </blockquote>
-<p><strong><code>Experimental</code></strong></p>
 <p>Defines the state of the <code>additionalText</code>.
  Available options are: <code>&quot;None&quot;</code> (by default), <code>&quot;Success&quot;</code>, <code>&quot;Warning&quot;</code>, <code>&quot;Information&quot;</code> and <code>&quot;Error&quot;</code>.</p>
 <hr>
-<h3><del>deleteButton?</del></h3>
+<h3>deleteButton?</h3>
 <blockquote>
 <p><code>optional</code> <strong>deleteButton?</strong>: <a href="../../library/interfaces/IButton.html"><code>IButton</code></a></p>
 </blockquote>
-<p><strong><code>Experimental</code></strong></p>
 <p>Defines the delete button, displayed in &quot;Delete&quot; mode. <strong>Note:</strong> While the slot allows custom buttons,
 to match design guidelines, please use the <code>sap.ui.webc.main.Button</code> component. <strong>Note:</strong> When the slot
 is not present, a built-in delete button will be displayed.</p>
 <hr>
-<h3><del>description?</del></h3>
+<h3>description?</h3>
 <blockquote>
 <p><code>optional</code> <strong>description?</strong>: <code>string</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a></p>
 </blockquote>
-<p><strong><code>Experimental</code></strong></p>
 <p>Defines the description displayed right under the item text, if such is present.</p>
 <hr>
-<h3><del>detailClick?</del></h3>
+<h3>detailClick?</h3>
 <blockquote>
 <p><code>optional</code> <strong>detailClick?</strong>: (<code>oEvent</code>) =&gt; <code>void</code></p>
 </blockquote>
-<p><strong><code>Experimental</code></strong></p>
 <p>Fired when the user clicks on the detail button when type is <code>Detail</code>.</p>
 <h4>Parameters</h4>
 <h5>oEvent</h5>
@@ -118,73 +104,65 @@ is not present, a built-in delete button will be displayed.</p>
 <h4>Returns</h4>
 <p><code>void</code></p>
 <hr>
-<h3><del>icon?</del></h3>
+<h3>icon?</h3>
 <blockquote>
 <p><code>optional</code> <strong>icon?</strong>: <code>string</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a></p>
 </blockquote>
-<p><strong><code>Experimental</code></strong></p>
 <p>Defines the <code>icon</code> source URI.</p>
 <p> <strong>Note:</strong> SAP-icons font provides numerous built-in icons. To find all the available icons, see the
 demo:sap/m/demokit/iconExplorer/webapp/index.html Icon Explorer.</p>
 <hr>
-<h3><del>iconEnd?</del></h3>
+<h3>iconEnd?</h3>
 <blockquote>
 <p><code>optional</code> <strong>iconEnd?</strong>: <code>boolean</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<p><strong><code>Experimental</code></strong></p>
 <p>Defines whether the <code>icon</code> should be displayed in the beginning of the list item or in the end.</p>
 <p> <strong>Note:</strong> If <code>image</code> is set, the <code>icon</code> would be displayed after the <code>image</code>.</p>
 <hr>
-<h3><del>image?</del></h3>
+<h3>image?</h3>
 <blockquote>
 <p><code>optional</code> <strong>image?</strong>: <code>string</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a></p>
 </blockquote>
-<p><strong><code>Experimental</code></strong></p>
 <p>Defines the <code>image</code> source URI.</p>
 <p> <strong>Note:</strong> The <code>image</code> would be displayed in the beginning of the list item.</p>
 <hr>
-<h3><del>imageContent?</del></h3>
+<h3>imageContent?</h3>
 <blockquote>
 <p><code>optional</code> <strong>imageContent?</strong>: <code>`{${string}}`</code> | <a href="../../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/AggregationBindingInfo.html"><code>AggregationBindingInfo</code></a> | <a href="../../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a>[]</p>
 </blockquote>
-<p><strong><code>Experimental</code></strong></p>
 <p><strong>Note:</strong> While the slot allows option for setting custom avatar, to match the design guidelines, please
 use the <code>sap.ui.webc.main.Avatar</code> with it<code>s default size - S. **Note:** If bigger </code>sap.ui.webc.main.Avatar<code>needs to be used, then the size of the</code>sap.ui.webc.main.StandardListItem` should be customized in order
 to fit.</p>
 <hr>
-<h3><del>navigated?</del></h3>
+<h3>navigated?</h3>
 <blockquote>
 <p><code>optional</code> <strong>navigated?</strong>: <code>boolean</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<p><strong><code>Experimental</code></strong></p>
 <p>The navigated state of the list item. If set to <code>true</code>, a navigation indicator is displayed at the end
 of the list item.</p>
 <hr>
-<h3><del>selected?</del></h3>
+<h3>selected?</h3>
 <blockquote>
 <p><code>optional</code> <strong>selected?</strong>: <code>boolean</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<p><strong><code>Experimental</code></strong></p>
 <p>Defines the selected state of the <code>ListItem</code>.</p>
 <hr>
-<h3><del>text?</del></h3>
+<h3>text?</h3>
 <blockquote>
 <p><code>optional</code> <strong>text?</strong>: <code>string</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a></p>
 </blockquote>
-<p><strong><code>Experimental</code></strong></p>
 <p>Defines the content of the control</p>
 <hr>
-<h3><del>type?</del></h3>
+<h3>type?</h3>
 <blockquote>
 <p><code>optional</code> <strong>type?</strong>: <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code> | <code>&quot;Navigation&quot;</code> | <code>&quot;Active&quot;</code> | <code>&quot;Detail&quot;</code> | <code>&quot;Inactive&quot;</code> | <a href="../../library/enumerations/ListItemType.html"><code>ListItemType</code></a></p>
 </blockquote>
-<p><strong><code>Experimental</code></strong></p>
 <p>Defines the visual indication and behavior of the list items. Available options are <code>Active</code> (by default),
 <code>Inactive</code>, <code>Detail</code> and <code>Navigation</code>.</p>
 <p> <strong>Note:</strong> When set to <code>Active</code> or <code>Navigation</code>, the item will provide visual response upon press and
 hover, while with type <code>Inactive</code> and <code>Detail</code> - will not.</p>
 <hr>
 
-<footer>Generated from <code>@openui5/types@1.120.46</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@openui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

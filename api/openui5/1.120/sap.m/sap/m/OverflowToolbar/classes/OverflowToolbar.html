@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Class: OverflowToolbar — OpenUI5 TypeScript API</title>
-<meta name="description" content="Class: OverflowToolbar — OpenUI5 TypeScript API Reference (1.120.46)">
+<meta name="description" content="Class: OverflowToolbar — OpenUI5 TypeScript API Reference (1.120.0)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/openui5/1.120/sap.m/sap/m/OverflowToolbar/classes/OverflowToolbar.html">
 <meta property="og:title" content="Class: OverflowToolbar — OpenUI5 TypeScript API">
-<meta property="og:description" content="Class: OverflowToolbar — OpenUI5 TypeScript API Reference (1.120.46)">
+<meta property="og:description" content="Class: OverflowToolbar — OpenUI5 TypeScript API Reference (1.120.0)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/openui5/1.120/sap.m/sap/m/OverflowToolbar/classes/OverflowToolbar.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,11 +33,13 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../index.html">OpenUI5 API</a> › <a href="../../../../../sap.m/README.html">sap.m</a> › sap › m › <a href="../../../../../sap.m/sap/m/OverflowToolbar/README.html">OverflowToolbar</a> › classes</nav>
-<p><a href="../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.46)</strong></a></p>
+<p><a href="../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.0)</strong></a></p>
 <hr>
-<p><a href="../../../../../README.html">OpenUI5 TypeScript API (1.120.46)</a> / <a href="../../../../README.html">sap.m</a> / <a href="../README.html">sap/m/OverflowToolbar</a> / OverflowToolbar</p>
+<p><a href="../../../../../README.html">OpenUI5 TypeScript API (1.120.0)</a> / <a href="../../../../README.html">sap.m</a> / <a href="../README.html">sap/m/OverflowToolbar</a> / OverflowToolbar</p>
 <h1>Class: OverflowToolbar</h1>
 <pre class="sig"><span class="kw">import</span> OverflowToolbar <span class="kw">from</span> <span class="str">"sap/m/OverflowToolbar"</span>;</pre>
+<h2>Since</h2>
+<p>1.28</p>
 <p>A container control based on sap.m.Toolbar, that provides overflow when its content does not
 fit in the visible area.</p>
 <p>Overview:</p>
@@ -84,8 +86,6 @@ the available space based on the other one&#39;s size and both change their widt
 to incorrectly distributed space.</p>
 <p>Responsive behavior:</p>
 <p>The height of the toolbar changes on desktop, tablet, and smartphones.</p>
-<h2>Since</h2>
-<p>1.28</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../Toolbar/classes/Toolbar.html"><code>Toolbar</code></a></li>
@@ -187,19 +187,17 @@ See:
 <blockquote>
 <p><strong>closeOverflow</strong>(): <code>void</code></p>
 </blockquote>
-<p>Closes the overflow area. Useful to manually close the overflow after having suppressed automatic closing
-with &quot;closeOverflowOnInteraction=false&quot;.</p>
 <h4>Returns</h4>
 <p><code>void</code></p>
 <h4>Since</h4>
 <p>1.40</p>
+<p>Closes the overflow area. Useful to manually close the overflow after having suppressed automatic closing
+with &quot;closeOverflowOnInteraction=false&quot;.</p>
 <hr>
 <h3>enhanceAccessibilityState()</h3>
 <blockquote>
 <p><strong>enhanceAccessibilityState</strong>(<code>oElement</code>, <code>mAriaProps</code>): <code>void</code></p>
 </blockquote>
-<p>This method is a hook for the RenderManager that gets called during the rendering of child Controls.
-It allows to add, remove and update existing accessibility attributes (ARIA) of those controls.</p>
 <h4>Parameters</h4>
 <h5>oElement</h5>
 <p><a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></p>
@@ -211,6 +209,8 @@ It allows to add, remove and update existing accessibility attributes (ARIA) of 
 <p><code>void</code></p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>This method is a hook for the RenderManager that gets called during the rendering of child Controls.
+It allows to add, remove and update existing accessibility attributes (ARIA) of those controls.</p>
 <h4>Overrides</h4>
 <p><a href="../../Toolbar/classes/Toolbar.html"><code>Toolbar</code></a>.<a href="../../Toolbar/classes/Toolbar.html#enhanceaccessibilitystate"><code>enhanceAccessibilityState</code></a></p>
 <hr>
@@ -218,23 +218,22 @@ It allows to add, remove and update existing accessibility attributes (ARIA) of 
 <blockquote>
 <p><strong>getAsyncMode</strong>(): <code>boolean</code></p>
 </blockquote>
+<h4>Returns</h4>
+<p><code>boolean</code></p>
+<p>Value of property <code>asyncMode</code></p>
+<h4>Since</h4>
+<p>1.67</p>
 <p>Gets current value of property #getAsyncMode asyncMode.</p>
 <p>Defines whether the <code>OverflowToolbar</code> works in async mode.</p>
 <p><strong>Note:</strong> When this property is set to <code>true</code>, the <code>OverflowToolbar</code> makes its layout recalculations
 asynchronously. This way it is not blocking the thread immediately after re-rendering or resizing. However,
 it may lead to flickering, when there is a change in the width of the content of the <code>OverflowToolbar</code>.</p>
 <p>Default value is <code>false</code>.</p>
-<h4>Returns</h4>
-<p><code>boolean</code></p>
-<p>Value of property <code>asyncMode</code></p>
-<h4>Since</h4>
-<p>1.67</p>
 <hr>
 <h3>setAsyncMode()</h3>
 <blockquote>
 <p><strong>setAsyncMode</strong>(<code>bValue</code>): <code>this</code></p>
 </blockquote>
-<p>Sets the <code>asyncMode</code> property.</p>
 <h4>Parameters</h4>
 <h5>bValue</h5>
 <p><code>boolean</code></p>
@@ -243,6 +242,7 @@ it may lead to flickering, when there is a change in the width of the content of
 <p><code>this</code> pointer for chaining</p>
 <h4>Since</h4>
 <p>1.67</p>
+<p>Sets the <code>asyncMode</code> property.</p>
 <hr>
 <h3>extend()</h3>
 <blockquote>
@@ -259,7 +259,7 @@ information contained in <code>oClassInfo</code>.</p>
 <p><code>string</code></p>
 <p>Name of the class being created</p>
 <h5>oClassInfo?</h5>
-<p><a href="../../../../../sap.f/namespaces/sap/type-aliases/ClassInfo.html"><code>ClassInfo</code></a>&lt;<code>T</code>, <code>OverflowToolbar</code>&gt;</p>
+<p><code>ClassInfo</code>&lt;<code>T</code>, <code>OverflowToolbar</code>&gt;</p>
 <p>Object literal with information about the class</p>
 <h5>FNMetaImpl?</h5>
 <p><code>Function</code></p>
@@ -283,6 +283,6 @@ used by this class</p>
 <p><a href="../../Toolbar/classes/Toolbar.html"><code>Toolbar</code></a>.<a href="../../Toolbar/classes/Toolbar.html#getmetadata-1"><code>getMetadata</code></a></p>
 <hr>
 
-<footer>Generated from <code>@openui5/types@1.120.46</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@openui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

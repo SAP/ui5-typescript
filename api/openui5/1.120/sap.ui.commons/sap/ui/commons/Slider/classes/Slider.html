@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>~~Class: Slider~~ — OpenUI5 TypeScript API</title>
-<meta name="description" content="~~Class: Slider~~ — OpenUI5 TypeScript API Reference (1.120.46)">
+<meta name="description" content="~~Class: Slider~~ — OpenUI5 TypeScript API Reference (1.120.0)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/openui5/1.120/sap.ui.commons/sap/ui/commons/Slider/classes/Slider.html">
 <meta property="og:title" content="~~Class: Slider~~ — OpenUI5 TypeScript API">
-<meta property="og:description" content="~~Class: Slider~~ — OpenUI5 TypeScript API Reference (1.120.46)">
+<meta property="og:description" content="~~Class: Slider~~ — OpenUI5 TypeScript API Reference (1.120.0)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/openui5/1.120/sap.ui.commons/sap/ui/commons/Slider/classes/Slider.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,15 +33,15 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../index.html">OpenUI5 API</a> › <a href="../../../../../../sap.ui.commons/README.html">sap.ui.commons</a> › sap › ui › commons › <a href="../../../../../../sap.ui.commons/sap/ui/commons/Slider/README.html">Slider</a> › classes</nav>
-<p><a href="../../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.46)</strong></a></p>
+<p><a href="../../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.0)</strong></a></p>
 <hr>
-<p><a href="../../../../../../README.html">OpenUI5 TypeScript API (1.120.46)</a> / <a href="../../../../../README.html">sap.ui.commons</a> / <a href="../README.html">sap/ui/commons/Slider</a> / Slider</p>
+<p><a href="../../../../../../README.html">OpenUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../README.html">sap.ui.commons</a> / <a href="../README.html">sap/ui/commons/Slider</a> / Slider</p>
 <h1><del>Class: Slider</del></h1>
 <pre class="sig"><span class="kw">import</span> Slider <span class="kw">from</span> <span class="str">"sap/ui/commons/Slider"</span>;</pre>
-<p>The interactive control is displayed either as a horizontal or a vertical line with a pointer and units
-of measurement. Users can move the pointer along the line to change values with graphical support.</p>
 <h2>Deprecated</h2>
 <p>(since 1.38) - replaced by sap.m.Slider</p>
+<p>The interactive control is displayed either as a horizontal or a vertical line with a pointer and units
+of measurement. Users can move the pointer along the line to change values with graphical support.</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></li>
@@ -248,7 +248,6 @@ mouseup.</p>
 <blockquote>
 <p><strong>fireChange</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
-<p>Fires event #event:change change to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/Slider$ChangeEventParameters.html"><code>Slider$ChangeEventParameters</code></a></p>
@@ -258,12 +257,12 @@ mouseup.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:change change to attached listeners.</p>
 <hr>
 <h3><del>fireLiveChange()</del></h3>
 <blockquote>
 <p><strong>fireLiveChange</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
-<p>Fires event #event:liveChange liveChange to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/Slider$LiveChangeEventParameters.html"><code>Slider$LiveChangeEventParameters</code></a></p>
@@ -273,6 +272,7 @@ mouseup.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:liveChange liveChange to attached listeners.</p>
 <hr>
 <h3><del>getAriaDescribedBy()</del></h3>
 <blockquote>
@@ -316,14 +316,14 @@ mouseup.</p>
 <blockquote>
 <p><strong>getHeight</strong>(): <code>string</code></p>
 </blockquote>
-<p>Gets current value of property #getHeight height.</p>
-<p>Height of the vertical slider.</p>
-<p>Default value is <code>&#39;100%&#39;</code>.</p>
 <h4>Returns</h4>
 <p><code>string</code></p>
 <p>Value of property <code>height</code></p>
 <h4>Since</h4>
 <p>1.7.1</p>
+<p>Gets current value of property #getHeight height.</p>
+<p>Height of the vertical slider.</p>
+<p>Default value is <code>&#39;100%&#39;</code>.</p>
 <hr>
 <h3><del>getLabels()</del></h3>
 <blockquote>
@@ -409,14 +409,14 @@ the valid range.</p>
 <blockquote>
 <p><strong>getVertical</strong>(): <code>boolean</code></p>
 </blockquote>
-<p>Gets current value of property #getVertical vertical.</p>
-<p>Orientation of slider</p>
-<p>Default value is <code>false</code>.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>Value of property <code>vertical</code></p>
 <h4>Since</h4>
 <p>1.7.1</p>
+<p>Gets current value of property #getVertical vertical.</p>
+<p>Orientation of slider</p>
+<p>Default value is <code>false</code>.</p>
 <hr>
 <h3><del>getWidth()</del></h3>
 <blockquote>
@@ -509,10 +509,6 @@ the valid range.</p>
 <blockquote>
 <p><strong>setHeight</strong>(<code>sHeight?</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getHeight height.</p>
-<p>Height of the vertical slider.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>&#39;100%&#39;</code>.</p>
 <h4>Parameters</h4>
 <h5>sHeight?</h5>
 <p><code>string</code></p>
@@ -522,6 +518,10 @@ the valid range.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.7.1</p>
+<p>Sets a new value for property #getHeight height.</p>
+<p>Height of the vertical slider.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>&#39;100%&#39;</code>.</p>
 <hr>
 <h3><del>setLabels()</del></h3>
 <blockquote>
@@ -642,10 +642,6 @@ the valid range.</p>
 <blockquote>
 <p><strong>setVertical</strong>(<code>bVertical?</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getVertical vertical.</p>
-<p>Orientation of slider</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>false</code>.</p>
 <h4>Parameters</h4>
 <h5>bVertical?</h5>
 <p><code>boolean</code></p>
@@ -655,6 +651,10 @@ the valid range.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.7.1</p>
+<p>Sets a new value for property #getVertical vertical.</p>
+<p>Orientation of slider</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>false</code>.</p>
 <hr>
 <h3><del>setWidth()</del></h3>
 <blockquote>
@@ -687,7 +687,7 @@ information contained in <code>oClassInfo</code>.</p>
 <p><code>string</code></p>
 <p>Name of the class being created</p>
 <h5>oClassInfo?</h5>
-<p><a href="../../../../../../sap.f/namespaces/sap/type-aliases/ClassInfo.html"><code>ClassInfo</code></a>&lt;<code>T</code>, <code>Slider</code>&gt;</p>
+<p><code>ClassInfo</code>&lt;<code>T</code>, <code>Slider</code>&gt;</p>
 <p>Object literal with information about the class</p>
 <h5>FNMetaImpl?</h5>
 <p><code>Function</code></p>
@@ -711,6 +711,6 @@ used by this class</p>
 <p><a href="../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a>.<a href="../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html#getmetadata-1"><code>getMetadata</code></a></p>
 <hr>
 
-<footer>Generated from <code>@openui5/types@1.120.46</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@openui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

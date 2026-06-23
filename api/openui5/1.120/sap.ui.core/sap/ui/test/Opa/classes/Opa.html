@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Class: Opa — OpenUI5 TypeScript API</title>
-<meta name="description" content="Class: Opa — OpenUI5 TypeScript API Reference (1.120.46)">
+<meta name="description" content="Class: Opa — OpenUI5 TypeScript API Reference (1.120.0)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/openui5/1.120/sap.ui.core/sap/ui/test/Opa/classes/Opa.html">
 <meta property="og:title" content="Class: Opa — OpenUI5 TypeScript API">
-<meta property="og:description" content="Class: Opa — OpenUI5 TypeScript API Reference (1.120.46)">
+<meta property="og:description" content="Class: Opa — OpenUI5 TypeScript API Reference (1.120.0)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/openui5/1.120/sap.ui.core/sap/ui/test/Opa/classes/Opa.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,14 +33,14 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../index.html">OpenUI5 API</a> › <a href="../../../../../../sap.ui.core/README.html">sap.ui.core</a> › sap › ui › test › <a href="../../../../../../sap.ui.core/sap/ui/test/Opa/README.html">Opa</a> › classes</nav>
-<p><a href="../../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.46)</strong></a></p>
+<p><a href="../../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.0)</strong></a></p>
 <hr>
-<p><a href="../../../../../../README.html">OpenUI5 TypeScript API (1.120.46)</a> / <a href="../../../../../README.html">sap.ui.core</a> / <a href="../README.html">sap/ui/test/Opa</a> / Opa</p>
+<p><a href="../../../../../../README.html">OpenUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../README.html">sap.ui.core</a> / <a href="../README.html">sap/ui/test/Opa</a> / Opa</p>
 <h1>Class: Opa</h1>
 <pre class="sig"><span class="kw">import</span> Opa <span class="kw">from</span> <span class="str">"sap/ui/test/Opa"</span>;</pre>
-<p>One Page Acceptance testing.</p>
 <h2>Since</h2>
 <p>1.22</p>
+<p>One Page Acceptance testing.</p>
 <h2>Constructors</h2>
 <h3>Constructor</h3>
 <blockquote>
@@ -115,17 +115,17 @@ it will never be destroyed. That means you can use it to save values you need in
 <hr>
 <h3>iWaitForPromise()</h3>
 <blockquote>
-<p><strong>iWaitForPromise</strong>(<code>oPromise</code>): <a href="../../../../../namespaces/jQuery/type-aliases/Promise.html"><code>Promise</code></a></p>
+<p><strong>iWaitForPromise</strong>(<code>oPromise</code>): <code>Promise</code></p>
 </blockquote>
 <p>Schedule a promise on the OPA queue.The promise will be executed in order with all waitFors - any subsequent
 waitFor will be executed after the promise is done. The promise is not directly chained, but instead
 its result is awaited in a new waitFor statement. This means that any &quot;thenable&quot; should be acceptable.</p>
 <h4>Parameters</h4>
 <h5>oPromise</h5>
-<p><code>Promise</code>&lt;<code>any</code>&gt; | <a href="../../../../../namespaces/jQuery/type-aliases/Promise.html"><code>Promise</code></a>&lt;<code>any</code>&gt;</p>
+<p><code>Promise</code>&lt;<code>any</code>&gt; | <code>Promise</code>&lt;<code>any</code>&gt;</p>
 <p>promise to schedule on the OPA queue</p>
 <h4>Returns</h4>
-<p><a href="../../../../../namespaces/jQuery/type-aliases/Promise.html"><code>Promise</code></a></p>
+<p><code>Promise</code></p>
 <p>promise which is the result of a sap.ui.test.Opa#waitFor</p>
 <hr>
 <h3>waitFor()</h3>
@@ -151,17 +151,25 @@ case, options.errorMessage will contain a detailed error message containing the 
 <hr>
 <h3>emptyQueue()</h3>
 <blockquote>
-<p><code>static</code> <strong>emptyQueue</strong>(): <a href="../../../../../namespaces/jQuery/type-aliases/Promise.html"><code>Promise</code></a></p>
+<p><code>static</code> <strong>emptyQueue</strong>(): <code>Promise</code></p>
 </blockquote>
 <p>Waits until all waitFor calls are done.</p>
 <h4>Returns</h4>
-<p><a href="../../../../../namespaces/jQuery/type-aliases/Promise.html"><code>Promise</code></a></p>
+<p><code>Promise</code></p>
 <p>If the waiting was successful, the promise will be resolved. If not it will be rejected</p>
 <hr>
 <h3>extendConfig()</h3>
 <blockquote>
 <p><code>static</code> <strong>extendConfig</strong>(<code>options</code>): <code>void</code></p>
 </blockquote>
+<h4>Parameters</h4>
+<h5>options</h5>
+<p><a href="../type-aliases/Config.html"><code>Config</code></a></p>
+<p>The values to be added to the existing config</p>
+<h4>Returns</h4>
+<p><code>void</code></p>
+<h4>Since</h4>
+<p>1.48</p>
 <p>Extends and overwrites default values of the sap.ui.test.Opa sap.ui.test.Opa.config field. Sample
 usage:</p>
 <pre><code class="language-javascript">
@@ -187,30 +195,26 @@ usage:</p>
             timeout: 20;
         });
 </code></pre>
-<h4>Parameters</h4>
-<h5>options</h5>
-<p><a href="../type-aliases/Config.html"><code>Config</code></a></p>
-<p>The values to be added to the existing config</p>
-<h4>Returns</h4>
-<p><code>void</code></p>
-<h4>Since</h4>
-<p>1.48</p>
 <hr>
 <h3>getContext()</h3>
 <blockquote>
 <p><code>static</code> <strong>getContext</strong>(): <code>Record</code>&lt;<code>string</code>, <code>any</code>&gt;</p>
 </blockquote>
-<p>Gives access to a singleton object you can save values in. Same as sap.ui.test.Opa#getContext</p>
 <h4>Returns</h4>
 <p><code>Record</code>&lt;<code>string</code>, <code>any</code>&gt;</p>
 <p>the context object</p>
 <h4>Since</h4>
 <p>1.29.0</p>
+<p>Gives access to a singleton object you can save values in. Same as sap.ui.test.Opa#getContext</p>
 <hr>
 <h3>resetConfig()</h3>
 <blockquote>
 <p><code>static</code> <strong>resetConfig</strong>(): <code>void</code></p>
 </blockquote>
+<h4>Returns</h4>
+<p><code>void</code></p>
+<h4>Since</h4>
+<p>1.25</p>
 <p>Reset Opa.config to its default values. All of the global values can be overwritten in an individual
 waitFor call.</p>
 <p>The default values are:
@@ -227,24 +231,20 @@ waitFor call.</p>
     this parameter to slow down OPA when you want to watch your test during development or checking the UI
     of your app. It is not recommended to use this parameter in any automated test executions.
 	 - asyncPolling: false</p>
-<h4>Returns</h4>
-<p><code>void</code></p>
-<h4>Since</h4>
-<p>1.25</p>
 <hr>
 <h3>stopQueue()</h3>
 <blockquote>
 <p><code>static</code> <strong>stopQueue</strong>(): <code>void</code></p>
 </blockquote>
-<p>Clears the queue and stops running tests so that new tests can be run. This means all waitFor statements
-registered by sap.ui.test.Opa#waitFor will not be invoked anymore and the promise returned by
-sap.ui.test.Opa.emptyQueue will be rejected When it is called inside of a check in sap.ui.test.Opa#waitFor
-the success function of this waitFor will not be called.</p>
 <h4>Returns</h4>
 <p><code>void</code></p>
 <h4>Since</h4>
 <p>1.40.1</p>
+<p>Clears the queue and stops running tests so that new tests can be run. This means all waitFor statements
+registered by sap.ui.test.Opa#waitFor will not be invoked anymore and the promise returned by
+sap.ui.test.Opa.emptyQueue will be rejected When it is called inside of a check in sap.ui.test.Opa#waitFor
+the success function of this waitFor will not be called.</p>
 
-<footer>Generated from <code>@openui5/types@1.120.46</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@openui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

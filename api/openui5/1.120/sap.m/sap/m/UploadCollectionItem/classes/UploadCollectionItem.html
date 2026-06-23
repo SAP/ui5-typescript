@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>~~Class: UploadCollectionItem~~ — OpenUI5 TypeScript API</title>
-<meta name="description" content="~~Class: UploadCollectionItem~~ — OpenUI5 TypeScript API Reference (1.120.46)">
+<meta name="description" content="~~Class: UploadCollectionItem~~ — OpenUI5 TypeScript API Reference (1.120.0)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/openui5/1.120/sap.m/sap/m/UploadCollectionItem/classes/UploadCollectionItem.html">
 <meta property="og:title" content="~~Class: UploadCollectionItem~~ — OpenUI5 TypeScript API">
-<meta property="og:description" content="~~Class: UploadCollectionItem~~ — OpenUI5 TypeScript API Reference (1.120.46)">
+<meta property="og:description" content="~~Class: UploadCollectionItem~~ — OpenUI5 TypeScript API Reference (1.120.0)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/openui5/1.120/sap.m/sap/m/UploadCollectionItem/classes/UploadCollectionItem.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,16 +33,16 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../index.html">OpenUI5 API</a> › <a href="../../../../../sap.m/README.html">sap.m</a> › sap › m › <a href="../../../../../sap.m/sap/m/UploadCollectionItem/README.html">UploadCollectionItem</a> › classes</nav>
-<p><a href="../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.46)</strong></a></p>
+<p><a href="../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.0)</strong></a></p>
 <hr>
-<p><a href="../../../../../README.html">OpenUI5 TypeScript API (1.120.46)</a> / <a href="../../../../README.html">sap.m</a> / <a href="../README.html">sap/m/UploadCollectionItem</a> / UploadCollectionItem</p>
+<p><a href="../../../../../README.html">OpenUI5 TypeScript API (1.120.0)</a> / <a href="../../../../README.html">sap.m</a> / <a href="../README.html">sap/m/UploadCollectionItem</a> / UploadCollectionItem</p>
 <h1><del>Class: UploadCollectionItem</del></h1>
 <pre class="sig"><span class="kw">import</span> UploadCollectionItem <span class="kw">from</span> <span class="str">"sap/m/UploadCollectionItem"</span>;</pre>
-<p>Defines a structure of the element of the &#39;items&#39; aggregation.</p>
 <h2>Since</h2>
 <p>1.26.0</p>
 <h2>Deprecated</h2>
 <p>(since 1.88)</p>
+<p>Defines a structure of the element of the &#39;items&#39; aggregation.</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../../../../sap.ui.core/sap/ui/core/Element/classes/UI5Element.html"><code>UI5Element</code></a></li>
@@ -88,7 +88,6 @@ of the syntax of the settings object.</p>
 <blockquote>
 <p><strong>addAttribute</strong>(<code>oAttribute</code>): <code>this</code></p>
 </blockquote>
-<p>Adds some attribute to the aggregation #getAttributes attributes.</p>
 <h4>Parameters</h4>
 <h5>oAttribute</h5>
 <p><a href="../../ObjectAttribute/classes/ObjectAttribute.html"><code>ObjectAttribute</code></a></p>
@@ -98,12 +97,12 @@ of the syntax of the settings object.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.30.0</p>
+<p>Adds some attribute to the aggregation #getAttributes attributes.</p>
 <hr>
 <h3><del>addMarker()</del></h3>
 <blockquote>
 <p><strong>addMarker</strong>(<code>oMarker</code>): <code>this</code></p>
 </blockquote>
-<p>Adds some marker to the aggregation #getMarkers markers.</p>
 <h4>Parameters</h4>
 <h5>oMarker</h5>
 <p><a href="../../ObjectMarker/classes/ObjectMarker.html"><code>ObjectMarker</code></a></p>
@@ -113,12 +112,12 @@ of the syntax of the settings object.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.40.0</p>
+<p>Adds some marker to the aggregation #getMarkers markers.</p>
 <hr>
 <h3><del>addStatus()</del></h3>
 <blockquote>
 <p><strong>addStatus</strong>(<code>oStatus</code>): <code>this</code></p>
 </blockquote>
-<p>Adds some status to the aggregation #getStatuses statuses.</p>
 <h4>Parameters</h4>
 <h5>oStatus</h5>
 <p><a href="../../ObjectStatus/classes/ObjectStatus.html"><code>ObjectStatus</code></a></p>
@@ -128,18 +127,13 @@ of the syntax of the settings object.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.30.0</p>
+<p>Adds some status to the aggregation #getStatuses statuses.</p>
 <hr>
 <h3><del>attachDeletePress()</del></h3>
 <h4>Call Signature</h4>
 <blockquote>
 <p><strong>attachDeletePress</strong>(<code>oData</code>, <code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
-<p>Attaches event handler <code>fnFunction</code> to the #event:deletePress deletePress event of this <code>sap.m.UploadCollectionItem</code>.</p>
-<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
-otherwise it will be bound to this <code>sap.m.UploadCollectionItem</code> itself.</p>
-<p>When a deletePress event handler is attached to the item and the user presses the delete button, this
-event is triggered. If this event is triggered, it overwrites the default delete behavior of UploadCollection
-and the fileDeleted event of UploadCollection is not triggered.</p>
 <h5>Parameters</h5>
 <h6>oData</h6>
 <p><code>object</code></p>
@@ -156,16 +150,16 @@ object when firing the event</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Since</h5>
 <p>1.50.0</p>
-<h4>Call Signature</h4>
-<blockquote>
-<p><strong>attachDeletePress</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
-</blockquote>
 <p>Attaches event handler <code>fnFunction</code> to the #event:deletePress deletePress event of this <code>sap.m.UploadCollectionItem</code>.</p>
 <p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
 otherwise it will be bound to this <code>sap.m.UploadCollectionItem</code> itself.</p>
 <p>When a deletePress event handler is attached to the item and the user presses the delete button, this
 event is triggered. If this event is triggered, it overwrites the default delete behavior of UploadCollection
 and the fileDeleted event of UploadCollection is not triggered.</p>
+<h4>Call Signature</h4>
+<blockquote>
+<p><strong>attachDeletePress</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
+</blockquote>
 <h5>Parameters</h5>
 <h6>fnFunction</h6>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -178,17 +172,18 @@ and the fileDeleted event of UploadCollection is not triggered.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Since</h5>
 <p>1.50.0</p>
+<p>Attaches event handler <code>fnFunction</code> to the #event:deletePress deletePress event of this <code>sap.m.UploadCollectionItem</code>.</p>
+<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
+otherwise it will be bound to this <code>sap.m.UploadCollectionItem</code> itself.</p>
+<p>When a deletePress event handler is attached to the item and the user presses the delete button, this
+event is triggered. If this event is triggered, it overwrites the default delete behavior of UploadCollection
+and the fileDeleted event of UploadCollection is not triggered.</p>
 <hr>
 <h3><del>attachPress()</del></h3>
 <h4>Call Signature</h4>
 <blockquote>
 <p><strong>attachPress</strong>(<code>oData</code>, <code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
-<p>Attaches event handler <code>fnFunction</code> to the #event:press press event of this <code>sap.m.UploadCollectionItem</code>.</p>
-<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
-otherwise it will be bound to this <code>sap.m.UploadCollectionItem</code> itself.</p>
-<p>This event is triggered when the user presses the filename link. If this event is provided, it overwrites
-the default behavior of opening the file.</p>
 <h5>Parameters</h5>
 <h6>oData</h6>
 <p><code>object</code></p>
@@ -205,15 +200,15 @@ object when firing the event</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Since</h5>
 <p>1.50.0</p>
-<h4>Call Signature</h4>
-<blockquote>
-<p><strong>attachPress</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
-</blockquote>
 <p>Attaches event handler <code>fnFunction</code> to the #event:press press event of this <code>sap.m.UploadCollectionItem</code>.</p>
 <p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
 otherwise it will be bound to this <code>sap.m.UploadCollectionItem</code> itself.</p>
 <p>This event is triggered when the user presses the filename link. If this event is provided, it overwrites
 the default behavior of opening the file.</p>
+<h4>Call Signature</h4>
+<blockquote>
+<p><strong>attachPress</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
+</blockquote>
 <h5>Parameters</h5>
 <h6>fnFunction</h6>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -226,14 +221,16 @@ the default behavior of opening the file.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Since</h5>
 <p>1.50.0</p>
+<p>Attaches event handler <code>fnFunction</code> to the #event:press press event of this <code>sap.m.UploadCollectionItem</code>.</p>
+<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
+otherwise it will be bound to this <code>sap.m.UploadCollectionItem</code> itself.</p>
+<p>This event is triggered when the user presses the filename link. If this event is provided, it overwrites
+the default behavior of opening the file.</p>
 <hr>
 <h3><del>bindAttributes()</del></h3>
 <blockquote>
 <p><strong>bindAttributes</strong>(<code>oBindingInfo</code>): <code>this</code></p>
 </blockquote>
-<p>Binds aggregation #getAttributes attributes to model data.</p>
-<p>See sap.ui.base.ManagedObject#bindAggregation ManagedObject.bindAggregation for a detailed description
-of the possible properties of <code>oBindingInfo</code>.</p>
 <h4>Parameters</h4>
 <h5>oBindingInfo</h5>
 <p><a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/AggregationBindingInfo.html"><code>AggregationBindingInfo</code></a></p>
@@ -243,14 +240,14 @@ of the possible properties of <code>oBindingInfo</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.30.0</p>
+<p>Binds aggregation #getAttributes attributes to model data.</p>
+<p>See sap.ui.base.ManagedObject#bindAggregation ManagedObject.bindAggregation for a detailed description
+of the possible properties of <code>oBindingInfo</code>.</p>
 <hr>
 <h3><del>bindMarkers()</del></h3>
 <blockquote>
 <p><strong>bindMarkers</strong>(<code>oBindingInfo</code>): <code>this</code></p>
 </blockquote>
-<p>Binds aggregation #getMarkers markers to model data.</p>
-<p>See sap.ui.base.ManagedObject#bindAggregation ManagedObject.bindAggregation for a detailed description
-of the possible properties of <code>oBindingInfo</code>.</p>
 <h4>Parameters</h4>
 <h5>oBindingInfo</h5>
 <p><a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/AggregationBindingInfo.html"><code>AggregationBindingInfo</code></a></p>
@@ -260,14 +257,14 @@ of the possible properties of <code>oBindingInfo</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.40.0</p>
+<p>Binds aggregation #getMarkers markers to model data.</p>
+<p>See sap.ui.base.ManagedObject#bindAggregation ManagedObject.bindAggregation for a detailed description
+of the possible properties of <code>oBindingInfo</code>.</p>
 <hr>
 <h3><del>bindStatuses()</del></h3>
 <blockquote>
 <p><strong>bindStatuses</strong>(<code>oBindingInfo</code>): <code>this</code></p>
 </blockquote>
-<p>Binds aggregation #getStatuses statuses to model data.</p>
-<p>See sap.ui.base.ManagedObject#bindAggregation ManagedObject.bindAggregation for a detailed description
-of the possible properties of <code>oBindingInfo</code>.</p>
 <h4>Parameters</h4>
 <h5>oBindingInfo</h5>
 <p><a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/AggregationBindingInfo.html"><code>AggregationBindingInfo</code></a></p>
@@ -277,46 +274,47 @@ of the possible properties of <code>oBindingInfo</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.30.0</p>
+<p>Binds aggregation #getStatuses statuses to model data.</p>
+<p>See sap.ui.base.ManagedObject#bindAggregation ManagedObject.bindAggregation for a detailed description
+of the possible properties of <code>oBindingInfo</code>.</p>
 <hr>
 <h3><del>destroyAttributes()</del></h3>
 <blockquote>
 <p><strong>destroyAttributes</strong>(): <code>this</code></p>
 </blockquote>
-<p>Destroys all the attributes in the aggregation #getAttributes attributes.</p>
 <h4>Returns</h4>
 <p><code>this</code></p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.30.0</p>
+<p>Destroys all the attributes in the aggregation #getAttributes attributes.</p>
 <hr>
 <h3><del>destroyMarkers()</del></h3>
 <blockquote>
 <p><strong>destroyMarkers</strong>(): <code>this</code></p>
 </blockquote>
-<p>Destroys all the markers in the aggregation #getMarkers markers.</p>
 <h4>Returns</h4>
 <p><code>this</code></p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.40.0</p>
+<p>Destroys all the markers in the aggregation #getMarkers markers.</p>
 <hr>
 <h3><del>destroyStatuses()</del></h3>
 <blockquote>
 <p><strong>destroyStatuses</strong>(): <code>this</code></p>
 </blockquote>
-<p>Destroys all the statuses in the aggregation #getStatuses statuses.</p>
 <h4>Returns</h4>
 <p><code>this</code></p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.30.0</p>
+<p>Destroys all the statuses in the aggregation #getStatuses statuses.</p>
 <hr>
 <h3><del>detachDeletePress()</del></h3>
 <blockquote>
 <p><strong>detachDeletePress</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
-<p>Detaches event handler <code>fnFunction</code> from the #event:deletePress deletePress event of this <code>sap.m.UploadCollectionItem</code>.</p>
-<p>The passed function and listener object must match the ones used for event registration.</p>
 <h4>Parameters</h4>
 <h5>fnFunction</h5>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -329,13 +327,13 @@ of the possible properties of <code>oBindingInfo</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.50.0</p>
+<p>Detaches event handler <code>fnFunction</code> from the #event:deletePress deletePress event of this <code>sap.m.UploadCollectionItem</code>.</p>
+<p>The passed function and listener object must match the ones used for event registration.</p>
 <hr>
 <h3><del>detachPress()</del></h3>
 <blockquote>
 <p><strong>detachPress</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
-<p>Detaches event handler <code>fnFunction</code> from the #event:press press event of this <code>sap.m.UploadCollectionItem</code>.</p>
-<p>The passed function and listener object must match the ones used for event registration.</p>
 <h4>Parameters</h4>
 <h5>fnFunction</h5>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -348,13 +346,13 @@ of the possible properties of <code>oBindingInfo</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.50.0</p>
+<p>Detaches event handler <code>fnFunction</code> from the #event:press press event of this <code>sap.m.UploadCollectionItem</code>.</p>
+<p>The passed function and listener object must match the ones used for event registration.</p>
 <hr>
 <h3><del>download()</del></h3>
 <blockquote>
 <p><strong>download</strong>(<code>askForLocation</code>): <code>boolean</code></p>
 </blockquote>
-<p>Downloads the item. The sap.ui.core.util.File method is used here. For further details on this method,
-see {sap.ui.core.util.File.save}.</p>
 <h4>Parameters</h4>
 <h5>askForLocation</h5>
 <p><code>boolean</code></p>
@@ -364,12 +362,13 @@ see {sap.ui.core.util.File.save}.</p>
 <p><code>true</code> if download is possible, otherwise <code>false</code></p>
 <h4>Since</h4>
 <p>1.36.0</p>
+<p>Downloads the item. The sap.ui.core.util.File method is used here. For further details on this method,
+see {sap.ui.core.util.File.save}.</p>
 <hr>
 <h3><del>fireDeletePress()</del></h3>
 <blockquote>
 <p><strong>fireDeletePress</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
-<p>Fires event #event:deletePress deletePress to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><code>object</code></p>
@@ -381,12 +380,12 @@ see {sap.ui.core.util.File.save}.</p>
 <p>1.50.0</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:deletePress deletePress to attached listeners.</p>
 <hr>
 <h3><del>firePress()</del></h3>
 <blockquote>
 <p><strong>firePress</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
-<p>Fires event #event:press press to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><code>object</code></p>
@@ -398,23 +397,28 @@ see {sap.ui.core.util.File.save}.</p>
 <p>1.50.0</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:press press to attached listeners.</p>
 <hr>
 <h3><del>getAriaLabelForPicture()</del></h3>
 <blockquote>
 <p><strong>getAriaLabelForPicture</strong>(): <code>string</code></p>
 </blockquote>
-<p>Gets current value of property #getAriaLabelForPicture ariaLabelForPicture.</p>
-<p>Aria label for the icon (or for the image).</p>
 <h4>Returns</h4>
 <p><code>string</code></p>
 <p>Value of property <code>ariaLabelForPicture</code></p>
 <h4>Since</h4>
 <p>1.30.0</p>
+<p>Gets current value of property #getAriaLabelForPicture ariaLabelForPicture.</p>
+<p>Aria label for the icon (or for the image).</p>
 <hr>
 <h3><del>getAttributes()</del></h3>
 <blockquote>
 <p><strong>getAttributes</strong>(): <a href="../../ObjectAttribute/classes/ObjectAttribute.html"><code>ObjectAttribute</code></a>[]</p>
 </blockquote>
+<h4>Returns</h4>
+<p><a href="../../ObjectAttribute/classes/ObjectAttribute.html"><code>ObjectAttribute</code></a>[]</p>
+<h4>Since</h4>
+<p>1.30.0</p>
 <p>Gets content of aggregation #getAttributes attributes.</p>
 <p>Attributes of an uploaded item, for example, &#39;Uploaded By&#39;, &#39;Uploaded On&#39;, &#39;File Size&#39; attributes are
 displayed after an item has been uploaded. Additionally, the Active property of sap.m.ObjectAttribute
@@ -424,17 +428,11 @@ to this attribute, two attributes with the same title are displayed as these pro
 as an attribute. Example: An application passes the property ‘contributor’ with the value ‘A’ and the
 aggregation attributes ‘contributor’: ‘B’. As a result, the attributes ‘contributor’:’A’ and ‘contributor’:’B’
 are displayed. To make sure the title does not appear twice, check if one of the properties is filled.</p>
-<h4>Returns</h4>
-<p><a href="../../ObjectAttribute/classes/ObjectAttribute.html"><code>ObjectAttribute</code></a>[]</p>
-<h4>Since</h4>
-<p>1.30.0</p>
 <hr>
 <h3><del>getContributor()</del></h3>
 <blockquote>
 <p><strong>getContributor</strong>(): <code>string</code></p>
 </blockquote>
-<p>Gets current value of property #getContributor contributor.</p>
-<p>Specifies the name of the user who uploaded the file.</p>
 <h4>Returns</h4>
 <p><code>string</code></p>
 <p>Value of property <code>contributor</code></p>
@@ -442,6 +440,8 @@ are displayed. To make sure the title does not appear twice, check if one of the
 <p>(since 1.30) - This property is deprecated; use the aggregation attributes instead. However,
 if the property is filled, it is displayed as an attribute. To make sure the title does not appear twice,
 do not use the property.</p>
+<p>Gets current value of property #getContributor contributor.</p>
+<p>Specifies the name of the user who uploaded the file.</p>
 <hr>
 <h3><del>getDocumentId()</del></h3>
 <blockquote>
@@ -491,36 +491,36 @@ can be used. If the value is false, the edit function is not available.</p>
 <blockquote>
 <p><strong>getFileSize</strong>(): <code>number</code></p>
 </blockquote>
-<p>Gets current value of property #getFileSize fileSize.</p>
-<p>Specifies the size of the uploaded file (in megabytes).</p>
 <h4>Returns</h4>
 <p><code>number</code></p>
 <p>Value of property <code>fileSize</code></p>
 <h4>Deprecated</h4>
 <p>(since 1.30) - This property is deprecated; use the aggregation attributes instead.</p>
+<p>Gets current value of property #getFileSize fileSize.</p>
+<p>Specifies the size of the uploaded file (in megabytes).</p>
 <hr>
 <h3><del>getFileUploader()</del></h3>
 <blockquote>
 <p><strong>getFileUploader</strong>(): <code>string</code></p>
 </blockquote>
-<p>ID of the element which is the current target of the association #getFileUploader fileUploader,
-or <code>null</code>.</p>
 <h4>Returns</h4>
 <p><code>string</code></p>
 <h4>Since</h4>
 <p>1.30.0</p>
+<p>ID of the element which is the current target of the association #getFileUploader fileUploader,
+or <code>null</code>.</p>
 <hr>
 <h3><del>getMarkers()</del></h3>
 <blockquote>
 <p><strong>getMarkers</strong>(): <a href="../../ObjectMarker/classes/ObjectMarker.html"><code>ObjectMarker</code></a>[]</p>
 </blockquote>
-<p>Gets content of aggregation #getMarkers markers.</p>
-<p>Markers of an uploaded item Markers will be displayed after an item has been uploaded But not in Edit
-mode</p>
 <h4>Returns</h4>
 <p><a href="../../ObjectMarker/classes/ObjectMarker.html"><code>ObjectMarker</code></a>[]</p>
 <h4>Since</h4>
 <p>1.40.0</p>
+<p>Gets content of aggregation #getMarkers markers.</p>
+<p>Markers of an uploaded item Markers will be displayed after an item has been uploaded But not in Edit
+mode</p>
 <hr>
 <h3><del>getMimeType()</del></h3>
 <blockquote>
@@ -536,25 +536,25 @@ mode</p>
 <blockquote>
 <p><strong>getSelected</strong>(): <code>boolean</code></p>
 </blockquote>
-<p>Gets current value of property #getSelected selected.</p>
-<p>Defines the selected state of the UploadCollectionItem.</p>
-<p>Default value is <code>false</code>.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>Value of property <code>selected</code></p>
 <h4>Since</h4>
 <p>1.34.0</p>
+<p>Gets current value of property #getSelected selected.</p>
+<p>Defines the selected state of the UploadCollectionItem.</p>
+<p>Default value is <code>false</code>.</p>
 <hr>
 <h3><del>getStatuses()</del></h3>
 <blockquote>
 <p><strong>getStatuses</strong>(): <a href="../../ObjectStatus/classes/ObjectStatus.html"><code>ObjectStatus</code></a>[]</p>
 </blockquote>
-<p>Gets content of aggregation #getStatuses statuses.</p>
-<p>Statuses of an uploaded item Statuses will be displayed after an item has been uploaded</p>
 <h4>Returns</h4>
 <p><a href="../../ObjectStatus/classes/ObjectStatus.html"><code>ObjectStatus</code></a>[]</p>
 <h4>Since</h4>
 <p>1.30.0</p>
+<p>Gets content of aggregation #getStatuses statuses.</p>
+<p>Statuses of an uploaded item Statuses will be displayed after an item has been uploaded</p>
 <hr>
 <h3><del>getThumbnailUrl()</del></h3>
 <blockquote>
@@ -570,13 +570,13 @@ mode</p>
 <blockquote>
 <p><strong>getUploadedDate</strong>(): <code>string</code></p>
 </blockquote>
-<p>Gets current value of property #getUploadedDate uploadedDate.</p>
-<p>Specifies the date on which the file was uploaded. The application has to define the date format.</p>
 <h4>Returns</h4>
 <p><code>string</code></p>
 <p>Value of property <code>uploadedDate</code></p>
 <h4>Deprecated</h4>
 <p>(since 1.30) - This property is deprecated; use the aggregation attributes instead.</p>
+<p>Gets current value of property #getUploadedDate uploadedDate.</p>
+<p>Specifies the date on which the file was uploaded. The application has to define the date format.</p>
 <hr>
 <h3><del>getUrl()</del></h3>
 <blockquote>
@@ -617,8 +617,6 @@ Edit button is not visible.</p>
 <blockquote>
 <p><strong>indexOfAttribute</strong>(<code>oAttribute</code>): <code>number</code></p>
 </blockquote>
-<p>Checks for the provided <code>sap.m.ObjectAttribute</code> in the aggregation #getAttributes attributes.
-and returns its index if found or -1 otherwise.</p>
 <h4>Parameters</h4>
 <h5>oAttribute</h5>
 <p><a href="../../ObjectAttribute/classes/ObjectAttribute.html"><code>ObjectAttribute</code></a></p>
@@ -628,13 +626,13 @@ and returns its index if found or -1 otherwise.</p>
 <p>The index of the provided control in the aggregation if found, or -1 otherwise</p>
 <h4>Since</h4>
 <p>1.30.0</p>
+<p>Checks for the provided <code>sap.m.ObjectAttribute</code> in the aggregation #getAttributes attributes.
+and returns its index if found or -1 otherwise.</p>
 <hr>
 <h3><del>indexOfMarker()</del></h3>
 <blockquote>
 <p><strong>indexOfMarker</strong>(<code>oMarker</code>): <code>number</code></p>
 </blockquote>
-<p>Checks for the provided <code>sap.m.ObjectMarker</code> in the aggregation #getMarkers markers. and returns
-its index if found or -1 otherwise.</p>
 <h4>Parameters</h4>
 <h5>oMarker</h5>
 <p><a href="../../ObjectMarker/classes/ObjectMarker.html"><code>ObjectMarker</code></a></p>
@@ -644,13 +642,13 @@ its index if found or -1 otherwise.</p>
 <p>The index of the provided control in the aggregation if found, or -1 otherwise</p>
 <h4>Since</h4>
 <p>1.40.0</p>
+<p>Checks for the provided <code>sap.m.ObjectMarker</code> in the aggregation #getMarkers markers. and returns
+its index if found or -1 otherwise.</p>
 <hr>
 <h3><del>indexOfStatus()</del></h3>
 <blockquote>
 <p><strong>indexOfStatus</strong>(<code>oStatus</code>): <code>number</code></p>
 </blockquote>
-<p>Checks for the provided <code>sap.m.ObjectStatus</code> in the aggregation #getStatuses statuses. and returns
-its index if found or -1 otherwise.</p>
 <h4>Parameters</h4>
 <h5>oStatus</h5>
 <p><a href="../../ObjectStatus/classes/ObjectStatus.html"><code>ObjectStatus</code></a></p>
@@ -660,12 +658,13 @@ its index if found or -1 otherwise.</p>
 <p>The index of the provided control in the aggregation if found, or -1 otherwise</p>
 <h4>Since</h4>
 <p>1.30.0</p>
+<p>Checks for the provided <code>sap.m.ObjectStatus</code> in the aggregation #getStatuses statuses. and returns
+its index if found or -1 otherwise.</p>
 <hr>
 <h3><del>insertAttribute()</del></h3>
 <blockquote>
 <p><strong>insertAttribute</strong>(<code>oAttribute</code>, <code>iIndex</code>): <code>this</code></p>
 </blockquote>
-<p>Inserts a attribute into the aggregation #getAttributes attributes.</p>
 <h4>Parameters</h4>
 <h5>oAttribute</h5>
 <p><a href="../../ObjectAttribute/classes/ObjectAttribute.html"><code>ObjectAttribute</code></a></p>
@@ -680,12 +679,12 @@ is inserted at the last position</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.30.0</p>
+<p>Inserts a attribute into the aggregation #getAttributes attributes.</p>
 <hr>
 <h3><del>insertMarker()</del></h3>
 <blockquote>
 <p><strong>insertMarker</strong>(<code>oMarker</code>, <code>iIndex</code>): <code>this</code></p>
 </blockquote>
-<p>Inserts a marker into the aggregation #getMarkers markers.</p>
 <h4>Parameters</h4>
 <h5>oMarker</h5>
 <p><a href="../../ObjectMarker/classes/ObjectMarker.html"><code>ObjectMarker</code></a></p>
@@ -700,12 +699,12 @@ at the last position</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.40.0</p>
+<p>Inserts a marker into the aggregation #getMarkers markers.</p>
 <hr>
 <h3><del>insertStatus()</del></h3>
 <blockquote>
 <p><strong>insertStatus</strong>(<code>oStatus</code>, <code>iIndex</code>): <code>this</code></p>
 </blockquote>
-<p>Inserts a status into the aggregation #getStatuses statuses.</p>
 <h4>Parameters</h4>
 <h5>oStatus</h5>
 <p><a href="../../ObjectStatus/classes/ObjectStatus.html"><code>ObjectStatus</code></a></p>
@@ -720,48 +719,48 @@ at the last position</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.30.0</p>
+<p>Inserts a status into the aggregation #getStatuses statuses.</p>
 <hr>
 <h3><del>removeAllAttributes()</del></h3>
 <blockquote>
 <p><strong>removeAllAttributes</strong>(): <a href="../../ObjectAttribute/classes/ObjectAttribute.html"><code>ObjectAttribute</code></a>[]</p>
 </blockquote>
-<p>Removes all the controls from the aggregation #getAttributes attributes.</p>
-<p>Additionally, it unregisters them from the hosting UIArea.</p>
 <h4>Returns</h4>
 <p><a href="../../ObjectAttribute/classes/ObjectAttribute.html"><code>ObjectAttribute</code></a>[]</p>
 <p>An array of the removed elements (might be empty)</p>
 <h4>Since</h4>
 <p>1.30.0</p>
+<p>Removes all the controls from the aggregation #getAttributes attributes.</p>
+<p>Additionally, it unregisters them from the hosting UIArea.</p>
 <hr>
 <h3><del>removeAllMarkers()</del></h3>
 <blockquote>
 <p><strong>removeAllMarkers</strong>(): <a href="../../ObjectMarker/classes/ObjectMarker.html"><code>ObjectMarker</code></a>[]</p>
 </blockquote>
-<p>Removes all the controls from the aggregation #getMarkers markers.</p>
-<p>Additionally, it unregisters them from the hosting UIArea.</p>
 <h4>Returns</h4>
 <p><a href="../../ObjectMarker/classes/ObjectMarker.html"><code>ObjectMarker</code></a>[]</p>
 <p>An array of the removed elements (might be empty)</p>
 <h4>Since</h4>
 <p>1.40.0</p>
+<p>Removes all the controls from the aggregation #getMarkers markers.</p>
+<p>Additionally, it unregisters them from the hosting UIArea.</p>
 <hr>
 <h3><del>removeAllStatuses()</del></h3>
 <blockquote>
 <p><strong>removeAllStatuses</strong>(): <a href="../../ObjectStatus/classes/ObjectStatus.html"><code>ObjectStatus</code></a>[]</p>
 </blockquote>
-<p>Removes all the controls from the aggregation #getStatuses statuses.</p>
-<p>Additionally, it unregisters them from the hosting UIArea.</p>
 <h4>Returns</h4>
 <p><a href="../../ObjectStatus/classes/ObjectStatus.html"><code>ObjectStatus</code></a>[]</p>
 <p>An array of the removed elements (might be empty)</p>
 <h4>Since</h4>
 <p>1.30.0</p>
+<p>Removes all the controls from the aggregation #getStatuses statuses.</p>
+<p>Additionally, it unregisters them from the hosting UIArea.</p>
 <hr>
 <h3><del>removeAttribute()</del></h3>
 <blockquote>
 <p><strong>removeAttribute</strong>(<code>vAttribute</code>): <a href="../../ObjectAttribute/classes/ObjectAttribute.html"><code>ObjectAttribute</code></a></p>
 </blockquote>
-<p>Removes a attribute from the aggregation #getAttributes attributes.</p>
 <h4>Parameters</h4>
 <h5>vAttribute</h5>
 <p><code>string</code> | <code>number</code> | <a href="../../ObjectAttribute/classes/ObjectAttribute.html"><code>ObjectAttribute</code></a></p>
@@ -771,12 +770,12 @@ at the last position</p>
 <p>The removed attribute or <code>null</code></p>
 <h4>Since</h4>
 <p>1.30.0</p>
+<p>Removes a attribute from the aggregation #getAttributes attributes.</p>
 <hr>
 <h3><del>removeMarker()</del></h3>
 <blockquote>
 <p><strong>removeMarker</strong>(<code>vMarker</code>): <a href="../../ObjectMarker/classes/ObjectMarker.html"><code>ObjectMarker</code></a></p>
 </blockquote>
-<p>Removes a marker from the aggregation #getMarkers markers.</p>
 <h4>Parameters</h4>
 <h5>vMarker</h5>
 <p><code>string</code> | <code>number</code> | <a href="../../ObjectMarker/classes/ObjectMarker.html"><code>ObjectMarker</code></a></p>
@@ -786,12 +785,12 @@ at the last position</p>
 <p>The removed marker or <code>null</code></p>
 <h4>Since</h4>
 <p>1.40.0</p>
+<p>Removes a marker from the aggregation #getMarkers markers.</p>
 <hr>
 <h3><del>removeStatus()</del></h3>
 <blockquote>
 <p><strong>removeStatus</strong>(<code>vStatus</code>): <a href="../../ObjectStatus/classes/ObjectStatus.html"><code>ObjectStatus</code></a></p>
 </blockquote>
-<p>Removes a status from the aggregation #getStatuses statuses.</p>
 <h4>Parameters</h4>
 <h5>vStatus</h5>
 <p><code>string</code> | <code>number</code> | <a href="../../ObjectStatus/classes/ObjectStatus.html"><code>ObjectStatus</code></a></p>
@@ -801,14 +800,12 @@ at the last position</p>
 <p>The removed status or <code>null</code></p>
 <h4>Since</h4>
 <p>1.30.0</p>
+<p>Removes a status from the aggregation #getStatuses statuses.</p>
 <hr>
 <h3><del>setAriaLabelForPicture()</del></h3>
 <blockquote>
 <p><strong>setAriaLabelForPicture</strong>(<code>sAriaLabelForPicture?</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getAriaLabelForPicture ariaLabelForPicture.</p>
-<p>Aria label for the icon (or for the image).</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <h4>Parameters</h4>
 <h5>sAriaLabelForPicture?</h5>
 <p><code>string</code></p>
@@ -818,14 +815,14 @@ at the last position</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.30.0</p>
+<p>Sets a new value for property #getAriaLabelForPicture ariaLabelForPicture.</p>
+<p>Aria label for the icon (or for the image).</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <hr>
 <h3><del>setContributor()</del></h3>
 <blockquote>
 <p><strong>setContributor</strong>(<code>sContributor?</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getContributor contributor.</p>
-<p>Specifies the name of the user who uploaded the file.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <h4>Parameters</h4>
 <h5>sContributor?</h5>
 <p><code>string</code></p>
@@ -837,6 +834,9 @@ at the last position</p>
 <p>(since 1.30) - This property is deprecated; use the aggregation attributes instead. However,
 if the property is filled, it is displayed as an attribute. To make sure the title does not appear twice,
 do not use the property.</p>
+<p>Sets a new value for property #getContributor contributor.</p>
+<p>Specifies the name of the user who uploaded the file.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <hr>
 <h3><del>setDocumentId()</del></h3>
 <blockquote>
@@ -906,9 +906,6 @@ can be used. If the value is false, the edit function is not available.</p>
 <blockquote>
 <p><strong>setFileSize</strong>(<code>fFileSize?</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getFileSize fileSize.</p>
-<p>Specifies the size of the uploaded file (in megabytes).</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <h4>Parameters</h4>
 <h5>fFileSize?</h5>
 <p><code>number</code></p>
@@ -918,12 +915,14 @@ can be used. If the value is false, the edit function is not available.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Deprecated</h4>
 <p>(since 1.30) - This property is deprecated; use the aggregation attributes instead.</p>
+<p>Sets a new value for property #getFileSize fileSize.</p>
+<p>Specifies the size of the uploaded file (in megabytes).</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <hr>
 <h3><del>setFileUploader()</del></h3>
 <blockquote>
 <p><strong>setFileUploader</strong>(<code>oFileUploader</code>): <code>this</code></p>
 </blockquote>
-<p>Sets the associated #getFileUploader fileUploader.</p>
 <h4>Parameters</h4>
 <h5>oFileUploader</h5>
 <p><code>string</code> | <a href="../../../../../sap.ui.unified/sap/ui/unified/FileUploader/classes/FileUploader.html"><code>FileUploader</code></a></p>
@@ -934,6 +933,7 @@ instance may be given</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.30.0</p>
+<p>Sets the associated #getFileUploader fileUploader.</p>
 <hr>
 <h3><del>setMimeType()</del></h3>
 <blockquote>
@@ -954,10 +954,6 @@ instance may be given</p>
 <blockquote>
 <p><strong>setSelected</strong>(<code>bSelected?</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getSelected selected.</p>
-<p>Defines the selected state of the UploadCollectionItem.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>false</code>.</p>
 <h4>Parameters</h4>
 <h5>bSelected?</h5>
 <p><code>boolean</code></p>
@@ -967,6 +963,10 @@ instance may be given</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.34.0</p>
+<p>Sets a new value for property #getSelected selected.</p>
+<p>Defines the selected state of the UploadCollectionItem.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>false</code>.</p>
 <hr>
 <h3><del>setThumbnailUrl()</del></h3>
 <blockquote>
@@ -987,9 +987,6 @@ instance may be given</p>
 <blockquote>
 <p><strong>setUploadedDate</strong>(<code>sUploadedDate?</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getUploadedDate uploadedDate.</p>
-<p>Specifies the date on which the file was uploaded. The application has to define the date format.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <h4>Parameters</h4>
 <h5>sUploadedDate?</h5>
 <p><code>string</code></p>
@@ -999,6 +996,9 @@ instance may be given</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Deprecated</h4>
 <p>(since 1.30) - This property is deprecated; use the aggregation attributes instead.</p>
+<p>Sets a new value for property #getUploadedDate uploadedDate.</p>
+<p>Specifies the date on which the file was uploaded. The application has to define the date format.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <hr>
 <h3><del>setUrl()</del></h3>
 <blockquote>
@@ -1054,34 +1054,34 @@ Edit button is not visible.</p>
 <blockquote>
 <p><strong>unbindAttributes</strong>(): <code>this</code></p>
 </blockquote>
-<p>Unbinds aggregation #getAttributes attributes from model data.</p>
 <h4>Returns</h4>
 <p><code>this</code></p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.30.0</p>
+<p>Unbinds aggregation #getAttributes attributes from model data.</p>
 <hr>
 <h3><del>unbindMarkers()</del></h3>
 <blockquote>
 <p><strong>unbindMarkers</strong>(): <code>this</code></p>
 </blockquote>
-<p>Unbinds aggregation #getMarkers markers from model data.</p>
 <h4>Returns</h4>
 <p><code>this</code></p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.40.0</p>
+<p>Unbinds aggregation #getMarkers markers from model data.</p>
 <hr>
 <h3><del>unbindStatuses()</del></h3>
 <blockquote>
 <p><strong>unbindStatuses</strong>(): <code>this</code></p>
 </blockquote>
-<p>Unbinds aggregation #getStatuses statuses from model data.</p>
 <h4>Returns</h4>
 <p><code>this</code></p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.30.0</p>
+<p>Unbinds aggregation #getStatuses statuses from model data.</p>
 <hr>
 <h3><del>extend()</del></h3>
 <blockquote>
@@ -1098,7 +1098,7 @@ the information contained in <code>oClassInfo</code>.</p>
 <p><code>string</code></p>
 <p>Name of the class being created</p>
 <h5>oClassInfo?</h5>
-<p><a href="../../../../../sap.f/namespaces/sap/type-aliases/ClassInfo.html"><code>ClassInfo</code></a>&lt;<code>T</code>, <code>UploadCollectionItem</code>&gt;</p>
+<p><code>ClassInfo</code>&lt;<code>T</code>, <code>UploadCollectionItem</code>&gt;</p>
 <p>Object literal with information about the class</p>
 <h5>FNMetaImpl?</h5>
 <p><code>Function</code></p>
@@ -1122,6 +1122,6 @@ used by this class</p>
 <p><a href="../../../../../sap.ui.core/sap/ui/core/Element/classes/UI5Element.html"><code>UI5Element</code></a>.<a href="../../../../../sap.ui.core/sap/ui/core/Element/classes/UI5Element.html#getmetadata-1"><code>getMetadata</code></a></p>
 <hr>
 
-<footer>Generated from <code>@openui5/types@1.120.46</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@openui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

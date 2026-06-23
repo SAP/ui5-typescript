@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Interface: ODataUtils — OpenUI5 TypeScript API</title>
-<meta name="description" content="Interface: ODataUtils — OpenUI5 TypeScript API Reference (1.120.46)">
+<meta name="description" content="Interface: ODataUtils — OpenUI5 TypeScript API Reference (1.120.0)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/openui5/1.120/sap.ui.core/sap/ui/model/odata/ODataUtils/interfaces/ODataUtils.html">
 <meta property="og:title" content="Interface: ODataUtils — OpenUI5 TypeScript API">
-<meta property="og:description" content="Interface: ODataUtils — OpenUI5 TypeScript API Reference (1.120.46)">
+<meta property="og:description" content="Interface: ODataUtils — OpenUI5 TypeScript API Reference (1.120.0)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/openui5/1.120/sap.ui.core/sap/ui/model/odata/ODataUtils/interfaces/ODataUtils.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,9 +33,9 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../../index.html">OpenUI5 API</a> › <a href="../../../../../../../sap.ui.core/README.html">sap.ui.core</a> › sap › ui › model › odata › <a href="../../../../../../../sap.ui.core/sap/ui/model/odata/ODataUtils/README.html">ODataUtils</a> › interfaces</nav>
-<p><a href="../../../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.46)</strong></a></p>
+<p><a href="../../../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.0)</strong></a></p>
 <hr>
-<p><a href="../../../../../../../README.html">OpenUI5 TypeScript API (1.120.46)</a> / <a href="../../../../../../README.html">sap.ui.core</a> / <a href="../README.html">sap/ui/model/odata/ODataUtils</a> / ODataUtils</p>
+<p><a href="../../../../../../../README.html">OpenUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../../README.html">sap.ui.core</a> / <a href="../README.html">sap/ui/model/odata/ODataUtils</a> / ODataUtils</p>
 <h1>Interface: ODataUtils</h1>
 <pre class="sig"><span class="kw">import</span> ODataUtils <span class="kw">from</span> <span class="str">"sap/ui/model/odata/ODataUtils"</span>;</pre>
 <h2>Methods</h2>
@@ -43,9 +43,6 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 <blockquote>
 <p><strong>compare</strong>(<code>vValue1</code>, <code>vValue2</code>, <code>bAsDecimal?</code>): <code>number</code></p>
 </blockquote>
-<p>Compares the given OData values based on their type. All date and time types can also be compared with
-a number. This number is then interpreted as the number of milliseconds that the corresponding date or
-time object should hold.</p>
 <h4>Parameters</h4>
 <h5>vValue1</h5>
 <p><code>any</code></p>
@@ -63,6 +60,9 @@ and fraction digits; no exponential format). Otherwise they are recognized by lo
 <code>1</code> if the first value is larger, <code>NaN</code> if they cannot be compared</p>
 <h4>Since</h4>
 <p>1.29.1</p>
+<p>Compares the given OData values based on their type. All date and time types can also be compared with
+a number. This number is then interpreted as the number of milliseconds that the corresponding date or
+time object should hold.</p>
 <hr>
 <h3>formatValue()</h3>
 <blockquote>
@@ -88,7 +88,6 @@ EDM type.</p>
 <blockquote>
 <p><strong>getComparator</strong>(<code>sEdmType</code>): <code>Function</code></p>
 </blockquote>
-<p>Returns a comparator function optimized for the given EDM type.</p>
 <h4>Parameters</h4>
 <h5>sEdmType</h5>
 <p><code>string</code></p>
@@ -100,26 +99,12 @@ are equal, <code>-1</code> if the first value is smaller, <code>1</code> if the 
 be compared (e.g. one value is <code>null</code> or <code>undefined</code>)</p>
 <h4>Since</h4>
 <p>1.29.1</p>
+<p>Returns a comparator function optimized for the given EDM type.</p>
 <hr>
 <h3>setOrigin()</h3>
 <blockquote>
 <p><strong>setOrigin</strong>(<code>sServiceURL</code>, <code>vParameters</code>): <code>string</code></p>
 </blockquote>
-<p>Adds an origin to the given service URL. If an origin is already present, it will only be replaced if
-the parameters object contains the flag &quot;force: true&quot;. In case the URL already contains URL parameters,
-these will be kept. As a parameter, a sole alias is sufficient. The parameters vParameters.system and
-vParameters.client however have to be given in pairs. In case all three origin specifying parameters
-are given (system/client/alias), the alias has precedence.</p>
-<p>Examples: setOrigin(&quot;/backend/service/url/&quot;, &quot;DEMO_123&quot;); - result: /backend/service/url;o=DEMO_123/</p>
-<p>setOrigin(&quot;/backend/service/url;o=OTHERSYS8?myUrlParam=true&amp;x=4&quot;, {alias: &quot;DEMO_123&quot;, force: true});</p>
-<ul>
-<li>result /backend/service/url;o=DEMO_123?myUrlParam=true&amp;x=4</li>
-</ul>
-<p>setOrigin(&quot;/backend/service;o=NOT_TOUCHED/url;v=2;o=OTHERSYS8;srv=XVC&quot;, {alias: &quot;DEMO_123&quot;, force: true});</p>
-<ul>
-<li>result /backend/service;o=NOT_TOUCHED/url;v=2;o=DEMO_123;srv=XVC</li>
-</ul>
-<p>setOrigin(&quot;/backend/service/url/&quot;, {system: &quot;DEMO&quot;, client: 134}); - result /backend/service/url;o=sid(DEMO.134)/</p>
 <h4>Parameters</h4>
 <h5>sServiceURL</h5>
 <p><code>string</code></p>
@@ -151,7 +136,22 @@ can be given</p>
 <p>the service URL with the added origin.</p>
 <h4>Since</h4>
 <p>1.30.7</p>
+<p>Adds an origin to the given service URL. If an origin is already present, it will only be replaced if
+the parameters object contains the flag &quot;force: true&quot;. In case the URL already contains URL parameters,
+these will be kept. As a parameter, a sole alias is sufficient. The parameters vParameters.system and
+vParameters.client however have to be given in pairs. In case all three origin specifying parameters
+are given (system/client/alias), the alias has precedence.</p>
+<p>Examples: setOrigin(&quot;/backend/service/url/&quot;, &quot;DEMO_123&quot;); - result: /backend/service/url;o=DEMO_123/</p>
+<p>setOrigin(&quot;/backend/service/url;o=OTHERSYS8?myUrlParam=true&amp;x=4&quot;, {alias: &quot;DEMO_123&quot;, force: true});</p>
+<ul>
+<li>result /backend/service/url;o=DEMO_123?myUrlParam=true&amp;x=4</li>
+</ul>
+<p>setOrigin(&quot;/backend/service;o=NOT_TOUCHED/url;v=2;o=OTHERSYS8;srv=XVC&quot;, {alias: &quot;DEMO_123&quot;, force: true});</p>
+<ul>
+<li>result /backend/service;o=NOT_TOUCHED/url;v=2;o=DEMO_123;srv=XVC</li>
+</ul>
+<p>setOrigin(&quot;/backend/service/url/&quot;, {system: &quot;DEMO&quot;, client: 134}); - result /backend/service/url;o=sid(DEMO.134)/</p>
 
-<footer>Generated from <code>@openui5/types@1.120.46</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@openui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

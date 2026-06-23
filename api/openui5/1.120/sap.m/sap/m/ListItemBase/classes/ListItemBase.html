@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Class: ListItemBase — OpenUI5 TypeScript API</title>
-<meta name="description" content="Class: ListItemBase — OpenUI5 TypeScript API Reference (1.120.46)">
+<meta name="description" content="Class: ListItemBase — OpenUI5 TypeScript API Reference (1.120.0)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/openui5/1.120/sap.m/sap/m/ListItemBase/classes/ListItemBase.html">
 <meta property="og:title" content="Class: ListItemBase — OpenUI5 TypeScript API">
-<meta property="og:description" content="Class: ListItemBase — OpenUI5 TypeScript API Reference (1.120.46)">
+<meta property="og:description" content="Class: ListItemBase — OpenUI5 TypeScript API Reference (1.120.0)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/openui5/1.120/sap.m/sap/m/ListItemBase/classes/ListItemBase.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,9 +33,9 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../index.html">OpenUI5 API</a> › <a href="../../../../../sap.m/README.html">sap.m</a> › sap › m › <a href="../../../../../sap.m/sap/m/ListItemBase/README.html">ListItemBase</a> › classes</nav>
-<p><a href="../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.46)</strong></a></p>
+<p><a href="../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.0)</strong></a></p>
 <hr>
-<p><a href="../../../../../README.html">OpenUI5 TypeScript API (1.120.46)</a> / <a href="../../../../README.html">sap.m</a> / <a href="../README.html">sap/m/ListItemBase</a> / ListItemBase</p>
+<p><a href="../../../../../README.html">OpenUI5 TypeScript API (1.120.0)</a> / <a href="../../../../README.html">sap.m</a> / <a href="../README.html">sap/m/ListItemBase</a> / ListItemBase</p>
 <h1>Class: ListItemBase</h1>
 <pre class="sig"><span class="kw">import</span> ListItemBase <span class="kw">from</span> <span class="str">"sap/m/ListItemBase"</span>;</pre>
 <p>ListItemBase contains the base features of all specific list items. <strong>Note:</strong> If not mentioned otherwise
@@ -102,7 +102,6 @@ of the syntax of the settings object.</p>
 <blockquote>
 <p><strong>addAriaLabelledBy</strong>(<code>vAriaLabelledBy</code>): <code>this</code></p>
 </blockquote>
-<p>Adds some ariaLabelledBy into the association #getAriaLabelledBy ariaLabelledBy.</p>
 <h4>Parameters</h4>
 <h5>vAriaLabelledBy</h5>
 <p><code>string</code> | <a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></p>
@@ -112,6 +111,7 @@ of the syntax of the settings object.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.28.0</p>
+<p>Adds some ariaLabelledBy into the association #getAriaLabelledBy ariaLabelledBy.</p>
 <hr>
 <h3>attachDetailPress()</h3>
 <h4>Call Signature</h4>
@@ -160,10 +160,6 @@ otherwise it will be bound to this <code>sap.m.ListItemBase</code> itself.</p>
 <blockquote>
 <p><strong>attachDetailTap</strong>(<code>oData</code>, <code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
-<p>Attaches event handler <code>fnFunction</code> to the #event:detailTap detailTap event of this <code>sap.m.ListItemBase</code>.</p>
-<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
-otherwise it will be bound to this <code>sap.m.ListItemBase</code> itself.</p>
-<p>Fires when the user taps on the detail button of the control.</p>
 <h5>Parameters</h5>
 <h6>oData</h6>
 <p><code>object</code></p>
@@ -180,14 +176,14 @@ object when firing the event</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Deprecated</h5>
 <p>(since 1.20.0) - Instead, use <code>detailPress</code> event.</p>
-<h4>Call Signature</h4>
-<blockquote>
-<p><strong>attachDetailTap</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
-</blockquote>
 <p>Attaches event handler <code>fnFunction</code> to the #event:detailTap detailTap event of this <code>sap.m.ListItemBase</code>.</p>
 <p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
 otherwise it will be bound to this <code>sap.m.ListItemBase</code> itself.</p>
 <p>Fires when the user taps on the detail button of the control.</p>
+<h4>Call Signature</h4>
+<blockquote>
+<p><strong>attachDetailTap</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
+</blockquote>
 <h5>Parameters</h5>
 <h6>fnFunction</h6>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -200,6 +196,10 @@ otherwise it will be bound to this <code>sap.m.ListItemBase</code> itself.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Deprecated</h5>
 <p>(since 1.20.0) - Instead, use <code>detailPress</code> event.</p>
+<p>Attaches event handler <code>fnFunction</code> to the #event:detailTap detailTap event of this <code>sap.m.ListItemBase</code>.</p>
+<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
+otherwise it will be bound to this <code>sap.m.ListItemBase</code> itself.</p>
+<p>Fires when the user taps on the detail button of the control.</p>
 <hr>
 <h3>attachPress()</h3>
 <h4>Call Signature</h4>
@@ -254,10 +254,6 @@ sap.m.ListBase#attachItemPress.</p>
 <blockquote>
 <p><strong>attachTap</strong>(<code>oData</code>, <code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
-<p>Attaches event handler <code>fnFunction</code> to the #event:tap tap event of this <code>sap.m.ListItemBase</code>.</p>
-<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
-otherwise it will be bound to this <code>sap.m.ListItemBase</code> itself.</p>
-<p>Fires when the user taps on the control.</p>
 <h5>Parameters</h5>
 <h6>oData</h6>
 <p><code>object</code></p>
@@ -274,14 +270,14 @@ object when firing the event</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Deprecated</h5>
 <p>(since 1.20.0) - Instead, use <code>press</code> event.</p>
-<h4>Call Signature</h4>
-<blockquote>
-<p><strong>attachTap</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
-</blockquote>
 <p>Attaches event handler <code>fnFunction</code> to the #event:tap tap event of this <code>sap.m.ListItemBase</code>.</p>
 <p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
 otherwise it will be bound to this <code>sap.m.ListItemBase</code> itself.</p>
 <p>Fires when the user taps on the control.</p>
+<h4>Call Signature</h4>
+<blockquote>
+<p><strong>attachTap</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
+</blockquote>
 <h5>Parameters</h5>
 <h6>fnFunction</h6>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -294,6 +290,10 @@ otherwise it will be bound to this <code>sap.m.ListItemBase</code> itself.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Deprecated</h5>
 <p>(since 1.20.0) - Instead, use <code>press</code> event.</p>
+<p>Attaches event handler <code>fnFunction</code> to the #event:tap tap event of this <code>sap.m.ListItemBase</code>.</p>
+<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
+otherwise it will be bound to this <code>sap.m.ListItemBase</code> itself.</p>
+<p>Fires when the user taps on the control.</p>
 <hr>
 <h3>detachDetailPress()</h3>
 <blockquote>
@@ -316,8 +316,6 @@ otherwise it will be bound to this <code>sap.m.ListItemBase</code> itself.</p>
 <blockquote>
 <p><strong>detachDetailTap</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
-<p>Detaches event handler <code>fnFunction</code> from the #event:detailTap detailTap event of this <code>sap.m.ListItemBase</code>.</p>
-<p>The passed function and listener object must match the ones used for event registration.</p>
 <h4>Parameters</h4>
 <h5>fnFunction</h5>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -330,6 +328,8 @@ otherwise it will be bound to this <code>sap.m.ListItemBase</code> itself.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Deprecated</h4>
 <p>(since 1.20.0) - Instead, use <code>detailPress</code> event.</p>
+<p>Detaches event handler <code>fnFunction</code> from the #event:detailTap detailTap event of this <code>sap.m.ListItemBase</code>.</p>
+<p>The passed function and listener object must match the ones used for event registration.</p>
 <hr>
 <h3>detachPress()</h3>
 <blockquote>
@@ -352,8 +352,6 @@ otherwise it will be bound to this <code>sap.m.ListItemBase</code> itself.</p>
 <blockquote>
 <p><strong>detachTap</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
-<p>Detaches event handler <code>fnFunction</code> from the #event:tap tap event of this <code>sap.m.ListItemBase</code>.</p>
-<p>The passed function and listener object must match the ones used for event registration.</p>
 <h4>Parameters</h4>
 <h5>fnFunction</h5>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -366,12 +364,13 @@ otherwise it will be bound to this <code>sap.m.ListItemBase</code> itself.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Deprecated</h4>
 <p>(since 1.20.0) - Instead, use <code>press</code> event.</p>
+<p>Detaches event handler <code>fnFunction</code> from the #event:tap tap event of this <code>sap.m.ListItemBase</code>.</p>
+<p>The passed function and listener object must match the ones used for event registration.</p>
 <hr>
 <h3>fireDetailPress()</h3>
 <blockquote>
 <p><strong>fireDetailPress</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
-<p>Fires event #event:detailPress detailPress to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><code>object</code></p>
@@ -381,12 +380,12 @@ otherwise it will be bound to this <code>sap.m.ListItemBase</code> itself.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:detailPress detailPress to attached listeners.</p>
 <hr>
 <h3><del>fireDetailTap()</del></h3>
 <blockquote>
 <p><strong>fireDetailTap</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
-<p>Fires event #event:detailTap detailTap to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><code>object</code></p>
@@ -398,12 +397,12 @@ otherwise it will be bound to this <code>sap.m.ListItemBase</code> itself.</p>
 <p>(since 1.20.0) - Instead, use <code>detailPress</code> event.</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:detailTap detailTap to attached listeners.</p>
 <hr>
 <h3>firePress()</h3>
 <blockquote>
 <p><strong>firePress</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
-<p>Fires event #event:press press to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><code>object</code></p>
@@ -413,12 +412,12 @@ otherwise it will be bound to this <code>sap.m.ListItemBase</code> itself.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:press press to attached listeners.</p>
 <hr>
 <h3><del>fireTap()</del></h3>
 <blockquote>
 <p><strong>fireTap</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
-<p>Fires event #event:tap tap to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><code>object</code></p>
@@ -430,27 +429,28 @@ otherwise it will be bound to this <code>sap.m.ListItemBase</code> itself.</p>
 <p>(since 1.20.0) - Instead, use <code>press</code> event.</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:tap tap to attached listeners.</p>
 <hr>
 <h3>getAriaLabelledBy()</h3>
 <blockquote>
 <p><strong>getAriaLabelledBy</strong>(): <code>string</code>[]</p>
 </blockquote>
-<p>Returns array of IDs of the elements which are the current targets of the association #getAriaLabelledBy ariaLabelledBy.</p>
 <h4>Returns</h4>
 <p><code>string</code>[]</p>
 <h4>Since</h4>
 <p>1.28.0</p>
+<p>Returns array of IDs of the elements which are the current targets of the association #getAriaLabelledBy ariaLabelledBy.</p>
 <hr>
 <h3>getContentAnnouncement()</h3>
 <blockquote>
 <p><strong>getContentAnnouncement</strong>(): <code>string</code></p>
 </blockquote>
-<p>Returns the accessibility announcement for the content.</p>
-<p>Hook for the subclasses.</p>
 <h4>Returns</h4>
 <p><code>string</code></p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Returns the accessibility announcement for the content.</p>
+<p>Hook for the subclasses.</p>
 <hr>
 <h3>getCounter()</h3>
 <blockquote>
@@ -466,6 +466,11 @@ otherwise it will be bound to this <code>sap.m.ListItemBase</code> itself.</p>
 <blockquote>
 <p><strong>getHighlight</strong>(): <code>string</code></p>
 </blockquote>
+<h4>Returns</h4>
+<p><code>string</code></p>
+<p>Value of property <code>highlight</code></p>
+<h4>Since</h4>
+<p>1.44.0</p>
 <p>Gets current value of property #getHighlight highlight.</p>
 <p>Defines the highlight state of the list items.</p>
 <p>Valid values for the <code>highlight</code> property are values of the enumerations sap.ui.core.MessageType
@@ -475,40 +480,35 @@ property. If the <code>highlight</code> property is set to a value of sap.ui.cor
 property does not need to be set because a default text is used. However, the default text can be overridden
 by setting the <code>highlightText</code> property. In all other cases the <code>highlightText</code> property must be set.</p>
 <p>Default value is <code>&quot;None&quot;</code>.</p>
-<h4>Returns</h4>
-<p><code>string</code></p>
-<p>Value of property <code>highlight</code></p>
-<h4>Since</h4>
-<p>1.44.0</p>
 <hr>
 <h3>getHighlightText()</h3>
 <blockquote>
 <p><strong>getHighlightText</strong>(): <code>string</code></p>
 </blockquote>
-<p>Gets current value of property #getHighlightText highlightText.</p>
-<p>Defines the semantics of the sap.m.ListItemBase#setHighlight highlight property for accessibility
-purposes.</p>
-<p>Default value is <code>empty string</code>.</p>
 <h4>Returns</h4>
 <p><code>string</code></p>
 <p>Value of property <code>highlightText</code></p>
 <h4>Since</h4>
 <p>1.62</p>
+<p>Gets current value of property #getHighlightText highlightText.</p>
+<p>Defines the semantics of the sap.m.ListItemBase#setHighlight highlight property for accessibility
+purposes.</p>
+<p>Default value is <code>empty string</code>.</p>
 <hr>
 <h3>getNavigated()</h3>
 <blockquote>
 <p><strong>getNavigated</strong>(): <code>boolean</code></p>
 </blockquote>
-<p>Gets current value of property #getNavigated navigated.</p>
-<p>The navigated state of the list item.</p>
-<p>If set to <code>true</code>, a navigation indicator is displayed at the end of the list item. <strong>Note:</strong> This property
-must be set for <strong>one</strong> list item only.</p>
-<p>Default value is <code>false</code>.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>Value of property <code>navigated</code></p>
 <h4>Since</h4>
 <p>1.72</p>
+<p>Gets current value of property #getNavigated navigated.</p>
+<p>The navigated state of the list item.</p>
+<p>If set to <code>true</code>, a navigation indicator is displayed at the end of the list item. <strong>Note:</strong> This property
+must be set for <strong>one</strong> list item only.</p>
+<p>Default value is <code>false</code>.</p>
 <hr>
 <h3>getSelected()</h3>
 <blockquote>
@@ -524,20 +524,16 @@ modes may cause unwanted results if you have more than one selected items in you
 <hr>
 <h3>getTabbables()</h3>
 <blockquote>
-<p><strong>getTabbables</strong>(<code>bContentOnly?</code>): <a href="../../../../../sap.ui.core/type-aliases/jQuery.html"><code>jQuery</code></a></p>
+<p><strong>getTabbables</strong>(): <code>jQuery</code></p>
 </blockquote>
-<p>Returns the tabbable DOM elements as a jQuery collection</p>
-<h4>Parameters</h4>
-<h5>bContentOnly?</h5>
-<p><code>undefined</code></p>
-<p>Whether only tabbables of the content area</p>
 <h4>Returns</h4>
-<p><a href="../../../../../sap.ui.core/type-aliases/jQuery.html"><code>jQuery</code></a></p>
+<p><code>jQuery</code></p>
 <p>jQuery object</p>
 <h4>Since</h4>
 <p>1.26</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Returns the tabbable DOM elements as a jQuery collection</p>
 <hr>
 <h3>getType()</h3>
 <blockquote>
@@ -580,29 +576,28 @@ of the real control.</p>
 <blockquote>
 <p><strong>isSelected</strong>(): <code>boolean</code></p>
 </blockquote>
-<p>Returns the state of the item selection as a boolean</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <h4>Deprecated</h4>
 <p>(since 1.10.2) - API Change makes this method unnecessary. Use the #getSelected method
 instead.</p>
+<p>Returns the state of the item selection as a boolean</p>
 <hr>
 <h3>removeAllAriaLabelledBy()</h3>
 <blockquote>
 <p><strong>removeAllAriaLabelledBy</strong>(): <code>string</code>[]</p>
 </blockquote>
-<p>Removes all the controls in the association named #getAriaLabelledBy ariaLabelledBy.</p>
 <h4>Returns</h4>
 <p><code>string</code>[]</p>
 <p>An array of the removed elements (might be empty)</p>
 <h4>Since</h4>
 <p>1.28.0</p>
+<p>Removes all the controls in the association named #getAriaLabelledBy ariaLabelledBy.</p>
 <hr>
 <h3>removeAriaLabelledBy()</h3>
 <blockquote>
 <p><strong>removeAriaLabelledBy</strong>(<code>vAriaLabelledBy</code>): <code>string</code></p>
 </blockquote>
-<p>Removes an ariaLabelledBy from the association named #getAriaLabelledBy ariaLabelledBy.</p>
 <h4>Parameters</h4>
 <h5>vAriaLabelledBy</h5>
 <p><code>string</code> | <code>number</code> | <a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></p>
@@ -612,6 +607,7 @@ instead.</p>
 <p>The removed ariaLabelledBy or <code>null</code></p>
 <h4>Since</h4>
 <p>1.28.0</p>
+<p>Removes an ariaLabelledBy from the association named #getAriaLabelledBy ariaLabelledBy.</p>
 <hr>
 <h3>setCounter()</h3>
 <blockquote>
@@ -632,6 +628,15 @@ instead.</p>
 <blockquote>
 <p><strong>setHighlight</strong>(<code>sHighlight?</code>): <code>this</code></p>
 </blockquote>
+<h4>Parameters</h4>
+<h5>sHighlight?</h5>
+<p><code>string</code></p>
+<p>New value for property <code>highlight</code></p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<h4>Since</h4>
+<p>1.44.0</p>
 <p>Sets a new value for property #getHighlight highlight.</p>
 <p>Defines the highlight state of the list items.</p>
 <p>Valid values for the <code>highlight</code> property are values of the enumerations sap.ui.core.MessageType
@@ -642,25 +647,11 @@ property does not need to be set because a default text is used. However, the de
 by setting the <code>highlightText</code> property. In all other cases the <code>highlightText</code> property must be set.</p>
 <p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <p>Default value is <code>&quot;None&quot;</code>.</p>
-<h4>Parameters</h4>
-<h5>sHighlight?</h5>
-<p><code>string</code></p>
-<p>New value for property <code>highlight</code></p>
-<h4>Returns</h4>
-<p><code>this</code></p>
-<p>Reference to <code>this</code> in order to allow method chaining</p>
-<h4>Since</h4>
-<p>1.44.0</p>
 <hr>
 <h3>setHighlightText()</h3>
 <blockquote>
 <p><strong>setHighlightText</strong>(<code>sHighlightText?</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getHighlightText highlightText.</p>
-<p>Defines the semantics of the sap.m.ListItemBase#setHighlight highlight property for accessibility
-purposes.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>empty string</code>.</p>
 <h4>Parameters</h4>
 <h5>sHighlightText?</h5>
 <p><code>string</code></p>
@@ -670,17 +661,16 @@ purposes.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.62</p>
+<p>Sets a new value for property #getHighlightText highlightText.</p>
+<p>Defines the semantics of the sap.m.ListItemBase#setHighlight highlight property for accessibility
+purposes.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>empty string</code>.</p>
 <hr>
 <h3>setNavigated()</h3>
 <blockquote>
 <p><strong>setNavigated</strong>(<code>bNavigated?</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getNavigated navigated.</p>
-<p>The navigated state of the list item.</p>
-<p>If set to <code>true</code>, a navigation indicator is displayed at the end of the list item. <strong>Note:</strong> This property
-must be set for <strong>one</strong> list item only.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>false</code>.</p>
 <h4>Parameters</h4>
 <h5>bNavigated?</h5>
 <p><code>boolean</code></p>
@@ -690,6 +680,12 @@ must be set for <strong>one</strong> list item only.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.72</p>
+<p>Sets a new value for property #getNavigated navigated.</p>
+<p>The navigated state of the list item.</p>
+<p>If set to <code>true</code>, a navigation indicator is displayed at the end of the list item. <strong>Note:</strong> This property
+must be set for <strong>one</strong> list item only.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>false</code>.</p>
 <hr>
 <h3>setSelected()</h3>
 <blockquote>
@@ -775,7 +771,7 @@ contained in <code>oClassInfo</code>.</p>
 <p><code>string</code></p>
 <p>Name of the class being created</p>
 <h5>oClassInfo?</h5>
-<p><a href="../../../../../sap.f/namespaces/sap/type-aliases/ClassInfo.html"><code>ClassInfo</code></a>&lt;<code>T</code>, <code>ListItemBase</code>&gt;</p>
+<p><code>ClassInfo</code>&lt;<code>T</code>, <code>ListItemBase</code>&gt;</p>
 <p>Object literal with information about the class</p>
 <h5>FNMetaImpl?</h5>
 <p><code>Function</code></p>
@@ -799,6 +795,6 @@ used by this class</p>
 <p><a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a>.<a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html#getmetadata-1"><code>getMetadata</code></a></p>
 <hr>
 
-<footer>Generated from <code>@openui5/types@1.120.46</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@openui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

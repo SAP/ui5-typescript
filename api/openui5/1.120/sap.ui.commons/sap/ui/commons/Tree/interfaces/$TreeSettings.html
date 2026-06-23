@@ -2,12 +2,12 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>~~Interface: $TreeSettings~~ — OpenUI5 TypeScript API</title>
-<meta name="description" content="~~Interface: $TreeSettings~~ — OpenUI5 TypeScript API Reference (1.120.46)">
+<title>Interface: $TreeSettings — OpenUI5 TypeScript API</title>
+<meta name="description" content="Interface: $TreeSettings — OpenUI5 TypeScript API Reference (1.120.0)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/openui5/1.120/sap.ui.commons/sap/ui/commons/Tree/interfaces/$TreeSettings.html">
-<meta property="og:title" content="~~Interface: $TreeSettings~~ — OpenUI5 TypeScript API">
-<meta property="og:description" content="~~Interface: $TreeSettings~~ — OpenUI5 TypeScript API Reference (1.120.46)">
+<meta property="og:title" content="Interface: $TreeSettings — OpenUI5 TypeScript API">
+<meta property="og:description" content="Interface: $TreeSettings — OpenUI5 TypeScript API Reference (1.120.0)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/openui5/1.120/sap.ui.commons/sap/ui/commons/Tree/interfaces/$TreeSettings.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,39 +33,36 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../index.html">OpenUI5 API</a> › <a href="../../../../../../sap.ui.commons/README.html">sap.ui.commons</a> › sap › ui › commons › <a href="../../../../../../sap.ui.commons/sap/ui/commons/Tree/README.html">Tree</a> › interfaces</nav>
-<p><a href="../../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.46)</strong></a></p>
+<p><a href="../../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.0)</strong></a></p>
 <hr>
-<p><a href="../../../../../../README.html">OpenUI5 TypeScript API (1.120.46)</a> / <a href="../../../../../README.html">sap.ui.commons</a> / <a href="../README.html">sap/ui/commons/Tree</a> / $TreeSettings</p>
-<h1><del>Interface: $TreeSettings</del></h1>
+<p><a href="../../../../../../README.html">OpenUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../README.html">sap.ui.commons</a> / <a href="../README.html">sap/ui/commons/Tree</a> / $TreeSettings</p>
+<h1>Interface: $TreeSettings</h1>
 <pre class="sig"><span class="kw">import</span> { $TreeSettings } <span class="kw">from</span> <span class="str">"sap/ui/commons/Tree"</span>;</pre>
-<p>Describes the settings that can be provided to the Tree constructor.</p>
-<h2>Deprecated</h2>
-<p>(since 1.38) - replaced by sap.m.Tree</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../../../../../sap.ui.core/sap/ui/core/Control/interfaces/$ControlSettings.html"><code>$ControlSettings</code></a></li>
 </ul>
 <h2>Properties</h2>
-<h3><del>height?</del></h3>
+<h3>height?</h3>
 <blockquote>
 <p><code>optional</code> <strong>height?</strong>: <code>string</code> | <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a></p>
 </blockquote>
 <p>Tree height</p>
 <hr>
-<h3><del>minWidth?</del></h3>
+<h3>minWidth?</h3>
 <blockquote>
 <p><code>optional</code> <strong>minWidth?</strong>: <code>string</code> | <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a></p>
 </blockquote>
 <p>Minimal width for the Tree. Can be useful when, for example, the width is specified in percentage, to
 avoid the tree to become too narrow when container is resize</p>
 <hr>
-<h3><del>nodes?</del></h3>
+<h3>nodes?</h3>
 <blockquote>
 <p><code>optional</code> <strong>nodes?</strong>: <code>`{${string}}`</code> | <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/AggregationBindingInfo.html"><code>AggregationBindingInfo</code></a> | <a href="../../TreeNode/classes/TreeNode.html"><code>TreeNode</code></a> | <a href="../../TreeNode/classes/TreeNode.html"><code>TreeNode</code></a>[]</p>
 </blockquote>
 <p>First level nodes</p>
 <hr>
-<h3><del>select?</del></h3>
+<h3>select?</h3>
 <blockquote>
 <p><code>optional</code> <strong>select?</strong>: (<code>oEvent</code>) =&gt; <code>void</code></p>
 </blockquote>
@@ -76,7 +73,7 @@ avoid the tree to become too narrow when container is resize</p>
 <h4>Returns</h4>
 <p><code>void</code></p>
 <hr>
-<h3><del>selectionChange?</del></h3>
+<h3>selectionChange?</h3>
 <blockquote>
 <p><code>optional</code> <strong>selectionChange?</strong>: (<code>oEvent</code>) =&gt; <code>void</code></p>
 </blockquote>
@@ -87,42 +84,42 @@ avoid the tree to become too narrow when container is resize</p>
 <h4>Returns</h4>
 <p><code>void</code></p>
 <hr>
-<h3><del>selectionMode?</del></h3>
+<h3>selectionMode?</h3>
 <blockquote>
 <p><code>optional</code> <strong>selectionMode?</strong>: <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code> | <code>&quot;None&quot;</code> | <a href="../../library/enumerations/TreeSelectionMode.html"><code>TreeSelectionMode</code></a> | <code>&quot;Legacy&quot;</code> | <code>&quot;Multi&quot;</code> | <code>&quot;Single&quot;</code></p>
 </blockquote>
 <p>Selection mode of the Tree.</p>
 <hr>
-<h3><del>showHeader?</del></h3>
+<h3>showHeader?</h3>
 <blockquote>
 <p><code>optional</code> <strong>showHeader?</strong>: <code>boolean</code> | <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
 <p>Tree Header is display. If false, the tree will be in a transparent mode</p>
 <hr>
-<h3><del>showHeaderIcons?</del></h3>
+<h3>showHeaderIcons?</h3>
 <blockquote>
 <p><code>optional</code> <strong>showHeaderIcons?</strong>: <code>boolean</code> | <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
 <p>Show Header icons (e.g. Expand/Collapse all). Only consider if showHeader is true</p>
 <hr>
-<h3><del>showHorizontalScrollbar?</del></h3>
+<h3>showHorizontalScrollbar?</h3>
 <blockquote>
 <p><code>optional</code> <strong>showHorizontalScrollbar?</strong>: <code>boolean</code> | <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
 <p>Display horizontal scrollbar. If false, the overflow content will be hidden</p>
 <hr>
-<h3><del>title?</del></h3>
+<h3>title?</h3>
 <blockquote>
 <p><code>optional</code> <strong>title?</strong>: <code>string</code> | <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a></p>
 </blockquote>
 <p>Tree title</p>
 <hr>
-<h3><del>width?</del></h3>
+<h3>width?</h3>
 <blockquote>
 <p><code>optional</code> <strong>width?</strong>: <code>string</code> | <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a></p>
 </blockquote>
 <p>Tree width</p>
 
-<footer>Generated from <code>@openui5/types@1.120.46</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@openui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

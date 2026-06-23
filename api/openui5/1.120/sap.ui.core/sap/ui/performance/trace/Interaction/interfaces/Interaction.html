@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Interface: Interaction — OpenUI5 TypeScript API</title>
-<meta name="description" content="Interface: Interaction — OpenUI5 TypeScript API Reference (1.120.46)">
+<meta name="description" content="Interface: Interaction — OpenUI5 TypeScript API Reference (1.120.0)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/openui5/1.120/sap.ui.core/sap/ui/performance/trace/Interaction/interfaces/Interaction.html">
 <meta property="og:title" content="Interface: Interaction — OpenUI5 TypeScript API">
-<meta property="og:description" content="Interface: Interaction — OpenUI5 TypeScript API Reference (1.120.46)">
+<meta property="og:description" content="Interface: Interaction — OpenUI5 TypeScript API Reference (1.120.0)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/openui5/1.120/sap.ui.core/sap/ui/performance/trace/Interaction/interfaces/Interaction.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,11 +33,13 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../../index.html">OpenUI5 API</a> › <a href="../../../../../../../sap.ui.core/README.html">sap.ui.core</a> › sap › ui › performance › trace › <a href="../../../../../../../sap.ui.core/sap/ui/performance/trace/Interaction/README.html">Interaction</a> › interfaces</nav>
-<p><a href="../../../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.46)</strong></a></p>
+<p><a href="../../../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.0)</strong></a></p>
 <hr>
-<p><a href="../../../../../../../README.html">OpenUI5 TypeScript API (1.120.46)</a> / <a href="../../../../../../README.html">sap.ui.core</a> / <a href="../README.html">sap/ui/performance/trace/Interaction</a> / Interaction</p>
+<p><a href="../../../../../../../README.html">OpenUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../../README.html">sap.ui.core</a> / <a href="../README.html">sap/ui/performance/trace/Interaction</a> / Interaction</p>
 <h1>Interface: Interaction</h1>
 <pre class="sig"><span class="kw">import</span> Interaction <span class="kw">from</span> <span class="str">"sap/ui/performance/trace/Interaction"</span>;</pre>
+<h2>Since</h2>
+<p>1.76</p>
 <p>Provides base functionality for interaction detection heuristics &amp; API. Interaction detection works through
 the detection of relevant events and tracking of rendering activities.
  An example:
@@ -48,15 +50,11 @@ the detection of relevant events and tracking of rendering activities.
  - some requests are made and rendering has finished (`var notifyStepEnd`)  All measurement takes
 place in module:sap/ui/performance/Measurement.
 </code></pre>
-<h2>Since</h2>
-<p>1.76</p>
 <h2>Methods</h2>
 <h3>filter()</h3>
 <blockquote>
 <p><strong>filter</strong>(<code>fnFilter</code>): <a href="../type-aliases/Entry.html"><code>Entry</code></a>[]</p>
 </blockquote>
-<p>Gets all interaction measurements for which a provided filter function returns a truthy value.</p>
-<p>To filter for certain categories of measurements a fnFilter can be implemented like this <code> function(InteractionMeasurement) { return InteractionMeasurement.duration &gt; 0 }</code></p>
 <h4>Parameters</h4>
 <h5>fnFilter</h5>
 <p><code>Function</code></p>
@@ -66,23 +64,24 @@ place in module:sap/ui/performance/Measurement.
 <p>all interaction measurements passing the filter function successfully</p>
 <h4>Since</h4>
 <p>1.76</p>
+<p>Gets all interaction measurements for which a provided filter function returns a truthy value.</p>
+<p>To filter for certain categories of measurements a fnFilter can be implemented like this <code> function(InteractionMeasurement) { return InteractionMeasurement.duration &gt; 0 }</code></p>
 <hr>
 <h3>getActive()</h3>
 <blockquote>
 <p><strong>getActive</strong>(): <code>boolean</code></p>
 </blockquote>
-<p>Returns true if the interaction detection was enabled explicitly, or implicitly along with fesr.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>bActive State of the interaction detection</p>
 <h4>Since</h4>
 <p>1.76</p>
+<p>Returns true if the interaction detection was enabled explicitly, or implicitly along with fesr.</p>
 <hr>
 <h3>getAll()</h3>
 <blockquote>
 <p><strong>getAll</strong>(<code>bFinalize</code>): <a href="../type-aliases/Entry.html"><code>Entry</code></a>[]</p>
 </blockquote>
-<p>Gets all interaction measurements.</p>
 <h4>Parameters</h4>
 <h5>bFinalize</h5>
 <p><code>boolean</code></p>
@@ -92,12 +91,12 @@ place in module:sap/ui/performance/Measurement.
 <p>all interaction measurements</p>
 <h4>Since</h4>
 <p>1.76</p>
+<p>Gets all interaction measurements.</p>
 <hr>
 <h3>setActive()</h3>
 <blockquote>
 <p><strong>setActive</strong>(<code>bActive</code>): <code>void</code></p>
 </blockquote>
-<p>Enables the interaction tracking.</p>
 <h4>Parameters</h4>
 <h5>bActive</h5>
 <p><code>boolean</code></p>
@@ -106,7 +105,8 @@ place in module:sap/ui/performance/Measurement.
 <p><code>void</code></p>
 <h4>Since</h4>
 <p>1.76</p>
+<p>Enables the interaction tracking.</p>
 
-<footer>Generated from <code>@openui5/types@1.120.46</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@openui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

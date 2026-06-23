@@ -2,12 +2,12 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>Abstract Class: DragDropBase — OpenUI5 TypeScript API</title>
-<meta name="description" content="Abstract Class: DragDropBase — OpenUI5 TypeScript API Reference (1.120.46)">
+<title>Class: DragDropBase — OpenUI5 TypeScript API</title>
+<meta name="description" content="Class: DragDropBase — OpenUI5 TypeScript API Reference (1.120.0)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/openui5/1.120/sap.ui.core/sap/ui/core/dnd/DragDropBase/classes/DragDropBase.html">
-<meta property="og:title" content="Abstract Class: DragDropBase — OpenUI5 TypeScript API">
-<meta property="og:description" content="Abstract Class: DragDropBase — OpenUI5 TypeScript API Reference (1.120.46)">
+<meta property="og:title" content="Class: DragDropBase — OpenUI5 TypeScript API">
+<meta property="og:description" content="Class: DragDropBase — OpenUI5 TypeScript API Reference (1.120.0)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/openui5/1.120/sap.ui.core/sap/ui/core/dnd/DragDropBase/classes/DragDropBase.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,11 +33,13 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../../index.html">OpenUI5 API</a> › <a href="../../../../../../../sap.ui.core/README.html">sap.ui.core</a> › sap › ui › core › dnd › <a href="../../../../../../../sap.ui.core/sap/ui/core/dnd/DragDropBase/README.html">DragDropBase</a> › classes</nav>
-<p><a href="../../../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.46)</strong></a></p>
+<p><a href="../../../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.0)</strong></a></p>
 <hr>
-<p><a href="../../../../../../../README.html">OpenUI5 TypeScript API (1.120.46)</a> / <a href="../../../../../../README.html">sap.ui.core</a> / <a href="../README.html">sap/ui/core/dnd/DragDropBase</a> / DragDropBase</p>
-<h1>Abstract Class: DragDropBase</h1>
+<p><a href="../../../../../../../README.html">OpenUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../../README.html">sap.ui.core</a> / <a href="../README.html">sap/ui/core/dnd/DragDropBase</a> / DragDropBase</p>
+<h1>Class: DragDropBase</h1>
 <pre class="sig"><span class="kw">import</span> DragDropBase <span class="kw">from</span> <span class="str">"sap/ui/core/dnd/DragDropBase"</span>;</pre>
+<h2>Since</h2>
+<p>1.52</p>
 <p>Provides the base class for all drag-and-drop configurations. This feature enables a native HTML5 drag-and-drop
 API for the controls, therefore it is limited to browser support. Restrictions:
 	 - There is no accessible alternative for drag and drop. Applications which use the drag-and-drop functionality
@@ -49,8 +51,6 @@ API for the controls, therefore it is limited to browser support. Restrictions:
     feature possible.
 	 - Texts in draggable controls cannot be selected.
 	 - The text of input fields in draggable controls can be selected, but not dragged.</p>
-<h2>Since</h2>
-<p>1.52</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../../Element/classes/UI5Element.html"><code>UI5Element</code></a></li>
@@ -106,14 +106,14 @@ See:
 <blockquote>
 <p><strong>getEnabled</strong>(): <code>boolean</code></p>
 </blockquote>
-<p>Gets current value of property #getEnabled enabled.</p>
-<p>Indicates whether this configuration is active or not.</p>
-<p>Default value is <code>true</code>.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>Value of property <code>enabled</code></p>
 <h4>Since</h4>
 <p>1.56</p>
+<p>Gets current value of property #getEnabled enabled.</p>
+<p>Indicates whether this configuration is active or not.</p>
+<p>Default value is <code>true</code>.</p>
 <hr>
 <h3>getGroupName()</h3>
 <blockquote>
@@ -130,10 +130,6 @@ will only interacts with other drag-and-drop objects within the same group.</p>
 <blockquote>
 <p><strong>setEnabled</strong>(<code>bEnabled?</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getEnabled enabled.</p>
-<p>Indicates whether this configuration is active or not.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>true</code>.</p>
 <h4>Parameters</h4>
 <h5>bEnabled?</h5>
 <p><code>boolean</code></p>
@@ -143,6 +139,10 @@ will only interacts with other drag-and-drop objects within the same group.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.56</p>
+<p>Sets a new value for property #getEnabled enabled.</p>
+<p>Indicates whether this configuration is active or not.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>true</code>.</p>
 <hr>
 <h3>setGroupName()</h3>
 <blockquote>
@@ -175,7 +175,7 @@ the information contained in <code>oClassInfo</code>.</p>
 <p><code>string</code></p>
 <p>Name of the class being created</p>
 <h5>oClassInfo?</h5>
-<p><a href="../../../../../../../sap.f/namespaces/sap/type-aliases/ClassInfo.html"><code>ClassInfo</code></a>&lt;<code>T</code>, <code>DragDropBase</code>&gt;</p>
+<p><code>ClassInfo</code>&lt;<code>T</code>, <code>DragDropBase</code>&gt;</p>
 <p>Object literal with information about the class</p>
 <h5>FNMetaImpl?</h5>
 <p><code>Function</code></p>
@@ -199,6 +199,6 @@ used by this class</p>
 <p><a href="../../../Element/classes/UI5Element.html"><code>UI5Element</code></a>.<a href="../../../Element/classes/UI5Element.html#getmetadata-1"><code>getMetadata</code></a></p>
 <hr>
 
-<footer>Generated from <code>@openui5/types@1.120.46</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@openui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

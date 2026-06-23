@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Class: SemanticPage — OpenUI5 TypeScript API</title>
-<meta name="description" content="Class: SemanticPage — OpenUI5 TypeScript API Reference (1.120.46)">
+<meta name="description" content="Class: SemanticPage — OpenUI5 TypeScript API Reference (1.120.0)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/openui5/1.120/sap.f/sap/f/semantic/SemanticPage/classes/SemanticPage.html">
 <meta property="og:title" content="Class: SemanticPage — OpenUI5 TypeScript API">
-<meta property="og:description" content="Class: SemanticPage — OpenUI5 TypeScript API Reference (1.120.46)">
+<meta property="og:description" content="Class: SemanticPage — OpenUI5 TypeScript API Reference (1.120.0)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/openui5/1.120/sap.f/sap/f/semantic/SemanticPage/classes/SemanticPage.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,11 +33,13 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../index.html">OpenUI5 API</a> › <a href="../../../../../../sap.f/README.html">sap.f</a> › sap › f › semantic › <a href="../../../../../../sap.f/sap/f/semantic/SemanticPage/README.html">SemanticPage</a> › classes</nav>
-<p><a href="../../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.46)</strong></a></p>
+<p><a href="../../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.0)</strong></a></p>
 <hr>
-<p><a href="../../../../../../README.html">OpenUI5 TypeScript API (1.120.46)</a> / <a href="../../../../../README.html">sap.f</a> / <a href="../README.html">sap/f/semantic/SemanticPage</a> / SemanticPage</p>
+<p><a href="../../../../../../README.html">OpenUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../README.html">sap.f</a> / <a href="../README.html">sap/f/semantic/SemanticPage</a> / SemanticPage</p>
 <h1>Class: SemanticPage</h1>
 <pre class="sig"><span class="kw">import</span> SemanticPage <span class="kw">from</span> <span class="str">"sap/f/semantic/SemanticPage"</span>;</pre>
+<h2>Since</h2>
+<p>1.46.0</p>
 <p>Provides enhanced functionality by internally aggregating sap.f.DynamicPage and contains controls
 with semantic-specific meaning.</p>
 <p>Overview:</p>
@@ -75,8 +77,6 @@ following predefined order:</p>
 <p>The responsive behavior of the <code>SemanticPage</code> depends on the behavior of the content that is displayed.
 To adjust the <code>SemanticPage</code> content padding, the <code>sapUiContentPadding</code>, <code>sapUiNoContentPadding</code>, and
 <code>sapUiResponsiveContentPadding</code> CSS classes can be used.</p>
-<h2>Since</h2>
-<p>1.46.0</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></li>
@@ -171,7 +171,6 @@ See:
 <blockquote>
 <p><strong>addTitleContent</strong>(<code>oTitleContent</code>): <code>this</code></p>
 </blockquote>
-<p>Adds some titleContent to the aggregation #getTitleContent titleContent.</p>
 <h4>Parameters</h4>
 <h5>oTitleContent</h5>
 <p><a href="../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></p>
@@ -181,6 +180,7 @@ See:
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.52</p>
+<p>Adds some titleContent to the aggregation #getTitleContent titleContent.</p>
 <hr>
 <h3>addTitleCustomIconAction()</h3>
 <blockquote>
@@ -310,12 +310,12 @@ See:
 <blockquote>
 <p><strong>destroyEditAction</strong>(): <code>this</code></p>
 </blockquote>
-<p>Destroys the editAction in the aggregation #getEditAction editAction.</p>
 <h4>Returns</h4>
 <p><code>this</code></p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.50</p>
+<p>Destroys the editAction in the aggregation #getEditAction editAction.</p>
 <hr>
 <h3>destroyExitFullScreenAction()</h3>
 <blockquote>
@@ -384,12 +384,12 @@ See:
 <blockquote>
 <p><strong>destroyLandmarkInfo</strong>(): <code>this</code></p>
 </blockquote>
-<p>Destroys the landmarkInfo in the aggregation #getLandmarkInfo landmarkInfo.</p>
 <h4>Returns</h4>
 <p><code>this</code></p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.61</p>
+<p>Destroys the landmarkInfo in the aggregation #getLandmarkInfo landmarkInfo.</p>
 <hr>
 <h3>destroyMessagesIndicator()</h3>
 <blockquote>
@@ -467,23 +467,23 @@ See:
 <blockquote>
 <p><strong>destroyTitleBreadcrumbs</strong>(): <code>this</code></p>
 </blockquote>
-<p>Destroys the titleBreadcrumbs in the aggregation #getTitleBreadcrumbs titleBreadcrumbs.</p>
 <h4>Returns</h4>
 <p><code>this</code></p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.52</p>
+<p>Destroys the titleBreadcrumbs in the aggregation #getTitleBreadcrumbs titleBreadcrumbs.</p>
 <hr>
 <h3>destroyTitleContent()</h3>
 <blockquote>
 <p><strong>destroyTitleContent</strong>(): <code>this</code></p>
 </blockquote>
-<p>Destroys all the titleContent in the aggregation #getTitleContent titleContent.</p>
 <h4>Returns</h4>
 <p><code>this</code></p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.52</p>
+<p>Destroys all the titleContent in the aggregation #getTitleContent titleContent.</p>
 <hr>
 <h3>destroyTitleCustomIconActions()</h3>
 <blockquote>
@@ -516,12 +516,12 @@ See:
 <blockquote>
 <p><strong>destroyTitleExpandedHeading</strong>(): <code>this</code></p>
 </blockquote>
-<p>Destroys the titleExpandedHeading in the aggregation #getTitleExpandedHeading titleExpandedHeading.</p>
 <h4>Returns</h4>
 <p><code>this</code></p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.58</p>
+<p>Destroys the titleExpandedHeading in the aggregation #getTitleExpandedHeading titleExpandedHeading.</p>
 <hr>
 <h3>destroyTitleHeading()</h3>
 <blockquote>
@@ -554,23 +554,23 @@ See:
 <blockquote>
 <p><strong>destroyTitleSnappedHeading</strong>(): <code>this</code></p>
 </blockquote>
-<p>Destroys the titleSnappedHeading in the aggregation #getTitleSnappedHeading titleSnappedHeading.</p>
 <h4>Returns</h4>
 <p><code>this</code></p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.58</p>
+<p>Destroys the titleSnappedHeading in the aggregation #getTitleSnappedHeading titleSnappedHeading.</p>
 <hr>
 <h3>destroyTitleSnappedOnMobile()</h3>
 <blockquote>
 <p><strong>destroyTitleSnappedOnMobile</strong>(): <code>this</code></p>
 </blockquote>
-<p>Destroys the titleSnappedOnMobile in the aggregation #getTitleSnappedOnMobile titleSnappedOnMobile.</p>
 <h4>Returns</h4>
 <p><code>this</code></p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.63</p>
+<p>Destroys the titleSnappedOnMobile in the aggregation #getTitleSnappedOnMobile titleSnappedOnMobile.</p>
 <hr>
 <h3>getAddAction()</h3>
 <blockquote>
@@ -680,15 +680,15 @@ second action.</p>
 <blockquote>
 <p><strong>getEditAction</strong>(): <a href="../../EditAction/classes/EditAction.html"><code>EditAction</code></a></p>
 </blockquote>
+<h4>Returns</h4>
+<p><a href="../../EditAction/classes/EditAction.html"><code>EditAction</code></a></p>
+<h4>Since</h4>
+<p>1.50</p>
 <p>Gets content of aggregation #getEditAction editAction.</p>
 <p>A semantic-specific button which is placed in the <code>TextActions</code> area of the <code>SemanticPage</code> title.</p>
 <p><strong>Note:</strong> If the <code>titleSnappedOnMobile</code> aggregation is set, its content overrides this aggregation when
 the control is viewed on a phone mobile device and the <code>SemanticPage</code> header is in its collapsed (snapped)
 state.</p>
-<h4>Returns</h4>
-<p><a href="../../EditAction/classes/EditAction.html"><code>EditAction</code></a></p>
-<h4>Since</h4>
-<p>1.50</p>
 <hr>
 <h3>getExitFullScreenAction()</h3>
 <blockquote>
@@ -718,17 +718,17 @@ state.</p>
 <blockquote>
 <p><strong>getFitContent</strong>(): <code>boolean</code></p>
 </blockquote>
+<h4>Returns</h4>
+<p><code>boolean</code></p>
+<p>Value of property <code>fitContent</code></p>
+<h4>Since</h4>
+<p>1.73</p>
 <p>Gets current value of property #getFitContent fitContent.</p>
 <p>Optimizes <code>SemanticPage</code> responsiveness on small screens and behavior when expanding/collapsing the <code>SemanticPageHeader</code>.</p>
 <p><strong>Note:</strong> It is recommended to use this property when displaying content of adaptive controls that stretch
 to fill the available space. Such controls may be sap.ui.table.Table and sap.ui.table.AnalyticalTable
 depending on their settings.</p>
 <p>Default value is <code>false</code>.</p>
-<h4>Returns</h4>
-<p><code>boolean</code></p>
-<p>Value of property <code>fitContent</code></p>
-<h4>Since</h4>
-<p>1.73</p>
 <hr>
 <h3>getFlagAction()</h3>
 <blockquote>
@@ -815,13 +815,13 @@ should not be set to <code>false</code> when initializing the control.</p>
 <blockquote>
 <p><strong>getLandmarkInfo</strong>(): <a href="../../../DynamicPageAccessibleLandmarkInfo/classes/DynamicPageAccessibleLandmarkInfo.html"><code>DynamicPageAccessibleLandmarkInfo</code></a></p>
 </blockquote>
-<p>Gets content of aggregation #getLandmarkInfo landmarkInfo.</p>
-<p>Accessible landmark settings to be applied to the containers of the <code>sap.f.SemanticPage</code> control.</p>
-<p>If not set, no landmarks will be written.</p>
 <h4>Returns</h4>
 <p><a href="../../../DynamicPageAccessibleLandmarkInfo/classes/DynamicPageAccessibleLandmarkInfo.html"><code>DynamicPageAccessibleLandmarkInfo</code></a></p>
 <h4>Since</h4>
 <p>1.61</p>
+<p>Gets content of aggregation #getLandmarkInfo landmarkInfo.</p>
+<p>Accessible landmark settings to be applied to the containers of the <code>sap.f.SemanticPage</code> control.</p>
+<p>If not set, no landmarks will be written.</p>
 <hr>
 <h3>getMessagesIndicator()</h3>
 <blockquote>
@@ -944,6 +944,11 @@ state.</p>
 <blockquote>
 <p><strong>getTitleAreaShrinkRatio</strong>(): <code>string</code></p>
 </blockquote>
+<h4>Returns</h4>
+<p><code>string</code></p>
+<p>Value of property <code>titleAreaShrinkRatio</code></p>
+<h4>Since</h4>
+<p>1.58</p>
 <p>Gets current value of property #getTitleAreaShrinkRatio titleAreaShrinkRatio.</p>
 <p>Assigns shrinking ratio to the <code>SemanticPage</code> title areas (Heading, Content, Actions). The greater value
 a section has the faster it shrinks when the screen size is being reduced.</p>
@@ -955,16 +960,15 @@ will be reduced by 20px, the Content area - by 70px and the Actions area - by 10
 <p>If all the areas have assigned values greater than 1, the numbers are scaled so that at least one of
 them is equal to 1. For example, value of <code>2:4:8</code> is equal to <code>1:2:4</code>.</p>
 <p>Default value is <code>&quot;1:1.6:1.6&quot;</code>.</p>
-<h4>Returns</h4>
-<p><code>string</code></p>
-<p>Value of property <code>titleAreaShrinkRatio</code></p>
-<h4>Since</h4>
-<p>1.58</p>
 <hr>
 <h3>getTitleBreadcrumbs()</h3>
 <blockquote>
 <p><strong>getTitleBreadcrumbs</strong>(): <a href="../../../../../../sap.m/sap/m/library/interfaces/IBreadcrumbs.html"><code>IBreadcrumbs</code></a></p>
 </blockquote>
+<h4>Returns</h4>
+<p><a href="../../../../../../sap.m/sap/m/library/interfaces/IBreadcrumbs.html"><code>IBreadcrumbs</code></a></p>
+<h4>Since</h4>
+<p>1.52</p>
 <p>Gets content of aggregation #getTitleBreadcrumbs titleBreadcrumbs.</p>
 <p>The <code>SemanticPage</code> breadcrumbs.</p>
 <p>A typical usage is the <code>sap.m.Breadcrumbs</code> control or any other UI5 control, that implements the <code>sap.m.IBreadcrumbs</code>
@@ -972,15 +976,15 @@ interface.</p>
 <p><strong>Notes:</strong>
 	 - The control will be placed in the title<code>s top-left area. 	 - If the </code>titleSnappedOnMobile<code>aggregation is set, its content overrides this aggregation when the     control is viewed on a phone mobile device and the</code>SemanticPage` header is in its collapsed (snapped)
     state.</p>
-<h4>Returns</h4>
-<p><a href="../../../../../../sap.m/sap/m/library/interfaces/IBreadcrumbs.html"><code>IBreadcrumbs</code></a></p>
-<h4>Since</h4>
-<p>1.52</p>
 <hr>
 <h3>getTitleContent()</h3>
 <blockquote>
 <p><strong>getTitleContent</strong>(): <a href="../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a>[]</p>
 </blockquote>
+<h4>Returns</h4>
+<p><a href="../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a>[]</p>
+<h4>Since</h4>
+<p>1.52</p>
 <p>Gets content of aggregation #getTitleContent titleContent.</p>
 <p>The content, displayed in the title.</p>
 <p><strong>Notes:</strong>
@@ -988,10 +992,6 @@ interface.</p>
 	 - If the <code>titleSnappedOnMobile</code> aggregation is set, its content overrides this aggregation when the
     control is viewed on a phone mobile device and the <code>SemanticPage</code> header is in its collapsed (snapped)
     state.</p>
-<h4>Returns</h4>
-<p><a href="../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a>[]</p>
-<h4>Since</h4>
-<p>1.52</p>
 <hr>
 <h3>getTitleCustomIconActions()</h3>
 <blockquote>
@@ -1036,6 +1036,10 @@ before the semantic text action.</p>
 <blockquote>
 <p><strong>getTitleExpandedHeading</strong>(): <a href="../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></p>
 </blockquote>
+<h4>Returns</h4>
+<p><a href="../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></p>
+<h4>Since</h4>
+<p>1.58</p>
 <p>Gets content of aggregation #getTitleExpandedHeading titleExpandedHeading.</p>
 <p>The <code>titleExpandedHeading</code> is positioned in the <code>SemanticPage</code> title left area and is displayed when
 the header is in expanded state only. Use this aggregation to display a title (or any other UI5 control
@@ -1043,10 +1047,6 @@ that serves as a heading) that has to be present in expanded state only.</p>
 <p><strong>Note:</strong> In order for <code>titleExpandedHeading</code> to be taken into account, <code>titleHeading</code> has to be empty.
 Combine <code>titleExpandedHeading</code> with <code>titleSnappedHeading</code> to switch content when the header switches
 state.</p>
-<h4>Returns</h4>
-<p><a href="../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></p>
-<h4>Since</h4>
-<p>1.58</p>
 <hr>
 <h3>getTitleHeading()</h3>
 <blockquote>
@@ -1077,10 +1077,6 @@ state.</p>
 <blockquote>
 <p><strong>getTitlePrimaryArea</strong>(): <code>&quot;Begin&quot;</code> | <a href="../../../library/enumerations/DynamicPageTitleArea.html"><code>DynamicPageTitleArea</code></a> | <code>&quot;Middle&quot;</code></p>
 </blockquote>
-<p>Gets current value of property #getTitlePrimaryArea titlePrimaryArea.</p>
-<p>Determines which of the title areas (Begin, Middle) is primary.</p>
-<p><strong>Note:</strong> The primary area is shrinking at a lower rate, remaining visible as long as it can.</p>
-<p>Default value is <code>Begin</code>.</p>
 <h4>Returns</h4>
 <p><code>&quot;Begin&quot;</code> | <a href="../../../library/enumerations/DynamicPageTitleArea.html"><code>DynamicPageTitleArea</code></a> | <code>&quot;Middle&quot;</code></p>
 <p>Value of property <code>titlePrimaryArea</code></p>
@@ -1095,6 +1091,10 @@ reduced.</p>
 for example <code>1:1.6:1.6</code>.</p>
 <p><code>titlePrimaryArea=Middle</code> can be achieved by setting a low number for the Content area to <code>titleAreaShrinkRatio</code>,
 for example <code>1.6:1:1.6</code>.</p>
+<p>Gets current value of property #getTitlePrimaryArea titlePrimaryArea.</p>
+<p>Determines which of the title areas (Begin, Middle) is primary.</p>
+<p><strong>Note:</strong> The primary area is shrinking at a lower rate, remaining visible as long as it can.</p>
+<p>Default value is <code>Begin</code>.</p>
 <hr>
 <h3>getTitleSnappedContent()</h3>
 <blockquote>
@@ -1112,6 +1112,10 @@ for example <code>1.6:1:1.6</code>.</p>
 <blockquote>
 <p><strong>getTitleSnappedHeading</strong>(): <a href="../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></p>
 </blockquote>
+<h4>Returns</h4>
+<p><a href="../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></p>
+<h4>Since</h4>
+<p>1.58</p>
 <p>Gets content of aggregation #getTitleSnappedHeading titleSnappedHeading.</p>
 <p>The <code>titleSnappedHeading</code> is positioned in the <code>SemanticPage</code> title left area and is displayed when the
 header is in collapsed (snapped) state only. Use this aggregation to display a title (or any other UI5
@@ -1122,15 +1126,15 @@ control that serves as a heading) that has to be present in collapsed state only
 	 - If the <code>titleSnappedOnMobile</code> aggregation is set, its content overrides this aggregation when the
     control is viewed on a phone mobile device and the <code>SemanticPage</code> header is in its collapsed (snapped)
     state.</p>
-<h4>Returns</h4>
-<p><a href="../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></p>
-<h4>Since</h4>
-<p>1.58</p>
 <hr>
 <h3>getTitleSnappedOnMobile()</h3>
 <blockquote>
 <p><strong>getTitleSnappedOnMobile</strong>(): <a href="../../../../../../sap.m/sap/m/Title/classes/Title.html"><code>Title</code></a></p>
 </blockquote>
+<h4>Returns</h4>
+<p><a href="../../../../../../sap.m/sap/m/Title/classes/Title.html"><code>Title</code></a></p>
+<h4>Since</h4>
+<p>1.63</p>
 <p>Gets content of aggregation #getTitleSnappedOnMobile titleSnappedOnMobile.</p>
 <p>The only content that is displayed in the <code>SemanticPage</code> title when it is viewed on a phone mobile device
 and the <code>SemanticPage</code> header is in collapsed (snapped) state.</p>
@@ -1139,10 +1143,6 @@ smaller phone screens when the <code>SemanticPage</code> header is in its collap
 <p><strong>Note:</strong> The content set in this aggregation overrides all the other <code>SemanticPage</code> aggregations displayed
 in the title and is only visible on phone mobile devices in collapsed (snapped) state of the <code>SemanticPage</code>
 header.</p>
-<h4>Returns</h4>
-<p><a href="../../../../../../sap.m/sap/m/Title/classes/Title.html"><code>Title</code></a></p>
-<h4>Since</h4>
-<p>1.63</p>
 <hr>
 <h3>getToggleHeaderOnTitleClick()</h3>
 <blockquote>
@@ -1204,8 +1204,6 @@ and returns its index if found or -1 otherwise.</p>
 <blockquote>
 <p><strong>indexOfTitleContent</strong>(<code>oTitleContent</code>): <code>number</code></p>
 </blockquote>
-<p>Checks for the provided <code>sap.ui.core.Control</code> in the aggregation #getTitleContent titleContent.
-and returns its index if found or -1 otherwise.</p>
 <h4>Parameters</h4>
 <h5>oTitleContent</h5>
 <p><a href="../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></p>
@@ -1215,6 +1213,8 @@ and returns its index if found or -1 otherwise.</p>
 <p>The index of the provided control in the aggregation if found, or -1 otherwise</p>
 <h4>Since</h4>
 <p>1.52</p>
+<p>Checks for the provided <code>sap.ui.core.Control</code> in the aggregation #getTitleContent titleContent.
+and returns its index if found or -1 otherwise.</p>
 <hr>
 <h3>indexOfTitleCustomIconAction()</h3>
 <blockquote>
@@ -1330,7 +1330,6 @@ is inserted at the last position</p>
 <blockquote>
 <p><strong>insertTitleContent</strong>(<code>oTitleContent</code>, <code>iIndex</code>): <code>this</code></p>
 </blockquote>
-<p>Inserts a titleContent into the aggregation #getTitleContent titleContent.</p>
 <h4>Parameters</h4>
 <h5>oTitleContent</h5>
 <p><a href="../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></p>
@@ -1345,6 +1344,7 @@ is inserted at the last position</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.52</p>
+<p>Inserts a titleContent into the aggregation #getTitleContent titleContent.</p>
 <hr>
 <h3>insertTitleCustomIconAction()</h3>
 <blockquote>
@@ -1452,13 +1452,13 @@ the titleSnappedContent is inserted at the last position</p>
 <blockquote>
 <p><strong>removeAllTitleContent</strong>(): <a href="../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a>[]</p>
 </blockquote>
-<p>Removes all the controls from the aggregation #getTitleContent titleContent.</p>
-<p>Additionally, it unregisters them from the hosting UIArea.</p>
 <h4>Returns</h4>
 <p><a href="../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a>[]</p>
 <p>An array of the removed elements (might be empty)</p>
 <h4>Since</h4>
 <p>1.52</p>
+<p>Removes all the controls from the aggregation #getTitleContent titleContent.</p>
+<p>Additionally, it unregisters them from the hosting UIArea.</p>
 <hr>
 <h3>removeAllTitleCustomIconActions()</h3>
 <blockquote>
@@ -1543,7 +1543,6 @@ the titleSnappedContent is inserted at the last position</p>
 <blockquote>
 <p><strong>removeTitleContent</strong>(<code>vTitleContent</code>): <a href="../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></p>
 </blockquote>
-<p>Removes a titleContent from the aggregation #getTitleContent titleContent.</p>
 <h4>Parameters</h4>
 <h5>vTitleContent</h5>
 <p><code>string</code> | <code>number</code> | <a href="../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></p>
@@ -1553,6 +1552,7 @@ the titleSnappedContent is inserted at the last position</p>
 <p>The removed titleContent or <code>null</code></p>
 <h4>Since</h4>
 <p>1.52</p>
+<p>Removes a titleContent from the aggregation #getTitleContent titleContent.</p>
 <hr>
 <h3>removeTitleCustomIconAction()</h3>
 <blockquote>
@@ -1701,7 +1701,6 @@ the titleSnappedContent is inserted at the last position</p>
 <blockquote>
 <p><strong>setEditAction</strong>(<code>oEditAction</code>): <code>this</code></p>
 </blockquote>
-<p>Sets the aggregated #getEditAction editAction.</p>
 <h4>Parameters</h4>
 <h5>oEditAction</h5>
 <p><a href="../../EditAction/classes/EditAction.html"><code>EditAction</code></a></p>
@@ -1711,6 +1710,7 @@ the titleSnappedContent is inserted at the last position</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.50</p>
+<p>Sets the aggregated #getEditAction editAction.</p>
 <hr>
 <h3>setExitFullScreenAction()</h3>
 <blockquote>
@@ -1742,13 +1742,6 @@ the titleSnappedContent is inserted at the last position</p>
 <blockquote>
 <p><strong>setFitContent</strong>(<code>bFitContent?</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getFitContent fitContent.</p>
-<p>Optimizes <code>SemanticPage</code> responsiveness on small screens and behavior when expanding/collapsing the <code>SemanticPageHeader</code>.</p>
-<p><strong>Note:</strong> It is recommended to use this property when displaying content of adaptive controls that stretch
-to fill the available space. Such controls may be sap.ui.table.Table and sap.ui.table.AnalyticalTable
-depending on their settings.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>false</code>.</p>
 <h4>Parameters</h4>
 <h5>bFitContent?</h5>
 <p><code>boolean</code></p>
@@ -1758,6 +1751,13 @@ depending on their settings.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.73</p>
+<p>Sets a new value for property #getFitContent fitContent.</p>
+<p>Optimizes <code>SemanticPage</code> responsiveness on small screens and behavior when expanding/collapsing the <code>SemanticPageHeader</code>.</p>
+<p><strong>Note:</strong> It is recommended to use this property when displaying content of adaptive controls that stretch
+to fill the available space. Such controls may be sap.ui.table.Table and sap.ui.table.AnalyticalTable
+depending on their settings.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>false</code>.</p>
 <hr>
 <h3>setFlagAction()</h3>
 <blockquote>
@@ -1838,7 +1838,6 @@ should not be set to <code>false</code> when initializing the control.</p>
 <blockquote>
 <p><strong>setLandmarkInfo</strong>(<code>oLandmarkInfo</code>): <code>this</code></p>
 </blockquote>
-<p>Sets the aggregated #getLandmarkInfo landmarkInfo.</p>
 <h4>Parameters</h4>
 <h5>oLandmarkInfo</h5>
 <p><a href="../../../DynamicPageAccessibleLandmarkInfo/classes/DynamicPageAccessibleLandmarkInfo.html"><code>DynamicPageAccessibleLandmarkInfo</code></a></p>
@@ -1848,6 +1847,7 @@ should not be set to <code>false</code> when initializing the control.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.61</p>
+<p>Sets the aggregated #getLandmarkInfo landmarkInfo.</p>
 <hr>
 <h3>setMessagesIndicator()</h3>
 <blockquote>
@@ -1994,6 +1994,15 @@ than a given threshold.</p>
 <blockquote>
 <p><strong>setTitleAreaShrinkRatio</strong>(<code>sTitleAreaShrinkRatio?</code>): <code>this</code></p>
 </blockquote>
+<h4>Parameters</h4>
+<h5>sTitleAreaShrinkRatio?</h5>
+<p><code>string</code></p>
+<p>New value for property <code>titleAreaShrinkRatio</code></p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<h4>Since</h4>
+<p>1.58</p>
 <p>Sets a new value for property #getTitleAreaShrinkRatio titleAreaShrinkRatio.</p>
 <p>Assigns shrinking ratio to the <code>SemanticPage</code> title areas (Heading, Content, Actions). The greater value
 a section has the faster it shrinks when the screen size is being reduced.</p>
@@ -2006,21 +2015,11 @@ will be reduced by 20px, the Content area - by 70px and the Actions area - by 10
 them is equal to 1. For example, value of <code>2:4:8</code> is equal to <code>1:2:4</code>.</p>
 <p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <p>Default value is <code>&quot;1:1.6:1.6&quot;</code>.</p>
-<h4>Parameters</h4>
-<h5>sTitleAreaShrinkRatio?</h5>
-<p><code>string</code></p>
-<p>New value for property <code>titleAreaShrinkRatio</code></p>
-<h4>Returns</h4>
-<p><code>this</code></p>
-<p>Reference to <code>this</code> in order to allow method chaining</p>
-<h4>Since</h4>
-<p>1.58</p>
 <hr>
 <h3>setTitleBreadcrumbs()</h3>
 <blockquote>
 <p><strong>setTitleBreadcrumbs</strong>(<code>oTitleBreadcrumbs</code>): <code>this</code></p>
 </blockquote>
-<p>Sets the aggregated #getTitleBreadcrumbs titleBreadcrumbs.</p>
 <h4>Parameters</h4>
 <h5>oTitleBreadcrumbs</h5>
 <p><a href="../../../../../../sap.m/sap/m/library/interfaces/IBreadcrumbs.html"><code>IBreadcrumbs</code></a></p>
@@ -2030,12 +2029,12 @@ them is equal to 1. For example, value of <code>2:4:8</code> is equal to <code>1
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.52</p>
+<p>Sets the aggregated #getTitleBreadcrumbs titleBreadcrumbs.</p>
 <hr>
 <h3>setTitleExpandedHeading()</h3>
 <blockquote>
 <p><strong>setTitleExpandedHeading</strong>(<code>oTitleExpandedHeading</code>): <code>this</code></p>
 </blockquote>
-<p>Sets the aggregated #getTitleExpandedHeading titleExpandedHeading.</p>
 <h4>Parameters</h4>
 <h5>oTitleExpandedHeading</h5>
 <p><a href="../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></p>
@@ -2045,6 +2044,7 @@ them is equal to 1. For example, value of <code>2:4:8</code> is equal to <code>1
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.58</p>
+<p>Sets the aggregated #getTitleExpandedHeading titleExpandedHeading.</p>
 <hr>
 <h3>setTitleHeading()</h3>
 <blockquote>
@@ -2076,7 +2076,6 @@ them is equal to 1. For example, value of <code>2:4:8</code> is equal to <code>1
 <blockquote>
 <p><strong>setTitleSnappedHeading</strong>(<code>oTitleSnappedHeading</code>): <code>this</code></p>
 </blockquote>
-<p>Sets the aggregated #getTitleSnappedHeading titleSnappedHeading.</p>
 <h4>Parameters</h4>
 <h5>oTitleSnappedHeading</h5>
 <p><a href="../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></p>
@@ -2086,12 +2085,12 @@ them is equal to 1. For example, value of <code>2:4:8</code> is equal to <code>1
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.58</p>
+<p>Sets the aggregated #getTitleSnappedHeading titleSnappedHeading.</p>
 <hr>
 <h3>setTitleSnappedOnMobile()</h3>
 <blockquote>
 <p><strong>setTitleSnappedOnMobile</strong>(<code>oTitleSnappedOnMobile</code>): <code>this</code></p>
 </blockquote>
-<p>Sets the aggregated #getTitleSnappedOnMobile titleSnappedOnMobile.</p>
 <h4>Parameters</h4>
 <h5>oTitleSnappedOnMobile</h5>
 <p><a href="../../../../../../sap.m/sap/m/Title/classes/Title.html"><code>Title</code></a></p>
@@ -2101,6 +2100,7 @@ them is equal to 1. For example, value of <code>2:4:8</code> is equal to <code>1
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.63</p>
+<p>Sets the aggregated #getTitleSnappedOnMobile titleSnappedOnMobile.</p>
 <hr>
 <h3>setToggleHeaderOnTitleClick()</h3>
 <blockquote>
@@ -2136,7 +2136,7 @@ the information contained in <code>oClassInfo</code>.</p>
 <p><code>string</code></p>
 <p>Name of the class being created</p>
 <h5>oClassInfo?</h5>
-<p><a href="../../../../../namespaces/sap/type-aliases/ClassInfo.html"><code>ClassInfo</code></a>&lt;<code>T</code>, <code>SemanticPage</code>&gt;</p>
+<p><code>ClassInfo</code>&lt;<code>T</code>, <code>SemanticPage</code>&gt;</p>
 <p>Object literal with information about the class</p>
 <h5>FNMetaImpl?</h5>
 <p><code>Function</code></p>
@@ -2160,6 +2160,6 @@ used by this class</p>
 <p><a href="../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a>.<a href="../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html#getmetadata-1"><code>getMetadata</code></a></p>
 <hr>
 
-<footer>Generated from <code>@openui5/types@1.120.46</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@openui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

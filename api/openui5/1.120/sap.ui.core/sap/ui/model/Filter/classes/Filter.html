@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Class: Filter — OpenUI5 TypeScript API</title>
-<meta name="description" content="Class: Filter — OpenUI5 TypeScript API Reference (1.120.46)">
+<meta name="description" content="Class: Filter — OpenUI5 TypeScript API Reference (1.120.0)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/openui5/1.120/sap.ui.core/sap/ui/model/Filter/classes/Filter.html">
 <meta property="og:title" content="Class: Filter — OpenUI5 TypeScript API">
-<meta property="og:description" content="Class: Filter — OpenUI5 TypeScript API Reference (1.120.46)">
+<meta property="og:description" content="Class: Filter — OpenUI5 TypeScript API Reference (1.120.0)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/openui5/1.120/sap.ui.core/sap/ui/model/Filter/classes/Filter.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,9 +33,9 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../index.html">OpenUI5 API</a> › <a href="../../../../../../sap.ui.core/README.html">sap.ui.core</a> › sap › ui › model › <a href="../../../../../../sap.ui.core/sap/ui/model/Filter/README.html">Filter</a> › classes</nav>
-<p><a href="../../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.46)</strong></a></p>
+<p><a href="../../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.0)</strong></a></p>
 <hr>
-<p><a href="../../../../../../README.html">OpenUI5 TypeScript API (1.120.46)</a> / <a href="../../../../../README.html">sap.ui.core</a> / <a href="../README.html">sap/ui/model/Filter</a> / Filter</p>
+<p><a href="../../../../../../README.html">OpenUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../README.html">sap.ui.core</a> / <a href="../README.html">sap/ui/model/Filter</a> / Filter</p>
 <h1>Class: Filter</h1>
 <pre class="sig"><span class="kw">import</span> Filter <span class="kw">from</span> <span class="str">"sap/ui/model/Filter"</span>;</pre>
 <p>Filter for the list binding.</p>
@@ -137,143 +137,143 @@ and sap.ui.model.FilterOperator.NB &quot;NB&quot; not between filter operators</
 <blockquote>
 <p><code>static</code> <strong>NONE</strong>: <code>Filter</code></p>
 </blockquote>
+<h4>Since</h4>
+<p>1.120.0</p>
 <p>A filter instance that is never fulfilled. When used to filter a list, no back-end request is sent and
 only transient entries remain.</p>
 <p><strong>Note:</strong> Not all model implementations support this filter.</p>
-<h4>Since</h4>
-<p>1.120.0</p>
 <h2>Methods</h2>
 <h3>getComparator()</h3>
 <blockquote>
 <p><strong>getComparator</strong>(): (<code>p1</code>) =&gt; <code>boolean</code></p>
 </blockquote>
-<p>Returns the comparator function as provided on construction of this filter, see sap.ui.model.Filter#constructor,
-parameter <code>vFilterInfo.comparator</code>.</p>
 <h4>Returns</h4>
 <p>The comparator function</p>
 <p>(<code>p1</code>) =&gt; <code>boolean</code></p>
 <h4>Since</h4>
 <p>1.96.0</p>
+<p>Returns the comparator function as provided on construction of this filter, see sap.ui.model.Filter#constructor,
+parameter <code>vFilterInfo.comparator</code>.</p>
 <hr>
 <h3>getCondition()</h3>
 <blockquote>
 <p><strong>getCondition</strong>(): <code>Filter</code></p>
 </blockquote>
-<p>Returns the filter instance which is used as the condition for lambda operators, see sap.ui.model.Filter#constructor,
-parameter <code>vFilterInfo.condition</code>.</p>
 <h4>Returns</h4>
 <p><code>Filter</code></p>
 <p>The filter instance</p>
 <h4>Since</h4>
 <p>1.96.0</p>
+<p>Returns the filter instance which is used as the condition for lambda operators, see sap.ui.model.Filter#constructor,
+parameter <code>vFilterInfo.condition</code>.</p>
 <hr>
 <h3>getFilters()</h3>
 <blockquote>
 <p><strong>getFilters</strong>(): <code>Filter</code>[]</p>
 </blockquote>
-<p>Returns the array of filters as specified on construction of this filter, see sap.ui.model.Filter#constructor,
-parameter <code>vFilterInfo.filters</code></p>
 <h4>Returns</h4>
 <p><code>Filter</code>[]</p>
 <p>The array of filters</p>
 <h4>Since</h4>
 <p>1.96.0</p>
+<p>Returns the array of filters as specified on construction of this filter, see sap.ui.model.Filter#constructor,
+parameter <code>vFilterInfo.filters</code></p>
 <hr>
 <h3>getOperator()</h3>
 <blockquote>
 <p><strong>getOperator</strong>(): <code>&quot;All&quot;</code> | <code>&quot;BT&quot;</code> | <code>&quot;Contains&quot;</code> | <code>&quot;EndsWith&quot;</code> | <code>&quot;EQ&quot;</code> | <code>&quot;GE&quot;</code> | <code>&quot;GT&quot;</code> | <code>&quot;LE&quot;</code> | <code>&quot;LT&quot;</code> | <code>&quot;NotContains&quot;</code> | <code>&quot;NotEndsWith&quot;</code> | <code>&quot;NotStartsWith&quot;</code> | <code>&quot;StartsWith&quot;</code> | <a href="../../FilterOperator/enumerations/FilterOperator.html"><code>FilterOperator</code></a> | <code>&quot;Any&quot;</code> | <code>&quot;NB&quot;</code> | <code>&quot;NE&quot;</code></p>
 </blockquote>
-<p>Returns the filter operator used for this filter, see sap.ui.model.Filter#constructor, parameter
-<code>vFilterInfo.operator</code> or <code>vOperator</code>.</p>
 <h4>Returns</h4>
 <p><code>&quot;All&quot;</code> | <code>&quot;BT&quot;</code> | <code>&quot;Contains&quot;</code> | <code>&quot;EndsWith&quot;</code> | <code>&quot;EQ&quot;</code> | <code>&quot;GE&quot;</code> | <code>&quot;GT&quot;</code> | <code>&quot;LE&quot;</code> | <code>&quot;LT&quot;</code> | <code>&quot;NotContains&quot;</code> | <code>&quot;NotEndsWith&quot;</code> | <code>&quot;NotStartsWith&quot;</code> | <code>&quot;StartsWith&quot;</code> | <a href="../../FilterOperator/enumerations/FilterOperator.html"><code>FilterOperator</code></a> | <code>&quot;Any&quot;</code> | <code>&quot;NB&quot;</code> | <code>&quot;NE&quot;</code></p>
 <p>The operator</p>
 <h4>Since</h4>
 <p>1.96.0</p>
+<p>Returns the filter operator used for this filter, see sap.ui.model.Filter#constructor, parameter
+<code>vFilterInfo.operator</code> or <code>vOperator</code>.</p>
 <hr>
 <h3>getPath()</h3>
 <blockquote>
 <p><strong>getPath</strong>(): <code>string</code></p>
 </blockquote>
-<p>Returns the binding path for this filter, see sap.ui.model.Filter#constructor, parameter <code>vFilterInfo</code>
-or <code>vFilterInfo.path</code>.</p>
 <h4>Returns</h4>
 <p><code>string</code></p>
 <p>The binding path</p>
 <h4>Since</h4>
 <p>1.96.0</p>
+<p>Returns the binding path for this filter, see sap.ui.model.Filter#constructor, parameter <code>vFilterInfo</code>
+or <code>vFilterInfo.path</code>.</p>
 <hr>
 <h3>getTest()</h3>
 <blockquote>
 <p><strong>getTest</strong>(): (<code>p1</code>, <code>p2</code>) =&gt; <code>boolean</code></p>
 </blockquote>
-<p>Returns the test function which is used to filter the items, see sap.ui.model.Filter#constructor,
-parameter <code>vFilterInfo.test</code>.</p>
 <h4>Returns</h4>
 <p>The test function</p>
 <p>(<code>p1</code>, <code>p2</code>) =&gt; <code>boolean</code></p>
 <h4>Since</h4>
 <p>1.96.0</p>
+<p>Returns the test function which is used to filter the items, see sap.ui.model.Filter#constructor,
+parameter <code>vFilterInfo.test</code>.</p>
 <hr>
 <h3>getValue1()</h3>
 <blockquote>
 <p><strong>getValue1</strong>(): <code>any</code></p>
 </blockquote>
-<p>Returns the first value that is used with the given filter operator, see sap.ui.model.Filter#constructor,
-parameter <code>vFilterInfo.value1</code> or <code>vValue1</code>.</p>
 <h4>Returns</h4>
 <p><code>any</code></p>
 <p>The first value</p>
 <h4>Since</h4>
 <p>1.96.0</p>
+<p>Returns the first value that is used with the given filter operator, see sap.ui.model.Filter#constructor,
+parameter <code>vFilterInfo.value1</code> or <code>vValue1</code>.</p>
 <hr>
 <h3>getValue2()</h3>
 <blockquote>
 <p><strong>getValue2</strong>(): <code>any</code></p>
 </blockquote>
-<p>Returns the second value that is used with the given filter operator, see sap.ui.model.Filter#constructor,
-parameter <code>vFilterInfo.value2</code> or <code>vValue2</code>.</p>
 <h4>Returns</h4>
 <p><code>any</code></p>
 <p>The second value</p>
 <h4>Since</h4>
 <p>1.96.0</p>
+<p>Returns the second value that is used with the given filter operator, see sap.ui.model.Filter#constructor,
+parameter <code>vFilterInfo.value2</code> or <code>vValue2</code>.</p>
 <hr>
 <h3>getVariable()</h3>
 <blockquote>
 <p><strong>getVariable</strong>(): <code>string</code></p>
 </blockquote>
-<p>Returns the variable name used in lambda operators, see sap.ui.model.Filter#constructor, parameter
-<code>vFilterInfo.variable</code>.</p>
 <h4>Returns</h4>
 <p><code>string</code></p>
 <p>The variable name</p>
 <h4>Since</h4>
 <p>1.96.0</p>
+<p>Returns the variable name used in lambda operators, see sap.ui.model.Filter#constructor, parameter
+<code>vFilterInfo.variable</code>.</p>
 <hr>
 <h3>isAnd()</h3>
 <blockquote>
 <p><strong>isAnd</strong>(): <code>boolean</code></p>
 </blockquote>
-<p>Indicates whether an &quot;AND&quot; logical conjunction is applied on the filters, see sap.ui.model.Filter#constructor,
-parameter <code>vFilterInfo.and</code>.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>Whether &quot;AND&quot; is being applied</p>
 <h4>Since</h4>
 <p>1.96.0</p>
+<p>Indicates whether an &quot;AND&quot; logical conjunction is applied on the filters, see sap.ui.model.Filter#constructor,
+parameter <code>vFilterInfo.and</code>.</p>
 <hr>
 <h3>isCaseSensitive()</h3>
 <blockquote>
 <p><strong>isCaseSensitive</strong>(): <code>boolean</code></p>
 </blockquote>
-<p>Indicates whether a string value should be compared case sensitive, see sap.ui.model.Filter#constructor,
-parameter <code>vFilterInfo.caseSensitive</code>.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>Whether the string values should be compared case sensitive</p>
 <h4>Since</h4>
 <p>1.96.0</p>
+<p>Indicates whether a string value should be compared case sensitive, see sap.ui.model.Filter#constructor,
+parameter <code>vFilterInfo.caseSensitive</code>.</p>
 <hr>
 <h3>defaultComparator()</h3>
 <blockquote>
@@ -310,7 +310,7 @@ contained in <code>oClassInfo</code>.</p>
 <p><code>string</code></p>
 <p>Name of the class being created</p>
 <h5>oClassInfo?</h5>
-<p><a href="../../../../../../sap.f/namespaces/sap/type-aliases/ClassInfo.html"><code>ClassInfo</code></a>&lt;<code>T</code>, <code>Filter</code>&gt;</p>
+<p><code>ClassInfo</code>&lt;<code>T</code>, <code>Filter</code>&gt;</p>
 <p>Object literal with information about the class</p>
 <h5>FNMetaImpl?</h5>
 <p><code>Function</code></p>
@@ -332,6 +332,6 @@ used by this class</p>
 <p>Metadata object describing this class</p>
 <hr>
 
-<footer>Generated from <code>@openui5/types@1.120.46</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@openui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Class: SidePanel — OpenUI5 TypeScript API</title>
-<meta name="description" content="Class: SidePanel — OpenUI5 TypeScript API Reference (1.120.46)">
+<meta name="description" content="Class: SidePanel — OpenUI5 TypeScript API Reference (1.120.0)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/openui5/1.120/sap.f/sap/f/SidePanel/classes/SidePanel.html">
 <meta property="og:title" content="Class: SidePanel — OpenUI5 TypeScript API">
-<meta property="og:description" content="Class: SidePanel — OpenUI5 TypeScript API Reference (1.120.46)">
+<meta property="og:description" content="Class: SidePanel — OpenUI5 TypeScript API Reference (1.120.0)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/openui5/1.120/sap.f/sap/f/SidePanel/classes/SidePanel.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,11 +33,13 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../index.html">OpenUI5 API</a> › <a href="../../../../../sap.f/README.html">sap.f</a> › sap › f › <a href="../../../../../sap.f/sap/f/SidePanel/README.html">SidePanel</a> › classes</nav>
-<p><a href="../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.46)</strong></a></p>
+<p><a href="../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.0)</strong></a></p>
 <hr>
-<p><a href="../../../../../README.html">OpenUI5 TypeScript API (1.120.46)</a> / <a href="../../../../README.html">sap.f</a> / <a href="../README.html">sap/f/SidePanel</a> / SidePanel</p>
+<p><a href="../../../../../README.html">OpenUI5 TypeScript API (1.120.0)</a> / <a href="../../../../README.html">sap.f</a> / <a href="../README.html">sap/f/SidePanel</a> / SidePanel</p>
 <h1>Class: SidePanel</h1>
 <pre class="sig"><span class="kw">import</span> SidePanel <span class="kw">from</span> <span class="str">"sap/f/SidePanel"</span>;</pre>
+<h2>Since</h2>
+<p>1.107</p>
 <p>Overview:</p>
 <p><code>SidePanel</code> is a layout control that allows primary and additional content to be displayed by choosing
 the action items from its action bar.</p>
@@ -94,8 +96,6 @@ side panel with the regular step
  - [Shift] + [Arrow Left] or [Shift] + [Arrow Up] / [Shift] + [Arrow Right] or [Shift] + [Arrow Down]
 - increase/decrease the width of the expanded side panel with the larger step
 </code></pre>
-<h2>Since</h2>
-<p>1.107</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></li>
@@ -260,9 +260,6 @@ action item) will not be fired and the new side content will not be displayed.
 <blockquote>
 <p><strong>fireToggle</strong>(<code>mParameters?</code>): <code>boolean</code></p>
 </blockquote>
-<p>Fires event #event:toggle toggle to attached listeners.</p>
-<p>Listeners may prevent the default action of this event by calling the <code>preventDefault</code> method on the
-event object. The return value of this method indicates whether the default action should be executed.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/SidePanel$ToggleEventParameters.html"><code>SidePanel$ToggleEventParameters</code></a></p>
@@ -272,6 +269,9 @@ event object. The return value of this method indicates whether the default acti
 <p>Whether or not to prevent the default action</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:toggle toggle to attached listeners.</p>
+<p>Listeners may prevent the default action of this event by calling the <code>preventDefault</code> method on the
+event object. The return value of this method indicates whether the default action should be executed.</p>
 <hr>
 <h3>getActionBarExpanded()</h3>
 <blockquote>
@@ -326,31 +326,31 @@ or <code>null</code>.</p>
 <blockquote>
 <p><strong>getSidePanelMaxWidth</strong>(): <code>string</code></p>
 </blockquote>
-<p>Gets current value of property #getSidePanelMaxWidth sidePanelMaxWidth.</p>
-<p>Determines the maximum side panel width (Side Content width + Action Bar width). <strong>Note:</strong> if the width
-is given in percent(%), it is calculated as given percent from the Side Panel parent container width,
-otherwise it&#39;s calculated in absolute units.</p>
-<p>Default value is <code>&quot;90%&quot;</code>.</p>
 <h4>Returns</h4>
 <p><code>string</code></p>
 <p>Value of property <code>sidePanelMaxWidth</code></p>
 <h4>Since</h4>
 <p>1.109.0</p>
+<p>Gets current value of property #getSidePanelMaxWidth sidePanelMaxWidth.</p>
+<p>Determines the maximum side panel width (Side Content width + Action Bar width). <strong>Note:</strong> if the width
+is given in percent(%), it is calculated as given percent from the Side Panel parent container width,
+otherwise it&#39;s calculated in absolute units.</p>
+<p>Default value is <code>&quot;90%&quot;</code>.</p>
 <hr>
 <h3>getSidePanelMinWidth()</h3>
 <blockquote>
 <p><strong>getSidePanelMinWidth</strong>(): <code>string</code></p>
 </blockquote>
-<p>Gets current value of property #getSidePanelMinWidth sidePanelMinWidth.</p>
-<p>Determines the minimum side panel width (Side Content width + Action Bar width). <strong>Note:</strong> if the width
-is given in percent(%), it is calculated as given percent from the Side Panel parent container width,
-otherwise it&#39;s calculated in absolute units.</p>
-<p>Default value is <code>&quot;15rem&quot;</code>.</p>
 <h4>Returns</h4>
 <p><code>string</code></p>
 <p>Value of property <code>sidePanelMinWidth</code></p>
 <h4>Since</h4>
 <p>1.109.0</p>
+<p>Gets current value of property #getSidePanelMinWidth sidePanelMinWidth.</p>
+<p>Determines the minimum side panel width (Side Content width + Action Bar width). <strong>Note:</strong> if the width
+is given in percent(%), it is calculated as given percent from the Side Panel parent container width,
+otherwise it&#39;s calculated in absolute units.</p>
+<p>Default value is <code>&quot;15rem&quot;</code>.</p>
 <hr>
 <h3>getSidePanelPosition()</h3>
 <blockquote>
@@ -379,31 +379,31 @@ desktop or tablet devices.</p>
 <blockquote>
 <p><strong>getSidePanelResizeLargerStep</strong>(): <code>number</code></p>
 </blockquote>
-<p>Gets current value of property #getSidePanelResizeLargerStep sidePanelResizeLargerStep.</p>
-<p>Determines the large step (in pixels) when changing the width of the side panel with the keyboard. <strong>Note:</strong>
-the width can be changed by large step with <code>Shift + Left Arrow</code> and <code>Shift + Right Arrow</code> keys when
-the resize splitter is focused.</p>
-<p>Default value is <code>100</code>.</p>
 <h4>Returns</h4>
 <p><code>number</code></p>
 <p>Value of property <code>sidePanelResizeLargerStep</code></p>
 <h4>Since</h4>
 <p>1.109.0</p>
+<p>Gets current value of property #getSidePanelResizeLargerStep sidePanelResizeLargerStep.</p>
+<p>Determines the large step (in pixels) when changing the width of the side panel with the keyboard. <strong>Note:</strong>
+the width can be changed by large step with <code>Shift + Left Arrow</code> and <code>Shift + Right Arrow</code> keys when
+the resize splitter is focused.</p>
+<p>Default value is <code>100</code>.</p>
 <hr>
 <h3>getSidePanelResizeStep()</h3>
 <blockquote>
 <p><strong>getSidePanelResizeStep</strong>(): <code>number</code></p>
 </blockquote>
-<p>Gets current value of property #getSidePanelResizeStep sidePanelResizeStep.</p>
-<p>Determines the step (in pixels) when changing the width of the side panel with the keyboard. <strong>Note:</strong>
-the width can be changed by this step with <code>Left Arrow</code> and <code>Right Arrow</code> keys when the resize splitter
-is focused.</p>
-<p>Default value is <code>10</code>.</p>
 <h4>Returns</h4>
 <p><code>number</code></p>
 <p>Value of property <code>sidePanelResizeStep</code></p>
 <h4>Since</h4>
 <p>1.109.0</p>
+<p>Gets current value of property #getSidePanelResizeStep sidePanelResizeStep.</p>
+<p>Determines the step (in pixels) when changing the width of the side panel with the keyboard. <strong>Note:</strong>
+the width can be changed by this step with <code>Left Arrow</code> and <code>Right Arrow</code> keys when the resize splitter
+is focused.</p>
+<p>Default value is <code>10</code>.</p>
 <hr>
 <h3>getSidePanelWidth()</h3>
 <blockquote>
@@ -564,12 +564,6 @@ is inserted at the last position</p>
 <blockquote>
 <p><strong>setSidePanelMaxWidth</strong>(<code>sSidePanelMaxWidth?</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getSidePanelMaxWidth sidePanelMaxWidth.</p>
-<p>Determines the maximum side panel width (Side Content width + Action Bar width). <strong>Note:</strong> if the width
-is given in percent(%), it is calculated as given percent from the Side Panel parent container width,
-otherwise it&#39;s calculated in absolute units.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>&quot;90%&quot;</code>.</p>
 <h4>Parameters</h4>
 <h5>sSidePanelMaxWidth?</h5>
 <p><code>string</code></p>
@@ -579,17 +573,17 @@ otherwise it&#39;s calculated in absolute units.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.109.0</p>
+<p>Sets a new value for property #getSidePanelMaxWidth sidePanelMaxWidth.</p>
+<p>Determines the maximum side panel width (Side Content width + Action Bar width). <strong>Note:</strong> if the width
+is given in percent(%), it is calculated as given percent from the Side Panel parent container width,
+otherwise it&#39;s calculated in absolute units.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>&quot;90%&quot;</code>.</p>
 <hr>
 <h3>setSidePanelMinWidth()</h3>
 <blockquote>
 <p><strong>setSidePanelMinWidth</strong>(<code>sSidePanelMinWidth?</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getSidePanelMinWidth sidePanelMinWidth.</p>
-<p>Determines the minimum side panel width (Side Content width + Action Bar width). <strong>Note:</strong> if the width
-is given in percent(%), it is calculated as given percent from the Side Panel parent container width,
-otherwise it&#39;s calculated in absolute units.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>&quot;15rem&quot;</code>.</p>
 <h4>Parameters</h4>
 <h5>sSidePanelMinWidth?</h5>
 <p><code>string</code></p>
@@ -599,6 +593,12 @@ otherwise it&#39;s calculated in absolute units.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.109.0</p>
+<p>Sets a new value for property #getSidePanelMinWidth sidePanelMinWidth.</p>
+<p>Determines the minimum side panel width (Side Content width + Action Bar width). <strong>Note:</strong> if the width
+is given in percent(%), it is calculated as given percent from the Side Panel parent container width,
+otherwise it&#39;s calculated in absolute units.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>&quot;15rem&quot;</code>.</p>
 <hr>
 <h3>setSidePanelPosition()</h3>
 <blockquote>
@@ -637,12 +637,6 @@ desktop or tablet devices.</p>
 <blockquote>
 <p><strong>setSidePanelResizeLargerStep</strong>(<code>iSidePanelResizeLargerStep?</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getSidePanelResizeLargerStep sidePanelResizeLargerStep.</p>
-<p>Determines the large step (in pixels) when changing the width of the side panel with the keyboard. <strong>Note:</strong>
-the width can be changed by large step with <code>Shift + Left Arrow</code> and <code>Shift + Right Arrow</code> keys when
-the resize splitter is focused.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>100</code>.</p>
 <h4>Parameters</h4>
 <h5>iSidePanelResizeLargerStep?</h5>
 <p><code>number</code></p>
@@ -652,17 +646,17 @@ the resize splitter is focused.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.109.0</p>
+<p>Sets a new value for property #getSidePanelResizeLargerStep sidePanelResizeLargerStep.</p>
+<p>Determines the large step (in pixels) when changing the width of the side panel with the keyboard. <strong>Note:</strong>
+the width can be changed by large step with <code>Shift + Left Arrow</code> and <code>Shift + Right Arrow</code> keys when
+the resize splitter is focused.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>100</code>.</p>
 <hr>
 <h3>setSidePanelResizeStep()</h3>
 <blockquote>
 <p><strong>setSidePanelResizeStep</strong>(<code>iSidePanelResizeStep?</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getSidePanelResizeStep sidePanelResizeStep.</p>
-<p>Determines the step (in pixels) when changing the width of the side panel with the keyboard. <strong>Note:</strong>
-the width can be changed by this step with <code>Left Arrow</code> and <code>Right Arrow</code> keys when the resize splitter
-is focused.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>10</code>.</p>
 <h4>Parameters</h4>
 <h5>iSidePanelResizeStep?</h5>
 <p><code>number</code></p>
@@ -672,6 +666,12 @@ is focused.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.109.0</p>
+<p>Sets a new value for property #getSidePanelResizeStep sidePanelResizeStep.</p>
+<p>Determines the step (in pixels) when changing the width of the side panel with the keyboard. <strong>Note:</strong>
+the width can be changed by this step with <code>Left Arrow</code> and <code>Right Arrow</code> keys when the resize splitter
+is focused.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>10</code>.</p>
 <hr>
 <h3>extend()</h3>
 <blockquote>
@@ -688,7 +688,7 @@ contained in <code>oClassInfo</code>.</p>
 <p><code>string</code></p>
 <p>Name of the class being created</p>
 <h5>oClassInfo?</h5>
-<p><a href="../../../../namespaces/sap/type-aliases/ClassInfo.html"><code>ClassInfo</code></a>&lt;<code>T</code>, <code>SidePanel</code>&gt;</p>
+<p><code>ClassInfo</code>&lt;<code>T</code>, <code>SidePanel</code>&gt;</p>
 <p>Object literal with information about the class</p>
 <h5>FNMetaImpl?</h5>
 <p><code>Function</code></p>
@@ -712,6 +712,6 @@ used by this class</p>
 <p><a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a>.<a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html#getmetadata-1"><code>getMetadata</code></a></p>
 <hr>
 
-<footer>Generated from <code>@openui5/types@1.120.46</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@openui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

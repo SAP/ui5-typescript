@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Interface: $P13nConditionPanelSettings — OpenUI5 TypeScript API</title>
-<meta name="description" content="Interface: $P13nConditionPanelSettings — OpenUI5 TypeScript API Reference (1.120.46)">
+<meta name="description" content="Interface: $P13nConditionPanelSettings — OpenUI5 TypeScript API Reference (1.120.0)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/openui5/1.120/sap.m/sap/m/P13nConditionPanel/interfaces/$P13nConditionPanelSettings.html">
 <meta property="og:title" content="Interface: $P13nConditionPanelSettings — OpenUI5 TypeScript API">
-<meta property="og:description" content="Interface: $P13nConditionPanelSettings — OpenUI5 TypeScript API Reference (1.120.46)">
+<meta property="og:description" content="Interface: $P13nConditionPanelSettings — OpenUI5 TypeScript API Reference (1.120.0)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/openui5/1.120/sap.m/sap/m/P13nConditionPanel/interfaces/$P13nConditionPanelSettings.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,14 +33,11 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../index.html">OpenUI5 API</a> › <a href="../../../../../sap.m/README.html">sap.m</a> › sap › m › <a href="../../../../../sap.m/sap/m/P13nConditionPanel/README.html">P13nConditionPanel</a> › interfaces</nav>
-<p><a href="../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.46)</strong></a></p>
+<p><a href="../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.0)</strong></a></p>
 <hr>
-<p><a href="../../../../../README.html">OpenUI5 TypeScript API (1.120.46)</a> / <a href="../../../../README.html">sap.m</a> / <a href="../README.html">sap/m/P13nConditionPanel</a> / $P13nConditionPanelSettings</p>
+<p><a href="../../../../../README.html">OpenUI5 TypeScript API (1.120.0)</a> / <a href="../../../../README.html">sap.m</a> / <a href="../README.html">sap/m/P13nConditionPanel</a> / $P13nConditionPanelSettings</p>
 <h1>Interface: $P13nConditionPanelSettings</h1>
 <pre class="sig"><span class="kw">import</span> { $P13nConditionPanelSettings } <span class="kw">from</span> <span class="str">"sap/m/P13nConditionPanel"</span>;</pre>
-<p><strong><code>Experimental</code></strong></p>
-<p>Describes the settings that can be provided to the P13nConditionPanel constructor.</p>
-<p> (since 1.26) - !!! THIS CONTROL IS ONLY FOR INTERNAL USE !!!</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../../../../sap.ui.core/sap/ui/core/Control/interfaces/$ControlSettings.html"><code>$ControlSettings</code></a></li>
@@ -50,7 +47,6 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 <blockquote>
 <p><code>optional</code> <strong>alwaysShowAddIcon?</strong>: <code>boolean</code> | <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<p><strong><code>Experimental</code></strong></p>
 <p>makes the Add icon visible on each condition row. If is set to false the Add is only visible at the end
 and you can only append a new condition.</p>
 <hr>
@@ -58,14 +54,12 @@ and you can only append a new condition.</p>
 <blockquote>
 <p><code>optional</code> <strong>autoAddNewRow?</strong>: <code>boolean</code> | <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<p><strong><code>Experimental</code></strong></p>
 <p>adds initial a new empty condition row</p>
 <hr>
 <h3>autoReduceKeyFieldItems?</h3>
 <blockquote>
 <p><code>optional</code> <strong>autoReduceKeyFieldItems?</strong>: <code>boolean</code> | <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<p><strong><code>Experimental</code></strong></p>
 <p>KeyField value can only be selected once. When you set the property to <code>true</code> the ConditionPanel will
 automatically offers on the KeyField drop down only the keyFields which are not used. The default behavior
 is that in each keyField dropdown all keyfields are listed.</p>
@@ -74,7 +68,6 @@ is that in each keyField dropdown all keyfields are listed.</p>
 <blockquote>
 <p><code>optional</code> <strong>containerQuery?</strong>: <code>boolean</code> | <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<p><strong><code>Experimental</code></strong></p>
 <p>defines if the mediaQuery or a ContainerResize will be used for layout update. When the <code>P13nConditionPanel</code>
 is used on a dialog the property should be set to <code>true</code>!</p>
 <hr>
@@ -82,7 +75,6 @@ is used on a dialog the property should be set to <code>true</code>!</p>
 <blockquote>
 <p><code>optional</code> <strong>dataChange?</strong>: (<code>oEvent</code>) =&gt; <code>void</code></p>
 </blockquote>
-<p><strong><code>Experimental</code></strong></p>
 <p>Workaround for updating the binding</p>
 <h4>Parameters</h4>
 <h5>oEvent</h5>
@@ -94,14 +86,12 @@ is used on a dialog the property should be set to <code>true</code>!</p>
 <blockquote>
 <p><code>optional</code> <strong>disableFirstRemoveIcon?</strong>: <code>boolean</code> | <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<p><strong><code>Experimental</code></strong></p>
 <p>makes the remove icon on the first condition row disabled when only one condition exist.</p>
 <hr>
 <h3>displayFormat?</h3>
 <blockquote>
 <p><code>optional</code> <strong>displayFormat?</strong>: <code>string</code> | <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a></p>
 </blockquote>
-<p><strong><code>Experimental</code></strong></p>
 <p>This represents the displayFormat of the condition Values. With the value &quot;UpperCase&quot; the entered value
 of the condition will be converted to upperCase.</p>
 <hr>
@@ -109,14 +99,12 @@ of the condition will be converted to upperCase.</p>
 <blockquote>
 <p><code>optional</code> <strong>exclude?</strong>: <code>boolean</code> | <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<p><strong><code>Experimental</code></strong></p>
 <p>exclude options for filter</p>
 <hr>
 <h3>layoutMode?</h3>
 <blockquote>
 <p><code>optional</code> <strong>layoutMode?</strong>: <code>string</code> | <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a></p>
 </blockquote>
-<p><strong><code>Experimental</code></strong></p>
 <p>can be used to control the layout behavior. Default is &quot;&quot; which will automatically change the layout.
 With &quot;Desktop&quot;, &quot;Table&quot; or &quot;Phone&quot; you can set a fixed layout.</p>
 <hr>
@@ -124,31 +112,27 @@ With &quot;Desktop&quot;, &quot;Table&quot; or &quot;Phone&quot; you can set a f
 <blockquote>
 <p><code>optional</code> <strong>maxConditions?</strong>: <code>string</code> | <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a></p>
 </blockquote>
-<p><strong><code>Experimental</code></strong></p>
 <p>defines the max number of conditions on the ConditionPanel</p>
 <hr>
 <h3>showLabel?</h3>
 <blockquote>
 <p><code>optional</code> <strong>showLabel?</strong>: <code>boolean</code> | <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<p><strong><code>Experimental</code></strong></p>
 <p>show additional labels in the condition</p>
 <hr>
 <h3>usePrevConditionSetting?</h3>
 <blockquote>
 <p><code>optional</code> <strong>usePrevConditionSetting?</strong>: <code>boolean</code> | <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<p><strong><code>Experimental</code></strong></p>
 <p>new added condition use the settings from the previous condition as default.</p>
 <hr>
 <h3>validationExecutor?</h3>
 <blockquote>
 <p><code>optional</code> <strong>validationExecutor?</strong>: <code>object</code> | <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<p><strong><code>Experimental</code></strong></p>
 <p>Calls the validation listener tbd...</p>
 <hr>
 
-<footer>Generated from <code>@openui5/types@1.120.46</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@openui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Class: ColorPicker — OpenUI5 TypeScript API</title>
-<meta name="description" content="Class: ColorPicker — OpenUI5 TypeScript API Reference (1.120.46)">
+<meta name="description" content="Class: ColorPicker — OpenUI5 TypeScript API Reference (1.120.0)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/openui5/1.120/sap.ui.unified/sap/ui/unified/ColorPicker/classes/ColorPicker.html">
 <meta property="og:title" content="Class: ColorPicker — OpenUI5 TypeScript API">
-<meta property="og:description" content="Class: ColorPicker — OpenUI5 TypeScript API Reference (1.120.46)">
+<meta property="og:description" content="Class: ColorPicker — OpenUI5 TypeScript API Reference (1.120.0)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/openui5/1.120/sap.ui.unified/sap/ui/unified/ColorPicker/classes/ColorPicker.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,17 +33,17 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../index.html">OpenUI5 API</a> › <a href="../../../../../../sap.ui.unified/README.html">sap.ui.unified</a> › sap › ui › unified › <a href="../../../../../../sap.ui.unified/sap/ui/unified/ColorPicker/README.html">ColorPicker</a> › classes</nav>
-<p><a href="../../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.46)</strong></a></p>
+<p><a href="../../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.0)</strong></a></p>
 <hr>
-<p><a href="../../../../../../README.html">OpenUI5 TypeScript API (1.120.46)</a> / <a href="../../../../../README.html">sap.ui.unified</a> / <a href="../README.html">sap/ui/unified/ColorPicker</a> / ColorPicker</p>
+<p><a href="../../../../../../README.html">OpenUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../README.html">sap.ui.unified</a> / <a href="../README.html">sap/ui/unified/ColorPicker</a> / ColorPicker</p>
 <h1>Class: ColorPicker</h1>
 <pre class="sig"><span class="kw">import</span> ColorPicker <span class="kw">from</span> <span class="str">"sap/ui/unified/ColorPicker"</span>;</pre>
+<h2>Since</h2>
+<p>1.48.0</p>
 <p>Enables the user to select a color. The color can be defined using HEX, RGB, or HSV values or a CSS color
 name.</p>
 <p><strong>Note:</strong> Keep in mind that this control needs either <code>sap.m</code> or <code>sap.ui.commons</code> library to be loaded
 in order to work as it depends on controls available in one or the other library.</p>
-<h2>Since</h2>
-<p>1.48.0</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></li>
@@ -90,11 +90,6 @@ of the syntax of the settings object.</p>
 <blockquote>
 <p><strong>attachChange</strong>(<code>oData</code>, <code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
-<p>Attaches event handler <code>fnFunction</code> to the #event:change change event of this <code>sap.ui.unified.ColorPicker</code>.</p>
-<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
-otherwise it will be bound to this <code>sap.ui.unified.ColorPicker</code> itself.</p>
-<p>Fired when the value is changed by user action.</p>
-<p><strong>Note:</strong> When the user action is mouse dragging, the <code>change</code> event fires on the mouseup event.</p>
 <h5>Parameters</h5>
 <h6>oData</h6>
 <p><code>object</code></p>
@@ -111,15 +106,15 @@ object when firing the event</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Since</h5>
 <p>1.48.0</p>
-<h4>Call Signature</h4>
-<blockquote>
-<p><strong>attachChange</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
-</blockquote>
 <p>Attaches event handler <code>fnFunction</code> to the #event:change change event of this <code>sap.ui.unified.ColorPicker</code>.</p>
 <p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
 otherwise it will be bound to this <code>sap.ui.unified.ColorPicker</code> itself.</p>
 <p>Fired when the value is changed by user action.</p>
 <p><strong>Note:</strong> When the user action is mouse dragging, the <code>change</code> event fires on the mouseup event.</p>
+<h4>Call Signature</h4>
+<blockquote>
+<p><strong>attachChange</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
+</blockquote>
 <h5>Parameters</h5>
 <h6>fnFunction</h6>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -132,17 +127,17 @@ otherwise it will be bound to this <code>sap.ui.unified.ColorPicker</code> itsel
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Since</h5>
 <p>1.48.0</p>
+<p>Attaches event handler <code>fnFunction</code> to the #event:change change event of this <code>sap.ui.unified.ColorPicker</code>.</p>
+<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
+otherwise it will be bound to this <code>sap.ui.unified.ColorPicker</code> itself.</p>
+<p>Fired when the value is changed by user action.</p>
+<p><strong>Note:</strong> When the user action is mouse dragging, the <code>change</code> event fires on the mouseup event.</p>
 <hr>
 <h3>attachLiveChange()</h3>
 <h4>Call Signature</h4>
 <blockquote>
 <p><strong>attachLiveChange</strong>(<code>oData</code>, <code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
-<p>Attaches event handler <code>fnFunction</code> to the #event:liveChange liveChange event of this <code>sap.ui.unified.ColorPicker</code>.</p>
-<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
-otherwise it will be bound to this <code>sap.ui.unified.ColorPicker</code> itself.</p>
-<p>Fired when the value is changed during the mouse move.</p>
-<p><strong>Note:</strong> When the user action is mouse move, the <code>liveChange</code> event is fired during the mousedown event.</p>
 <h5>Parameters</h5>
 <h6>oData</h6>
 <p><code>object</code></p>
@@ -159,15 +154,15 @@ object when firing the event</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Since</h5>
 <p>1.48.0</p>
-<h4>Call Signature</h4>
-<blockquote>
-<p><strong>attachLiveChange</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
-</blockquote>
 <p>Attaches event handler <code>fnFunction</code> to the #event:liveChange liveChange event of this <code>sap.ui.unified.ColorPicker</code>.</p>
 <p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
 otherwise it will be bound to this <code>sap.ui.unified.ColorPicker</code> itself.</p>
 <p>Fired when the value is changed during the mouse move.</p>
 <p><strong>Note:</strong> When the user action is mouse move, the <code>liveChange</code> event is fired during the mousedown event.</p>
+<h4>Call Signature</h4>
+<blockquote>
+<p><strong>attachLiveChange</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
+</blockquote>
 <h5>Parameters</h5>
 <h6>fnFunction</h6>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -180,13 +175,16 @@ otherwise it will be bound to this <code>sap.ui.unified.ColorPicker</code> itsel
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Since</h5>
 <p>1.48.0</p>
+<p>Attaches event handler <code>fnFunction</code> to the #event:liveChange liveChange event of this <code>sap.ui.unified.ColorPicker</code>.</p>
+<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
+otherwise it will be bound to this <code>sap.ui.unified.ColorPicker</code> itself.</p>
+<p>Fired when the value is changed during the mouse move.</p>
+<p><strong>Note:</strong> When the user action is mouse move, the <code>liveChange</code> event is fired during the mousedown event.</p>
 <hr>
 <h3>detachChange()</h3>
 <blockquote>
 <p><strong>detachChange</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
-<p>Detaches event handler <code>fnFunction</code> from the #event:change change event of this <code>sap.ui.unified.ColorPicker</code>.</p>
-<p>The passed function and listener object must match the ones used for event registration.</p>
 <h4>Parameters</h4>
 <h5>fnFunction</h5>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -199,13 +197,13 @@ otherwise it will be bound to this <code>sap.ui.unified.ColorPicker</code> itsel
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.48.0</p>
+<p>Detaches event handler <code>fnFunction</code> from the #event:change change event of this <code>sap.ui.unified.ColorPicker</code>.</p>
+<p>The passed function and listener object must match the ones used for event registration.</p>
 <hr>
 <h3>detachLiveChange()</h3>
 <blockquote>
 <p><strong>detachLiveChange</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
-<p>Detaches event handler <code>fnFunction</code> from the #event:liveChange liveChange event of this <code>sap.ui.unified.ColorPicker</code>.</p>
-<p>The passed function and listener object must match the ones used for event registration.</p>
 <h4>Parameters</h4>
 <h5>fnFunction</h5>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -218,12 +216,13 @@ otherwise it will be bound to this <code>sap.ui.unified.ColorPicker</code> itsel
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.48.0</p>
+<p>Detaches event handler <code>fnFunction</code> from the #event:liveChange liveChange event of this <code>sap.ui.unified.ColorPicker</code>.</p>
+<p>The passed function and listener object must match the ones used for event registration.</p>
 <hr>
 <h3>fireChange()</h3>
 <blockquote>
 <p><strong>fireChange</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
-<p>Fires event #event:change change to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/ColorPicker$ChangeEventParameters.html"><code>ColorPicker$ChangeEventParameters</code></a></p>
@@ -235,12 +234,12 @@ otherwise it will be bound to this <code>sap.ui.unified.ColorPicker</code> itsel
 <p>1.48.0</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:change change to attached listeners.</p>
 <hr>
 <h3>fireLiveChange()</h3>
 <blockquote>
 <p><strong>fireLiveChange</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
-<p>Fires event #event:liveChange liveChange to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/ColorPicker$LiveChangeEventParameters.html"><code>ColorPicker$LiveChangeEventParameters</code></a></p>
@@ -252,11 +251,17 @@ otherwise it will be bound to this <code>sap.ui.unified.ColorPicker</code> itsel
 <p>1.48.0</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:liveChange liveChange to attached listeners.</p>
 <hr>
 <h3>getColorString()</h3>
 <blockquote>
 <p><strong>getColorString</strong>(): <code>string</code></p>
 </blockquote>
+<h4>Returns</h4>
+<p><code>string</code></p>
+<p>Value of property <code>colorString</code></p>
+<h4>Since</h4>
+<p>1.48.0</p>
 <p>Gets current value of property #getColorString colorString.</p>
 <p>Determines the input parameter that can be a string of type HEX, RGB, HSV, or a CSS color name:</p>
 <pre><code> - HEX - #FFFFFF
@@ -264,46 +269,40 @@ otherwise it will be bound to this <code>sap.ui.unified.ColorPicker</code> itsel
  - HSV - hsv(360,100,100)
  - CSS - red  **Note:** The output parameter is an RGB string of the current color.
 </code></pre>
-<h4>Returns</h4>
-<p><code>string</code></p>
-<p>Value of property <code>colorString</code></p>
-<h4>Since</h4>
-<p>1.48.0</p>
 <hr>
 <h3>getDisplayMode()</h3>
 <blockquote>
 <p><strong>getDisplayMode</strong>(): <code>&quot;Large&quot;</code> | <code>&quot;Default&quot;</code> | <a href="../../ColorPickerDisplayMode/enumerations/ColorPickerDisplayMode.html"><code>ColorPickerDisplayMode</code></a> | <code>&quot;Simplified&quot;</code></p>
 </blockquote>
-<p>Gets current value of property #getDisplayMode displayMode.</p>
-<p>Determines the display mode of the <code>ColorPicker</code> among three types - Default, Large and Simplified</p>
-<p>Default value is <code>Default</code>.</p>
 <h4>Returns</h4>
 <p><code>&quot;Large&quot;</code> | <code>&quot;Default&quot;</code> | <a href="../../ColorPickerDisplayMode/enumerations/ColorPickerDisplayMode.html"><code>ColorPickerDisplayMode</code></a> | <code>&quot;Simplified&quot;</code></p>
 <p>Value of property <code>displayMode</code></p>
 <h4>Since</h4>
 <p>1.58</p>
+<p>Gets current value of property #getDisplayMode displayMode.</p>
+<p>Determines the display mode of the <code>ColorPicker</code> among three types - Default, Large and Simplified</p>
+<p>Default value is <code>Default</code>.</p>
 <hr>
 <h3>getMode()</h3>
 <blockquote>
 <p><strong>getMode</strong>(): <a href="../../library/enumerations/ColorPickerMode.html"><code>ColorPickerMode</code></a> | <code>&quot;HSL&quot;</code> | <code>&quot;HSV&quot;</code></p>
 </blockquote>
+<h4>Returns</h4>
+<p><a href="../../library/enumerations/ColorPickerMode.html"><code>ColorPickerMode</code></a> | <code>&quot;HSL&quot;</code> | <code>&quot;HSV&quot;</code></p>
+<p>Value of property <code>mode</code></p>
+<h4>Since</h4>
+<p>1.48.0</p>
 <p>Gets current value of property #getMode mode.</p>
 <p>Determines the color representation mode the ColorPicker works with - Hue, Saturation, and Value (HSV)
 or Hue, Saturation, and Lightness (HSL).</p>
 <p><strong>Note:</strong> The <code>ColorPickerMode.HSV</code> is set by default. For color composing with alpha values, please
 set the mode to <code>ColorPickerMode.HSL</code></p>
 <p>Default value is <code>HSV</code>.</p>
-<h4>Returns</h4>
-<p><a href="../../library/enumerations/ColorPickerMode.html"><code>ColorPickerMode</code></a> | <code>&quot;HSL&quot;</code> | <code>&quot;HSV&quot;</code></p>
-<p>Value of property <code>mode</code></p>
-<h4>Since</h4>
-<p>1.48.0</p>
 <hr>
 <h3>getRGB()</h3>
 <blockquote>
 <p><strong>getRGB</strong>(): <code>object</code></p>
 </blockquote>
-<p>Gets current RGB values.</p>
 <h4>Returns</h4>
 <p><code>object</code></p>
 <p>Containing current RGB values</p>
@@ -321,12 +320,12 @@ set the mode to <code>ColorPickerMode.HSL</code></p>
 </blockquote>
 <h4>Since</h4>
 <p>1.48.0</p>
+<p>Gets current RGB values.</p>
 <hr>
 <h3>isColor()</h3>
 <blockquote>
 <p><strong>isColor</strong>(<code>sColorString</code>): <code>boolean</code></p>
 </blockquote>
-<p>Checks the validity of the CSS color string.</p>
 <h4>Parameters</h4>
 <h5>sColorString</h5>
 <p><code>string</code></p>
@@ -336,19 +335,12 @@ set the mode to <code>ColorPickerMode.HSL</code></p>
 <p>If the passed string is a valid CSS color string</p>
 <h4>Since</h4>
 <p>1.48.0</p>
+<p>Checks the validity of the CSS color string.</p>
 <hr>
 <h3>setColorString()</h3>
 <blockquote>
 <p><strong>setColorString</strong>(<code>sColorString?</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getColorString colorString.</p>
-<p>Determines the input parameter that can be a string of type HEX, RGB, HSV, or a CSS color name:</p>
-<pre><code> - HEX - #FFFFFF
- - RGB - rgb(255,255,255)
- - HSV - hsv(360,100,100)
- - CSS - red  **Note:** The output parameter is an RGB string of the current color.
-</code></pre>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <h4>Parameters</h4>
 <h5>sColorString?</h5>
 <p><code>string</code></p>
@@ -358,6 +350,14 @@ set the mode to <code>ColorPickerMode.HSL</code></p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.48.0</p>
+<p>Sets a new value for property #getColorString colorString.</p>
+<p>Determines the input parameter that can be a string of type HEX, RGB, HSV, or a CSS color name:</p>
+<pre><code> - HEX - #FFFFFF
+ - RGB - rgb(255,255,255)
+ - HSV - hsv(360,100,100)
+ - CSS - red  **Note:** The output parameter is an RGB string of the current color.
+</code></pre>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <hr>
 <h3>setDisplayMode()</h3>
 <blockquote>
@@ -401,7 +401,7 @@ the information contained in <code>oClassInfo</code>.</p>
 <p><code>string</code></p>
 <p>Name of the class being created</p>
 <h5>oClassInfo?</h5>
-<p><a href="../../../../../../sap.f/namespaces/sap/type-aliases/ClassInfo.html"><code>ClassInfo</code></a>&lt;<code>T</code>, <code>ColorPicker</code>&gt;</p>
+<p><code>ClassInfo</code>&lt;<code>T</code>, <code>ColorPicker</code>&gt;</p>
 <p>Object literal with information about the class</p>
 <h5>FNMetaImpl?</h5>
 <p><code>Function</code></p>
@@ -425,6 +425,6 @@ used by this class</p>
 <p><a href="../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a>.<a href="../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html#getmetadata-1"><code>getMetadata</code></a></p>
 <hr>
 
-<footer>Generated from <code>@openui5/types@1.120.46</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@openui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

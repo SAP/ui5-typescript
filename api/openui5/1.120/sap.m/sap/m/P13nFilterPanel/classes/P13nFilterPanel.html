@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Class: P13nFilterPanel — OpenUI5 TypeScript API</title>
-<meta name="description" content="Class: P13nFilterPanel — OpenUI5 TypeScript API Reference (1.120.46)">
+<meta name="description" content="Class: P13nFilterPanel — OpenUI5 TypeScript API Reference (1.120.0)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/openui5/1.120/sap.m/sap/m/P13nFilterPanel/classes/P13nFilterPanel.html">
 <meta property="og:title" content="Class: P13nFilterPanel — OpenUI5 TypeScript API">
-<meta property="og:description" content="Class: P13nFilterPanel — OpenUI5 TypeScript API Reference (1.120.46)">
+<meta property="og:description" content="Class: P13nFilterPanel — OpenUI5 TypeScript API Reference (1.120.0)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/openui5/1.120/sap.m/sap/m/P13nFilterPanel/classes/P13nFilterPanel.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,14 +33,14 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../index.html">OpenUI5 API</a> › <a href="../../../../../sap.m/README.html">sap.m</a> › sap › m › <a href="../../../../../sap.m/sap/m/P13nFilterPanel/README.html">P13nFilterPanel</a> › classes</nav>
-<p><a href="../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.46)</strong></a></p>
+<p><a href="../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.0)</strong></a></p>
 <hr>
-<p><a href="../../../../../README.html">OpenUI5 TypeScript API (1.120.46)</a> / <a href="../../../../README.html">sap.m</a> / <a href="../README.html">sap/m/P13nFilterPanel</a> / P13nFilterPanel</p>
+<p><a href="../../../../../README.html">OpenUI5 TypeScript API (1.120.0)</a> / <a href="../../../../README.html">sap.m</a> / <a href="../README.html">sap/m/P13nFilterPanel</a> / P13nFilterPanel</p>
 <h1>Class: P13nFilterPanel</h1>
 <pre class="sig"><span class="kw">import</span> P13nFilterPanel <span class="kw">from</span> <span class="str">"sap/m/P13nFilterPanel"</span>;</pre>
-<p>The P13nFilterPanel control is used to define filter-specific settings for table personalization.</p>
 <h2>Since</h2>
 <p>1.26.0</p>
+<p>The P13nFilterPanel control is used to define filter-specific settings for table personalization.</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../P13nPanel/classes/P13nPanel.html"><code>P13nPanel</code></a></li>
@@ -143,12 +143,12 @@ otherwise it will be bound to this <code>sap.m.P13nFilterPanel</code> itself.</p
 <p><strong>attachFilterItemChanged</strong>(<code>oData</code>, <code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
+<p>(since 1.56)</p>
 <p>Attaches event handler <code>fnFunction</code> to the #event:filterItemChanged filterItemChanged event of
 this <code>sap.m.P13nFilterPanel</code>.</p>
 <p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
 otherwise it will be bound to this <code>sap.m.P13nFilterPanel</code> itself.</p>
 <p>Event raised if a filter item has been changed. reason can be added, updated or removed.</p>
-<p> (since 1.56)</p>
 <h5>Parameters</h5>
 <h6>oData</h6>
 <p><code>object</code></p>
@@ -168,12 +168,12 @@ object when firing the event</p>
 <p><strong>attachFilterItemChanged</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
+<p>(since 1.56)</p>
 <p>Attaches event handler <code>fnFunction</code> to the #event:filterItemChanged filterItemChanged event of
 this <code>sap.m.P13nFilterPanel</code>.</p>
 <p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
 otherwise it will be bound to this <code>sap.m.P13nFilterPanel</code> itself.</p>
 <p>Event raised if a filter item has been changed. reason can be added, updated or removed.</p>
-<p> (since 1.56)</p>
 <h5>Parameters</h5>
 <h6>fnFunction</h6>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -329,10 +329,10 @@ of the possible properties of <code>oBindingInfo</code>.</p>
 <p><strong>detachFilterItemChanged</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
+<p>(since 1.56)</p>
 <p>Detaches event handler <code>fnFunction</code> from the #event:filterItemChanged filterItemChanged event
 of this <code>sap.m.P13nFilterPanel</code>.</p>
 <p>The passed function and listener object must match the ones used for event registration.</p>
-<p> (since 1.56)</p>
 <h4>Parameters</h4>
 <h5>fnFunction</h5>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -384,7 +384,6 @@ this <code>sap.m.P13nFilterPanel</code>.</p>
 <blockquote>
 <p><strong>fireAddFilterItem</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
-<p>Fires event #event:addFilterItem addFilterItem to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><code>object</code></p>
@@ -394,14 +393,14 @@ this <code>sap.m.P13nFilterPanel</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:addFilterItem addFilterItem to attached listeners.</p>
 <hr>
 <h3>fireFilterItemChanged()</h3>
 <blockquote>
 <p><strong>fireFilterItemChanged</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
-<p>Fires event #event:filterItemChanged filterItemChanged to attached listeners.</p>
-<p> (since 1.56)</p>
+<p>(since 1.56)</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/P13nFilterPanel$FilterItemChangedEventParameters.html"><code>P13nFilterPanel$FilterItemChangedEventParameters</code></a></p>
@@ -411,12 +410,12 @@ this <code>sap.m.P13nFilterPanel</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:filterItemChanged filterItemChanged to attached listeners.</p>
 <hr>
 <h3>fireRemoveFilterItem()</h3>
 <blockquote>
 <p><strong>fireRemoveFilterItem</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
-<p>Fires event #event:removeFilterItem removeFilterItem to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><code>object</code></p>
@@ -426,12 +425,12 @@ this <code>sap.m.P13nFilterPanel</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:removeFilterItem removeFilterItem to attached listeners.</p>
 <hr>
 <h3>fireUpdateFilterItem()</h3>
 <blockquote>
 <p><strong>fireUpdateFilterItem</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
-<p>Fires event #event:updateFilterItem updateFilterItem to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><code>object</code></p>
@@ -441,6 +440,7 @@ this <code>sap.m.P13nFilterPanel</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:updateFilterItem updateFilterItem to attached listeners.</p>
 <hr>
 <h3>getConditions()</h3>
 <blockquote>
@@ -609,21 +609,21 @@ is inserted at the last position</p>
 <blockquote>
 <p><strong>removeInvalidConditions</strong>(): <code>void</code></p>
 </blockquote>
-<p>Removes all invalid conditions.</p>
 <h4>Returns</h4>
 <p><code>void</code></p>
 <h4>Since</h4>
 <p>1.28</p>
+<p>Removes all invalid conditions.</p>
 <hr>
 <h3>removeValidationErrors()</h3>
 <blockquote>
 <p><strong>removeValidationErrors</strong>(): <code>void</code></p>
 </blockquote>
-<p>Removes all errors and warnings states from of all filter conditions.</p>
 <h4>Returns</h4>
 <p><code>void</code></p>
 <h4>Since</h4>
 <p>1.28</p>
+<p>Removes all errors and warnings states from of all filter conditions.</p>
 <hr>
 <h3>setConditions()</h3>
 <blockquote>
@@ -795,7 +795,7 @@ information contained in <code>oClassInfo</code>.</p>
 <p><code>string</code></p>
 <p>Name of the class being created</p>
 <h5>oClassInfo?</h5>
-<p><a href="../../../../../sap.f/namespaces/sap/type-aliases/ClassInfo.html"><code>ClassInfo</code></a>&lt;<code>T</code>, <code>P13nFilterPanel</code>&gt;</p>
+<p><code>ClassInfo</code>&lt;<code>T</code>, <code>P13nFilterPanel</code>&gt;</p>
 <p>Object literal with information about the class</p>
 <h5>FNMetaImpl?</h5>
 <p><code>Function</code></p>
@@ -819,6 +819,6 @@ used by this class</p>
 <p><a href="../../P13nPanel/classes/P13nPanel.html"><code>P13nPanel</code></a>.<a href="../../P13nPanel/classes/P13nPanel.html#getmetadata-1"><code>getMetadata</code></a></p>
 <hr>
 
-<footer>Generated from <code>@openui5/types@1.120.46</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@openui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

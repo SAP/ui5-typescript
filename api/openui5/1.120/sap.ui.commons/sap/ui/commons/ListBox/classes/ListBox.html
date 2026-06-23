@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>~~Class: ListBox~~ — OpenUI5 TypeScript API</title>
-<meta name="description" content="~~Class: ListBox~~ — OpenUI5 TypeScript API Reference (1.120.46)">
+<meta name="description" content="~~Class: ListBox~~ — OpenUI5 TypeScript API Reference (1.120.0)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/openui5/1.120/sap.ui.commons/sap/ui/commons/ListBox/classes/ListBox.html">
 <meta property="og:title" content="~~Class: ListBox~~ — OpenUI5 TypeScript API">
-<meta property="og:description" content="~~Class: ListBox~~ — OpenUI5 TypeScript API Reference (1.120.46)">
+<meta property="og:description" content="~~Class: ListBox~~ — OpenUI5 TypeScript API Reference (1.120.0)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/openui5/1.120/sap.ui.commons/sap/ui/commons/ListBox/classes/ListBox.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,16 +33,16 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../index.html">OpenUI5 API</a> › <a href="../../../../../../sap.ui.commons/README.html">sap.ui.commons</a> › sap › ui › commons › <a href="../../../../../../sap.ui.commons/sap/ui/commons/ListBox/README.html">ListBox</a> › classes</nav>
-<p><a href="../../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.46)</strong></a></p>
+<p><a href="../../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.0)</strong></a></p>
 <hr>
-<p><a href="../../../../../../README.html">OpenUI5 TypeScript API (1.120.46)</a> / <a href="../../../../../README.html">sap.ui.commons</a> / <a href="../README.html">sap/ui/commons/ListBox</a> / ListBox</p>
+<p><a href="../../../../../../README.html">OpenUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../README.html">sap.ui.commons</a> / <a href="../README.html">sap/ui/commons/ListBox</a> / ListBox</p>
 <h1><del>Class: ListBox</del></h1>
 <pre class="sig"><span class="kw">import</span> ListBox <span class="kw">from</span> <span class="str">"sap/ui/commons/ListBox"</span>;</pre>
+<h2>Deprecated</h2>
+<p>(since 1.38) - Instead, use the <code>sap.m.List</code> control.</p>
 <p>Provides a list of items from which users can choose an item. For the design of the list box, features
 such as defining the list box height, fixing the number of visible items, choosing one item to be the
 item that is marked by default when the list box is shown, or a scroll bar for large list boxes are available.</p>
-<h2>Deprecated</h2>
-<p>(since 1.38) - Instead, use the <code>sap.m.List</code> control.</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></li>
@@ -231,7 +231,6 @@ otherwise it will be bound to this <code>sap.ui.commons.ListBox</code> itself.</
 <blockquote>
 <p><strong>fireSelect</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
-<p>Fires event #event:select select to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/ListBox$SelectEventParameters.html"><code>ListBox$SelectEventParameters</code></a></p>
@@ -241,6 +240,7 @@ otherwise it will be bound to this <code>sap.ui.commons.ListBox</code> itself.</
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:select select to attached listeners.</p>
 <hr>
 <h3><del>getAllowMultiSelect()</del></h3>
 <blockquote>
@@ -882,7 +882,7 @@ information contained in <code>oClassInfo</code>.</p>
 <p><code>string</code></p>
 <p>Name of the class being created</p>
 <h5>oClassInfo?</h5>
-<p><a href="../../../../../../sap.f/namespaces/sap/type-aliases/ClassInfo.html"><code>ClassInfo</code></a>&lt;<code>T</code>, <code>ListBox</code>&gt;</p>
+<p><code>ClassInfo</code>&lt;<code>T</code>, <code>ListBox</code>&gt;</p>
 <p>Object literal with information about the class</p>
 <h5>FNMetaImpl?</h5>
 <p><code>Function</code></p>
@@ -906,6 +906,6 @@ used by this class</p>
 <p><a href="../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a>.<a href="../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html#getmetadata-1"><code>getMetadata</code></a></p>
 <hr>
 
-<footer>Generated from <code>@openui5/types@1.120.46</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@openui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

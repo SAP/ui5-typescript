@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Class: CompositeDataState — OpenUI5 TypeScript API</title>
-<meta name="description" content="Class: CompositeDataState — OpenUI5 TypeScript API Reference (1.120.46)">
+<meta name="description" content="Class: CompositeDataState — OpenUI5 TypeScript API Reference (1.120.0)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/openui5/1.120/sap.ui.core/sap/ui/model/CompositeDataState/classes/CompositeDataState.html">
 <meta property="og:title" content="Class: CompositeDataState — OpenUI5 TypeScript API">
-<meta property="og:description" content="Class: CompositeDataState — OpenUI5 TypeScript API Reference (1.120.46)">
+<meta property="og:description" content="Class: CompositeDataState — OpenUI5 TypeScript API Reference (1.120.0)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/openui5/1.120/sap.ui.core/sap/ui/model/CompositeDataState/classes/CompositeDataState.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,9 +33,9 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../index.html">OpenUI5 API</a> › <a href="../../../../../../sap.ui.core/README.html">sap.ui.core</a> › sap › ui › model › <a href="../../../../../../sap.ui.core/sap/ui/model/CompositeDataState/README.html">CompositeDataState</a> › classes</nav>
-<p><a href="../../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.46)</strong></a></p>
+<p><a href="../../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.0)</strong></a></p>
 <hr>
-<p><a href="../../../../../../README.html">OpenUI5 TypeScript API (1.120.46)</a> / <a href="../../../../../README.html">sap.ui.core</a> / <a href="../README.html">sap/ui/model/CompositeDataState</a> / CompositeDataState</p>
+<p><a href="../../../../../../README.html">OpenUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../README.html">sap.ui.core</a> / <a href="../README.html">sap/ui/model/CompositeDataState</a> / CompositeDataState</p>
 <h1>Class: CompositeDataState</h1>
 <pre class="sig"><span class="kw">import</span> CompositeDataState <span class="kw">from</span> <span class="str">"sap/ui/model/CompositeDataState"</span>;</pre>
 <p>Holds the status data of a composite binding.</p>
@@ -57,8 +57,6 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 <blockquote>
 <p><strong>changed</strong>(<code>bNewState?</code>): <code>boolean</code></p>
 </blockquote>
-<p>Returns or sets whether the data state is changed. As long as changed was not set to false the data state
-is dirty and the corresponding binding will fire data state change events.</p>
 <h4>Parameters</h4>
 <h5>bNewState?</h5>
 <p><code>boolean</code></p>
@@ -68,20 +66,22 @@ is dirty and the corresponding binding will fire data state change events.</p>
 <p>Whether the data state was changed.</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Returns or sets whether the data state is changed. As long as changed was not set to false the data state
+is dirty and the corresponding binding will fire data state change events.</p>
 <h4>Overrides</h4>
 <p><a href="../../DataState/classes/DataState.html"><code>DataState</code></a>.<a href="../../DataState/classes/DataState.html#changed"><code>changed</code></a></p>
 <hr>
 <h3>getAllMessages()</h3>
 <blockquote>
-<p><strong>getAllMessages</strong>(): <a href="../../../core/message/Message/classes/Message.html"><code>Message</code></a>[]</p>
+<p><strong>getAllMessages</strong>(): <a href="../../../core/Message/classes/Message.html"><code>Message</code></a>[]</p>
 </blockquote>
-<p>Returns an array of all model and control messages of all parts of the composite binding, regardless
-of whether they are old or new.</p>
 <h4>Returns</h4>
-<p><a href="../../../core/message/Message/classes/Message.html"><code>Message</code></a>[]</p>
+<p><a href="../../../core/Message/classes/Message.html"><code>Message</code></a>[]</p>
 <p>The array of all messages</p>
 <h4>Since</h4>
 <p>1.98.0</p>
+<p>Returns an array of all model and control messages of all parts of the composite binding, regardless
+of whether they are old or new.</p>
 <h4>Overrides</h4>
 <p><a href="../../DataState/classes/DataState.html"><code>DataState</code></a>.<a href="../../DataState/classes/DataState.html#getallmessages"><code>getAllMessages</code></a></p>
 <hr>
@@ -107,11 +107,11 @@ structure.</p>
 <hr>
 <h3>getControlMessages()</h3>
 <blockquote>
-<p><strong>getControlMessages</strong>(): <a href="../../../core/message/Message/classes/Message.html"><code>Message</code></a>[]</p>
+<p><strong>getControlMessages</strong>(): <a href="../../../core/Message/classes/Message.html"><code>Message</code></a>[]</p>
 </blockquote>
 <p>Returns the array of current state messages of the control.</p>
 <h4>Returns</h4>
-<p><a href="../../../core/message/Message/classes/Message.html"><code>Message</code></a>[]</p>
+<p><a href="../../../core/Message/classes/Message.html"><code>Message</code></a>[]</p>
 <p>The array of control messages</p>
 <h4>Overrides</h4>
 <p><a href="../../DataState/classes/DataState.html"><code>DataState</code></a>.<a href="../../DataState/classes/DataState.html#getcontrolmessages"><code>getControlMessages</code></a></p>
@@ -120,7 +120,6 @@ structure.</p>
 <blockquote>
 <p><strong>getInternalProperty</strong>(<code>sProperty</code>): <code>any</code>[]</p>
 </blockquote>
-<p>Returns an array of values for the given property in the inner datastates.</p>
 <h4>Parameters</h4>
 <h5>sProperty</h5>
 <p><code>string</code></p>
@@ -130,6 +129,7 @@ structure.</p>
 <p>The array of property values in the inner datastates</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Returns an array of values for the given property in the inner datastates.</p>
 <hr>
 <h3>getInvalidValue()</h3>
 <blockquote>
@@ -146,22 +146,22 @@ case the current model value can be accessed using the <code>getValue</code> met
 <hr>
 <h3>getMessages()</h3>
 <blockquote>
-<p><strong>getMessages</strong>(): <a href="../../../core/message/Message/classes/Message.html"><code>Message</code></a>[]</p>
+<p><strong>getMessages</strong>(): <a href="../../../core/Message/classes/Message.html"><code>Message</code></a>[]</p>
 </blockquote>
 <p>Returns the array of all current state messages combining the model and control messages.</p>
 <h4>Returns</h4>
-<p><a href="../../../core/message/Message/classes/Message.html"><code>Message</code></a>[]</p>
+<p><a href="../../../core/Message/classes/Message.html"><code>Message</code></a>[]</p>
 <p>The array of all messages</p>
 <h4>Overrides</h4>
 <p><a href="../../DataState/classes/DataState.html"><code>DataState</code></a>.<a href="../../DataState/classes/DataState.html#getmessages"><code>getMessages</code></a></p>
 <hr>
 <h3>getModelMessages()</h3>
 <blockquote>
-<p><strong>getModelMessages</strong>(): <a href="../../../core/message/Message/classes/Message.html"><code>Message</code></a>[]</p>
+<p><strong>getModelMessages</strong>(): <a href="../../../core/Message/classes/Message.html"><code>Message</code></a>[]</p>
 </blockquote>
 <p>Returns the array of current state messages of the model.</p>
 <h4>Returns</h4>
-<p><a href="../../../core/message/Message/classes/Message.html"><code>Message</code></a>[]</p>
+<p><a href="../../../core/Message/classes/Message.html"><code>Message</code></a>[]</p>
 <p>The array of messages of the model</p>
 <h4>Overrides</h4>
 <p><a href="../../DataState/classes/DataState.html"><code>DataState</code></a>.<a href="../../DataState/classes/DataState.html#getmodelmessages"><code>getModelMessages</code></a></p>
@@ -217,7 +217,7 @@ with the information contained in <code>oClassInfo</code>.</p>
 <p><code>string</code></p>
 <p>Name of the class being created</p>
 <h5>oClassInfo?</h5>
-<p><a href="../../../../../../sap.f/namespaces/sap/type-aliases/ClassInfo.html"><code>ClassInfo</code></a>&lt;<code>T</code>, <code>CompositeDataState</code>&gt;</p>
+<p><code>ClassInfo</code>&lt;<code>T</code>, <code>CompositeDataState</code>&gt;</p>
 <p>Object literal with information about the class</p>
 <h5>FNMetaImpl?</h5>
 <p><code>Function</code></p>
@@ -241,6 +241,6 @@ used by this class</p>
 <p><a href="../../DataState/classes/DataState.html"><code>DataState</code></a>.<a href="../../DataState/classes/DataState.html#getmetadata-1"><code>getMetadata</code></a></p>
 <hr>
 
-<footer>Generated from <code>@openui5/types@1.120.46</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@openui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

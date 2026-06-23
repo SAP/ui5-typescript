@@ -2,12 +2,12 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>Abstract Class: ComboBoxBase — OpenUI5 TypeScript API</title>
-<meta name="description" content="Abstract Class: ComboBoxBase — OpenUI5 TypeScript API Reference (1.120.46)">
+<title>Class: ComboBoxBase — OpenUI5 TypeScript API</title>
+<meta name="description" content="Class: ComboBoxBase — OpenUI5 TypeScript API Reference (1.120.0)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/openui5/1.120/sap.m/sap/m/ComboBoxBase/classes/ComboBoxBase.html">
-<meta property="og:title" content="Abstract Class: ComboBoxBase — OpenUI5 TypeScript API">
-<meta property="og:description" content="Abstract Class: ComboBoxBase — OpenUI5 TypeScript API Reference (1.120.46)">
+<meta property="og:title" content="Class: ComboBoxBase — OpenUI5 TypeScript API">
+<meta property="og:description" content="Class: ComboBoxBase — OpenUI5 TypeScript API Reference (1.120.0)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/openui5/1.120/sap.m/sap/m/ComboBoxBase/classes/ComboBoxBase.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,14 +33,14 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../index.html">OpenUI5 API</a> › <a href="../../../../../sap.m/README.html">sap.m</a> › sap › m › <a href="../../../../../sap.m/sap/m/ComboBoxBase/README.html">ComboBoxBase</a> › classes</nav>
-<p><a href="../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.46)</strong></a></p>
+<p><a href="../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.0)</strong></a></p>
 <hr>
-<p><a href="../../../../../README.html">OpenUI5 TypeScript API (1.120.46)</a> / <a href="../../../../README.html">sap.m</a> / <a href="../README.html">sap/m/ComboBoxBase</a> / ComboBoxBase</p>
-<h1>Abstract Class: ComboBoxBase</h1>
+<p><a href="../../../../../README.html">OpenUI5 TypeScript API (1.120.0)</a> / <a href="../../../../README.html">sap.m</a> / <a href="../README.html">sap/m/ComboBoxBase</a> / ComboBoxBase</p>
+<h1>Class: ComboBoxBase</h1>
 <pre class="sig"><span class="kw">import</span> ComboBoxBase <span class="kw">from</span> <span class="str">"sap/m/ComboBoxBase"</span>;</pre>
-<p>An abstract class for combo boxes.</p>
 <h2>Since</h2>
 <p>1.22.0</p>
+<p>An abstract class for combo boxes.</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../ComboBoxTextField/classes/ComboBoxTextField.html"><code>ComboBoxTextField</code></a></li>
@@ -91,12 +91,12 @@ of the syntax of the settings object.</p>
 <blockquote>
 <p><strong>_getGroupHeaderInvisibleText</strong>(): <code>string</code></p>
 </blockquote>
-<p>Gets the ID of the hidden label for the group header items</p>
 <h4>Returns</h4>
 <p><code>string</code></p>
 <p>Id of hidden text</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Gets the ID of the hidden label for the group header items</p>
 <hr>
 <h3>addItem()</h3>
 <blockquote>
@@ -116,18 +116,6 @@ of the syntax of the settings object.</p>
 <blockquote>
 <p><strong>attachLoadItems</strong>(<code>oData</code>, <code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
-<p>Attaches event handler <code>fnFunction</code> to the #event:loadItems loadItems event of this <code>sap.m.ComboBoxBase</code>.</p>
-<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
-otherwise it will be bound to this <code>sap.m.ComboBoxBase</code> itself.</p>
-<p>This event is fired when the end user clicks the combo box button to open the dropdown list and the data
-used to display items is not already loaded. Alternatively, it is fired after the user moves the cursor
-to the combo box text field and perform an action that requires data to be loaded. For example, pressing
-F4 to open the dropdown list or typing something in the text field fires the event.</p>
-<p><strong>Note:</strong> Use this feature in performance critical scenarios only. Loading the data lazily (on demand)
-to defer initialization has several implications for the end user experience. For example, the busy indicator
-has to be shown while the items are being loaded and assistive technology software also has to announce
-the state changes (which may be confusing for some screen reader users).</p>
-<p><strong>Note</strong>: Currently the <code>sap.m.MultiComboBox</code> does not support this event.</p>
 <h5>Parameters</h5>
 <h6>oData</h6>
 <p><code>object</code></p>
@@ -144,10 +132,6 @@ object when firing the event</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Since</h5>
 <p>1.38</p>
-<h4>Call Signature</h4>
-<blockquote>
-<p><strong>attachLoadItems</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
-</blockquote>
 <p>Attaches event handler <code>fnFunction</code> to the #event:loadItems loadItems event of this <code>sap.m.ComboBoxBase</code>.</p>
 <p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
 otherwise it will be bound to this <code>sap.m.ComboBoxBase</code> itself.</p>
@@ -160,6 +144,10 @@ to defer initialization has several implications for the end user experience. Fo
 has to be shown while the items are being loaded and assistive technology software also has to announce
 the state changes (which may be confusing for some screen reader users).</p>
 <p><strong>Note</strong>: Currently the <code>sap.m.MultiComboBox</code> does not support this event.</p>
+<h4>Call Signature</h4>
+<blockquote>
+<p><strong>attachLoadItems</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
+</blockquote>
 <h5>Parameters</h5>
 <h6>fnFunction</h6>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -172,6 +160,18 @@ the state changes (which may be confusing for some screen reader users).</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Since</h5>
 <p>1.38</p>
+<p>Attaches event handler <code>fnFunction</code> to the #event:loadItems loadItems event of this <code>sap.m.ComboBoxBase</code>.</p>
+<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
+otherwise it will be bound to this <code>sap.m.ComboBoxBase</code> itself.</p>
+<p>This event is fired when the end user clicks the combo box button to open the dropdown list and the data
+used to display items is not already loaded. Alternatively, it is fired after the user moves the cursor
+to the combo box text field and perform an action that requires data to be loaded. For example, pressing
+F4 to open the dropdown list or typing something in the text field fires the event.</p>
+<p><strong>Note:</strong> Use this feature in performance critical scenarios only. Loading the data lazily (on demand)
+to defer initialization has several implications for the end user experience. For example, the busy indicator
+has to be shown while the items are being loaded and assistive technology software also has to announce
+the state changes (which may be confusing for some screen reader users).</p>
+<p><strong>Note</strong>: Currently the <code>sap.m.MultiComboBox</code> does not support this event.</p>
 <hr>
 <h3>bindItems()</h3>
 <blockquote>
@@ -192,11 +192,11 @@ of the possible properties of <code>oBindingInfo</code>.</p>
 <blockquote>
 <p><strong>clearSelection</strong>(): <code>void</code></p>
 </blockquote>
-<p>Clears the selection. To be overwritten by subclasses.</p>
 <h4>Returns</h4>
 <p><code>void</code></p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Clears the selection. To be overwritten by subclasses.</p>
 <hr>
 <h3>close()</h3>
 <blockquote>
@@ -211,7 +211,6 @@ of the possible properties of <code>oBindingInfo</code>.</p>
 <blockquote>
 <p><strong>configPicker</strong>(<code>oPicker</code>): <code>void</code></p>
 </blockquote>
-<p>Base method for picker configuration</p>
 <h4>Parameters</h4>
 <h5>oPicker</h5>
 <p><a href="../../Popover/classes/Popover.html"><code>Popover</code></a> | <a href="../../Dialog/classes/Dialog.html"><code>Dialog</code></a></p>
@@ -220,12 +219,12 @@ of the possible properties of <code>oBindingInfo</code>.</p>
 <p><code>void</code></p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Base method for picker configuration</p>
 <hr>
 <h3>createPicker()</h3>
 <blockquote>
 <p><strong>createPicker</strong>(<code>sPickerType</code>): <a href="../../Popover/classes/Popover.html"><code>Popover</code></a> | <a href="../../Dialog/classes/Dialog.html"><code>Dialog</code></a></p>
 </blockquote>
-<p>Creates a picker popup container where the selection should take place. To be overwritten by subclasses.</p>
 <h4>Parameters</h4>
 <h5>sPickerType</h5>
 <p><code>string</code></p>
@@ -235,6 +234,7 @@ of the possible properties of <code>oBindingInfo</code>.</p>
 <p>The picker popup to be used.</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Creates a picker popup container where the selection should take place. To be overwritten by subclasses.</p>
 <hr>
 <h3>destroyItems()</h3>
 <blockquote>
@@ -249,8 +249,6 @@ of the possible properties of <code>oBindingInfo</code>.</p>
 <blockquote>
 <p><strong>detachLoadItems</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
-<p>Detaches event handler <code>fnFunction</code> from the #event:loadItems loadItems event of this <code>sap.m.ComboBoxBase</code>.</p>
-<p>The passed function and listener object must match the ones used for event registration.</p>
 <h4>Parameters</h4>
 <h5>fnFunction</h5>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -263,12 +261,13 @@ of the possible properties of <code>oBindingInfo</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.38</p>
+<p>Detaches event handler <code>fnFunction</code> from the #event:loadItems loadItems event of this <code>sap.m.ComboBoxBase</code>.</p>
+<p>The passed function and listener object must match the ones used for event registration.</p>
 <hr>
 <h3>fireLoadItems()</h3>
 <blockquote>
 <p><strong>fireLoadItems</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
-<p>Fires event #event:loadItems loadItems to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><code>object</code></p>
@@ -280,12 +279,12 @@ of the possible properties of <code>oBindingInfo</code>.</p>
 <p>1.38</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:loadItems loadItems to attached listeners.</p>
 <hr>
 <h3><del>getEnabledItems()</del></h3>
 <blockquote>
 <p><strong>getEnabledItems</strong>(<code>aItems?</code>): <a href="../../../../../sap.ui.core/sap/ui/core/Item/classes/Item.html"><code>Item</code></a>[]</p>
 </blockquote>
-<p>Gets the enabled items from the aggregation named <code>items</code>.</p>
 <h4>Parameters</h4>
 <h5>aItems?</h5>
 <p><a href="../../../../../sap.ui.core/sap/ui/core/Item/classes/Item.html"><code>Item</code></a>[]</p>
@@ -295,6 +294,7 @@ of the possible properties of <code>oBindingInfo</code>.</p>
 <p>An array containing the enabled items.</p>
 <h4>Deprecated</h4>
 <p>(since 1.86) - The enabled items should be managed by the application.</p>
+<p>Gets the enabled items from the aggregation named <code>items</code>.</p>
 <hr>
 <h3>getFirstItem()</h3>
 <blockquote>
@@ -309,8 +309,6 @@ of the possible properties of <code>oBindingInfo</code>.</p>
 <blockquote>
 <p><strong>getInputForwardableProperties</strong>(): <code>any</code>[]</p>
 </blockquote>
-<p>Gets the input properties, which should be forwarded from the combobox text field to the picker text
-field</p>
 <h4>Returns</h4>
 <p><code>any</code>[]</p>
 <p>Array of the forwardable properties</p>
@@ -318,6 +316,8 @@ field</p>
 <p>1.66</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Gets the input properties, which should be forwarded from the combobox text field to the picker text
+field</p>
 <hr>
 <h3>getItemAt()</h3>
 <blockquote>
@@ -369,7 +369,6 @@ with the available options, however they can still be accessed through the aggre
 <blockquote>
 <p><strong>getList</strong>(): <a href="../../List/classes/List.html"><code>List</code></a></p>
 </blockquote>
-<p>Gets the <code>list</code>.</p>
 <h4>Returns</h4>
 <p><a href="../../List/classes/List.html"><code>List</code></a></p>
 <p>The list instance object or <code>null</code>.</p>
@@ -377,47 +376,47 @@ with the available options, however they can still be accessed through the aggre
 <p>(since 1.62) - The list structure should not be used as per SAP note: 2746748.</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Gets the <code>list</code>.</p>
 <hr>
 <h3><del>getOpen()</del></h3>
 <blockquote>
 <p><strong>getOpen</strong>(): <code>boolean</code></p>
 </blockquote>
-<p>Gets current value of property #getOpen open.</p>
-<p>Indicates whether the picker is opened.</p>
-<p>Default value is <code>false</code>.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>Value of property <code>open</code></p>
 <h4>Deprecated</h4>
 <p>(since 1.110)</p>
+<p>Gets current value of property #getOpen open.</p>
+<p>Indicates whether the picker is opened.</p>
+<p>Default value is <code>false</code>.</p>
 <hr>
 <h3>getPicker()</h3>
 <blockquote>
 <p><strong>getPicker</strong>(): <a href="../../Popover/classes/Popover.html"><code>Popover</code></a> | <a href="../../Dialog/classes/Dialog.html"><code>Dialog</code></a></p>
 </blockquote>
-<p>Gets the control&#39;s picker popup.</p>
 <h4>Returns</h4>
 <p><a href="../../Popover/classes/Popover.html"><code>Popover</code></a> | <a href="../../Dialog/classes/Dialog.html"><code>Dialog</code></a></p>
 <p>The picker instance the <code>createPicker()</code> method.</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Gets the control&#39;s picker popup.</p>
 <hr>
 <h3>getPickerInvisibleTextId()</h3>
 <blockquote>
 <p><strong>getPickerInvisibleTextId</strong>(): <code>string</code></p>
 </blockquote>
-<p>Gets the ID of the hidden label</p>
 <h4>Returns</h4>
 <p><code>string</code></p>
 <p>Id of hidden text</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Gets the ID of the hidden label</p>
 <hr>
 <h3>getPickerTextField()</h3>
 <blockquote>
 <p><strong>getPickerTextField</strong>(): <a href="../../ComboBoxTextField/classes/ComboBoxTextField.html"><code>ComboBoxTextField</code></a> | <a href="../../Input/classes/Input.html"><code>Input</code></a></p>
 </blockquote>
-<p>Gets the control&#39;s input from the picker.</p>
 <h4>Returns</h4>
 <p><a href="../../ComboBoxTextField/classes/ComboBoxTextField.html"><code>ComboBoxTextField</code></a> | <a href="../../Input/classes/Input.html"><code>Input</code></a></p>
 <p>Picker&#39;s input for filtering the list</p>
@@ -425,61 +424,61 @@ with the available options, however they can still be accessed through the aggre
 <p>1.42</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Gets the control&#39;s input from the picker.</p>
 <hr>
 <h3>getPickerType()</h3>
 <blockquote>
 <p><strong>getPickerType</strong>(): <code>string</code></p>
 </blockquote>
-<p>Gets the property <code>_sPickerType</code></p>
 <h4>Returns</h4>
 <p><code>string</code></p>
 <p>The picker type</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Gets the property <code>_sPickerType</code></p>
 <hr>
 <h3>getRecreateItems()</h3>
 <blockquote>
 <p><strong>getRecreateItems</strong>(): <code>boolean</code></p>
 </blockquote>
-<p>Gets the flag indicating whether the list items should be recreated</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>True if the list items should be recreated</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Gets the flag indicating whether the list items should be recreated</p>
 <hr>
 <h3>getShowClearIcon()</h3>
 <blockquote>
 <p><strong>getShowClearIcon</strong>(): <code>boolean</code></p>
 </blockquote>
-<p>Gets current value of property #getShowClearIcon showClearIcon.</p>
-<p>Specifies whether clear icon is shown. Pressing the icon will clear input&#39;s value.</p>
-<p>Default value is <code>false</code>.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>Value of property <code>showClearIcon</code></p>
 <h4>Since</h4>
 <p>1.96</p>
+<p>Gets current value of property #getShowClearIcon showClearIcon.</p>
+<p>Specifies whether clear icon is shown. Pressing the icon will clear input&#39;s value.</p>
+<p>Default value is <code>false</code>.</p>
 <hr>
 <h3>getShowSecondaryValues()</h3>
 <blockquote>
 <p><strong>getShowSecondaryValues</strong>(): <code>boolean</code></p>
 </blockquote>
-<p>Gets current value of property #getShowSecondaryValues showSecondaryValues.</p>
-<p>Indicates whether the text values of the <code>additionalText</code> property of a sap.ui.core.ListItem
-are shown.</p>
-<p>Default value is <code>false</code>.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>Value of property <code>showSecondaryValues</code></p>
 <h4>Since</h4>
 <p>1.60</p>
+<p>Gets current value of property #getShowSecondaryValues showSecondaryValues.</p>
+<p>Indicates whether the text values of the <code>additionalText</code> property of a sap.ui.core.ListItem
+are shown.</p>
+<p>Default value is <code>false</code>.</p>
 <hr>
 <h3>handleItemInsertion()</h3>
 <blockquote>
 <p><strong>handleItemInsertion</strong>(<code>oItem</code>): <code>void</code></p>
 </blockquote>
-<p>Fires when an object gets inserted in the items aggregation.</p>
 <h4>Parameters</h4>
 <h5>oItem</h5>
 <p><a href="../../../../../sap.ui.core/sap/ui/core/Item/classes/Item.html"><code>Item</code></a></p>
@@ -488,12 +487,12 @@ are shown.</p>
 <p><code>void</code></p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires when an object gets inserted in the items aggregation.</p>
 <hr>
 <h3>handleItemRemoval()</h3>
 <blockquote>
 <p><strong>handleItemRemoval</strong>(<code>oItem</code>): <code>void</code></p>
 </blockquote>
-<p>Fires when an object gets removed from the items aggregation.</p>
 <h4>Parameters</h4>
 <h5>oItem</h5>
 <p><a href="../../../../../sap.ui.core/sap/ui/core/Item/classes/Item.html"><code>Item</code></a></p>
@@ -502,23 +501,23 @@ are shown.</p>
 <p><code>void</code></p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires when an object gets removed from the items aggregation.</p>
 <hr>
 <h3>hasContent()</h3>
 <blockquote>
 <p><strong>hasContent</strong>(): <code>boolean</code></p>
 </blockquote>
-<p>Determines whether the control has content or not.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>True if the control has content</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Determines whether the control has content or not.</p>
 <hr>
 <h3>highlightList()</h3>
 <blockquote>
 <p><strong>highlightList</strong>(<code>sValue</code>): <code>void</code></p>
 </blockquote>
-<p>Handles highlighting of items after filtering.</p>
 <h4>Parameters</h4>
 <h5>sValue</h5>
 <p><code>string</code></p>
@@ -527,6 +526,7 @@ are shown.</p>
 <p><code>void</code></p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Handles highlighting of items after filtering.</p>
 <hr>
 <h3>indexOfItem()</h3>
 <blockquote>
@@ -564,7 +564,6 @@ the last position</p>
 <blockquote>
 <p><strong>intersectItems</strong>(<code>aItems</code>, <code>aOtherItems</code>): <a href="../../../../../sap.ui.core/sap/ui/core/Item/classes/Item.html"><code>Item</code></a>[]</p>
 </blockquote>
-<p>Finds the common items of two arrays</p>
 <h4>Parameters</h4>
 <h5>aItems</h5>
 <p><a href="../../../../../sap.ui.core/sap/ui/core/Item/classes/Item.html"><code>Item</code></a>[]</p>
@@ -577,6 +576,7 @@ the last position</p>
 <p>Array of unique items from both arrays</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Finds the common items of two arrays</p>
 <hr>
 <h3>isOpen()</h3>
 <blockquote>
@@ -592,21 +592,20 @@ animations).</p>
 <blockquote>
 <p><strong>oncompositionend</strong>(<code>oEvent</code>): <code>void</code></p>
 </blockquote>
-<p>Called when the composition of a passage of text has been completed or cancelled.</p>
 <h4>Parameters</h4>
 <h5>oEvent</h5>
-<p><a href="../../../../../sap.ui.core/namespaces/JQuery/interfaces/Event.html"><code>Event</code></a></p>
+<p><code>Event</code></p>
 <p>The event object.</p>
 <h4>Returns</h4>
 <p><code>void</code></p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Called when the composition of a passage of text has been completed or cancelled.</p>
 <hr>
 <h3>onItemChange()</h3>
 <blockquote>
 <p><strong>onItemChange</strong>(<code>oControlEvent</code>, <code>bShowSecondaryValues</code>): <code>void</code></p>
 </blockquote>
-<p>Handles properties&#39; changes of items in the aggregation named <code>items</code>.</p>
 <h4>Parameters</h4>
 <h5>oControlEvent</h5>
 <p><a href="../../../../../sap.ui.core/sap/ui/base/Event/classes/Event.html"><code>Event</code></a></p>
@@ -620,17 +619,18 @@ animations).</p>
 <p>1.90</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Handles properties&#39; changes of items in the aggregation named <code>items</code>.</p>
 <hr>
 <h3>open()</h3>
 <blockquote>
 <p><strong>open</strong>(): <code>this</code></p>
 </blockquote>
-<p>Opens the control&#39;s picker popup.</p>
 <h4>Returns</h4>
 <p><code>this</code></p>
 <p><code>this</code> to allow method chaining.</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Opens the control&#39;s picker popup.</p>
 <hr>
 <h3>removeAllItems()</h3>
 <blockquote>
@@ -659,10 +659,6 @@ animations).</p>
 <blockquote>
 <p><strong>setFilterFunction</strong>(<code>fnFilter?</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a custom filter function for items. The function accepts two parameters: - currenly typed value
-in the input field - item to be matched The function should return a Boolean value (true or false) which
-represents whether an item will be shown in the dropdown or not. If no callback is provided, the control
-fallbacks to default filtering.</p>
 <h4>Parameters</h4>
 <h5>fnFilter?</h5>
 <p>(<code>p1</code>, <code>p2</code>) =&gt; <code>boolean</code></p>
@@ -672,15 +668,15 @@ fallbacks to default filtering.</p>
 <p><code>this</code> to allow method chaining.</p>
 <h4>Since</h4>
 <p>1.58</p>
+<p>Sets a custom filter function for items. The function accepts two parameters: - currenly typed value
+in the input field - item to be matched The function should return a Boolean value (true or false) which
+represents whether an item will be shown in the dropdown or not. If no callback is provided, the control
+fallbacks to default filtering.</p>
 <hr>
 <h3><del>setOpen()</del></h3>
 <blockquote>
 <p><strong>setOpen</strong>(<code>bOpen?</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getOpen open.</p>
-<p>Indicates whether the picker is opened.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>false</code>.</p>
 <h4>Parameters</h4>
 <h5>bOpen?</h5>
 <p><code>boolean</code></p>
@@ -690,12 +686,15 @@ fallbacks to default filtering.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Deprecated</h4>
 <p>(since 1.110)</p>
+<p>Sets a new value for property #getOpen open.</p>
+<p>Indicates whether the picker is opened.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>false</code>.</p>
 <hr>
 <h3>setPickerType()</h3>
 <blockquote>
 <p><strong>setPickerType</strong>(<code>sPickerType</code>): <code>void</code></p>
 </blockquote>
-<p>Sets the property <code>_sPickerType</code>.</p>
 <h4>Parameters</h4>
 <h5>sPickerType</h5>
 <p><code>string</code></p>
@@ -704,12 +703,12 @@ fallbacks to default filtering.</p>
 <p><code>void</code></p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Sets the property <code>_sPickerType</code>.</p>
 <hr>
 <h3>setRecreateItems()</h3>
 <blockquote>
 <p><strong>setRecreateItems</strong>(<code>bRecreate</code>): <code>void</code></p>
 </blockquote>
-<p>Sets whether the list items should be recreated.</p>
 <h4>Parameters</h4>
 <h5>bRecreate</h5>
 <p><code>boolean</code></p>
@@ -718,12 +717,12 @@ fallbacks to default filtering.</p>
 <p><code>void</code></p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Sets whether the list items should be recreated.</p>
 <hr>
 <h3>setSelectable()</h3>
 <blockquote>
 <p><strong>setSelectable</strong>(<code>oItem</code>, <code>bSelectable</code>): <code>void</code></p>
 </blockquote>
-<p>Sets the selectable property of <code>sap.ui.core.Item</code></p>
 <h4>Parameters</h4>
 <h5>oItem</h5>
 <p><a href="../../../../../sap.ui.core/sap/ui/core/Item/classes/Item.html"><code>Item</code></a></p>
@@ -735,15 +734,12 @@ fallbacks to default filtering.</p>
 <p><code>void</code></p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Sets the selectable property of <code>sap.ui.core.Item</code></p>
 <hr>
 <h3>setShowClearIcon()</h3>
 <blockquote>
 <p><strong>setShowClearIcon</strong>(<code>bShowClearIcon?</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getShowClearIcon showClearIcon.</p>
-<p>Specifies whether clear icon is shown. Pressing the icon will clear input&#39;s value.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>false</code>.</p>
 <h4>Parameters</h4>
 <h5>bShowClearIcon?</h5>
 <p><code>boolean</code></p>
@@ -753,16 +749,15 @@ fallbacks to default filtering.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.96</p>
+<p>Sets a new value for property #getShowClearIcon showClearIcon.</p>
+<p>Specifies whether clear icon is shown. Pressing the icon will clear input&#39;s value.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>false</code>.</p>
 <hr>
 <h3>setShowSecondaryValues()</h3>
 <blockquote>
 <p><strong>setShowSecondaryValues</strong>(<code>bShowSecondaryValues?</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getShowSecondaryValues showSecondaryValues.</p>
-<p>Indicates whether the text values of the <code>additionalText</code> property of a sap.ui.core.ListItem
-are shown.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>false</code>.</p>
 <h4>Parameters</h4>
 <h5>bShowSecondaryValues?</h5>
 <p><code>boolean</code></p>
@@ -772,12 +767,16 @@ are shown.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.60</p>
+<p>Sets a new value for property #getShowSecondaryValues showSecondaryValues.</p>
+<p>Indicates whether the text values of the <code>additionalText</code> property of a sap.ui.core.ListItem
+are shown.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>false</code>.</p>
 <hr>
 <h3>setTextFieldHandler()</h3>
 <blockquote>
 <p><strong>setTextFieldHandler</strong>(<code>oTextField</code>): <code>void</code></p>
 </blockquote>
-<p>Sets the TextField handler</p>
 <h4>Parameters</h4>
 <h5>oTextField</h5>
 <p><a href="../../ComboBoxTextField/classes/ComboBoxTextField.html"><code>ComboBoxTextField</code></a> | <a href="../../Input/classes/Input.html"><code>Input</code></a></p>
@@ -786,6 +785,7 @@ are shown.</p>
 <p><code>void</code></p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Sets the TextField handler</p>
 <hr>
 <h3>setValue()</h3>
 <blockquote>
@@ -806,7 +806,6 @@ are shown.</p>
 <blockquote>
 <p><strong>showItems</strong>(<code>fnFilter</code>): <code>void</code></p>
 </blockquote>
-<p>Opens the <code>SuggestionsPopover</code> with the available items.</p>
 <h4>Parameters</h4>
 <h5>fnFilter</h5>
 <p><code>Function</code></p>
@@ -815,16 +814,17 @@ are shown.</p>
 <p><code>void</code></p>
 <h4>Since</h4>
 <p>1.64</p>
+<p>Opens the <code>SuggestionsPopover</code> with the available items.</p>
 <hr>
 <h3>syncPickerContent()</h3>
 <blockquote>
 <p><strong>syncPickerContent</strong>(): <a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></p>
 </blockquote>
-<p>Creates picker if doesn&#39;t exist yet and sync with Control items To be overwritten by subclasses.</p>
 <h4>Returns</h4>
 <p><a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Creates picker if doesn&#39;t exist yet and sync with Control items To be overwritten by subclasses.</p>
 <hr>
 <h3>unbindItems()</h3>
 <blockquote>
@@ -850,7 +850,7 @@ contained in <code>oClassInfo</code>.</p>
 <p><code>string</code></p>
 <p>Name of the class being created</p>
 <h5>oClassInfo?</h5>
-<p><a href="../../../../../sap.f/namespaces/sap/type-aliases/ClassInfo.html"><code>ClassInfo</code></a>&lt;<code>T</code>, <code>ComboBoxBase</code>&gt;</p>
+<p><code>ClassInfo</code>&lt;<code>T</code>, <code>ComboBoxBase</code>&gt;</p>
 <p>Object literal with information about the class</p>
 <h5>FNMetaImpl?</h5>
 <p><code>Function</code></p>
@@ -874,6 +874,6 @@ used by this class</p>
 <p><a href="../../ComboBoxTextField/classes/ComboBoxTextField.html"><code>ComboBoxTextField</code></a>.<a href="../../ComboBoxTextField/classes/ComboBoxTextField.html#getmetadata-1"><code>getMetadata</code></a></p>
 <hr>
 
-<footer>Generated from <code>@openui5/types@1.120.46</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@openui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

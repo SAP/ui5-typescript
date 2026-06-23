@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Class: NumberFormat — OpenUI5 TypeScript API</title>
-<meta name="description" content="Class: NumberFormat — OpenUI5 TypeScript API Reference (1.120.46)">
+<meta name="description" content="Class: NumberFormat — OpenUI5 TypeScript API Reference (1.120.0)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/openui5/1.120/sap.ui.core/sap/ui/core/format/NumberFormat/classes/NumberFormat.html">
 <meta property="og:title" content="Class: NumberFormat — OpenUI5 TypeScript API">
-<meta property="og:description" content="Class: NumberFormat — OpenUI5 TypeScript API Reference (1.120.46)">
+<meta property="og:description" content="Class: NumberFormat — OpenUI5 TypeScript API Reference (1.120.0)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/openui5/1.120/sap.ui.core/sap/ui/core/format/NumberFormat/classes/NumberFormat.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,9 +33,9 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../../index.html">OpenUI5 API</a> › <a href="../../../../../../../sap.ui.core/README.html">sap.ui.core</a> › sap › ui › core › format › <a href="../../../../../../../sap.ui.core/sap/ui/core/format/NumberFormat/README.html">NumberFormat</a> › classes</nav>
-<p><a href="../../../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.46)</strong></a></p>
+<p><a href="../../../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.0)</strong></a></p>
 <hr>
-<p><a href="../../../../../../../README.html">OpenUI5 TypeScript API (1.120.46)</a> / <a href="../../../../../../README.html">sap.ui.core</a> / <a href="../README.html">sap/ui/core/format/NumberFormat</a> / NumberFormat</p>
+<p><a href="../../../../../../../README.html">OpenUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../../README.html">sap.ui.core</a> / <a href="../README.html">sap/ui/core/format/NumberFormat</a> / NumberFormat</p>
 <h1>Class: NumberFormat</h1>
 <pre class="sig"><span class="kw">import</span> NumberFormat <span class="kw">from</span> <span class="str">"sap/ui/core/format/NumberFormat"</span>;</pre>
 <p>The NumberFormat is a static class for formatting and parsing numeric values according to a set of format
@@ -81,18 +81,18 @@ mode in this object indicates how the least significant returned digits of round
 <blockquote>
 <p><strong>getScale</strong>(): <code>string</code></p>
 </blockquote>
-<p>Returns the scaling factor which is calculated based on the format options and the current locale being
-used.</p>
-<p>This function only returns a meaningful scaling factor when the &#39;style&#39; formatting option is set to &#39;short&#39;
-or &#39;long&#39;, and the &#39;shortRefNumber&#39; option for calculating the scale factor is set.</p>
-<p>Consider using this function when the &#39;showScale&#39; option is set to <code>false</code>, which causes the scale factor
-not to appear in every formatted number but in a shared place.</p>
 <h4>Returns</h4>
 <p><code>string</code></p>
 <p>The scale string if it exists based on the given &#39;shortRefNumber&#39; option. Otherwise it returns
 <code>undefined</code>.</p>
 <h4>Since</h4>
 <p>1.100</p>
+<p>Returns the scaling factor which is calculated based on the format options and the current locale being
+used.</p>
+<p>This function only returns a meaningful scaling factor when the &#39;style&#39; formatting option is set to &#39;short&#39;
+or &#39;long&#39;, and the &#39;shortRefNumber&#39; option for calculating the scale factor is set.</p>
+<p>Consider using this function when the &#39;showScale&#39; option is set to <code>false</code>, which causes the scale factor
+not to appear in every formatted number but in a shared place.</p>
 <hr>
 <h3>parse()</h3>
 <blockquote>
@@ -128,7 +128,7 @@ with the information contained in <code>oClassInfo</code>.</p>
 <p><code>string</code></p>
 <p>Name of the class being created</p>
 <h5>oClassInfo?</h5>
-<p><a href="../../../../../../../sap.f/namespaces/sap/type-aliases/ClassInfo.html"><code>ClassInfo</code></a>&lt;<code>T</code>, <code>NumberFormat</code>&gt;</p>
+<p><code>ClassInfo</code>&lt;<code>T</code>, <code>NumberFormat</code>&gt;</p>
 <p>Object literal with information about the class</p>
 <h5>FNMetaImpl?</h5>
 <p><code>Function</code></p>
@@ -226,16 +226,14 @@ undefined], and NaN is formatted as an empty string.</p>
 <p>defines the grouping base size in digits if it is different from the grouping size (e.g. Indian grouping)</p>
 <h6>groupingEnabled?</h6>
 <p><code>boolean</code></p>
-<p>defines whether grouping is enabled (grouping separators are shown). <strong>Note:</strong> Grouping is disabled if
-the <code>groupingSize</code> format option is set to a non-positive value.</p>
+<p>defines whether grouping is enabled (grouping separators are shown)</p>
 <h6>groupingSeparator?</h6>
 <p><code>string</code></p>
 <p>defines the character used as grouping separator. Note: <code>groupingSeparator</code> must always be different
 from <code>decimalSeparator</code>.</p>
 <h6>groupingSize?</h6>
 <p><code>number</code></p>
-<p>defines the grouping size in digits; the default is <code>3</code>. <strong>Note:</strong> If this format option is set to a
-non-positive value, grouping will be disabled entirely.</p>
+<p>defines the grouping size in digits; the default is <code>3</code>. It must be a positive number.</p>
 <h6>maxFractionDigits?</h6>
 <p><code>number</code></p>
 <p>defines the maximum number of decimal digits</p>
@@ -270,12 +268,12 @@ than the <code>maxFractionDigits</code> format option allows. If decimals are no
 is rounded to <code>maxFractionDigits</code>.</p>
 <h6>roundingMode?</h6>
 <p><a href="../enumerations/RoundingMode.html"><code>RoundingMode</code></a> | <code>&quot;AWAY_FROM_ZERO&quot;</code> | <code>&quot;CEILING&quot;</code> | <code>&quot;FLOOR&quot;</code> | <code>&quot;HALF_AWAY_FROM_ZERO&quot;</code> | <code>&quot;HALF_CEILING&quot;</code> | <code>&quot;HALF_FLOOR&quot;</code> | <code>&quot;HALF_TOWARDS_ZERO&quot;</code> | <code>&quot;TOWARDS_ZERO&quot;</code></p>
-<p>Specifies the rounding behavior for discarding the digits after the maximum fraction digits defined by
-<code>maxFractionDigits</code>. This can be assigned
+<p>specifies the rounding behavior for discarding the digits after the maximum fraction digits defined by
+maxFractionDigits. Rounding will only be applied if the passed value is of type <code>number</code>. This can be
+assigned
 	 - by value in sap.ui.core.format.NumberFormat.RoundingMode RoundingMode,
 	 - via a function that is used for rounding the number and takes two parameters: the number itself,
-    and the number of decimal digits that should be reserved. <strong>Using a function is deprecated since 1.120</strong>;
-    string based numbers are not rounded via this custom function.</p>
+    and the number of decimal digits that should be reserved.</p>
 <h6>shortDecimals?</h6>
 <p><code>number</code></p>
 <p>defines the number of decimal in the shortened format string. If this isn&#39;t specified, the &#39;decimals&#39;
@@ -365,16 +363,14 @@ and NaN is formatted as an empty string.</p>
 <p>defines the grouping base size in digits if it is different from the grouping size (e.g. Indian grouping)</p>
 <h6>groupingEnabled?</h6>
 <p><code>boolean</code></p>
-<p>defines whether grouping is enabled (grouping separators are shown). <strong>Note:</strong> Grouping is disabled if
-the <code>groupingSize</code> format option is set to a non-positive value.</p>
+<p>defines whether grouping is enabled (grouping separators are shown)</p>
 <h6>groupingSeparator?</h6>
 <p><code>string</code></p>
 <p>defines the character used as grouping separator. Note: <code>groupingSeparator</code> must always be different
 from <code>decimalSeparator</code>.</p>
 <h6>groupingSize?</h6>
 <p><code>number</code></p>
-<p>defines the grouping size in digits; the default is <code>3</code>. <strong>Note:</strong> If this format option is set to a
-non-positive value, grouping will be disabled entirely.</p>
+<p>defines the grouping size in digits; the default is <code>3</code>. It must be a positive number.</p>
 <h6>maxFractionDigits?</h6>
 <p><code>number</code></p>
 <p>defines the maximum number of decimal digits</p>
@@ -412,12 +408,12 @@ than the <code>maxFractionDigits</code> format option allows. If decimals are no
 is rounded to <code>maxFractionDigits</code>.</p>
 <h6>roundingMode?</h6>
 <p><a href="../enumerations/RoundingMode.html"><code>RoundingMode</code></a> | <code>&quot;AWAY_FROM_ZERO&quot;</code> | <code>&quot;CEILING&quot;</code> | <code>&quot;FLOOR&quot;</code> | <code>&quot;HALF_AWAY_FROM_ZERO&quot;</code> | <code>&quot;HALF_CEILING&quot;</code> | <code>&quot;HALF_FLOOR&quot;</code> | <code>&quot;HALF_TOWARDS_ZERO&quot;</code> | <code>&quot;TOWARDS_ZERO&quot;</code></p>
-<p>Specifies the rounding behavior for discarding the digits after the maximum fraction digits defined by
-<code>maxFractionDigits</code>. This can be assigned
+<p>specifies the rounding behavior for discarding the digits after the maximum fraction digits defined by
+maxFractionDigits. Rounding will only be applied if the passed value is of type <code>number</code>. This can be
+assigned
 	 - by value in sap.ui.core.format.NumberFormat.RoundingMode RoundingMode,
 	 - via a function that is used for rounding the number and takes two parameters: the number itself,
-    and the number of decimal digits that should be reserved. <strong>Using a function is deprecated since 1.120</strong>;
-    string based numbers are not rounded via this custom function.</p>
+    and the number of decimal digits that should be reserved.</p>
 <h6>shortDecimals?</h6>
 <p><code>number</code></p>
 <p>defines the number of decimal in the shortened format string. If this isn&#39;t specified, the &#39;decimals&#39;
@@ -493,16 +489,14 @@ NaN is formatted as an empty string.</p>
 <p>defines the grouping base size in digits if it is different from the grouping size (e.g. Indian grouping)</p>
 <h6>groupingEnabled?</h6>
 <p><code>boolean</code></p>
-<p>defines whether grouping is enabled (grouping separators are shown). <strong>Note:</strong> Grouping is disabled if
-the <code>groupingSize</code> format option is set to a non-positive value.</p>
+<p>defines whether grouping is enabled (grouping separators are shown)</p>
 <h6>groupingSeparator?</h6>
 <p><code>string</code></p>
 <p>defines the character used as grouping separator. Note: <code>groupingSeparator</code> must always be different
 from <code>decimalSeparator</code>.</p>
 <h6>groupingSize?</h6>
 <p><code>number</code></p>
-<p>defines the grouping size in digits; the default is <code>3</code>. <strong>Note:</strong> If this format option is set to a
-non-positive value, grouping will be disabled entirely.</p>
+<p>defines the grouping size in digits; the default is <code>3</code>. It must be a positive number.</p>
 <h6>maxFractionDigits?</h6>
 <p><code>number</code></p>
 <p>defines the maximum number of decimal digits</p>
@@ -540,12 +534,12 @@ than the <code>maxFractionDigits</code> format option allows. If decimals are no
 is rounded to <code>maxFractionDigits</code>.</p>
 <h6>roundingMode?</h6>
 <p><a href="../enumerations/RoundingMode.html"><code>RoundingMode</code></a> | <code>&quot;AWAY_FROM_ZERO&quot;</code> | <code>&quot;CEILING&quot;</code> | <code>&quot;FLOOR&quot;</code> | <code>&quot;HALF_AWAY_FROM_ZERO&quot;</code> | <code>&quot;HALF_CEILING&quot;</code> | <code>&quot;HALF_FLOOR&quot;</code> | <code>&quot;HALF_TOWARDS_ZERO&quot;</code> | <code>&quot;TOWARDS_ZERO&quot;</code></p>
-<p>Specifies the rounding behavior for discarding the digits after the maximum fraction digits defined by
-<code>maxFractionDigits</code>. This can be assigned
+<p>specifies the rounding behavior for discarding the digits after the maximum fraction digits defined by
+maxFractionDigits. Rounding will only be applied if the passed value is of type <code>number</code>. This can be
+assigned
 	 - by value in sap.ui.core.format.NumberFormat.RoundingMode RoundingMode,
 	 - via a function that is used for rounding the number and takes two parameters: the number itself,
-    and the number of decimal digits that should be reserved. <strong>Using a function is deprecated since 1.120</strong>;
-    string based numbers are not rounded via this custom function.</p>
+    and the number of decimal digits that should be reserved.</p>
 <h6>shortDecimals?</h6>
 <p><code>number</code></p>
 <p>defines the number of decimal in the shortened format string. If this isn&#39;t specified, the &#39;decimals&#39;
@@ -620,16 +614,14 @@ and NaN is formatted as an empty string.</p>
 <p>defines the grouping base size in digits if it is different from the grouping size (e.g. Indian grouping)</p>
 <h6>groupingEnabled?</h6>
 <p><code>boolean</code></p>
-<p>defines whether grouping is enabled (grouping separators are shown). <strong>Note:</strong> Grouping is disabled if
-the <code>groupingSize</code> format option is set to a non-positive value.</p>
+<p>defines whether grouping is enabled (grouping separators are shown)</p>
 <h6>groupingSeparator?</h6>
 <p><code>string</code></p>
 <p>defines the character used as grouping separator. Note: <code>groupingSeparator</code> must always be different
 from <code>decimalSeparator</code>.</p>
 <h6>groupingSize?</h6>
 <p><code>number</code></p>
-<p>defines the grouping size in digits; the default is <code>3</code>. <strong>Note:</strong> If this format option is set to a
-non-positive value, grouping will be disabled entirely.</p>
+<p>defines the grouping size in digits; the default is <code>3</code>. It must be a positive number.</p>
 <h6>maxFractionDigits?</h6>
 <p><code>number</code></p>
 <p>defines the maximum number of decimal digits</p>
@@ -670,12 +662,12 @@ than the <code>maxFractionDigits</code> format option allows. If decimals are no
 is rounded to <code>maxFractionDigits</code>.</p>
 <h6>roundingMode?</h6>
 <p><a href="../enumerations/RoundingMode.html"><code>RoundingMode</code></a> | <code>&quot;AWAY_FROM_ZERO&quot;</code> | <code>&quot;CEILING&quot;</code> | <code>&quot;FLOOR&quot;</code> | <code>&quot;HALF_AWAY_FROM_ZERO&quot;</code> | <code>&quot;HALF_CEILING&quot;</code> | <code>&quot;HALF_FLOOR&quot;</code> | <code>&quot;HALF_TOWARDS_ZERO&quot;</code> | <code>&quot;TOWARDS_ZERO&quot;</code></p>
-<p>Specifies the rounding behavior for discarding the digits after the maximum fraction digits defined by
-<code>maxFractionDigits</code>. This can be assigned
+<p>specifies the rounding behavior for discarding the digits after the maximum fraction digits defined by
+maxFractionDigits. Rounding will only be applied if the passed value is of type <code>number</code>. This can be
+assigned
 	 - by value in sap.ui.core.format.NumberFormat.RoundingMode RoundingMode,
 	 - via a function that is used for rounding the number and takes two parameters: the number itself,
-    and the number of decimal digits that should be reserved. <strong>Using a function is deprecated since 1.120</strong>;
-    string based numbers are not rounded via this custom function.</p>
+    and the number of decimal digits that should be reserved.</p>
 <h6>shortDecimals?</h6>
 <p><code>number</code></p>
 <p>defines the number of decimal in the shortened format string. If this isn&#39;t specified, the &#39;decimals&#39;
@@ -749,16 +741,14 @@ undefined], and NaN is formatted as an empty string.</p>
 <p>defines the grouping base size in digits if it is different from the grouping size (e.g. Indian grouping)</p>
 <h6>groupingEnabled?</h6>
 <p><code>boolean</code></p>
-<p>defines whether grouping is enabled (grouping separators are shown). <strong>Note:</strong> Grouping is disabled if
-the <code>groupingSize</code> format option is set to a non-positive value.</p>
+<p>defines whether grouping is enabled (grouping separators are shown)</p>
 <h6>groupingSeparator?</h6>
 <p><code>string</code></p>
 <p>defines the character used as grouping separator. Note: <code>groupingSeparator</code> must always be different
 from <code>decimalSeparator</code>.</p>
 <h6>groupingSize?</h6>
 <p><code>number</code></p>
-<p>defines the grouping size in digits; the default is <code>3</code>. It must be a positive number. <strong>Note:</strong> If this
-format option is set to a non-positive value, grouping will be disabled entirely.</p>
+<p>defines the grouping size in digits; the default is <code>3</code>. It must be a positive number.</p>
 <h6>maxFractionDigits?</h6>
 <p><code>number</code></p>
 <p>defines the maximum number of decimal digits</p>
@@ -796,12 +786,12 @@ than the <code>maxFractionDigits</code> format option allows. If decimals are no
 is rounded to <code>maxFractionDigits</code>.</p>
 <h6>roundingMode?</h6>
 <p><a href="../enumerations/RoundingMode.html"><code>RoundingMode</code></a> | <code>&quot;AWAY_FROM_ZERO&quot;</code> | <code>&quot;CEILING&quot;</code> | <code>&quot;FLOOR&quot;</code> | <code>&quot;HALF_AWAY_FROM_ZERO&quot;</code> | <code>&quot;HALF_CEILING&quot;</code> | <code>&quot;HALF_FLOOR&quot;</code> | <code>&quot;HALF_TOWARDS_ZERO&quot;</code> | <code>&quot;TOWARDS_ZERO&quot;</code></p>
-<p>Specifies the rounding behavior for discarding the digits after the maximum fraction digits defined by
-<code>maxFractionDigits</code>. This can be assigned
+<p>specifies the rounding behavior for discarding the digits after the maximum fraction digits defined by
+maxFractionDigits. Rounding will only be applied if the passed value is of type <code>number</code>. This can be
+assigned
 	 - by value in sap.ui.core.format.NumberFormat.RoundingMode RoundingMode,
 	 - via a function that is used for rounding the number and takes two parameters: the number itself,
-    and the number of decimal digits that should be reserved. <strong>Using a function is deprecated since 1.120</strong>;
-    string based numbers are not rounded via this custom function.</p>
+    and the number of decimal digits that should be reserved.</p>
 <h6>shortDecimals?</h6>
 <p><code>number</code></p>
 <p>defines the number of decimals in the shortened format string. If this option isn&#39;t specified, the &#39;decimals&#39;
@@ -845,6 +835,6 @@ decimals, shortDecimals, or the &#39;precision&#39; option itself.</p>
 <p>unit instance of the NumberFormat</p>
 <hr>
 
-<footer>Generated from <code>@openui5/types@1.120.46</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@openui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

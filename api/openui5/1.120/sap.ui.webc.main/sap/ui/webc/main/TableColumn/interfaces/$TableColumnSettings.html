@@ -2,12 +2,12 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>~~Interface: $TableColumnSettings~~ — OpenUI5 TypeScript API</title>
-<meta name="description" content="~~Interface: $TableColumnSettings~~ — OpenUI5 TypeScript API Reference (1.120.46)">
+<title>Interface: $TableColumnSettings — OpenUI5 TypeScript API</title>
+<meta name="description" content="Interface: $TableColumnSettings — OpenUI5 TypeScript API Reference (1.120.0)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/openui5/1.120/sap.ui.webc.main/sap/ui/webc/main/TableColumn/interfaces/$TableColumnSettings.html">
-<meta property="og:title" content="~~Interface: $TableColumnSettings~~ — OpenUI5 TypeScript API">
-<meta property="og:description" content="~~Interface: $TableColumnSettings~~ — OpenUI5 TypeScript API Reference (1.120.46)">
+<meta property="og:title" content="Interface: $TableColumnSettings — OpenUI5 TypeScript API">
+<meta property="og:description" content="Interface: $TableColumnSettings — OpenUI5 TypeScript API Reference (1.120.0)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/openui5/1.120/sap.ui.webc.main/sap/ui/webc/main/TableColumn/interfaces/$TableColumnSettings.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,68 +33,56 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../../index.html">OpenUI5 API</a> › <a href="../../../../../../../sap.ui.webc.main/README.html">sap.ui.webc.main</a> › sap › ui › webc › main › <a href="../../../../../../../sap.ui.webc.main/sap/ui/webc/main/TableColumn/README.html">TableColumn</a> › interfaces</nav>
-<p><a href="../../../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.46)</strong></a></p>
+<p><a href="../../../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.0)</strong></a></p>
 <hr>
-<p><a href="../../../../../../../README.html">OpenUI5 TypeScript API (1.120.46)</a> / <a href="../../../../../../README.html">sap.ui.webc.main</a> / <a href="../README.html">sap/ui/webc/main/TableColumn</a> / $TableColumnSettings</p>
-<h1><del>Interface: $TableColumnSettings</del></h1>
+<p><a href="../../../../../../../README.html">OpenUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../../README.html">sap.ui.webc.main</a> / <a href="../README.html">sap/ui/webc/main/TableColumn</a> / $TableColumnSettings</p>
+<h1>Interface: $TableColumnSettings</h1>
 <pre class="sig"><span class="kw">import</span> { $TableColumnSettings } <span class="kw">from</span> <span class="str">"sap/ui/webc/main/TableColumn"</span>;</pre>
-<p><strong><code>Experimental</code></strong></p>
-<p>Describes the settings that can be provided to the TableColumn constructor.</p>
-<h2>Deprecated</h2>
-<p>(since 1.120) - this Web Components consumption model has been discarded. Until an alternative
-Web Components consumption model is available in the future, use sap.m and sap.f controls with similar
-functionality.
- (since 1.92.0) - This control is experimental and its API might change significantly.</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../../../../../../sap.ui.core/sap/ui/core/webc/WebComponent/interfaces/$WebComponentSettings.html"><code>$WebComponentSettings</code></a></li>
 </ul>
 <h2>Properties</h2>
-<h3><del>content?</del></h3>
+<h3>content?</h3>
 <blockquote>
 <p><code>optional</code> <strong>content?</strong>: <code>`{${string}}`</code> | <a href="../../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/AggregationBindingInfo.html"><code>AggregationBindingInfo</code></a> | <a href="../../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a>[]</p>
 </blockquote>
-<p><strong><code>Experimental</code></strong></p>
 <p>Defines the content of the column header.</p>
 <hr>
-<h3><del>demandPopin?</del></h3>
+<h3>demandPopin?</h3>
 <blockquote>
 <p><code>optional</code> <strong>demandPopin?</strong>: <code>boolean</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<p><strong><code>Experimental</code></strong></p>
 <p>According to your <code>minWidth</code> settings, the component can be hidden in different screen sizes.</p>
 <p> Setting this property to <code>true</code>, shows this column as pop-in instead of hiding it.</p>
 <hr>
-<h3><del>minWidth?</del></h3>
+<h3>minWidth?</h3>
 <blockquote>
 <p><code>optional</code> <strong>minWidth?</strong>: <code>number</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<p><strong><code>Experimental</code></strong></p>
 <p>Defines the minimum table width required to display this column. By default it is always displayed.</p>
 <p> The responsive behavior of the <code>sap.ui.webc.main.Table</code> is determined by this property. As an example,
 by setting <code>minWidth</code> property to <code>400</code> sets the minimum width to 400 pixels, and shows this column on
 tablet (and desktop) but hides it on mobile.
  For further responsive design options, see <code>demandPopin</code> property.</p>
 <hr>
-<h3><del>popinDisplay?</del></h3>
+<h3>popinDisplay?</h3>
 <blockquote>
 <p><code>optional</code> <strong>popinDisplay?</strong>: <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code> | <code>&quot;Block&quot;</code> | <code>&quot;Inline&quot;</code> | <a href="../../library/enumerations/TableColumnPopinDisplay.html"><code>TableColumnPopinDisplay</code></a></p>
 </blockquote>
-<p><strong><code>Experimental</code></strong></p>
 <p>Defines how the popin row is displayed.</p>
 <p> <strong>The available values are:</strong></p>
 <pre><code> - `Block`
  - `Inline`
 </code></pre>
 <hr>
-<h3><del>popinText?</del></h3>
+<h3>popinText?</h3>
 <blockquote>
 <p><code>optional</code> <strong>popinText?</strong>: <code>string</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a></p>
 </blockquote>
-<p><strong><code>Experimental</code></strong></p>
 <p>The text for the column when it pops in.</p>
 <hr>
 
-<footer>Generated from <code>@openui5/types@1.120.46</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@openui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

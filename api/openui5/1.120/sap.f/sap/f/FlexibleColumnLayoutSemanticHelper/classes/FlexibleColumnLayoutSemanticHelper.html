@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Class: FlexibleColumnLayoutSemanticHelper — OpenUI5 TypeScript API</title>
-<meta name="description" content="Class: FlexibleColumnLayoutSemanticHelper — OpenUI5 TypeScript API Reference (1.120.46)">
+<meta name="description" content="Class: FlexibleColumnLayoutSemanticHelper — OpenUI5 TypeScript API Reference (1.120.0)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/openui5/1.120/sap.f/sap/f/FlexibleColumnLayoutSemanticHelper/classes/FlexibleColumnLayoutSemanticHelper.html">
 <meta property="og:title" content="Class: FlexibleColumnLayoutSemanticHelper — OpenUI5 TypeScript API">
-<meta property="og:description" content="Class: FlexibleColumnLayoutSemanticHelper — OpenUI5 TypeScript API Reference (1.120.46)">
+<meta property="og:description" content="Class: FlexibleColumnLayoutSemanticHelper — OpenUI5 TypeScript API Reference (1.120.0)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/openui5/1.120/sap.f/sap/f/FlexibleColumnLayoutSemanticHelper/classes/FlexibleColumnLayoutSemanticHelper.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,11 +33,13 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../index.html">OpenUI5 API</a> › <a href="../../../../../sap.f/README.html">sap.f</a> › sap › f › <a href="../../../../../sap.f/sap/f/FlexibleColumnLayoutSemanticHelper/README.html">FlexibleColumnLayoutSemanticHelper</a> › classes</nav>
-<p><a href="../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.46)</strong></a></p>
+<p><a href="../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.0)</strong></a></p>
 <hr>
-<p><a href="../../../../../README.html">OpenUI5 TypeScript API (1.120.46)</a> / <a href="../../../../README.html">sap.f</a> / <a href="../README.html">sap/f/FlexibleColumnLayoutSemanticHelper</a> / FlexibleColumnLayoutSemanticHelper</p>
+<p><a href="../../../../../README.html">OpenUI5 TypeScript API (1.120.0)</a> / <a href="../../../../README.html">sap.f</a> / <a href="../README.html">sap/f/FlexibleColumnLayoutSemanticHelper</a> / FlexibleColumnLayoutSemanticHelper</p>
 <h1>Class: FlexibleColumnLayoutSemanticHelper</h1>
 <pre class="sig"><span class="kw">import</span> FlexibleColumnLayoutSemanticHelper <span class="kw">from</span> <span class="str">"sap/f/FlexibleColumnLayoutSemanticHelper"</span>;</pre>
+<h2>Since</h2>
+<p>1.46.0</p>
 <p>Helper class, facilitating the implementation of the recommended UX design of a <code>sap.f.FlexibleColumnLayout</code>-based
 app.</p>
 <p><strong>Note:</strong> Using this class is not mandatory in order to build an app with <code>sap.f.FlexibleColumnLayout</code>,
@@ -62,8 +64,6 @@ application should display three views (list-detail-detail), based on the curren
 <p>Similarly, calling <code>getNextUIState(0)</code> will return information about the expected layout and action buttons
 if the application should display the initial view only (list), based on the current state.</p>
 <p>For more information, see sap.f.FlexibleColumnLayoutSemanticHelper#getCurrentUIState and sap.f.FlexibleColumnLayoutSemanticHelper#getNextUIState</p>
-<h2>Since</h2>
-<p>1.46.0</p>
 <h2>Constructors</h2>
 <h3>Constructor</h3>
 <blockquote>
@@ -158,48 +158,48 @@ level.</p>
 <blockquote>
 <p><strong>isDOMReady</strong>(): <code>boolean</code></p>
 </blockquote>
-<p>Returns <code>true</code> if internal <code>FlexibleColumnLayout</code> reference is rendered in the DOM tree.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>true if the associated <code>FlexibleColumnLayout</code> is rendered</p>
 <h4>Since</h4>
 <p>1.72</p>
+<p>Returns <code>true</code> if internal <code>FlexibleColumnLayout</code> reference is rendered in the DOM tree.</p>
 <hr>
 <h3>isReady()</h3>
 <blockquote>
 <p><strong>isReady</strong>(): <code>boolean</code></p>
 </blockquote>
-<p>Abstract wrapper for sap.f.FlexibleColumnLayoutSemanticHelper#isDOMReady. Returns <code>true</code> if criteria
-are met for the APIs in this helper to be used.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>true if this helper&#39;s API reliability criteria are met</p>
 <h4>Since</h4>
 <p>1.72</p>
+<p>Abstract wrapper for sap.f.FlexibleColumnLayoutSemanticHelper#isDOMReady. Returns <code>true</code> if criteria
+are met for the APIs in this helper to be used.</p>
 <hr>
 <h3>whenDOMReady()</h3>
 <blockquote>
 <p><strong>whenDOMReady</strong>(): <code>Promise</code>&lt;<code>any</code>&gt;</p>
 </blockquote>
-<p>Returns promise which can be used to find out when the internal <code>FlexibleColumnLayout</code> is rendered. This
-is needed because methods in <code>FlexibleColumnLayout</code> rely on the control being rendered.</p>
 <h4>Returns</h4>
 <p><code>Promise</code>&lt;<code>any</code>&gt;</p>
 <p>A promise that resolves after <code>FlexibleColumnLayout</code> is rendered</p>
 <h4>Since</h4>
 <p>1.72</p>
+<p>Returns promise which can be used to find out when the internal <code>FlexibleColumnLayout</code> is rendered. This
+is needed because methods in <code>FlexibleColumnLayout</code> rely on the control being rendered.</p>
 <hr>
 <h3>whenReady()</h3>
 <blockquote>
 <p><strong>whenReady</strong>(): <code>Promise</code>&lt;<code>any</code>&gt;</p>
 </blockquote>
-<p>Returns promise which can be used to find out when internal criteria for this helper&#39;s API reliability
-are met.</p>
 <h4>Returns</h4>
 <p><code>Promise</code>&lt;<code>any</code>&gt;</p>
 <p>A promise that resolves after internal criteria are met</p>
 <h4>Since</h4>
 <p>1.72</p>
+<p>Returns promise which can be used to find out when internal criteria for this helper&#39;s API reliability
+are met.</p>
 <hr>
 <h3>getInstanceFor()</h3>
 <blockquote>
@@ -219,6 +219,6 @@ for the first <code>getInstanceFor</code> call for the given <code>sap.f.Flexibl
 <p><code>FlexibleColumnLayoutSemanticHelper</code></p>
 <p>The <code>sap.f.FlexibleColumnLayoutSemanticHelper</code> instance</p>
 
-<footer>Generated from <code>@openui5/types@1.120.46</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@openui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Interface: $DynamicPageSettings — OpenUI5 TypeScript API</title>
-<meta name="description" content="Interface: $DynamicPageSettings — OpenUI5 TypeScript API Reference (1.120.46)">
+<meta name="description" content="Interface: $DynamicPageSettings — OpenUI5 TypeScript API Reference (1.120.0)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/openui5/1.120/sap.f/sap/f/DynamicPage/interfaces/$DynamicPageSettings.html">
 <meta property="og:title" content="Interface: $DynamicPageSettings — OpenUI5 TypeScript API">
-<meta property="og:description" content="Interface: $DynamicPageSettings — OpenUI5 TypeScript API Reference (1.120.46)">
+<meta property="og:description" content="Interface: $DynamicPageSettings — OpenUI5 TypeScript API Reference (1.120.0)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/openui5/1.120/sap.f/sap/f/DynamicPage/interfaces/$DynamicPageSettings.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,12 +33,11 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../index.html">OpenUI5 API</a> › <a href="../../../../../sap.f/README.html">sap.f</a> › sap › f › <a href="../../../../../sap.f/sap/f/DynamicPage/README.html">DynamicPage</a> › interfaces</nav>
-<p><a href="../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.46)</strong></a></p>
+<p><a href="../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.0)</strong></a></p>
 <hr>
-<p><a href="../../../../../README.html">OpenUI5 TypeScript API (1.120.46)</a> / <a href="../../../../README.html">sap.f</a> / <a href="../README.html">sap/f/DynamicPage</a> / $DynamicPageSettings</p>
+<p><a href="../../../../../README.html">OpenUI5 TypeScript API (1.120.0)</a> / <a href="../../../../README.html">sap.f</a> / <a href="../README.html">sap/f/DynamicPage</a> / $DynamicPageSettings</p>
 <h1>Interface: $DynamicPageSettings</h1>
 <pre class="sig"><span class="kw">import</span> { $DynamicPageSettings } <span class="kw">from</span> <span class="str">"sap/f/DynamicPage"</span>;</pre>
-<p>Describes the settings that can be provided to the DynamicPage constructor.</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../../../../sap.ui.core/sap/ui/core/Control/interfaces/$ControlSettings.html"><code>$ControlSettings</code></a></li>
@@ -48,9 +47,9 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 <blockquote>
 <p><code>optional</code> <strong>backgroundDesign?</strong>: <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code> | <code>&quot;Transparent&quot;</code> | <code>&quot;List&quot;</code> | <a href="../../../../../sap.m/sap/m/library/enumerations/PageBackgroundDesign.html"><code>PageBackgroundDesign</code></a> | <code>&quot;Solid&quot;</code> | <code>&quot;Standard&quot;</code></p>
 </blockquote>
-<p>Determines the background color of <code>DynamicPage</code>.</p>
 <h4>Since</h4>
 <p>1.68</p>
+<p>Determines the background color of <code>DynamicPage</code>.</p>
 <hr>
 <h3>content?</h3>
 <blockquote>
@@ -116,6 +115,8 @@ property to <code>false</code>.</p>
 <blockquote>
 <p><code>optional</code> <strong>headerPinned?</strong>: <code>boolean</code> | <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
+<h4>Since</h4>
+<p>1.93</p>
 <p>Determines whether the <code>DynamicPageHeader</code> is pinned.</p>
 <p>The property can be changed programmatically or in the occurrence of the following user interactions:</p>
 <pre><code> - Toggling the pin/unpin button of `DynamicPageHeader`
@@ -126,23 +127,20 @@ conditions are met:
 	 - <code>DynamicPageHeader</code> <code>pinnable</code> property is <code>true</code>
 	 - <code>DynamicPageHeader</code> is expanded
 	 - <code>DynamicPage</code> <code>preserveHeaderStateOnScroll</code> property is effectively disabled</p>
-<h4>Since</h4>
-<p>1.93</p>
 <hr>
 <h3>landmarkInfo?</h3>
 <blockquote>
 <p><code>optional</code> <strong>landmarkInfo?</strong>: <a href="../../DynamicPageAccessibleLandmarkInfo/classes/DynamicPageAccessibleLandmarkInfo.html"><code>DynamicPageAccessibleLandmarkInfo</code></a></p>
 </blockquote>
-<p>Accessible landmark settings to be applied on the containers of the <code>sap.f.DynamicPage</code> control.</p>
-<p>If not set, no landmarks will be written.</p>
 <h4>Since</h4>
 <p>1.61</p>
+<p>Accessible landmark settings to be applied on the containers of the <code>sap.f.DynamicPage</code> control.</p>
+<p>If not set, no landmarks will be written.</p>
 <hr>
 <h3>pinnedStateChange?</h3>
 <blockquote>
 <p><code>optional</code> <strong>pinnedStateChange?</strong>: (<code>oEvent</code>) =&gt; <code>void</code></p>
 </blockquote>
-<p>The event is fired when the <code>headerPinned</code> property is changed via user interaction.</p>
 <h4>Parameters</h4>
 <h5>oEvent</h5>
 <p><a href="../type-aliases/DynamicPage$PinnedStateChangeEvent.html"><code>DynamicPage$PinnedStateChangeEvent</code></a></p>
@@ -150,6 +148,7 @@ conditions are met:
 <p><code>void</code></p>
 <h4>Since</h4>
 <p>1.93</p>
+<p>The event is fired when the <code>headerPinned</code> property is changed via user interaction.</p>
 <hr>
 <h3>preserveHeaderStateOnScroll?</h3>
 <blockquote>
@@ -170,10 +169,10 @@ when the control`s title and header are with height larger than the given thresh
 <blockquote>
 <p><code>optional</code> <strong>stickySubheaderProvider?</strong>: <code>string</code> | <a href="../../library/interfaces/IDynamicPageStickyContent.html"><code>IDynamicPageStickyContent</code></a></p>
 </blockquote>
-<p>Association of Controls / IDs, that provide sticky subheader content. All controls that provide this
-content have to implement the <code>sap.f.IDynamicPageStickyContent</code> interface.</p>
 <h4>Since</h4>
 <p>1.65</p>
+<p>Association of Controls / IDs, that provide sticky subheader content. All controls that provide this
+content have to implement the <code>sap.f.IDynamicPageStickyContent</code> interface.</p>
 <hr>
 <h3>title?</h3>
 <blockquote>
@@ -193,6 +192,6 @@ for expanding/collapsing the <code>DynamicPageHeader</code>, if necessary.</p>
 <p>**Note: ** This property is taken into account only if a non-empty <code>header</code> aggregation is provided.</p>
 <hr>
 
-<footer>Generated from <code>@openui5/types@1.120.46</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@openui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

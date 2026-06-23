@@ -2,12 +2,12 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>~~Interface: $CarouselSettings~~ — OpenUI5 TypeScript API</title>
-<meta name="description" content="~~Interface: $CarouselSettings~~ — OpenUI5 TypeScript API Reference (1.120.46)">
+<title>Interface: $CarouselSettings — OpenUI5 TypeScript API</title>
+<meta name="description" content="Interface: $CarouselSettings — OpenUI5 TypeScript API Reference (1.120.0)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/openui5/1.120/sap.ui.webc.main/sap/ui/webc/main/Carousel/interfaces/$CarouselSettings.html">
-<meta property="og:title" content="~~Interface: $CarouselSettings~~ — OpenUI5 TypeScript API">
-<meta property="og:description" content="~~Interface: $CarouselSettings~~ — OpenUI5 TypeScript API Reference (1.120.46)">
+<meta property="og:title" content="Interface: $CarouselSettings — OpenUI5 TypeScript API">
+<meta property="og:description" content="Interface: $CarouselSettings — OpenUI5 TypeScript API Reference (1.120.0)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/openui5/1.120/sap.ui.webc.main/sap/ui/webc/main/Carousel/interfaces/$CarouselSettings.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,98 +33,81 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../../index.html">OpenUI5 API</a> › <a href="../../../../../../../sap.ui.webc.main/README.html">sap.ui.webc.main</a> › sap › ui › webc › main › <a href="../../../../../../../sap.ui.webc.main/sap/ui/webc/main/Carousel/README.html">Carousel</a> › interfaces</nav>
-<p><a href="../../../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.46)</strong></a></p>
+<p><a href="../../../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.0)</strong></a></p>
 <hr>
-<p><a href="../../../../../../../README.html">OpenUI5 TypeScript API (1.120.46)</a> / <a href="../../../../../../README.html">sap.ui.webc.main</a> / <a href="../README.html">sap/ui/webc/main/Carousel</a> / $CarouselSettings</p>
-<h1><del>Interface: $CarouselSettings</del></h1>
+<p><a href="../../../../../../../README.html">OpenUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../../README.html">sap.ui.webc.main</a> / <a href="../README.html">sap/ui/webc/main/Carousel</a> / $CarouselSettings</p>
+<h1>Interface: $CarouselSettings</h1>
 <pre class="sig"><span class="kw">import</span> { $CarouselSettings } <span class="kw">from</span> <span class="str">"sap/ui/webc/main/Carousel"</span>;</pre>
-<p><strong><code>Experimental</code></strong></p>
-<p>Describes the settings that can be provided to the Carousel constructor.</p>
-<h2>Deprecated</h2>
-<p>(since 1.120) - this Web Components consumption model has been discarded. Until an alternative
-Web Components consumption model is available in the future, use sap.m and sap.f controls with similar
-functionality.
- (since 1.92.0) - This control is experimental and its API might change significantly.</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../../../../../../sap.ui.core/sap/ui/core/webc/WebComponent/interfaces/$WebComponentSettings.html"><code>$WebComponentSettings</code></a></li>
 </ul>
 <h2>Properties</h2>
-<h3><del>arrowsPlacement?</del></h3>
+<h3>arrowsPlacement?</h3>
 <blockquote>
 <p><code>optional</code> <strong>arrowsPlacement?</strong>: <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code> | <code>&quot;Navigation&quot;</code> | <code>&quot;Content&quot;</code> | <a href="../../library/enumerations/CarouselArrowsPlacement.html"><code>CarouselArrowsPlacement</code></a></p>
 </blockquote>
-<p><strong><code>Experimental</code></strong></p>
 <p>Defines the position of arrows.</p>
 <p> Available options are:
 	 - <code>Content</code> - the arrows are placed on the sides of the current page.
 	 - <code>Navigation</code> - the arrows are placed on the sides of the page indicator.</p>
 <hr>
-<h3><del>backgroundDesign?</del></h3>
+<h3>backgroundDesign?</h3>
 <blockquote>
 <p><code>optional</code> <strong>backgroundDesign?</strong>: <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code> | <code>&quot;Transparent&quot;</code> | <code>&quot;Solid&quot;</code> | <code>&quot;Translucent&quot;</code> | <a href="../../library/enumerations/BackgroundDesign.html"><code>BackgroundDesign</code></a></p>
 </blockquote>
-<p><strong><code>Experimental</code></strong></p>
 <p>Defines the carousel&#39;s background design.</p>
 <hr>
-<h3><del>content?</del></h3>
+<h3>content?</h3>
 <blockquote>
 <p><code>optional</code> <strong>content?</strong>: <code>`{${string}}`</code> | <a href="../../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/AggregationBindingInfo.html"><code>AggregationBindingInfo</code></a> | <a href="../../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a>[]</p>
 </blockquote>
-<p><strong><code>Experimental</code></strong></p>
 <p>Defines the content of the component.</p>
 <hr>
-<h3><del>cyclic?</del></h3>
+<h3>cyclic?</h3>
 <blockquote>
 <p><code>optional</code> <strong>cyclic?</strong>: <code>boolean</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<p><strong><code>Experimental</code></strong></p>
 <p>Defines whether the carousel should loop, i.e show the first page after the last page is reached and
 vice versa.</p>
 <hr>
-<h3><del>hideNavigationArrows?</del></h3>
+<h3>hideNavigationArrows?</h3>
 <blockquote>
 <p><code>optional</code> <strong>hideNavigationArrows?</strong>: <code>boolean</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<p><strong><code>Experimental</code></strong></p>
 <p>Defines the visibility of the navigation arrows. If set to true the navigation arrows will be hidden.</p>
 <p> <strong>Note:</strong> The navigation arrows are never displayed on touch devices. In this case, the user can swipe
 to navigate through the items.</p>
 <hr>
-<h3><del>hidePageIndicator?</del></h3>
+<h3>hidePageIndicator?</h3>
 <blockquote>
 <p><code>optional</code> <strong>hidePageIndicator?</strong>: <code>boolean</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<p><strong><code>Experimental</code></strong></p>
 <p>Defines the visibility of the page indicator. If set to true the page indicator will be hidden.</p>
 <hr>
-<h3><del>itemsPerPageL?</del></h3>
+<h3>itemsPerPageL?</h3>
 <blockquote>
 <p><code>optional</code> <strong>itemsPerPageL?</strong>: <code>number</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<p><strong><code>Experimental</code></strong></p>
 <p>Defines the number of items per page on large size (more than 1024px). One item per page shown by default.</p>
 <hr>
-<h3><del>itemsPerPageM?</del></h3>
+<h3>itemsPerPageM?</h3>
 <blockquote>
 <p><code>optional</code> <strong>itemsPerPageM?</strong>: <code>number</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<p><strong><code>Experimental</code></strong></p>
 <p>Defines the number of items per page on medium size (from 640px to 1024px). One item per page shown by
 default.</p>
 <hr>
-<h3><del>itemsPerPageS?</del></h3>
+<h3>itemsPerPageS?</h3>
 <blockquote>
 <p><code>optional</code> <strong>itemsPerPageS?</strong>: <code>number</code> | <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<p><strong><code>Experimental</code></strong></p>
 <p>Defines the number of items per page on small size (up to 640px). One item per page shown by default.</p>
 <hr>
-<h3><del>navigate?</del></h3>
+<h3>navigate?</h3>
 <blockquote>
 <p><code>optional</code> <strong>navigate?</strong>: (<code>oEvent</code>) =&gt; <code>void</code></p>
 </blockquote>
-<p><strong><code>Experimental</code></strong></p>
 <p>Fired whenever the page changes due to user interaction, when the user clicks on the navigation arrows
 or while resizing, based on the <code>items-per-page-l</code>, <code>items-per-page-m</code> and <code>items-per-page-s</code> properties.</p>
 <h4>Parameters</h4>
@@ -133,25 +116,22 @@ or while resizing, based on the <code>items-per-page-l</code>, <code>items-per-p
 <h4>Returns</h4>
 <p><code>void</code></p>
 <hr>
-<h3><del>pageIndicatorBackgroundDesign?</del></h3>
+<h3>pageIndicatorBackgroundDesign?</h3>
 <blockquote>
 <p><code>optional</code> <strong>pageIndicatorBackgroundDesign?</strong>: <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code> | <code>&quot;Transparent&quot;</code> | <code>&quot;Solid&quot;</code> | <code>&quot;Translucent&quot;</code> | <a href="../../library/enumerations/BackgroundDesign.html"><code>BackgroundDesign</code></a></p>
 </blockquote>
-<p><strong><code>Experimental</code></strong></p>
 <p>Defines the page indicator background design.</p>
 <hr>
-<h3><del>pageIndicatorBorderDesign?</del></h3>
+<h3>pageIndicatorBorderDesign?</h3>
 <blockquote>
 <p><code>optional</code> <strong>pageIndicatorBorderDesign?</strong>: <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code> | <code>&quot;None&quot;</code> | <code>&quot;Solid&quot;</code> | <a href="../../library/enumerations/BorderDesign.html"><code>BorderDesign</code></a></p>
 </blockquote>
-<p><strong><code>Experimental</code></strong></p>
 <p>Defines the page indicator border design.</p>
 <hr>
-<h3><del>pageIndicatorStyle?</del></h3>
+<h3>pageIndicatorStyle?</h3>
 <blockquote>
 <p><code>optional</code> <strong>pageIndicatorStyle?</strong>: <a href="../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code> | <code>&quot;Default&quot;</code> | <code>&quot;Numeric&quot;</code> | <a href="../../library/enumerations/CarouselPageIndicatorStyle.html"><code>CarouselPageIndicatorStyle</code></a></p>
 </blockquote>
-<p><strong><code>Experimental</code></strong></p>
 <p>Defines the style of the page indicator. Available options are:
 	 - <code>Default</code> - The page indicator will be visualized as dots if there are fewer than 9 pages. If there
     are more pages, the page indicator will switch to displaying the current page and the total number of
@@ -160,6 +140,6 @@ or while resizing, based on the <code>items-per-page-l</code>, <code>items-per-p
     X of Y)</p>
 <hr>
 
-<footer>Generated from <code>@openui5/types@1.120.46</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@openui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

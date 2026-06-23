@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Class: Table — OpenUI5 TypeScript API</title>
-<meta name="description" content="Class: Table — OpenUI5 TypeScript API Reference (1.120.46)">
+<meta name="description" content="Class: Table — OpenUI5 TypeScript API Reference (1.120.0)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/openui5/1.120/sap.ui.table/sap/ui/table/Table/classes/Table.html">
 <meta property="og:title" content="Class: Table — OpenUI5 TypeScript API">
-<meta property="og:description" content="Class: Table — OpenUI5 TypeScript API Reference (1.120.46)">
+<meta property="og:description" content="Class: Table — OpenUI5 TypeScript API Reference (1.120.0)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/openui5/1.120/sap.ui.table/sap/ui/table/Table/classes/Table.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,9 +33,9 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../index.html">OpenUI5 API</a> › <a href="../../../../../../sap.ui.table/README.html">sap.ui.table</a> › sap › ui › table › <a href="../../../../../../sap.ui.table/sap/ui/table/Table/README.html">Table</a> › classes</nav>
-<p><a href="../../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.46)</strong></a></p>
+<p><a href="../../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.0)</strong></a></p>
 <hr>
-<p><a href="../../../../../../README.html">OpenUI5 TypeScript API (1.120.46)</a> / <a href="../../../../../README.html">sap.ui.table</a> / <a href="../README.html">sap/ui/table/Table</a> / Table</p>
+<p><a href="../../../../../../README.html">OpenUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../README.html">sap.ui.table</a> / <a href="../README.html">sap/ui/table/Table</a> / Table</p>
 <h1>Class: Table</h1>
 <pre class="sig"><span class="kw">import</span> Table <span class="kw">from</span> <span class="str">"sap/ui/table/Table"</span>;</pre>
 <p>Provides a comprehensive set of features for displaying and dealing with vast amounts of data. The
@@ -145,7 +145,6 @@ See:
 <blockquote>
 <p><strong>addPlugin</strong>(<code>oPlugin</code>): <code>this</code></p>
 </blockquote>
-<p>Adds some plugin to the aggregation #getPlugins plugins.</p>
 <h4>Parameters</h4>
 <h5>oPlugin</h5>
 <p><a href="../../plugins/SelectionPlugin/classes/SelectionPlugin.html"><code>SelectionPlugin</code></a></p>
@@ -157,6 +156,7 @@ See:
 <p>1.64</p>
 <h4>Deprecated</h4>
 <p>(since 1.120) - Please add plugins to the <code>dependents</code> aggregation instead.</p>
+<p>Adds some plugin to the aggregation #getPlugins plugins.</p>
 <hr>
 <h3>addRow()</h3>
 <blockquote>
@@ -193,11 +193,6 @@ added to the selection.</p>
 <blockquote>
 <p><strong>attachBeforeOpenContextMenu</strong>(<code>oData</code>, <code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
-<p>Attaches event handler <code>fnFunction</code> to the #event:beforeOpenContextMenu beforeOpenContextMenu
-event of this <code>sap.ui.table.Table</code>.</p>
-<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
-otherwise it will be bound to this <code>sap.ui.table.Table</code> itself.</p>
-<p>Fired when the user requests the context menu for a table cell.</p>
 <h5>Parameters</h5>
 <h6>oData</h6>
 <p><code>object</code></p>
@@ -214,15 +209,15 @@ object when firing the event</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Since</h5>
 <p>1.54</p>
-<h4>Call Signature</h4>
-<blockquote>
-<p><strong>attachBeforeOpenContextMenu</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
-</blockquote>
 <p>Attaches event handler <code>fnFunction</code> to the #event:beforeOpenContextMenu beforeOpenContextMenu
 event of this <code>sap.ui.table.Table</code>.</p>
 <p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
 otherwise it will be bound to this <code>sap.ui.table.Table</code> itself.</p>
 <p>Fired when the user requests the context menu for a table cell.</p>
+<h4>Call Signature</h4>
+<blockquote>
+<p><strong>attachBeforeOpenContextMenu</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
+</blockquote>
 <h5>Parameters</h5>
 <h6>fnFunction</h6>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -235,17 +230,17 @@ otherwise it will be bound to this <code>sap.ui.table.Table</code> itself.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Since</h5>
 <p>1.54</p>
+<p>Attaches event handler <code>fnFunction</code> to the #event:beforeOpenContextMenu beforeOpenContextMenu
+event of this <code>sap.ui.table.Table</code>.</p>
+<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
+otherwise it will be bound to this <code>sap.ui.table.Table</code> itself.</p>
+<p>Fired when the user requests the context menu for a table cell.</p>
 <hr>
 <h3>attachBusyStateChanged()</h3>
 <h4>Call Signature</h4>
 <blockquote>
 <p><strong>attachBusyStateChanged</strong>(<code>oData</code>, <code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
-<p>Attaches event handler <code>fnFunction</code> to the #event:busyStateChanged busyStateChanged event of
-this <code>sap.ui.table.Table</code>.</p>
-<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
-otherwise it will be bound to this <code>sap.ui.table.Table</code> itself.</p>
-<p>This event gets fired when the busy state of the table changes. It should only be used by composite controls.</p>
 <h5>Parameters</h5>
 <h6>oData</h6>
 <p><code>object</code></p>
@@ -262,15 +257,15 @@ object when firing the event</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Since</h5>
 <p>1.37.0</p>
-<h4>Call Signature</h4>
-<blockquote>
-<p><strong>attachBusyStateChanged</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
-</blockquote>
 <p>Attaches event handler <code>fnFunction</code> to the #event:busyStateChanged busyStateChanged event of
 this <code>sap.ui.table.Table</code>.</p>
 <p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
 otherwise it will be bound to this <code>sap.ui.table.Table</code> itself.</p>
 <p>This event gets fired when the busy state of the table changes. It should only be used by composite controls.</p>
+<h4>Call Signature</h4>
+<blockquote>
+<p><strong>attachBusyStateChanged</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
+</blockquote>
 <h5>Parameters</h5>
 <h6>fnFunction</h6>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -283,16 +278,17 @@ otherwise it will be bound to this <code>sap.ui.table.Table</code> itself.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Since</h5>
 <p>1.37.0</p>
+<p>Attaches event handler <code>fnFunction</code> to the #event:busyStateChanged busyStateChanged event of
+this <code>sap.ui.table.Table</code>.</p>
+<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
+otherwise it will be bound to this <code>sap.ui.table.Table</code> itself.</p>
+<p>This event gets fired when the busy state of the table changes. It should only be used by composite controls.</p>
 <hr>
 <h3>attachCellClick()</h3>
 <h4>Call Signature</h4>
 <blockquote>
 <p><strong>attachCellClick</strong>(<code>oData</code>, <code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
-<p>Attaches event handler <code>fnFunction</code> to the #event:cellClick cellClick event of this <code>sap.ui.table.Table</code>.</p>
-<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
-otherwise it will be bound to this <code>sap.ui.table.Table</code> itself.</p>
-<p>fired when the user clicks a cell of the table (experimental!).</p>
 <h5>Parameters</h5>
 <h6>oData</h6>
 <p><code>object</code></p>
@@ -309,14 +305,14 @@ object when firing the event</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Since</h5>
 <p>1.21.0</p>
-<h4>Call Signature</h4>
-<blockquote>
-<p><strong>attachCellClick</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
-</blockquote>
 <p>Attaches event handler <code>fnFunction</code> to the #event:cellClick cellClick event of this <code>sap.ui.table.Table</code>.</p>
 <p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
 otherwise it will be bound to this <code>sap.ui.table.Table</code> itself.</p>
 <p>fired when the user clicks a cell of the table (experimental!).</p>
+<h4>Call Signature</h4>
+<blockquote>
+<p><strong>attachCellClick</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
+</blockquote>
 <h5>Parameters</h5>
 <h6>fnFunction</h6>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -329,17 +325,16 @@ otherwise it will be bound to this <code>sap.ui.table.Table</code> itself.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Since</h5>
 <p>1.21.0</p>
+<p>Attaches event handler <code>fnFunction</code> to the #event:cellClick cellClick event of this <code>sap.ui.table.Table</code>.</p>
+<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
+otherwise it will be bound to this <code>sap.ui.table.Table</code> itself.</p>
+<p>fired when the user clicks a cell of the table (experimental!).</p>
 <hr>
 <h3><del>attachCellContextmenu()</del></h3>
 <h4>Call Signature</h4>
 <blockquote>
 <p><strong>attachCellContextmenu</strong>(<code>oData</code>, <code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
-<p>Attaches event handler <code>fnFunction</code> to the #event:cellContextmenu cellContextmenu event of this
-<code>sap.ui.table.Table</code>.</p>
-<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
-otherwise it will be bound to this <code>sap.ui.table.Table</code> itself.</p>
-<p>fired when the user clicks a cell of the table.</p>
 <h5>Parameters</h5>
 <h6>oData</h6>
 <p><code>object</code></p>
@@ -358,15 +353,15 @@ object when firing the event</p>
 <p>1.21.0</p>
 <h5>Deprecated</h5>
 <p>(since 1.54) - replaced by <code>beforeOpenContextMenu</code>.</p>
-<h4>Call Signature</h4>
-<blockquote>
-<p><strong>attachCellContextmenu</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
-</blockquote>
 <p>Attaches event handler <code>fnFunction</code> to the #event:cellContextmenu cellContextmenu event of this
 <code>sap.ui.table.Table</code>.</p>
 <p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
 otherwise it will be bound to this <code>sap.ui.table.Table</code> itself.</p>
 <p>fired when the user clicks a cell of the table.</p>
+<h4>Call Signature</h4>
+<blockquote>
+<p><strong>attachCellContextmenu</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
+</blockquote>
 <h5>Parameters</h5>
 <h6>fnFunction</h6>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -381,16 +376,17 @@ otherwise it will be bound to this <code>sap.ui.table.Table</code> itself.</p>
 <p>1.21.0</p>
 <h5>Deprecated</h5>
 <p>(since 1.54) - replaced by <code>beforeOpenContextMenu</code>.</p>
+<p>Attaches event handler <code>fnFunction</code> to the #event:cellContextmenu cellContextmenu event of this
+<code>sap.ui.table.Table</code>.</p>
+<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
+otherwise it will be bound to this <code>sap.ui.table.Table</code> itself.</p>
+<p>fired when the user clicks a cell of the table.</p>
 <hr>
 <h3>attachColumnFreeze()</h3>
 <h4>Call Signature</h4>
 <blockquote>
 <p><strong>attachColumnFreeze</strong>(<code>oData</code>, <code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
-<p>Attaches event handler <code>fnFunction</code> to the #event:columnFreeze columnFreeze event of this <code>sap.ui.table.Table</code>.</p>
-<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
-otherwise it will be bound to this <code>sap.ui.table.Table</code> itself.</p>
-<p>fired when a column of the table should be freezed</p>
 <h5>Parameters</h5>
 <h6>oData</h6>
 <p><code>object</code></p>
@@ -407,14 +403,14 @@ object when firing the event</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Since</h5>
 <p>1.21.0</p>
-<h4>Call Signature</h4>
-<blockquote>
-<p><strong>attachColumnFreeze</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
-</blockquote>
 <p>Attaches event handler <code>fnFunction</code> to the #event:columnFreeze columnFreeze event of this <code>sap.ui.table.Table</code>.</p>
 <p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
 otherwise it will be bound to this <code>sap.ui.table.Table</code> itself.</p>
 <p>fired when a column of the table should be freezed</p>
+<h4>Call Signature</h4>
+<blockquote>
+<p><strong>attachColumnFreeze</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
+</blockquote>
 <h5>Parameters</h5>
 <h6>fnFunction</h6>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -427,6 +423,10 @@ otherwise it will be bound to this <code>sap.ui.table.Table</code> itself.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Since</h5>
 <p>1.21.0</p>
+<p>Attaches event handler <code>fnFunction</code> to the #event:columnFreeze columnFreeze event of this <code>sap.ui.table.Table</code>.</p>
+<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
+otherwise it will be bound to this <code>sap.ui.table.Table</code> itself.</p>
+<p>fired when a column of the table should be freezed</p>
 <hr>
 <h3>attachColumnMove()</h3>
 <h4>Call Signature</h4>
@@ -517,10 +517,6 @@ otherwise it will be bound to this <code>sap.ui.table.Table</code> itself.</p>
 <blockquote>
 <p><strong>attachColumnSelect</strong>(<code>oData</code>, <code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
-<p>Attaches event handler <code>fnFunction</code> to the #event:columnSelect columnSelect event of this <code>sap.ui.table.Table</code>.</p>
-<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
-otherwise it will be bound to this <code>sap.ui.table.Table</code> itself.</p>
-<p>fired when a column of the table has been selected</p>
 <h5>Parameters</h5>
 <h6>oData</h6>
 <p><code>object</code></p>
@@ -537,14 +533,14 @@ object when firing the event</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Deprecated</h5>
 <p>(since 1.117)</p>
-<h4>Call Signature</h4>
-<blockquote>
-<p><strong>attachColumnSelect</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
-</blockquote>
 <p>Attaches event handler <code>fnFunction</code> to the #event:columnSelect columnSelect event of this <code>sap.ui.table.Table</code>.</p>
 <p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
 otherwise it will be bound to this <code>sap.ui.table.Table</code> itself.</p>
 <p>fired when a column of the table has been selected</p>
+<h4>Call Signature</h4>
+<blockquote>
+<p><strong>attachColumnSelect</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
+</blockquote>
 <h5>Parameters</h5>
 <h6>fnFunction</h6>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -557,17 +553,16 @@ otherwise it will be bound to this <code>sap.ui.table.Table</code> itself.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Deprecated</h5>
 <p>(since 1.117)</p>
+<p>Attaches event handler <code>fnFunction</code> to the #event:columnSelect columnSelect event of this <code>sap.ui.table.Table</code>.</p>
+<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
+otherwise it will be bound to this <code>sap.ui.table.Table</code> itself.</p>
+<p>fired when a column of the table has been selected</p>
 <hr>
 <h3><del>attachColumnVisibility()</del></h3>
 <h4>Call Signature</h4>
 <blockquote>
 <p><strong>attachColumnVisibility</strong>(<code>oData</code>, <code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
-<p>Attaches event handler <code>fnFunction</code> to the #event:columnVisibility columnVisibility event of
-this <code>sap.ui.table.Table</code>.</p>
-<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
-otherwise it will be bound to this <code>sap.ui.table.Table</code> itself.</p>
-<p>fired when the visibility of a table column is changed.</p>
 <h5>Parameters</h5>
 <h6>oData</h6>
 <p><code>object</code></p>
@@ -584,15 +579,15 @@ object when firing the event</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Deprecated</h5>
 <p>(since 1.117)</p>
-<h4>Call Signature</h4>
-<blockquote>
-<p><strong>attachColumnVisibility</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
-</blockquote>
 <p>Attaches event handler <code>fnFunction</code> to the #event:columnVisibility columnVisibility event of
 this <code>sap.ui.table.Table</code>.</p>
 <p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
 otherwise it will be bound to this <code>sap.ui.table.Table</code> itself.</p>
 <p>fired when the visibility of a table column is changed.</p>
+<h4>Call Signature</h4>
+<blockquote>
+<p><strong>attachColumnVisibility</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
+</blockquote>
 <h5>Parameters</h5>
 <h6>fnFunction</h6>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -605,17 +600,17 @@ otherwise it will be bound to this <code>sap.ui.table.Table</code> itself.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Deprecated</h5>
 <p>(since 1.117)</p>
+<p>Attaches event handler <code>fnFunction</code> to the #event:columnVisibility columnVisibility event of
+this <code>sap.ui.table.Table</code>.</p>
+<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
+otherwise it will be bound to this <code>sap.ui.table.Table</code> itself.</p>
+<p>fired when the visibility of a table column is changed.</p>
 <hr>
 <h3>attachCustomFilter()</h3>
 <h4>Call Signature</h4>
 <blockquote>
 <p><strong>attachCustomFilter</strong>(<code>oData</code>, <code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
-<p>Attaches event handler <code>fnFunction</code> to the #event:customFilter customFilter event of this <code>sap.ui.table.Table</code>.</p>
-<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
-otherwise it will be bound to this <code>sap.ui.table.Table</code> itself.</p>
-<p>This event is triggered when the custom filter item of the column menu is pressed. The column on which
-the event was triggered is passed as parameter.</p>
 <h5>Parameters</h5>
 <h6>oData</h6>
 <p><code>object</code></p>
@@ -632,15 +627,15 @@ object when firing the event</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Since</h5>
 <p>1.23.0</p>
-<h4>Call Signature</h4>
-<blockquote>
-<p><strong>attachCustomFilter</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
-</blockquote>
 <p>Attaches event handler <code>fnFunction</code> to the #event:customFilter customFilter event of this <code>sap.ui.table.Table</code>.</p>
 <p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
 otherwise it will be bound to this <code>sap.ui.table.Table</code> itself.</p>
 <p>This event is triggered when the custom filter item of the column menu is pressed. The column on which
 the event was triggered is passed as parameter.</p>
+<h4>Call Signature</h4>
+<blockquote>
+<p><strong>attachCustomFilter</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
+</blockquote>
 <h5>Parameters</h5>
 <h6>fnFunction</h6>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -653,6 +648,11 @@ the event was triggered is passed as parameter.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Since</h5>
 <p>1.23.0</p>
+<p>Attaches event handler <code>fnFunction</code> to the #event:customFilter customFilter event of this <code>sap.ui.table.Table</code>.</p>
+<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
+otherwise it will be bound to this <code>sap.ui.table.Table</code> itself.</p>
+<p>This event is triggered when the custom filter item of the column menu is pressed. The column on which
+the event was triggered is passed as parameter.</p>
 <hr>
 <h3>attachFilter()</h3>
 <h4>Call Signature</h4>
@@ -705,12 +705,6 @@ call or user interaction with the column header.</p>
 <blockquote>
 <p><strong>attachFirstVisibleRowChanged</strong>(<code>oData</code>, <code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
-<p>Attaches event handler <code>fnFunction</code> to the #event:firstVisibleRowChanged firstVisibleRowChanged
-event of this <code>sap.ui.table.Table</code>.</p>
-<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
-otherwise it will be bound to this <code>sap.ui.table.Table</code> itself.</p>
-<p>This event gets fired when the first visible row is changed. It should only be used by composite controls.
-The event even is fired when setFirstVisibleRow is called programmatically.</p>
 <h5>Parameters</h5>
 <h6>oData</h6>
 <p><code>object</code></p>
@@ -727,16 +721,16 @@ object when firing the event</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Since</h5>
 <p>1.37.0</p>
-<h4>Call Signature</h4>
-<blockquote>
-<p><strong>attachFirstVisibleRowChanged</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
-</blockquote>
 <p>Attaches event handler <code>fnFunction</code> to the #event:firstVisibleRowChanged firstVisibleRowChanged
 event of this <code>sap.ui.table.Table</code>.</p>
 <p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
 otherwise it will be bound to this <code>sap.ui.table.Table</code> itself.</p>
 <p>This event gets fired when the first visible row is changed. It should only be used by composite controls.
 The event even is fired when setFirstVisibleRow is called programmatically.</p>
+<h4>Call Signature</h4>
+<blockquote>
+<p><strong>attachFirstVisibleRowChanged</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
+</blockquote>
 <h5>Parameters</h5>
 <h6>fnFunction</h6>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -749,16 +743,18 @@ The event even is fired when setFirstVisibleRow is called programmatically.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Since</h5>
 <p>1.37.0</p>
+<p>Attaches event handler <code>fnFunction</code> to the #event:firstVisibleRowChanged firstVisibleRowChanged
+event of this <code>sap.ui.table.Table</code>.</p>
+<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
+otherwise it will be bound to this <code>sap.ui.table.Table</code> itself.</p>
+<p>This event gets fired when the first visible row is changed. It should only be used by composite controls.
+The event even is fired when setFirstVisibleRow is called programmatically.</p>
 <hr>
 <h3><del>attachGroup()</del></h3>
 <h4>Call Signature</h4>
 <blockquote>
 <p><strong>attachGroup</strong>(<code>oData</code>, <code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
-<p>Attaches event handler <code>fnFunction</code> to the #event:group group event of this <code>sap.ui.table.Table</code>.</p>
-<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
-otherwise it will be bound to this <code>sap.ui.table.Table</code> itself.</p>
-<p>fired when the table is grouped (experimental!).</p>
 <h5>Parameters</h5>
 <h6>oData</h6>
 <p><code>object</code></p>
@@ -775,14 +771,14 @@ object when firing the event</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Deprecated</h5>
 <p>(since 1.118)</p>
-<h4>Call Signature</h4>
-<blockquote>
-<p><strong>attachGroup</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
-</blockquote>
 <p>Attaches event handler <code>fnFunction</code> to the #event:group group event of this <code>sap.ui.table.Table</code>.</p>
 <p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
 otherwise it will be bound to this <code>sap.ui.table.Table</code> itself.</p>
 <p>fired when the table is grouped (experimental!).</p>
+<h4>Call Signature</h4>
+<blockquote>
+<p><strong>attachGroup</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
+</blockquote>
 <h5>Parameters</h5>
 <h6>fnFunction</h6>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -795,17 +791,16 @@ otherwise it will be bound to this <code>sap.ui.table.Table</code> itself.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Deprecated</h5>
 <p>(since 1.118)</p>
+<p>Attaches event handler <code>fnFunction</code> to the #event:group group event of this <code>sap.ui.table.Table</code>.</p>
+<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
+otherwise it will be bound to this <code>sap.ui.table.Table</code> itself.</p>
+<p>fired when the table is grouped (experimental!).</p>
 <hr>
 <h3>attachPaste()</h3>
 <h4>Call Signature</h4>
 <blockquote>
 <p><strong>attachPaste</strong>(<code>oData</code>, <code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
-<p>Attaches event handler <code>fnFunction</code> to the #event:paste paste event of this <code>sap.ui.table.Table</code>.</p>
-<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
-otherwise it will be bound to this <code>sap.ui.table.Table</code> itself.</p>
-<p>This event gets fired when the user pastes content from the clipboard to the table. Pasting can be done
-with the standard keyboard shortcut, if the focus is inside the table.</p>
 <h5>Parameters</h5>
 <h6>oData</h6>
 <p><code>object</code></p>
@@ -822,15 +817,15 @@ object when firing the event</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Since</h5>
 <p>1.60</p>
-<h4>Call Signature</h4>
-<blockquote>
-<p><strong>attachPaste</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
-</blockquote>
 <p>Attaches event handler <code>fnFunction</code> to the #event:paste paste event of this <code>sap.ui.table.Table</code>.</p>
 <p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
 otherwise it will be bound to this <code>sap.ui.table.Table</code> itself.</p>
 <p>This event gets fired when the user pastes content from the clipboard to the table. Pasting can be done
 with the standard keyboard shortcut, if the focus is inside the table.</p>
+<h4>Call Signature</h4>
+<blockquote>
+<p><strong>attachPaste</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
+</blockquote>
 <h5>Parameters</h5>
 <h6>fnFunction</h6>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -843,6 +838,11 @@ with the standard keyboard shortcut, if the focus is inside the table.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Since</h5>
 <p>1.60</p>
+<p>Attaches event handler <code>fnFunction</code> to the #event:paste paste event of this <code>sap.ui.table.Table</code>.</p>
+<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
+otherwise it will be bound to this <code>sap.ui.table.Table</code> itself.</p>
+<p>This event gets fired when the user pastes content from the clipboard to the table. Pasting can be done
+with the standard keyboard shortcut, if the focus is inside the table.</p>
 <hr>
 <h3>attachRowSelectionChange()</h3>
 <h4>Call Signature</h4>
@@ -905,12 +905,6 @@ plugin is used with the table, this event won&#39;t be fired.</p>
 <blockquote>
 <p><strong>attachRowsUpdated</strong>(<code>oData</code>, <code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
-<p>Attaches event handler <code>fnFunction</code> to the #event:rowsUpdated rowsUpdated event of this <code>sap.ui.table.Table</code>.</p>
-<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
-otherwise it will be bound to this <code>sap.ui.table.Table</code> itself.</p>
-<p>This event is fired after the table rows have been updated due to rendering, a model update, or a user
-interaction, for example.</p>
-<p><strong>Note</strong>: This event is fired often and must not be used for performance-critical tasks.</p>
 <h5>Parameters</h5>
 <h6>oData</h6>
 <p><code>object</code></p>
@@ -927,16 +921,16 @@ object when firing the event</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Since</h5>
 <p>1.86</p>
-<h4>Call Signature</h4>
-<blockquote>
-<p><strong>attachRowsUpdated</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
-</blockquote>
 <p>Attaches event handler <code>fnFunction</code> to the #event:rowsUpdated rowsUpdated event of this <code>sap.ui.table.Table</code>.</p>
 <p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
 otherwise it will be bound to this <code>sap.ui.table.Table</code> itself.</p>
 <p>This event is fired after the table rows have been updated due to rendering, a model update, or a user
 interaction, for example.</p>
 <p><strong>Note</strong>: This event is fired often and must not be used for performance-critical tasks.</p>
+<h4>Call Signature</h4>
+<blockquote>
+<p><strong>attachRowsUpdated</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
+</blockquote>
 <h5>Parameters</h5>
 <h6>fnFunction</h6>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -949,6 +943,12 @@ interaction, for example.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h5>Since</h5>
 <p>1.86</p>
+<p>Attaches event handler <code>fnFunction</code> to the #event:rowsUpdated rowsUpdated event of this <code>sap.ui.table.Table</code>.</p>
+<p>When called, the context of the event handler (its <code>this</code>) will be bound to <code>oListener</code> if specified,
+otherwise it will be bound to this <code>sap.ui.table.Table</code> itself.</p>
+<p>This event is fired after the table rows have been updated due to rendering, a model update, or a user
+interaction, for example.</p>
+<p><strong>Note</strong>: This event is fired often and must not be used for performance-critical tasks.</p>
 <hr>
 <h3>attachSort()</h3>
 <h4>Call Signature</h4>
@@ -1001,11 +1001,11 @@ call or user interaction with the column header.</p>
 <p><strong>autoResizeColumn</strong>(<code>iColIndex</code>): <code>void</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
-<p>Triggers automatic resizing of a column to the widest content.</p>
 <ul>
 <li>Experimental! Presently implemented to only work with a very limited set of controls
 (e.g. sap.m.Text).</li>
 </ul>
+<p>Triggers automatic resizing of a column to the widest content.</p>
 <h4>Parameters</h4>
 <h5>iColIndex</h5>
 <p><code>number</code></p>
@@ -1065,12 +1065,12 @@ of the possible properties of <code>oBindingInfo</code>.</p>
 <blockquote>
 <p><strong>destroyContextMenu</strong>(): <code>this</code></p>
 </blockquote>
-<p>Destroys the contextMenu in the aggregation #getContextMenu contextMenu.</p>
 <h4>Returns</h4>
 <p><code>this</code></p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.54</p>
+<p>Destroys the contextMenu in the aggregation #getContextMenu contextMenu.</p>
 <hr>
 <h3>destroyExtension()</h3>
 <blockquote>
@@ -1103,7 +1103,6 @@ of the possible properties of <code>oBindingInfo</code>.</p>
 <blockquote>
 <p><strong>destroyPlugins</strong>(): <code>this</code></p>
 </blockquote>
-<p>Destroys all the plugins in the aggregation #getPlugins plugins.</p>
 <h4>Returns</h4>
 <p><code>this</code></p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
@@ -1111,6 +1110,7 @@ of the possible properties of <code>oBindingInfo</code>.</p>
 <p>1.64</p>
 <h4>Deprecated</h4>
 <p>(since 1.120) - Please add plugins to the <code>dependents</code> aggregation instead.</p>
+<p>Destroys all the plugins in the aggregation #getPlugins plugins.</p>
 <hr>
 <h3>destroyRowActionTemplate()</h3>
 <blockquote>
@@ -1125,12 +1125,12 @@ of the possible properties of <code>oBindingInfo</code>.</p>
 <blockquote>
 <p><strong>destroyRowMode</strong>(): <code>this</code></p>
 </blockquote>
-<p>Destroys the rowMode in the aggregation #getRowMode rowMode.</p>
 <h4>Returns</h4>
 <p><code>this</code></p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.119</p>
+<p>Destroys the rowMode in the aggregation #getRowMode rowMode.</p>
 <hr>
 <h3>destroyRows()</h3>
 <blockquote>
@@ -1154,31 +1154,28 @@ of the possible properties of <code>oBindingInfo</code>.</p>
 <blockquote>
 <p><strong>destroyTitle</strong>(): <code>this</code></p>
 </blockquote>
-<p>Destroys the title in the aggregation #getTitle title.</p>
 <h4>Returns</h4>
 <p><code>this</code></p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Deprecated</h4>
 <p>(since 1.72) - Use, for example, a <code>sap.m.Title</code> control in the <code>extension</code> aggregation instead.</p>
+<p>Destroys the title in the aggregation #getTitle title.</p>
 <hr>
 <h3><del>destroyToolbar()</del></h3>
 <blockquote>
 <p><strong>destroyToolbar</strong>(): <code>this</code></p>
 </blockquote>
-<p>Destroys the toolbar in the aggregation #getToolbar toolbar.</p>
 <h4>Returns</h4>
 <p><code>this</code></p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Deprecated</h4>
 <p>(since 1.38) - This aggregation is deprecated, use the <code>extension</code> aggregation instead.</p>
+<p>Destroys the toolbar in the aggregation #getToolbar toolbar.</p>
 <hr>
 <h3>detachBeforeOpenContextMenu()</h3>
 <blockquote>
 <p><strong>detachBeforeOpenContextMenu</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
-<p>Detaches event handler <code>fnFunction</code> from the #event:beforeOpenContextMenu beforeOpenContextMenu
-event of this <code>sap.ui.table.Table</code>.</p>
-<p>The passed function and listener object must match the ones used for event registration.</p>
 <h4>Parameters</h4>
 <h5>fnFunction</h5>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -1191,14 +1188,14 @@ event of this <code>sap.ui.table.Table</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.54</p>
+<p>Detaches event handler <code>fnFunction</code> from the #event:beforeOpenContextMenu beforeOpenContextMenu
+event of this <code>sap.ui.table.Table</code>.</p>
+<p>The passed function and listener object must match the ones used for event registration.</p>
 <hr>
 <h3>detachBusyStateChanged()</h3>
 <blockquote>
 <p><strong>detachBusyStateChanged</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
-<p>Detaches event handler <code>fnFunction</code> from the #event:busyStateChanged busyStateChanged event of
-this <code>sap.ui.table.Table</code>.</p>
-<p>The passed function and listener object must match the ones used for event registration.</p>
 <h4>Parameters</h4>
 <h5>fnFunction</h5>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -1211,13 +1208,14 @@ this <code>sap.ui.table.Table</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.37.0</p>
+<p>Detaches event handler <code>fnFunction</code> from the #event:busyStateChanged busyStateChanged event of
+this <code>sap.ui.table.Table</code>.</p>
+<p>The passed function and listener object must match the ones used for event registration.</p>
 <hr>
 <h3>detachCellClick()</h3>
 <blockquote>
 <p><strong>detachCellClick</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
-<p>Detaches event handler <code>fnFunction</code> from the #event:cellClick cellClick event of this <code>sap.ui.table.Table</code>.</p>
-<p>The passed function and listener object must match the ones used for event registration.</p>
 <h4>Parameters</h4>
 <h5>fnFunction</h5>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -1230,14 +1228,13 @@ this <code>sap.ui.table.Table</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.21.0</p>
+<p>Detaches event handler <code>fnFunction</code> from the #event:cellClick cellClick event of this <code>sap.ui.table.Table</code>.</p>
+<p>The passed function and listener object must match the ones used for event registration.</p>
 <hr>
 <h3><del>detachCellContextmenu()</del></h3>
 <blockquote>
 <p><strong>detachCellContextmenu</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
-<p>Detaches event handler <code>fnFunction</code> from the #event:cellContextmenu cellContextmenu event of
-this <code>sap.ui.table.Table</code>.</p>
-<p>The passed function and listener object must match the ones used for event registration.</p>
 <h4>Parameters</h4>
 <h5>fnFunction</h5>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -1252,13 +1249,14 @@ this <code>sap.ui.table.Table</code>.</p>
 <p>1.21.0</p>
 <h4>Deprecated</h4>
 <p>(since 1.54) - replaced by <code>beforeOpenContextMenu</code>.</p>
+<p>Detaches event handler <code>fnFunction</code> from the #event:cellContextmenu cellContextmenu event of
+this <code>sap.ui.table.Table</code>.</p>
+<p>The passed function and listener object must match the ones used for event registration.</p>
 <hr>
 <h3>detachColumnFreeze()</h3>
 <blockquote>
 <p><strong>detachColumnFreeze</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
-<p>Detaches event handler <code>fnFunction</code> from the #event:columnFreeze columnFreeze event of this <code>sap.ui.table.Table</code>.</p>
-<p>The passed function and listener object must match the ones used for event registration.</p>
 <h4>Parameters</h4>
 <h5>fnFunction</h5>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -1271,6 +1269,8 @@ this <code>sap.ui.table.Table</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.21.0</p>
+<p>Detaches event handler <code>fnFunction</code> from the #event:columnFreeze columnFreeze event of this <code>sap.ui.table.Table</code>.</p>
+<p>The passed function and listener object must match the ones used for event registration.</p>
 <hr>
 <h3>detachColumnMove()</h3>
 <blockquote>
@@ -1310,8 +1310,6 @@ this <code>sap.ui.table.Table</code>.</p>
 <blockquote>
 <p><strong>detachColumnSelect</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
-<p>Detaches event handler <code>fnFunction</code> from the #event:columnSelect columnSelect event of this <code>sap.ui.table.Table</code>.</p>
-<p>The passed function and listener object must match the ones used for event registration.</p>
 <h4>Parameters</h4>
 <h5>fnFunction</h5>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -1324,14 +1322,13 @@ this <code>sap.ui.table.Table</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Deprecated</h4>
 <p>(since 1.117)</p>
+<p>Detaches event handler <code>fnFunction</code> from the #event:columnSelect columnSelect event of this <code>sap.ui.table.Table</code>.</p>
+<p>The passed function and listener object must match the ones used for event registration.</p>
 <hr>
 <h3><del>detachColumnVisibility()</del></h3>
 <blockquote>
 <p><strong>detachColumnVisibility</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
-<p>Detaches event handler <code>fnFunction</code> from the #event:columnVisibility columnVisibility event of
-this <code>sap.ui.table.Table</code>.</p>
-<p>The passed function and listener object must match the ones used for event registration.</p>
 <h4>Parameters</h4>
 <h5>fnFunction</h5>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -1344,13 +1341,14 @@ this <code>sap.ui.table.Table</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Deprecated</h4>
 <p>(since 1.117)</p>
+<p>Detaches event handler <code>fnFunction</code> from the #event:columnVisibility columnVisibility event of
+this <code>sap.ui.table.Table</code>.</p>
+<p>The passed function and listener object must match the ones used for event registration.</p>
 <hr>
 <h3>detachCustomFilter()</h3>
 <blockquote>
 <p><strong>detachCustomFilter</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
-<p>Detaches event handler <code>fnFunction</code> from the #event:customFilter customFilter event of this <code>sap.ui.table.Table</code>.</p>
-<p>The passed function and listener object must match the ones used for event registration.</p>
 <h4>Parameters</h4>
 <h5>fnFunction</h5>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -1363,6 +1361,8 @@ this <code>sap.ui.table.Table</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.23.0</p>
+<p>Detaches event handler <code>fnFunction</code> from the #event:customFilter customFilter event of this <code>sap.ui.table.Table</code>.</p>
+<p>The passed function and listener object must match the ones used for event registration.</p>
 <hr>
 <h3>detachFilter()</h3>
 <blockquote>
@@ -1385,9 +1385,6 @@ this <code>sap.ui.table.Table</code>.</p>
 <blockquote>
 <p><strong>detachFirstVisibleRowChanged</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
-<p>Detaches event handler <code>fnFunction</code> from the #event:firstVisibleRowChanged firstVisibleRowChanged
-event of this <code>sap.ui.table.Table</code>.</p>
-<p>The passed function and listener object must match the ones used for event registration.</p>
 <h4>Parameters</h4>
 <h5>fnFunction</h5>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -1400,13 +1397,14 @@ event of this <code>sap.ui.table.Table</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.37.0</p>
+<p>Detaches event handler <code>fnFunction</code> from the #event:firstVisibleRowChanged firstVisibleRowChanged
+event of this <code>sap.ui.table.Table</code>.</p>
+<p>The passed function and listener object must match the ones used for event registration.</p>
 <hr>
 <h3><del>detachGroup()</del></h3>
 <blockquote>
 <p><strong>detachGroup</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
-<p>Detaches event handler <code>fnFunction</code> from the #event:group group event of this <code>sap.ui.table.Table</code>.</p>
-<p>The passed function and listener object must match the ones used for event registration.</p>
 <h4>Parameters</h4>
 <h5>fnFunction</h5>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -1419,13 +1417,13 @@ event of this <code>sap.ui.table.Table</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Deprecated</h4>
 <p>(since 1.118)</p>
+<p>Detaches event handler <code>fnFunction</code> from the #event:group group event of this <code>sap.ui.table.Table</code>.</p>
+<p>The passed function and listener object must match the ones used for event registration.</p>
 <hr>
 <h3>detachPaste()</h3>
 <blockquote>
 <p><strong>detachPaste</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
-<p>Detaches event handler <code>fnFunction</code> from the #event:paste paste event of this <code>sap.ui.table.Table</code>.</p>
-<p>The passed function and listener object must match the ones used for event registration.</p>
 <h4>Parameters</h4>
 <h5>fnFunction</h5>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -1438,6 +1436,8 @@ event of this <code>sap.ui.table.Table</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.60</p>
+<p>Detaches event handler <code>fnFunction</code> from the #event:paste paste event of this <code>sap.ui.table.Table</code>.</p>
+<p>The passed function and listener object must match the ones used for event registration.</p>
 <hr>
 <h3>detachRowSelectionChange()</h3>
 <blockquote>
@@ -1461,8 +1461,6 @@ of this <code>sap.ui.table.Table</code>.</p>
 <blockquote>
 <p><strong>detachRowsUpdated</strong>(<code>fnFunction</code>, <code>oListener?</code>): <code>this</code></p>
 </blockquote>
-<p>Detaches event handler <code>fnFunction</code> from the #event:rowsUpdated rowsUpdated event of this <code>sap.ui.table.Table</code>.</p>
-<p>The passed function and listener object must match the ones used for event registration.</p>
 <h4>Parameters</h4>
 <h5>fnFunction</h5>
 <p>(<code>p1</code>) =&gt; <code>void</code></p>
@@ -1475,6 +1473,8 @@ of this <code>sap.ui.table.Table</code>.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.86</p>
+<p>Detaches event handler <code>fnFunction</code> from the #event:rowsUpdated rowsUpdated event of this <code>sap.ui.table.Table</code>.</p>
+<p>The passed function and listener object must match the ones used for event registration.</p>
 <hr>
 <h3>detachSort()</h3>
 <blockquote>
@@ -1498,10 +1498,6 @@ of this <code>sap.ui.table.Table</code>.</p>
 <p><strong>exportData</strong>(<code>mSettings?</code>): <a href="../../../../../../sap.ui.core/sap/ui/core/util/Export/classes/Export.html"><code>Export</code></a></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
-<p>Creates a new sap.ui.core.util.Export object and fills row/column information from the table
-if not provided. For the cell content, the column&#39;s &quot;sortProperty&quot; will be used (experimental!)</p>
-<p><strong>Please note: This method uses synchronous requests. Support and functioning ends with the support
-for synchronous requests in browsers.</strong></p>
 <h4>Parameters</h4>
 <h5>mSettings?</h5>
 <p><code>object</code></p>
@@ -1515,6 +1511,10 @@ for synchronous requests in browsers.</strong></p>
 <li>Experimental because the property for the column/cell definitions (sortProperty) could
 change in future.</li>
 </ul>
+<p>Creates a new sap.ui.core.util.Export object and fills row/column information from the table
+if not provided. For the cell content, the column&#39;s &quot;sortProperty&quot; will be used (experimental!)</p>
+<p><strong>Please note: This method uses synchronous requests. Support and functioning ends with the support
+for synchronous requests in browsers.</strong></p>
 <hr>
 <h3>filter()</h3>
 <blockquote>
@@ -1536,9 +1536,6 @@ the filter for this column is removed.</p>
 <blockquote>
 <p><strong>fireBeforeOpenContextMenu</strong>(<code>mParameters?</code>): <code>boolean</code></p>
 </blockquote>
-<p>Fires event #event:beforeOpenContextMenu beforeOpenContextMenu to attached listeners.</p>
-<p>Listeners may prevent the default action of this event by calling the <code>preventDefault</code> method on the
-event object. The return value of this method indicates whether the default action should be executed.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/Table$BeforeOpenContextMenuEventParameters.html"><code>Table$BeforeOpenContextMenuEventParameters</code></a></p>
@@ -1550,12 +1547,14 @@ event object. The return value of this method indicates whether the default acti
 <p>1.54</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:beforeOpenContextMenu beforeOpenContextMenu to attached listeners.</p>
+<p>Listeners may prevent the default action of this event by calling the <code>preventDefault</code> method on the
+event object. The return value of this method indicates whether the default action should be executed.</p>
 <hr>
 <h3>fireBusyStateChanged()</h3>
 <blockquote>
 <p><strong>fireBusyStateChanged</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
-<p>Fires event #event:busyStateChanged busyStateChanged to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/Table$BusyStateChangedEventParameters.html"><code>Table$BusyStateChangedEventParameters</code></a></p>
@@ -1567,14 +1566,12 @@ event object. The return value of this method indicates whether the default acti
 <p>1.37.0</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:busyStateChanged busyStateChanged to attached listeners.</p>
 <hr>
 <h3>fireCellClick()</h3>
 <blockquote>
 <p><strong>fireCellClick</strong>(<code>mParameters?</code>): <code>boolean</code></p>
 </blockquote>
-<p>Fires event #event:cellClick cellClick to attached listeners.</p>
-<p>Listeners may prevent the default action of this event by calling the <code>preventDefault</code> method on the
-event object. The return value of this method indicates whether the default action should be executed.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/Table$CellClickEventParameters.html"><code>Table$CellClickEventParameters</code></a></p>
@@ -1586,14 +1583,14 @@ event object. The return value of this method indicates whether the default acti
 <p>1.21.0</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:cellClick cellClick to attached listeners.</p>
+<p>Listeners may prevent the default action of this event by calling the <code>preventDefault</code> method on the
+event object. The return value of this method indicates whether the default action should be executed.</p>
 <hr>
 <h3><del>fireCellContextmenu()</del></h3>
 <blockquote>
 <p><strong>fireCellContextmenu</strong>(<code>mParameters?</code>): <code>boolean</code></p>
 </blockquote>
-<p>Fires event #event:cellContextmenu cellContextmenu to attached listeners.</p>
-<p>Listeners may prevent the default action of this event by calling the <code>preventDefault</code> method on the
-event object. The return value of this method indicates whether the default action should be executed.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/Table$CellContextmenuEventParameters.html"><code>Table$CellContextmenuEventParameters</code></a></p>
@@ -1607,14 +1604,14 @@ event object. The return value of this method indicates whether the default acti
 <p>(since 1.54) - replaced by <code>beforeOpenContextMenu</code>.</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:cellContextmenu cellContextmenu to attached listeners.</p>
+<p>Listeners may prevent the default action of this event by calling the <code>preventDefault</code> method on the
+event object. The return value of this method indicates whether the default action should be executed.</p>
 <hr>
 <h3>fireColumnFreeze()</h3>
 <blockquote>
 <p><strong>fireColumnFreeze</strong>(<code>mParameters?</code>): <code>boolean</code></p>
 </blockquote>
-<p>Fires event #event:columnFreeze columnFreeze to attached listeners.</p>
-<p>Listeners may prevent the default action of this event by calling the <code>preventDefault</code> method on the
-event object. The return value of this method indicates whether the default action should be executed.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/Table$ColumnFreezeEventParameters.html"><code>Table$ColumnFreezeEventParameters</code></a></p>
@@ -1626,14 +1623,14 @@ event object. The return value of this method indicates whether the default acti
 <p>1.21.0</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:columnFreeze columnFreeze to attached listeners.</p>
+<p>Listeners may prevent the default action of this event by calling the <code>preventDefault</code> method on the
+event object. The return value of this method indicates whether the default action should be executed.</p>
 <hr>
 <h3>fireColumnMove()</h3>
 <blockquote>
 <p><strong>fireColumnMove</strong>(<code>mParameters?</code>): <code>boolean</code></p>
 </blockquote>
-<p>Fires event #event:columnMove columnMove to attached listeners.</p>
-<p>Listeners may prevent the default action of this event by calling the <code>preventDefault</code> method on the
-event object. The return value of this method indicates whether the default action should be executed.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/Table$ColumnMoveEventParameters.html"><code>Table$ColumnMoveEventParameters</code></a></p>
@@ -1643,14 +1640,14 @@ event object. The return value of this method indicates whether the default acti
 <p>Whether or not to prevent the default action</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:columnMove columnMove to attached listeners.</p>
+<p>Listeners may prevent the default action of this event by calling the <code>preventDefault</code> method on the
+event object. The return value of this method indicates whether the default action should be executed.</p>
 <hr>
 <h3>fireColumnResize()</h3>
 <blockquote>
 <p><strong>fireColumnResize</strong>(<code>mParameters?</code>): <code>boolean</code></p>
 </blockquote>
-<p>Fires event #event:columnResize columnResize to attached listeners.</p>
-<p>Listeners may prevent the default action of this event by calling the <code>preventDefault</code> method on the
-event object. The return value of this method indicates whether the default action should be executed.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/Table$ColumnResizeEventParameters.html"><code>Table$ColumnResizeEventParameters</code></a></p>
@@ -1660,14 +1657,14 @@ event object. The return value of this method indicates whether the default acti
 <p>Whether or not to prevent the default action</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:columnResize columnResize to attached listeners.</p>
+<p>Listeners may prevent the default action of this event by calling the <code>preventDefault</code> method on the
+event object. The return value of this method indicates whether the default action should be executed.</p>
 <hr>
 <h3><del>fireColumnSelect()</del></h3>
 <blockquote>
 <p><strong>fireColumnSelect</strong>(<code>mParameters?</code>): <code>boolean</code></p>
 </blockquote>
-<p>Fires event #event:columnSelect columnSelect to attached listeners.</p>
-<p>Listeners may prevent the default action of this event by calling the <code>preventDefault</code> method on the
-event object. The return value of this method indicates whether the default action should be executed.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/Table$ColumnSelectEventParameters.html"><code>Table$ColumnSelectEventParameters</code></a></p>
@@ -1679,14 +1676,14 @@ event object. The return value of this method indicates whether the default acti
 <p>(since 1.117)</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:columnSelect columnSelect to attached listeners.</p>
+<p>Listeners may prevent the default action of this event by calling the <code>preventDefault</code> method on the
+event object. The return value of this method indicates whether the default action should be executed.</p>
 <hr>
 <h3><del>fireColumnVisibility()</del></h3>
 <blockquote>
 <p><strong>fireColumnVisibility</strong>(<code>mParameters?</code>): <code>boolean</code></p>
 </blockquote>
-<p>Fires event #event:columnVisibility columnVisibility to attached listeners.</p>
-<p>Listeners may prevent the default action of this event by calling the <code>preventDefault</code> method on the
-event object. The return value of this method indicates whether the default action should be executed.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/Table$ColumnVisibilityEventParameters.html"><code>Table$ColumnVisibilityEventParameters</code></a></p>
@@ -1698,12 +1695,14 @@ event object. The return value of this method indicates whether the default acti
 <p>(since 1.117)</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:columnVisibility columnVisibility to attached listeners.</p>
+<p>Listeners may prevent the default action of this event by calling the <code>preventDefault</code> method on the
+event object. The return value of this method indicates whether the default action should be executed.</p>
 <hr>
 <h3>fireCustomFilter()</h3>
 <blockquote>
 <p><strong>fireCustomFilter</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
-<p>Fires event #event:customFilter customFilter to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/Table$CustomFilterEventParameters.html"><code>Table$CustomFilterEventParameters</code></a></p>
@@ -1715,14 +1714,12 @@ event object. The return value of this method indicates whether the default acti
 <p>1.23.0</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:customFilter customFilter to attached listeners.</p>
 <hr>
 <h3>fireFilter()</h3>
 <blockquote>
 <p><strong>fireFilter</strong>(<code>mParameters?</code>): <code>boolean</code></p>
 </blockquote>
-<p>Fires event #event:filter filter to attached listeners.</p>
-<p>Listeners may prevent the default action of this event by calling the <code>preventDefault</code> method on the
-event object. The return value of this method indicates whether the default action should be executed.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/Table$FilterEventParameters.html"><code>Table$FilterEventParameters</code></a></p>
@@ -1732,12 +1729,14 @@ event object. The return value of this method indicates whether the default acti
 <p>Whether or not to prevent the default action</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:filter filter to attached listeners.</p>
+<p>Listeners may prevent the default action of this event by calling the <code>preventDefault</code> method on the
+event object. The return value of this method indicates whether the default action should be executed.</p>
 <hr>
 <h3>fireFirstVisibleRowChanged()</h3>
 <blockquote>
 <p><strong>fireFirstVisibleRowChanged</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
-<p>Fires event #event:firstVisibleRowChanged firstVisibleRowChanged to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/Table$FirstVisibleRowChangedEventParameters.html"><code>Table$FirstVisibleRowChangedEventParameters</code></a></p>
@@ -1749,14 +1748,12 @@ event object. The return value of this method indicates whether the default acti
 <p>1.37.0</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:firstVisibleRowChanged firstVisibleRowChanged to attached listeners.</p>
 <hr>
 <h3><del>fireGroup()</del></h3>
 <blockquote>
 <p><strong>fireGroup</strong>(<code>mParameters?</code>): <code>boolean</code></p>
 </blockquote>
-<p>Fires event #event:group group to attached listeners.</p>
-<p>Listeners may prevent the default action of this event by calling the <code>preventDefault</code> method on the
-event object. The return value of this method indicates whether the default action should be executed.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/Table$GroupEventParameters.html"><code>Table$GroupEventParameters</code></a></p>
@@ -1768,14 +1765,14 @@ event object. The return value of this method indicates whether the default acti
 <p>(since 1.118)</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:group group to attached listeners.</p>
+<p>Listeners may prevent the default action of this event by calling the <code>preventDefault</code> method on the
+event object. The return value of this method indicates whether the default action should be executed.</p>
 <hr>
 <h3>firePaste()</h3>
 <blockquote>
 <p><strong>firePaste</strong>(<code>mParameters?</code>): <code>boolean</code></p>
 </blockquote>
-<p>Fires event #event:paste paste to attached listeners.</p>
-<p>Listeners may prevent the default action of this event by calling the <code>preventDefault</code> method on the
-event object. The return value of this method indicates whether the default action should be executed.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/Table$PasteEventParameters.html"><code>Table$PasteEventParameters</code></a></p>
@@ -1787,12 +1784,14 @@ event object. The return value of this method indicates whether the default acti
 <p>1.60</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:paste paste to attached listeners.</p>
+<p>Listeners may prevent the default action of this event by calling the <code>preventDefault</code> method on the
+event object. The return value of this method indicates whether the default action should be executed.</p>
 <hr>
 <h3>fireRowSelectionChange()</h3>
 <blockquote>
 <p><strong>fireRowSelectionChange</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
-<p>Fires event #event:rowSelectionChange rowSelectionChange to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/Table$RowSelectionChangeEventParameters.html"><code>Table$RowSelectionChangeEventParameters</code></a></p>
@@ -1802,12 +1801,12 @@ event object. The return value of this method indicates whether the default acti
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:rowSelectionChange rowSelectionChange to attached listeners.</p>
 <hr>
 <h3>fireRowsUpdated()</h3>
 <blockquote>
 <p><strong>fireRowsUpdated</strong>(<code>mParameters?</code>): <code>this</code></p>
 </blockquote>
-<p>Fires event #event:rowsUpdated rowsUpdated to attached listeners.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><code>object</code></p>
@@ -1819,14 +1818,12 @@ event object. The return value of this method indicates whether the default acti
 <p>1.86</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:rowsUpdated rowsUpdated to attached listeners.</p>
 <hr>
 <h3>fireSort()</h3>
 <blockquote>
 <p><strong>fireSort</strong>(<code>mParameters?</code>): <code>boolean</code></p>
 </blockquote>
-<p>Fires event #event:sort sort to attached listeners.</p>
-<p>Listeners may prevent the default action of this event by calling the <code>preventDefault</code> method on the
-event object. The return value of this method indicates whether the default action should be executed.</p>
 <h4>Parameters</h4>
 <h5>mParameters?</h5>
 <p><a href="../interfaces/Table$SortEventParameters.html"><code>Table$SortEventParameters</code></a></p>
@@ -1836,6 +1833,9 @@ event object. The return value of this method indicates whether the default acti
 <p>Whether or not to prevent the default action</p>
 <h4>Ui5-protected</h4>
 <p>Do not call from applications (only from related classes in the framework)</p>
+<p>Fires event #event:sort sort to attached listeners.</p>
+<p>Listeners may prevent the default action of this event by calling the <code>preventDefault</code> method on the
+event object. The return value of this method indicates whether the default action should be executed.</p>
 <hr>
 <h3>focus()</h3>
 <blockquote>
@@ -1865,14 +1865,14 @@ visible before the focus is set</p>
 <blockquote>
 <p><strong>getAlternateRowColors</strong>(): <code>boolean</code></p>
 </blockquote>
-<p>Gets current value of property #getAlternateRowColors alternateRowColors.</p>
-<p>Enables alternating table row colors. Alternate row coloring is not available for the tree mode.</p>
-<p>Default value is <code>false</code>.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>Value of property <code>alternateRowColors</code></p>
 <h4>Since</h4>
 <p>1.52</p>
+<p>Gets current value of property #getAlternateRowColors alternateRowColors.</p>
+<p>Enables alternating table row colors. Alternate row coloring is not available for the tree mode.</p>
+<p>Default value is <code>false</code>.</p>
 <hr>
 <h3>getAriaLabelledBy()</h3>
 <blockquote>
@@ -1956,21 +1956,25 @@ visible scroll area.</p>
 <blockquote>
 <p><strong>getContextMenu</strong>(): <a href="../../../../../../sap.ui.core/sap/ui/core/library/interfaces/IContextMenu.html"><code>IContextMenu</code></a></p>
 </blockquote>
+<h4>Returns</h4>
+<p><a href="../../../../../../sap.ui.core/sap/ui/core/library/interfaces/IContextMenu.html"><code>IContextMenu</code></a></p>
+<h4>Since</h4>
+<p>1.54</p>
 <p>Gets content of aggregation #getContextMenu contextMenu.</p>
 <p>Defines the context menu for the table.</p>
 <p><strong>Note:</strong> The context menu will also be available for the row selectors as well as in the row actions
 cell of the table control.</p>
 <p>The custom context menu will not be shown in group header and summary rows.</p>
 <p>If this aggregation is set, then the <code>enableCellFilter</code> property will have no effect.</p>
-<h4>Returns</h4>
-<p><a href="../../../../../../sap.ui.core/sap/ui/core/library/interfaces/IContextMenu.html"><code>IContextMenu</code></a></p>
-<h4>Since</h4>
-<p>1.54</p>
 <hr>
 <h3>getDragDropConfig()</h3>
 <blockquote>
 <p><strong>getDragDropConfig</strong>(): <a href="../../../../../../sap.ui.core/sap/ui/core/dnd/DragDropBase/classes/DragDropBase.html"><code>DragDropBase</code></a>[]</p>
 </blockquote>
+<h4>Returns</h4>
+<p><a href="../../../../../../sap.ui.core/sap/ui/core/dnd/DragDropBase/classes/DragDropBase.html"><code>DragDropBase</code></a>[]</p>
+<h4>Since</h4>
+<p>1.52</p>
 <p>Gets content of aggregation <code>dragDropConfig</code> which defines the drag-and-drop configuration.</p>
 <p>The following restrictions apply:
 	 - Columns cannot be configured to be draggable.
@@ -1984,10 +1988,6 @@ cell of the table control.</p>
 	 - Empty rows
 	 - Group header rows
 	 - Sum rows</p>
-<h4>Returns</h4>
-<p><a href="../../../../../../sap.ui.core/sap/ui/core/dnd/DragDropBase/classes/DragDropBase.html"><code>DragDropBase</code></a>[]</p>
-<h4>Since</h4>
-<p>1.52</p>
 <h4>Overrides</h4>
 <p><a href="../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a>.<a href="../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html#getdragdropconfig"><code>getDragDropConfig</code></a></p>
 <hr>
@@ -1995,20 +1995,25 @@ cell of the table control.</p>
 <blockquote>
 <p><strong>getEditable</strong>(): <code>boolean</code></p>
 </blockquote>
-<p>Gets current value of property #getEditable editable.</p>
-<p>Flag whether the controls of the Table are editable or not (currently this only controls the background
-color in certain themes!)</p>
-<p>Default value is <code>true</code>.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>Value of property <code>editable</code></p>
 <h4>Deprecated</h4>
 <p>(since 1.115)</p>
+<p>Gets current value of property #getEditable editable.</p>
+<p>Flag whether the controls of the Table are editable or not (currently this only controls the background
+color in certain themes!)</p>
+<p>Default value is <code>true</code>.</p>
 <hr>
 <h3>getEnableBusyIndicator()</h3>
 <blockquote>
 <p><strong>getEnableBusyIndicator</strong>(): <code>boolean</code></p>
 </blockquote>
+<h4>Returns</h4>
+<p><code>boolean</code></p>
+<p>Value of property <code>enableBusyIndicator</code></p>
+<h4>Since</h4>
+<p>1.27.0</p>
 <p>Gets current value of property #getEnableBusyIndicator enableBusyIndicator.</p>
 <p>If set to <code>true</code>, the table changes its busy state, resulting in showing or hiding the busy indicator.
 The table will switch to busy as soon as data is retrieved to be displayed in the currently visible rows.
@@ -2016,37 +2021,32 @@ This happens, for example, during scrolling, filtering, or sorting. As soon as t
 the table switches back to not busy. The busy state of the table can still be set manually by calling
 sap.ui.core.Control#setBusy.</p>
 <p>Default value is <code>false</code>.</p>
-<h4>Returns</h4>
-<p><code>boolean</code></p>
-<p>Value of property <code>enableBusyIndicator</code></p>
-<h4>Since</h4>
-<p>1.27.0</p>
 <hr>
 <h3>getEnableCellFilter()</h3>
 <blockquote>
 <p><strong>getEnableCellFilter</strong>(): <code>boolean</code></p>
 </blockquote>
-<p>Gets current value of property #getEnableCellFilter enableCellFilter.</p>
-<p>Flag whether to enable or disable the context menu on cells to trigger a filtering with the cell value.</p>
-<p>Default value is <code>false</code>.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>Value of property <code>enableCellFilter</code></p>
 <h4>Since</h4>
 <p>1.21.0</p>
+<p>Gets current value of property #getEnableCellFilter enableCellFilter.</p>
+<p>Flag whether to enable or disable the context menu on cells to trigger a filtering with the cell value.</p>
+<p>Default value is <code>false</code>.</p>
 <hr>
 <h3>getEnableColumnFreeze()</h3>
 <blockquote>
 <p><strong>getEnableColumnFreeze</strong>(): <code>boolean</code></p>
 </blockquote>
-<p>Gets current value of property #getEnableColumnFreeze enableColumnFreeze.</p>
-<p>Flag whether to show or hide the column menu item to freeze or unfreeze a column.</p>
-<p>Default value is <code>false</code>.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>Value of property <code>enableColumnFreeze</code></p>
 <h4>Since</h4>
 <p>1.21.0</p>
+<p>Gets current value of property #getEnableColumnFreeze enableColumnFreeze.</p>
+<p>Flag whether to show or hide the column menu item to freeze or unfreeze a column.</p>
+<p>Default value is <code>false</code>.</p>
 <hr>
 <h3>getEnableColumnReordering()</h3>
 <blockquote>
@@ -2063,20 +2063,25 @@ sap.ui.core.Control#setBusy.</p>
 <blockquote>
 <p><strong>getEnableCustomFilter</strong>(): <code>boolean</code></p>
 </blockquote>
-<p>Gets current value of property #getEnableCustomFilter enableCustomFilter.</p>
-<p>Set this parameter to true to implement your own filter behaviour. Instead of the filter input box a
-button will be rendered for which&#39; press event (customFilter) you can register an event handler.</p>
-<p>Default value is <code>false</code>.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>Value of property <code>enableCustomFilter</code></p>
 <h4>Since</h4>
 <p>1.23.0</p>
+<p>Gets current value of property #getEnableCustomFilter enableCustomFilter.</p>
+<p>Set this parameter to true to implement your own filter behaviour. Instead of the filter input box a
+button will be rendered for which&#39; press event (customFilter) you can register an event handler.</p>
+<p>Default value is <code>false</code>.</p>
 <hr>
 <h3><del>getEnableGrouping()</del></h3>
 <blockquote>
 <p><strong>getEnableGrouping</strong>(): <code>boolean</code></p>
 </blockquote>
+<h4>Returns</h4>
+<p><code>boolean</code></p>
+<p>Value of property <code>enableGrouping</code></p>
+<h4>Deprecated</h4>
+<p>(since 1.110) - this feature has a limited functionality and should not be used anymore.</p>
 <p>Gets current value of property #getEnableGrouping enableGrouping.</p>
 <p>Enables or disables grouping. If grouping is enabled, the table is grouped by the column which is defined
 in the <code>groupBy</code> association.</p>
@@ -2093,25 +2098,20 @@ in the <code>groupBy</code> association.</p>
 table is grouped by another column or grouping is disabled.
 </code></pre>
 <p>Default value is <code>false</code>.</p>
-<h4>Returns</h4>
-<p><code>boolean</code></p>
-<p>Value of property <code>enableGrouping</code></p>
-<h4>Deprecated</h4>
-<p>(since 1.110) - this feature has a limited functionality and should not be used anymore.</p>
 <hr>
 <h3>getEnableSelectAll()</h3>
 <blockquote>
 <p><strong>getEnableSelectAll</strong>(): <code>boolean</code></p>
 </blockquote>
-<p>Gets current value of property #getEnableSelectAll enableSelectAll.</p>
-<p>Specifies if a select all button should be displayed in the top left corner. This button is only displayed
-if the row selector is visible and the selection mode is set to any kind of multi selection.</p>
-<p>Default value is <code>true</code>.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>Value of property <code>enableSelectAll</code></p>
 <h4>Since</h4>
 <p>1.23.0</p>
+<p>Gets current value of property #getEnableSelectAll enableSelectAll.</p>
+<p>Specifies if a select all button should be displayed in the top left corner. This button is only displayed
+if the row selector is visible and the selection mode is set to any kind of multi selection.</p>
+<p>Default value is <code>true</code>.</p>
 <hr>
 <h3>getExtension()</h3>
 <blockquote>
@@ -2138,10 +2138,6 @@ is used as header the CSS class sapMTBHeader-CTX should be applied on this toolb
 <blockquote>
 <p><strong>getFixedBottomRowCount</strong>(): <code>number</code></p>
 </blockquote>
-<p>Gets current value of property #getFixedBottomRowCount fixedBottomRowCount.</p>
-<p>Number of rows that are fix on the bottom. When you use a vertical scrollbar, only the rows which are
-not fixed, will scroll.</p>
-<p>Default value is <code>0</code>.</p>
 <h4>Returns</h4>
 <p><code>number</code></p>
 <p>Value of property <code>fixedBottomRowCount</code></p>
@@ -2149,6 +2145,10 @@ not fixed, will scroll.</p>
 <p>1.18.7</p>
 <h4>Deprecated</h4>
 <p>(since 1.119) - use the <code>rowMode</code> aggregation instead.</p>
+<p>Gets current value of property #getFixedBottomRowCount fixedBottomRowCount.</p>
+<p>Number of rows that are fix on the bottom. When you use a vertical scrollbar, only the rows which are
+not fixed, will scroll.</p>
+<p>Default value is <code>0</code>.</p>
 <hr>
 <h3>getFixedColumnCount()</h3>
 <blockquote>
@@ -2170,15 +2170,15 @@ not fixed, will scroll.</p>
 <blockquote>
 <p><strong>getFixedRowCount</strong>(): <code>number</code></p>
 </blockquote>
-<p>Gets current value of property #getFixedRowCount fixedRowCount.</p>
-<p>Number of rows that are fix on the top. When you use a vertical scrollbar, only the rows which are not
-fixed, will scroll.</p>
-<p>Default value is <code>0</code>.</p>
 <h4>Returns</h4>
 <p><code>number</code></p>
 <p>Value of property <code>fixedRowCount</code></p>
 <h4>Deprecated</h4>
 <p>(since 1.119) - use the <code>rowMode</code> aggregation instead.</p>
+<p>Gets current value of property #getFixedRowCount fixedRowCount.</p>
+<p>Number of rows that are fix on the top. When you use a vertical scrollbar, only the rows which are not
+fixed, will scroll.</p>
+<p>Default value is <code>0</code>.</p>
 <hr>
 <h3>getFooter()</h3>
 <blockquote>
@@ -2195,40 +2195,40 @@ fixed, will scroll.</p>
 <p><strong>getGroupBy</strong>(): <code>string</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
-<p>ID of the element which is the current target of the association #getGroupBy groupBy, or <code>null</code>.</p>
 <h4>Returns</h4>
 <p><code>string</code></p>
 <h4>Deprecated</h4>
 <p>(since 1.110)
  (since 1.28) - This feature has a limited functionality.</p>
+<p>ID of the element which is the current target of the association #getGroupBy groupBy, or <code>null</code>.</p>
 <hr>
 <h3><del>getMinAutoRowCount()</del></h3>
 <blockquote>
 <p><strong>getMinAutoRowCount</strong>(): <code>number</code></p>
 </blockquote>
-<p>Gets current value of property #getMinAutoRowCount minAutoRowCount.</p>
-<p>This property is used to set the minimum count of visible rows when the property visibleRowCountMode
-is set to Auto or Interactive. For any other visibleRowCountMode, it is ignored.</p>
-<p>Default value is <code>5</code>.</p>
 <h4>Returns</h4>
 <p><code>number</code></p>
 <p>Value of property <code>minAutoRowCount</code></p>
 <h4>Deprecated</h4>
 <p>(since 1.119) - use the <code>rowMode</code> aggregation instead.</p>
+<p>Gets current value of property #getMinAutoRowCount minAutoRowCount.</p>
+<p>This property is used to set the minimum count of visible rows when the property visibleRowCountMode
+is set to Auto or Interactive. For any other visibleRowCountMode, it is ignored.</p>
+<p>Default value is <code>5</code>.</p>
 <hr>
 <h3><del>getNavigationMode()</del></h3>
 <blockquote>
 <p><strong>getNavigationMode</strong>(): <a href="../../library/enumerations/NavigationMode.html"><code>NavigationMode</code></a> | <code>&quot;Paginator&quot;</code> | <code>&quot;Scrollbar&quot;</code></p>
 </blockquote>
-<p>Gets current value of property #getNavigationMode navigationMode.</p>
-<p>This property has been deprecated and must not be used anymore, since <code>Scrollbar</code> is the only supported
-option.</p>
-<p>Default value is <code>&quot;Scrollbar&quot;</code>.</p>
 <h4>Returns</h4>
 <p><a href="../../library/enumerations/NavigationMode.html"><code>NavigationMode</code></a> | <code>&quot;Paginator&quot;</code> | <code>&quot;Scrollbar&quot;</code></p>
 <p>Value of property <code>navigationMode</code></p>
 <h4>Deprecated</h4>
 <p>(since 1.38)</p>
+<p>Gets current value of property #getNavigationMode navigationMode.</p>
+<p>This property has been deprecated and must not be used anymore, since <code>Scrollbar</code> is the only supported
+option.</p>
+<p>Default value is <code>Scrollbar</code>.</p>
 <hr>
 <h3>getNoData()</h3>
 <blockquote>
@@ -2245,30 +2245,30 @@ replace the no data text.</p>
 <blockquote>
 <p><strong>getPlugins</strong>(): <a href="../../plugins/SelectionPlugin/classes/SelectionPlugin.html"><code>SelectionPlugin</code></a>[]</p>
 </blockquote>
-<p>Gets content of aggregation #getPlugins plugins.</p>
-<p>Plugin section of the table. Multiple plugins are possible, but always only <strong>one</strong> of a certain type.</p>
-<p>If a selection plugin is used, the table&#39;s selection API must not be used. Instead, use the API of the
-plugin.</p>
 <h4>Returns</h4>
 <p><a href="../../plugins/SelectionPlugin/classes/SelectionPlugin.html"><code>SelectionPlugin</code></a>[]</p>
 <h4>Since</h4>
 <p>1.64</p>
 <h4>Deprecated</h4>
 <p>(since 1.120) - Please add plugins to the <code>dependents</code> aggregation instead.</p>
+<p>Gets content of aggregation #getPlugins plugins.</p>
+<p>Plugin section of the table. Multiple plugins are possible, but always only <strong>one</strong> of a certain type.</p>
+<p>If a selection plugin is used, the table&#39;s selection API must not be used. Instead, use the API of the
+plugin.</p>
 <hr>
 <h3>getRowActionCount()</h3>
 <blockquote>
 <p><strong>getRowActionCount</strong>(): <code>number</code></p>
 </blockquote>
-<p>Gets current value of property #getRowActionCount rowActionCount.</p>
-<p>Number of row actions made visible which determines the width of the row action column. The values <code>0</code>,
-<code>1</code> and <code>2</code> are possible.</p>
-<p>Default value is <code>0</code>.</p>
 <h4>Returns</h4>
 <p><code>number</code></p>
 <p>Value of property <code>rowActionCount</code></p>
 <h4>Since</h4>
 <p>1.45.0</p>
+<p>Gets current value of property #getRowActionCount rowActionCount.</p>
+<p>Number of row actions made visible which determines the width of the row action column. The values <code>0</code>,
+<code>1</code> and <code>2</code> are possible.</p>
+<p>Default value is <code>0</code>.</p>
 <hr>
 <h3>getRowActionTemplate()</h3>
 <blockquote>
@@ -2285,6 +2285,11 @@ changes to take effect.</p>
 <blockquote>
 <p><strong>getRowHeight</strong>(): <code>number</code></p>
 </blockquote>
+<h4>Returns</h4>
+<p><code>number</code></p>
+<p>Value of property <code>rowHeight</code></p>
+<h4>Deprecated</h4>
+<p>(since 1.119) - use the <code>rowMode</code> aggregation instead.</p>
 <p>Gets current value of property #getRowHeight rowHeight.</p>
 <p>Row height in pixel.</p>
 <p>In the table&#39;s header, it defines the minimum height of the row, but it cannot be less than the default
@@ -2296,23 +2301,18 @@ actual height can increase based on the content. If the mode is sap.ui.table.Vis
 the value defines the actual height, and any content that doesn&#39;t fit is cut off.</p>
 <p>If no value is set (includes 0), a default height is applied based on the content density configuration.
 In any <code>visibleRowCountMode</code>, the actual height can increase based on the content.</p>
-<h4>Returns</h4>
-<p><code>number</code></p>
-<p>Value of property <code>rowHeight</code></p>
-<h4>Deprecated</h4>
-<p>(since 1.119) - use the <code>rowMode</code> aggregation instead.</p>
 <hr>
 <h3>getRowMode()</h3>
 <blockquote>
 <p><strong>getRowMode</strong>(): <code>&quot;Auto&quot;</code> | <code>&quot;Fixed&quot;</code> | <a href="../../rowmodes/RowMode/classes/RowMode.html"><code>RowMode</code></a> | <a href="../../rowmodes/Type/enumerations/Type.html"><code>Type</code></a> | <code>&quot;Interactive&quot;</code></p>
 </blockquote>
-<p>Gets content of aggregation #getRowMode rowMode.</p>
-<p>Defines how the table handles the rows. By default, the table operates in sap.ui.table.rowmodes.Type Fixed
-mode.</p>
 <h4>Returns</h4>
 <p><code>&quot;Auto&quot;</code> | <code>&quot;Fixed&quot;</code> | <a href="../../rowmodes/RowMode/classes/RowMode.html"><code>RowMode</code></a> | <a href="../../rowmodes/Type/enumerations/Type.html"><code>Type</code></a> | <code>&quot;Interactive&quot;</code></p>
 <h4>Since</h4>
 <p>1.119</p>
+<p>Gets content of aggregation #getRowMode rowMode.</p>
+<p>Defines how the table handles the rows. By default, the table operates in sap.ui.table.rowmodes.Type Fixed
+mode.</p>
 <hr>
 <h3>getRows()</h3>
 <blockquote>
@@ -2353,12 +2353,12 @@ changes to take effect.</p>
 <blockquote>
 <p><strong>getSelectedIndex</strong>(): <code>number</code></p>
 </blockquote>
-<p>Retrieves the lead selection index.</p>
 <h4>Returns</h4>
 <p><code>number</code></p>
 <p>Currently Selected Index.</p>
 <h4>Deprecated</h4>
 <p>(since 1.69) - replaced by sap.ui.table.Table#getSelectedIndices</p>
+<p>Retrieves the lead selection index.</p>
 <hr>
 <h3>getSelectedIndices()</h3>
 <blockquote>
@@ -2405,16 +2405,16 @@ the selection mode is controlled by the plugin.</p>
 <blockquote>
 <p><strong>getShowColumnVisibilityMenu</strong>(): <code>boolean</code></p>
 </blockquote>
-<p>Gets current value of property #getShowColumnVisibilityMenu showColumnVisibilityMenu.</p>
-<p>Flag to show or hide the column visibility menu. This menu will get displayed in each generated column
-header menu. It allows to show or hide columns</p>
-<p>Default value is <code>false</code>.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>Value of property <code>showColumnVisibilityMenu</code></p>
 <h4>Deprecated</h4>
 <p>(since 1.117) - use a <code>ColumnMenu</code> with a custom menu item in the <code>headerMenu</code> association
 instead.</p>
+<p>Gets current value of property #getShowColumnVisibilityMenu showColumnVisibilityMenu.</p>
+<p>Flag to show or hide the column visibility menu. This menu will get displayed in each generated column
+header menu. It allows to show or hide columns</p>
+<p>Default value is <code>false</code>.</p>
 <hr>
 <h3>getShowNoData()</h3>
 <blockquote>
@@ -2432,15 +2432,15 @@ just show a grid of empty cells</p>
 <blockquote>
 <p><strong>getShowOverlay</strong>(): <code>boolean</code></p>
 </blockquote>
-<p>Gets current value of property #getShowOverlay showOverlay.</p>
-<p>Setting this property to true will show an overlay on top of the Table content and users cannot click
-anymore on the Table content.</p>
-<p>Default value is <code>false</code>.</p>
 <h4>Returns</h4>
 <p><code>boolean</code></p>
 <p>Value of property <code>showOverlay</code></p>
 <h4>Since</h4>
 <p>1.21.2</p>
+<p>Gets current value of property #getShowOverlay showOverlay.</p>
+<p>Setting this property to true will show an overlay on top of the Table content and users cannot click
+anymore on the Table content.</p>
+<p>Default value is <code>false</code>.</p>
 <hr>
 <h3>getSortedColumns()</h3>
 <blockquote>
@@ -2474,42 +2474,49 @@ this number is used as the <code>threshold</code>. If the value is 0, thresholdi
 <blockquote>
 <p><strong>getTitle</strong>(): <code>string</code> | <a href="../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></p>
 </blockquote>
-<p>Gets content of aggregation #getTitle title.</p>
-<p>Control or text of title section of the Table (if not set it will be hidden)</p>
 <h4>Returns</h4>
 <p><code>string</code> | <a href="../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></p>
 <h4>Deprecated</h4>
 <p>(since 1.72) - Use, for example, a <code>sap.m.Title</code> control in the <code>extension</code> aggregation instead.</p>
+<p>Gets content of aggregation #getTitle title.</p>
+<p>Control or text of title section of the Table (if not set it will be hidden)</p>
 <hr>
 <h3><del>getToolbar()</del></h3>
 <blockquote>
 <p><strong>getToolbar</strong>(): <a href="../../../../../../sap.ui.core/sap/ui/core/library/interfaces/Toolbar.html"><code>Toolbar</code></a></p>
 </blockquote>
-<p>Gets content of aggregation #getToolbar toolbar.</p>
-<p>Toolbar of the Table If not set, no toolbar area will be rendered. Note: The CSS class sapMTBHeader-CTX
-is applied on the given toolbar.</p>
 <h4>Returns</h4>
 <p><a href="../../../../../../sap.ui.core/sap/ui/core/library/interfaces/Toolbar.html"><code>Toolbar</code></a></p>
 <h4>Deprecated</h4>
 <p>(since 1.38) - This aggregation is deprecated, use the <code>extension</code> aggregation instead.</p>
+<p>Gets content of aggregation #getToolbar toolbar.</p>
+<p>Toolbar of the Table If not set, no toolbar area will be rendered. Note: The CSS class sapMTBHeader-CTX
+is applied on the given toolbar.</p>
 <hr>
 <h3><del>getVisibleRowCount()</del></h3>
 <blockquote>
 <p><strong>getVisibleRowCount</strong>(): <code>number</code></p>
 </blockquote>
-<p>Gets current value of property #getVisibleRowCount visibleRowCount.</p>
-<p>Number of visible rows of the table.</p>
-<p>Default value is <code>10</code>.</p>
 <h4>Returns</h4>
 <p><code>number</code></p>
 <p>Value of property <code>visibleRowCount</code></p>
 <h4>Deprecated</h4>
 <p>(since 1.119) - use the <code>rowMode</code> aggregation instead.</p>
+<p>Gets current value of property #getVisibleRowCount visibleRowCount.</p>
+<p>Number of visible rows of the table.</p>
+<p>Default value is <code>10</code>.</p>
 <hr>
 <h3><del>getVisibleRowCountMode()</del></h3>
 <blockquote>
 <p><strong>getVisibleRowCountMode</strong>(): <code>&quot;Auto&quot;</code> | <code>&quot;Fixed&quot;</code> | <code>&quot;Interactive&quot;</code> | <a href="../../library/enumerations/VisibleRowCountMode.html"><code>VisibleRowCountMode</code></a></p>
 </blockquote>
+<h4>Returns</h4>
+<p><code>&quot;Auto&quot;</code> | <code>&quot;Fixed&quot;</code> | <code>&quot;Interactive&quot;</code> | <a href="../../library/enumerations/VisibleRowCountMode.html"><code>VisibleRowCountMode</code></a></p>
+<p>Value of property <code>visibleRowCountMode</code></p>
+<h4>Since</h4>
+<p>1.9.2</p>
+<h4>Deprecated</h4>
+<p>(since 1.119) - use the <code>rowMode</code> aggregation instead.</p>
 <p>Gets current value of property #getVisibleRowCountMode visibleRowCountMode.</p>
 <p>Defines how the table handles the visible rows in the table.</p>
 <p>In the <code>&quot;Fixed&quot;</code> mode, the table always has as many rows as defined in the <code>visibleRowCount</code> property.</p>
@@ -2522,14 +2529,7 @@ be set manually. Restrictions:
     parent element is a CSS flex container, and the table is a CSS flex item allowed to grow and shrink.</p>
 <p>In the <code>&quot;Interactive&quot;</code> mode, the table has as many rows as defined in the <code>visibleRowCount</code> property
 after rendering. The user can change the <code>visibleRowCount</code> by dragging a resizer.</p>
-<p>Default value is <code>&quot;Fixed&quot;</code>.</p>
-<h4>Returns</h4>
-<p><code>&quot;Auto&quot;</code> | <code>&quot;Fixed&quot;</code> | <code>&quot;Interactive&quot;</code> | <a href="../../library/enumerations/VisibleRowCountMode.html"><code>VisibleRowCountMode</code></a></p>
-<p>Value of property <code>visibleRowCountMode</code></p>
-<h4>Since</h4>
-<p>1.9.2</p>
-<h4>Deprecated</h4>
-<p>(since 1.119) - use the <code>rowMode</code> aggregation instead.</p>
+<p>Default value is <code>Fixed</code>.</p>
 <hr>
 <h3>getWidth()</h3>
 <blockquote>
@@ -2574,8 +2574,6 @@ returns its index if found or -1 otherwise.</p>
 <blockquote>
 <p><strong>indexOfPlugin</strong>(<code>oPlugin</code>): <code>number</code></p>
 </blockquote>
-<p>Checks for the provided <code>sap.ui.table.plugins.SelectionPlugin</code> in the aggregation #getPlugins plugins.
-and returns its index if found or -1 otherwise.</p>
 <h4>Parameters</h4>
 <h5>oPlugin</h5>
 <p><a href="../../plugins/SelectionPlugin/classes/SelectionPlugin.html"><code>SelectionPlugin</code></a></p>
@@ -2587,6 +2585,8 @@ and returns its index if found or -1 otherwise.</p>
 <p>1.64</p>
 <h4>Deprecated</h4>
 <p>(since 1.120) - Please add plugins to the <code>dependents</code> aggregation instead.</p>
+<p>Checks for the provided <code>sap.ui.table.plugins.SelectionPlugin</code> in the aggregation #getPlugins plugins.
+and returns its index if found or -1 otherwise.</p>
 <hr>
 <h3>indexOfRow()</h3>
 <blockquote>
@@ -2642,7 +2642,6 @@ is inserted at the last position</p>
 <blockquote>
 <p><strong>insertPlugin</strong>(<code>oPlugin</code>, <code>iIndex</code>): <code>this</code></p>
 </blockquote>
-<p>Inserts a plugin into the aggregation #getPlugins plugins.</p>
 <h4>Parameters</h4>
 <h5>oPlugin</h5>
 <p><a href="../../plugins/SelectionPlugin/classes/SelectionPlugin.html"><code>SelectionPlugin</code></a></p>
@@ -2659,6 +2658,7 @@ at the last position</p>
 <p>1.64</p>
 <h4>Deprecated</h4>
 <p>(since 1.120) - Please add plugins to the <code>dependents</code> aggregation instead.</p>
+<p>Inserts a plugin into the aggregation #getPlugins plugins.</p>
 <hr>
 <h3>insertRow()</h3>
 <blockquote>
@@ -2724,8 +2724,6 @@ last position</p>
 <blockquote>
 <p><strong>removeAllPlugins</strong>(): <a href="../../plugins/SelectionPlugin/classes/SelectionPlugin.html"><code>SelectionPlugin</code></a>[]</p>
 </blockquote>
-<p>Removes all the controls from the aggregation #getPlugins plugins.</p>
-<p>Additionally, it unregisters them from the hosting UIArea.</p>
 <h4>Returns</h4>
 <p><a href="../../plugins/SelectionPlugin/classes/SelectionPlugin.html"><code>SelectionPlugin</code></a>[]</p>
 <p>An array of the removed elements (might be empty)</p>
@@ -2733,6 +2731,8 @@ last position</p>
 <p>1.64</p>
 <h4>Deprecated</h4>
 <p>(since 1.120) - Please add plugins to the <code>dependents</code> aggregation instead.</p>
+<p>Removes all the controls from the aggregation #getPlugins plugins.</p>
+<p>Additionally, it unregisters them from the hosting UIArea.</p>
 <hr>
 <h3>removeAllRows()</h3>
 <blockquote>
@@ -2787,7 +2787,6 @@ last position</p>
 <blockquote>
 <p><strong>removePlugin</strong>(<code>vPlugin</code>): <a href="../../plugins/SelectionPlugin/classes/SelectionPlugin.html"><code>SelectionPlugin</code></a></p>
 </blockquote>
-<p>Removes a plugin from the aggregation #getPlugins plugins.</p>
 <h4>Parameters</h4>
 <h5>vPlugin</h5>
 <p><code>string</code> | <code>number</code> | <a href="../../plugins/SelectionPlugin/classes/SelectionPlugin.html"><code>SelectionPlugin</code></a></p>
@@ -2799,6 +2798,7 @@ last position</p>
 <p>1.64</p>
 <h4>Deprecated</h4>
 <p>(since 1.120) - Please add plugins to the <code>dependents</code> aggregation instead.</p>
+<p>Removes a plugin from the aggregation #getPlugins plugins.</p>
 <hr>
 <h3>removeRow()</h3>
 <blockquote>
@@ -2845,10 +2845,6 @@ not return a result but trigger a roundtrip to request this single entity.</p>
 <blockquote>
 <p><strong>setAlternateRowColors</strong>(<code>bAlternateRowColors?</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getAlternateRowColors alternateRowColors.</p>
-<p>Enables alternating table row colors. Alternate row coloring is not available for the tree mode.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>false</code>.</p>
 <h4>Parameters</h4>
 <h5>bAlternateRowColors?</h5>
 <p><code>boolean</code></p>
@@ -2858,6 +2854,10 @@ not return a result but trigger a roundtrip to request this single entity.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.52</p>
+<p>Sets a new value for property #getAlternateRowColors alternateRowColors.</p>
+<p>Enables alternating table row colors. Alternate row coloring is not available for the tree mode.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>false</code>.</p>
 <hr>
 <h3>setColumnHeaderHeight()</h3>
 <blockquote>
@@ -2901,7 +2901,6 @@ table can&#39;t be guaranteed any more.</p>
 <blockquote>
 <p><strong>setContextMenu</strong>(<code>oContextMenu</code>): <code>this</code></p>
 </blockquote>
-<p>Sets the aggregated #getContextMenu contextMenu.</p>
 <h4>Parameters</h4>
 <h5>oContextMenu</h5>
 <p><a href="../../../../../../sap.ui.core/sap/ui/core/library/interfaces/IContextMenu.html"><code>IContextMenu</code></a></p>
@@ -2911,16 +2910,12 @@ table can&#39;t be guaranteed any more.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.54</p>
+<p>Sets the aggregated #getContextMenu contextMenu.</p>
 <hr>
 <h3><del>setEditable()</del></h3>
 <blockquote>
 <p><strong>setEditable</strong>(<code>bEditable?</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getEditable editable.</p>
-<p>Flag whether the controls of the Table are editable or not (currently this only controls the background
-color in certain themes!)</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>true</code>.</p>
 <h4>Parameters</h4>
 <h5>bEditable?</h5>
 <p><code>boolean</code></p>
@@ -2930,19 +2925,16 @@ color in certain themes!)</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Deprecated</h4>
 <p>(since 1.115)</p>
+<p>Sets a new value for property #getEditable editable.</p>
+<p>Flag whether the controls of the Table are editable or not (currently this only controls the background
+color in certain themes!)</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>true</code>.</p>
 <hr>
 <h3>setEnableBusyIndicator()</h3>
 <blockquote>
 <p><strong>setEnableBusyIndicator</strong>(<code>bEnableBusyIndicator?</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getEnableBusyIndicator enableBusyIndicator.</p>
-<p>If set to <code>true</code>, the table changes its busy state, resulting in showing or hiding the busy indicator.
-The table will switch to busy as soon as data is retrieved to be displayed in the currently visible rows.
-This happens, for example, during scrolling, filtering, or sorting. As soon as the data has been retrieved,
-the table switches back to not busy. The busy state of the table can still be set manually by calling
-sap.ui.core.Control#setBusy.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>false</code>.</p>
 <h4>Parameters</h4>
 <h5>bEnableBusyIndicator?</h5>
 <p><code>boolean</code></p>
@@ -2952,15 +2944,19 @@ sap.ui.core.Control#setBusy.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.27.0</p>
+<p>Sets a new value for property #getEnableBusyIndicator enableBusyIndicator.</p>
+<p>If set to <code>true</code>, the table changes its busy state, resulting in showing or hiding the busy indicator.
+The table will switch to busy as soon as data is retrieved to be displayed in the currently visible rows.
+This happens, for example, during scrolling, filtering, or sorting. As soon as the data has been retrieved,
+the table switches back to not busy. The busy state of the table can still be set manually by calling
+sap.ui.core.Control#setBusy.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>false</code>.</p>
 <hr>
 <h3>setEnableCellFilter()</h3>
 <blockquote>
 <p><strong>setEnableCellFilter</strong>(<code>bEnableCellFilter?</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getEnableCellFilter enableCellFilter.</p>
-<p>Flag whether to enable or disable the context menu on cells to trigger a filtering with the cell value.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>false</code>.</p>
 <h4>Parameters</h4>
 <h5>bEnableCellFilter?</h5>
 <p><code>boolean</code></p>
@@ -2970,15 +2966,15 @@ sap.ui.core.Control#setBusy.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.21.0</p>
+<p>Sets a new value for property #getEnableCellFilter enableCellFilter.</p>
+<p>Flag whether to enable or disable the context menu on cells to trigger a filtering with the cell value.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>false</code>.</p>
 <hr>
 <h3>setEnableColumnFreeze()</h3>
 <blockquote>
 <p><strong>setEnableColumnFreeze</strong>(<code>bEnableColumnFreeze?</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getEnableColumnFreeze enableColumnFreeze.</p>
-<p>Flag whether to show or hide the column menu item to freeze or unfreeze a column.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>false</code>.</p>
 <h4>Parameters</h4>
 <h5>bEnableColumnFreeze?</h5>
 <p><code>boolean</code></p>
@@ -2988,6 +2984,10 @@ sap.ui.core.Control#setBusy.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.21.0</p>
+<p>Sets a new value for property #getEnableColumnFreeze enableColumnFreeze.</p>
+<p>Flag whether to show or hide the column menu item to freeze or unfreeze a column.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>false</code>.</p>
 <hr>
 <h3>setEnableColumnReordering()</h3>
 <blockquote>
@@ -3009,11 +3009,6 @@ sap.ui.core.Control#setBusy.</p>
 <blockquote>
 <p><strong>setEnableCustomFilter</strong>(<code>bEnableCustomFilter?</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getEnableCustomFilter enableCustomFilter.</p>
-<p>Set this parameter to true to implement your own filter behaviour. Instead of the filter input box a
-button will be rendered for which&#39; press event (customFilter) you can register an event handler.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>false</code>.</p>
 <h4>Parameters</h4>
 <h5>bEnableCustomFilter?</h5>
 <p><code>boolean</code></p>
@@ -3023,11 +3018,25 @@ button will be rendered for which&#39; press event (customFilter) you can regist
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.23.0</p>
+<p>Sets a new value for property #getEnableCustomFilter enableCustomFilter.</p>
+<p>Set this parameter to true to implement your own filter behaviour. Instead of the filter input box a
+button will be rendered for which&#39; press event (customFilter) you can register an event handler.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>false</code>.</p>
 <hr>
 <h3><del>setEnableGrouping()</del></h3>
 <blockquote>
 <p><strong>setEnableGrouping</strong>(<code>bEnableGrouping?</code>): <code>this</code></p>
 </blockquote>
+<h4>Parameters</h4>
+<h5>bEnableGrouping?</h5>
+<p><code>boolean</code></p>
+<p>New value for property <code>enableGrouping</code></p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<h4>Deprecated</h4>
+<p>(since 1.110) - this feature has a limited functionality and should not be used anymore.</p>
 <p>Sets a new value for property #getEnableGrouping enableGrouping.</p>
 <p>Enables or disables grouping. If grouping is enabled, the table is grouped by the column which is defined
 in the <code>groupBy</code> association.</p>
@@ -3045,25 +3054,11 @@ table is grouped by another column or grouping is disabled.
 </code></pre>
 <p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <p>Default value is <code>false</code>.</p>
-<h4>Parameters</h4>
-<h5>bEnableGrouping?</h5>
-<p><code>boolean</code></p>
-<p>New value for property <code>enableGrouping</code></p>
-<h4>Returns</h4>
-<p><code>this</code></p>
-<p>Reference to <code>this</code> in order to allow method chaining</p>
-<h4>Deprecated</h4>
-<p>(since 1.110) - this feature has a limited functionality and should not be used anymore.</p>
 <hr>
 <h3>setEnableSelectAll()</h3>
 <blockquote>
 <p><strong>setEnableSelectAll</strong>(<code>bEnableSelectAll?</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getEnableSelectAll enableSelectAll.</p>
-<p>Specifies if a select all button should be displayed in the top left corner. This button is only displayed
-if the row selector is visible and the selection mode is set to any kind of multi selection.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>true</code>.</p>
 <h4>Parameters</h4>
 <h5>bEnableSelectAll?</h5>
 <p><code>boolean</code></p>
@@ -3073,6 +3068,11 @@ if the row selector is visible and the selection mode is set to any kind of mult
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.23.0</p>
+<p>Sets a new value for property #getEnableSelectAll enableSelectAll.</p>
+<p>Specifies if a select all button should be displayed in the top left corner. This button is only displayed
+if the row selector is visible and the selection mode is set to any kind of multi selection.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>true</code>.</p>
 <hr>
 <h3>setFirstVisibleRow()</h3>
 <blockquote>
@@ -3094,11 +3094,6 @@ if the row selector is visible and the selection mode is set to any kind of mult
 <blockquote>
 <p><strong>setFixedBottomRowCount</strong>(<code>iFixedBottomRowCount?</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getFixedBottomRowCount fixedBottomRowCount.</p>
-<p>Number of rows that are fix on the bottom. When you use a vertical scrollbar, only the rows which are
-not fixed, will scroll.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>0</code>.</p>
 <h4>Parameters</h4>
 <h5>iFixedBottomRowCount?</h5>
 <p><code>number</code></p>
@@ -3110,6 +3105,11 @@ not fixed, will scroll.</p>
 <p>1.18.7</p>
 <h4>Deprecated</h4>
 <p>(since 1.119) - use the <code>rowMode</code> aggregation instead.</p>
+<p>Sets a new value for property #getFixedBottomRowCount fixedBottomRowCount.</p>
+<p>Number of rows that are fix on the bottom. When you use a vertical scrollbar, only the rows which are
+not fixed, will scroll.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>0</code>.</p>
 <hr>
 <h3>setFixedColumnCount()</h3>
 <blockquote>
@@ -3136,11 +3136,6 @@ not fixed, will scroll.</p>
 <blockquote>
 <p><strong>setFixedRowCount</strong>(<code>iFixedRowCount?</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getFixedRowCount fixedRowCount.</p>
-<p>Number of rows that are fix on the top. When you use a vertical scrollbar, only the rows which are not
-fixed, will scroll.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>0</code>.</p>
 <h4>Parameters</h4>
 <h5>iFixedRowCount?</h5>
 <p><code>number</code></p>
@@ -3150,6 +3145,11 @@ fixed, will scroll.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Deprecated</h4>
 <p>(since 1.119) - use the <code>rowMode</code> aggregation instead.</p>
+<p>Sets a new value for property #getFixedRowCount fixedRowCount.</p>
+<p>Number of rows that are fix on the top. When you use a vertical scrollbar, only the rows which are not
+fixed, will scroll.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>0</code>.</p>
 <hr>
 <h3>setFooter()</h3>
 <blockquote>
@@ -3169,7 +3169,6 @@ fixed, will scroll.</p>
 <p><strong>setGroupBy</strong>(<code>oGroupBy</code>): <code>this</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
-<p>Sets the associated #getGroupBy groupBy.</p>
 <h4>Parameters</h4>
 <h5>oGroupBy</h5>
 <p><code>string</code> | <a href="../../Column/classes/Column.html"><code>Column</code></a></p>
@@ -3181,16 +3180,12 @@ instance may be given</p>
 <h4>Deprecated</h4>
 <p>(since 1.110)
  (since 1.28) - This feature has a limited functionality.</p>
+<p>Sets the associated #getGroupBy groupBy.</p>
 <hr>
 <h3><del>setMinAutoRowCount()</del></h3>
 <blockquote>
 <p><strong>setMinAutoRowCount</strong>(<code>iMinAutoRowCount?</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getMinAutoRowCount minAutoRowCount.</p>
-<p>This property is used to set the minimum count of visible rows when the property visibleRowCountMode
-is set to Auto or Interactive. For any other visibleRowCountMode, it is ignored.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>5</code>.</p>
 <h4>Parameters</h4>
 <h5>iMinAutoRowCount?</h5>
 <p><code>number</code></p>
@@ -3200,16 +3195,16 @@ is set to Auto or Interactive. For any other visibleRowCountMode, it is ignored.
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Deprecated</h4>
 <p>(since 1.119) - use the <code>rowMode</code> aggregation instead.</p>
+<p>Sets a new value for property #getMinAutoRowCount minAutoRowCount.</p>
+<p>This property is used to set the minimum count of visible rows when the property visibleRowCountMode
+is set to Auto or Interactive. For any other visibleRowCountMode, it is ignored.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>5</code>.</p>
 <hr>
 <h3><del>setNavigationMode()</del></h3>
 <blockquote>
 <p><strong>setNavigationMode</strong>(<code>sNavigationMode?</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getNavigationMode navigationMode.</p>
-<p>This property has been deprecated and must not be used anymore, since <code>Scrollbar</code> is the only supported
-option.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>&quot;Scrollbar&quot;</code>.</p>
 <h4>Parameters</h4>
 <h5>sNavigationMode?</h5>
 <p><a href="../../library/enumerations/NavigationMode.html"><code>NavigationMode</code></a> | <code>&quot;Paginator&quot;</code> | <code>&quot;Scrollbar&quot;</code></p>
@@ -3219,6 +3214,11 @@ option.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Deprecated</h4>
 <p>(since 1.38)</p>
+<p>Sets a new value for property #getNavigationMode navigationMode.</p>
+<p>This property has been deprecated and must not be used anymore, since <code>Scrollbar</code> is the only supported
+option.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>Scrollbar</code>.</p>
 <hr>
 <h3>setNoData()</h3>
 <blockquote>
@@ -3237,11 +3237,6 @@ option.</p>
 <blockquote>
 <p><strong>setRowActionCount</strong>(<code>iRowActionCount?</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getRowActionCount rowActionCount.</p>
-<p>Number of row actions made visible which determines the width of the row action column. The values <code>0</code>,
-<code>1</code> and <code>2</code> are possible.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>0</code>.</p>
 <h4>Parameters</h4>
 <h5>iRowActionCount?</h5>
 <p><code>number</code></p>
@@ -3251,6 +3246,11 @@ option.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.45.0</p>
+<p>Sets a new value for property #getRowActionCount rowActionCount.</p>
+<p>Number of row actions made visible which determines the width of the row action column. The values <code>0</code>,
+<code>1</code> and <code>2</code> are possible.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>0</code>.</p>
 <hr>
 <h3>setRowActionTemplate()</h3>
 <blockquote>
@@ -3269,6 +3269,15 @@ option.</p>
 <blockquote>
 <p><strong>setRowHeight</strong>(<code>iRowHeight?</code>): <code>this</code></p>
 </blockquote>
+<h4>Parameters</h4>
+<h5>iRowHeight?</h5>
+<p><code>number</code></p>
+<p>New value for property <code>rowHeight</code></p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<h4>Deprecated</h4>
+<p>(since 1.119) - use the <code>rowMode</code> aggregation instead.</p>
 <p>Sets a new value for property #getRowHeight rowHeight.</p>
 <p>Row height in pixel.</p>
 <p>In the table&#39;s header, it defines the minimum height of the row, but it cannot be less than the default
@@ -3281,21 +3290,11 @@ the value defines the actual height, and any content that doesn&#39;t fit is cut
 <p>If no value is set (includes 0), a default height is applied based on the content density configuration.
 In any <code>visibleRowCountMode</code>, the actual height can increase based on the content.</p>
 <p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<h4>Parameters</h4>
-<h5>iRowHeight?</h5>
-<p><code>number</code></p>
-<p>New value for property <code>rowHeight</code></p>
-<h4>Returns</h4>
-<p><code>this</code></p>
-<p>Reference to <code>this</code> in order to allow method chaining</p>
-<h4>Deprecated</h4>
-<p>(since 1.119) - use the <code>rowMode</code> aggregation instead.</p>
 <hr>
 <h3>setRowMode()</h3>
 <blockquote>
 <p><strong>setRowMode</strong>(<code>vRowMode</code>): <code>this</code></p>
 </blockquote>
-<p>Sets the aggregated #getRowMode rowMode.</p>
 <h4>Parameters</h4>
 <h5>vRowMode</h5>
 <p><code>&quot;Auto&quot;</code> | <code>&quot;Fixed&quot;</code> | <a href="../../rowmodes/RowMode/classes/RowMode.html"><code>RowMode</code></a> | <a href="../../rowmodes/Type/enumerations/Type.html"><code>Type</code></a> | <code>&quot;Interactive&quot;</code></p>
@@ -3305,6 +3304,7 @@ In any <code>visibleRowCountMode</code>, the actual height can increase based on
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.119</p>
+<p>Sets the aggregated #getRowMode rowMode.</p>
 <hr>
 <h3>setRowSettingsTemplate()</h3>
 <blockquote>
@@ -3384,11 +3384,6 @@ on table type) is enabled, even if <code>sap.ui.table.SelectionBehavior.RowOnly<
 <blockquote>
 <p><strong>setShowColumnVisibilityMenu</strong>(<code>bShowColumnVisibilityMenu?</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getShowColumnVisibilityMenu showColumnVisibilityMenu.</p>
-<p>Flag to show or hide the column visibility menu. This menu will get displayed in each generated column
-header menu. It allows to show or hide columns</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>false</code>.</p>
 <h4>Parameters</h4>
 <h5>bShowColumnVisibilityMenu?</h5>
 <p><code>boolean</code></p>
@@ -3399,6 +3394,11 @@ header menu. It allows to show or hide columns</p>
 <h4>Deprecated</h4>
 <p>(since 1.117) - use a <code>ColumnMenu</code> with a custom menu item in the <code>headerMenu</code> association
 instead.</p>
+<p>Sets a new value for property #getShowColumnVisibilityMenu showColumnVisibilityMenu.</p>
+<p>Flag to show or hide the column visibility menu. This menu will get displayed in each generated column
+header menu. It allows to show or hide columns</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>false</code>.</p>
 <hr>
 <h3>setShowNoData()</h3>
 <blockquote>
@@ -3421,11 +3421,6 @@ just show a grid of empty cells</p>
 <blockquote>
 <p><strong>setShowOverlay</strong>(<code>bShowOverlay?</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getShowOverlay showOverlay.</p>
-<p>Setting this property to true will show an overlay on top of the Table content and users cannot click
-anymore on the Table content.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>false</code>.</p>
 <h4>Parameters</h4>
 <h5>bShowOverlay?</h5>
 <p><code>boolean</code></p>
@@ -3435,6 +3430,11 @@ anymore on the Table content.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.21.2</p>
+<p>Sets a new value for property #getShowOverlay showOverlay.</p>
+<p>Setting this property to true will show an overlay on top of the Table content and users cannot click
+anymore on the Table content.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>false</code>.</p>
 <hr>
 <h3>setThreshold()</h3>
 <blockquote>
@@ -3454,7 +3454,6 @@ an OData service.</p>
 <blockquote>
 <p><strong>setTitle</strong>(<code>vTitle</code>): <code>this</code></p>
 </blockquote>
-<p>Sets the aggregated #getTitle title.</p>
 <h4>Parameters</h4>
 <h5>vTitle</h5>
 <p><code>string</code> | <a href="../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></p>
@@ -3464,12 +3463,12 @@ an OData service.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Deprecated</h4>
 <p>(since 1.72) - Use, for example, a <code>sap.m.Title</code> control in the <code>extension</code> aggregation instead.</p>
+<p>Sets the aggregated #getTitle title.</p>
 <hr>
 <h3><del>setToolbar()</del></h3>
 <blockquote>
 <p><strong>setToolbar</strong>(<code>oToolbar</code>): <code>this</code></p>
 </blockquote>
-<p>Sets the aggregated #getToolbar toolbar.</p>
 <h4>Parameters</h4>
 <h5>oToolbar</h5>
 <p><a href="../../../../../../sap.ui.core/sap/ui/core/library/interfaces/Toolbar.html"><code>Toolbar</code></a></p>
@@ -3479,6 +3478,7 @@ an OData service.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Deprecated</h4>
 <p>(since 1.38) - This aggregation is deprecated, use the <code>extension</code> aggregation instead.</p>
+<p>Sets the aggregated #getToolbar toolbar.</p>
 <hr>
 <h3>setTooltip()</h3>
 <blockquote>
@@ -3503,10 +3503,6 @@ effect the DOM.</p>
 <blockquote>
 <p><strong>setVisibleRowCount</strong>(<code>iVisibleRowCount?</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getVisibleRowCount visibleRowCount.</p>
-<p>Number of visible rows of the table.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>10</code>.</p>
 <h4>Parameters</h4>
 <h5>iVisibleRowCount?</h5>
 <p><code>number</code></p>
@@ -3516,11 +3512,26 @@ effect the DOM.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Deprecated</h4>
 <p>(since 1.119) - use the <code>rowMode</code> aggregation instead.</p>
+<p>Sets a new value for property #getVisibleRowCount visibleRowCount.</p>
+<p>Number of visible rows of the table.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
+<p>Default value is <code>10</code>.</p>
 <hr>
 <h3><del>setVisibleRowCountMode()</del></h3>
 <blockquote>
 <p><strong>setVisibleRowCountMode</strong>(<code>sVisibleRowCountMode?</code>): <code>this</code></p>
 </blockquote>
+<h4>Parameters</h4>
+<h5>sVisibleRowCountMode?</h5>
+<p><code>&quot;Auto&quot;</code> | <code>&quot;Fixed&quot;</code> | <code>&quot;Interactive&quot;</code> | <a href="../../library/enumerations/VisibleRowCountMode.html"><code>VisibleRowCountMode</code></a></p>
+<p>New value for property <code>visibleRowCountMode</code></p>
+<h4>Returns</h4>
+<p><code>this</code></p>
+<p>Reference to <code>this</code> in order to allow method chaining</p>
+<h4>Since</h4>
+<p>1.9.2</p>
+<h4>Deprecated</h4>
+<p>(since 1.119) - use the <code>rowMode</code> aggregation instead.</p>
 <p>Sets a new value for property #getVisibleRowCountMode visibleRowCountMode.</p>
 <p>Defines how the table handles the visible rows in the table.</p>
 <p>In the <code>&quot;Fixed&quot;</code> mode, the table always has as many rows as defined in the <code>visibleRowCount</code> property.</p>
@@ -3534,18 +3545,7 @@ be set manually. Restrictions:
 <p>In the <code>&quot;Interactive&quot;</code> mode, the table has as many rows as defined in the <code>visibleRowCount</code> property
 after rendering. The user can change the <code>visibleRowCount</code> by dragging a resizer.</p>
 <p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
-<p>Default value is <code>&quot;Fixed&quot;</code>.</p>
-<h4>Parameters</h4>
-<h5>sVisibleRowCountMode?</h5>
-<p><code>&quot;Auto&quot;</code> | <code>&quot;Fixed&quot;</code> | <code>&quot;Interactive&quot;</code> | <a href="../../library/enumerations/VisibleRowCountMode.html"><code>VisibleRowCountMode</code></a></p>
-<p>New value for property <code>visibleRowCountMode</code></p>
-<h4>Returns</h4>
-<p><code>this</code></p>
-<p>Reference to <code>this</code> in order to allow method chaining</p>
-<h4>Since</h4>
-<p>1.9.2</p>
-<h4>Deprecated</h4>
-<p>(since 1.119) - use the <code>rowMode</code> aggregation instead.</p>
+<p>Default value is <code>Fixed</code>.</p>
 <hr>
 <h3>setWidth()</h3>
 <blockquote>
@@ -3616,7 +3616,7 @@ contained in <code>oClassInfo</code>.</p>
 <p><code>string</code></p>
 <p>Name of the class being created</p>
 <h5>oClassInfo?</h5>
-<p><a href="../../../../../../sap.f/namespaces/sap/type-aliases/ClassInfo.html"><code>ClassInfo</code></a>&lt;<code>T</code>, <code>Table</code>&gt;</p>
+<p><code>ClassInfo</code>&lt;<code>T</code>, <code>Table</code>&gt;</p>
 <p>Object literal with information about the class</p>
 <h5>FNMetaImpl?</h5>
 <p><code>Function</code></p>
@@ -3640,6 +3640,6 @@ used by this class</p>
 <p><a href="../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a>.<a href="../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html#getmetadata-1"><code>getMetadata</code></a></p>
 <hr>
 
-<footer>Generated from <code>@openui5/types@1.120.46</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@openui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

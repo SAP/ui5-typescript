@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Interface: $ActionDefinitionSettings — OpenUI5 TypeScript API</title>
-<meta name="description" content="Interface: $ActionDefinitionSettings — OpenUI5 TypeScript API Reference (1.120.46)">
+<meta name="description" content="Interface: $ActionDefinitionSettings — OpenUI5 TypeScript API Reference (1.120.0)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/openui5/1.120/sap.ui.integration/sap/ui/integration/ActionDefinition/interfaces/$ActionDefinitionSettings.html">
 <meta property="og:title" content="Interface: $ActionDefinitionSettings — OpenUI5 TypeScript API">
-<meta property="og:description" content="Interface: $ActionDefinitionSettings — OpenUI5 TypeScript API Reference (1.120.46)">
+<meta property="og:description" content="Interface: $ActionDefinitionSettings — OpenUI5 TypeScript API Reference (1.120.0)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/openui5/1.120/sap.ui.integration/sap/ui/integration/ActionDefinition/interfaces/$ActionDefinitionSettings.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,15 +33,11 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../index.html">OpenUI5 API</a> › <a href="../../../../../../sap.ui.integration/README.html">sap.ui.integration</a> › sap › ui › integration › <a href="../../../../../../sap.ui.integration/sap/ui/integration/ActionDefinition/README.html">ActionDefinition</a> › interfaces</nav>
-<p><a href="../../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.46)</strong></a></p>
+<p><a href="../../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.0)</strong></a></p>
 <hr>
-<p><a href="../../../../../../README.html">OpenUI5 TypeScript API (1.120.46)</a> / <a href="../../../../../README.html">sap.ui.integration</a> / <a href="../README.html">sap/ui/integration/ActionDefinition</a> / $ActionDefinitionSettings</p>
+<p><a href="../../../../../../README.html">OpenUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../README.html">sap.ui.integration</a> / <a href="../README.html">sap/ui/integration/ActionDefinition</a> / $ActionDefinitionSettings</p>
 <h1>Interface: $ActionDefinitionSettings</h1>
 <pre class="sig"><span class="kw">import</span> { $ActionDefinitionSettings } <span class="kw">from</span> <span class="str">"sap/ui/integration/ActionDefinition"</span>;</pre>
-<p><strong><code>Experimental</code></strong></p>
-<p>Describes the settings that can be provided to the ActionDefinition constructor.</p>
-<p> (since 1.85) - Disclaimer: this class is in a beta state - incompatible API changes may
-be done before its official public release. Use at your own discretion.</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../../../../../sap.ui.core/sap/ui/core/Element/interfaces/$ElementSettings.html"><code>$ElementSettings</code></a></li>
@@ -51,14 +47,12 @@ be done before its official public release. Use at your own discretion.</p>
 <blockquote>
 <p><code>optional</code> <strong>buttonType?</strong>: <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code> | <code>&quot;Transparent&quot;</code> | <code>&quot;Success&quot;</code> | <code>&quot;Critical&quot;</code> | <code>&quot;Neutral&quot;</code> | <code>&quot;Up&quot;</code> | <code>&quot;Default&quot;</code> | <a href="../../../../../../sap.m/sap/m/library/enumerations/ButtonType.html"><code>ButtonType</code></a> | <code>&quot;Accept&quot;</code> | <code>&quot;Attention&quot;</code> | <code>&quot;Back&quot;</code> | <code>&quot;Emphasized&quot;</code> | <code>&quot;Ghost&quot;</code> | <code>&quot;Negative&quot;</code> | <code>&quot;Reject&quot;</code> | <code>&quot;Unstyled&quot;</code></p>
 </blockquote>
-<p><strong><code>Experimental</code></strong></p>
 <p>The type of the action button.</p>
 <hr>
 <h3>enabled?</h3>
 <blockquote>
 <p><code>optional</code> <strong>enabled?</strong>: <code>boolean</code> | <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<p><strong><code>Experimental</code></strong></p>
 <p>Indicates whether the user can interact with the action button or not. <strong>Note</strong>: Disabled controls cannot
 be focused and they are out of the navigation tab-chain.</p>
 <hr>
@@ -66,21 +60,18 @@ be focused and they are out of the navigation tab-chain.</p>
 <blockquote>
 <p><code>optional</code> <strong>icon?</strong>: <code>string</code> | <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a></p>
 </blockquote>
-<p><strong><code>Experimental</code></strong></p>
 <p>The icon of the action button.</p>
 <hr>
 <h3>parameters?</h3>
 <blockquote>
 <p><code>optional</code> <strong>parameters?</strong>: <code>object</code> | <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<p><strong><code>Experimental</code></strong></p>
 <p>The parameters of the action.</p>
 <hr>
 <h3>press?</h3>
 <blockquote>
 <p><code>optional</code> <strong>press?</strong>: (<code>oEvent</code>) =&gt; <code>void</code></p>
 </blockquote>
-<p><strong><code>Experimental</code></strong></p>
 <p>Fired when the action button is pressed.</p>
 <h4>Parameters</h4>
 <h5>oEvent</h5>
@@ -92,23 +83,20 @@ be focused and they are out of the navigation tab-chain.</p>
 <blockquote>
 <p><code>optional</code> <strong>text?</strong>: <code>string</code> | <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a></p>
 </blockquote>
-<p><strong><code>Experimental</code></strong></p>
 <p>The text of the action button.</p>
 <hr>
 <h3>type?</h3>
 <blockquote>
 <p><code>optional</code> <strong>type?</strong>: <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code> | <code>&quot;Custom&quot;</code> | <code>&quot;Navigation&quot;</code> | <a href="../../library/enumerations/CardActionType.html"><code>CardActionType</code></a> | <code>&quot;DateChange&quot;</code> | <code>&quot;HideCard&quot;</code> | <code>&quot;MonthChange&quot;</code> | <code>&quot;ShowCard&quot;</code> | <code>&quot;Submit&quot;</code></p>
 </blockquote>
-<p><strong><code>Experimental</code></strong></p>
 <p>The type of the action.</p>
 <hr>
 <h3>visible?</h3>
 <blockquote>
 <p><code>optional</code> <strong>visible?</strong>: <code>boolean</code> | <a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<p><strong><code>Experimental</code></strong></p>
 <p>Whether the action button should be visible on the screen.</p>
 
-<footer>Generated from <code>@openui5/types@1.120.46</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@openui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

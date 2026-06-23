@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Interface: $ImageSettings — OpenUI5 TypeScript API</title>
-<meta name="description" content="Interface: $ImageSettings — OpenUI5 TypeScript API Reference (1.120.46)">
+<meta name="description" content="Interface: $ImageSettings — OpenUI5 TypeScript API Reference (1.120.0)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/openui5/1.120/sap.m/sap/m/Image/interfaces/$ImageSettings.html">
 <meta property="og:title" content="Interface: $ImageSettings — OpenUI5 TypeScript API">
-<meta property="og:description" content="Interface: $ImageSettings — OpenUI5 TypeScript API Reference (1.120.46)">
+<meta property="og:description" content="Interface: $ImageSettings — OpenUI5 TypeScript API Reference (1.120.0)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/openui5/1.120/sap.m/sap/m/Image/interfaces/$ImageSettings.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,12 +33,11 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../index.html">OpenUI5 API</a> › <a href="../../../../../sap.m/README.html">sap.m</a> › sap › m › <a href="../../../../../sap.m/sap/m/Image/README.html">Image</a> › interfaces</nav>
-<p><a href="../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.46)</strong></a></p>
+<p><a href="../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.0)</strong></a></p>
 <hr>
-<p><a href="../../../../../README.html">OpenUI5 TypeScript API (1.120.46)</a> / <a href="../../../../README.html">sap.m</a> / <a href="../README.html">sap/m/Image</a> / $ImageSettings</p>
+<p><a href="../../../../../README.html">OpenUI5 TypeScript API (1.120.0)</a> / <a href="../../../../README.html">sap.m</a> / <a href="../README.html">sap/m/Image</a> / $ImageSettings</p>
 <h1>Interface: $ImageSettings</h1>
 <pre class="sig"><span class="kw">import</span> { $ImageSettings } <span class="kw">from</span> <span class="str">"sap/m/Image"</span>;</pre>
-<p>Describes the settings that can be provided to the Image constructor.</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../../../../sap.ui.core/sap/ui/core/Control/interfaces/$ControlSettings.html"><code>$ControlSettings</code></a></li>
@@ -67,14 +66,16 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 <blockquote>
 <p><code>optional</code> <strong>ariaDetails?</strong>: (<code>string</code> | <a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a>)[]</p>
 </blockquote>
-<p>Association to controls / IDs which are details to this control (see WAI-ARIA attribute aria-details).</p>
 <h4>Since</h4>
 <p>1.79</p>
+<p>Association to controls / IDs which are details to this control (see WAI-ARIA attribute aria-details).</p>
 <hr>
 <h3>ariaHasPopup?</h3>
 <blockquote>
 <p><code>optional</code> <strong>ariaHasPopup?</strong>: <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code> | <a href="../../../../../sap.ui.core/sap/ui/core/library/namespaces/aria/enumerations/HasPopup.html"><code>HasPopup</code></a> | <code>&quot;Dialog&quot;</code> | <code>&quot;Grid&quot;</code> | <code>&quot;ListBox&quot;</code> | <code>&quot;Menu&quot;</code> | <code>&quot;None&quot;</code> | <code>&quot;Tree&quot;</code></p>
 </blockquote>
+<h4>Since</h4>
+<p>1.87.0</p>
 <p>Defines the aria-haspopup attribute of the <code>Image</code>.</p>
 <p><strong>Guidance for choosing appropriate value:</strong>
 	 -  We recommend you to use the property only when press handler is set.
@@ -82,8 +83,6 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
     (both <code>sap.m.Popover</code> and <code>sap.m.Dialog</code> have role &quot;dialog&quot; assigned internally).
 	 -  If you use other controls, or directly <code>sap.ui.core.Popup</code>, you need to check the container role/type
     and map the value of <code>ariaHasPopup</code> accordingly.</p>
-<h4>Since</h4>
-<p>1.87.0</p>
 <hr>
 <h3>ariaLabelledBy?</h3>
 <blockquote>
@@ -95,31 +94,31 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 <blockquote>
 <p><code>optional</code> <strong>backgroundPosition?</strong>: <code>string</code> | <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a></p>
 </blockquote>
+<h4>Since</h4>
+<p>1.30.0</p>
 <p>Defines the position of the image in <code>sap.m.ImageMode.Background</code> mode.</p>
 <p>This property is set on the output DOM element using the CSS style <code>background-position</code>. It takes effect
 only when the <code>mode</code> property is set to <code>sap.m.ImageMode.Background</code>.</p>
-<h4>Since</h4>
-<p>1.30.0</p>
 <hr>
 <h3>backgroundRepeat?</h3>
 <blockquote>
 <p><code>optional</code> <strong>backgroundRepeat?</strong>: <code>string</code> | <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a></p>
 </blockquote>
+<h4>Since</h4>
+<p>1.30.0</p>
 <p>Defines whether the source image is repeated when the output DOM element is bigger than the source.</p>
 <p>This property is set on the output DOM element using the CSS style <code>background-repeat</code>. It takes effect
 only when the <code>mode</code> property is set to <code>sap.m.ImageMode.Background</code>.</p>
-<h4>Since</h4>
-<p>1.30.0</p>
 <hr>
 <h3>backgroundSize?</h3>
 <blockquote>
 <p><code>optional</code> <strong>backgroundSize?</strong>: <code>string</code> | <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a></p>
 </blockquote>
+<h4>Since</h4>
+<p>1.30.0</p>
 <p>Defines the size of the image in <code>sap.m.ImageMode.Background</code> mode.</p>
 <p>This property is set on the output DOM element using the CSS style <code>background-size</code>. It takes effect
 only when the <code>mode</code> property is set to <code>sap.m.ImageMode.Background</code>.</p>
-<h4>Since</h4>
-<p>1.30.0</p>
 <hr>
 <h3>decorative?</h3>
 <blockquote>
@@ -155,8 +154,6 @@ control.</p>
 <blockquote>
 <p><code>optional</code> <strong>error?</strong>: (<code>oEvent</code>) =&gt; <code>void</code></p>
 </blockquote>
-<p>Event is fired when the image resource can&#39;t be loaded. If densityAware is set to true, the event is
-fired when none of the fallback resources can be loaded.</p>
 <h4>Parameters</h4>
 <h5>oEvent</h5>
 <p><a href="../../../../../sap.ui.core/sap/ui/base/Event/classes/Event.html"><code>Event</code></a></p>
@@ -164,6 +161,8 @@ fired when none of the fallback resources can be loaded.</p>
 <p><code>void</code></p>
 <h4>Since</h4>
 <p>1.36.2</p>
+<p>Event is fired when the image resource can&#39;t be loaded. If densityAware is set to true, the event is
+fired when none of the fallback resources can be loaded.</p>
 <hr>
 <h3>height?</h3>
 <blockquote>
@@ -178,18 +177,17 @@ always needs to be set. Otherwise the output DOM element has a 0 size.</p>
 <blockquote>
 <p><code>optional</code> <strong>lazyLoading?</strong>: <code>boolean</code> | <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
+<h4>Since</h4>
+<p>1.87</p>
 <p>Enables lazy loading for images that are offscreen. If set to <code>true</code>, the property ensures that offscreen
 images are loaded early enough so that they have finished loading once the user scrolls near them.</p>
 <p><strong>Note:</strong> Keep in mind that the property uses the loading attribute of HTML <code>&lt;img&gt;</code> element which
 is not supported for Internet Explorer.</p>
-<h4>Since</h4>
-<p>1.87</p>
 <hr>
 <h3>load?</h3>
 <blockquote>
 <p><code>optional</code> <strong>load?</strong>: (<code>oEvent</code>) =&gt; <code>void</code></p>
 </blockquote>
-<p>Event is fired when the image resource is loaded.</p>
 <h4>Parameters</h4>
 <h5>oEvent</h5>
 <p><a href="../../../../../sap.ui.core/sap/ui/base/Event/classes/Event.html"><code>Event</code></a></p>
@@ -197,18 +195,19 @@ is not supported for Internet Explorer.</p>
 <p><code>void</code></p>
 <h4>Since</h4>
 <p>1.36.2</p>
+<p>Event is fired when the image resource is loaded.</p>
 <hr>
 <h3>mode?</h3>
 <blockquote>
 <p><code>optional</code> <strong>mode?</strong>: <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code> | <a href="../../library/enumerations/ImageMode.html"><code>ImageMode</code></a> | <code>&quot;Background&quot;</code> | <code>&quot;Image&quot;</code> | <code>&quot;InlineSvg&quot;</code></p>
 </blockquote>
+<h4>Since</h4>
+<p>1.30.0</p>
 <p>Defines how the <code>src</code> and the <code>activeSrc</code> is output to the DOM Element.</p>
 <p>When set to <code>sap.m.ImageMode.Image</code>, which is the default value, the <code>src</code> (<code>activeSrc</code>) is set to the
 <code>src</code> attribute of the  tag. When set to <code>sap.m.ImageMode.Background</code>, the <code>src</code> (<code>activeSrc</code>)
 is set to the CSS style <code>background-image</code> and the root DOM element is rendered as a  tag
 instead of an  tag.</p>
-<h4>Since</h4>
-<p>1.30.0</p>
 <hr>
 <h3>press?</h3>
 <blockquote>
@@ -233,7 +232,6 @@ the naming convention [imageName]@[densityValue].[extension].</p>
 <blockquote>
 <p><code>optional</code> <strong>tap?</strong>: (<code>oEvent</code>) =&gt; <code>void</code></p>
 </blockquote>
-<p>Event is fired when the user clicks on the control. (This event is deprecated, use the press event instead)</p>
 <h4>Parameters</h4>
 <h5>oEvent</h5>
 <p><a href="../../../../../sap.ui.core/sap/ui/base/Event/classes/Event.html"><code>Event</code></a></p>
@@ -241,6 +239,7 @@ the naming convention [imageName]@[densityValue].[extension].</p>
 <p><code>void</code></p>
 <h4>Deprecated</h4>
 <p>(since 1.107.0)</p>
+<p>Event is fired when the user clicks on the control. (This event is deprecated, use the press event instead)</p>
 <hr>
 <h3>useMap?</h3>
 <blockquote>
@@ -257,6 +256,6 @@ the naming convention [imageName]@[densityValue].[extension].</p>
 width/height is maintained. When the <code>mode</code> property is set to <code>sap.m.ImageMode.Background</code>, this property
 always needs to be set. Otherwise the output DOM element has a 0 size.</p>
 
-<footer>Generated from <code>@openui5/types@1.120.46</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@openui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

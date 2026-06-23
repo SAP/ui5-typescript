@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Interface: $InputBaseSettings — OpenUI5 TypeScript API</title>
-<meta name="description" content="Interface: $InputBaseSettings — OpenUI5 TypeScript API Reference (1.120.46)">
+<meta name="description" content="Interface: $InputBaseSettings — OpenUI5 TypeScript API Reference (1.120.0)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/openui5/1.120/sap.m/sap/m/InputBase/interfaces/$InputBaseSettings.html">
 <meta property="og:title" content="Interface: $InputBaseSettings — OpenUI5 TypeScript API">
-<meta property="og:description" content="Interface: $InputBaseSettings — OpenUI5 TypeScript API Reference (1.120.46)">
+<meta property="og:description" content="Interface: $InputBaseSettings — OpenUI5 TypeScript API Reference (1.120.0)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/openui5/1.120/sap.m/sap/m/InputBase/interfaces/$InputBaseSettings.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,12 +33,11 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../index.html">OpenUI5 API</a> › <a href="../../../../../sap.m/README.html">sap.m</a> › sap › m › <a href="../../../../../sap.m/sap/m/InputBase/README.html">InputBase</a> › interfaces</nav>
-<p><a href="../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.46)</strong></a></p>
+<p><a href="../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.0)</strong></a></p>
 <hr>
-<p><a href="../../../../../README.html">OpenUI5 TypeScript API (1.120.46)</a> / <a href="../../../../README.html">sap.m</a> / <a href="../README.html">sap/m/InputBase</a> / $InputBaseSettings</p>
+<p><a href="../../../../../README.html">OpenUI5 TypeScript API (1.120.0)</a> / <a href="../../../../README.html">sap.m</a> / <a href="../README.html">sap/m/InputBase</a> / $InputBaseSettings</p>
 <h1>Interface: $InputBaseSettings</h1>
 <pre class="sig"><span class="kw">import</span> { $InputBaseSettings } <span class="kw">from</span> <span class="str">"sap/m/InputBase"</span>;</pre>
-<p>Describes the settings that can be provided to the InputBase constructor.</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../../../../sap.ui.core/sap/ui/core/Control/interfaces/$ControlSettings.html"><code>$ControlSettings</code></a></li>
@@ -56,17 +55,17 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 <blockquote>
 <p><code>optional</code> <strong>ariaDescribedBy?</strong>: (<code>string</code> | <a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a>)[]</p>
 </blockquote>
-<p>Association to controls / IDs that describe this control (see WAI-ARIA attribute aria-describedby).</p>
 <h4>Since</h4>
 <p>1.90</p>
+<p>Association to controls / IDs that describe this control (see WAI-ARIA attribute aria-describedby).</p>
 <hr>
 <h3>ariaLabelledBy?</h3>
 <blockquote>
 <p><code>optional</code> <strong>ariaLabelledBy?</strong>: (<code>string</code> | <a href="../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a>)[]</p>
 </blockquote>
-<p>Association to controls / IDs that label this control (see WAI-ARIA attribute aria-labelledby).</p>
 <h4>Since</h4>
 <p>1.27.0</p>
+<p>Association to controls / IDs that label this control (see WAI-ARIA attribute aria-labelledby).</p>
 <hr>
 <h3>change?</h3>
 <blockquote>
@@ -84,10 +83,10 @@ key is pressed.</p>
 <blockquote>
 <p><code>optional</code> <strong>editable?</strong>: <code>boolean</code> | <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<p>Defines whether the control can be modified by the user or not. <strong>Note:</strong> A user can tab to non-editable
-control, highlight it, and copy the text from it.</p>
 <h4>Since</h4>
 <p>1.12.0</p>
+<p>Defines whether the control can be modified by the user or not. <strong>Note:</strong> A user can tab to non-editable
+control, highlight it, and copy the text from it.</p>
 <hr>
 <h3>enabled?</h3>
 <blockquote>
@@ -101,12 +100,12 @@ focused and they are out of the tab-chain.</p>
 <p><code>optional</code> <strong>formattedValueStateText?</strong>: <a href="../../FormattedText/classes/FormattedText.html"><code>FormattedText</code></a></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
-<p>Defines the formatted text that appears in the value state message pop-up. It can include links. If both
-<code>valueStateText</code> and <code>formattedValueStateText</code> are set - the latter is shown.</p>
 <h4>Since</h4>
 <p>1.78
  (since 1.78) - This aggregation is experimental and provides only limited functionality.
 Also the API might be changed in future.</p>
+<p>Defines the formatted text that appears in the value state message pop-up. It can include links. If both
+<code>valueStateText</code> and <code>formattedValueStateText</code> are set - the latter is shown.</p>
 <hr>
 <h3>name?</h3>
 <blockquote>
@@ -124,35 +123,35 @@ Also the API might be changed in future.</p>
 <blockquote>
 <p><code>optional</code> <strong>required?</strong>: <code>boolean</code> | <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
+<h4>Since</h4>
+<p>1.38.4</p>
 <p>Indicates that user input is required. This property is only needed for accessibility purposes when a
 single relationship between the field and a label (see aggregation <code>labelFor</code> of <code>sap.m.Label</code>) cannot
 be established (e.g. one label should label multiple fields).</p>
-<h4>Since</h4>
-<p>1.38.4</p>
 <hr>
 <h3>showValueStateMessage?</h3>
 <blockquote>
 <p><code>optional</code> <strong>showValueStateMessage?</strong>: <code>boolean</code> | <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
 </blockquote>
-<p>Indicates whether the value state message should be shown or not.</p>
 <h4>Since</h4>
 <p>1.26.0</p>
+<p>Indicates whether the value state message should be shown or not.</p>
 <hr>
 <h3>textAlign?</h3>
 <blockquote>
 <p><code>optional</code> <strong>textAlign?</strong>: <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code> | <code>&quot;Begin&quot;</code> | <code>&quot;End&quot;</code> | <code>&quot;Left&quot;</code> | <code>&quot;Right&quot;</code> | <a href="../../../../../sap.ui.core/sap/ui/core/library/enumerations/TextAlign.html"><code>TextAlign</code></a> | <code>&quot;Center&quot;</code> | <code>&quot;Initial&quot;</code></p>
 </blockquote>
-<p>Defines the horizontal alignment of the text that is shown inside the input field.</p>
 <h4>Since</h4>
 <p>1.26.0</p>
+<p>Defines the horizontal alignment of the text that is shown inside the input field.</p>
 <hr>
 <h3>textDirection?</h3>
 <blockquote>
 <p><code>optional</code> <strong>textDirection?</strong>: <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code> | <a href="../../../../../sap.ui.core/sap/ui/core/library/enumerations/TextDirection.html"><code>TextDirection</code></a> | <code>&quot;Inherit&quot;</code> | <code>&quot;LTR&quot;</code> | <code>&quot;RTL&quot;</code></p>
 </blockquote>
-<p>Defines the text directionality of the input field, e.g. <code>RTL</code>, <code>LTR</code></p>
 <h4>Since</h4>
 <p>1.28.0</p>
+<p>Defines the text directionality of the input field, e.g. <code>RTL</code>, <code>LTR</code></p>
 <hr>
 <h3>value?</h3>
 <blockquote>
@@ -170,10 +169,10 @@ be established (e.g. one label should label multiple fields).</p>
 <blockquote>
 <p><code>optional</code> <strong>valueStateText?</strong>: <code>string</code> | <a href="../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a></p>
 </blockquote>
-<p>Defines the text that appears in the value state message pop-up. If this is not specified, a default
-text is shown from the resource bundle.</p>
 <h4>Since</h4>
 <p>1.26.0</p>
+<p>Defines the text that appears in the value state message pop-up. If this is not specified, a default
+text is shown from the resource bundle.</p>
 <hr>
 <h3>width?</h3>
 <blockquote>
@@ -183,6 +182,6 @@ text is shown from the resource bundle.</p>
 <p><strong>Note:</strong> If the provided width is too small, the control gets stretched to its min width, which is needed
 in order for the control to be usable and well aligned.</p>
 
-<footer>Generated from <code>@openui5/types@1.120.46</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@openui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>

@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Class: CalendarAppointment — OpenUI5 TypeScript API</title>
-<meta name="description" content="Class: CalendarAppointment — OpenUI5 TypeScript API Reference (1.120.46)">
+<meta name="description" content="Class: CalendarAppointment — OpenUI5 TypeScript API Reference (1.120.0)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/openui5/1.120/sap.ui.unified/sap/ui/unified/CalendarAppointment/classes/CalendarAppointment.html">
 <meta property="og:title" content="Class: CalendarAppointment — OpenUI5 TypeScript API">
-<meta property="og:description" content="Class: CalendarAppointment — OpenUI5 TypeScript API Reference (1.120.46)">
+<meta property="og:description" content="Class: CalendarAppointment — OpenUI5 TypeScript API Reference (1.120.0)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/openui5/1.120/sap.ui.unified/sap/ui/unified/CalendarAppointment/classes/CalendarAppointment.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,16 +33,16 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../index.html">OpenUI5 API</a> › <a href="../../../../../../sap.ui.unified/README.html">sap.ui.unified</a> › sap › ui › unified › <a href="../../../../../../sap.ui.unified/sap/ui/unified/CalendarAppointment/README.html">CalendarAppointment</a> › classes</nav>
-<p><a href="../../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.46)</strong></a></p>
+<p><a href="../../../../../../README.html"><strong>OpenUI5 TypeScript API (1.120.0)</strong></a></p>
 <hr>
-<p><a href="../../../../../../README.html">OpenUI5 TypeScript API (1.120.46)</a> / <a href="../../../../../README.html">sap.ui.unified</a> / <a href="../README.html">sap/ui/unified/CalendarAppointment</a> / CalendarAppointment</p>
+<p><a href="../../../../../../README.html">OpenUI5 TypeScript API (1.120.0)</a> / <a href="../../../../../README.html">sap.ui.unified</a> / <a href="../README.html">sap/ui/unified/CalendarAppointment</a> / CalendarAppointment</p>
 <h1>Class: CalendarAppointment</h1>
 <pre class="sig"><span class="kw">import</span> CalendarAppointment <span class="kw">from</span> <span class="str">"sap/ui/unified/CalendarAppointment"</span>;</pre>
+<h2>Since</h2>
+<p>1.34.0</p>
 <p>An appointment for use in a <code>PlanningCalendar</code> or similar. The rendering must be done in the Row collecting
 the appointments. (Because there are different visualizations possible.)</p>
 <p>Applications could inherit from this element to add own fields.</p>
-<h2>Since</h2>
-<p>1.34.0</p>
 <h2>Extends</h2>
 <ul>
 <li><a href="../../DateTypeRange/classes/DateTypeRange.html"><code>DateTypeRange</code></a></li>
@@ -89,7 +89,6 @@ of the syntax of the settings object.</p>
 <p><strong>addCustomContent</strong>(<code>oCustomContent</code>): <code>this</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
-<p>Adds some customContent to the aggregation #getCustomContent customContent.</p>
 <h4>Parameters</h4>
 <h5>oCustomContent</h5>
 <p><a href="../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></p>
@@ -101,13 +100,13 @@ of the syntax of the settings object.</p>
 <p>1.93.0
  (since 1.93) - providing only limited functionality. Also, the API might be changed in
 the future.</p>
+<p>Adds some customContent to the aggregation #getCustomContent customContent.</p>
 <hr>
 <h3>destroyCustomContent()</h3>
 <blockquote>
 <p><strong>destroyCustomContent</strong>(): <code>this</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
-<p>Destroys all the customContent in the aggregation #getCustomContent customContent.</p>
 <h4>Returns</h4>
 <p><code>this</code></p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
@@ -115,19 +114,20 @@ the future.</p>
 <p>1.93.0
  (since 1.93) - providing only limited functionality. Also, the API might be changed in
 the future.</p>
+<p>Destroys all the customContent in the aggregation #getCustomContent customContent.</p>
 <hr>
 <h3>getColor()</h3>
 <blockquote>
 <p><strong>getColor</strong>(): <code>string</code></p>
 </blockquote>
-<p>Gets current value of property #getColor color.</p>
-<p>Overrides the color derived from the <code>type</code> property. This property will work only with full hex color
-with pound symbol, e.g.: #FF0000.</p>
 <h4>Returns</h4>
 <p><code>string</code></p>
 <p>Value of property <code>color</code></p>
 <h4>Since</h4>
 <p>1.46.0</p>
+<p>Gets current value of property #getColor color.</p>
+<p>Overrides the color derived from the <code>type</code> property. This property will work only with full hex color
+with pound symbol, e.g.: #FF0000.</p>
 <h4>Overrides</h4>
 <p><a href="../../DateTypeRange/classes/DateTypeRange.html"><code>DateTypeRange</code></a>.<a href="../../DateTypeRange/classes/DateTypeRange.html#getcolor"><code>getColor</code></a></p>
 <hr>
@@ -136,6 +136,12 @@ with pound symbol, e.g.: #FF0000.</p>
 <p><strong>getCustomContent</strong>(): <a href="../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a>[]</p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
+<h4>Returns</h4>
+<p><a href="../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a>[]</p>
+<h4>Since</h4>
+<p>1.93.0
+ (since 1.93) - providing only limited functionality. Also, the API might be changed in
+the future.</p>
 <p>Gets content of aggregation #getCustomContent customContent.</p>
 <p>Holds the content of the appointment.</p>
 <p>**Note **, If the <code>customContent</code> aggregation is added then:</p>
@@ -145,24 +151,18 @@ the height of the content conforms with the height provided by the appointment.
  - Do not use interactive controls as content, as they may trigger unwanted selection of the appointment
 and may lead to unpredictable results.
 </code></pre>
-<h4>Returns</h4>
-<p><a href="../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a>[]</p>
-<h4>Since</h4>
-<p>1.93.0
- (since 1.93) - providing only limited functionality. Also, the API might be changed in
-the future.</p>
 <hr>
 <h3>getDescription()</h3>
 <blockquote>
 <p><strong>getDescription</strong>(): <code>string</code></p>
 </blockquote>
-<p>Gets current value of property #getDescription description.</p>
-<p>Description of the appointment.</p>
 <h4>Returns</h4>
 <p><code>string</code></p>
 <p>Value of property <code>description</code></p>
 <h4>Since</h4>
 <p>1.81.0</p>
+<p>Gets current value of property #getDescription description.</p>
+<p>Description of the appointment.</p>
 <hr>
 <h3>getIcon()</h3>
 <blockquote>
@@ -232,8 +232,6 @@ the future.</p>
 <p><strong>indexOfCustomContent</strong>(<code>oCustomContent</code>): <code>number</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
-<p>Checks for the provided <code>sap.ui.core.Control</code> in the aggregation #getCustomContent customContent.
-and returns its index if found or -1 otherwise.</p>
 <h4>Parameters</h4>
 <h5>oCustomContent</h5>
 <p><a href="../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></p>
@@ -245,13 +243,14 @@ and returns its index if found or -1 otherwise.</p>
 <p>1.93.0
  (since 1.93) - providing only limited functionality. Also, the API might be changed in
 the future.</p>
+<p>Checks for the provided <code>sap.ui.core.Control</code> in the aggregation #getCustomContent customContent.
+and returns its index if found or -1 otherwise.</p>
 <hr>
 <h3>insertCustomContent()</h3>
 <blockquote>
 <p><strong>insertCustomContent</strong>(<code>oCustomContent</code>, <code>iIndex</code>): <code>this</code></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
-<p>Inserts a customContent into the aggregation #getCustomContent customContent.</p>
 <h4>Parameters</h4>
 <h5>oCustomContent</h5>
 <p><a href="../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></p>
@@ -268,14 +267,13 @@ is inserted at the last position</p>
 <p>1.93.0
  (since 1.93) - providing only limited functionality. Also, the API might be changed in
 the future.</p>
+<p>Inserts a customContent into the aggregation #getCustomContent customContent.</p>
 <hr>
 <h3>removeAllCustomContent()</h3>
 <blockquote>
 <p><strong>removeAllCustomContent</strong>(): <a href="../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a>[]</p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
-<p>Removes all the controls from the aggregation #getCustomContent customContent.</p>
-<p>Additionally, it unregisters them from the hosting UIArea.</p>
 <h4>Returns</h4>
 <p><a href="../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a>[]</p>
 <p>An array of the removed elements (might be empty)</p>
@@ -283,13 +281,14 @@ the future.</p>
 <p>1.93.0
  (since 1.93) - providing only limited functionality. Also, the API might be changed in
 the future.</p>
+<p>Removes all the controls from the aggregation #getCustomContent customContent.</p>
+<p>Additionally, it unregisters them from the hosting UIArea.</p>
 <hr>
 <h3>removeCustomContent()</h3>
 <blockquote>
 <p><strong>removeCustomContent</strong>(<code>vCustomContent</code>): <a href="../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></p>
 </blockquote>
 <p><strong><code>Experimental</code></strong></p>
-<p>Removes a customContent from the aggregation #getCustomContent customContent.</p>
 <h4>Parameters</h4>
 <h5>vCustomContent</h5>
 <p><code>string</code> | <code>number</code> | <a href="../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></p>
@@ -301,15 +300,12 @@ the future.</p>
 <p>1.93.0
  (since 1.93) - providing only limited functionality. Also, the API might be changed in
 the future.</p>
+<p>Removes a customContent from the aggregation #getCustomContent customContent.</p>
 <hr>
 <h3>setColor()</h3>
 <blockquote>
 <p><strong>setColor</strong>(<code>sColor?</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getColor color.</p>
-<p>Overrides the color derived from the <code>type</code> property. This property will work only with full hex color
-with pound symbol, e.g.: #FF0000.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <h4>Parameters</h4>
 <h5>sColor?</h5>
 <p><code>string</code></p>
@@ -319,6 +315,10 @@ with pound symbol, e.g.: #FF0000.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.46.0</p>
+<p>Sets a new value for property #getColor color.</p>
+<p>Overrides the color derived from the <code>type</code> property. This property will work only with full hex color
+with pound symbol, e.g.: #FF0000.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <h4>Overrides</h4>
 <p><a href="../../DateTypeRange/classes/DateTypeRange.html"><code>DateTypeRange</code></a>.<a href="../../DateTypeRange/classes/DateTypeRange.html#setcolor"><code>setColor</code></a></p>
 <hr>
@@ -326,9 +326,6 @@ with pound symbol, e.g.: #FF0000.</p>
 <blockquote>
 <p><strong>setDescription</strong>(<code>sDescription</code>): <code>this</code></p>
 </blockquote>
-<p>Sets a new value for property #getDescription description.</p>
-<p>Description of the appointment.</p>
-<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <h4>Parameters</h4>
 <h5>sDescription</h5>
 <p><code>string</code></p>
@@ -338,6 +335,9 @@ with pound symbol, e.g.: #FF0000.</p>
 <p>Reference to <code>this</code> in order to allow method chaining</p>
 <h4>Since</h4>
 <p>1.81.0</p>
+<p>Sets a new value for property #getDescription description.</p>
+<p>Description of the appointment.</p>
+<p>When called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored.</p>
 <hr>
 <h3>setIcon()</h3>
 <blockquote>
@@ -447,7 +447,7 @@ it with the information contained in <code>oClassInfo</code>.</p>
 <p><code>string</code></p>
 <p>Name of the class being created</p>
 <h5>oClassInfo?</h5>
-<p><a href="../../../../../../sap.f/namespaces/sap/type-aliases/ClassInfo.html"><code>ClassInfo</code></a>&lt;<code>T</code>, <code>CalendarAppointment</code>&gt;</p>
+<p><code>ClassInfo</code>&lt;<code>T</code>, <code>CalendarAppointment</code>&gt;</p>
 <p>Object literal with information about the class</p>
 <h5>FNMetaImpl?</h5>
 <p><code>Function</code></p>
@@ -471,6 +471,6 @@ used by this class</p>
 <p><a href="../../DateTypeRange/classes/DateTypeRange.html"><code>DateTypeRange</code></a>.<a href="../../DateTypeRange/classes/DateTypeRange.html#getmetadata-1"><code>getMetadata</code></a></p>
 <hr>
 
-<footer>Generated from <code>@openui5/types@1.120.46</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
+<footer>Generated from <code>@openui5/types@1.120.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/openui5/1.120/">Back to index</a>.</footer>
 </body>
 </html>
