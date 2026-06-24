@@ -9,7 +9,7 @@ Each class page includes the TypeScript import statement, inheritance hierarchy,
 ### OpenUI5
 - [OpenUI5 1.149](https://ui5.github.io/typescript/api/openui5/1.149/index.html): 1.149.0
 - [OpenUI5 1.148](https://ui5.github.io/typescript/api/openui5/1.148/index.html): 1.148.1
-- [OpenUI5 1.136](https://ui5.github.io/typescript/api/openui5/1.136/index.html): 1.136.17
+- [OpenUI5 1.136](https://ui5.github.io/typescript/api/openui5/1.136/index.html): 1.136.18
 - [OpenUI5 1.120](https://ui5.github.io/typescript/api/openui5/1.120/index.html): 1.120.46
 
 ### SAPUI5
