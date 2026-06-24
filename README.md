@@ -1,5 +1,11 @@
 # UI5-TypeScript
 
+<p style="margin: 0.8em 0 1.5em;">
+  <a href="https://ui5.github.io/typescript/releasenotes.html" style="display: inline-block; padding: 0.45em 1em; margin: 0.25em 0.4em 0.25em 0; border-radius: 6px; background: #1a6baa; color: #fff; text-decoration: none; font-size: 0.9em; font-weight: 500;">📋 Release Notes</a>
+  <a href="https://ui5.github.io/typescript/api/" style="display: inline-block; padding: 0.45em 1em; margin: 0.25em 0.4em 0.25em 0; border-radius: 6px; background: #1a6baa; color: #fff; text-decoration: none; font-size: 0.9em; font-weight: 500;">📖 TypeScript API Reference</a>
+  <a href="https://ui5.github.io/typescript/ui5-types-browser.html#framework=openui5&version=latest&file=%2Ftypes%2Fsap.ui.core.d.ts" style="display: inline-block; padding: 0.45em 1em; margin: 0.25em 0.4em 0.25em 0; border-radius: 6px; background: #1a6baa; color: #fff; text-decoration: none; font-size: 0.9em; font-weight: 500;">🔍 Type Definition Browser</a>
+</p>
+
 This page provides an overview of all official TypeScript-related resources in the UI5 world.
 
 To get started quickly with a hands-on example, you can jump into the [UI5 TypeScript Tutorial](https://github.com/SAP-samples/ui5-typescript-tutorial) right away (or watch the [video](https://www.youtube.com/watch?v=CRKNIiXZN6U) walking you through this tutorial), or, for a more structured approach, [follow the learning guidance outlined here](curriculum.md).
