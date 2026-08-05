@@ -7,6 +7,7 @@ Each class page includes the TypeScript import statement, inheritance hierarchy,
 ## Versions
 
 ### OpenUI5
+- [OpenUI5 1.151](https://ui5.github.io/typescript/api/openui5/1.151/index.html): 1.151.0
 - [OpenUI5 1.150](https://ui5.github.io/typescript/api/openui5/1.150/index.html): 1.150.0
 - [OpenUI5 1.149](https://ui5.github.io/typescript/api/openui5/1.149/index.html): 1.149.1
 - [OpenUI5 1.148](https://ui5.github.io/typescript/api/openui5/1.148/index.html): 1.148.5
@@ -20,16 +21,16 @@ Each class page includes the TypeScript import statement, inheritance hierarchy,
 - [SAPUI5 1.136](https://ui5.github.io/typescript/api/sapui5/1.136/index.html): 1.136.21
 - [SAPUI5 1.120](https://ui5.github.io/typescript/api/sapui5/1.120/index.html): 1.120.49
 
-## Key Libraries (OpenUI5 1.150)
+## Key Libraries (OpenUI5 1.151)
 
-- [sap.m](https://ui5.github.io/typescript/api/openui5/1.150/sap.m/README.html): Main UI controls — Button, Input, List, Table, Dialog, MessageBox
-- [sap.ui.core](https://ui5.github.io/typescript/api/openui5/1.150/sap.ui.core/README.html): Core framework — Control, Element, Component, Model, routing
-- [sap.f](https://ui5.github.io/typescript/api/openui5/1.150/sap.f/README.html): SAP Fiori controls — FlexibleColumnLayout, ShellBar, DynamicPage
-- [sap.ui.table](https://ui5.github.io/typescript/api/openui5/1.150/sap.ui.table/README.html): Analytical and tree tables
-- [sap.ui.layout](https://ui5.github.io/typescript/api/openui5/1.150/sap.ui.layout/README.html): Layout controls — Grid, Splitter, ResponsiveFlowLayout
-- [sap.uxap](https://ui5.github.io/typescript/api/openui5/1.150/sap.uxap/README.html): Object Page pattern
-- [sap.ui.integration](https://ui5.github.io/typescript/api/openui5/1.150/sap.ui.integration/README.html): Integration Cards
-- [sap.tnt](https://ui5.github.io/typescript/api/openui5/1.150/sap.tnt/README.html): Tool Page, InfoLabel, SideNavigation
+- [sap.m](https://ui5.github.io/typescript/api/openui5/1.151/sap.m/README.html): Main UI controls — Button, Input, List, Table, Dialog, MessageBox
+- [sap.ui.core](https://ui5.github.io/typescript/api/openui5/1.151/sap.ui.core/README.html): Core framework — Control, Element, Component, Model, routing
+- [sap.f](https://ui5.github.io/typescript/api/openui5/1.151/sap.f/README.html): SAP Fiori controls — FlexibleColumnLayout, ShellBar, DynamicPage
+- [sap.ui.table](https://ui5.github.io/typescript/api/openui5/1.151/sap.ui.table/README.html): Analytical and tree tables
+- [sap.ui.layout](https://ui5.github.io/typescript/api/openui5/1.151/sap.ui.layout/README.html): Layout controls — Grid, Splitter, ResponsiveFlowLayout
+- [sap.uxap](https://ui5.github.io/typescript/api/openui5/1.151/sap.uxap/README.html): Object Page pattern
+- [sap.ui.integration](https://ui5.github.io/typescript/api/openui5/1.151/sap.ui.integration/README.html): Integration Cards
+- [sap.tnt](https://ui5.github.io/typescript/api/openui5/1.151/sap.tnt/README.html): Tool Page, InfoLabel, SideNavigation
 
 ## Resources
 
