@@ -2228,7 +2228,7 @@
     proc-log "^5.0.0"
     which "^5.0.0"
 
-"@openui5/types@^1.146.0":
+"@openui5/types@1.147.1":
   version "1.147.1"
   resolved "https://registry.yarnpkg.com/@openui5/types/-/types-1.147.1.tgz#a8d0e238fb0a16e3688e128bb9a75fb3140afd56"
   integrity sha512-f6OffWT9Wxv8VWOczP4cP9hCtfaQHEUGpnW0cXgXp1n6sq5LpKmmeLgwoKNAsjPzmLkCHoZizFHA0z7l2DWGaQ==
@@ -2951,7 +2951,7 @@
     workerpool "^9.3.4"
     xml2js "^0.6.2"
 
-"@ui5/cli@^4.0.52":
+"@ui5/cli@4.0.52":
   version "4.0.52"
   resolved "https://registry.yarnpkg.com/@ui5/cli/-/cli-4.0.52.tgz#780336123cb633a92c00fced69a9cbad7c045827"
   integrity sha512-KWsds9x19IWxSpzcLqELcwfzFH1dk3drhI+DCKk5iHUdVX92WFNY00emmPz1ej3LOJ/GLXHWS4NFsX/mxmhmvQ==
@@ -3005,7 +3005,7 @@
     pretty-hrtime "^1.0.3"
     random-int "^3.1.0"
 
-"@ui5/linter@^1.21.0":
+"@ui5/linter@1.21.0":
   version "1.21.0"
   resolved "https://registry.yarnpkg.com/@ui5/linter/-/linter-1.21.0.tgz#e7c706850e389872d5d182d1abe6939e1d7305c8"
   integrity sha512-nCh4XmirIBuhP+VVL1FzpzRuOYuWaAi1Fm2PT/9TrDCjrz/YCoXIlBySp9Yahu/N/Q+Wm3RyTP6pstqTCMHbEA==
@@ -5085,7 +5085,7 @@ eslint-visitor-keys@^5.0.0, eslint-visitor-keys@^5.0.1:
   resolved "https://registry.yarnpkg.com/eslint-visitor-keys/-/eslint-visitor-keys-5.0.1.tgz#9e3c9489697824d2d4ce3a8ad12628f91e9f59be"
   integrity sha512-tD40eHxA35h0PEIZNeIjkHoDR4YjjJp34biM0mDvplBe//mB+IHCqHDGV7pxF+7MklTvighcCPPZC7ynWyjdTA==
 
-eslint@10.3.0, eslint@^10.3.0:
+eslint@10.3.0:
   version "10.3.0"
   resolved "https://registry.yarnpkg.com/eslint/-/eslint-10.3.0.tgz#ed5b810eb8e0191bf24bddcf9cdb45b974e0a16d"
   integrity sha512-XbEXaRva5cF0ZQB8w6MluHA0kZZfV2DuCMJ3ozyEOHLwDpZX2Lmm/7Pp0xdJmI0GL1W05VH5VwIFHEm1Vcw2gw==
@@ -5859,17 +5859,17 @@ global-prefix@^1.0.1:
     is-windows "^1.0.1"
     which "^1.2.14"
 
+globals@17.6.0, globals@^17.6.0:
+  version "17.6.0"
+  resolved "https://registry.yarnpkg.com/globals/-/globals-17.6.0.tgz#0f0be018d5cca8690e6375ead1f65c4bb96191fc"
+  integrity sha512-sepffkT8stwnIYbsMBpoCHJuJM5l98FUF2AnE07hfvE0m/qp3R586hw4jF4uadbhvg1ooIdzuu7CsfD2jzCaNA==
+
 globals@^13.19.0:
   version "13.24.0"
   resolved "https://registry.yarnpkg.com/globals/-/globals-13.24.0.tgz#8432a19d78ce0c1e833949c36adb345400bb1171"
   integrity sha512-AhO5QUcj8llrbG09iWhPU2B204J1xnPeL8kQmVorSsy+Sjj1sk8gIyh6cUocGmH4L0UuhAJy+hJMRA4mgA4mFQ==
   dependencies:
     type-fest "^0.20.2"
-
-globals@^17.6.0:
-  version "17.6.0"
-  resolved "https://registry.yarnpkg.com/globals/-/globals-17.6.0.tgz#0f0be018d5cca8690e6375ead1f65c4bb96191fc"
-  integrity sha512-sepffkT8stwnIYbsMBpoCHJuJM5l98FUF2AnE07hfvE0m/qp3R586hw4jF4uadbhvg1ooIdzuu7CsfD2jzCaNA==
 
 globalthis@^1.0.4:
   version "1.0.4"
@@ -10285,7 +10285,7 @@ typed-array-length@^1.0.7:
   resolved "https://registry.yarnpkg.com/typescript/-/typescript-6.0.3.tgz#90251dc007916e972786cb94d74d15b185577d21"
   integrity sha512-y2TvuxSZPDyQakkFRPZHKFm+KKVqIisdg9/CZwm9ftvKXLP8NRWj38/ODjNbr43SsoXqNuAisEf1GdCxqWcdBw==
 
-typescript-eslint@^8.59.2:
+typescript-eslint@8.59.2:
   version "8.59.2"
   resolved "https://registry.yarnpkg.com/typescript-eslint/-/typescript-eslint-8.59.2.tgz#e24b4f7232e20112e40572dba162a829a738ce98"
   integrity sha512-pJw051uomb3ZeCzGTpRb8RbEqB5Y4WWet8gl/GcTlU35BSx0PVdZ86/bqkQCyKKuraVQEK7r6kBHQXF+fBhkoQ==
@@ -10305,7 +10305,7 @@ typescript@5.9.3, typescript@^5.9.3:
   resolved "https://registry.yarnpkg.com/typescript/-/typescript-5.9.3.tgz#5b4f59e15310ab17a216f5d6cf53ee476ede670f"
   integrity sha512-jl1vZzPDinLr9eUt3J/t7V6FgNEw9QjvBPdysz9KfQDD41fQrC2Y4vKQdiaUpFT4bXlb1RHhLpp8wtm6M5TgSw==
 
-typescript@6.0.3, typescript@^6.0.3:
+typescript@6.0.3:
   version "6.0.3"
   resolved "https://registry.yarnpkg.com/typescript/-/typescript-6.0.3.tgz#90251dc007916e972786cb94d74d15b185577d21"
   integrity sha512-y2TvuxSZPDyQakkFRPZHKFm+KKVqIisdg9/CZwm9ftvKXLP8NRWj38/ODjNbr43SsoXqNuAisEf1GdCxqWcdBw==
@@ -10320,7 +10320,7 @@ uglify-js@^3.1.4:
   resolved "https://registry.yarnpkg.com/uglify-js/-/uglify-js-3.19.3.tgz#82315e9bbc6f2b25888858acd1fff8441035b77f"
   integrity sha512-v3Xu+yuwBXisp6QYTcH4UbH+xYJXqnq2m/LtQVWKWzYc1iehYnLixoQDN9FH6/j9/oybfd6W9Ghwkl8+UMKTKQ==
 
-ui5-middleware-livereload@^3:
+ui5-middleware-livereload@3.3.0:
   version "3.3.0"
   resolved "https://registry.yarnpkg.com/ui5-middleware-livereload/-/ui5-middleware-livereload-3.3.0.tgz#c83743fd14851b9b184c3faa47f66c71ef187d97"
   integrity sha512-SO4M6HVDpM1YfIjVl//BmhgM7+KpyNle7xWL6NE/p4Edzhm8yuoZUXy/n3ba3mysWW2Knm1qGGAC0NpKoZckoA==
@@ -10329,7 +10329,7 @@ ui5-middleware-livereload@^3:
     livereload "^0.10.3"
     portfinder "^1.0.38"
 
-ui5-middleware-simpleproxy@^3:
+ui5-middleware-simpleproxy@3.7.0:
   version "3.7.0"
   resolved "https://registry.yarnpkg.com/ui5-middleware-simpleproxy/-/ui5-middleware-simpleproxy-3.7.0.tgz#f2449a449735587ac53e1f2c08f8358101cd1aa0"
   integrity sha512-3J4tMeND2jXb1B9Xgyj9tkhYyMTLV/9fqn27CEfAv4GzfVmSnd294ZGgJIf+fa6lpeIpHqSwdetTf4WvaOsIIg==
@@ -10342,7 +10342,7 @@ ui5-middleware-simpleproxy@^3:
     proxy-from-env "^2.0.0"
     ui5-utils-express "^1.5.1"
 
-ui5-tooling-transpile@^3:
+ui5-tooling-transpile@3.11.0:
   version "3.11.0"
   resolved "https://registry.yarnpkg.com/ui5-tooling-transpile/-/ui5-tooling-transpile-3.11.0.tgz#e87c9bb75820863055cdfe54d9d046dbb34ebace"
   integrity sha512-cy9STzBVNzqZebDV9pQR3vifSkk3ZULTDxovAlXm8VSOgD5rvdW91ESg/zKMHr8pI6zmTwRAoQZrIILf2nr09A==
