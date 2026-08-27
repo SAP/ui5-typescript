@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Class: ListReportController — SAPUI5 TypeScript API</title>
-<meta name="description" content="Class: ListReportController — SAPUI5 TypeScript API Reference (1.136.21)">
+<meta name="description" content="Class: ListReportController — SAPUI5 TypeScript API Reference (1.136.22)">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.136/sap.fe.templates/sap/fe/templates/ListReport/ListReportController.controller/classes/ListReportController.html">
 <meta property="og:title" content="Class: ListReportController — SAPUI5 TypeScript API">
-<meta property="og:description" content="Class: ListReportController — SAPUI5 TypeScript API Reference (1.136.21)">
+<meta property="og:description" content="Class: ListReportController — SAPUI5 TypeScript API Reference (1.136.22)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.136/sap.fe.templates/sap/fe/templates/ListReport/ListReportController.controller/classes/ListReportController.html">
 <meta property="og:site_name" content="UI5 TypeScript API">
@@ -33,9 +33,9 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 </head>
 <body>
 <nav><a href="../../../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../../../sap.fe.templates/README.html">sap.fe.templates</a> › sap › fe › templates › ListReport › <a href="../../../../../../../sap.fe.templates/sap/fe/templates/ListReport/ListReportController.controller/README.html">ListReportController.controller</a> › classes</nav>
-<p><a href="../../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.136.21)</strong></a></p>
+<p><a href="../../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.136.22)</strong></a></p>
 <hr>
-<p><a href="../../../../../../../README.html">SAPUI5 TypeScript API (1.136.21)</a> / <a href="../../../../../../README.html">sap.fe.templates</a> / <a href="../README.html">sap/fe/templates/ListReport/ListReportController.controller</a> / ListReportController</p>
+<p><a href="../../../../../../../README.html">SAPUI5 TypeScript API (1.136.22)</a> / <a href="../../../../../../README.html">sap.fe.templates</a> / <a href="../README.html">sap/fe/templates/ListReport/ListReportController.controller</a> / ListReportController</p>
 <h1>Class: ListReportController</h1>
 <pre class="sig"><span class="kw">import</span> ListReportController <span class="kw">from</span> <span class="str">"sap/fe/templates/ListReport/ListReportController.controller"</span>;</pre>
 <p>Controller class for the list report page, used inside an SAP Fiori elements application.</p>
@@ -44,6 +44,24 @@ footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8
 <li><a href="../../../../../../../sap.fe.core/sap/fe/core/PageController/classes/PageController.html"><code>PageController</code></a></li>
 </ul>
 <h2>Constructors</h2>
+<h3>_getBrowserTitle()</h3>
+<blockquote>
+<p><strong>_getBrowserTitle</strong>(<code>_pageTitleInformation</code>): <code>Promise</code>&lt;<code>any</code>&gt;</p>
+</blockquote>
+<p>Override to get the browser title of the LR page.
+Returns undefined so the shell falls back to the app title only.</p>
+<h4>Parameters</h4>
+<h5>_pageTitleInformation</h5>
+<p><code>any</code></p>
+<p>Ignored — LR always returns undefined so the shell falls back to the app title only</p>
+<h4>Returns</h4>
+<p><code>Promise</code>&lt;<code>any</code>&gt;</p>
+<p>Title information to be used by shell services for browser title</p>
+<h4>Ui5-protected</h4>
+<p>Do not call from applications (only from related classes in the framework)</p>
+<h4>Overrides</h4>
+<p><a href="../../../../../../../sap.fe.core/sap/fe/core/PageController/classes/PageController.html"><code>PageController</code></a>.<a href="../../../../../../../sap.fe.core/sap/fe/core/PageController/classes/PageController.html#_getbrowsertitle"><code>_getBrowserTitle</code></a></p>
+<hr>
 <h3>getExtensionAPI()</h3>
 <blockquote>
 <p><strong>getExtensionAPI</strong>(): <a href="../../ExtensionAPI/classes/ExtensionAPI.html"><code>ExtensionAPI</code></a></p>
@@ -111,6 +129,6 @@ refreshCause: &quot;tabChanged&quot; | &quot;search&quot; | &quot;forcedRefresh&
 <p><code>void</code></p>
 <hr>
 
-<footer>Generated from <code>@sapui5/types@1.136.21</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.136/">Back to index</a>.</footer>
+<footer>Generated from <code>@sapui5/types@1.136.22</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.136/">Back to index</a>.</footer>
 </body>
 </html>
