@@ -273,8 +273,8 @@ importers:
         specifier: 2.4.1
         version: 2.4.1
       del-cli:
-        specifier: 7.0.0
-        version: 7.0.0
+        specifier: 8.0.1
+        version: 8.0.1
       npm-run-all2:
         specifier: 9.0.3
         version: 9.0.3
@@ -2881,14 +2881,14 @@ packages:
     resolution: {integrity: sha512-8QmQKqEASLd5nx0U1B1okLElbUuuttJ/AnYmRXbbbGDWh6uS208EjD4Xqq/I9wK7u0v6O08XhTWnt5XtEbR6Dg==}
     engines: {node: '>= 0.4'}
 
-  del-cli@7.0.0:
-    resolution: {integrity: sha512-fRl4pWJYu9WFQH8jXdQUYvcD0IMtij9WEc7qmB7xOyJEweNJNuE7iKmqNeoOT1DbBUjtRjxlw8Y63qKBI/NQ1g==}
-    engines: {node: '>=18'}
+  del-cli@8.0.1:
+    resolution: {integrity: sha512-Z4+xLjVJs9dMN4gDMRfY/7b7WItNOB5EOKu9BenbJD63olx9YM5SU/DEuDFWvN0B1BdGIzejCJFgPt2vIGwj1A==}
+    engines: {node: '>=22'}
     hasBin: true
 
-  del@8.0.1:
-    resolution: {integrity: sha512-gPqh0mKTPvaUZGAuHbrBUYKZWBNAeHG7TU3QH5EhVwPMyKvmfJaNXhcD2jTcXsJRRcffuho4vaYweu80dRrMGA==}
-    engines: {node: '>=18'}
+  del@9.0.1:
+    resolution: {integrity: sha512-1B11d2d8AJcTcbvXtF5a9NWVoE7G12eJPcadRGdLik38WxgsAyDQO5ZdjHoeIlAIhAhbgnD/AZVBWf9xQze+0w==}
+    engines: {node: '>=22'}
 
   depd@2.0.0:
     resolution: {integrity: sha512-g7nH6P6dyDioJogAAGprGpCtVImJhpPk/roCzdb3fIh61/s/nPsfR6onyMwkCAR/OlC3yBC0lESvUoQEAssIrw==}
@@ -3881,9 +3881,9 @@ packages:
     resolution: {integrity: sha512-41Cifkg6e8TylSpdtTpeLVMqvSBEVzTttHvERD741+pnZ8ANv0004MRL43QKPDlK9cGvNp6NZWZUBlbGXYxxng==}
     engines: {node: '>=0.12.0'}
 
-  is-path-cwd@3.0.0:
-    resolution: {integrity: sha512-kyiNFFLU0Ampr6SDZitD/DwUo4Zs1nSdnygUBqsu3LooL00Qvb5j+UnvApUn/TTj1J3OuE6BTdQ5rudKmU2ZaA==}
-    engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
+  is-path-cwd@4.0.1:
+    resolution: {integrity: sha512-w3upMc5m1LfTkA4VvUcMo764hWF1uuo2NPHtLkLrlhw/tiCLxD5gIhvl72oZIY8oFVpZ/xG2JnqbibZAfSQ3Ww==}
+    engines: {node: '>=20'}
 
   is-path-inside@3.0.3:
     resolution: {integrity: sha512-Fd4gABb+ycGAmKou8eMftCupSir5lRxqf4aD/vd0cD2qc4HL07OjCeuHMr8Ro4CoMaeCKDB0/ECBOVWjTwUvPQ==}
@@ -9278,17 +9278,17 @@ snapshots:
       has-property-descriptors: 1.0.2
       object-keys: 1.1.1
 
-  del-cli@7.0.0:
+  del-cli@8.0.1:
     dependencies:
-      del: 8.0.1
+      del: 9.0.1
       meow: 14.1.0
       presentable-error: 0.0.1
 
-  del@8.0.1:
+  del@9.0.1:
     dependencies:
-      globby: 14.1.0
+      globby: 16.2.4
       is-glob: 4.0.3
-      is-path-cwd: 3.0.0
+      is-path-cwd: 4.0.1
       is-path-inside: 4.0.0
       p-map: 7.0.8
       presentable-error: 0.0.1
@@ -10480,7 +10480,7 @@ snapshots:
 
   is-number@7.0.0: {}
 
-  is-path-cwd@3.0.0: {}
+  is-path-cwd@4.0.1: {}
 
   is-path-inside@3.0.3: {}
 

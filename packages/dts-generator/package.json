@@ -45,7 +45,7 @@
     "@types/sanitize-html": "2.16.2",
     "@types/urijs": "1.19.26",
     "copyfiles": "2.4.1",
-    "del-cli": "7.0.0",
+    "del-cli": "8.0.1",
     "npm-run-all2": "9.0.3"
   },
   "scripts": {
