@@ -8,6 +8,18 @@ Changes are grouped by UI5 version, as parser and generator changes so far only 
 
 When doing control development also be aware of the [@ui5/ts-interface-generator change log](https://github.com/SAP/ui5-typescript/blob/main/packages/ts-interface-generator/CHANGELOG.md).
 
+## 1.153.0 (October 2026)
+- **RELATED**: Developing UI5 apps in TypeScript 7.x is now supported! When [`ui5-tooling-modules`](https://www.npmjs.com/package/ui5-tooling-modules) is used, version 3.40.0 or higher is needed; when [`@ui5/ts-interface-generator`](https://www.npmjs.com/package/@ui5/ts-interface-generator) is used, version 0.12.0 or higher is needed. The [TypeScript 6/7 blog post](https://community.sap.com/t5/technology-blog-posts-by-sap/typescript-6-and-7-what-ui5-typescript-developers-need-to-know-in-2026/ba-p/14393526) has been updated accordingly.
+
+## 1.152.0 (September 2026)
+- No big news
+
+## 1.151.0 (August 2026)
+- No big news
+
+## 1.150.0 (July 2026)
+- No big news
+
 ## 1.149.0 (June 2026)
 - **BREAKING**: the long-deprecated packages `@sapui5/ts-types-esm` and `@openui5/ts-types-esm` are no longer released. Please use the identical `@sapui5/types` and `@openui5/types` packages. **This is also the case for patch releases of older UI5 versions!** For those, either also switch or simply stay on the patch version you already have. APIs don't change in patches and fixes in type definitions of old versions are extremely rare.
 - **RELATED**: Read the round-up of recent changes, especially regarding TypeScript 6.x and 7.x in [this blog post](https://community.sap.com/t5/technology-blog-posts-by-sap/typescript-6-and-7-what-ui5-typescript-developers-need-to-know-in-2026/ba-p/14393526).
