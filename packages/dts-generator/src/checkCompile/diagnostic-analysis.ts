@@ -1,5 +1,6 @@
 import * as path from "path";
-import ts from "typescript";
+import * as fs from "fs";
+import type { Diagnostic } from "typescript/sync";
 import ignoreCheck from "./ignore-check.js";
 
 const pathRegex = /.*([\/\\]packages[\/\\]ts-types[/\\]types)/i;
@@ -34,6 +35,52 @@ export interface ErrorAnalysis {
   errorMessage: string;
   hasHint: boolean;
   ignore: any;
+}
+
+/**
+ * Cache for file contents read from disk, to avoid re-reading the same file multiple times.
+ */
+const fileContentCache = new Map<string, string>();
+const lineStartsCache = new Map<string, readonly number[]>();
+
+function getFileContent(fileName: string): string {
+  let content = fileContentCache.get(fileName);
+  if (content == null) {
+    content = fs.readFileSync(fileName, "utf-8");
+    fileContentCache.set(fileName, content);
+  }
+  return content;
+}
+
+function getLineStarts(fileName: string): readonly number[] {
+  let lineStarts = lineStartsCache.get(fileName);
+  if (lineStarts == null) {
+    const content = getFileContent(fileName);
+    const starts: number[] = [0];
+    for (let i = 0; i < content.length; i++) {
+      if (content.charCodeAt(i) === 10 /* \n */) {
+        starts.push(i + 1);
+      }
+    }
+    lineStarts = starts;
+    lineStartsCache.set(fileName, lineStarts);
+  }
+  return lineStarts;
+}
+
+function getLineAndCharacterOfPosition(
+  fileName: string,
+  position: number,
+): { line: number; character: number } {
+  const lineStarts = getLineStarts(fileName);
+  let line = 0;
+  for (let i = lineStarts.length - 1; i >= 0; i--) {
+    if (position >= lineStarts[i]) {
+      line = i;
+      break;
+    }
+  }
+  return { line, character: position - lineStarts[line] };
 }
 
 // HEURISTIC HINTS PART
@@ -91,7 +138,7 @@ pattern["7006"] = new RegExp(
 );
 
 function createHint(
-  diagnostic: ts.Diagnostic,
+  diagnostic: Diagnostic,
   errorStack?: TSErrorStack,
   moduleName?: string,
 ) {
@@ -103,12 +150,12 @@ function createHint(
 }
 
 function _createHint(
-  diagnostic: ts.Diagnostic,
+  diagnostic: Diagnostic,
   errorStack?: TSErrorStack,
   moduleName?: string,
 ) {
   errorStack = errorStack || getErrorStack(diagnostic);
-  const dtsFileName = path.basename(diagnostic.file.fileName);
+  const dtsFileName = path.basename(diagnostic.fileName);
   const ui5Module = moduleName || findContainingModule(diagnostic);
   let errorLine = getSourceCode(diagnostic, 0);
   if (errorLine) {
@@ -409,28 +456,29 @@ function getMatches(errorStack: TSErrorStack) {
 
 // TECHNICAL DATA PROCESSING PART
 
-function getErrorStack(diagnostic: ts.Diagnostic) {
+function getErrorStack(diagnostic: Diagnostic) {
   let errors: TSErrorStack = [],
     aCodes = [];
-  if (typeof diagnostic.messageText == "string") {
-    // only toplevel error exists - return it. When more errors exist, also the toplevel one will be included below
+
+  // The top-level diagnostic always provides the first error entry
+  errors.push({
+    code: diagnostic.code,
+    message: diagnostic.text,
+  });
+  aCodes.push(diagnostic.code);
+
+  // Walk the message chain for nested/chained errors
+  let chain = diagnostic.messageChain;
+  while (chain && chain.length > 0) {
+    const element = chain[0];
     errors.push({
-      code: diagnostic.code,
-      message: diagnostic.messageText,
+      code: element.code,
+      message: element.text,
     });
-    aCodes.push(diagnostic.code);
-  } else {
-    // cascade of errors
-    let element = diagnostic.messageText;
-    while (element && element.code) {
-      errors.push({
-        code: element.code,
-        message: element.messageText,
-      });
-      aCodes.push(element.code);
-      element = element.next ? element.next[0] : undefined; // descend
-    }
+    aCodes.push(element.code);
+    chain = element.messageChain;
   }
+
   errors.codeChain = aCodes.join("-");
   return errors;
 }
@@ -463,30 +511,30 @@ function getFunctionReturnTypes(type: string) {
 
 // returns the source code line with the given number from the file referenced in the given diagnostic
 function getLineText(
-  diagnostic: ts.Diagnostic,
+  diagnostic: Diagnostic,
   lineNumber: number,
   /* the following parameters are optional, for potential performance reasons: */
   lineStarts?: readonly number[],
   fullFileText?: string,
 ) {
-  const myLineStarts = lineStarts || diagnostic.file.getLineStarts();
-  fullFileText = fullFileText || diagnostic.file.getFullText();
+  const myLineStarts = lineStarts || getLineStarts(diagnostic.fileName);
+  fullFileText = fullFileText || getFileContent(diagnostic.fileName);
+  const fileEnd = fullFileText.length;
   const endOfLine =
     lineNumber + 1 < myLineStarts.length
       ? myLineStarts[lineNumber + 1] - 1
-      : diagnostic.file.end; // line ends either at the beginning of the next line or at the end of the file
+      : fileEnd; // line ends either at the beginning of the next line or at the end of the file
   return fullFileText.substring(myLineStarts[lineNumber], endOfLine);
 }
 
 // returns a section of the source file referenced in the given diagnostic: the line related to the diagnostic position, plus iAdditionalLines lines above and below, if possible
-function getSourceCode(diagnostic: ts.Diagnostic, additionalLines: number) {
+function getSourceCode(diagnostic: Diagnostic, additionalLines: number) {
   additionalLines = additionalLines || 0;
-  const { line, character } = diagnostic.file.getLineAndCharacterOfPosition(
-    diagnostic.start,
-  );
-  const lineStarts = diagnostic.file.getLineStarts();
-  const fullFileText = diagnostic.file.getFullText();
-  // TODO: would need to be considered for potential positions spanning several lines:  const end = diagnostic.file.getLineEndOfPosition(diagnostic.start + diagnostic.length);
+  const { line, character } =
+    diagnostic.startPosition ||
+    getLineAndCharacterOfPosition(diagnostic.fileName, diagnostic.pos);
+  const lineStarts = getLineStarts(diagnostic.fileName);
+  const fullFileText = getFileContent(diagnostic.fileName);
 
   let sourceCode = "";
   for (
@@ -506,7 +554,7 @@ function getSourceCode(diagnostic: ts.Diagnostic, additionalLines: number) {
 }
 
 // walks up from the given diagnostic's position to the next preceding module declaration and returns the module name
-function findContainingModule(diagnostic: ts.Diagnostic) {
+function findContainingModule(diagnostic: Diagnostic) {
   const MODULE_DECLARATION_PATTERN = /^\s*declare module "([^\"]+)" {/;
   const NAMESPACE_DECLARATION_PATTERN = /^\s*declare namespace ([^\s]+) {/;
   const NAMESPACE_PATTERN = /^\s+namespace ([^\s]+) {/;
@@ -514,11 +562,11 @@ function findContainingModule(diagnostic: ts.Diagnostic) {
     /^\s*(?:export(?: default)?)?\s+class ([^\s]+)( [\{\w].*)?$/;
   const FUNCTION_PATTERN = /^\s+[\w0-9]+\(/;
   const OBJECT_PATTERN = /^\s+[\w0-9]+: \{/;
-  const { line } = diagnostic.file.getLineAndCharacterOfPosition(
-    diagnostic.start,
-  );
-  const lineStarts = diagnostic.file.getLineStarts();
-  const fullFileText = diagnostic.file.getFullText();
+  const { line } =
+    diagnostic.startPosition ||
+    getLineAndCharacterOfPosition(diagnostic.fileName, diagnostic.pos);
+  const lineStarts = getLineStarts(diagnostic.fileName);
+  const fullFileText = getFileContent(diagnostic.fileName);
 
   let pathSegments: string[] = [],
     currentWhitespaceLength = -1;
@@ -585,18 +633,18 @@ interface ErrorOptions {
   hint?: string;
 }
 
-function createErrorMessage(diagnostic: ts.Diagnostic, options: ErrorOptions) {
+function createErrorMessage(diagnostic: Diagnostic, options: ErrorOptions) {
   const { index, total } = options;
-  const { line, character } = diagnostic.file.getLineAndCharacterOfPosition(
-    diagnostic.start,
-  );
+  const { line, character } =
+    diagnostic.startPosition ||
+    getLineAndCharacterOfPosition(diagnostic.fileName, diagnostic.pos);
   const moduleName = options.moduleName || findContainingModule(diagnostic);
   let moduleExplanation =
     "probably in UI5 module / source file:\n  " + moduleName;
   if (!moduleName) {
     moduleExplanation = "unknown.";
   }
-  const relativeFileName = diagnostic.file.fileName.replace(pathRegex, ".$1"); // make it as short as possible while still keeping it clickable in vscode's terminal
+  const relativeFileName = diagnostic.fileName.replace(pathRegex, ".$1"); // make it as short as possible while still keeping it clickable in vscode's terminal
   const errorStack = getErrorStack(diagnostic);
 
   let indexText = "";
@@ -607,8 +655,8 @@ function createErrorMessage(diagnostic: ts.Diagnostic, options: ErrorOptions) {
 
   const ignore = ignoreCheck(
     moduleName,
-    ts.flattenDiagnosticMessageText(diagnostic.messageText, " ### "),
-    path.basename(diagnostic.file.fileName),
+    diagnostic.text,
+    path.basename(diagnostic.fileName),
   );
   const ignoreText = ignore
     ? "==> this issue is on the list of known errors, hence IT SHOULD BE IGNORED.\n"
@@ -617,7 +665,7 @@ function createErrorMessage(diagnostic: ts.Diagnostic, options: ErrorOptions) {
   const fullErrorMessage = `
   ==> Error message from TS compiler:
   ${relativeFileName} (${line + 1},${character + 1}):
-  ${ts.flattenDiagnosticMessageText(diagnostic.messageText, "\n")}${
+  ${diagnostic.text}${
     !hint
       ? ""
       : `
@@ -629,7 +677,7 @@ function createErrorMessage(diagnostic: ts.Diagnostic, options: ErrorOptions) {
   ==> Origin of issue is ${moduleExplanation}
 
   ==> Code with error in the generated ${path.basename(
-    diagnostic.file.fileName,
+    diagnostic.fileName,
   )} file:
   ${getSourceCode(diagnostic, 3).split("\n").join("\n  ")}
   ==> TS Error Code(s): ${errorStack.codeChain}
@@ -640,17 +688,14 @@ function createErrorMessage(diagnostic: ts.Diagnostic, options: ErrorOptions) {
   return fullErrorMessage;
 }
 
-function createErrorObject(diagnostic: ts.Diagnostic) {
+function createErrorObject(diagnostic: Diagnostic) {
   const errorStack = getErrorStack(diagnostic);
-  const { line, character } = diagnostic.file.getLineAndCharacterOfPosition(
-    diagnostic.start,
-  );
+  const { line, character } =
+    diagnostic.startPosition ||
+    getLineAndCharacterOfPosition(diagnostic.fileName, diagnostic.pos);
   const moduleName = findContainingModule(diagnostic);
-  const tsError = ts.flattenDiagnosticMessageText(
-    diagnostic.messageText,
-    " ### ",
-  );
-  const dtsFileName = path.basename(diagnostic.file.fileName);
+  const tsError = diagnostic.text;
+  const dtsFileName = path.basename(diagnostic.fileName);
 
   return {
     dtsFileName,
@@ -664,7 +709,7 @@ function createErrorObject(diagnostic: ts.Diagnostic) {
 }
 
 function analyzeError(
-  diagnostic: ts.Diagnostic,
+  diagnostic: Diagnostic,
   options: ErrorOptions,
 ): ErrorAnalysis {
   const errorObject: ErrorObject = createErrorObject(diagnostic);

@@ -7,6 +7,9 @@ packages:
 frozenLockfile: true
 saveExact: true
 minimumReleaseAge: 4320 # 3 days (in minutes)
+minimumReleaseAgeExclude:
+  - typescript
+  - '@typescript/*'
 allowBuilds:
   '@parcel/watcher': true
   ui5-tooling-transpile: true

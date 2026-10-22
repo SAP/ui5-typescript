@@ -5,7 +5,10 @@
 ```ts
 
 import type { FunctionType } from './ast.d.ts';
-import ts from 'typescript';
+import { ModuleKind } from 'typescript/sync';
+import { ModuleResolutionKind } from 'typescript/sync';
+import { RawCompilerOptions } from 'typescript/sync';
+import { ScriptTarget } from 'typescript/ast';
 import type { TypeReference } from './ast.d.ts';
 
 // @public
@@ -23,7 +26,7 @@ export interface CheckCompileConfig {
     dependencyFiles: string[];
     errorOutputFile?: string;
     mainFile?: string;
-    tsOptions: ts.BuildOptions;
+    tsOptions: RawCompilerOptions;
 }
 
 // @public
@@ -112,14 +115,11 @@ export interface GenerateFromPathsConfig {
     verbose?: boolean;
 }
 
-// @public (undocumented)
-export const ModuleKind: typeof ts.ModuleKind;
+export { ModuleKind }
 
-// @public (undocumented)
-export const ModuleResolutionKind: typeof ts.ModuleResolutionKind;
+export { ModuleResolutionKind }
 
-// @public (undocumented)
-export const ScriptTarget: typeof ts.ScriptTarget;
+export { ScriptTarget }
 
 // Warnings were encountered during analysis:
 //
