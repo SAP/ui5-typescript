@@ -1,27 +1,16 @@
 import { getLogger } from "@ui5/logger";
 import { analyzeError, ErrorObject } from "./diagnostic-analysis.js";
-import ts from "typescript";
+import {
+  API,
+  type Diagnostic,
+  type RawCompilerOptions,
+  ModuleKind,
+  ModuleResolutionKind,
+} from "typescript/sync";
+import { ScriptTarget } from "typescript/ast";
 import { writeFileSafe } from "../utils/file-utils.js";
 
 const log = getLogger("@ui5/dts-generator/checkCompile");
-
-/**
- * @see ts.ScriptTarget
- * @public
- */
-const ScriptTarget = ts.ScriptTarget;
-
-/**
- * @see ts.ModuleKind
- * @public
- */
-const ModuleKind = ts.ModuleKind;
-
-/**
- * @see ts.ModuleResolutionKind
- * @public
- */
-const ModuleResolutionKind = ts.ModuleResolutionKind;
 
 export { ScriptTarget, ModuleKind, ModuleResolutionKind };
 
@@ -45,9 +34,9 @@ export interface CheckCompileConfig {
   dependencyFiles: string[];
 
   /**
-   * The options for the TypeScript compiler, a map with properties like "strict", "noEmit", "moduleResolution" etc. (note that enums are given like ts.ModuleResolutionKind.Node16)
+   * The options for the TypeScript compiler, a map with properties like "strict", "noEmit", "moduleResolution" etc.
    */
-  tsOptions: ts.BuildOptions;
+  tsOptions: RawCompilerOptions;
 
   /**
    * Optional path+name of a file into which any test compilation errors should be written
@@ -67,12 +56,16 @@ export interface CheckCompileConfig {
  */
 export default function checkCompile(options: CheckCompileConfig) {
   const files = [options.mainFile, ...options.dependencyFiles].filter(Boolean);
-  const program = ts.createProgram(files, options.tsOptions);
-  const emitResult = program.emit();
 
-  const allDiagnostics = ts
-    .getPreEmitDiagnostics(program)
-    .concat(emitResult.diagnostics);
+  using api = new API();
+  using program = api.createProgram(files, options.tsOptions);
+
+  const allDiagnostics: readonly Diagnostic[] = [
+    ...program.getSyntacticDiagnostics(),
+    ...program.getSemanticDiagnostics(),
+    ...program.getProgramDiagnostics(),
+    ...program.getGlobalDiagnostics(),
+  ];
 
   log.info(`TypeScript compilation results:\n`);
   let ignoredMessagesWithoutFile = 0;
@@ -83,10 +76,10 @@ export default function checkCompile(options: CheckCompileConfig) {
     errors: string[] = [],
     warnings: string[] = [];
   allDiagnostics.forEach((diagnostic, index) => {
-    if (diagnostic.file) {
+    if (diagnostic.fileName) {
       if (
         options.mainFile == null ||
-        diagnostic.file.fileName === options.mainFile ||
+        diagnostic.fileName === options.mainFile ||
         options.dependencyFiles == null ||
         options.dependencyFiles.length === 0
       ) {
@@ -108,9 +101,7 @@ export default function checkCompile(options: CheckCompileConfig) {
         ignoredMessagesWithoutFile++;
       }
     } else {
-      log.error(
-        "  " + ts.flattenDiagnosticMessageText(diagnostic.messageText, "\n  "),
-      );
+      log.error("  " + diagnostic.text);
     }
   });
 

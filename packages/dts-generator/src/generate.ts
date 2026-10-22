@@ -1,7 +1,12 @@
 import { getLogger } from "@ui5/logger";
 const log = getLogger("@ui5/dts-generator/generate");
 import * as path from "path";
-import ts from "typescript";
+import type { RawCompilerOptions } from "typescript/sync";
+import {
+  ScriptTarget,
+  ModuleKind,
+  ModuleResolutionKind,
+} from "./checkCompile/check-compile.js";
 import { generateFromObjects, Directives } from "./generate-from-objects.js";
 import { default as checkCompile } from "./checkCompile/check-compile.js";
 import { writeFileSafe, loadJSON } from "./utils/file-utils.js";
@@ -166,13 +171,13 @@ export async function generate({
 
     // set up the tsconfig for the test compile
     const discovered = discoverTypes();
-    const tsOptions: ts.BuildOptions = {
+    const tsOptions: RawCompilerOptions = {
       noEmit: true,
       noImplicitAny: true,
       strict: true,
-      target: ts.ScriptTarget.ES2015,
-      module: ts.ModuleKind.ESNext,
-      moduleResolution: ts.ModuleResolutionKind.Bundler,
+      target: ScriptTarget.ES2015,
+      module: ModuleKind.ESNext,
+      moduleResolution: ModuleResolutionKind.Bundler,
       lib: ["lib.es2015.d.ts", "lib.dom.d.ts"],
       ...(discovered.typeRoots.length > 0 && {
         typeRoots: discovered.typeRoots,
